@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { ToolLayout } from "@/components/layout/ToolLayout";
 import { getToolById } from "@/data/tools-config";
 import { TextCounterTool } from "@/tools/text/TextCounterTool";
 import { LoremGeneratorTool } from "@/tools/plan/LoremGeneratorTool";
+import { ByteCounterTool } from "@/tools/plan/ByteCounterTool";
 import { WebpConverterTool } from "@/tools/image/WebpConverterTool";
 import { InstaSpacerTool } from "@/tools/publish/InstaSpacerTool";
 import { HashtagMixerTool } from "@/tools/publish/HashtagMixerTool";
 import { QrGeneratorTool } from "@/tools/analyze/QrGeneratorTool";
+import { addRecentTool } from "@/utils/localStorage";
+import { toast } from "@/hooks/use-toast";
 
 // SEO Article components
 const TextCounterArticle = () => (
@@ -222,10 +225,34 @@ export default function ToolPage() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
 
+  // Track tool usage when result is generated
+  useEffect(() => {
+    if (resultSlot && id) {
+      addRecentTool(id);
+    }
+  }, [resultSlot, id]);
+
   // If tool not found, redirect to 404
   if (!config) {
     return <Navigate to="/404" replace />;
   }
+
+  const handleResult = (result: React.ReactNode) => {
+    setResultSlot(result);
+    setErrorMessage(null);
+  };
+
+  const handleError = (error: string | null) => {
+    setErrorMessage(error);
+    setResultSlot(null);
+    if (error) {
+      toast({
+        variant: 'destructive',
+        title: '오류',
+        description: error,
+      });
+    }
+  };
 
   // Render appropriate tool component
   let toolComponent;
@@ -234,24 +261,60 @@ export default function ToolPage() {
   switch (id) {
     case 'text-counter':
       toolComponent = TextCounterTool({
-        onResult: setResultSlot,
-        onError: setErrorMessage,
+        onResult: handleResult,
+        onError: handleError,
       });
       seoArticle = <TextCounterArticle />;
       break;
 
     case 'lorem-generator':
       toolComponent = LoremGeneratorTool({
-        onResult: setResultSlot,
-        onError: setErrorMessage,
+        onResult: handleResult,
+        onError: handleError,
       });
       seoArticle = <LoremGeneratorArticle />;
       break;
 
+    case 'byte-counter':
+      toolComponent = ByteCounterTool({
+        onResult: handleResult,
+        onError: handleError,
+      });
+      seoArticle = (
+        <div className="bg-card rounded-lg border p-6 space-y-6">
+          <div>
+            <h2 className="text-2xl font-bold mb-3">Why use a byte counter for Naver?</h2>
+            <p className="text-muted-foreground">
+              Naver, Korea's leading search engine, uses UTF-8 byte counting for SEO optimization.
+              Korean characters count as 3 bytes each, while English characters count as 1 byte.
+              Understanding your content's byte count is crucial for meta descriptions, blog titles,
+              and other Naver-optimized content.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold mb-3">How to use this tool</h2>
+            <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+              <li>Enter or paste your Korean/English mixed text</li>
+              <li>Click "Count Bytes" or see results in real-time</li>
+              <li>Review total characters, bytes, and language breakdown</li>
+              <li>Optimize your content based on Naver's byte limits</li>
+            </ol>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-2">Naver SEO Tips</h3>
+            <p className="text-sm text-muted-foreground">
+              Keep meta descriptions under 80 bytes, blog titles under 30 bytes, and main content
+              optimized for readability and search rankings.
+            </p>
+          </div>
+        </div>
+      );
+      break;
+
     case 'webp-converter':
       toolComponent = WebpConverterTool({
-        onResult: setResultSlot,
-        onError: setErrorMessage,
+        onResult: handleResult,
+        onError: handleError,
         onProcessing: setIsProcessing,
       });
       seoArticle = <WebPConverterArticle />;
@@ -259,24 +322,24 @@ export default function ToolPage() {
 
     case 'insta-spacer':
       toolComponent = InstaSpacerTool({
-        onResult: setResultSlot,
-        onError: setErrorMessage,
+        onResult: handleResult,
+        onError: handleError,
       });
       seoArticle = <InstaSpacerArticle />;
       break;
 
     case 'hashtag-mixer':
       toolComponent = HashtagMixerTool({
-        onResult: setResultSlot,
-        onError: setErrorMessage,
+        onResult: handleResult,
+        onError: handleError,
       });
       seoArticle = <HashtagMixerArticle />;
       break;
 
     case 'qr-generator':
       toolComponent = QrGeneratorTool({
-        onResult: setResultSlot,
-        onError: setErrorMessage,
+        onResult: handleResult,
+        onError: handleError,
       });
       seoArticle = <QRGeneratorArticle />;
       break;

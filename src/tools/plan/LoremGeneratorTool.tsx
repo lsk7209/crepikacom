@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
-import { toast } from "sonner";
+import { toast } from "@/hooks/use-toast";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -130,10 +130,17 @@ export function LoremGeneratorTool({ onResult, onError }: LoremGeneratorToolProp
     try {
       await navigator.clipboard.writeText(generatedText);
       setCopied(true);
-      toast.success("클립보드에 복사되었습니다!");
+      toast({
+        title: '복사 완료',
+        description: '텍스트가 클립보드에 복사되었습니다.',
+      });
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      toast.error("복사에 실패했습니다.");
+      toast({
+        variant: 'destructive',
+        title: '복사 실패',
+        description: '클립보드 복사에 실패했습니다.',
+      });
       console.error(err);
     }
   };

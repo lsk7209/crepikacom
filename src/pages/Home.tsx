@@ -1,14 +1,33 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { TOOLS_CONFIG, CATEGORY_LABELS, Category, searchTools } from "@/data/tools-config";
+import { useState, useEffect } from "react";
+import { TOOLS_CONFIG, CATEGORY_LABELS, Category, searchTools, getToolById } from "@/data/tools-config";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, Sparkles, Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Sparkles, Search, Star } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { getRecentTools, getFavoriteTools, toggleFavoriteTool, isFavoriteTool } from "@/utils/localStorage";
+import { KeyboardShortcutsModal } from "@/components/KeyboardShortcutsModal";
+import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [favorites, setFavorites] = useState<string[]>([]);
+  const [recentTools, setRecentTools] = useState<string[]>([]);
+  const { showHelp, setShowHelp } = useGlobalShortcuts();
+
+  useEffect(() => {
+    setFavorites(getFavoriteTools());
+    setRecentTools(getRecentTools());
+  }, []);
+
+  const handleToggleFavorite = (toolId: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleFavoriteTool(toolId);
+    setFavorites(getFavoriteTools());
+  };
   
   // Filter tools based on search query
   const filteredTools = searchTools(searchQuery);
@@ -23,6 +42,55 @@ export default function Home() {
 
   const hasResults = filteredTools.length > 0;
 
+  const favoriteToolConfigs = favorites.map(id => getToolById(id)).filter(Boolean);
+  const recentToolConfigs = recentTools.map(id => getToolById(id)).filter(Boolean);
+
+  const renderToolCard = (tool: any, showFavorite = true) => (
+    <Link
+      key={tool.id}
+      to={tool.path}
+      className="group relative"
+    >
+      <Card className="h-full transition-all hover:shadow-lg hover:scale-105 hover:border-primary/50">
+        {showFavorite && (
+          <Button
+            variant="ghost"
+            size="sm"
+            className="absolute top-2 right-2 z-10"
+            onClick={(e) => handleToggleFavorite(tool.id, e)}
+          >
+            <Star
+              className={`h-4 w-4 ${
+                isFavoriteTool(tool.id)
+                  ? 'fill-yellow-400 text-yellow-400'
+                  : 'text-muted-foreground'
+              }`}
+            />
+          </Button>
+        )}
+        <CardHeader>
+          <div className="flex items-start justify-between mb-2">
+            <Badge variant="outline" className="mb-2">
+              {CATEGORY_LABELS[tool.category]}
+            </Badge>
+            <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+          </div>
+          <CardTitle className="group-hover:text-primary transition-colors">
+            {tool.title}
+          </CardTitle>
+          <CardDescription className="mt-2">
+            {tool.oneLineProblem}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-muted-foreground">
+            {tool.description}
+          </p>
+        </CardContent>
+      </Card>
+    </Link>
+  );
+
   return (
     <>
       <Helmet>
@@ -33,6 +101,8 @@ export default function Home() {
         />
         <meta name="keywords" content="creator tools, free online tools, text counter, qr generator, webp converter, hashtag mixer, instagram tools" />
       </Helmet>
+
+      <KeyboardShortcutsModal open={showHelp} onOpenChange={setShowHelp} />
 
       <div className="container px-4 py-12 mx-auto max-w-7xl">
         {/* Hero Section */}
@@ -63,6 +133,33 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Favorites Section */}
+        {favoriteToolConfigs.length > 0 && (
+          <section className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <Star className="h-6 w-6 fill-yellow-400 text-yellow-400" />
+              <h2 className="text-2xl md:text-3xl font-bold">Favorites</h2>
+              <Badge variant="secondary">{favoriteToolConfigs.length}</Badge>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {favoriteToolConfigs.map((tool) => renderToolCard(tool))}
+            </div>
+          </section>
+        )}
+
+        {/* Recently Used Section */}
+        {recentToolConfigs.length > 0 && (
+          <section className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold">Recently Used</h2>
+              <Badge variant="secondary">{recentToolConfigs.length}</Badge>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {recentToolConfigs.map((tool) => renderToolCard(tool, false))}
+            </div>
+          </section>
+        )}
+
         {/* Tools Grid by Category */}
         {hasResults ? (
           <div className="space-y-12">
@@ -74,35 +171,7 @@ export default function Home() {
                     <Badge variant="secondary">{tools.length}</Badge>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {tools.map((tool) => (
-                      <Link
-                        key={tool.id}
-                        to={tool.path}
-                        className="group"
-                      >
-                        <Card className="h-full transition-all hover:shadow-lg hover:scale-105 hover:border-primary/50">
-                          <CardHeader>
-                            <div className="flex items-start justify-between mb-2">
-                              <Badge variant="outline" className="mb-2">
-                                {label}
-                              </Badge>
-                              <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                            </div>
-                            <CardTitle className="group-hover:text-primary transition-colors">
-                              {tool.title}
-                            </CardTitle>
-                            <CardDescription className="mt-2">
-                              {tool.oneLineProblem}
-                            </CardDescription>
-                          </CardHeader>
-                          <CardContent>
-                            <p className="text-sm text-muted-foreground">
-                              {tool.description}
-                            </p>
-                          </CardContent>
-                        </Card>
-                      </Link>
-                    ))}
+                    {tools.map((tool) => renderToolCard(tool))}
                   </div>
                 </section>
               )
