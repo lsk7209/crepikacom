@@ -1,87 +1,130 @@
 import { Link } from "react-router-dom";
-import { TOOLS_CONFIG, CATEGORY_LABELS, Category } from "@/data/tools-config";
+import { useState } from "react";
+import { TOOLS_CONFIG, CATEGORY_LABELS, Category, searchTools } from "@/data/tools-config";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { ArrowRight, Sparkles, Search } from "lucide-react";
 import { Helmet } from "react-helmet";
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState("");
+  
+  // Filter tools based on search query
+  const filteredTools = searchTools(searchQuery);
+  
   // Group tools by category
   const categories = ['plan', 'create', 'publish', 'analyze'] as Category[];
   const toolsByCategory = categories.map(category => ({
     category,
     label: CATEGORY_LABELS[category],
-    tools: TOOLS_CONFIG.filter(tool => tool.category === category),
+    tools: filteredTools.filter(tool => tool.category === category),
   }));
+
+  const hasResults = filteredTools.length > 0;
 
   return (
     <>
       <Helmet>
-        <title>CrePic - No Login. 3-Second Tools for Creators</title>
+        <title>CrePic | No Login. 3-Second Tools for Creators.</title>
         <meta 
           name="description" 
-          content="Free online tools for creators. QR code generator, text counter, WebP converter, and more. No login required. Instant results." 
+          content="Fast, free tools for creators. Text, image, and QR utilities that work instantly in your browser. No login required." 
         />
+        <meta name="keywords" content="creator tools, free online tools, text counter, qr generator, webp converter, hashtag mixer, instagram tools" />
       </Helmet>
 
       <div className="container px-4 py-12 mx-auto max-w-7xl">
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6">
             <Sparkles className="h-8 w-8 text-primary" />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
             No Login. 3-Second Tools.
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8">
             Fast, free tools for creators. Choose what you need and get instant results.
           </p>
+
+          {/* Search Bar */}
+          <div className="max-w-xl mx-auto">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="어떤 작업을 도와드릴까요? (예: text, QR, hashtag)"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 h-12 text-base"
+                aria-label="Search tools"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Tools Grid by Category */}
-        <div className="space-y-12">
-          {toolsByCategory.map(({ category, label, tools }) => (
-            tools.length > 0 && (
-              <section key={category}>
-                <div className="flex items-center gap-3 mb-6">
-                  <h2 className="text-2xl md:text-3xl font-bold">{label}</h2>
-                  <Badge variant="secondary">{tools.length}</Badge>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {tools.map((tool) => (
-                    <Link
-                      key={tool.id}
-                      to={tool.path}
-                      className="group"
-                    >
-                      <Card className="h-full transition-all hover:shadow-lg hover:scale-105 hover:border-primary/50">
-                        <CardHeader>
-                          <div className="flex items-start justify-between mb-2">
-                            <Badge variant="outline" className="mb-2">
-                              {label}
-                            </Badge>
-                            <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                          </div>
-                          <CardTitle className="group-hover:text-primary transition-colors">
-                            {tool.title}
-                          </CardTitle>
-                          <CardDescription className="mt-2">
-                            {tool.oneLineProblem}
-                          </CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                          <p className="text-sm text-muted-foreground">
-                            {tool.description}
-                          </p>
-                        </CardContent>
-                      </Card>
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            )
-          ))}
-        </div>
+        {hasResults ? (
+          <div className="space-y-12">
+            {toolsByCategory.map(({ category, label, tools }) => (
+              tools.length > 0 && (
+                <section key={category}>
+                  <div className="flex items-center gap-3 mb-6">
+                    <h2 className="text-2xl md:text-3xl font-bold">{label}</h2>
+                    <Badge variant="secondary">{tools.length}</Badge>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {tools.map((tool) => (
+                      <Link
+                        key={tool.id}
+                        to={tool.path}
+                        className="group"
+                      >
+                        <Card className="h-full transition-all hover:shadow-lg hover:scale-105 hover:border-primary/50">
+                          <CardHeader>
+                            <div className="flex items-start justify-between mb-2">
+                              <Badge variant="outline" className="mb-2">
+                                {label}
+                              </Badge>
+                              <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                            </div>
+                            <CardTitle className="group-hover:text-primary transition-colors">
+                              {tool.title}
+                            </CardTitle>
+                            <CardDescription className="mt-2">
+                              {tool.oneLineProblem}
+                            </CardDescription>
+                          </CardHeader>
+                          <CardContent>
+                            <p className="text-sm text-muted-foreground">
+                              {tool.description}
+                            </p>
+                          </CardContent>
+                        </Card>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-4">
+              <Search className="h-8 w-8 text-muted-foreground" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">해당 키워드로 찾은 도구가 없습니다.</h3>
+            <p className="text-muted-foreground mb-4">
+              다른 키워드로 검색하거나 아래 카테고리를 둘러보세요.
+            </p>
+            <button
+              onClick={() => setSearchQuery("")}
+              className="text-primary hover:underline"
+            >
+              모든 도구 보기
+            </button>
+          </div>
+        )}
 
         {/* Features Section */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">

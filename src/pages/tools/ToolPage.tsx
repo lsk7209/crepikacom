@@ -3,7 +3,10 @@ import { useParams, Navigate } from "react-router-dom";
 import { ToolLayout } from "@/components/layout/ToolLayout";
 import { getToolById } from "@/data/tools-config";
 import { TextCounterTool } from "@/tools/text/TextCounterTool";
+import { LoremGeneratorTool } from "@/tools/plan/LoremGeneratorTool";
 import { WebpConverterTool } from "@/tools/image/WebpConverterTool";
+import { InstaSpacerTool } from "@/tools/publish/InstaSpacerTool";
+import { HashtagMixerTool } from "@/tools/publish/HashtagMixerTool";
 import { QrGeneratorTool } from "@/tools/analyze/QrGeneratorTool";
 
 // SEO Article components
@@ -110,6 +113,107 @@ const QRGeneratorArticle = () => (
   </div>
 );
 
+const LoremGeneratorArticle = () => (
+  <div className="bg-card rounded-lg border p-6 space-y-6">
+    <div>
+      <h2 className="text-2xl font-bold mb-3">Why use a lorem ipsum generator?</h2>
+      <p className="text-muted-foreground">
+        Lorem ipsum text is essential for designers and developers creating mockups and prototypes. 
+        This generator provides realistic placeholder text in both English and Korean, helping you 
+        visualize layouts without being distracted by meaningful content. Perfect for wireframes, 
+        design presentations, and UI mockups.
+      </p>
+    </div>
+
+    <div>
+      <h2 className="text-2xl font-bold mb-3">How to use this tool</h2>
+      <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+        <li>Select your preferred language (English or Korean)</li>
+        <li>Choose the text length (short, medium, or long)</li>
+        <li>Click "Generate" to create dummy text</li>
+        <li>Copy the generated text for use in your designs</li>
+      </ol>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold mb-2">Use Cases</h3>
+      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+        <li>Website and app design mockups</li>
+        <li>Print design layouts and brochures</li>
+        <li>Presentation templates</li>
+        <li>Typography testing</li>
+      </ul>
+    </div>
+  </div>
+);
+
+const InstaSpacerArticle = () => (
+  <div className="bg-card rounded-lg border p-6 space-y-6">
+    <div>
+      <h2 className="text-2xl font-bold mb-3">Why use an Instagram line break formatter?</h2>
+      <p className="text-muted-foreground">
+        Instagram often removes extra line breaks and spacing from captions, making your carefully 
+        formatted text look cluttered. This tool adds invisible characters that preserve your line 
+        breaks and spacing, ensuring your captions look exactly as you intended when posted to Instagram.
+        Essential for professional-looking posts and maintaining readability.
+      </p>
+    </div>
+
+    <div>
+      <h2 className="text-2xl font-bold mb-3">How to use this tool</h2>
+      <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+        <li>Paste your Instagram caption text</li>
+        <li>Click "Format for Instagram" button</li>
+        <li>Copy the formatted result</li>
+        <li>Paste into Instagram app to verify line breaks are preserved</li>
+      </ol>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold mb-2">Pro Tips</h3>
+      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+        <li>Always test in the actual Instagram app before posting</li>
+        <li>Works for both regular posts and Stories</li>
+        <li>Great for poetry, quotes, and structured content</li>
+      </ul>
+    </div>
+  </div>
+);
+
+const HashtagMixerArticle = () => (
+  <div className="bg-card rounded-lg border p-6 space-y-6">
+    <div>
+      <h2 className="text-2xl font-bold mb-3">Why use a hashtag mixer?</h2>
+      <p className="text-muted-foreground">
+        Randomizing hashtags can help prevent your posts from looking spammy to Instagram's algorithm. 
+        This tool shuffles your hashtags, removes duplicates, and organizes them for easy copying. 
+        Perfect for managing hashtag sets and ensuring variety in your social media strategy.
+        Supports up to 30 hashtags per shuffle.
+      </p>
+    </div>
+
+    <div>
+      <h2 className="text-2xl font-bold mb-3">How to use this tool</h2>
+      <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+        <li>Enter your hashtags (separated by spaces, commas, or new lines)</li>
+        <li>Click "Shuffle Hashtags" button</li>
+        <li>Review the shuffled result and tag count</li>
+        <li>Copy and paste into your social media post</li>
+      </ol>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold mb-2">Best Practices</h3>
+      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+        <li>Use a mix of popular and niche hashtags</li>
+        <li>Keep hashtags relevant to your content</li>
+        <li>Instagram allows up to 30 hashtags per post</li>
+        <li>Shuffle regularly to avoid repetitive patterns</li>
+      </ul>
+    </div>
+  </div>
+);
+
 export default function ToolPage() {
   const { id } = useParams<{ id: string }>();
   const config = getToolById(id || '');
@@ -136,6 +240,14 @@ export default function ToolPage() {
       seoArticle = <TextCounterArticle />;
       break;
 
+    case 'lorem-generator':
+      toolComponent = LoremGeneratorTool({
+        onResult: setResultSlot,
+        onError: setErrorMessage,
+      });
+      seoArticle = <LoremGeneratorArticle />;
+      break;
+
     case 'webp-converter':
       toolComponent = WebpConverterTool({
         onResult: setResultSlot,
@@ -143,6 +255,22 @@ export default function ToolPage() {
         onProcessing: setIsProcessing,
       });
       seoArticle = <WebPConverterArticle />;
+      break;
+
+    case 'insta-spacer':
+      toolComponent = InstaSpacerTool({
+        onResult: setResultSlot,
+        onError: setErrorMessage,
+      });
+      seoArticle = <InstaSpacerArticle />;
+      break;
+
+    case 'hashtag-mixer':
+      toolComponent = HashtagMixerTool({
+        onResult: setResultSlot,
+        onError: setErrorMessage,
+      });
+      seoArticle = <HashtagMixerArticle />;
       break;
 
     case 'qr-generator':
