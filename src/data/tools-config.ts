@@ -11,6 +11,8 @@ export interface ToolConfig {
   keywords: string[];
   adStrategy: AdStrategy;
   seoTitle?: string;
+  seoDescription?: string;
+  schemaType?: 'SoftwareApplication';
 }
 
 export const TOOLS_CONFIG: ToolConfig[] = [
@@ -24,6 +26,8 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     keywords: ['text counter', 'character count', 'word count', 'korean text', 'byte counter'],
     adStrategy: 'instant',
     seoTitle: 'Text Counter - Character & Word Count Tool | CrePic',
+    seoDescription: 'Count characters, words, and bytes instantly. Korean-optimized text counter for social media, SEO, and content creation. Free and instant results.',
+    schemaType: 'SoftwareApplication',
   },
   {
     id: 'qr-generator',
@@ -35,6 +39,8 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     keywords: ['qr code', 'qr generator', 'url to qr', 'free qr code', 'qr code maker'],
     adStrategy: 'download_focused',
     seoTitle: 'QR Code Generator - Free URL to QR Converter | CrePic',
+    seoDescription: 'Generate QR codes from URLs instantly. Free, fast, and download as PNG in one click. No login required.',
+    schemaType: 'SoftwareApplication',
   },
   {
     id: 'webp-converter',
@@ -46,6 +52,8 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     keywords: ['webp converter', 'image optimizer', 'jpg to webp', 'png to webp', 'compress image'],
     adStrategy: 'process_heavy',
     seoTitle: 'WebP Converter - Fast Image Optimizer | CrePic',
+    seoDescription: 'Convert JPG/PNG to WebP format for faster loading. Optimize images with 80% quality. Free browser-based converter.',
+    schemaType: 'SoftwareApplication',
   },
 ];
 

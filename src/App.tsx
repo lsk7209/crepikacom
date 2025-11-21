@@ -5,9 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import Home from "./pages/Home";
-import TextCounter from "./pages/tools/TextCounter";
-import QRGenerator from "./pages/tools/QRGenerator";
-import WebPConverter from "./pages/tools/WebPConverter";
+import ToolPage from "./pages/tools/ToolPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,9 +19,7 @@ const App = () => (
         <AppShell>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/tools/text-counter" element={<TextCounter />} />
-            <Route path="/tools/qr-generator" element={<QRGenerator />} />
-            <Route path="/tools/webp-converter" element={<WebPConverter />} />
+            <Route path="/tools/:id" element={<ToolPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AppShell>
