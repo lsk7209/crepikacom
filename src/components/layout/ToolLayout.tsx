@@ -9,6 +9,7 @@ interface ToolLayoutProps {
   resultSlot?: React.ReactNode;
   seoArticle: React.ReactNode;
   isProcessing?: boolean;
+  errorMessage?: string;
 }
 
 export function ToolLayout({
@@ -18,15 +19,17 @@ export function ToolLayout({
   resultSlot,
   seoArticle,
   isProcessing = false,
+  errorMessage,
 }: ToolLayoutProps) {
   const pageTitle = config.seoTitle || `${config.title} | CrePic`;
+  const pageDescription = config.seoDescription || config.description;
 
   // Generate JSON-LD schema
-  const schemaData = {
+  const schemaData = config.schemaType === 'SoftwareApplication' ? {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": config.title,
-    "description": config.description,
+    "description": pageDescription,
     "applicationCategory": "UtilitiesApplication",
     "offers": {
       "@type": "Offer",
@@ -34,35 +37,37 @@ export function ToolLayout({
       "priceCurrency": "USD"
     },
     "operatingSystem": "Web Browser"
-  };
+  } : null;
 
   return (
     <>
       <Helmet>
         <title>{pageTitle}</title>
-        <meta name="description" content={config.description} />
+        <meta name="description" content={pageDescription} />
         <meta name="keywords" content={config.keywords.join(', ')} />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaData)}
-        </script>
+        {schemaData && (
+          <script type="application/ld+json">
+            {JSON.stringify(schemaData)}
+          </script>
+        )}
       </Helmet>
 
-      <div className="container px-4 py-8 mx-auto max-w-2xl">
-        {/* Header */}
-        <div className="mb-8 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+      <div className="container px-4 py-6 md:py-8 mx-auto max-w-2xl">
+        {/* Header - 3-Second Rule: Title + Problem at top */}
+        <header className="mb-6 text-center">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {config.title}
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             {config.oneLineProblem}
           </p>
-        </div>
+        </header>
 
         {/* Top Ad */}
-        <AdSlot type="top" className="mb-6" />
+        <AdSlot type="top" strategy={config.adStrategy} className="mb-6" />
 
-        {/* Main Tool Interface */}
-        <div className="bg-card rounded-lg border shadow-sm p-6 mb-6">
+        {/* Main Tool Interface - 3-Second Rule: Input + Action visible without scroll */}
+        <main className="bg-card rounded-lg border shadow-sm p-4 md:p-6 mb-6">
           {/* Input Section */}
           <div className="mb-4">
             {inputSlot}
@@ -73,16 +78,23 @@ export function ToolLayout({
             {actionSlot}
           </div>
 
-          {/* Processing Overlay */}
+          {/* Error Message */}
+          {errorMessage && (
+            <div className="mb-4 p-3 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-sm" role="alert">
+              {errorMessage}
+            </div>
+          )}
+
+          {/* Processing Overlay - Only for process_heavy strategy */}
           {config.adStrategy === 'process_heavy' && isProcessing && (
             <div className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center">
               <div className="bg-card rounded-lg border shadow-lg p-6 max-w-md w-full mx-4">
                 <div className="text-center mb-4">
-                  <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>
+                  <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4" aria-hidden="true"></div>
                   <p className="text-lg font-semibold mb-2">Processing your file...</p>
                   <p className="text-sm text-muted-foreground">This will take just a moment</p>
                 </div>
-                <AdSlot type="loading" />
+                <AdSlot type="loading" strategy={config.adStrategy} isProcessing={isProcessing} />
               </div>
             </div>
           )}
@@ -94,16 +106,17 @@ export function ToolLayout({
               <div className="mt-4">
                 <AdSlot 
                   type={config.adStrategy === 'download_focused' ? 'download' : 'bottom'} 
+                  strategy={config.adStrategy}
                 />
               </div>
             </div>
           )}
-        </div>
+        </main>
 
         {/* SEO Article */}
-        <div className="prose prose-sm max-w-none">
+        <article className="prose prose-sm max-w-none dark:prose-invert">
           {seoArticle}
-        </div>
+        </article>
       </div>
     </>
   );

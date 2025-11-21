@@ -8,20 +8,29 @@ interface AppShellProps {
 export function AppShell({ children }: AppShellProps) {
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between px-4 mx-auto max-w-7xl">
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary text-primary-foreground group-hover:scale-110 transition-transform">
-              <Sparkles className="h-5 w-5" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+      {/* Header */}
+      <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-14 md:h-16 items-center justify-between px-4 mx-auto max-w-7xl">
+          {/* Left: Logo */}
+          <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
+            <Sparkles className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+            <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               CrePic
             </span>
           </Link>
-          <nav className="flex items-center space-x-1">
-            <Link
-              to="/"
-              className="text-sm font-medium text-foreground/60 hover:text-foreground px-3 py-2 rounded-md hover:bg-secondary transition-colors"
+          
+          {/* Center: Slogan (hidden on mobile) */}
+          <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
+            <p className="text-sm font-medium text-muted-foreground">
+              No Login. 3-Second Tools.
+            </p>
+          </div>
+          
+          {/* Right: Navigation */}
+          <nav>
+            <Link 
+              to="/" 
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-accent/10"
             >
               Tools
             </Link>
