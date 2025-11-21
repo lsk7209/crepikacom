@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
+import { toast } from "@/hooks/use-toast";
 import { Download, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import QRCode from "qrcode";
@@ -37,12 +37,19 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
   const handleGenerate = async () => {
     if (!url.trim()) {
       onError("URL을 입력하세요.");
-      toast.error("URL을 입력하세요.");
+      toast({
+        variant: 'destructive',
+        title: '오류',
+        description: 'URL을 입력하세요.',
+      });
       return;
     }
 
     if (url.length > MAX_URL_LENGTH) {
-      toast.warning("URL이 너무 깁니다. 단축 URL 사용을 권장합니다.");
+      toast({
+        title: '경고',
+        description: 'URL이 너무 깁니다. 단축 URL 사용을 권장합니다.',
+      });
     }
 
     const normalizedUrl = normalizeUrl(url);
@@ -89,10 +96,17 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
         </div>
       );
       
-      toast.success("QR 코드가 생성되었습니다!");
+      toast({
+        title: 'QR 코드 생성 완료',
+        description: 'QR 코드를 다운로드할 수 있습니다.',
+      });
     } catch (error) {
       onError("QR 코드 생성에 실패했습니다.");
-      toast.error("QR 코드 생성에 실패했습니다.");
+      toast({
+        variant: 'destructive',
+        title: '오류',
+        description: 'QR 코드를 생성하지 못했습니다. URL을 확인해 주세요.',
+      });
       console.error(error);
     }
   };
@@ -106,7 +120,10 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    toast.success("QR 코드가 다운로드되었습니다!");
+    toast({
+      title: '다운로드 완료',
+      description: 'QR 코드가 다운로드되었습니다.',
+    });
   };
 
   return {

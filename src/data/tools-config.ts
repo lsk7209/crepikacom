@@ -94,6 +94,19 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     seoDescription: 'Generate QR codes from URLs instantly. Free, fast, and download as PNG in one click. No login required.',
     schemaType: 'SoftwareApplication',
   },
+  {
+    id: 'byte-counter',
+    category: 'plan',
+    title: 'Korean Byte Counter',
+    description: 'Count bytes for Naver SEO optimization. UTF-8 byte counting with Korean character support.',
+    path: '/tools/byte-counter',
+    oneLineProblem: '네이버 검색/블로그 최적화를 위해 글자 수 뿐만 아니라 바이트 수까지 한 번에 확인합니다.',
+    keywords: ['byte counter', 'korean bytes', 'naver seo', 'utf-8', 'character counter'],
+    adStrategy: 'instant',
+    seoTitle: 'Korean Byte Counter - Naver SEO Optimizer | CrePic',
+    seoDescription: 'Count UTF-8 bytes for Naver SEO optimization. Korean-optimized byte counter with character analysis.',
+    schemaType: 'SoftwareApplication',
+  },
 ];
 
 export const CATEGORY_LABELS: Record<Category, string> = {

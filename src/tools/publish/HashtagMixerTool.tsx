@@ -3,7 +3,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Copy, Check, AlertCircle } from "lucide-react";
-import { toast } from "sonner";
+import { toast } from "@/hooks/use-toast";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const MAX_HASHTAGS = 30;
@@ -31,7 +31,11 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
   const handleShuffle = () => {
     if (!input.trim()) {
       onError("해시태그를 입력하세요.");
-      toast.error("해시태그를 입력하세요.");
+      toast({
+        variant: 'destructive',
+        title: '오류',
+        description: '해시태그를 입력하세요.',
+      });
       return;
     }
 
@@ -55,7 +59,11 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
 
     if (validTags.length === 0) {
       onError("해시태그 형식(#tag)이 아닙니다. 다시 확인해 주세요.");
-      toast.error("유효한 해시태그가 없습니다.");
+      toast({
+        variant: 'destructive',
+        title: '오류',
+        description: '유효한 해시태그가 없습니다.',
+      });
       return;
     }
 
@@ -123,10 +131,17 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
     try {
       await navigator.clipboard.writeText(shuffledTags);
       setCopied(true);
-      toast.success("클립보드에 복사되었습니다!");
+      toast({
+        title: '복사 완료',
+        description: '해시태그가 클립보드에 복사되었습니다.',
+      });
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      toast.error("복사에 실패했습니다.");
+      toast({
+        variant: 'destructive',
+        title: '복사 실패',
+        description: '클립보드 복사에 실패했습니다.',
+      });
       console.error(err);
     }
   };

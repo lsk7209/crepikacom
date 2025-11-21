@@ -3,7 +3,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
-import { toast } from "sonner";
+import { toast } from "@/hooks/use-toast";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 interface InstaSpacerToolProps {
@@ -19,7 +19,11 @@ export function InstaSpacerTool({ onResult, onError }: InstaSpacerToolProps) {
   const handleFormat = () => {
     if (!text.trim()) {
       onError("텍스트를 입력하세요.");
-      toast.error("텍스트를 입력하세요.");
+      toast({
+        variant: 'destructive',
+        title: '오류',
+        description: '텍스트를 입력하세요.',
+      });
       return;
     }
 
@@ -82,10 +86,17 @@ export function InstaSpacerTool({ onResult, onError }: InstaSpacerToolProps) {
     try {
       await navigator.clipboard.writeText(formattedText);
       setCopied(true);
-      toast.success("클립보드에 복사되었습니다!");
+      toast({
+        title: '복사 완료',
+        description: '클립보드에 복사되었습니다.',
+      });
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      toast.error("복사에 실패했습니다.");
+      toast({
+        variant: 'destructive',
+        title: '복사 실패',
+        description: '클립보드 복사에 실패했습니다.',
+      });
       console.error(err);
     }
   };

@@ -7,22 +7,35 @@ import { AppShell } from "@/components/layout/AppShell";
 import Home from "./pages/Home";
 import ToolPage from "./pages/tools/ToolPage";
 import NotFound from "./pages/NotFound";
+import { KeyboardShortcutsModal } from "@/components/KeyboardShortcutsModal";
+import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
 
 const queryClient = new QueryClient();
+
+function AppContent() {
+  const { showHelp, setShowHelp } = useGlobalShortcuts();
+
+  return (
+    <>
+      <Toaster />
+      <Sonner />
+      <KeyboardShortcutsModal open={showHelp} onOpenChange={setShowHelp} />
+      <AppShell>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tools/:id" element={<ToolPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </AppShell>
+    </>
+  );
+}
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
       <BrowserRouter>
-        <AppShell>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/tools/:id" element={<ToolPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </AppShell>
+        <AppContent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

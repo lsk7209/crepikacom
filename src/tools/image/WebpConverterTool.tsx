@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
+import { toast } from "@/hooks/use-toast";
 import { Upload, Download, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
@@ -28,14 +28,22 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
     // Validate file type
     if (!['image/jpeg', 'image/png', 'image/jpg'].includes(selectedFile.type)) {
       onError("JPG 또는 PNG 이미지를 선택하세요.");
-      toast.error("JPG 또는 PNG 이미지를 선택하세요.");
+      toast({
+        variant: 'destructive',
+        title: '오류',
+        description: 'JPG 또는 PNG 이미지를 선택하세요.',
+      });
       return;
     }
 
     // Validate file size
     if (selectedFile.size > MAX_FILE_SIZE) {
       onError("10MB 이하 이미지만 지원합니다.");
-      toast.error("10MB 이하 이미지만 지원합니다.");
+      toast({
+        variant: 'destructive',
+        title: '오류',
+        description: '10MB 이하 이미지만 지원합니다.',
+      });
       return;
     }
 
@@ -51,7 +59,11 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
   const handleConvert = async () => {
     if (!file) {
       onError("이미지를 선택하세요.");
-      toast.error("이미지를 선택하세요.");
+      toast({
+        variant: 'destructive',
+        title: '오류',
+        description: '이미지를 선택하세요.',
+      });
       return;
     }
 
@@ -69,7 +81,10 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
           // Check resolution
           if (img.width > MAX_DIMENSION || img.height > MAX_DIMENSION) {
             setShowHighResWarning(true);
-            toast.warning("고해상도 이미지는 브라우저가 느려질 수 있습니다.");
+            toast({
+              title: '경고',
+              description: '고해상도 이미지는 브라우저가 느려질 수 있습니다.',
+            });
           }
 
           const canvas = document.createElement('canvas');
@@ -79,7 +94,11 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
           const ctx = canvas.getContext('2d');
           if (!ctx) {
             onError("이미지를 변환하지 못했습니다. 다시 시도해 주세요.");
-            toast.error("이미지를 변환하지 못했습니다.");
+            toast({
+              variant: 'destructive',
+              title: '오류',
+              description: '이미지를 변환하지 못했습니다.',
+            });
             onProcessing(false);
             return;
           }
@@ -90,7 +109,11 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
             (blob) => {
               if (!blob) {
                 onError("이미지를 변환하지 못했습니다. 다시 시도해 주세요.");
-                toast.error("이미지를 변환하지 못했습니다.");
+                toast({
+                  variant: 'destructive',
+                  title: '오류',
+                  description: '이미지를 변환하지 못했습니다.',
+                });
                 onProcessing(false);
                 return;
               }
@@ -149,7 +172,10 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
                 </div>
               );
               
-              toast.success("WebP로 변환되었습니다!");
+              toast({
+                title: '변환 완료',
+                description: '이미지를 WebP 형식으로 변환했습니다.',
+              });
             },
             'image/webp',
             0.8 // 80% quality
@@ -160,7 +186,11 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
       reader.readAsDataURL(file);
     } catch (error) {
       onError("이미지를 변환하지 못했습니다. 다시 시도해 주세요.");
-      toast.error("변환에 실패했습니다.");
+      toast({
+        variant: 'destructive',
+        title: '오류',
+        description: '변환에 실패했습니다.',
+      });
       console.error(error);
       onProcessing(false);
     }
@@ -175,7 +205,10 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    toast.success("WebP 이미지가 다운로드되었습니다!");
+    toast({
+      title: '다운로드 완료',
+      description: 'WebP 이미지가 다운로드되었습니다.',
+    });
   };
 
   const formatFileSize = (bytes: number) => {
