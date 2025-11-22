@@ -76,15 +76,18 @@ export default function Home() {
             <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
           </div>
           <CardTitle className="group-hover:text-primary transition-colors">
-            {tool.title}
+            {tool.titleKo}
           </CardTitle>
-          <CardDescription className="mt-2">
-            {tool.oneLineProblem}
+          <CardDescription className="mt-2 text-xs text-muted-foreground/70">
+            {tool.titleEn}
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="text-sm text-muted-foreground">
-            {tool.description}
+          <p className="text-sm text-muted-foreground mb-2">
+            {tool.oneLineProblemKo}
+          </p>
+          <p className="text-xs text-muted-foreground">
+            {tool.descriptionKo}
           </p>
         </CardContent>
       </Card>
@@ -94,12 +97,12 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>CrePic | No Login. 3-Second Tools for Creators.</title>
+        <title>크레피카 | 로그인 없이 3초 만에 끝나는 크리에이터 도구</title>
         <meta 
           name="description" 
-          content="Fast, free tools for creators. Text, image, and QR utilities that work instantly in your browser. No login required." 
+          content="국내 크리에이터를 위한 초간편 작업 도구함. 네이버·인스타·유튜브용 글자수, 바이트, 이미지, QR 작업을 3초 안에 끝내세요. 로그인 불필요." 
         />
-        <meta name="keywords" content="creator tools, free online tools, text counter, qr generator, webp converter, hashtag mixer, instagram tools" />
+        <meta name="keywords" content="크리에이터 도구, 무료 온라인 도구, 글자수 세기, qr 생성기, webp 변환, 해시태그 믹서, 인스타그램 도구, 네이버 seo" />
       </Helmet>
 
       <KeyboardShortcutsModal open={showHelp} onOpenChange={setShowHelp} />
@@ -114,7 +117,8 @@ export default function Home() {
             No Login. 3-Second Tools.
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Fast, free tools for creators. Choose what you need and get instant results.
+            국내 크리에이터를 위한 초간편 작업 도구함입니다.<br />
+            네이버·인스타·유튜브용 글자수, 바이트, 이미지, QR 작업을 3초 안에 끝내세요.
           </p>
 
           {/* Search Bar */}
@@ -123,11 +127,11 @@ export default function Home() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="어떤 작업을 도와드릴까요? (예: text, QR, hashtag)"
+                placeholder="어떤 작업을 도와드릴까요? (예: 글자수, QR, 해시태그)"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10 h-12 text-base"
-                aria-label="Search tools"
+                aria-label="도구 검색"
               />
             </div>
           </div>
@@ -138,7 +142,7 @@ export default function Home() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-6">
               <Star className="h-6 w-6 fill-yellow-400 text-yellow-400" />
-              <h2 className="text-2xl md:text-3xl font-bold">Favorites</h2>
+              <h2 className="text-2xl md:text-3xl font-bold">즐겨찾기</h2>
               <Badge variant="secondary">{favoriteToolConfigs.length}</Badge>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -151,7 +155,7 @@ export default function Home() {
         {recentToolConfigs.length > 0 && (
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-6">
-              <h2 className="text-2xl md:text-3xl font-bold">Recently Used</h2>
+              <h2 className="text-2xl md:text-3xl font-bold">최근 사용</h2>
               <Badge variant="secondary">{recentToolConfigs.length}</Badge>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -197,11 +201,11 @@ export default function Home() {
 
         {/* About Section */}
         <section className="mt-20 mb-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Why CrePic?</h2>
+          <h2 className="text-3xl font-bold mb-4">왜 크레피카인가요?</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
-            CrePic provides essential tools for creators, designers, and marketers who need quick solutions without the hassle. 
-            Whether you're optimizing content for social media, converting images for web performance, or generating QR codes for marketing, 
-            CrePic helps you work faster and smarter.
+            크레피카는 1인 크리에이터, 블로거, 마케터를 위한 필수 도구를 제공합니다. 
+            소셜미디어 콘텐츠 최적화, 웹 성능을 위한 이미지 변환, 마케팅용 QR 코드 생성 등 
+            빠르고 스마트한 작업 환경을 만들어 드립니다.
           </p>
         </section>
 
@@ -211,61 +215,61 @@ export default function Home() {
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
               <span className="text-2xl">⚡</span>
             </div>
-            <h3 className="text-lg font-semibold mb-2">Instant Results</h3>
+            <h3 className="text-lg font-semibold mb-2">즉시 결과 확인</h3>
             <p className="text-sm text-muted-foreground">
-              All processing happens in your browser. No waiting, no uploads. Get results in seconds, not minutes.
+              모든 처리가 브라우저에서 이루어집니다. 기다림 없이, 업로드 없이, 몇 초 만에 결과를 확인하세요.
             </p>
           </div>
           <div className="text-center p-6 rounded-lg border bg-card">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-accent/10 mb-4">
               <span className="text-2xl">🔒</span>
             </div>
-            <h3 className="text-lg font-semibold mb-2">100% Private</h3>
+            <h3 className="text-lg font-semibold mb-2">100% 프라이빗</h3>
             <p className="text-sm text-muted-foreground">
-              Your data never leaves your device. No servers, no storage. Complete privacy guaranteed.
+              데이터가 기기 밖으로 나가지 않습니다. 서버 없음, 저장 없음. 완벽한 개인정보 보호가 보장됩니다.
             </p>
           </div>
           <div className="text-center p-6 rounded-lg border bg-card">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-success/10 mb-4">
               <span className="text-2xl">🆓</span>
             </div>
-            <h3 className="text-lg font-semibold mb-2">Always Free</h3>
+            <h3 className="text-lg font-semibold mb-2">항상 무료</h3>
             <p className="text-sm text-muted-foreground">
-              No subscriptions, no hidden fees, no premium tiers. Use as much as you need, whenever you need it.
+              구독료 없음, 숨겨진 비용 없음, 프리미엄 없음. 필요할 때마다 원하는 만큼 사용하세요.
             </p>
           </div>
         </div>
 
         {/* Use Cases Section */}
         <section className="mt-16 mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Perfect For</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">이런 분들께 딱 맞습니다</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="p-6 rounded-lg border bg-card">
-              <h3 className="text-xl font-semibold mb-3">Social Media Managers</h3>
+              <h3 className="text-xl font-semibold mb-3">소셜미디어 마케터</h3>
               <p className="text-muted-foreground">
-                Format Instagram captions, mix hashtags, count characters for optimal post length, 
-                and ensure your content meets platform requirements.
+                인스타그램 캡션 포맷팅, 해시태그 섞기, 최적 게시물 길이를 위한 글자 수 세기, 
+                플랫폼 요구사항에 맞는 콘텐츠 작성을 쉽게 하세요.
               </p>
             </div>
             <div className="p-6 rounded-lg border bg-card">
-              <h3 className="text-xl font-semibold mb-3">Web Developers</h3>
+              <h3 className="text-xl font-semibold mb-3">웹 개발자</h3>
               <p className="text-muted-foreground">
-                Convert images to WebP for faster page loads, generate QR codes for mobile redirects, 
-                and optimize content for better SEO performance.
+                빠른 페이지 로딩을 위한 WebP 이미지 변환, 모바일 리다이렉트용 QR 코드 생성, 
+                더 나은 SEO 성능을 위한 콘텐츠 최적화를 손쉽게 처리하세요.
               </p>
             </div>
             <div className="p-6 rounded-lg border bg-card">
-              <h3 className="text-xl font-semibold mb-3">Content Creators</h3>
+              <h3 className="text-xl font-semibold mb-3">콘텐츠 크리에이터</h3>
               <p className="text-muted-foreground">
-                Generate lorem ipsum for mockups, count Korean bytes for Naver optimization, 
-                and prepare content that meets various platform specifications.
+                목업용 로렘 입숨 생성, 네이버 최적화를 위한 한글 바이트 계산, 
+                다양한 플랫폼 사양에 맞는 콘텐츠 준비를 빠르게 완료하세요.
               </p>
             </div>
             <div className="p-6 rounded-lg border bg-card">
-              <h3 className="text-xl font-semibold mb-3">Marketing Teams</h3>
+              <h3 className="text-xl font-semibold mb-3">마케팅 팀</h3>
               <p className="text-muted-foreground">
-                Create QR codes for campaigns, optimize images for email marketing, 
-                and ensure all content is perfectly formatted before publishing.
+                캠페인용 QR 코드 생성, 이메일 마케팅용 이미지 최적화, 
+                퍼블리싱 전 모든 콘텐츠를 완벽하게 포맷팅하세요.
               </p>
             </div>
           </div>

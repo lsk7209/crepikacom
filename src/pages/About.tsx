@@ -6,10 +6,10 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About CrePic | No Login. 3-Second Tools</title>
+        <title>소개 | 크레피카</title>
         <meta 
           name="description" 
-          content="Learn about CrePic - free, instant tools for creators. Our mission is to provide fast, secure, and accessible web tools without login requirements." 
+          content="크레피카 소개 - 무료 크리에이터 도구. 로그인 없이 빠르고 안전하게 사용할 수 있는 웹 도구를 제공합니다." 
         />
       </Helmet>
 
@@ -18,9 +18,9 @@ export default function About() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6">
             <Sparkles className="h-8 w-8 text-primary" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About CrePic</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">크레피카 소개</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Fast, free, and private tools for creators around the world
+            전 세계 크리에이터를 위한 빠르고 무료이며 프라이빗한 도구
           </p>
         </div>
 

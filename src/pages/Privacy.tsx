@@ -5,10 +5,10 @@ export default function Privacy() {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | CrePic</title>
+        <title>개인정보처리방침 | 크레피카</title>
         <meta 
           name="description" 
-          content="CrePic Privacy Policy. Learn how we protect your data and privacy when using our free online tools." 
+          content="크레피카 개인정보처리방침. 무료 온라인 도구 사용 시 데이터와 개인정보를 어떻게 보호하는지 알아보세요." 
         />
       </Helmet>
 
@@ -17,9 +17,9 @@ export default function Privacy() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6">
             <Shield className="h-8 w-8 text-primary" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">개인정보처리방침</h1>
           <p className="text-lg text-muted-foreground">
-            Last updated: November 22, 2025
+            최종 업데이트: 2025년 11월 22일
           </p>
         </div>
 

@@ -21,16 +21,18 @@ export function ToolLayout({
   isProcessing = false,
   errorMessage,
 }: ToolLayoutProps) {
-  const pageTitle = config.seoTitle || `${config.title} | CrePic`;
-  const pageDescription = config.seoDescription || config.description;
+  const pageTitle = config.seoTitle || `${config.titleKo} | 크레피카`;
+  const pageDescription = config.seoDescription || config.descriptionKo;
 
   // Generate JSON-LD schema
   const schemaData = config.schemaType === 'SoftwareApplication' ? {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": config.title,
+    "name": config.titleKo,
+    "alternateName": config.titleEn,
     "description": pageDescription,
     "applicationCategory": "UtilitiesApplication",
+    "inLanguage": "ko-KR",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -56,10 +58,13 @@ export function ToolLayout({
         {/* Header - 3-Second Rule: Title + Problem at top */}
         <header className="mb-6 text-center">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            {config.title}
+            {config.titleKo}
           </h1>
+          <p className="text-sm text-muted-foreground/70 mb-2">
+            {config.titleEn}
+          </p>
           <p className="text-base md:text-lg text-muted-foreground">
-            {config.oneLineProblem}
+            {config.oneLineProblemKo}
           </p>
         </header>
 
