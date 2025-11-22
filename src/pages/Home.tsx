@@ -195,36 +195,81 @@ export default function Home() {
           </div>
         )}
 
+        {/* About Section */}
+        <section className="mt-20 mb-16 text-center">
+          <h2 className="text-3xl font-bold mb-4">Why CrePic?</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
+            CrePic provides essential tools for creators, designers, and marketers who need quick solutions without the hassle. 
+            Whether you're optimizing content for social media, converting images for web performance, or generating QR codes for marketing, 
+            CrePic helps you work faster and smarter.
+          </p>
+        </section>
+
         {/* Features Section */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="text-center p-6 rounded-lg border bg-card">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
               <span className="text-2xl">⚡</span>
             </div>
             <h3 className="text-lg font-semibold mb-2">Instant Results</h3>
             <p className="text-sm text-muted-foreground">
-              All processing happens in your browser. No waiting, no uploads.
+              All processing happens in your browser. No waiting, no uploads. Get results in seconds, not minutes.
             </p>
           </div>
-          <div className="text-center">
+          <div className="text-center p-6 rounded-lg border bg-card">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-accent/10 mb-4">
               <span className="text-2xl">🔒</span>
             </div>
             <h3 className="text-lg font-semibold mb-2">100% Private</h3>
             <p className="text-sm text-muted-foreground">
-              Your data never leaves your device. No servers, no storage.
+              Your data never leaves your device. No servers, no storage. Complete privacy guaranteed.
             </p>
           </div>
-          <div className="text-center">
+          <div className="text-center p-6 rounded-lg border bg-card">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-success/10 mb-4">
               <span className="text-2xl">🆓</span>
             </div>
             <h3 className="text-lg font-semibold mb-2">Always Free</h3>
             <p className="text-sm text-muted-foreground">
-              No subscriptions, no hidden fees. Use as much as you need.
+              No subscriptions, no hidden fees, no premium tiers. Use as much as you need, whenever you need it.
             </p>
           </div>
         </div>
+
+        {/* Use Cases Section */}
+        <section className="mt-16 mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8">Perfect For</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="p-6 rounded-lg border bg-card">
+              <h3 className="text-xl font-semibold mb-3">Social Media Managers</h3>
+              <p className="text-muted-foreground">
+                Format Instagram captions, mix hashtags, count characters for optimal post length, 
+                and ensure your content meets platform requirements.
+              </p>
+            </div>
+            <div className="p-6 rounded-lg border bg-card">
+              <h3 className="text-xl font-semibold mb-3">Web Developers</h3>
+              <p className="text-muted-foreground">
+                Convert images to WebP for faster page loads, generate QR codes for mobile redirects, 
+                and optimize content for better SEO performance.
+              </p>
+            </div>
+            <div className="p-6 rounded-lg border bg-card">
+              <h3 className="text-xl font-semibold mb-3">Content Creators</h3>
+              <p className="text-muted-foreground">
+                Generate lorem ipsum for mockups, count Korean bytes for Naver optimization, 
+                and prepare content that meets various platform specifications.
+              </p>
+            </div>
+            <div className="p-6 rounded-lg border bg-card">
+              <h3 className="text-xl font-semibold mb-3">Marketing Teams</h3>
+              <p className="text-muted-foreground">
+                Create QR codes for campaigns, optimize images for email marketing, 
+                and ensure all content is perfectly formatted before publishing.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
