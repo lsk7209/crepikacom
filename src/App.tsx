@@ -7,6 +7,10 @@ import { AppShell } from "@/components/layout/AppShell";
 import Home from "./pages/Home";
 import ToolPage from "./pages/tools/ToolPage";
 import NotFound from "./pages/NotFound";
+import About from "./pages/About";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Contact from "./pages/Contact";
 import { KeyboardShortcutsModal } from "@/components/KeyboardShortcutsModal";
 import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
 
@@ -24,6 +28,10 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tools/:id" element={<ToolPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AppShell>
