@@ -6,10 +6,10 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Us | CrePic</title>
+        <title>문의하기 | 크레피카</title>
         <meta 
           name="description" 
-          content="Get in touch with CrePic. Have questions, feedback, or suggestions? We'd love to hear from you." 
+          content="크레피카에 문의하기. 질문, 피드백, 제안 사항이 있으신가요? 언제든 연락 주세요." 
         />
       </Helmet>
 
@@ -18,9 +18,9 @@ export default function Contact() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6">
             <MessageSquare className="h-8 w-8 text-primary" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">문의하기</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have questions, feedback, or suggestions? We'd love to hear from you.
+            질문, 피드백, 제안 사항이 있으신가요? 언제든 연락 주세요.
           </p>
         </div>
 

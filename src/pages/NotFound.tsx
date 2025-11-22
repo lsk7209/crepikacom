@@ -7,8 +7,8 @@ const NotFound = () => {
   return (
     <>
       <Helmet>
-        <title>Page Not Found | CrePic</title>
-        <meta name="description" content="The page you're looking for doesn't exist or is not available yet." />
+        <title>페이지를 찾을 수 없습니다 | 크레피카</title>
+        <meta name="description" content="찾으시는 페이지가 존재하지 않거나 아직 준비 중입니다." />
       </Helmet>
       
       <div className="min-h-[calc(100vh-200px)] w-full flex items-center justify-center px-4">
@@ -32,7 +32,7 @@ const NotFound = () => {
           <Link to="/">
             <Button size="lg" className="mt-4">
               <Home className="mr-2 h-4 w-4" />
-              Go to Home
+              홈으로 돌아가기
             </Button>
           </Link>
         </div>

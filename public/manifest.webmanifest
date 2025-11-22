@@ -1,7 +1,7 @@
 {
-  "name": "CrePic",
-  "short_name": "CrePic",
-  "description": "No Login. 3-Second Tools for Creators.",
+  "name": "크레피카",
+  "short_name": "크레피카",
+  "description": "로그인 없이 3초 만에 끝나는 크리에이터 도구",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
