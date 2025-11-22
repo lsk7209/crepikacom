@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CrePic - No Login. 3-Second Tools</title>
+    <link>https://crepic.com</link>
+    <description>Fast, free tools for creators. Text, image, and QR utilities that work instantly in your browser.</description>
+    <language>ko</language>
+    <atom:link href="https://crepic.com/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Text Counter - Character &amp; Word Count Tool</title>
+      <link>https://crepic.com/tools/text-counter</link>
+      <description>Count characters, words, and bytes instantly. Korean-optimized text counter for social media, SEO, and content creation.</description>
+      <guid>https://crepic.com/tools/text-counter</guid>
+      <pubDate>Wed, 22 Nov 2025 00:00:00 GMT</pubDate>
+    </item>
+    
+    <item>
+      <title>Lorem Ipsum Generator - English &amp; Korean Dummy Text</title>
+      <link>https://crepic.com/tools/lorem-generator</link>
+      <description>Generate lorem ipsum dummy text for designs and mockups. Supports English and Korean. Choose short, medium, or long paragraphs.</description>
+      <guid>https://crepic.com/tools/lorem-generator</guid>
+      <pubDate>Wed, 22 Nov 2025 00:00:00 GMT</pubDate>
+    </item>
+    
+    <item>
+      <title>Korean Byte Counter - Naver SEO Optimizer</title>
+      <link>https://crepic.com/tools/byte-counter</link>
+      <description>Count UTF-8 bytes for Naver SEO optimization. Korean-optimized byte counter with character analysis.</description>
+      <guid>https://crepic.com/tools/byte-counter</guid>
+      <pubDate>Wed, 22 Nov 2025 00:00:00 GMT</pubDate>
+    </item>
+    
+    <item>
+      <title>WebP Converter - Fast Image Optimizer</title>
+      <link>https://crepic.com/tools/webp-converter</link>
+      <description>Convert JPG/PNG to WebP format for faster loading. Optimize images with 80% quality. Free browser-based converter.</description>
+      <guid>https://crepic.com/tools/webp-converter</guid>
+      <pubDate>Wed, 22 Nov 2025 00:00:00 GMT</pubDate>
+    </item>
+    
+    <item>
+      <title>Instagram Line Break Formatter - Fix Caption Spacing</title>
+      <link>https://crepic.com/tools/insta-spacer</link>
+      <description>Format Instagram captions to preserve line breaks and spacing. Prevent broken formatting when posting. Free and instant.</description>
+      <guid>https://crepic.com/tools/insta-spacer</guid>
+      <pubDate>Wed, 22 Nov 2025 00:00:00 GMT</pubDate>
+    </item>
+    
+    <item>
+      <title>Hashtag Mixer - Shuffle &amp; Organize Social Media Tags</title>
+      <link>https://crepic.com/tools/hashtag-mixer</link>
+      <description>Shuffle and organize up to 30 hashtags for Instagram and social media. Remove duplicates and randomize order instantly.</description>
+      <guid>https://crepic.com/tools/hashtag-mixer</guid>
+      <pubDate>Wed, 22 Nov 2025 00:00:00 GMT</pubDate>
+    </item>
+    
+    <item>
+      <title>QR Code Generator - Free URL to QR Converter</title>
+      <link>https://crepic.com/tools/qr-generator</link>
+      <description>Generate QR codes from URLs instantly. Free, fast, and download as PNG in one click. No login required.</description>
+      <guid>https://crepic.com/tools/qr-generator</guid>
+      <pubDate>Wed, 22 Nov 2025 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
