@@ -10,6 +10,8 @@ export default function Privacy() {
           name="description" 
           content="크레피카 개인정보처리방침. 무료 온라인 도구 사용 시 데이터와 개인정보를 어떻게 보호하는지 알아보세요." 
         />
+        <meta name="keywords" content="개인정보처리방침, 데이터 보호, 프라이버시, 로컬 처리" />
+        <link rel="canonical" href="https://crepika.com/privacy" />
       </Helmet>
 
       <div className="container px-4 py-12 mx-auto max-w-4xl">
@@ -136,7 +138,8 @@ export default function Privacy() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
             <p className="text-muted-foreground leading-relaxed">
-              If you have any questions about this Privacy Policy, please contact us through our Contact page.
+              If you have any questions about this Privacy Policy, please contact us through our <a href="/contact" className="text-primary hover:underline">Contact page</a>. 
+              또한 <a href="/about" className="text-primary hover:underline">크레피카 소개</a>와 <a href="/terms" className="text-primary hover:underline">이용약관</a>도 함께 확인해 보세요.
             </p>
           </section>
         </article>

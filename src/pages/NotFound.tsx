@@ -9,6 +9,7 @@ const NotFound = () => {
       <Helmet>
         <title>페이지를 찾을 수 없습니다 | 크레피카</title>
         <meta name="description" content="찾으시는 페이지가 존재하지 않거나 아직 준비 중입니다." />
+        <meta name="robots" content="noindex, follow" />
       </Helmet>
       
       <div className="min-h-[calc(100vh-200px)] w-full flex items-center justify-center px-4">

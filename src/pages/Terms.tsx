@@ -5,11 +5,13 @@ export default function Terms() {
   return (
     <>
       <Helmet>
-        <title>Terms of Service | CrePic</title>
+        <title>이용약관 | 크레피카</title>
         <meta 
           name="description" 
-          content="CrePic Terms of Service. Read our terms and conditions for using our free online tools." 
+          content="크레피카 이용약관. 무료 온라인 크리에이터 도구 사용 시 적용되는 약관을 확인하세요." 
         />
+        <meta name="keywords" content="이용약관, 서비스 약관, 크레피카 정책" />
+        <link rel="canonical" href="https://crepika.com/terms" />
       </Helmet>
 
       <div className="container px-4 py-12 mx-auto max-w-4xl">
@@ -17,9 +19,9 @@ export default function Terms() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6">
             <FileText className="h-8 w-8 text-primary" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Terms of Service</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">이용약관</h1>
           <p className="text-lg text-muted-foreground">
-            Last updated: November 22, 2025
+            최종 업데이트: 2025년 11월 22일
           </p>
         </div>
 
@@ -156,7 +158,8 @@ export default function Terms() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
             <p className="text-muted-foreground leading-relaxed">
-              If you have any questions about these Terms of Service, please contact us through our Contact page.
+              If you have any questions about these Terms of Service, please contact us through our <a href="/contact" className="text-primary hover:underline">Contact page</a>.
+              <a href="/privacy" className="text-primary hover:underline">개인정보처리방침</a>과 <a href="/about" className="text-primary hover:underline">크레피카 소개</a>도 확인하실 수 있습니다.
             </p>
           </section>
         </article>

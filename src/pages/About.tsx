@@ -6,11 +6,13 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>소개 | 크레피카</title>
+        <title>크리에이터 도구 소개 | 크레피카</title>
         <meta 
           name="description" 
-          content="크레피카 소개 - 무료 크리에이터 도구. 로그인 없이 빠르고 안전하게 사용할 수 있는 웹 도구를 제공합니다." 
+          content="크레피카 소개 - 무료 크리에이터 도구. 로그인 없이 빠르고 안전하게 사용할 수 있는 글자수 세기, QR 생성, 이미지 변환 도구를 제공합니다." 
         />
+        <meta name="keywords" content="크리에이터 도구 소개, 무료 온라인 도구, 개인정보 보호, 로그인 불필요" />
+        <link rel="canonical" href="https://crepika.com/about" />
       </Helmet>
 
       <div className="container px-4 py-12 mx-auto max-w-4xl">
@@ -148,9 +150,14 @@ export default function About() {
               We're constantly adding new tools based on what creators need most. 
               Every tool is designed with the same principles: speed, privacy, and simplicity.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Whether you're optimizing images for your website, formatting Instagram captions, 
               or generating QR codes for your business, CrePic is here to help you work faster and smarter.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              지금 바로 <a href="/" className="text-primary hover:underline font-medium">크레피카 도구함</a>에서 
+              필요한 도구를 찾아보세요. <a href="/contact" className="text-primary hover:underline font-medium">문의하기</a>를 
+              통해 새로운 도구 제안도 환영합니다.
             </p>
           </section>
         </article>

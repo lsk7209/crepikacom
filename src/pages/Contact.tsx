@@ -11,6 +11,8 @@ export default function Contact() {
           name="description" 
           content="크레피카에 문의하기. 질문, 피드백, 제안 사항이 있으신가요? 언제든 연락 주세요." 
         />
+        <meta name="keywords" content="문의하기, 고객지원, 피드백, 크레피카 연락처" />
+        <link rel="canonical" href="https://crepika.com/contact" />
       </Helmet>
 
       <div className="container px-4 py-12 mx-auto max-w-4xl">
@@ -115,6 +117,7 @@ export default function Contact() {
                 <p className="text-muted-foreground leading-relaxed">
                   The best way to support us is by sharing CrePic with others who might find it useful. 
                   We also display ads to keep the service free, so allowing ads on our site helps support ongoing development.
+                  <a href="/" className="text-primary hover:underline ml-1">모든 도구 보기</a>에서 더 많은 도구를 확인하세요.
                 </p>
               </div>
             </div>
