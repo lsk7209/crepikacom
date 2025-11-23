@@ -47,6 +47,7 @@ export function ToolLayout({
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <meta name="keywords" content={config.keywords.join(', ')} />
+        <link rel="canonical" href={`https://crepika.com${config.path}`} />
         {schemaData && (
           <script type="application/ld+json">
             {JSON.stringify(schemaData)}
