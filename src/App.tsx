@@ -11,6 +11,8 @@ import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Contact from "./pages/Contact";
+import BlogList from "./pages/BlogList";
+import BlogPost from "./pages/BlogPost";
 import { KeyboardShortcutsModal } from "@/components/KeyboardShortcutsModal";
 import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
 
@@ -32,6 +34,8 @@ function AppContent() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AppShell>

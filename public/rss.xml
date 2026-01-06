@@ -1,66 +1,90 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>크레피카 - 크리에이터 작업 도구</title>
-    <link>https://crepika.com/</link>
-    <description>국내 크리에이터를 위한 초간편 작업 도구함. 로그인 없이 3초 안에 끝나는 무료 툴.</description>
-    <language>ko</language>
-    <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml"/>
-    
-    <item>
-      <title>텍스트 카운터 - 글자수 세기 도구</title>
-      <link>https://crepika.com/tools/text-counter</link>
-      <description>글자 수, 단어 수를 실시간으로 세는 무료 도구. 소셜미디어와 SEO 콘텐츠 작성에 최적화.</description>
-      <guid>https://crepika.com/tools/text-counter</guid>
-      <pubDate>Sat, 23 Nov 2025 00:00:00 +0900</pubDate>
-    </item>
-    
-    <item>
-      <title>로렘 입숨 생성기 - 더미 텍스트 생성 도구</title>
-      <link>https://crepika.com/tools/lorem-generator</link>
-      <description>디자인 시안용 로렘 입숨 더미 텍스트 생성기. 한국어와 영어 지원.</description>
-      <guid>https://crepika.com/tools/lorem-generator</guid>
-      <pubDate>Sat, 23 Nov 2025 00:00:00 +0900</pubDate>
-    </item>
-    
-    <item>
-      <title>한글 바이트 카운터 - 네이버 SEO 최적화 도구</title>
-      <link>https://crepika.com/tools/byte-counter</link>
-      <description>네이버 SEO 최적화를 위한 UTF-8 바이트 카운터. 한글 최적화 바이트 수 분석 도구.</description>
-      <guid>https://crepika.com/tools/byte-counter</guid>
-      <pubDate>Sat, 23 Nov 2025 00:00:00 +0900</pubDate>
-    </item>
-    
-    <item>
-      <title>WebP 변환기 - 이미지 최적화 도구</title>
-      <link>https://crepika.com/tools/webp-converter</link>
-      <description>JPG/PNG를 WebP로 변환하여 빠른 로딩 속도 구현. 무료 브라우저 기반 변환기.</description>
-      <guid>https://crepika.com/tools/webp-converter</guid>
-      <pubDate>Sat, 23 Nov 2025 00:00:00 +0900</pubDate>
-    </item>
-    
-    <item>
-      <title>인스타 줄바꿈 포매터 - 인스타그램 캡션 정리</title>
-      <link>https://crepika.com/tools/insta-spacer</link>
-      <description>인스타그램 캡션 줄바꿈을 유지하는 포매팅 도구. 게시 시 깨지는 형식 방지.</description>
-      <guid>https://crepika.com/tools/insta-spacer</guid>
-      <pubDate>Sat, 23 Nov 2025 00:00:00 +0900</pubDate>
-    </item>
-    
-    <item>
-      <title>해시태그 믹서 - 해시태그 섞기 도구</title>
-      <link>https://crepika.com/tools/hashtag-mixer</link>
-      <description>인스타그램 해시태그를 섞고 정리하는 도구. 최대 30개, 중복 제거 및 랜덤 순서.</description>
-      <guid>https://crepika.com/tools/hashtag-mixer</guid>
-      <pubDate>Sat, 23 Nov 2025 00:00:00 +0900</pubDate>
-    </item>
-    
-    <item>
-      <title>QR 코드 생성기 - 무료 URL QR 변환 도구</title>
-      <link>https://crepika.com/tools/qr-generator</link>
-      <description>URL로 QR 코드 즉시 생성. 무료, 빠름, 클릭 한 번에 PNG 다운로드.</description>
-      <guid>https://crepika.com/tools/qr-generator</guid>
-      <pubDate>Sat, 23 Nov 2025 00:00:00 +0900</pubDate>
-    </item>
-  </channel>
+<channel>
+  <title>크레피카 블로그 - 크리에이터를 위한 마케팅 &amp; SEO 가이드</title>
+  <link>https://crepika.com/blog</link>
+  <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
+  <language>ko-kr</language>
+  <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
+  
+  <item>
+    <title>인스타그램 마케팅을 위한 완벽 가이드: 해시태그부터 캡션까지</title>
+    <link>https://crepika.com/blog/instagram-marketing-complete-guide</link>
+    <description>인스타그램 마케팅 성공을 위한 A to Z 가이드. 해시태그 전략, 캡션 작성법, 최적 게시 시간까지 모든 것을 다룹니다.</description>
+    <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/instagram-marketing-complete-guide</guid>
+  </item>
+
+  <item>
+    <title>네이버 블로그 SEO 최적화 완전 정복: 상위 노출의 비밀</title>
+    <link>https://crepika.com/blog/naver-blog-seo-guide</link>
+    <description>네이버 검색 상위 노출을 위한 블로그 SEO 완벽 가이드. 키워드 선정부터 C-Rank 최적화까지 실전 전략을 공개합니다.</description>
+    <pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/naver-blog-seo-guide</guid>
+  </item>
+
+  <item>
+    <title>2026년 검색 시장의 변화: SEO에서 AEO(답변 엔진 최적화)로</title>
+    <link>https://crepika.com/blog/aeo-search-future-guide</link>
+    <description>구글 SGE와 AI 오버뷰 시대, 이제는 클릭이 아닌 답변이 핵심입니다. AEO 최적화 전략과 구조화된 데이터 활용법을 공개합니다.</description>
+    <pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/aeo-search-future-guide</guid>
+  </item>
+
+  <item>
+    <title>QR 코드 마케팅 전략: 오프라인 고객을 온라인으로 전환하는 비결</title>
+    <link>https://crepika.com/blog/qr-marketing-strategy-guide</link>
+    <description>QR 코드 마케팅을 통한 오프라인 사업 활성화 전략. 생성 방법부터 추적, 활용 사례까지 2026년 최신 트렌드를 담았습니다.</description>
+    <pubDate>Sun, 04 Jan 2026 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/qr-marketing-strategy-guide</guid>
+  </item>
+
+  <item>
+    <title>WebP 이미지 최적화 가이드: 웹사이트 속도와 SEO를 한 번에 잡는 법</title>
+    <link>https://crepika.com/blog/webp-seo-image-optimization</link>
+    <description>WebP 변환을 통한 웹사이트 속도 개선 및 SEO 최적화 전략. 이미지 압축 원리부터 웹 성능 점수 올리는 비법까지 다룹니다.</description>
+    <pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/webp-seo-image-optimization</guid>
+  </item>
+
+  <item>
+    <title>ChatGPT와 Perplexity를 공략하는 방법: GEO 최적화 전략</title>
+    <link>https://crepika.com/blog/geo-optimization-strategy</link>
+    <description>생성형 엔진 최적화(GEO)는 2026년 마케팅의 필수 과제입니다. AI 챗봇이 내 브랜드를 추천하게 만드는 5가지 핵심 기법.</description>
+    <pubDate>Fri, 02 Jan 2026 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/geo-optimization-strategy</guid>
+  </item>
+
+  <item>
+    <title>크리에이터를 위한 AI 도구 활용 백서: 생산성 200% 높이기</title>
+    <link>https://crepika.com/blog/ai-tools-for-creators</link>
+    <description>콘텐츠 제작 시간을 반으로 줄여주는 2026년 필수 AI 도구 리포트. 프롬프트 작성법부터 자동화 팁까지.</description>
+    <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/ai-tools-for-creators</guid>
+  </item>
+
+  <item>
+    <title>효과적인 텍스트 카운팅 전략: 플랫폼별 최적의 글자수 가이드 2026</title>
+    <link>https://crepika.com/blog/platform-text-length-guide</link>
+    <description>네이버, 인스타그램, 유튜브, 구글 검색 결과에서 내 글이 잘리지 않으려면? 플랫폼별 최적의 글자수와 바이트 제한을 정리했습니다.</description>
+    <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/platform-text-length-guide</guid>
+  </item>
+
+  <item>
+    <title>콘텐츠 가독성의 비밀: 인스타그램 줄바꿈과 공백 활용의 미학</title>
+    <link>https://crepika.com/blog/content-readability-secrets</link>
+    <description>읽기 편한 글이 공유됩니다. 빽빽한 텍스트를 숨 쉬게 만드는 줄바꿈 기술과 인스타그램 스페이서 활용법.</description>
+    <pubDate>Sun, 28 Dec 2025 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/content-readability-secrets</guid>
+  </item>
+
+  <item>
+    <title>SEO의 마지막 단축: 메타 데이터와 바이트 수 최적화 기법</title>
+    <link>https://crepika.com/blog/meta-data-byte-optimization</link>
+    <description>구글 검색 결과창(SERP)에서 클릭률을 높이는 메타 제목과 설명 최적화. 정확한 바이트 계산이 답입니다.</description>
+    <pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/meta-data-byte-optimization</guid>
+  </item>
+</channel>
 </rss>

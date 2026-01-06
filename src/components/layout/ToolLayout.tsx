@@ -1,6 +1,8 @@
 import { ToolConfig } from "@/data/tools-config";
 import { AdSlot } from "@/components/ad/AdSlot";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import { ChevronRight, Home as HomeIcon } from "lucide-react";
 
 interface ToolLayoutProps {
   config: ToolConfig;
@@ -56,6 +58,16 @@ export function ToolLayout({
       </Helmet>
 
       <div className="container px-4 py-6 md:py-8 mx-auto max-w-2xl">
+        {/* Breadcrumbs for SEO and Navigation */}
+        <nav className="flex items-center gap-2 text-xs text-muted-foreground mb-6 overflow-x-auto whitespace-nowrap pb-2 scrollbar-hide" aria-label="Breadcrumb">
+          <Link to="/" className="hover:text-primary flex items-center gap-1 transition-colors">
+            <HomeIcon className="h-3 w-3" />
+            <span>홈</span>
+          </Link>
+          <ChevronRight className="h-3 w-3 flex-shrink-0" />
+          <span className="font-medium text-foreground truncate">{config.titleKo}</span>
+        </nav>
+
         {/* Header - 3-Second Rule: Title + Problem at top */}
         <header className="mb-6 text-center">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -110,8 +122,8 @@ export function ToolLayout({
             <div className="mt-6 pt-6 border-t">
               {resultSlot}
               <div className="mt-4">
-                <AdSlot 
-                  type={config.adStrategy === 'download_focused' ? 'download' : 'bottom'} 
+                <AdSlot
+                  type={config.adStrategy === 'download_focused' ? 'download' : 'bottom'}
                   strategy={config.adStrategy}
                 />
               </div>

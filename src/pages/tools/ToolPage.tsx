@@ -12,208 +12,113 @@ import { QrGeneratorTool } from "@/tools/analyze/QrGeneratorTool";
 import { addRecentTool } from "@/utils/localStorage";
 import { toast } from "@/hooks/use-toast";
 
-// SEO Article components
-const TextCounterArticle = () => (
-  <div className="bg-card rounded-lg border p-6 space-y-6">
-    <div>
-      <h2 className="text-2xl font-bold mb-3">Why use a text counter?</h2>
-      <p className="text-muted-foreground">
-        Accurate character counting is essential for social media posts, SEO meta descriptions, 
-        and content creation. Our tool provides real-time counting with Korean-optimized byte 
-        calculation following Naver standards, where each Korean character counts as 2 bytes.
-        Perfect for Twitter limits, Instagram captions, and blog meta descriptions.
-      </p>
-    </div>
+import { TOOL_DETAILED_CONTENT, ToolDetailedContent } from "@/data/tool-content";
+import { Badge } from "@/components/ui/badge";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { CheckCircle2, Lightbulb, HelpCircle, Link as LinkIcon, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-    <div>
-      <h2 className="text-2xl font-bold mb-3">How to use this tool</h2>
-      <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-        <li>Type or paste your text into the input area</li>
-        <li>View real-time character counts instantly</li>
-        <li>Check "With Spaces" for total characters including spaces</li>
-        <li>Check "Without Spaces" for character count excluding spaces</li>
-        <li>View word count, line count, and Korean-optimized byte count</li>
-      </ol>
-    </div>
+// Dynamic detailed article component for better SEO/AEO/GEO
+const DetailedToolArticle = ({ content }: { content: ToolDetailedContent }) => (
+  <div className="space-y-12 mt-8 border-t pt-12">
+    {/* Introduction */}
+    <section>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-2">
+        <CheckCircle2 className="text-primary h-8 w-8" />
+        {content.id === 'text-counter' ? '텍스트 카운터가 필요한 이유' :
+          content.id === 'webp-converter' ? 'WebP 변환기의 핵심 역할' :
+            'QR 코드 생성기의 효과'}
+      </h2>
+      <div className="text-lg text-muted-foreground leading-relaxed whitespace-pre-wrap">
+        {content.introduction}
+      </div>
+    </section>
 
-    <div>
-      <h3 className="text-xl font-semibold mb-2">Tips</h3>
-      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-        <li>Korean byte counting follows Naver blog standards (2 bytes per Hangul character)</li>
-        <li>Great for checking social media post lengths before publishing</li>
-        <li>Use for SEO title and description optimization</li>
-      </ul>
-    </div>
-  </div>
-);
+    {/* Key Benefits */}
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {content.keyBenefits.map((benefit, idx) => (
+        <div key={idx} className="bg-muted/30 rounded-xl p-6 border border-border/50 hover:border-primary/30 transition-colors">
+          <h3 className="text-xl font-bold mb-3 text-primary">{benefit.title}</h3>
+          <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+        </div>
+      ))}
+    </section>
 
-const WebPConverterArticle = () => (
-  <div className="bg-card rounded-lg border p-6 space-y-6">
-    <div>
-      <h2 className="text-2xl font-bold mb-3">Why use a WebP converter?</h2>
-      <p className="text-muted-foreground">
-        WebP is a modern image format that provides superior compression for images on the web. 
-        Converting to WebP can reduce file sizes by 25-35% compared to JPEG and PNG, leading to 
-        faster page loads and better user experience. This tool converts your images with 80% 
-        quality, maintaining visual fidelity while significantly reducing file size. All processing 
-        happens in your browser for maximum privacy.
-      </p>
-    </div>
+    {/* How to Use */}
+    <section className="bg-card rounded-2xl border p-8 shadow-sm">
+      <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-2">
+        <Lightbulb className="text-amber-500 h-8 w-8" />
+        도구 사용 가이드 및 꿀팁
+      </h2>
 
-    <div>
-      <h2 className="text-2xl font-bold mb-3">How to use this tool</h2>
-      <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-        <li>Click the upload area or drag & drop your JPG/PNG image (max 10MB)</li>
-        <li>Click "Convert to WebP" button and wait 2-3 seconds</li>
-        <li>Preview the converted image and check size savings</li>
-        <li>Click "Download WebP" to save the optimized image</li>
-        <li>Use the WebP image on your website for faster loading</li>
-      </ol>
-    </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h3 className="text-xl font-semibold mb-4 text-foreground/80">데이터 활용법 (How to Use)</h3>
+          <ol className="space-y-4">
+            {content.howToUse.steps.map((step, idx) => (
+              <li key={idx} className="flex gap-4">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold mt-1">
+                  {idx + 1}
+                </span>
+                <p className="text-muted-foreground leading-relaxed">{step}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
 
-    <div>
-      <h3 className="text-xl font-semibold mb-2">Browser Support</h3>
-      <p className="text-sm text-muted-foreground">
-        WebP is supported by all modern browsers including Chrome, Firefox, Safari, and Edge. 
-        For older browsers, consider providing fallback images.
-      </p>
-    </div>
-  </div>
-);
+        <div className="space-y-6">
+          <h3 className="text-xl font-semibold mb-4 text-foreground/80">전문가 실전 팁 (Pro Tips)</h3>
+          <ul className="space-y-4">
+            {content.howToUse.tips.map((tip, idx) => (
+              <li key={idx} className="flex gap-3 items-start bg-amber-500/5 p-4 rounded-lg border border-amber-500/10">
+                <Badge variant="outline" className="bg-amber-500/10 text-amber-600 border-amber-200 mt-1">TIP</Badge>
+                <p className="text-sm md:text-base text-muted-foreground">{tip}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
 
-const QRGeneratorArticle = () => (
-  <div className="bg-card rounded-lg border p-6 space-y-6">
-    <div>
-      <h2 className="text-2xl font-bold mb-3">Why use a QR code generator?</h2>
-      <p className="text-muted-foreground">
-        QR codes are essential for bridging physical and digital experiences. Whether you're 
-        sharing a website URL, social media profile, or event registration link, QR codes 
-        make it easy for users to access content instantly by scanning with their phone camera.
-        Perfect for business cards, marketing materials, product packaging, and event posters.
-      </p>
-    </div>
+    {/* FAQ Area for AEO (Answer Engine Optimization) */}
+    <section>
+      <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-2">
+        <HelpCircle className="text-blue-500 h-8 w-8" />
+        자주 묻는 질문 (FAQ)
+      </h2>
+      <Accordion type="single" collapsible className="w-full">
+        {content.faq.map((item, idx) => (
+          <AccordionItem key={idx} value={`faq-${idx}`} className="border-b-border/50">
+            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline hover:text-primary transition-colors py-5">
+              {item.question}
+            </AccordionTrigger>
+            <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-6">
+              {item.answer}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </section>
 
-    <div>
-      <h2 className="text-2xl font-bold mb-3">How to use this tool</h2>
-      <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-        <li>Enter the URL you want to convert to a QR code (https:// is optional)</li>
-        <li>Click "Generate QR Code" button</li>
-        <li>Preview the generated QR code</li>
-        <li>Click "Download PNG" to save the QR code image</li>
-        <li>Use the downloaded QR code in your marketing materials, business cards, or websites</li>
-      </ol>
-    </div>
-
-    <div>
-      <h3 className="text-xl font-semibold mb-2">Best Practices</h3>
-      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-        <li>Test your QR code before printing to ensure it scans correctly</li>
-        <li>Use URL shorteners for very long URLs to improve scan reliability</li>
-        <li>Maintain good contrast when placing QR codes on colored backgrounds</li>
-        <li>Ensure the QR code is large enough to scan (minimum 2x2 cm recommended)</li>
-      </ul>
-    </div>
-  </div>
-);
-
-const LoremGeneratorArticle = () => (
-  <div className="bg-card rounded-lg border p-6 space-y-6">
-    <div>
-      <h2 className="text-2xl font-bold mb-3">Why use a lorem ipsum generator?</h2>
-      <p className="text-muted-foreground">
-        Lorem ipsum text is essential for designers and developers creating mockups and prototypes. 
-        This generator provides realistic placeholder text in both English and Korean, helping you 
-        visualize layouts without being distracted by meaningful content. Perfect for wireframes, 
-        design presentations, and UI mockups.
-      </p>
-    </div>
-
-    <div>
-      <h2 className="text-2xl font-bold mb-3">How to use this tool</h2>
-      <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-        <li>Select your preferred language (English or Korean)</li>
-        <li>Choose the text length (short, medium, or long)</li>
-        <li>Click "Generate" to create dummy text</li>
-        <li>Copy the generated text for use in your designs</li>
-      </ol>
-    </div>
-
-    <div>
-      <h3 className="text-xl font-semibold mb-2">Use Cases</h3>
-      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-        <li>Website and app design mockups</li>
-        <li>Print design layouts and brochures</li>
-        <li>Presentation templates</li>
-        <li>Typography testing</li>
-      </ul>
-    </div>
-  </div>
-);
-
-const InstaSpacerArticle = () => (
-  <div className="bg-card rounded-lg border p-6 space-y-6">
-    <div>
-      <h2 className="text-2xl font-bold mb-3">Why use an Instagram line break formatter?</h2>
-      <p className="text-muted-foreground">
-        Instagram often removes extra line breaks and spacing from captions, making your carefully 
-        formatted text look cluttered. This tool adds invisible characters that preserve your line 
-        breaks and spacing, ensuring your captions look exactly as you intended when posted to Instagram.
-        Essential for professional-looking posts and maintaining readability.
-      </p>
-    </div>
-
-    <div>
-      <h2 className="text-2xl font-bold mb-3">How to use this tool</h2>
-      <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-        <li>Paste your Instagram caption text</li>
-        <li>Click "Format for Instagram" button</li>
-        <li>Copy the formatted result</li>
-        <li>Paste into Instagram app to verify line breaks are preserved</li>
-      </ol>
-    </div>
-
-    <div>
-      <h3 className="text-xl font-semibold mb-2">Pro Tips</h3>
-      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-        <li>Always test in the actual Instagram app before posting</li>
-        <li>Works for both regular posts and Stories</li>
-        <li>Great for poetry, quotes, and structured content</li>
-      </ul>
-    </div>
-  </div>
-);
-
-const HashtagMixerArticle = () => (
-  <div className="bg-card rounded-lg border p-6 space-y-6">
-    <div>
-      <h2 className="text-2xl font-bold mb-3">Why use a hashtag mixer?</h2>
-      <p className="text-muted-foreground">
-        Randomizing hashtags can help prevent your posts from looking spammy to Instagram's algorithm. 
-        This tool shuffles your hashtags, removes duplicates, and organizes them for easy copying. 
-        Perfect for managing hashtag sets and ensuring variety in your social media strategy.
-        Supports up to 30 hashtags per shuffle.
-      </p>
-    </div>
-
-    <div>
-      <h2 className="text-2xl font-bold mb-3">How to use this tool</h2>
-      <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-        <li>Enter your hashtags (separated by spaces, commas, or new lines)</li>
-        <li>Click "Shuffle Hashtags" button</li>
-        <li>Review the shuffled result and tag count</li>
-        <li>Copy and paste into your social media post</li>
-      </ol>
-    </div>
-
-    <div>
-      <h3 className="text-xl font-semibold mb-2">Best Practices</h3>
-      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-        <li>Use a mix of popular and niche hashtags</li>
-        <li>Keep hashtags relevant to your content</li>
-        <li>Instagram allows up to 30 hashtags per post</li>
-        <li>Shuffle regularly to avoid repetitive patterns</li>
-      </ul>
-    </div>
+    {/* Related Resources for Inlinks */}
+    <section className="bg-muted/20 border rounded-2xl p-8">
+      <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
+        <LinkIcon className="h-5 w-5" />
+        함께 활용하면 좋은 리소스
+      </h2>
+      <div className="flex flex-wrap gap-4">
+        {content.relatedResources.map((res, idx) => (
+          <Link
+            key={idx}
+            to={res.path}
+            className="group flex items-center gap-2 bg-background border px-4 py-3 rounded-xl hover:border-primary hover:shadow-md transition-all"
+          >
+            <span className="font-medium group-hover:text-primary">{res.title}</span>
+            <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+          </Link>
+        ))}
+      </div>
+    </section>
   </div>
 );
 
@@ -225,14 +130,12 @@ export default function ToolPage() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  // Track tool usage when result is generated
   useEffect(() => {
     if (resultSlot && id) {
       addRecentTool(id);
     }
   }, [resultSlot, id]);
 
-  // If tool not found, redirect to 404
   if (!config) {
     return <Navigate to="/404" replace />;
   }
@@ -254,9 +157,8 @@ export default function ToolPage() {
     }
   };
 
-  // Render appropriate tool component
   let toolComponent;
-  let seoArticle;
+  const detailedContent = id ? TOOL_DETAILED_CONTENT[id] : undefined;
 
   switch (id) {
     case 'text-counter':
@@ -264,7 +166,6 @@ export default function ToolPage() {
         onResult: handleResult,
         onError: handleError,
       });
-      seoArticle = <TextCounterArticle />;
       break;
 
     case 'lorem-generator':
@@ -272,7 +173,6 @@ export default function ToolPage() {
         onResult: handleResult,
         onError: handleError,
       });
-      seoArticle = <LoremGeneratorArticle />;
       break;
 
     case 'byte-counter':
@@ -280,35 +180,6 @@ export default function ToolPage() {
         onResult: handleResult,
         onError: handleError,
       });
-      seoArticle = (
-        <div className="bg-card rounded-lg border p-6 space-y-6">
-          <div>
-            <h2 className="text-2xl font-bold mb-3">Why use a byte counter for Naver?</h2>
-            <p className="text-muted-foreground">
-              Naver, Korea's leading search engine, uses UTF-8 byte counting for SEO optimization.
-              Korean characters count as 3 bytes each, while English characters count as 1 byte.
-              Understanding your content's byte count is crucial for meta descriptions, blog titles,
-              and other Naver-optimized content.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold mb-3">How to use this tool</h2>
-            <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-              <li>Enter or paste your Korean/English mixed text</li>
-              <li>Click "Count Bytes" or see results in real-time</li>
-              <li>Review total characters, bytes, and language breakdown</li>
-              <li>Optimize your content based on Naver's byte limits</li>
-            </ol>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Naver SEO Tips</h3>
-            <p className="text-sm text-muted-foreground">
-              Keep meta descriptions under 80 bytes, blog titles under 30 bytes, and main content
-              optimized for readability and search rankings.
-            </p>
-          </div>
-        </div>
-      );
       break;
 
     case 'webp-converter':
@@ -317,7 +188,6 @@ export default function ToolPage() {
         onError: handleError,
         onProcessing: setIsProcessing,
       });
-      seoArticle = <WebPConverterArticle />;
       break;
 
     case 'insta-spacer':
@@ -325,7 +195,6 @@ export default function ToolPage() {
         onResult: handleResult,
         onError: handleError,
       });
-      seoArticle = <InstaSpacerArticle />;
       break;
 
     case 'hashtag-mixer':
@@ -333,7 +202,6 @@ export default function ToolPage() {
         onResult: handleResult,
         onError: handleError,
       });
-      seoArticle = <HashtagMixerArticle />;
       break;
 
     case 'qr-generator':
@@ -341,12 +209,19 @@ export default function ToolPage() {
         onResult: handleResult,
         onError: handleError,
       });
-      seoArticle = <QRGeneratorArticle />;
       break;
 
     default:
       return <Navigate to="/404" replace />;
   }
+
+  const seoArticle = detailedContent ? (
+    <DetailedToolArticle content={detailedContent} />
+  ) : (
+    <div className="py-12 text-center text-muted-foreground border-t mt-8">
+      <p>상세 가이드를 준비 중입니다.</p>
+    </div>
+  );
 
   return (
     <ToolLayout
