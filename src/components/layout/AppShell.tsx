@@ -27,12 +27,18 @@ export function AppShell({ children }: AppShellProps) {
           </div>
 
           {/* Right: Navigation */}
-          <nav>
+          <nav className="flex items-center gap-1">
             <Link
               to="/"
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-accent/10"
             >
               도구
+            </Link>
+            <Link
+              to="/blog"
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-accent/10"
+            >
+              블로그
             </Link>
           </nav>
         </div>
