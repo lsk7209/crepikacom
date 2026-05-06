@@ -75,6 +75,18 @@ export function MarkdownContent({ content, className = '' }: { content: string; 
       continue;
     }
 
+    // Headings
+    if (trimmed.startsWith('### ')) {
+      elements.push(<h3 key={i} className="text-xl font-bold mt-6 mb-3">{processInline(trimmed.slice(4))}</h3>);
+      i++;
+      continue;
+    }
+    if (trimmed.startsWith('## ')) {
+      elements.push(<h2 key={i} className="text-2xl font-bold mt-8 mb-4">{processInline(trimmed.slice(3))}</h2>);
+      i++;
+      continue;
+    }
+
     // Unordered list block
     if (trimmed.startsWith('- ')) {
       const items: React.ReactNode[] = [];
