@@ -84,7 +84,7 @@ function validatePost(post) {
   if (!post.content?.introduction) errors.push('introduction 없음');
   if (!Array.isArray(post.content?.sections) || post.content.sections.length < 4) errors.push(`sections ${post.content?.sections?.length ?? 0}개 (4개 이상 필요)`);
   if (!post.content?.conclusion) errors.push('conclusion 없음');
-  if (!Array.isArray(post.faq) || post.faq.length < 3) errors.push(`faq ${post.faq?.length ?? 0}개 (3개 이상 필요)`);
+  if (!Array.isArray(post.faq) || post.faq.length < 4) errors.push(`faq ${post.faq?.length ?? 0}개 (4개 이상 필요)`);
   if (estimateWordCount(post) < 500) errors.push('본문 너무 짧음');
   return errors;
 }
@@ -99,7 +99,7 @@ async function callClaude(systemPrompt, userPrompt) {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 8000,
+      max_tokens: 12000,
       system: systemPrompt,
       messages: [{ role: 'user', content: userPrompt }],
     }),
@@ -114,9 +114,17 @@ async function callClaude(systemPrompt, userPrompt) {
   return data.content[0].text;
 }
 
-function buildSystemPrompt() {
-  return `당신은 크레피카(crepika.com)의 전문 콘텐츠 작가입니다.
-크레피카는 크리에이터를 위한 무료 웹 도구 모음으로, 다음 도구들을 제공합니다:
+const AUTHOR_PERSONAS = {
+  '김민혁': 'SEO 전략가 김민혁입니다. 데이터 기반 분석, 구체적 수치, 구글·네이버 검색 전략을 전문으로 합니다. 논리적이고 근거 있는 문체로 작성하세요.',
+  '이지수': '소셜미디어 전문가 이지수입니다. 인스타그램·틱톡·네이버 블로그 실전 경험을 기반으로 크리에이터가 바로 적용할 수 있는 실용적 조언을 제공합니다. 친근하고 활력 있는 문체로 작성하세요.',
+  '박준영': '개발자 출신 크리에이터 박준영입니다. 기술 도구 활용, 자동화, 효율화 관점에서 콘텐츠를 다룹니다. 명확하고 단계적인 문체로 작성하세요.',
+};
+
+function buildSystemPrompt(author) {
+  const persona = AUTHOR_PERSONAS[author] || AUTHOR_PERSONAS['김민혁'];
+  return `당신은 ${persona}
+
+크레피카(crepika.com)의 전문 콘텐츠 작가로서 다음 도구들을 자연스럽게 연결합니다:
 - 글자수 세기 (/tools/text-counter)
 - 한글 바이트 카운터 (/tools/byte-counter)
 - WebP 변환기 (/tools/webp-converter)
@@ -278,7 +286,7 @@ async function main() {
 
   console.log(`📝 다음 발행 포스트: [${entry.id}] ${entry.title}`);
 
-  const systemPrompt = buildSystemPrompt();
+  const systemPrompt = buildSystemPrompt(entry.author);
   const userPrompt = buildUserPrompt(entry);
 
   let post = null;
