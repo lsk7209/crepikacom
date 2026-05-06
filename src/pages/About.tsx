@@ -38,8 +38,17 @@ export default function About() {
         />
         <meta name="keywords" content="크레피카 소개, SEO 전문가, 마케팅 팀, 무료 크리에이터 도구, E-E-A-T" />
         <link rel="canonical" href="https://crepika.com/about" />
+        <meta property="og:title" content="서비스 소개 및 팀 정보 | 크레피카" />
+        <meta property="og:description" content="크레피카(Crepika)는 크리에이터를 위한 전문 도구를 만드는 팀입니다. SEO, SNS 마케팅, 이미지 최적화 전문가들이 제공하는 100% 무료 도구들을 만나보세요." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://crepika.com/about" />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:site_name" content="크레피카" />
+        <meta property="og:image" content="https://crepika.com/og-image.svg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "AboutPage",

@@ -89,6 +89,8 @@ export default function BlogList() {
                 <meta property="og:url" content="https://crepika.com/blog" />
                 <meta property="og:locale" content="ko_KR" />
                 <meta property="og:image" content="https://crepika.com/og-image.svg" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
                 <script type="application/ld+json">{JSON.stringify(collectionSchema)}</script>

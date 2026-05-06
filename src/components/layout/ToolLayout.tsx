@@ -67,6 +67,8 @@ export function ToolLayout({
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:image" content="https://crepika.com/og-image.svg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
