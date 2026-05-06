@@ -49,6 +49,7 @@ export default function About() {
             "name": "크레피카",
             "alternateName": "Crepika",
             "url": "https://crepika.com",
+            "logo": "https://crepika.com/og-image.svg",
             "email": "support@crepika.com",
             "foundingDate": "2025",
             "description": "국내 크리에이터를 위한 무료 온라인 도구 서비스. 로그인 없이 3초 안에 사용 가능한 QR 생성기, 글자수 세기, WebP 변환기 등을 제공합니다.",

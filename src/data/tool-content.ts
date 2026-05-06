@@ -117,7 +117,7 @@ export const TOOL_DETAILED_CONTENT: Record<string, ToolDetailedContent> = {
         ],
         relatedResources: [
             { title: 'WebP SEO 이미지 최적화 가이드', path: '/blog/webp-seo-image-optimization' },
-            { title: '이미지 압축 도구', path: '/tools/image-compressor' }
+            { title: 'QR 코드 생성기', path: '/tools/qr-generator' }
         ]
     },
     'qr-generator': {
@@ -164,7 +164,7 @@ export const TOOL_DETAILED_CONTENT: Record<string, ToolDetailedContent> = {
         ],
         relatedResources: [
             { title: 'QR 코드 마케팅 전략 블로그', path: '/blog/qr-marketing-strategy-guide' },
-            { title: 'URL 단축 도구', path: '/tools/url-shortener' }
+            { title: '텍스트 카운터', path: '/tools/text-counter' }
         ]
     },
     'lorem-generator': {

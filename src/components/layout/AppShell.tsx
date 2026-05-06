@@ -60,13 +60,12 @@ export function AppShell({ children }: AppShellProps) {
             {/* Brand and Info */}
             <div className="col-span-2 md:col-span-1">
               <Link to="/" className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4 inline-block">
-                CrePika
+                크레피카
               </Link>
               <div className="space-y-2 text-xs text-muted-foreground leading-relaxed mt-2">
-                <p><strong>대표:</strong> 김민혁 | <strong>팀명:</strong> 크레피카(Crepika)</p>
-                <p><strong>주소:</strong> 서울특별시 강남구 테헤란로 123, 크리에이티브 타워 15층</p>
+                <p><strong>서비스명:</strong> 크레피카 (Crepika)</p>
                 <p><strong>이메일:</strong> support@crepika.com</p>
-                <p className="pt-2">전 세계 크리에이터의 창작 효율을 높이는 스마트 유틸리티 서비스를 만듭니다.</p>
+                <p className="pt-2">크리에이터의 창작 효율을 높이는 무료 스마트 유틸리티 서비스입니다.</p>
               </div>
             </div>
 
@@ -134,6 +133,11 @@ export function AppShell({ children }: AppShellProps) {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                    문의하기
+                  </Link>
+                </li>
+                <li>
                   <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
                     개인정보처리방침
                   </Link>
@@ -148,7 +152,7 @@ export function AppShell({ children }: AppShellProps) {
           </div>
 
           <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-            <p>© 2026 CrePika. All rights reserved.</p>
+            <p>© 2026 크레피카 (Crepika). All rights reserved.</p>
             <p>모든 데이터는 브라우저 내에서 안전하게 처리되며 서버에 저장되지 않습니다.</p>
           </div>
         </div>

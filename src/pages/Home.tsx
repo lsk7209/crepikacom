@@ -110,7 +110,7 @@ export default function Home() {
           "name": "크레피카",
           "alternateName": "Crepika",
           "url": "https://crepika.com",
-          "logo": "https://crepika.com/favicon.ico",
+          "logo": "https://crepika.com/og-image.svg",
           "description": "국내 크리에이터를 위한 무료 온라인 도구 서비스",
           "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "support@crepika.com", "availableLanguage": "Korean" },
           "sameAs": []

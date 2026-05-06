@@ -4,7 +4,7 @@ import { Clock, Calendar, ArrowRight, Tag } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getAllBlogPosts, BlogPost } from "@/data/blog-content";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
     'guide': '가이드',
@@ -16,6 +16,30 @@ const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
 export default function BlogList() {
     const allPosts = getAllBlogPosts();
     const [selectedCategory, setSelectedCategory] = useState<BlogPost['category'] | 'all'>('all');
+
+    const collectionSchema = useMemo(() => ({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "크리에이터 블로그",
+        "description": "인스타그램 마케팅, 네이버 SEO, 소셜미디어 전략 등 크리에이터를 위한 실전 가이드",
+        "url": "https://crepika.com/blog",
+        "publisher": {
+            "@type": "Organization",
+            "name": "크레피카",
+            "url": "https://crepika.com"
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": allPosts.length,
+            "itemListElement": allPosts.map((post, idx) => ({
+                "@type": "ListItem",
+                "position": idx + 1,
+                "url": `https://crepika.com/blog/${post.slug}`,
+                "name": post.title,
+                "description": post.description
+            }))
+        }
+    }), [allPosts]);
 
     const filteredPosts = selectedCategory === 'all'
         ? allPosts
@@ -35,6 +59,10 @@ export default function BlogList() {
                 <meta property="og:description" content="인스타그램 마케팅, 네이버 SEO, 소셜미디어 전략 등 크리에이터를 위한 실전 가이드와 팁" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://crepika.com/blog" />
+                <meta property="og:image" content="https://crepika.com/og-image.svg" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
+                <script type="application/ld+json">{JSON.stringify(collectionSchema)}</script>
             </Helmet>
 
             <div className="container px-4 py-12 mx-auto max-w-7xl">
