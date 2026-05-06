@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useState, useEffect, lazy, Suspense } from "react";
 import { CATEGORY_LABELS, Category, searchTools, getToolById } from "@/data/tools-config";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,7 +12,8 @@ import { getRecentTools, getFavoriteTools, toggleFavoriteTool, isFavoriteTool } 
 const RecentBlogPosts = lazy(() => import("./home/RecentBlogPosts"));
 
 export default function Home() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(searchParams.get('q') ?? "");
   const [favorites, setFavorites] = useState<string[]>([]);
   const [recentTools, setRecentTools] = useState<string[]>([])
 
@@ -20,6 +21,15 @@ export default function Home() {
     setFavorites(getFavoriteTools());
     setRecentTools(getRecentTools());
   }, []);
+
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    if (value) {
+      setSearchParams({ q: value }, { replace: true });
+    } else {
+      setSearchParams({}, { replace: true });
+    }
+  };
 
   const handleToggleFavorite = (toolId: string, e: React.MouseEvent) => {
     e.preventDefault();
@@ -229,7 +239,7 @@ export default function Home() {
                 type="text"
                 placeholder="어떤 작업을 도와드릴까요? (예: 글자수, QR, 해시태그)"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => handleSearchChange(e.target.value)}
                 className="pl-10 h-12 text-base"
                 aria-label="도구 검색"
               />
@@ -291,7 +301,7 @@ export default function Home() {
               다른 키워드로 검색하거나 아래 카테고리를 둘러보세요.
             </p>
             <button
-              onClick={() => setSearchQuery("")}
+              onClick={() => handleSearchChange("")}
               className="text-primary hover:underline"
             >
               모든 도구 보기
