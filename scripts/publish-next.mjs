@@ -245,7 +245,9 @@ function injectIntoRss(post) {
     <dc:creator>${post.author}</dc:creator>
   </item>`;
 
-  content = content.replace('</channel>', newItem + '\n\n</channel>');
+  content = content
+    .replace(/<lastBuildDate>[^<]*<\/lastBuildDate>/, `<lastBuildDate>${new Date().toUTCString()}</lastBuildDate>`)
+    .replace('</channel>', newItem + '\n\n</channel>');
   writeFileSync(RSS_FILE, content, 'utf-8');
   console.log(`✅ rss.xml 업데이트 완료`);
 }
