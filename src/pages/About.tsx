@@ -45,14 +45,14 @@ export default function About() {
         <meta property="og:url" content="https://crepika.com/about" />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:site_name" content="크레피카" />
-        <meta property="og:image" content="https://crepika.com/og-image.svg" />
+        <meta property="og:image" content="https://crepika.com/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="크레피카 팀 소개" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="서비스 소개 및 팀 정보 | 크레피카" />
         <meta name="twitter:description" content="크레피카 팀 소개. SEO, 소셜미디어, 개발 전문가들이 만드는 크리에이터 무료 도구 서비스." />
-        <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
+        <meta name="twitter:image" content="https://crepika.com/og-image.png" />
         <meta name="twitter:image:alt" content="크레피카 팀 소개" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -66,7 +66,7 @@ export default function About() {
             "name": "크레피카",
             "alternateName": "Crepika",
             "url": "https://crepika.com",
-            "logo": "https://crepika.com/og-image.svg",
+            "logo": "https://crepika.com/og-image.png",
             "email": "support@crepika.com",
             "foundingDate": "2025",
             "description": "국내 크리에이터를 위한 무료 온라인 도구 서비스. 로그인 없이 3초 안에 사용 가능한 QR 생성기, 글자수 세기, WebP 변환기 등을 제공합니다.",

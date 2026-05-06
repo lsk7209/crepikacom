@@ -20,14 +20,14 @@ export default function Contact() {
         <meta property="og:url" content="https://crepika.com/contact" />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:site_name" content="크레피카" />
-        <meta property="og:image" content="https://crepika.com/og-image.svg" />
+        <meta property="og:image" content="https://crepika.com/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="크레피카 문의하기" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="문의하기 | 크레피카" />
         <meta name="twitter:description" content="크레피카에 문의하기. 24시간 이내 답변. 기술 문의, 제휴, 새 도구 제안 모두 환영합니다." />
-        <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
+        <meta name="twitter:image" content="https://crepika.com/og-image.png" />
         <meta name="twitter:image:alt" content="크레피카 문의하기" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",

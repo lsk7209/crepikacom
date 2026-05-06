@@ -122,10 +122,10 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="크레피카 | 로그인 없이 3초 만에 끝나는 크리에이터 도구" />
         <meta name="twitter:description" content="국내 크리에이터를 위한 초간편 작업 도구함. 글자수, 바이트, 이미지, QR 작업을 3초 안에 끝내세요." />
-        <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
+        <meta name="twitter:image" content="https://crepika.com/og-image.png" />
         <meta name="twitter:image:alt" content="크레피카 — 크리에이터 필수 도구함" />
         <link rel="alternate" type="application/rss+xml" title="크레피카 블로그" href="https://crepika.com/rss.xml" />
-        <meta property="og:image" content="https://crepika.com/og-image.svg" />
+        <meta property="og:image" content="https://crepika.com/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="크레피카 — 크리에이터 필수 도구함" />
@@ -136,7 +136,7 @@ export default function Home() {
           "name": "크레피카",
           "alternateName": "Crepika",
           "url": "https://crepika.com",
-          "logo": { "@type": "ImageObject", "url": "https://crepika.com/og-image.svg", "width": 1200, "height": 630 },
+          "logo": { "@type": "ImageObject", "url": "https://crepika.com/og-image.png", "width": 1200, "height": 630 },
           "description": "국내 크리에이터를 위한 무료 온라인 도구 서비스. 로그인 없이 3초 안에 사용 가능한 QR 생성기, 글자수 세기, WebP 변환기 등.",
           "email": "support@crepika.com",
           "areaServed": "KR",

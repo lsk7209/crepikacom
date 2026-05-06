@@ -15,10 +15,10 @@ const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
 };
 
 const CATEGORY_THUMBNAILS: Record<BlogPost['category'], string> = {
-    'guide': '/images/og-guide.svg',
-    'tips': '/images/og-tips.svg',
-    'insights': '/images/og-insights.svg',
-    'case-study': '/images/og-case-study.svg',
+    'guide': '/images/og-guide.png',
+    'tips': '/images/og-tips.png',
+    'insights': '/images/og-insights.png',
+    'case-study': '/images/og-case-study.png',
 };
 
 const POSTS_PER_PAGE = 12;
@@ -135,14 +135,14 @@ export default function BlogList() {
                 <meta property="og:site_name" content="크레피카" />
                 <meta property="og:url" content="https://crepika.com/blog" />
                 <meta property="og:locale" content="ko_KR" />
-                <meta property="og:image" content="https://crepika.com/og-image.svg" />
+                <meta property="og:image" content="https://crepika.com/og-image.png" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <meta property="og:image:alt" content="크레피카 크리에이터 블로그" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="크리에이터 블로그 - 마케팅 팁과 가이드 | 크레피카" />
                 <meta name="twitter:description" content="인스타그램, 네이버, 유튜브 크리에이터를 위한 실전 마케팅 전략과 SEO 팁" />
-                <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
+                <meta name="twitter:image" content="https://crepika.com/og-image.png" />
                 <meta name="twitter:image:alt" content="크레피카 크리에이터 블로그" />
                 <script type="application/ld+json">{JSON.stringify(collectionSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>

@@ -13,13 +13,13 @@ import { MarkdownContent } from "@/lib/markdown";
 import { useState, useEffect, useRef } from "react";
 
 const SITE_URL = "https://crepika.com";
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.svg`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 const CATEGORY_OG_IMAGES: Record<string, string> = {
-  guide: `${SITE_URL}/images/og-guide.svg`,
-  tips: `${SITE_URL}/images/og-tips.svg`,
-  insights: `${SITE_URL}/images/og-insights.svg`,
-  'case-study': `${SITE_URL}/images/og-case-study.svg`,
+  guide: `${SITE_URL}/images/og-guide.png`,
+  tips: `${SITE_URL}/images/og-tips.png`,
+  insights: `${SITE_URL}/images/og-insights.png`,
+  'case-study': `${SITE_URL}/images/og-case-study.png`,
 };
 
 const AUTHOR_BIOS: Record<string, string> = {
@@ -80,7 +80,7 @@ export default function BlogPost() {
             "@id": `${SITE_URL}/#organization`,
             "name": "크레피카",
             "url": SITE_URL,
-            "logo": { "@type": "ImageObject", "url": `${SITE_URL}/og-image.svg`, "width": 1200, "height": 630 }
+            "logo": { "@type": "ImageObject", "url": `${SITE_URL}/og-image.png`, "width": 1200, "height": 630 }
         },
         "keywords": post.keywords.join(", "),
         "inLanguage": "ko-KR",

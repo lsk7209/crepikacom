@@ -11,13 +11,13 @@
   "categories": ["utilities", "productivity"],
   "icons": [
     {
-      "src": "/og-image.svg",
+      "src": "/og-image.png",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/og-image.svg",
+      "src": "/og-image.png",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "maskable"
@@ -25,7 +25,7 @@
   ],
   "screenshots": [
     {
-      "src": "/og-image.svg",
+      "src": "/og-image.png",
       "sizes": "1200x630",
       "type": "image/svg+xml",
       "form_factor": "wide",

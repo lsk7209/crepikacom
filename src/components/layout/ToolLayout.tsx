@@ -6,10 +6,10 @@ import { ChevronRight, Home as HomeIcon } from "lucide-react";
 
 const SITE_URL = "https://crepika.com";
 const TOOL_OG_IMAGES: Record<Category, string> = {
-  plan:    `${SITE_URL}/images/og-tool-plan.svg`,
-  create:  `${SITE_URL}/images/og-tool-create.svg`,
-  publish: `${SITE_URL}/images/og-tool-publish.svg`,
-  analyze: `${SITE_URL}/images/og-tool-analyze.svg`,
+  plan:    `${SITE_URL}/images/og-tool-plan.png`,
+  create:  `${SITE_URL}/images/og-tool-create.png`,
+  publish: `${SITE_URL}/images/og-tool-publish.png`,
+  analyze: `${SITE_URL}/images/og-tool-analyze.png`,
 };
 
 interface ToolLayoutProps {
@@ -35,7 +35,7 @@ export function ToolLayout({
   const pageDescription = config.seoDescription || config.descriptionKo;
 
   const canonicalUrl = `${SITE_URL}${config.path}`;
-  const ogImage = TOOL_OG_IMAGES[config.category] ?? `${SITE_URL}/og-image.svg`;
+  const ogImage = TOOL_OG_IMAGES[config.category] ?? `${SITE_URL}/og-image.png`;
 
   // SoftwareApplication schema
   const schemaData = config.schemaType === 'SoftwareApplication' ? {
