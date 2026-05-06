@@ -20,9 +20,12 @@ const CATEGORY_THUMBNAILS: Record<BlogPost['category'], string> = {
     'case-study': '/images/og-case-study.svg',
 };
 
+const POSTS_PER_PAGE = 12;
+
 export default function BlogList() {
     const allPosts = getAllBlogPosts();
     const [selectedCategory, setSelectedCategory] = useState<BlogPost['category'] | 'all'>('all');
+    const [currentPage, setCurrentPage] = useState(1);
 
     const collectionSchema = useMemo(() => ({
         "@context": "https://schema.org",
@@ -51,6 +54,14 @@ export default function BlogList() {
     const filteredPosts = selectedCategory === 'all'
         ? allPosts
         : allPosts.filter(post => post.category === selectedCategory);
+
+    const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+    const paginatedPosts = filteredPosts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
+
+    const handleCategoryChange = (cat: BlogPost['category'] | 'all') => {
+        setSelectedCategory(cat);
+        setCurrentPage(1);
+    };
 
     return (
         <>
@@ -89,7 +100,7 @@ export default function BlogList() {
                     <Badge
                         variant={selectedCategory === 'all' ? 'default' : 'outline'}
                         className="cursor-pointer px-4 py-2"
-                        onClick={() => setSelectedCategory('all')}
+                        onClick={() => handleCategoryChange('all')}
                     >
                         전체
                     </Badge>
@@ -98,7 +109,7 @@ export default function BlogList() {
                             key={key}
                             variant={selectedCategory === key ? 'default' : 'outline'}
                             className="cursor-pointer px-4 py-2"
-                            onClick={() => setSelectedCategory(key as BlogPost['category'])}
+                            onClick={() => handleCategoryChange(key as BlogPost['category'])}
                         >
                             {label}
                         </Badge>
@@ -107,7 +118,7 @@ export default function BlogList() {
 
                 {/* Blog Posts Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {filteredPosts.map((post) => (
+                    {paginatedPosts.map((post) => (
                         <Link
                             key={post.slug}
                             to={`/blog/${post.slug}`}
@@ -168,6 +179,50 @@ export default function BlogList() {
                         <p className="text-lg text-muted-foreground">
                             해당 카테고리의 글이 아직 없습니다.
                         </p>
+                    </div>
+                )}
+
+                {/* Pagination */}
+                {totalPages > 1 && (
+                    <div className="flex items-center justify-center gap-2 mt-10">
+                        <button
+                            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                            disabled={currentPage === 1}
+                            className="px-4 py-2 rounded-lg border text-sm font-medium disabled:opacity-40 hover:bg-muted transition-colors"
+                        >
+                            이전
+                        </button>
+                        {Array.from({ length: totalPages }, (_, i) => i + 1)
+                            .filter(p => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 2)
+                            .reduce<(number | '...')[]>((acc, p, i, arr) => {
+                                if (i > 0 && p - (arr[i - 1] as number) > 1) acc.push('...');
+                                acc.push(p);
+                                return acc;
+                            }, [])
+                            .map((p, i) =>
+                                p === '...' ? (
+                                    <span key={`ellipsis-${i}`} className="px-2 text-muted-foreground">…</span>
+                                ) : (
+                                    <button
+                                        key={p}
+                                        onClick={() => setCurrentPage(p as number)}
+                                        className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${currentPage === p ? 'bg-primary text-primary-foreground border-primary' : 'hover:bg-muted'}`}
+                                    >
+                                        {p}
+                                    </button>
+                                )
+                            )
+                        }
+                        <button
+                            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                            disabled={currentPage === totalPages}
+                            className="px-4 py-2 rounded-lg border text-sm font-medium disabled:opacity-40 hover:bg-muted transition-colors"
+                        >
+                            다음
+                        </button>
+                        <span className="text-sm text-muted-foreground ml-2">
+                            {currentPage}/{totalPages} 페이지 ({filteredPosts.length}개)
+                        </span>
                     </div>
                 )}
 
