@@ -322,7 +322,6 @@ function ShareButtons({ url, title }: { url: string; title: string }) {
     };
 
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
-    const kakaoUrl = `https://sharer.kakao.com/talk/friends/picker/link?app_key=none&link_ver=4.0&template_id=none`;
 
     return (
         <div className="my-8 py-6 border-y">

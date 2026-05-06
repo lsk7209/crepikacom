@@ -47,6 +47,7 @@ export default function About() {
           "description": "크리에이터를 위한 무료 온라인 도구 서비스 크레피카의 팀과 철학을 소개합니다.",
           "mainEntity": {
             "@type": "Organization",
+            "@id": "https://crepika.com/#organization",
             "name": "크레피카",
             "alternateName": "Crepika",
             "url": "https://crepika.com",
