@@ -48,6 +48,7 @@ export default function About() {
         <meta property="og:image" content="https://crepika.com/og-image.svg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="크레피카 팀 소개" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
         <script type="application/ld+json">{JSON.stringify({

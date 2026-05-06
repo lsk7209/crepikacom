@@ -63,7 +63,7 @@ export default function BlogList() {
         "mainEntity": {
             "@type": "ItemList",
             "numberOfItems": allPosts.length,
-            "itemListElement": allPosts.map((post, idx) => ({
+            "itemListElement": allPosts.slice(0, 20).map((post, idx) => ({
                 "@type": "ListItem",
                 "position": idx + 1,
                 "url": `https://crepika.com/blog/${post.slug}`,
@@ -137,6 +137,7 @@ export default function BlogList() {
                 <meta property="og:image" content="https://crepika.com/og-image.svg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
+                <meta property="og:image:alt" content="크레피카 크리에이터 블로그" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
                 <script type="application/ld+json">{JSON.stringify(collectionSchema)}</script>

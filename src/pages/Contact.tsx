@@ -23,6 +23,7 @@ export default function Contact() {
         <meta property="og:image" content="https://crepika.com/og-image.svg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="크레피카 문의하기" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="문의하기 | 크레피카" />
         <meta name="twitter:image" content="https://crepika.com/og-image.svg" />

@@ -133,7 +133,7 @@ export default function BlogPost() {
                 <meta property="article:section" content={CATEGORY_LABELS_KO[post.category] ?? post.category} />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-
+                <meta property="og:image:alt" content={post.title} />
                 <meta property="og:locale" content="ko_KR" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={post.title} />

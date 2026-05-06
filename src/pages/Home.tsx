@@ -127,6 +127,7 @@ export default function Home() {
         <meta property="og:image" content="https://crepika.com/og-image.svg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="크레피카 — 크리에이터 필수 도구함" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
