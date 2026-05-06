@@ -26,7 +26,9 @@ export function ToolLayout({
   const pageTitle = config.seoTitle || `${config.titleKo} | 크레피카`;
   const pageDescription = config.seoDescription || config.descriptionKo;
 
-  // Generate JSON-LD schema
+  const canonicalUrl = `https://crepika.com${config.path}`;
+
+  // SoftwareApplication schema
   const schemaData = config.schemaType === 'SoftwareApplication' ? {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -35,13 +37,21 @@ export function ToolLayout({
     "description": pageDescription,
     "applicationCategory": "UtilitiesApplication",
     "inLanguage": "ko-KR",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "operatingSystem": "Web Browser"
+    "url": canonicalUrl,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+    "operatingSystem": "Web Browser",
+    "publisher": { "@type": "Organization", "name": "크레피카", "url": "https://crepika.com" }
   } : null;
+
+  // BreadcrumbList schema
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://crepika.com" },
+      { "@type": "ListItem", "position": 2, "name": config.titleKo, "item": canonicalUrl }
+    ]
+  };
 
   return (
     <>
@@ -49,12 +59,11 @@ export function ToolLayout({
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <meta name="keywords" content={config.keywords.join(', ')} />
-        <link rel="canonical" href={`https://crepika.com${config.path}`} />
+        <link rel="canonical" href={canonicalUrl} />
         {schemaData && (
-          <script type="application/ld+json">
-            {JSON.stringify(schemaData)}
-          </script>
+          <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
         )}
+        <script type="application/ld+json">{JSON.stringify(breadcrumbData)}</script>
       </Helmet>
 
       <div className="container px-4 py-6 md:py-8 mx-auto max-w-2xl">

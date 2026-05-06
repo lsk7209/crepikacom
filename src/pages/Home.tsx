@@ -98,12 +98,34 @@ export default function Home() {
     <>
       <Helmet>
         <title>크레피카 | 로그인 없이 3초 만에 끝나는 크리에이터 도구</title>
-        <meta 
-          name="description" 
-          content="국내 크리에이터를 위한 초간편 작업 도구함. 네이버·인스타·유튜브용 글자수, 바이트, 이미지, QR 작업을 3초 안에 끝내세요. 로그인 불필요." 
+        <meta
+          name="description"
+          content="국내 크리에이터를 위한 초간편 작업 도구함. 네이버·인스타·유튜브용 글자수, 바이트, 이미지, QR 작업을 3초 안에 끝내세요. 로그인 불필요."
         />
         <meta name="keywords" content="크리에이터 도구, 무료 온라인 도구, 글자수 세기, qr 생성기, webp 변환, 해시태그 믹서, 인스타그램 도구, 네이버 seo" />
         <link rel="canonical" href="https://crepika.com/" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "크레피카",
+          "alternateName": "Crepika",
+          "url": "https://crepika.com",
+          "logo": "https://crepika.com/favicon.ico",
+          "description": "국내 크리에이터를 위한 무료 온라인 도구 서비스",
+          "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "support@crepika.com", "availableLanguage": "Korean" },
+          "sameAs": []
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "크레피카",
+          "url": "https://crepika.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": { "@type": "EntryPoint", "urlTemplate": "https://crepika.com/?q={search_term_string}" },
+            "query-input": "required name=search_term_string"
+          }
+        })}</script>
       </Helmet>
 
       <KeyboardShortcutsModal open={showHelp} onOpenChange={setShowHelp} />

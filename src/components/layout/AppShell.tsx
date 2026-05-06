@@ -40,6 +40,12 @@ export function AppShell({ children }: AppShellProps) {
             >
               블로그
             </Link>
+            <Link
+              to="/about"
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-accent/10"
+            >
+              소개
+            </Link>
           </nav>
         </div>
       </header>

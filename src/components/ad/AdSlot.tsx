@@ -1,4 +1,11 @@
+import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
+
+declare global {
+  interface Window {
+    adsbygoogle: unknown[];
+  }
+}
 
 export type AdSlotType = 'top' | 'bottom' | 'loading' | 'download';
 export type AdStrategy = 'instant' | 'process_heavy' | 'download_focused';
@@ -8,69 +15,57 @@ interface AdSlotProps {
   strategy: AdStrategy;
   isProcessing?: boolean;
   className?: string;
+  slotId?: string;
 }
 
-const AD_SLOT_CONFIG = {
-  top: {
-    label: 'Top Ad Slot',
-    height: 'h-24',
-  },
-  bottom: {
-    label: 'Bottom Ad Slot',
-    height: 'h-32',
-  },
-  loading: {
-    label: 'Processing Ad',
-    height: 'h-48',
-  },
-  download: {
-    label: 'Download Ad Slot',
-    height: 'h-28',
-  },
+const AD_CLIENT = "ca-pub-3050601904412736";
+
+const FORMAT: Record<AdSlotType, string> = {
+  top: 'horizontal',
+  bottom: 'auto',
+  loading: 'rectangle',
+  download: 'auto',
 };
 
-export function AdSlot({ type, strategy, isProcessing, className }: AdSlotProps) {
-  const config = AD_SLOT_CONFIG[type];
+const MIN_HEIGHT: Record<AdSlotType, string> = {
+  top: 'min-h-[90px]',
+  bottom: 'min-h-[100px]',
+  loading: 'min-h-[200px]',
+  download: 'min-h-[100px]',
+};
 
-  // Strategy-based display rules
-  const shouldDisplay = () => {
-    // Top slot: Always display
-    if (type === 'top') return true;
+export function AdSlot({ type, strategy, isProcessing, className, slotId }: AdSlotProps) {
+  const pushed = useRef(false);
 
-    // Loading slot: Only for process_heavy when processing
-    if (type === 'loading') {
-      return strategy === 'process_heavy' && isProcessing === true;
+  const visible =
+    type === 'top' ||
+    (type === 'loading' && strategy === 'process_heavy' && isProcessing) ||
+    (type === 'download' && strategy === 'download_focused') ||
+    (type === 'bottom' && strategy !== 'download_focused');
+
+  useEffect(() => {
+    if (!visible || pushed.current) return;
+    pushed.current = true;
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+    } catch {
+      // adsense not ready
     }
+  }, [visible]);
 
-    // Download slot: Only for download_focused
-    if (type === 'download') {
-      return strategy === 'download_focused';
-    }
-
-    // Bottom slot: For instant and non-download-focused strategies
-    if (type === 'bottom') {
-      return strategy !== 'download_focused';
-    }
-
-    return true;
-  };
-
-  if (!shouldDisplay()) return null;
+  if (!visible) return null;
 
   return (
-    <div
-      className={cn(
-        "w-full rounded-lg border-2 border-dashed border-muted flex items-center justify-center bg-muted/20",
-        config.height,
-        className
-      )}
-      role="complementary"
-      aria-label={`Advertisement: ${config.label}`}
-    >
-      <div className="text-center px-4">
-        <p className="text-sm font-medium text-muted-foreground">{config.label}</p>
-        <p className="text-xs text-muted-foreground/70 mt-1">AdSense Placeholder</p>
-      </div>
+    <div className={cn("w-full overflow-hidden", MIN_HEIGHT[type], className)}>
+      <ins
+        className="adsbygoogle"
+        style={{ display: 'block' }}
+        data-ad-client={AD_CLIENT}
+        data-ad-slot={slotId ?? ""}
+        data-ad-format={FORMAT[type]}
+        data-full-width-responsive="true"
+      />
     </div>
   );
 }
