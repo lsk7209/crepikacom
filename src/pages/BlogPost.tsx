@@ -82,7 +82,11 @@ export default function BlogPost() {
         "inLanguage": "ko-KR",
         "articleSection": CATEGORY_LABELS_KO[post.category] ?? post.category,
         "timeRequired": `PT${post.readTime.replace('분', 'M')}`,
-        "isPartOf": { "@type": "WebSite", "@id": `${SITE_URL}/#website` }
+        "isPartOf": { "@type": "WebSite", "@id": `${SITE_URL}/#website` },
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", "h2", ".prose p:first-of-type"]
+        }
     };
 
     const faqSchema = post.faq?.length ? {

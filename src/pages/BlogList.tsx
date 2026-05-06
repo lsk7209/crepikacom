@@ -119,6 +119,8 @@ export default function BlogList() {
                                         alt={CATEGORY_LABELS[post.category]}
                                         className="w-full h-full object-cover"
                                         loading="lazy"
+                                        width="1200"
+                                        height="630"
                                     />
                                 </div>
                                 <CardHeader>
