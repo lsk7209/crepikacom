@@ -1,6 +1,6 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { useState, useEffect, lazy, Suspense } from "react";
-import { CATEGORY_LABELS, Category, searchTools, getToolById } from "@/data/tools-config";
+import { CATEGORY_LABELS, Category, searchTools, getToolById, TOOLS_CONFIG } from "@/data/tools-config";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -162,7 +162,7 @@ export default function Home() {
           "name": "크레피카 무료 크리에이터 도구 목록",
           "description": "로그인 없이 즉시 사용 가능한 크리에이터 도구들",
           "url": "https://crepika.com",
-          "numberOfItems": 7,
+          "numberOfItems": TOOLS_CONFIG.length,
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "텍스트 카운터 - 글자수 세기", "url": "https://crepika.com/tools/text-counter", "description": "글자 수, 단어 수를 실시간으로 세는 무료 도구" },
             { "@type": "ListItem", "position": 2, "name": "바이트 카운터 - 한글 바이트 계산", "url": "https://crepika.com/tools/byte-counter", "description": "네이버 SEO 최적화를 위한 한글 바이트 계산기" },
@@ -224,7 +224,7 @@ export default function Home() {
           </p>
           {/* Social proof stats */}
           <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1.5"><strong className="text-foreground font-bold text-base">7</strong> 가지 무료 도구</span>
+            <span className="flex items-center gap-1.5"><strong className="text-foreground font-bold text-base">{TOOLS_CONFIG.length}</strong> 가지 무료 도구</span>
             <span className="text-border">|</span>
             <span className="flex items-center gap-1.5"><strong className="text-foreground font-bold text-base">100%</strong> 브라우저 처리</span>
             <span className="text-border">|</span>

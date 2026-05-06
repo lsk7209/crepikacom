@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.12" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.04" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="950" cy="80" r="300" fill="#15803d" opacity="0.4"/>
+  <circle cx="150" cy="560" r="220" fill="#166534" opacity="0.3"/>
+  <rect x="80" y="80" width="1040" height="470" rx="24" fill="url(#card)" />
+  <rect x="80" y="80" width="1040" height="470" rx="24" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.5"/>
+  <rect x="120" y="130" width="130" height="44" rx="22" fill="#ffffff" opacity="0.2"/>
+  <text x="185" y="158" font-family="'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">분석 도구</text>
+  <text x="600" y="310" font-family="'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif" font-size="62" font-weight="800" fill="#ffffff" text-anchor="middle" opacity="0.95">크레피카 무료 도구</text>
+  <text x="600" y="390" font-family="'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif" font-size="28" fill="#bbf7d0" text-anchor="middle">QR 코드 생성기 · 링크 분석</text>
+  <text x="600" y="490" font-family="'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif" font-size="22" fill="#86efac" text-anchor="middle" font-weight="600">crepika.com — 로그인 없이 3초 만에</text>
+</svg>

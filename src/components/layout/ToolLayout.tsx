@@ -1,8 +1,16 @@
-import { ToolConfig } from "@/data/tools-config";
+import { ToolConfig, Category } from "@/data/tools-config";
 import { AdSlot } from "@/components/ad/AdSlot";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { ChevronRight, Home as HomeIcon } from "lucide-react";
+
+const SITE_URL = "https://crepika.com";
+const TOOL_OG_IMAGES: Record<Category, string> = {
+  plan:    `${SITE_URL}/images/og-tool-plan.svg`,
+  create:  `${SITE_URL}/images/og-tool-create.svg`,
+  publish: `${SITE_URL}/images/og-tool-publish.svg`,
+  analyze: `${SITE_URL}/images/og-tool-analyze.svg`,
+};
 
 interface ToolLayoutProps {
   config: ToolConfig;
@@ -26,7 +34,8 @@ export function ToolLayout({
   const pageTitle = config.seoTitle || `${config.titleKo} | 크레피카`;
   const pageDescription = config.seoDescription || config.descriptionKo;
 
-  const canonicalUrl = `https://crepika.com${config.path}`;
+  const canonicalUrl = `${SITE_URL}${config.path}`;
+  const ogImage = TOOL_OG_IMAGES[config.category] ?? `${SITE_URL}/og-image.svg`;
 
   // SoftwareApplication schema
   const schemaData = config.schemaType === 'SoftwareApplication' ? {
@@ -66,13 +75,13 @@ export function ToolLayout({
         <meta property="og:site_name" content="크레피카" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:locale" content="ko_KR" />
-        <meta property="og:image" content="https://crepika.com/og-image.svg" />
+        <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
+        <meta name="twitter:image" content={ogImage} />
         {schemaData && (
           <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
         )}
