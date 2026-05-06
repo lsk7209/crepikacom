@@ -27,6 +27,15 @@ export default function BlogList() {
     const [selectedCategory, setSelectedCategory] = useState<BlogPost['category'] | 'all'>('all');
     const [currentPage, setCurrentPage] = useState(1);
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://crepika.com" },
+            { "@type": "ListItem", "position": 2, "name": "크리에이터 블로그", "item": "https://crepika.com/blog" }
+        ]
+    };
+
     const collectionSchema = useMemo(() => ({
         "@context": "https://schema.org",
         "@type": "CollectionPage",
@@ -83,6 +92,7 @@ export default function BlogList() {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
                 <script type="application/ld+json">{JSON.stringify(collectionSchema)}</script>
+                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
             </Helmet>
 
             <div className="container px-4 py-12 mx-auto max-w-7xl">

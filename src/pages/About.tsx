@@ -59,9 +59,33 @@ export default function About() {
             "areaServed": "KR",
             "knowsLanguage": ["ko", "en"],
             "member": [
-              { "@type": "Person", "name": "김민혁", "jobTitle": "SEO & 콘텐츠 전략가" },
-              { "@type": "Person", "name": "이지수", "jobTitle": "소셜 미디어 스페셜리스트" },
-              { "@type": "Person", "name": "박준영", "jobTitle": "수석 개발자" }
+              {
+                "@type": "Person",
+                "@id": "https://crepika.com/about#kimminhy",
+                "name": "김민혁",
+                "jobTitle": "SEO & 콘텐츠 전략가",
+                "description": "10년차 디지털 마케터이자 SEO 전략가. 데이터 기반 콘텐츠 최적화 전문가로 구글·네이버 양대 검색 생태계에서 크리에이터 성장을 지원합니다.",
+                "image": "https://crepika.com/images/avatar-kimminhy.svg",
+                "worksFor": { "@id": "https://crepika.com/#organization" }
+              },
+              {
+                "@type": "Person",
+                "@id": "https://crepika.com/about#leejisu",
+                "name": "이지수",
+                "jobTitle": "소셜 미디어 스페셜리스트",
+                "description": "수백 명의 크리에이터·브랜드 SNS 성장을 컨설팅한 소셜 미디어 전문가. 인스타그램·유튜브 알고리즘 기반 실전 전략을 공유합니다.",
+                "image": "https://crepika.com/images/avatar-leejisu.svg",
+                "worksFor": { "@id": "https://crepika.com/#organization" }
+              },
+              {
+                "@type": "Person",
+                "@id": "https://crepika.com/about#parkjy",
+                "name": "박준영",
+                "jobTitle": "수석 개발자",
+                "description": "크레피카 수석 개발자. 사용자 데이터 보안과 도구 성능을 책임지며 브라우저 내 안전한 처리 아키텍처를 설계합니다.",
+                "image": "https://crepika.com/images/avatar-parkjy.svg",
+                "worksFor": { "@id": "https://crepika.com/#organization" }
+              }
             ]
           }
         })}</script>

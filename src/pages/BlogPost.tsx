@@ -25,11 +25,13 @@ const CATEGORY_OG_IMAGES: Record<string, string> = {
 const AUTHOR_BIOS: Record<string, string> = {
   '이지수': '수백 명의 크리에이터·브랜드 SNS 성장을 컨설팅한 소셜 미디어 스페셜리스트. 인스타그램·유튜브·X 알고리즘 분석을 기반으로 실전에서 바로 쓰는 콘텐츠 전략을 공유합니다.',
   '김민혁': '10년차 디지털 마케터이자 SEO 전략가. 데이터 기반 콘텐츠 최적화 전문가로 활동하며, 구글·네이버 양대 검색 생태계에서 크리에이터들이 더 빛날 수 있도록 돕고 있습니다.',
+  '박준영': '크레피카 수석 개발자. 사용자 데이터 보안과 도구 성능을 책임지며, 모든 도구가 브라우저 내에서 빠르고 안전하게 작동하도록 아키텍처를 설계·운영하고 있습니다.',
 };
 
 const AUTHOR_AVATARS: Record<string, string> = {
   '이지수': '/images/avatar-leejisu.svg',
   '김민혁': '/images/avatar-kimminhy.svg',
+  '박준영': '/images/avatar-parkjy.svg',
 };
 
 export default function BlogPost() {
@@ -67,9 +69,11 @@ export default function BlogPost() {
         "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
         "author": {
             "@type": "Person",
+            "@id": `${SITE_URL}/about#${post.author === '김민혁' ? 'kimminhy' : post.author === '이지수' ? 'leejisu' : 'parkjy'}`,
             "name": post.author,
             "url": `${SITE_URL}/about`,
-            "description": AUTHOR_BIOS[post.author] ?? '크레피카 콘텐츠 팀'
+            "description": AUTHOR_BIOS[post.author] ?? '크레피카 콘텐츠 팀',
+            "image": AUTHOR_AVATARS[post.author] ? `${SITE_URL}${AUTHOR_AVATARS[post.author]}` : undefined
         },
         "publisher": {
             "@type": "Organization",

@@ -14,6 +14,7 @@ export default function Contact() {
         <meta name="keywords" content="문의하기, 고객지원, 피드백, 크레피카 연락처, 광고 문의" />
         <link rel="canonical" href="https://crepika.com/contact" />
         <meta property="og:locale" content="ko_KR" />
+        <meta property="og:site_name" content="크레피카" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ContactPage",
