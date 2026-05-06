@@ -65,7 +65,7 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
       });
       setQrDataUrl(dataUrl);
       onError(null);
-      
+
       onResult(
         <div className="space-y-4">
           {showLongUrlWarning && (
@@ -78,9 +78,9 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
           )}
           <div className="flex justify-center">
             <div className="bg-white p-4 rounded-lg border-2 border-border inline-block">
-              <img 
-                src={dataUrl} 
-                alt="Generated QR Code" 
+              <img
+                src={dataUrl}
+                alt="생성된 QR 코드"
                 className="w-64 h-64"
               />
             </div>
@@ -91,11 +91,11 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
             size="lg"
           >
             <Download className="mr-2 h-4 w-4" />
-            Download PNG
+            PNG 다운로드
           </Button>
         </div>
       );
-      
+
       toast({
         title: 'QR 코드 생성 완료',
         description: 'QR 코드를 다운로드할 수 있습니다.',
@@ -129,15 +129,15 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
   return {
     inputSlot: (
       <div className="space-y-2">
-        <Label htmlFor="url-input">Enter URL</Label>
+        <Label htmlFor="url-input">URL을 입력하세요</Label>
         <Input
           id="url-input"
           type="url"
-          placeholder="example.com or https://example.com"
+          placeholder="example.com 또는 https://example.com"
           value={url}
           onChange={handleUrlChange}
           onKeyDown={(e) => e.key === 'Enter' && handleGenerate()}
-          aria-label="URL input for QR code generation"
+          aria-label="QR 코드로 변환할 URL 입력"
         />
         {showLongUrlWarning && (
           <p className="text-xs text-warning">URL이 {url.length}자입니다. 2048자 이하를 권장합니다.</p>
@@ -145,13 +145,13 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
       </div>
     ),
     actionSlot: (
-      <Button 
+      <Button
         onClick={handleGenerate}
         disabled={!url.trim()}
         className="w-full"
         size="lg"
       >
-        Generate QR Code
+        QR 코드 생성
       </Button>
     ),
   };

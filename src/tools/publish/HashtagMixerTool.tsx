@@ -90,18 +90,18 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
         )}
 
         <div className="bg-secondary rounded-lg p-4 text-center">
-          <p className="text-sm text-muted-foreground mb-1">Total Tags</p>
+          <p className="text-sm text-muted-foreground mb-1">태그 수</p>
           <p className="text-3xl font-bold text-primary">{limitedTags.length}</p>
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="shuffled-output">Shuffled Hashtags</Label>
+          <Label htmlFor="shuffled-output">섞인 해시태그</Label>
           <Textarea
             id="shuffled-output"
             value={result}
             readOnly
             className="min-h-[120px] resize-none font-mono text-sm"
-            aria-label="Shuffled hashtags output"
+            aria-label="섞인 해시태그 출력"
           />
         </div>
 
@@ -114,12 +114,12 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
           {copied ? (
             <>
               <Check className="mr-2 h-4 w-4" />
-              Copied!
+              복사됨!
             </>
           ) : (
             <>
               <Copy className="mr-2 h-4 w-4" />
-              Copy to Clipboard
+              클립보드에 복사
             </>
           )}
         </Button>
@@ -149,20 +149,20 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
   return {
     inputSlot: (
       <div className="space-y-2">
-        <Label htmlFor="hashtag-input">Enter hashtags</Label>
+        <Label htmlFor="hashtag-input">해시태그를 입력하세요</Label>
         <Textarea
           id="hashtag-input"
-          placeholder="#instagram #creative #design (separated by spaces, commas, or new lines)"
+          placeholder="#인스타그램 #크리에이터 #마케팅 (공백, 쉼표, 줄바꿈으로 구분)"
           value={input}
           onChange={(e) => {
             setInput(e.target.value);
             onError(null);
           }}
           className="min-h-[150px] resize-none"
-          aria-label="Hashtag input"
+          aria-label="해시태그 입력"
         />
         <p className="text-xs text-muted-foreground">
-          Tip: Enter hashtags separated by spaces, commas, or new lines. Max 30 tags.
+          공백, 쉼표, 줄바꿈으로 구분하여 입력하세요. 최대 30개까지 사용됩니다.
         </p>
       </div>
     ),
@@ -173,7 +173,7 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
         className="w-full"
         size="lg"
       >
-        Shuffle Hashtags
+        해시태그 섞기
       </Button>
     ),
   };

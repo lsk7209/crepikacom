@@ -30,12 +30,12 @@ export function InstaSpacerTool({ onResult, onError }: InstaSpacerToolProps) {
     // Format text for Instagram
     // Replace multiple spaces/tabs with single space
     let formatted = text.replace(/[ \t]+/g, ' ');
-    
+
     // Add invisible Braille character (U+2800) at the end of each line to preserve line breaks
     const lines = formatted.split('\n');
     formatted = lines.map(line => {
       const trimmed = line.trim();
-      return trimmed ? trimmed + '\u2800' : '\u2800';
+      return trimmed ? trimmed + '⠀' : '⠀';
     }).join('\n');
 
     setFormattedText(formatted);
@@ -50,13 +50,13 @@ export function InstaSpacerTool({ onResult, onError }: InstaSpacerToolProps) {
         </Alert>
 
         <div className="space-y-2">
-          <Label htmlFor="formatted-output">Formatted Text</Label>
+          <Label htmlFor="formatted-output">변환된 텍스트</Label>
           <Textarea
             id="formatted-output"
             value={formatted}
             readOnly
             className="min-h-[200px] resize-none font-mono text-sm"
-            aria-label="Formatted text output"
+            aria-label="인스타그램용 변환된 텍스트 출력"
           />
         </div>
 
@@ -69,12 +69,12 @@ export function InstaSpacerTool({ onResult, onError }: InstaSpacerToolProps) {
           {copied ? (
             <>
               <Check className="mr-2 h-4 w-4" />
-              Copied!
+              복사됨!
             </>
           ) : (
             <>
               <Copy className="mr-2 h-4 w-4" />
-              Copy to Clipboard
+              클립보드에 복사
             </>
           )}
         </Button>
@@ -104,28 +104,28 @@ export function InstaSpacerTool({ onResult, onError }: InstaSpacerToolProps) {
   return {
     inputSlot: (
       <div className="space-y-2">
-        <Label htmlFor="text-input">Enter your caption</Label>
+        <Label htmlFor="text-input">캡션을 입력하세요</Label>
         <Textarea
           id="text-input"
-          placeholder="Type or paste your Instagram caption here..."
+          placeholder="인스타그램에 올릴 캡션을 입력하거나 붙여넣으세요..."
           value={text}
           onChange={(e) => {
             setText(e.target.value);
             onError(null);
           }}
           className="min-h-[180px] resize-none"
-          aria-label="Text input for Instagram formatting"
+          aria-label="인스타그램 캡션 텍스트 입력"
         />
       </div>
     ),
     actionSlot: (
-      <Button 
+      <Button
         onClick={handleFormat}
         disabled={!text.trim()}
         className="w-full"
         size="lg"
       >
-        Format for Instagram
+        인스타용 변환
       </Button>
     ),
   };

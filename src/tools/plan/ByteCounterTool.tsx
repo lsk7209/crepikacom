@@ -118,7 +118,7 @@ export function ByteCounterTool({ onResult, onError }: ByteCounterToolProps) {
         size="lg"
       >
         <Calculator className="mr-2 h-5 w-5" />
-        Count Bytes
+        바이트 수 계산
       </Button>
     ),
   };

@@ -41,6 +41,11 @@ const LOREM_KR = [
 type Language = 'English' | 'Korean';
 type Length = 'short' | 'medium' | 'long';
 
+const LANGUAGE_LABELS: Record<Language, string> = {
+  English: '영어',
+  Korean: '한국어',
+};
+
 const LENGTH_MAP: Record<Length, number> = {
   short: 1,
   medium: 3,
@@ -56,22 +61,20 @@ export function LoremGeneratorTool({ onResult, onError }: LoremGeneratorToolProp
   const handleGenerate = () => {
     const corpus = language === 'English' ? LOREM_EN : LOREM_KR;
     const paragraphCount = LENGTH_MAP[length];
-    
-    // Generate paragraphs
+
     const paragraphs: string[] = [];
     for (let i = 0; i < paragraphCount; i++) {
-      // Select 3-5 sentences per paragraph
       const sentenceCount = 3 + Math.floor(Math.random() * 3);
       const sentences: string[] = [];
-      
+
       for (let j = 0; j < sentenceCount; j++) {
         const randomIndex = Math.floor(Math.random() * corpus.length);
         sentences.push(corpus[randomIndex]);
       }
-      
+
       paragraphs.push(sentences.join(' '));
     }
-    
+
     const result = paragraphs.join('\n\n');
     setGeneratedText(result);
     onError(null);
@@ -80,27 +83,27 @@ export function LoremGeneratorTool({ onResult, onError }: LoremGeneratorToolProp
       <div className="space-y-4">
         <div className="bg-secondary rounded-lg p-4">
           <div className="flex justify-between items-center text-sm">
-            <span className="text-muted-foreground">Language:</span>
-            <span className="font-semibold">{language}</span>
+            <span className="text-muted-foreground">언어:</span>
+            <span className="font-semibold">{LANGUAGE_LABELS[language]}</span>
           </div>
           <div className="flex justify-between items-center text-sm mt-2">
-            <span className="text-muted-foreground">Paragraphs:</span>
+            <span className="text-muted-foreground">단락 수:</span>
             <span className="font-semibold">{paragraphCount}</span>
           </div>
           <div className="flex justify-between items-center text-sm mt-2">
-            <span className="text-muted-foreground">Characters:</span>
+            <span className="text-muted-foreground">글자 수:</span>
             <span className="font-semibold">{result.length}</span>
           </div>
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="generated-output">Generated Text</Label>
+          <Label htmlFor="generated-output">생성된 텍스트</Label>
           <Textarea
             id="generated-output"
             value={result}
             readOnly
             className="min-h-[250px] resize-none text-sm"
-            aria-label="Generated lorem text"
+            aria-label="생성된 더미 텍스트"
           />
         </div>
 
@@ -113,12 +116,12 @@ export function LoremGeneratorTool({ onResult, onError }: LoremGeneratorToolProp
           {copied ? (
             <>
               <Check className="mr-2 h-4 w-4" />
-              Copied!
+              복사됨!
             </>
           ) : (
             <>
               <Copy className="mr-2 h-4 w-4" />
-              Copy to Clipboard
+              클립보드에 복사
             </>
           )}
         </Button>
@@ -149,40 +152,40 @@ export function LoremGeneratorTool({ onResult, onError }: LoremGeneratorToolProp
     inputSlot: (
       <div className="space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="language-select">Language</Label>
+          <Label htmlFor="language-select">언어</Label>
           <Select value={language} onValueChange={(value) => setLanguage(value as Language)}>
-            <SelectTrigger id="language-select" aria-label="Select language">
-              <SelectValue placeholder="Select language" />
+            <SelectTrigger id="language-select" aria-label="언어 선택">
+              <SelectValue placeholder="언어 선택" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="English">English</SelectItem>
-              <SelectItem value="Korean">Korean</SelectItem>
+              <SelectItem value="English">영어</SelectItem>
+              <SelectItem value="Korean">한국어</SelectItem>
             </SelectContent>
           </Select>
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="length-select">Length</Label>
+          <Label htmlFor="length-select">길이</Label>
           <Select value={length} onValueChange={(value) => setLength(value as Length)}>
-            <SelectTrigger id="length-select" aria-label="Select length">
-              <SelectValue placeholder="Select length" />
+            <SelectTrigger id="length-select" aria-label="길이 선택">
+              <SelectValue placeholder="길이 선택" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="short">짧게 (1 paragraph)</SelectItem>
-              <SelectItem value="medium">보통 (3 paragraphs)</SelectItem>
-              <SelectItem value="long">길게 (5 paragraphs)</SelectItem>
+              <SelectItem value="short">짧게 (1단락)</SelectItem>
+              <SelectItem value="medium">보통 (3단락)</SelectItem>
+              <SelectItem value="long">길게 (5단락)</SelectItem>
             </SelectContent>
           </Select>
         </div>
       </div>
     ),
     actionSlot: (
-      <Button 
+      <Button
         onClick={handleGenerate}
         className="w-full"
         size="lg"
       >
-        Generate
+        생성하기
       </Button>
     ),
   };

@@ -118,8 +118,8 @@ export function ToolLayout({
               <div className="bg-card rounded-lg border shadow-lg p-6 max-w-md w-full mx-4">
                 <div className="text-center mb-4">
                   <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4" aria-hidden="true"></div>
-                  <p className="text-lg font-semibold mb-2">Processing your file...</p>
-                  <p className="text-sm text-muted-foreground">This will take just a moment</p>
+                  <p className="text-lg font-semibold mb-2">파일을 변환하는 중...</p>
+                  <p className="text-sm text-muted-foreground">잠시만 기다려 주세요</p>
                 </div>
                 <AdSlot type="loading" strategy={config.adStrategy} isProcessing={isProcessing} />
               </div>

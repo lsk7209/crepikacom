@@ -25,7 +25,6 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
     const selectedFile = e.target.files?.[0];
     if (!selectedFile) return;
 
-    // Validate file type
     if (!['image/jpeg', 'image/png', 'image/jpg'].includes(selectedFile.type)) {
       onError("JPG 또는 PNG 이미지를 선택하세요.");
       toast({
@@ -36,7 +35,6 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
       return;
     }
 
-    // Validate file size
     if (selectedFile.size > MAX_FILE_SIZE) {
       onError("10MB 이하 이미지만 지원합니다.");
       toast({
@@ -70,7 +68,6 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
     onProcessing(true);
     onError(null);
 
-    // Simulate processing time for ad display
     await new Promise(resolve => setTimeout(resolve, 2000));
 
     try {
@@ -78,7 +75,6 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
       reader.onload = (e) => {
         const img = new Image();
         img.onload = () => {
-          // Check resolution
           if (img.width > MAX_DIMENSION || img.height > MAX_DIMENSION) {
             setShowHighResWarning(true);
             toast({
@@ -90,7 +86,7 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
           const canvas = document.createElement('canvas');
           canvas.width = img.width;
           canvas.height = img.height;
-          
+
           const ctx = canvas.getContext('2d');
           if (!ctx) {
             onError("이미지를 변환하지 못했습니다. 다시 시도해 주세요.");
@@ -104,7 +100,7 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
           }
 
           ctx.drawImage(img, 0, 0);
-          
+
           canvas.toBlob(
             (blob) => {
               if (!blob) {
@@ -122,8 +118,8 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
               setWebpDataUrl(dataUrl);
               setConvertedSize(blob.size);
               onProcessing(false);
-              
-              const compressionRate = originalSize && blob.size 
+
+              const compressionRate = originalSize && blob.size
                 ? ((1 - blob.size / originalSize) * 100).toFixed(1)
                 : '0';
 
@@ -139,23 +135,23 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
                   )}
                   <div className="grid grid-cols-3 gap-3 text-center">
                     <div className="bg-secondary rounded-lg p-3">
-                      <p className="text-xs text-muted-foreground mb-1">Original</p>
+                      <p className="text-xs text-muted-foreground mb-1">원본</p>
                       <p className="text-sm font-semibold">{(originalSize / 1024).toFixed(2)} KB</p>
                     </div>
                     <div className="bg-secondary rounded-lg p-3">
-                      <p className="text-xs text-muted-foreground mb-1">Converted</p>
+                      <p className="text-xs text-muted-foreground mb-1">변환 후</p>
                       <p className="text-sm font-semibold text-success">{(blob.size / 1024).toFixed(2)} KB</p>
                     </div>
                     <div className="bg-secondary rounded-lg p-3">
-                      <p className="text-xs text-muted-foreground mb-1">Saved</p>
+                      <p className="text-xs text-muted-foreground mb-1">절약</p>
                       <p className="text-sm font-semibold text-accent">{compressionRate}%</p>
                     </div>
                   </div>
 
                   <div className="flex justify-center">
-                    <img 
-                      src={dataUrl} 
-                      alt="Converted WebP preview" 
+                    <img
+                      src={dataUrl}
+                      alt="변환된 WebP 미리보기"
                       className="max-w-full h-auto rounded-lg border"
                       style={{ maxHeight: '300px' }}
                     />
@@ -167,18 +163,18 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
                     size="lg"
                   >
                     <Download className="mr-2 h-4 w-4" />
-                    Download WebP
+                    WebP 다운로드
                   </Button>
                 </div>
               );
-              
+
               toast({
                 title: '변환 완료',
                 description: '이미지를 WebP 형식으로 변환했습니다.',
               });
             },
             'image/webp',
-            0.8 // 80% quality
+            0.8
           );
         };
         img.src = e.target?.result as string;
@@ -219,7 +215,7 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
     inputSlot: (
       <div className="space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="file-input">Select Image (JPG/PNG)</Label>
+          <Label htmlFor="file-input">이미지 선택 (JPG/PNG)</Label>
           <div className="flex items-center justify-center w-full">
             <label
               htmlFor="file-input"
@@ -228,9 +224,9 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
               <div className="flex flex-col items-center justify-center pt-5 pb-6">
                 <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
                 <p className="mb-1 text-sm text-muted-foreground">
-                  <span className="font-semibold">Click to upload</span>
+                  <span className="font-semibold">클릭하여 업로드</span>
                 </p>
-                <p className="text-xs text-muted-foreground">JPG or PNG (MAX. 10MB)</p>
+                <p className="text-xs text-muted-foreground">JPG 또는 PNG (최대 10MB)</p>
               </div>
               <input
                 id="file-input"
@@ -238,29 +234,29 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
                 className="hidden"
                 accept="image/jpeg,image/png,image/jpg"
                 onChange={handleFileChange}
-                aria-label="Image file input"
+                aria-label="이미지 파일 입력"
               />
             </label>
           </div>
         </div>
-        
+
         {file && (
           <Alert>
             <AlertDescription>
-              Selected: {file.name} ({formatFileSize(file.size)})
+              선택됨: {file.name} ({formatFileSize(file.size)})
             </AlertDescription>
           </Alert>
         )}
       </div>
     ),
     actionSlot: (
-      <Button 
+      <Button
         onClick={handleConvert}
         disabled={!file}
         className="w-full"
         size="lg"
       >
-        Convert to WebP
+        WebP로 변환
       </Button>
     ),
   };
