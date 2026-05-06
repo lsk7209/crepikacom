@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { CATEGORY_LABELS, Category, searchTools, getToolById } from "@/data/tools-config";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Search, Star, BookOpen, Clock } from "lucide-react";
+import { ArrowRight, Sparkles, Search, Star } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { getRecentTools, getFavoriteTools, toggleFavoriteTool, isFavoriteTool } from "@/utils/localStorage";
-import { getAllBlogPosts } from "@/data/blog-content";
+
+const RecentBlogPosts = lazy(() => import("./home/RecentBlogPosts"));
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -343,72 +344,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Recent Blog Posts */}
-        <RecentBlogPosts />
+        {/* Recent Blog Posts — lazy loaded to keep blog-content.ts out of main bundle */}
+        <Suspense fallback={<div className="mt-20 mb-8 h-48 animate-pulse bg-muted/30 rounded-lg" />}>
+          <RecentBlogPosts />
+        </Suspense>
       </div>
     </>
-  );
-}
-
-function RecentBlogPosts() {
-  const CATEGORY_LABELS_BLOG: Record<string, string> = {
-    guide: '가이드', tips: '팁 & 트릭', insights: '인사이트', 'case-study': '케이스 스터디',
-  };
-  const CATEGORY_COLORS: Record<string, string> = {
-    guide: 'bg-blue-500/10 text-blue-700 border-blue-200',
-    tips: 'bg-orange-500/10 text-orange-700 border-orange-200',
-    insights: 'bg-purple-500/10 text-purple-700 border-purple-200',
-    'case-study': 'bg-green-500/10 text-green-700 border-green-200',
-  };
-
-  const recentPosts = getAllBlogPosts().slice(0, 3);
-
-  return (
-    <section className="mt-20 mb-8">
-      <div className="flex items-center justify-between mb-8">
-        <div className="flex items-center gap-3">
-          <BookOpen className="h-6 w-6 text-primary" />
-          <h2 className="text-2xl md:text-3xl font-bold">최신 마케팅 가이드</h2>
-        </div>
-        <Link
-          to="/blog"
-          className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1"
-        >
-          전체 보기 <ArrowRight className="h-4 w-4" />
-        </Link>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {recentPosts.map(post => (
-          <Link key={post.slug} to={`/blog/${post.slug}`} className="group">
-            <Card className="h-full hover:shadow-lg hover:border-primary/40 transition-all">
-              <CardHeader className="pb-3">
-                <Badge
-                  variant="outline"
-                  className={`w-fit text-xs mb-2 ${CATEGORY_COLORS[post.category] ?? ''}`}
-                >
-                  {CATEGORY_LABELS_BLOG[post.category]}
-                </Badge>
-                <CardTitle className="text-base leading-snug group-hover:text-primary transition-colors line-clamp-2">
-                  {post.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-                  {post.description}
-                </p>
-                <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" />
-                    <span>{post.readTime}</span>
-                  </div>
-                  <span>·</span>
-                  <span>{post.author}</span>
-                </div>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
-      </div>
-    </section>
   );
 }
