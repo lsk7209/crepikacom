@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Search, Star } from "lucide-react";
+import { ArrowRight, Sparkles, Search, Star, Zap, Lock, Gift } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { getRecentTools, getFavoriteTools, toggleFavoriteTool, isFavoriteTool } from "@/utils/localStorage";
 
@@ -281,8 +281,8 @@ export default function Home() {
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="text-center p-6 rounded-lg border bg-card">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
-              <span className="text-2xl">⚡</span>
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-yellow-500/10 mb-4">
+              <Zap className="h-6 w-6 text-yellow-500" />
             </div>
             <h3 className="text-lg font-semibold mb-2">즉시 결과 확인</h3>
             <p className="text-sm text-muted-foreground">
@@ -290,8 +290,8 @@ export default function Home() {
             </p>
           </div>
           <div className="text-center p-6 rounded-lg border bg-card">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-accent/10 mb-4">
-              <span className="text-2xl">🔒</span>
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-blue-500/10 mb-4">
+              <Lock className="h-6 w-6 text-blue-500" />
             </div>
             <h3 className="text-lg font-semibold mb-2">100% 프라이빗</h3>
             <p className="text-sm text-muted-foreground">
@@ -299,8 +299,8 @@ export default function Home() {
             </p>
           </div>
           <div className="text-center p-6 rounded-lg border bg-card">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-success/10 mb-4">
-              <span className="text-2xl">🆓</span>
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-green-500/10 mb-4">
+              <Gift className="h-6 w-6 text-green-500" />
             </div>
             <h3 className="text-lg font-semibold mb-2">항상 무료</h3>
             <p className="text-sm text-muted-foreground">
