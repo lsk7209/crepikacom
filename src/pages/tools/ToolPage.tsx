@@ -242,11 +242,31 @@ export default function ToolPage() {
     }))
   } : null;
 
+  const howToSchema = detailedContent?.howToUse?.steps?.length ? {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": `${config.titleKo} 사용 방법`,
+    "description": config.seoDescription || config.descriptionKo,
+    "inLanguage": "ko-KR",
+    "tool": [{ "@type": "HowToTool", "name": config.titleKo }],
+    "step": detailedContent.howToUse.steps.map((step, idx) => ({
+      "@type": "HowToStep",
+      "position": idx + 1,
+      "name": `${idx + 1}단계`,
+      "text": step,
+    }))
+  } : null;
+
   return (
     <>
     {faqSchema && (
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
+    )}
+    {howToSchema && (
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(howToSchema)}</script>
       </Helmet>
     )}
     <ToolLayout
