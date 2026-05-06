@@ -119,6 +119,7 @@ export default function BlogPost() {
                 <title>{post.title} | 크레피카 블로그</title>
                 <meta name="description" content={post.description} />
                 <meta name="keywords" content={post.keywords.join(", ")} />
+                <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
                 <link rel="canonical" href={canonicalUrl} />
 
                 <meta property="og:title" content={post.title} />
