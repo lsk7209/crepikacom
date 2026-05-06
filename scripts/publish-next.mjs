@@ -195,7 +195,8 @@ function postToTs(post) {
 }
 
 function injectIntoBlogContent(post) {
-  let content = readFileSync(BLOG_CONTENT_FILE, 'utf-8');
+  // Normalize CRLF to LF so the marker search works regardless of OS
+  let content = readFileSync(BLOG_CONTENT_FILE, 'utf-8').replace(/\r\n/g, '\n');
 
   const marker = '];\n\nexport function getBlogPostBySlug';
   const idx = content.indexOf(marker);
