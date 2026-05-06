@@ -21,6 +21,7 @@ export default function Contact() {
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:site_name" content="크레피카" />
         <meta property="og:image" content="https://crepika.com/og-image.png" />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="크레피카 문의하기" />

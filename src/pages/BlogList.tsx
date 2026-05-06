@@ -136,7 +136,8 @@ export default function BlogList() {
                 <meta property="og:url" content="https://crepika.com/blog" />
                 <meta property="og:locale" content="ko_KR" />
                 <meta property="og:image" content="https://crepika.com/og-image.png" />
-                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <meta property="og:image:alt" content="크레피카 크리에이터 블로그" />
                 <meta name="twitter:card" content="summary_large_image" />

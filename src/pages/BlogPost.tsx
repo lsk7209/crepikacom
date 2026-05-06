@@ -132,7 +132,8 @@ export default function BlogPost() {
                 <meta property="article:modified_time" content={dateModified} />
                 <meta property="article:author" content={post.author} />
                 <meta property="article:section" content={CATEGORY_LABELS_KO[post.category] ?? post.category} />
-                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <meta property="og:image:alt" content={post.title} />
                 <meta property="og:locale" content="ko_KR" />

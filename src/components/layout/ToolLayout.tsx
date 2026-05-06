@@ -76,6 +76,7 @@ export function ToolLayout({
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:image" content={ogImage} />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content={`${config.titleKo} — 크레피카 무료 도구`} />
