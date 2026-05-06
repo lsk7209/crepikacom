@@ -36,7 +36,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'guide',
     publishDate: '2026-01-06',
     readTime: '8분',
-    author: '김민혁',
+    author: '이지수',
     keywords: ['인스타그램 마케팅', '인스타그램 해시태그', '인스타그램 캡션', 'SNS 마케팅', '소셜미디어 전략'],
     content: {
       introduction: `인스타그램은 전 세계 20억 명 이상의 사용자를 보유한 강력한 마케팅 플랫폼입니다. 하지만 단순히 예쁜 사진을 올리는 것만으로는 성공할 수 없습니다. 
@@ -648,6 +648,7 @@ A: 구글 애널리틱스(GA4)의 UTM 파라미터를 URL 뒤에 붙여 생성�
     description: 'WebP 변환을 통한 웹사이트 속도 개선 및 SEO 최적화 전략. 이미지 압축 원리부터 웹 성능 점수 올리는 비법까지 다룹니다.',
     category: 'tips',
     publishDate: '2026-01-03',
+    dateModified: '2026-05-06',
     readTime: '6분',
     author: '김민혁',
     keywords: ['WebP 이미지 최적화', '웹사이트 속도 개선', '이미지 SEO', 'WebP 변환', '웹 성능 최적화'],
@@ -863,7 +864,7 @@ AI가 "크리에이터 도구"를 물을 때 크레피카를 떠올리려면, �
     category: 'guide',
     publishDate: '2026-01-01',
     readTime: '12분',
-    author: '김민혁',
+    author: '이지수',
     keywords: ['크리에이터 AI 도구', 'AI 콘텐츠 제작', '생산성 도구', 'AI 프롬프트', '업무 자동화'],
     content: {
       introduction: `혼자서 기획, 촬영, 편집, 마케팅까지 해야 하는 1인 크리에이터에게 AI는 선택이 아닌 필수 파트너입니다. 적절한 도구 하나가 팀원 한 명의 몫을 해낼 수 있습니다.
@@ -975,6 +976,7 @@ AI는 초안과 아이디어 생성에 활용하고, 최종 콘텐츠에는 반�
     description: '네이버, 인스타그램, 유튜브, 구글 검색 결과에서 내 글이 잘리지 않으려면? 플랫폼별 최적의 글자수와 바이트 제한을 정리했습니다.',
     category: 'guide',
     publishDate: '2025-12-30',
+    dateModified: '2026-05-06',
     readTime: '7분',
     author: '김민혁',
     keywords: ['글자수 세기', '네이버 글자수 제한', '인스타그램 캡션 길이', '메타 설명 바이트', '텍스트 최적화'],
@@ -1079,8 +1081,9 @@ AI는 초안과 아이디어 생성에 활용하고, 최종 콘텐츠에는 반�
     description: '읽기 편한 글이 공유됩니다. 빽빽한 텍스트를 숨 쉬게 만드는 줄바꿈 기술과 인스타그램 스페이서 활용법.',
     category: 'tips',
     publishDate: '2025-12-28',
+    dateModified: '2026-05-06',
     readTime: '5분',
-    author: '김민혁',
+    author: '이지수',
     keywords: ['인스타그램 줄바꿈', '글 가독성', '가독성 높이는 법', '콘텐츠 디자인', '텍스트 레이아웃'],
     content: {
       introduction: `아무리 유익한 정보라도 가독성이 떨어지면 독자는 읽기를 포기합니다. 특히 모바일 사용자는 '벽돌'처럼 빽빽한 글을 보면 즉시 이탈합니다. 글을 '디자인'하는 방법을 알아야 합니다.`,
@@ -1176,6 +1179,7 @@ AI는 초안과 아이디어 생성에 활용하고, 최종 콘텐츠에는 반�
     description: '구글 검색 결과창(SERP)에서 클릭률을 높이는 메타 제목과 설명 최적화. 정확한 바이트 계산이 답입니다.',
     category: 'insights',
     publishDate: '2025-12-25',
+    dateModified: '2026-05-06',
     readTime: '8분',
     author: '김민혁',
     keywords: ['메타 데이터 최적화', 'SEO 바이트 계산', '클릭률 높이기', 'SERP 최적화', '구글 검색 결과'],
