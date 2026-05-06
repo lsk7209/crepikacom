@@ -22,7 +22,7 @@ export function AppShell({ children }: AppShellProps) {
           {/* Center: Slogan (hidden on mobile) */}
           <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
             <p className="text-sm font-medium text-muted-foreground">
-              No Login. 3-Second Tools.
+              로그인 없이 · 3초 만에 완성
             </p>
           </div>
 
@@ -129,7 +129,7 @@ export function AppShell({ children }: AppShellProps) {
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                    소개 (About)
+                    소개
                   </Link>
                 </li>
                 <li>

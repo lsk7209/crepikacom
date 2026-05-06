@@ -62,7 +62,7 @@ const DetailedToolArticle = ({ content }: { content: ToolDetailedContent }) => (
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
-          <h3 className="text-xl font-semibold mb-4 text-foreground/80">데이터 활용법 (How to Use)</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground/80">단계별 사용 방법</h3>
           <ol className="space-y-4">
             {content.howToUse.steps.map((step, idx) => (
               <li key={idx} className="flex gap-4">
@@ -76,7 +76,7 @@ const DetailedToolArticle = ({ content }: { content: ToolDetailedContent }) => (
         </div>
 
         <div className="space-y-6">
-          <h3 className="text-xl font-semibold mb-4 text-foreground/80">전문가 실전 팁 (Pro Tips)</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground/80">전문가 실전 팁</h3>
           <ul className="space-y-4">
             {content.howToUse.tips.map((tip, idx) => (
               <li key={idx} className="flex gap-3 items-start bg-amber-500/5 p-4 rounded-lg border border-amber-500/10">
