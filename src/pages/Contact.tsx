@@ -13,6 +13,29 @@ export default function Contact() {
         />
         <meta name="keywords" content="문의하기, 고객지원, 피드백, 크레피카 연락처, 광고 문의" />
         <link rel="canonical" href="https://crepika.com/contact" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "크레피카 문의하기",
+          "url": "https://crepika.com/contact",
+          "description": "크레피카 고객 지원 및 문의 페이지",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "크레피카",
+            "email": "support@crepika.com",
+            "url": "https://crepika.com"
+          }
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "도구가 제대로 작동하지 않아요.", "acceptedAnswer": { "@type": "Answer", "text": "대부분의 문제는 브라우저 캐시를 삭제하거나 최신 버전으로 업데이트하면 해결됩니다. 여전히 문제가 발생한다면 오류 내용과 브라우저 종류를 support@crepika.com으로 보내주세요." }},
+            { "@type": "Question", "name": "제 데이터는 정말 안전한가요?", "acceptedAnswer": { "@type": "Answer", "text": "네, 100% 안전합니다. 크레피카의 모든 도구는 서버 없는 처리 방식으로 운영됩니다. 입력한 텍스트나 업로드한 이미지는 외부 서버로 전송되지 않고 오직 이용자의 기기 내에서만 처리됩니다." }},
+            { "@type": "Question", "name": "새로운 도구를 제안하고 싶습니다.", "acceptedAnswer": { "@type": "Answer", "text": "창의적인 아이디어는 언제나 환영합니다. support@crepika.com으로 기획 의도를 보내주시면 팀에서 검토 후 연락드리겠습니다." }},
+            { "@type": "Question", "name": "기업용 대량 처리가 가능한가요?", "acceptedAnswer": { "@type": "Answer", "text": "현재 모든 도구는 웹 기반 무료 서비스로 제공됩니다. API 연동이나 대량 처리를 위한 엔터프라이즈 솔루션이 필요하신 경우 별도로 support@crepika.com으로 문의 부탁드립니다." }}
+          ]
+        })}</script>
       </Helmet>
 
       <div className="container px-4 py-12 mx-auto max-w-4xl">

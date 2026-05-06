@@ -38,6 +38,29 @@ export default function About() {
         />
         <meta name="keywords" content="크레피카 소개, SEO 전문가, 마케팅 팀, 무료 크리에이터 도구, E-E-A-T" />
         <link rel="canonical" href="https://crepika.com/about" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "url": "https://crepika.com/about",
+          "name": "크레피카 팀 소개",
+          "description": "크리에이터를 위한 무료 온라인 도구 서비스 크레피카의 팀과 철학을 소개합니다.",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "크레피카",
+            "alternateName": "Crepika",
+            "url": "https://crepika.com",
+            "email": "support@crepika.com",
+            "foundingDate": "2025",
+            "description": "국내 크리에이터를 위한 무료 온라인 도구 서비스. 로그인 없이 3초 안에 사용 가능한 QR 생성기, 글자수 세기, WebP 변환기 등을 제공합니다.",
+            "areaServed": "KR",
+            "knowsLanguage": ["ko", "en"],
+            "member": [
+              { "@type": "Person", "name": "김민혁", "jobTitle": "SEO & 콘텐츠 전략가" },
+              { "@type": "Person", "name": "이지수", "jobTitle": "소셜 미디어 스페셜리스트" },
+              { "@type": "Person", "name": "박준영", "jobTitle": "수석 개발자" }
+            ]
+          }
+        })}</script>
       </Helmet>
 
       <div className="container px-4 py-12 mx-auto max-w-5xl">

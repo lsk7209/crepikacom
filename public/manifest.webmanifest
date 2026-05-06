@@ -1,24 +1,52 @@
 {
-  "name": "크레피카",
+  "name": "크레피카 - 크리에이터 도구함",
   "short_name": "크레피카",
-  "description": "로그인 없이 3초 만에 끝나는 크리에이터 도구",
+  "description": "로그인 없이 3초 만에 끝나는 크리에이터 도구. QR 생성기, 글자수 세기, WebP 변환기, 해시태그 믹서 등 무료 제공.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff",
-  "orientation": "portrait-primary",
+  "theme_color": "#0891b2",
+  "lang": "ko",
+  "orientation": "any",
+  "categories": ["utilities", "productivity"],
   "icons": [
     {
       "src": "/placeholder.svg",
       "sizes": "192x192",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "/placeholder.svg",
       "sizes": "512x512",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.svg",
+      "sizes": "1200x630",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "크레피카 메인 화면"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "QR 코드 생성기",
+      "url": "/tools/qr-generator",
+      "description": "URL을 QR 코드로 즉시 변환"
+    },
+    {
+      "name": "글자수 세기",
+      "url": "/tools/text-counter",
+      "description": "텍스트 글자수 실시간 카운트"
+    },
+    {
+      "name": "WebP 변환기",
+      "url": "/tools/webp-converter",
+      "description": "이미지를 WebP로 즉시 변환"
     }
   ]
 }

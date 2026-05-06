@@ -12,7 +12,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { MarkdownContent } from "@/lib/markdown";
 
 const SITE_URL = "https://crepika.com";
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.svg`;
 
 export default function BlogPost() {
     const { slug } = useParams<{ slug: string }>();

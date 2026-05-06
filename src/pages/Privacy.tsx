@@ -1,17 +1,18 @@
 import { Helmet } from "react-helmet";
 import { Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Privacy() {
   return (
     <>
       <Helmet>
         <title>개인정보처리방침 | 크레피카</title>
-        <meta 
-          name="description" 
-          content="크레피카 개인정보처리방침. 무료 온라인 도구 사용 시 데이터와 개인정보를 어떻게 보호하는지 알아보세요." 
+        <meta
+          name="description"
+          content="크레피카 개인정보처리방침. 모든 도구는 브라우저 내에서 처리되며 서버에 데이터를 전송하지 않습니다. Google AdSense 광고 및 쿠키 정책을 포함합니다."
         />
-        <meta name="keywords" content="개인정보처리방침, 데이터 보호, 프라이버시, 로컬 처리" />
         <link rel="canonical" href="https://crepika.com/privacy" />
+        <meta name="robots" content="noindex,follow" />
       </Helmet>
 
       <div className="container px-4 py-12 mx-auto max-w-4xl">
@@ -20,128 +21,115 @@ export default function Privacy() {
             <Shield className="h-8 w-8 text-primary" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">개인정보처리방침</h1>
-          <p className="text-lg text-muted-foreground">
-            최종 업데이트: 2025년 11월 22일
-          </p>
+          <p className="text-lg text-muted-foreground">최종 업데이트: 2026년 5월 6일</p>
         </div>
 
-        <article className="prose prose-slate dark:prose-invert max-w-none space-y-8">
+        <article className="prose prose-slate dark:prose-invert max-w-none space-y-10 text-base leading-relaxed">
+
           <section>
-            <h2 className="text-2xl font-bold mb-4">Introduction</h2>
+            <h2 className="text-2xl font-bold mb-4">1. 개요</h2>
             <p className="text-muted-foreground leading-relaxed">
-              At CrePic, we take your privacy seriously. This Privacy Policy explains how we handle your information 
-              when you use our website and tools. The short version: we don't collect, store, or process your personal data.
+              크레피카(이하 "서비스")는 이용자의 개인정보 보호를 매우 중요하게 생각합니다. 본 방침은 서비스
+              이용 시 수집·처리되는 정보의 종류와 방법, 그리고 이용자의 권리를 설명합니다.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mt-3">
+              <strong>핵심 요약:</strong> 크레피카의 모든 도구(QR 생성기, 텍스트 카운터, WebP 변환기 등)는
+              입력된 데이터를 서버에 전송하지 않습니다. 모든 처리는 이용자의 브라우저 내에서만 이루어집니다.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Data Processing</h2>
-            <h3 className="text-xl font-semibold mb-3">Client-Side Processing Only</h3>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              All tools on CrePic run entirely in your web browser using JavaScript. When you use our tools:
+            <h2 className="text-2xl font-bold mb-4">2. 수집하는 정보</h2>
+            <h3 className="text-xl font-semibold mb-3">2-1. 도구 사용 데이터 (클라이언트 측 처리)</h3>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              텍스트, 이미지, URL 등 도구에 입력하는 모든 데이터는 이용자의 기기(브라우저)에서만 처리되며
+              크레피카 서버로 전송되지 않습니다.
+            </p>
+            <h3 className="text-xl font-semibold mb-3">2-2. 브라우저 로컬 저장소 (localStorage)</h3>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              서비스 편의를 위해 다음 정보를 이용자의 브라우저 로컬 저장소에만 저장합니다. 서버에는 전송되지 않습니다.
             </p>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>Your files and data are processed locally on your device</li>
-              <li>No data is uploaded to our servers</li>
-              <li>No data is stored on our servers</li>
-              <li>Your information never leaves your device</li>
+              <li>즐겨찾기 도구 목록</li>
+              <li>최근 사용 도구 기록</li>
+              <li>UI 환경 설정 (테마 등)</li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mt-3">
+              브라우저 캐시·쿠키 삭제 시 위 정보가 모두 삭제됩니다.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">3. 쿠키 및 광고</h2>
+            <h3 className="text-xl font-semibold mb-3">3-1. Google AdSense 광고</h3>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              크레피카는 무료 서비스 운영을 위해 Google AdSense를 통해 광고를 게재합니다.
+              Google은 이용자의 이전 방문 기록을 기반으로 맞춤형 광고를 표시하기 위해 쿠키를 사용할 수 있습니다.
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+              <li>광고 관련 쿠키는 Google의 개인정보처리방침을 따릅니다.</li>
+              <li>맞춤형 광고 수신 거부: <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google 광고 설정</a>에서 변경 가능합니다.</li>
+              <li>EU 이용자의 경우 GDPR에 따른 동의 절차가 적용됩니다.</li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-3 mt-6">3-2. 분석 쿠키</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Google Analytics 등 분석 도구를 통해 방문 페이지, 체류 시간, 기기 정보 등
+              익명화된 집계 데이터를 수집할 수 있습니다. 개인 식별 정보는 수집하지 않습니다.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">4. 제3자 서비스</h2>
+            <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
+              <li><strong>Google AdSense:</strong> 광고 게재. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google 개인정보처리방침</a></li>
+              <li><strong>Google Analytics:</strong> 사이트 이용 통계 분석</li>
+              <li><strong>Vercel:</strong> 웹 호스팅. <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Vercel 개인정보처리방침</a></li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Local Storage</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              CrePic uses browser localStorage to enhance your experience by saving:
+            <h2 className="text-2xl font-bold mb-4">5. 이용자의 권리</h2>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              크레피카는 개인 데이터를 서버에 저장하지 않으므로 삭제·수정 요청의 대상이 되는 개인정보가 없습니다.
+              다음 방법으로 로컬 저장 데이터를 직접 제어할 수 있습니다.
             </p>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>Your favorite tools (for quick access)</li>
-              <li>Recently used tools (for convenience)</li>
-              <li>User preferences (theme, language settings)</li>
-            </ul>
-            <p className="text-muted-foreground leading-relaxed mt-4">
-              This data is stored only in your browser and never transmitted to our servers. 
-              You can clear this data at any time by clearing your browser's cache and cookies.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Cookies and Tracking</h2>
-            <h3 className="text-xl font-semibold mb-3">Analytics</h3>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              We may use Google Analytics or similar services to understand how visitors use our website. 
-              This helps us improve our tools and user experience. These analytics services may use cookies 
-              to collect anonymous usage data such as:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>Pages visited</li>
-              <li>Time spent on site</li>
-              <li>Browser type and device information</li>
-              <li>Geographic location (country/city level only)</li>
-            </ul>
-            <p className="text-muted-foreground leading-relaxed mt-4">
-              This data is aggregated and anonymized. We do not track individual users or collect personally identifiable information.
-            </p>
-
-            <h3 className="text-xl font-semibold mb-3 mt-6">Advertising</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              We display advertisements through Google AdSense to support the free operation of CrePic. 
-              Google may use cookies to serve ads based on your prior visits to our website or other websites. 
-              You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google's Ads Settings</a>.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Third-Party Services</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              CrePic may use the following third-party services:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li><strong>Google AdSense:</strong> For displaying advertisements</li>
-              <li><strong>Google Analytics:</strong> For understanding website usage</li>
-            </ul>
-            <p className="text-muted-foreground leading-relaxed mt-4">
-              These services have their own privacy policies. We recommend reviewing their policies to understand 
-              how they collect and process data.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Your Rights</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Since we don't collect or store personal data, there is no personal information for us to modify or delete. 
-              However, you have the right to:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>Clear your browser's localStorage to remove any locally saved preferences</li>
-              <li>Disable cookies in your browser settings</li>
-              <li>Opt out of Google's personalized advertising</li>
-              <li>Use browser extensions to block analytics tracking</li>
+              <li>브라우저 캐시·쿠키 삭제로 로컬 저장소 초기화</li>
+              <li>브라우저 설정에서 쿠키 차단</li>
+              <li>Google 광고 설정에서 맞춤형 광고 비활성화</li>
+              <li>브라우저 확장 프로그램으로 애널리틱스 차단</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Children's Privacy</h2>
+            <h2 className="text-2xl font-bold mb-4">6. 아동 보호</h2>
             <p className="text-muted-foreground leading-relaxed">
-              CrePic does not knowingly collect personal information from children under 13. 
-              Our services are designed for general use and do not target children specifically.
+              크레피카는 만 14세 미만 아동의 개인정보를 고의로 수집하지 않습니다.
+              14세 미만 이용자는 보호자의 동의 하에 서비스를 이용하시기 바랍니다.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Changes to This Policy</h2>
+            <h2 className="text-2xl font-bold mb-4">7. 방침 변경 안내</h2>
             <p className="text-muted-foreground leading-relaxed">
-              We may update this Privacy Policy from time to time. We will notify you of any changes by posting 
-              the new Privacy Policy on this page and updating the "Last updated" date.
+              본 방침은 법령 변경이나 서비스 정책 변경 시 업데이트될 수 있습니다.
+              중요한 변경 사항은 페이지 상단의 "최종 업데이트" 날짜를 통해 확인하시기 바랍니다.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+            <h2 className="text-2xl font-bold mb-4">8. 문의</h2>
             <p className="text-muted-foreground leading-relaxed">
-              If you have any questions about this Privacy Policy, please contact us through our <a href="/contact" className="text-primary hover:underline">Contact page</a>. 
-              또한 <a href="/about" className="text-primary hover:underline">크레피카 소개</a>와 <a href="/terms" className="text-primary hover:underline">이용약관</a>도 함께 확인해 보세요.
+              개인정보처리방침에 관한 문의사항은{" "}
+              <Link to="/contact" className="text-primary hover:underline">문의하기 페이지</Link>
+              를 통해 연락주세요. 이메일: <a href="mailto:support@crepika.com" className="text-primary hover:underline">support@crepika.com</a>
+            </p>
+            <p className="text-muted-foreground leading-relaxed mt-3">
+              <Link to="/terms" className="text-primary hover:underline">이용약관</Link>과{" "}
+              <Link to="/about" className="text-primary hover:underline">크레피카 소개</Link>도 함께 확인해 보세요.
             </p>
           </section>
+
         </article>
       </div>
     </>
