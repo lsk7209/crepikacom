@@ -60,6 +60,15 @@ export function ToolLayout({
         <meta name="description" content={pageDescription} />
         <meta name="keywords" content={config.keywords.join(', ')} />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content="https://crepika.com/og-image.svg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
         {schemaData && (
           <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
         )}
