@@ -1,6 +1,6 @@
 import { useParams, Navigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Clock, Calendar, ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import { Clock, Calendar, ArrowLeft, ArrowRight, ExternalLink, Share2, Copy, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +10,7 @@ import { getToolById } from "@/data/tools-config";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { MarkdownContent } from "@/lib/markdown";
+import { useState } from "react";
 
 const SITE_URL = "https://crepika.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.svg`;
@@ -24,6 +25,11 @@ const CATEGORY_OG_IMAGES: Record<string, string> = {
 const AUTHOR_BIOS: Record<string, string> = {
   '이지수': '수백 명의 크리에이터·브랜드 SNS 성장을 컨설팅한 소셜 미디어 스페셜리스트. 인스타그램·유튜브·X 알고리즘 분석을 기반으로 실전에서 바로 쓰는 콘텐츠 전략을 공유합니다.',
   '김민혁': '10년차 디지털 마케터이자 SEO 전략가. 데이터 기반 콘텐츠 최적화 전문가로 활동하며, 구글·네이버 양대 검색 생태계에서 크리에이터들이 더 빛날 수 있도록 돕고 있습니다.',
+};
+
+const AUTHOR_AVATARS: Record<string, string> = {
+  '이지수': '/images/avatar-leejisu.svg',
+  '김민혁': '/images/avatar-kimminhy.svg',
 };
 
 export default function BlogPost() {
@@ -116,10 +122,14 @@ export default function BlogPost() {
                 <meta property="article:modified_time" content={dateModified} />
                 <meta property="article:author" content={post.author} />
 
+                <meta property="og:locale" content="ko_KR" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={post.title} />
                 <meta name="twitter:description" content={post.description} />
                 <meta name="twitter:image" content={ogImage} />
+                {post.keywords.map((kw, i) => (
+                    <meta key={i} property="article:tag" content={kw} />
+                ))}
 
                 <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
@@ -194,7 +204,7 @@ export default function BlogPost() {
                 <section className="mb-16 bg-card border rounded-3xl p-8 shadow-sm">
                     <div className="flex flex-col md:flex-row items-center gap-8">
                         <Avatar className="w-24 h-24 border-2 border-primary/10">
-                            <AvatarImage src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt={post.author} />
+                            <AvatarImage src={AUTHOR_AVATARS[post.author] ?? '/images/avatar-kimminhy.svg'} alt={post.author} />
                             <AvatarFallback>{post.author.slice(0, 2)}</AvatarFallback>
                         </Avatar>
                         <div className="flex-1 text-center md:text-left">
@@ -279,6 +289,8 @@ export default function BlogPost() {
                     </section>
                 )}
 
+                <ShareButtons url={canonicalUrl} title={post.title} />
+
                 <div className="flex justify-between items-center pt-8 border-t">
                     <Link to="/blog">
                         <Button variant="outline" className="gap-2">
@@ -293,5 +305,56 @@ export default function BlogPost() {
                 </div>
             </article>
         </>
+    );
+}
+
+function ShareButtons({ url, title }: { url: string; title: string }) {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = async () => {
+        try {
+            await navigator.clipboard.writeText(url);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch {
+            // fallback
+        }
+    };
+
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+    const kakaoUrl = `https://sharer.kakao.com/talk/friends/picker/link?app_key=none&link_ver=4.0&template_id=none`;
+
+    return (
+        <div className="my-8 py-6 border-y">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+                <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
+                    <Share2 className="h-4 w-4" />
+                    이 글이 도움이 됐다면 공유해주세요
+                </div>
+                <div className="flex items-center gap-2 ml-auto">
+                    <a
+                        href={twitterUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border bg-background hover:bg-muted text-sm font-medium transition-colors"
+                        aria-label="X(트위터)에 공유"
+                    >
+                        <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        X 공유
+                    </a>
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        className="gap-2"
+                        onClick={handleCopy}
+                    >
+                        {copied ? <Check className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
+                        {copied ? '복사됨!' : '링크 복사'}
+                    </Button>
+                </div>
+            </div>
+        </div>
     );
 }

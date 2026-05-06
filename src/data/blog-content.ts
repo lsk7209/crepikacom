@@ -1446,7 +1446,9 @@ export function getBlogPostBySlug(slug: string): BlogPost | undefined {
 }
 
 export function getAllBlogPosts(): BlogPost[] {
-  return BLOG_POSTS;
+  return [...BLOG_POSTS].sort((a, b) =>
+    new Date(b.dateModified ?? b.publishDate).getTime() - new Date(a.dateModified ?? a.publishDate).getTime()
+  );
 }
 
 export function getBlogPostsByCategory(category: BlogPost['category']): BlogPost[] {
