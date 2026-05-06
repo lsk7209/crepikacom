@@ -36,6 +36,16 @@ function getExistingSlugs() {
   return slugs;
 }
 
+// 큐에서 발행된 포스트의 카테고리별 슬러그 반환 (내부 링크 개선용)
+function getPublishedSlugsByCategory(category) {
+  const queue = JSON.parse(readFileSync(QUEUE_FILE, 'utf-8'));
+  const sameCat = queue.filter(e => e.published && e.category === category).map(e => e.slug).slice(-3);
+  if (sameCat.length >= 2) return sameCat;
+  // 동일 카테고리가 부족하면 전체 최근 발행 슬러그로 보완
+  const recent = queue.filter(e => e.published).map(e => e.slug).slice(-3);
+  return [...new Set([...sameCat, ...recent])].slice(0, 3);
+}
+
 const TOOL_SLUGS = [
   'text-counter',
   'byte-counter',
@@ -129,6 +139,9 @@ function buildUserPrompt(entry) {
   const today = getTodayDate();
   const relatedTools = getRelatedToolsForCategory(entry.category);
   const allSlugs = getExistingSlugs();
+  const relatedSlugs = getPublishedSlugsByCategory(entry.category).length > 0
+    ? getPublishedSlugsByCategory(entry.category)
+    : allSlugs.slice(-3);
 
   return `다음 주제로 고품질 블로그 포스트를 작성하세요.
 
@@ -149,7 +162,7 @@ function buildUserPrompt(entry) {
 - 각 section content 300자 이상
 - conclusion 150자 이상
 - relatedTools: ${JSON.stringify(relatedTools)}
-- relatedPosts: ${JSON.stringify(allSlugs.slice(-3))}
+- relatedPosts: ${JSON.stringify(relatedSlugs)}
 - 본문에서 크레피카 도구 자연 연결 1~2회
 
 다음 JSON 구조로만 응답하세요 (코드 펜스 없이 순수 JSON):
@@ -177,7 +190,7 @@ function buildUserPrompt(entry) {
     "conclusion": "결론 텍스트"
   },
   "relatedTools": ${JSON.stringify(relatedTools)},
-  "relatedPosts": ${JSON.stringify(allSlugs.slice(-3))},
+  "relatedPosts": ${JSON.stringify(relatedSlugs)},
   "faq": [
     { "question": "질문?", "answer": "답변" }
   ]

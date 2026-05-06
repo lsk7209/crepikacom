@@ -1471,5 +1471,8 @@ export function getRelatedPosts(currentSlug: string, limit: number = 3): BlogPos
       (post.category === currentPost.category ||
         post.relatedPosts.includes(currentSlug))
     )
+    .sort((a, b) =>
+      new Date(b.dateModified ?? b.publishDate).getTime() - new Date(a.dateModified ?? a.publishDate).getTime()
+    )
     .slice(0, limit);
 }
