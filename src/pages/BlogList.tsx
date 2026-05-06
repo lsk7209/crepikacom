@@ -139,7 +139,10 @@ export default function BlogList() {
                 <meta property="og:image:height" content="630" />
                 <meta property="og:image:alt" content="크레피카 크리에이터 블로그" />
                 <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="크리에이터 블로그 - 마케팅 팁과 가이드 | 크레피카" />
+                <meta name="twitter:description" content="인스타그램, 네이버, 유튜브 크리에이터를 위한 실전 마케팅 전략과 SEO 팁" />
                 <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
+                <meta name="twitter:image:alt" content="크레피카 크리에이터 블로그" />
                 <script type="application/ld+json">{JSON.stringify(collectionSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
             </Helmet>

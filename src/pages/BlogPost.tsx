@@ -139,6 +139,7 @@ export default function BlogPost() {
                 <meta name="twitter:title" content={post.title} />
                 <meta name="twitter:description" content={post.description} />
                 <meta name="twitter:image" content={ogImage} />
+                <meta name="twitter:image:alt" content={post.title} />
                 {post.keywords.map((kw, i) => (
                     <meta key={i} property="article:tag" content={kw} />
                 ))}

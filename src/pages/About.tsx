@@ -50,7 +50,10 @@ export default function About() {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="크레피카 팀 소개" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="서비스 소개 및 팀 정보 | 크레피카" />
+        <meta name="twitter:description" content="크레피카 팀 소개. SEO, 소셜미디어, 개발 전문가들이 만드는 크리에이터 무료 도구 서비스." />
         <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
+        <meta name="twitter:image:alt" content="크레피카 팀 소개" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "AboutPage",
