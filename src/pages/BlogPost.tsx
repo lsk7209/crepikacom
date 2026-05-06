@@ -41,28 +41,42 @@ export default function BlogPost() {
     const ogImage = CATEGORY_OG_IMAGES[post.category] || DEFAULT_OG_IMAGE;
     const dateModified = post.dateModified || post.publishDate;
 
+    const CATEGORY_LABELS_KO: Record<string, string> = {
+        guide: '가이드', tips: '팁 & 트릭', insights: '인사이트', 'case-study': '케이스 스터디',
+    };
+
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": post.title,
         "description": post.description,
-        "image": ogImage,
+        "image": {
+            "@type": "ImageObject",
+            "url": ogImage,
+            "width": 1200,
+            "height": 630
+        },
         "datePublished": post.publishDate,
         "dateModified": dateModified,
         "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
         "author": {
             "@type": "Person",
             "name": post.author,
-            "url": `${SITE_URL}/about`
+            "url": `${SITE_URL}/about`,
+            "description": AUTHOR_BIOS[post.author] ?? '크레피카 콘텐츠 팀'
         },
         "publisher": {
             "@type": "Organization",
+            "@id": `${SITE_URL}/#organization`,
             "name": "크레피카",
             "url": SITE_URL,
-            "logo": { "@type": "ImageObject", "url": `${SITE_URL}/og-image.svg` }
+            "logo": { "@type": "ImageObject", "url": `${SITE_URL}/og-image.svg`, "width": 1200, "height": 630 }
         },
         "keywords": post.keywords.join(", "),
-        "inLanguage": "ko-KR"
+        "inLanguage": "ko-KR",
+        "articleSection": CATEGORY_LABELS_KO[post.category] ?? post.category,
+        "timeRequired": `PT${post.readTime.replace('분', 'M')}`,
+        "isPartOf": { "@type": "WebSite", "@id": `${SITE_URL}/#website` }
     };
 
     const faqSchema = post.faq?.length ? {
@@ -124,7 +138,7 @@ export default function BlogPost() {
 
                 {/* Header */}
                 <header className="mb-12">
-                    <Badge variant="outline" className="mb-4">{post.category}</Badge>
+                    <Badge variant="outline" className="mb-4">{CATEGORY_LABELS_KO[post.category] ?? post.category}</Badge>
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">{post.title}</h1>
                     <p className="text-xl text-muted-foreground mb-6">{post.description}</p>
 
