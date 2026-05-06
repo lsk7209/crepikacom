@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function processInline(text: string): React.ReactNode {
   const parts: React.ReactNode[] = [];
@@ -43,7 +44,7 @@ function processInline(text: string): React.ReactNode {
           parts.push(
             isExt
               ? <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">{linkText}</a>
-              : <a key={i} href={url} className="text-primary underline hover:text-primary/80">{linkText}</a>
+              : <Link key={i} to={url} className="text-primary underline hover:text-primary/80">{linkText}</Link>
           );
           i = cp + 1;
           continue;
