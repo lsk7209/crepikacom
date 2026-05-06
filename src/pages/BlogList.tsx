@@ -65,6 +65,7 @@ export default function BlogList() {
                 <meta property="og:title" content="크리에이터 블로그 - 마케팅 팁과 가이드 | 크레피카" />
                 <meta property="og:description" content="인스타그램 마케팅, 네이버 SEO, 소셜미디어 전략 등 크리에이터를 위한 실전 가이드와 팁" />
                 <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="크레피카" />
                 <meta property="og:url" content="https://crepika.com/blog" />
                 <meta property="og:locale" content="ko_KR" />
                 <meta property="og:image" content="https://crepika.com/og-image.svg" />

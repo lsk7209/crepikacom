@@ -107,6 +107,7 @@ export default function Home() {
         <link rel="canonical" href="https://crepika.com/" />
         <meta property="og:url" content="https://crepika.com/" />
         <meta property="og:locale" content="ko_KR" />
+        <meta property="og:site_name" content="크레피카" />
         <link rel="alternate" type="application/rss+xml" title="크레피카 블로그" href="https://crepika.com/rss.xml" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",

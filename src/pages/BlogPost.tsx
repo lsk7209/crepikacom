@@ -120,6 +120,7 @@ export default function BlogPost() {
                 <meta property="og:title" content={post.title} />
                 <meta property="og:description" content={post.description} />
                 <meta property="og:type" content="article" />
+                <meta property="og:site_name" content="크레피카" />
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:image" content={ogImage} />
                 <meta property="article:published_time" content={post.publishDate} />

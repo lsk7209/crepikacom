@@ -63,6 +63,7 @@ export function ToolLayout({
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="크레피카" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:image" content="https://crepika.com/og-image.svg" />

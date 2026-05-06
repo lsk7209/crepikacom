@@ -39,6 +39,7 @@ export default function About() {
         <meta name="keywords" content="크레피카 소개, SEO 전문가, 마케팅 팀, 무료 크리에이터 도구, E-E-A-T" />
         <link rel="canonical" href="https://crepika.com/about" />
         <meta property="og:locale" content="ko_KR" />
+        <meta property="og:site_name" content="크레피카" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "AboutPage",
