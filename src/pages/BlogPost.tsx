@@ -10,7 +10,7 @@ import { getToolById } from "@/data/tools-config";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { MarkdownContent } from "@/lib/markdown";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const SITE_URL = "https://crepika.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.svg`;
@@ -141,6 +141,7 @@ export default function BlogPost() {
                 {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
             </Helmet>
 
+            <ReadingProgressBar />
             <article className="container px-4 py-12 mx-auto max-w-4xl">
                 {/* Breadcrumb */}
                 <nav aria-label="breadcrumb" className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
@@ -176,6 +177,11 @@ export default function BlogPost() {
                 </header>
 
                 <Separator className="my-8" />
+
+                {/* Table of Contents */}
+                {post.content.sections.length >= 3 && (
+                    <TableOfContents sections={post.content.sections} />
+                )}
 
                 {/* Introduction */}
                 <section className="mb-12">
@@ -310,6 +316,60 @@ export default function BlogPost() {
                 </div>
             </article>
         </>
+    );
+}
+
+function ReadingProgressBar() {
+    const [progress, setProgress] = useState(0);
+    useEffect(() => {
+        const update = () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            setProgress(docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0);
+        };
+        window.addEventListener('scroll', update, { passive: true });
+        return () => window.removeEventListener('scroll', update);
+    }, []);
+    return (
+        <div className="fixed top-0 left-0 w-full h-1 z-50 bg-transparent">
+            <div
+                className="h-full bg-primary transition-all duration-75 ease-linear"
+                style={{ width: `${progress}%` }}
+            />
+        </div>
+    );
+}
+
+function TableOfContents({ sections }: { sections: { heading: string }[] }) {
+    const [active, setActive] = useState(0);
+    useEffect(() => {
+        const handler = () => {
+            let idx = 0;
+            sections.forEach((_, i) => {
+                const el = document.getElementById(`section-${i}`);
+                if (el && el.getBoundingClientRect().top <= 120) idx = i;
+            });
+            setActive(idx);
+        };
+        window.addEventListener('scroll', handler, { passive: true });
+        return () => window.removeEventListener('scroll', handler);
+    }, [sections]);
+    return (
+        <nav className="mb-10 p-5 bg-muted/40 rounded-xl border text-sm">
+            <p className="font-semibold mb-3 text-foreground">목차</p>
+            <ol className="space-y-1.5 list-none">
+                {sections.map((s, i) => (
+                    <li key={i}>
+                        <a
+                            href={`#section-${i}`}
+                            className={`block px-2 py-1 rounded transition-colors ${active === i ? 'text-primary font-semibold bg-primary/10' : 'text-muted-foreground hover:text-primary'}`}
+                        >
+                            {i + 1}. {s.heading}
+                        </a>
+                    </li>
+                ))}
+            </ol>
+        </nav>
     );
 }
 
