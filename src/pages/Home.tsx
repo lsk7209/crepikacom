@@ -164,15 +164,13 @@ export default function Home() {
           "description": "로그인 없이 즉시 사용 가능한 크리에이터 도구들",
           "url": "https://crepika.com",
           "numberOfItems": TOOLS_CONFIG.length,
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "텍스트 카운터 - 글자수 세기", "url": "https://crepika.com/tools/text-counter", "description": "글자 수, 단어 수를 실시간으로 세는 무료 도구" },
-            { "@type": "ListItem", "position": 2, "name": "바이트 카운터 - 한글 바이트 계산", "url": "https://crepika.com/tools/byte-counter", "description": "네이버 SEO 최적화를 위한 한글 바이트 계산기" },
-            { "@type": "ListItem", "position": 3, "name": "WebP 변환기 - 이미지 최적화", "url": "https://crepika.com/tools/webp-converter", "description": "JPG/PNG를 WebP로 즉시 변환하는 무료 이미지 최적화 도구" },
-            { "@type": "ListItem", "position": 4, "name": "인스타 줄바꿈 - 인스타그램 포매터", "url": "https://crepika.com/tools/insta-spacer", "description": "인스타그램 캡션 줄바꿈 포맷 도구" },
-            { "@type": "ListItem", "position": 5, "name": "해시태그 믹서 - 해시태그 랜덤 섞기", "url": "https://crepika.com/tools/hashtag-mixer", "description": "SNS 알고리즘 페널티 방지를 위한 해시태그 순서 섞기 도구" },
-            { "@type": "ListItem", "position": 6, "name": "QR 코드 생성기 - 무료 QR 생성", "url": "https://crepika.com/tools/qr-generator", "description": "URL을 QR 코드로 즉시 변환하는 무료 도구" },
-            { "@type": "ListItem", "position": 7, "name": "로렘 입숨 생성기 - 더미 텍스트 생성", "url": "https://crepika.com/tools/lorem-generator", "description": "디자인 시안용 한국어·영어 더미 텍스트 생성기" }
-          ]
+          "itemListElement": TOOLS_CONFIG.map((t, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": `${t.titleKo} - ${t.titleEn}`,
+            "url": `https://crepika.com${t.path}`,
+            "description": t.seoDescription || t.descriptionKo,
+          }))
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",

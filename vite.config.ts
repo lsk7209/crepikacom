@@ -19,19 +19,12 @@ export default defineConfig(({ mode }) => ({
     target: "es2020",
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ["react", "react-dom", "react-router-dom", "@tanstack/react-query"],
-          ui: [
-            "@radix-ui/react-accordion",
-            "@radix-ui/react-avatar",
-            "@radix-ui/react-dialog",
-            "@radix-ui/react-select",
-            "@radix-ui/react-separator",
-            "@radix-ui/react-slot",
-            "@radix-ui/react-toast",
-          ],
-          qrcode: ["qrcode"],
-          helmet: ["react-helmet"],
+        manualChunks(id) {
+          if (id.includes('blog-content')) return 'blog-data';
+          if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/') || id.includes('node_modules/react-router-dom') || id.includes('node_modules/@tanstack/react-query')) return 'vendor';
+          if (id.includes('node_modules/@radix-ui')) return 'ui';
+          if (id.includes('node_modules/qrcode')) return 'qrcode';
+          if (id.includes('node_modules/react-helmet')) return 'helmet';
         },
       },
     },
