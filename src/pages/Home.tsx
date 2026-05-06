@@ -169,10 +169,18 @@ export default function Home() {
           <p className="text-lg text-muted-foreground/80 italic">
             로그인 없이 · 3초 만에 완성
           </p>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-6">
             국내 크리에이터를 위한 초간편 작업 도구함입니다.<br />
             네이버·인스타·유튜브용 글자수, 바이트, 이미지, QR 작업을 3초 안에 끝내세요.
           </p>
+          {/* Social proof stats */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm text-muted-foreground">
+            <span className="flex items-center gap-1.5"><strong className="text-foreground font-bold text-base">7</strong> 가지 무료 도구</span>
+            <span className="text-border">|</span>
+            <span className="flex items-center gap-1.5"><strong className="text-foreground font-bold text-base">100%</strong> 브라우저 처리</span>
+            <span className="text-border">|</span>
+            <span className="flex items-center gap-1.5"><strong className="text-foreground font-bold text-base">0원</strong> 요금 · 로그인 불필요</span>
+          </div>
 
           {/* Search Bar */}
           <div className="max-w-xl mx-auto">
