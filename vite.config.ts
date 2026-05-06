@@ -16,17 +16,22 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    target: "es2020",
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ["react", "react-dom", "react-router-dom"],
           ui: [
             "@radix-ui/react-accordion",
+            "@radix-ui/react-avatar",
             "@radix-ui/react-dialog",
             "@radix-ui/react-select",
+            "@radix-ui/react-separator",
+            "@radix-ui/react-slot",
             "@radix-ui/react-toast",
           ],
           qrcode: ["qrcode"],
+          helmet: ["react-helmet"],
         },
       },
     },
