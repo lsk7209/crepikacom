@@ -202,7 +202,7 @@ function injectIntoBlogContent(post) {
   if (idx === -1) throw new Error('blog-content.ts에서 삽입 위치를 찾을 수 없습니다.');
 
   const postTs = postToTs(post);
-  const newEntry = `\n  ${postTs.split('\n').join('\n  ')},\n`;
+  const newEntry = `,\n  ${postTs.split('\n').join('\n  ')}\n`;
 
   const newContent = content.slice(0, idx) + newEntry + content.slice(idx);
   writeFileSync(BLOG_CONTENT_FILE, newContent, 'utf-8');

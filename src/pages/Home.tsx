@@ -163,6 +163,37 @@ export default function Home() {
             { "@type": "ListItem", "position": 7, "name": "로렘 입숨 생성기 - 더미 텍스트 생성", "url": "https://crepika.com/tools/lorem-generator", "description": "디자인 시안용 한국어·영어 더미 텍스트 생성기" }
           ]
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "크레피카는 무료인가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "네, 크레피카의 모든 도구는 완전 무료입니다. 로그인이나 결제 없이 바로 사용할 수 있습니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "파일이나 텍스트가 서버에 저장되나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "아니요. 크레피카의 모든 처리는 브라우저 내에서만 이루어집니다. 입력한 데이터나 파일은 서버로 전송되지 않으며 개인정보가 완벽하게 보호됩니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "글자수 세기 도구는 어떤 플랫폼을 지원하나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "네이버 블로그, 인스타그램, 유튜브, 트위터(X), 카카오 등 주요 SNS 플랫폼의 글자수 제한을 기준으로 실시간 체크가 가능합니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "한글 바이트 카운터는 왜 필요한가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "네이버와 같은 국내 포털은 메타 설명 등에 글자 수가 아닌 바이트 수 제한을 적용합니다. 한글 1자는 UTF-8 기준 3바이트이므로 정확한 바이트 계산이 SEO 최적화에 필수입니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "WebP 변환기로 어떤 파일을 변환할 수 있나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "JPG, PNG, GIF 등 일반 이미지 파일을 WebP 형식으로 변환할 수 있습니다. WebP는 동일 품질 대비 파일 크기가 30% 이상 작아 웹사이트 속도 개선에 효과적입니다." }
+            }
+          ]
+        })}</script>
       </Helmet>
 
       <div className="container px-4 py-12 mx-auto max-w-7xl">

@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import { Sparkles, Zap, Shield, Heart, Users, Award, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -231,19 +232,19 @@ export default function About() {
             크리에이터 여러분의 소중한 피드백이 저희를 성장시킵니다.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="bg-primary text-primary-foreground px-8 py-3 rounded-xl font-bold hover:opacity-90 transition-opacity flex items-center gap-2"
             >
               <Mail className="h-5 w-5" />
               문의하기
-            </a>
-            <a
-              href="/"
+            </Link>
+            <Link
+              to="/"
               className="bg-background border px-8 py-3 rounded-xl font-bold hover:bg-muted transition-colors"
             >
               도구 목록 보기
-            </a>
+            </Link>
           </div>
         </section>
       </div>

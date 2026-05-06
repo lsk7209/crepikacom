@@ -6,10 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import { Suspense, lazy } from "react";
 import Home from "./pages/Home";
-import ToolPage from "./pages/tools/ToolPage";
 import { KeyboardShortcutsModal } from "@/components/KeyboardShortcutsModal";
 import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
 
+const ToolPage = lazy(() => import("./pages/tools/ToolPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const About = lazy(() => import("./pages/About"));
 const Privacy = lazy(() => import("./pages/Privacy"));

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Clock, Calendar, ArrowRight, Tag } from "lucide-react";
+import { Clock, Calendar, ArrowRight, Tag, User } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getAllBlogPosts, BlogPost } from "@/data/blog-content";
@@ -170,6 +170,10 @@ export default function BlogList() {
                                         <div className="flex items-center gap-1">
                                             <Clock className="h-4 w-4" />
                                             <span>{post.readTime}</span>
+                                        </div>
+                                        <div className="flex items-center gap-1 ml-auto">
+                                            <User className="h-3 w-3" />
+                                            <span className="text-xs">{post.author}</span>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap gap-1 mt-3">
