@@ -185,7 +185,11 @@ function buildUserPrompt(entry) {
 }
 
 function postToTs(post) {
-  return JSON.stringify(post, null, 2)
+  const escaped = JSON.stringify(post, (key, value) => {
+    if (typeof value === 'string') return value.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+    return value;
+  }, 2);
+  return escaped
     .replace(/"([^"]+)":/g, '$1:')
     .replace(/"/g, "'");
 }
