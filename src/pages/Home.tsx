@@ -5,11 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Search, Star } from "lucide-react";
+import { ArrowRight, Sparkles, Search, Star, BookOpen, Clock } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { getRecentTools, getFavoriteTools, toggleFavoriteTool, isFavoriteTool } from "@/utils/localStorage";
 import { KeyboardShortcutsModal } from "@/components/KeyboardShortcutsModal";
 import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
+import { getAllBlogPosts } from "@/data/blog-content";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -104,22 +105,31 @@ export default function Home() {
         />
         <meta name="keywords" content="크리에이터 도구, 무료 온라인 도구, 글자수 세기, qr 생성기, webp 변환, 해시태그 믹서, 인스타그램 도구, 네이버 seo" />
         <link rel="canonical" href="https://crepika.com/" />
+        <meta property="og:url" content="https://crepika.com/" />
+        <link rel="alternate" type="application/rss+xml" title="크레피카 블로그" href="https://crepika.com/rss.xml" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
+          "@id": "https://crepika.com/#organization",
           "name": "크레피카",
           "alternateName": "Crepika",
           "url": "https://crepika.com",
-          "logo": "https://crepika.com/og-image.svg",
-          "description": "국내 크리에이터를 위한 무료 온라인 도구 서비스",
+          "logo": { "@type": "ImageObject", "url": "https://crepika.com/og-image.svg", "width": 1200, "height": 630 },
+          "description": "국내 크리에이터를 위한 무료 온라인 도구 서비스. 로그인 없이 3초 안에 사용 가능한 QR 생성기, 글자수 세기, WebP 변환기 등.",
+          "email": "support@crepika.com",
+          "areaServed": "KR",
+          "knowsLanguage": "ko",
           "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "support@crepika.com", "availableLanguage": "Korean" },
-          "sameAs": []
+          "sameAs": ["https://crepika.com/rss.xml"]
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
+          "@id": "https://crepika.com/#website",
           "name": "크레피카",
           "url": "https://crepika.com",
+          "inLanguage": "ko-KR",
+          "publisher": { "@id": "https://crepika.com/#organization" },
           "potentialAction": {
             "@type": "SearchAction",
             "target": { "@type": "EntryPoint", "urlTemplate": "https://crepika.com/?q={search_term_string}" },
@@ -300,7 +310,73 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Recent Blog Posts */}
+        <RecentBlogPosts />
       </div>
     </>
+  );
+}
+
+function RecentBlogPosts() {
+  const CATEGORY_LABELS_BLOG: Record<string, string> = {
+    guide: '가이드', tips: '팁 & 트릭', insights: '인사이트', 'case-study': '케이스 스터디',
+  };
+  const CATEGORY_COLORS: Record<string, string> = {
+    guide: 'bg-blue-500/10 text-blue-700 border-blue-200',
+    tips: 'bg-orange-500/10 text-orange-700 border-orange-200',
+    insights: 'bg-purple-500/10 text-purple-700 border-purple-200',
+    'case-study': 'bg-green-500/10 text-green-700 border-green-200',
+  };
+
+  const recentPosts = getAllBlogPosts().slice(0, 3);
+
+  return (
+    <section className="mt-20 mb-8">
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center gap-3">
+          <BookOpen className="h-6 w-6 text-primary" />
+          <h2 className="text-2xl md:text-3xl font-bold">최신 마케팅 가이드</h2>
+        </div>
+        <Link
+          to="/blog"
+          className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1"
+        >
+          전체 보기 <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {recentPosts.map(post => (
+          <Link key={post.slug} to={`/blog/${post.slug}`} className="group">
+            <Card className="h-full hover:shadow-lg hover:border-primary/40 transition-all">
+              <CardHeader className="pb-3">
+                <Badge
+                  variant="outline"
+                  className={`w-fit text-xs mb-2 ${CATEGORY_COLORS[post.category] ?? ''}`}
+                >
+                  {CATEGORY_LABELS_BLOG[post.category]}
+                </Badge>
+                <CardTitle className="text-base leading-snug group-hover:text-primary transition-colors line-clamp-2">
+                  {post.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+                  {post.description}
+                </p>
+                <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                  <div className="flex items-center gap-1">
+                    <Clock className="h-3 w-3" />
+                    <span>{post.readTime}</span>
+                  </div>
+                  <span>·</span>
+                  <span>{post.author}</span>
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }
