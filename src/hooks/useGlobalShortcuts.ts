@@ -57,6 +57,11 @@ export function useGlobalShortcuts() {
           if (analyzeTools.length > 0) {
             navigate(analyzeTools[0].path);
           }
+        } else if (e.key === 's') {
+          const publishTools = getToolsByCategory('publish');
+          if (publishTools.length > 0) {
+            navigate(publishTools[0].path);
+          }
         }
         setGPressed(false);
       }

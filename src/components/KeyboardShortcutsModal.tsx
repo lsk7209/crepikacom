@@ -49,6 +49,13 @@ export function KeyboardShortcutsModal({ open, onOpenChange }: KeyboardShortcuts
               <kbd className="px-2 py-1 text-xs font-semibold bg-muted rounded">a</kbd>
             </div>
           </div>
+          <div className="flex items-center justify-between py-2 border-b">
+            <span className="text-sm text-muted-foreground">SNS 도구로 이동</span>
+            <div className="flex gap-1">
+              <kbd className="px-2 py-1 text-xs font-semibold bg-muted rounded">g</kbd>
+              <kbd className="px-2 py-1 text-xs font-semibold bg-muted rounded">s</kbd>
+            </div>
+          </div>
           <div className="flex items-center justify-between py-2">
             <span className="text-sm text-muted-foreground">도움말 토글</span>
             <kbd className="px-2 py-1 text-xs font-semibold bg-muted rounded">

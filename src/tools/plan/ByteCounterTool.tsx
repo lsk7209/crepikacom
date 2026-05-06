@@ -85,7 +85,7 @@ export function ByteCounterTool({ onResult, onError }: ByteCounterToolProps) {
         </div>
         <Alert>
           <AlertDescription className="text-xs">
-            네이버 기준: 한글 3바이트, 영문/숫자 1바이트로 계산됩니다.
+            UTF-8 인코딩 기준: 한글 1자 = 3바이트, 영문/숫자 = 1바이트. 네이버 메타설명·카카오 등 서버 측 바이트 제한 확인에 적합합니다.
           </AlertDescription>
         </Alert>
       </div>
