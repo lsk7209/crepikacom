@@ -70,7 +70,8 @@ export const TOOL_DETAILED_CONTENT: Record<string, ToolDetailedContent> = {
         ],
         relatedResources: [
             { title: '인스타 줄바꿈 포매터', path: '/tools/insta-spacer' },
-            { title: '네이버 SEO 가이드', path: '/blog/naver-blog-seo-guide' }
+            { title: '네이버 SEO 가이드', path: '/blog/naver-blog-seo-guide' },
+            { title: '플랫폼별 글자수 완벽 가이드', path: '/blog/platform-text-length-guide' }
         ]
     },
     'webp-converter': {
@@ -235,7 +236,8 @@ export const TOOL_DETAILED_CONTENT: Record<string, ToolDetailedContent> = {
         ],
         relatedResources: [
             { title: "텍스트 카운터", path: "/tools/text-counter" },
-            { title: "한글 바이트 카운터", path: "/tools/byte-counter" }
+            { title: "한글 바이트 카운터", path: "/tools/byte-counter" },
+            { title: "콘텐츠 가독성의 비밀", path: "/blog/content-readability-secrets" }
         ]
     },
     "byte-counter": {
@@ -290,6 +292,7 @@ export const TOOL_DETAILED_CONTENT: Record<string, ToolDetailedContent> = {
         ],
         relatedResources: [
             { title: "네이버 블로그 SEO 가이드", path: "/blog/naver-blog-seo-guide" },
+            { title: "메타 데이터 바이트 최적화 전략", path: "/blog/meta-data-byte-optimization" },
             { title: "텍스트 카운터", path: "/tools/text-counter" }
         ]
     },
@@ -345,6 +348,7 @@ export const TOOL_DETAILED_CONTENT: Record<string, ToolDetailedContent> = {
         ],
         relatedResources: [
             { title: "인스타그램 마케팅 완벽 가이드", path: "/blog/instagram-marketing-complete-guide" },
+            { title: "소셜미디어 텍스트 최적화 가이드", path: "/blog/social-media-text-optimization" },
             { title: "해시태그 믹서", path: "/tools/hashtag-mixer" }
         ]
     },
@@ -400,6 +404,7 @@ export const TOOL_DETAILED_CONTENT: Record<string, ToolDetailedContent> = {
         ],
         relatedResources: [
             { title: "인스타그램 마케팅 전략 블로그", path: "/blog/instagram-marketing-complete-guide" },
+            { title: "소셜미디어 텍스트 최적화 가이드", path: "/blog/social-media-text-optimization" },
             { title: "인스타 줄바꿈 포매터", path: "/tools/insta-spacer" }
         ]
     }
