@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { TOOLS_CONFIG, CATEGORY_LABELS, Category, searchTools, getToolById } from "@/data/tools-config";
+import { CATEGORY_LABELS, Category, searchTools, getToolById } from "@/data/tools-config";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";

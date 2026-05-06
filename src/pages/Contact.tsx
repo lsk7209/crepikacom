@@ -13,8 +13,18 @@ export default function Contact() {
         />
         <meta name="keywords" content="문의하기, 고객지원, 피드백, 크레피카 연락처, 광고 문의" />
         <link rel="canonical" href="https://crepika.com/contact" />
+        <meta property="og:title" content="문의하기 | 크레피카" />
+        <meta property="og:description" content="크레피카에 문의하기. 서비스 이용 중 불편한 점이나 제안 사항이 있으신가요? 24시간 이내에 답변해 드리겠습니다." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://crepika.com/contact" />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:site_name" content="크레피카" />
+        <meta property="og:image" content="https://crepika.com/og-image.svg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="문의하기 | 크레피카" />
+        <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ContactPage",
