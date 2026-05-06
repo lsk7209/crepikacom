@@ -8,6 +8,13 @@ interface AppShellProps {
 export function AppShell({ children }: AppShellProps) {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      {/* Skip to main content — accessibility + AdSense */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg focus:shadow-lg"
+      >
+        메인 콘텐츠로 이동
+      </a>
       {/* Header */}
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 md:h-16 items-center justify-between px-4 mx-auto max-w-7xl">
@@ -27,7 +34,7 @@ export function AppShell({ children }: AppShellProps) {
           </div>
 
           {/* Right: Navigation */}
-          <nav className="flex items-center gap-1">
+          <nav className="flex items-center gap-1" aria-label="주요 메뉴">
             <Link
               to="/"
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-accent/10"
@@ -50,7 +57,7 @@ export function AppShell({ children }: AppShellProps) {
         </div>
       </header>
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {children}
       </main>
 
