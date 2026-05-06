@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { ToolLayout } from "@/components/layout/ToolLayout";
 import { getToolById } from "@/data/tools-config";
 import { TextCounterTool } from "@/tools/text/TextCounterTool";
@@ -18,6 +19,16 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { CheckCircle2, Lightbulb, HelpCircle, Link as LinkIcon, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const TOOL_INTRO_HEADING: Record<string, string> = {
+  'text-counter': '텍스트 카운터가 필요한 이유',
+  'webp-converter': 'WebP 변환기의 핵심 역할',
+  'qr-generator': 'QR 코드 생성기의 효과',
+  'lorem-generator': '로렘 생성기가 디자인 작업에 필수인 이유',
+  'byte-counter': '한글 바이트 카운터가 SEO에 중요한 이유',
+  'insta-spacer': '인스타 줄바꿈 포매터의 역할',
+  'hashtag-mixer': '해시태그 믹서로 알고리즘 페널티 방지하기',
+};
+
 // Dynamic detailed article component for better SEO/AEO/GEO
 const DetailedToolArticle = ({ content }: { content: ToolDetailedContent }) => (
   <div className="space-y-12 mt-8 border-t pt-12">
@@ -25,9 +36,7 @@ const DetailedToolArticle = ({ content }: { content: ToolDetailedContent }) => (
     <section>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-2">
         <CheckCircle2 className="text-primary h-8 w-8" />
-        {content.id === 'text-counter' ? '텍스트 카운터가 필요한 이유' :
-          content.id === 'webp-converter' ? 'WebP 변환기의 핵심 역할' :
-            'QR 코드 생성기의 효과'}
+        {TOOL_INTRO_HEADING[content.id] ?? '도구 소개'}
       </h2>
       <div className="text-lg text-muted-foreground leading-relaxed whitespace-pre-wrap">
         {content.introduction}
@@ -223,7 +232,23 @@ export default function ToolPage() {
     </div>
   );
 
+  const faqSchema = detailedContent?.faq?.length ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": detailedContent.faq.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+    }))
+  } : null;
+
   return (
+    <>
+    {faqSchema && (
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
+    )}
     <ToolLayout
       config={config}
       inputSlot={toolComponent.inputSlot}
@@ -233,5 +258,6 @@ export default function ToolPage() {
       isProcessing={isProcessing}
       errorMessage={errorMessage || undefined}
     />
+    </>
   );
 }
