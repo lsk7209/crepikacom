@@ -1,0 +1,55 @@
+name: Auto Publish Blog Post
+
+on:
+  schedule:
+    # 5시간 간격 (UTC 0, 5, 10, 15, 20시)
+    - cron: '0 0,5,10,15,20 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check remaining posts
+        id: check
+        run: |
+          REMAINING=$(node -e "const q=require('./scripts/post-queue.json'); console.log(q.filter(e=>!e.published).length)")
+          echo "remaining=$REMAINING" >> $GITHUB_OUTPUT
+          echo "📊 남은 발행 대기 포스트: $REMAINING 개"
+
+      - name: Publish next post
+        if: steps.check.outputs.remaining != '0'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/publish-next.mjs
+
+      - name: Commit and push
+        if: steps.check.outputs.remaining != '0'
+        run: |
+          git config user.email "auto-publisher@crepika.com"
+          git config user.name "크레피카 자동 발행"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "변경사항 없음 — 건너뜀"
+          else
+            TITLE=$(cat .last-published-title 2>/dev/null || echo "새 포스트")
+            git commit -m "Auto-publish: ${TITLE}"
+            git push
+            echo "✅ 푸시 완료: ${TITLE}"
+          fi
+
+      - name: No posts remaining
+        if: steps.check.outputs.remaining == '0'
+        run: echo "✅ 모든 200개 포스트 발행 완료!"

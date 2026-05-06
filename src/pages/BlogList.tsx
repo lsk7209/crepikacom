@@ -13,6 +13,13 @@ const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
     'case-study': '케이스 스터디'
 };
 
+const CATEGORY_THUMBNAILS: Record<BlogPost['category'], string> = {
+    'guide': '/images/og-guide.svg',
+    'tips': '/images/og-tips.svg',
+    'insights': '/images/og-insights.svg',
+    'case-study': '/images/og-case-study.svg',
+};
+
 export default function BlogList() {
     const allPosts = getAllBlogPosts();
     const [selectedCategory, setSelectedCategory] = useState<BlogPost['category'] | 'all'>('all');
@@ -104,7 +111,15 @@ export default function BlogList() {
                             to={`/blog/${post.slug}`}
                             className="group"
                         >
-                            <Card className="h-full transition-all hover:shadow-lg hover:scale-105 hover:border-primary/50">
+                            <Card className="h-full transition-all hover:shadow-lg hover:scale-105 hover:border-primary/50 overflow-hidden">
+                                <div className="w-full h-36 overflow-hidden">
+                                    <img
+                                        src={CATEGORY_THUMBNAILS[post.category]}
+                                        alt={CATEGORY_LABELS[post.category]}
+                                        className="w-full h-full object-cover"
+                                        loading="lazy"
+                                    />
+                                </div>
                                 <CardHeader>
                                     <div className="flex items-center justify-between mb-3">
                                         <Badge variant="outline">

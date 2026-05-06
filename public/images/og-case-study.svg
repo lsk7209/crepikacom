@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.12" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.04" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="930" cy="100" r="260" fill="#16a34a" opacity="0.4"/>
+  <circle cx="160" cy="530" r="220" fill="#14532d" opacity="0.3"/>
+  <rect x="80" y="80" width="1040" height="470" rx="24" fill="url(#card)" />
+  <rect x="80" y="80" width="1040" height="470" rx="24" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.5"/>
+  <rect x="120" y="130" width="150" height="44" rx="22" fill="#ffffff" opacity="0.2"/>
+  <text x="195" y="158" font-family="'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">케이스 스터디</text>
+  <text x="600" y="310" font-family="'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif" font-size="56" font-weight="800" fill="#ffffff" text-anchor="middle" opacity="0.95">크레피카 사례연구</text>
+  <text x="600" y="390" font-family="'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif" font-size="28" fill="#bbf7d0" text-anchor="middle">실제 수치로 증명하는 성공 케이스</text>
+  <text x="600" y="490" font-family="'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif" font-size="22" fill="#86efac" text-anchor="middle" font-weight="600">crepika.com</text>
+</svg>

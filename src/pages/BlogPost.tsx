@@ -14,6 +14,13 @@ import { MarkdownContent } from "@/lib/markdown";
 const SITE_URL = "https://crepika.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.svg`;
 
+const CATEGORY_OG_IMAGES: Record<string, string> = {
+  guide: `${SITE_URL}/images/og-guide.svg`,
+  tips: `${SITE_URL}/images/og-tips.svg`,
+  insights: `${SITE_URL}/images/og-insights.svg`,
+  'case-study': `${SITE_URL}/images/og-case-study.svg`,
+};
+
 const AUTHOR_BIOS: Record<string, string> = {
   '이지수': '수백 명의 크리에이터·브랜드 SNS 성장을 컨설팅한 소셜 미디어 스페셜리스트. 인스타그램·유튜브·X 알고리즘 분석을 기반으로 실전에서 바로 쓰는 콘텐츠 전략을 공유합니다.',
   '김민혁': '10년차 디지털 마케터이자 SEO 전략가. 데이터 기반 콘텐츠 최적화 전문가로 활동하며, 구글·네이버 양대 검색 생태계에서 크리에이터들이 더 빛날 수 있도록 돕고 있습니다.',
@@ -31,7 +38,7 @@ export default function BlogPost() {
     const relatedTools = post.relatedTools.map(id => getToolById(id)).filter(Boolean);
 
     const canonicalUrl = `${SITE_URL}/blog/${post.slug}`;
-    const ogImage = DEFAULT_OG_IMAGE;
+    const ogImage = CATEGORY_OG_IMAGES[post.category] || DEFAULT_OG_IMAGE;
     const dateModified = post.dateModified || post.publishDate;
 
     const articleSchema = {
