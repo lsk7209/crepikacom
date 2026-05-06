@@ -123,6 +123,7 @@ export default function Home() {
         <meta name="twitter:title" content="크레피카 | 로그인 없이 3초 만에 끝나는 크리에이터 도구" />
         <meta name="twitter:description" content="국내 크리에이터를 위한 초간편 작업 도구함. 글자수, 바이트, 이미지, QR 작업을 3초 안에 끝내세요." />
         <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
+        <meta name="twitter:image:alt" content="크레피카 — 크리에이터 필수 도구함" />
         <link rel="alternate" type="application/rss+xml" title="크레피카 블로그" href="https://crepika.com/rss.xml" />
         <meta property="og:image" content="https://crepika.com/og-image.svg" />
         <meta property="og:image:width" content="1200" />

@@ -83,6 +83,7 @@ export function ToolLayout({
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content={`${config.titleKo} — 크레피카 무료 도구`} />
         {schemaData && (
           <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
         )}
