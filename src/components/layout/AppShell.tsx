@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Sparkles, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
+import { TOOLS_CONFIG } from "@/data/tools-config";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -90,41 +91,13 @@ export function AppShell({ children }: AppShellProps) {
             <div>
               <h3 className="font-semibold mb-4">도구</h3>
               <ul className="space-y-2 text-sm">
-                <li>
-                  <Link to="/tools/text-counter" className="text-muted-foreground hover:text-primary transition-colors">
-                    글자수 세기
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/tools/byte-counter" className="text-muted-foreground hover:text-primary transition-colors">
-                    바이트 카운터
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/tools/webp-converter" className="text-muted-foreground hover:text-primary transition-colors">
-                    WebP 변환기
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/tools/insta-spacer" className="text-muted-foreground hover:text-primary transition-colors">
-                    인스타 줄바꿈
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/tools/hashtag-mixer" className="text-muted-foreground hover:text-primary transition-colors">
-                    해시태그 믹서
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/tools/qr-generator" className="text-muted-foreground hover:text-primary transition-colors">
-                    QR 코드 생성기
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/tools/lorem-generator" className="text-muted-foreground hover:text-primary transition-colors">
-                    로렘 입숨 생성기
-                  </Link>
-                </li>
+                {TOOLS_CONFIG.map(tool => (
+                  <li key={tool.id}>
+                    <Link to={tool.path} className="text-muted-foreground hover:text-primary transition-colors">
+                      {tool.titleKo}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
