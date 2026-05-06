@@ -8,15 +8,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Search, Star, BookOpen, Clock } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { getRecentTools, getFavoriteTools, toggleFavoriteTool, isFavoriteTool } from "@/utils/localStorage";
-import { KeyboardShortcutsModal } from "@/components/KeyboardShortcutsModal";
-import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
 import { getAllBlogPosts } from "@/data/blog-content";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [favorites, setFavorites] = useState<string[]>([]);
-  const [recentTools, setRecentTools] = useState<string[]>([]);
-  const { showHelp, setShowHelp } = useGlobalShortcuts();
+  const [recentTools, setRecentTools] = useState<string[]>([])
 
   useEffect(() => {
     setFavorites(getFavoriteTools());
@@ -159,8 +156,6 @@ export default function Home() {
           ]
         })}</script>
       </Helmet>
-
-      <KeyboardShortcutsModal open={showHelp} onOpenChange={setShowHelp} />
 
       <div className="container px-4 py-12 mx-auto max-w-7xl">
         {/* Hero Section */}
