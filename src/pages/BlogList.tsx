@@ -1,9 +1,10 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Clock, Calendar, ArrowRight, Tag, User } from "lucide-react";
+import { Clock, Calendar, ArrowRight, Tag, User, Search } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getAllBlogPosts, BlogPost } from "@/data/blog-content";
+import { Input } from "@/components/ui/input";
 import { useMemo } from "react";
 
 const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
@@ -33,6 +34,8 @@ export default function BlogList() {
         (VALID_CATEGORIES as readonly string[]).includes(rawCat)
             ? (rawCat as BlogPost['category'])
             : 'all';
+
+    const searchQuery = searchParams.get('q') ?? '';
 
     const rawPage = parseInt(searchParams.get('page') ?? '1', 10);
     const currentPage = isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
@@ -70,22 +73,46 @@ export default function BlogList() {
         }
     }), [allPosts]);
 
-    const filteredPosts = selectedCategory === 'all'
-        ? allPosts
-        : allPosts.filter(post => post.category === selectedCategory);
+    const filteredPosts = useMemo(() => {
+        let posts = selectedCategory === 'all' ? allPosts : allPosts.filter(p => p.category === selectedCategory);
+        if (searchQuery.trim()) {
+            const q = searchQuery.toLowerCase();
+            posts = posts.filter(p =>
+                p.title.toLowerCase().includes(q) ||
+                p.description.toLowerCase().includes(q) ||
+                p.keywords.some(k => k.toLowerCase().includes(q))
+            );
+        }
+        return posts;
+    }, [allPosts, selectedCategory, searchQuery]);
 
     const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
     const paginatedPosts = filteredPosts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
 
+    const buildParams = (overrides: Record<string, string>) => {
+        const base: Record<string, string> = {};
+        if (selectedCategory !== 'all') base.category = selectedCategory;
+        if (searchQuery) base.q = searchQuery;
+        return { ...base, ...overrides };
+    };
+
     const handleCategoryChange = (cat: BlogPost['category'] | 'all') => {
         const params: Record<string, string> = {};
         if (cat !== 'all') params.category = cat;
+        if (searchQuery) params.q = searchQuery;
+        setSearchParams(params, { replace: true });
+    };
+
+    const handleSearchChange = (value: string) => {
+        const params: Record<string, string> = {};
+        if (selectedCategory !== 'all') params.category = selectedCategory;
+        if (value) params.q = value;
         setSearchParams(params, { replace: true });
     };
 
     const handlePageChange = (page: number) => {
-        const params: Record<string, string> = {};
-        if (selectedCategory !== 'all') params.category = selectedCategory;
+        const params = buildParams(page > 1 ? { page: String(page) } : {});
+        delete params.page;
         if (page > 1) params.page = String(page);
         setSearchParams(params, { replace: true });
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -124,6 +151,21 @@ export default function BlogList() {
                         인스타그램, 네이버, 유튜브 등 다양한 플랫폼에서 성공하기 위한
                         실전 마케팅 전략과 팁을 공유합니다.
                     </p>
+                </div>
+
+                {/* Search Bar */}
+                <div className="max-w-lg mx-auto mb-6">
+                    <div className="relative">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                        <Input
+                            type="text"
+                            placeholder="제목, 키워드로 검색..."
+                            value={searchQuery}
+                            onChange={(e) => handleSearchChange(e.target.value)}
+                            className="pl-10 h-11"
+                            aria-label="블로그 검색"
+                        />
+                    </div>
                 </div>
 
                 {/* Category Filter */}
@@ -212,7 +254,7 @@ export default function BlogList() {
                 {filteredPosts.length === 0 && (
                     <div className="text-center py-16">
                         <p className="text-lg text-muted-foreground">
-                            해당 카테고리의 글이 아직 없습니다.
+                            {searchQuery ? `"${searchQuery}"에 해당하는 글이 없습니다.` : '해당 카테고리의 글이 아직 없습니다.'}
                         </p>
                     </div>
                 )}
