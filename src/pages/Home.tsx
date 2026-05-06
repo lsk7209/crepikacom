@@ -140,7 +140,7 @@ export default function Home() {
             크리에이터 필수 도구함
           </h1>
           <p className="text-lg text-muted-foreground/80 italic">
-            No Login. 3-Second Tools.
+            로그인 없이 · 3초 만에 완성
           </p>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8">
             국내 크리에이터를 위한 초간편 작업 도구함입니다.<br />

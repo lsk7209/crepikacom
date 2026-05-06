@@ -10,21 +10,21 @@ export default function About() {
       role: "SEO & 콘텐츠 전략가",
       bio: "10년차 디지털 마케터로, 데이터 기반의 SEO 전략과 콘텐츠 최적화 전문가입니다. 크리에이터들이 검색 결과에서 더 빛날 수 있도록 돕고 있습니다.",
       initials: "MH",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+      image: "/images/avatar-kimminhy.svg"
     },
     {
       name: "이지수",
       role: "소셜 미디어 스페셜리스트",
       bio: "인스타그램 및 틱톡 트렌드 분석가로, 수백 명의 크리에이터와 브랜드의 SNS 성장을 컨설팅했습니다. 실전에서 바로 쓰는 도구 기획을 담당합니다.",
       initials: "JS",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+      image: "/images/avatar-leejisu.svg"
     },
     {
       name: "박준영",
       role: "수석 개발자",
       bio: "사용자의 데이터 보안과 도구의 성능을 책임집니다. 크레피카의 모든 도구가 브라우저 내에서 안전하고 빠르게 작동하도록 아키텍처를 설계했습니다.",
       initials: "JY",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+      image: "/images/avatar-parkjy.svg"
     }
   ];
 

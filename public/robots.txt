@@ -4,10 +4,22 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: Yeti
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
+User-agent: Daumoa
+Allow: /
+
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
 Allow: /
 
 User-agent: *

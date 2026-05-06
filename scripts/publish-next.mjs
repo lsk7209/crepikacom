@@ -309,8 +309,34 @@ async function main() {
   console.log(`✅ post-queue.json 마킹 완료`);
 
   writeFileSync(TITLE_FILE, post.title, 'utf-8');
+
+  await pingSearchEngines(post.slug);
+
   console.log(`\n🎉 발행 완료: ${post.title}`);
   console.log(`🔗 URL: ${SITE_URL}/blog/${post.slug}`);
+}
+
+async function pingSearchEngines(slug) {
+  const url = `${SITE_URL}/blog/${slug}`;
+  const INDEXNOW_KEY = 'crepika2026indexnow';
+
+  const pings = [
+    // IndexNow (Bing, Yandex, Seznam 등 동시)
+    fetch(`https://api.indexnow.org/indexnow?url=${encodeURIComponent(url)}&key=${INDEXNOW_KEY}`)
+      .then(r => console.log(`📡 IndexNow 핑: ${r.status}`))
+      .catch(() => {}),
+    // Bing 사이트맵 핑
+    fetch(`https://www.bing.com/ping?sitemap=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`)
+      .then(r => console.log(`📡 Bing 핑: ${r.status}`))
+      .catch(() => {}),
+    // 네이버 사이트맵 핑
+    fetch(`https://searchadvisor.naver.com/site/submit?url=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`)
+      .then(r => console.log(`📡 Naver 핑: ${r.status}`))
+      .catch(() => {}),
+  ];
+
+  await Promise.allSettled(pings);
+  console.log(`✅ 검색엔진 핑 완료`);
 }
 
 main().catch(e => {
