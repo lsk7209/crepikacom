@@ -49,6 +49,14 @@ export default function Contact() {
             { "@type": "Question", "name": "기업용 대량 처리가 가능한가요?", "acceptedAnswer": { "@type": "Answer", "text": "현재 모든 도구는 웹 기반 무료 서비스로 제공됩니다. API 연동이나 대량 처리를 위한 엔터프라이즈 솔루션이 필요하신 경우 별도로 support@crepika.com으로 문의 부탁드립니다." }}
           ]
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://crepika.com" },
+            { "@type": "ListItem", "position": 2, "name": "문의하기", "item": "https://crepika.com/contact" }
+          ]
+        })}</script>
       </Helmet>
 
       <div className="container px-4 py-12 mx-auto max-w-4xl">

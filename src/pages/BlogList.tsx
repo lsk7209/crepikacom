@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Clock, Calendar, ArrowRight, Tag, User } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getAllBlogPosts, BlogPost } from "@/data/blog-content";
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 
 const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
     'guide': '가이드',
@@ -22,10 +22,20 @@ const CATEGORY_THUMBNAILS: Record<BlogPost['category'], string> = {
 
 const POSTS_PER_PAGE = 12;
 
+const VALID_CATEGORIES = ['guide', 'tips', 'insights', 'case-study'] as const;
+
 export default function BlogList() {
     const allPosts = getAllBlogPosts();
-    const [selectedCategory, setSelectedCategory] = useState<BlogPost['category'] | 'all'>('all');
-    const [currentPage, setCurrentPage] = useState(1);
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const rawCat = searchParams.get('category') ?? 'all';
+    const selectedCategory: BlogPost['category'] | 'all' =
+        (VALID_CATEGORIES as readonly string[]).includes(rawCat)
+            ? (rawCat as BlogPost['category'])
+            : 'all';
+
+    const rawPage = parseInt(searchParams.get('page') ?? '1', 10);
+    const currentPage = isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -68,8 +78,17 @@ export default function BlogList() {
     const paginatedPosts = filteredPosts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
 
     const handleCategoryChange = (cat: BlogPost['category'] | 'all') => {
-        setSelectedCategory(cat);
-        setCurrentPage(1);
+        const params: Record<string, string> = {};
+        if (cat !== 'all') params.category = cat;
+        setSearchParams(params, { replace: true });
+    };
+
+    const handlePageChange = (page: number) => {
+        const params: Record<string, string> = {};
+        if (selectedCategory !== 'all') params.category = selectedCategory;
+        if (page > 1) params.page = String(page);
+        setSearchParams(params, { replace: true });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
@@ -202,7 +221,7 @@ export default function BlogList() {
                 {totalPages > 1 && (
                     <div className="flex items-center justify-center gap-2 mt-10">
                         <button
-                            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                            onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
                             disabled={currentPage === 1}
                             className="px-4 py-2 rounded-lg border text-sm font-medium disabled:opacity-40 hover:bg-muted transition-colors"
                         >
@@ -221,7 +240,7 @@ export default function BlogList() {
                                 ) : (
                                     <button
                                         key={p}
-                                        onClick={() => setCurrentPage(p as number)}
+                                        onClick={() => handlePageChange(p as number)}
                                         className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${currentPage === p ? 'bg-primary text-primary-foreground border-primary' : 'hover:bg-muted'}`}
                                     >
                                         {p}
@@ -230,7 +249,7 @@ export default function BlogList() {
                             )
                         }
                         <button
-                            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                            onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
                             disabled={currentPage === totalPages}
                             className="px-4 py-2 rounded-lg border text-sm font-medium disabled:opacity-40 hover:bg-muted transition-colors"
                         >

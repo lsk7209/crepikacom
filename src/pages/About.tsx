@@ -76,7 +76,8 @@ export default function About() {
                 "jobTitle": "SEO & 콘텐츠 전략가",
                 "description": "10년차 디지털 마케터이자 SEO 전략가. 데이터 기반 콘텐츠 최적화 전문가로 구글·네이버 양대 검색 생태계에서 크리에이터 성장을 지원합니다.",
                 "image": "https://crepika.com/images/avatar-kimminhy.svg",
-                "worksFor": { "@id": "https://crepika.com/#organization" }
+                "worksFor": { "@id": "https://crepika.com/#organization" },
+                "knowsAbout": ["SEO", "콘텐츠 마케팅", "네이버 블로그 최적화", "구글 검색 최적화", "AEO", "GEO", "디지털 마케팅", "키워드 전략"]
               },
               {
                 "@type": "Person",
@@ -85,7 +86,8 @@ export default function About() {
                 "jobTitle": "소셜 미디어 스페셜리스트",
                 "description": "수백 명의 크리에이터·브랜드 SNS 성장을 컨설팅한 소셜 미디어 전문가. 인스타그램·유튜브 알고리즘 기반 실전 전략을 공유합니다.",
                 "image": "https://crepika.com/images/avatar-leejisu.svg",
-                "worksFor": { "@id": "https://crepika.com/#organization" }
+                "worksFor": { "@id": "https://crepika.com/#organization" },
+                "knowsAbout": ["인스타그램 마케팅", "소셜 미디어 전략", "SNS 알고리즘", "해시태그 전략", "콘텐츠 크리에이터", "릴스 최적화", "틱톡 마케팅"]
               },
               {
                 "@type": "Person",
@@ -94,10 +96,19 @@ export default function About() {
                 "jobTitle": "수석 개발자",
                 "description": "크레피카 수석 개발자. 사용자 데이터 보안과 도구 성능을 책임지며 브라우저 내 안전한 처리 아키텍처를 설계합니다.",
                 "image": "https://crepika.com/images/avatar-parkjy.svg",
-                "worksFor": { "@id": "https://crepika.com/#organization" }
+                "worksFor": { "@id": "https://crepika.com/#organization" },
+                "knowsAbout": ["웹 개발", "React", "TypeScript", "WebP 최적화", "프론트엔드 성능", "브라우저 보안", "QR 코드"]
               }
             ]
           }
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://crepika.com" },
+            { "@type": "ListItem", "position": 2, "name": "서비스 소개", "item": "https://crepika.com/about" }
+          ]
         })}</script>
       </Helmet>
 
