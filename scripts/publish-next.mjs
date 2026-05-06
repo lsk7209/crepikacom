@@ -26,19 +26,15 @@ if (!ANTHROPIC_API_KEY) {
 const SITE_URL = 'https://crepika.com';
 const MODEL = 'claude-sonnet-4-6';
 
-const EXISTING_SLUGS = [
-  'instagram-marketing-complete-guide',
-  'naver-blog-seo-guide',
-  'qr-marketing-strategy-guide',
-  'webp-seo-image-optimization',
-  'aeo-search-future-guide',
-  'geo-optimization-strategy',
-  'ai-tools-for-creators',
-  'platform-text-length-guide',
-  'content-readability-secrets',
-  'meta-data-byte-optimization',
-  'social-media-text-optimization',
-];
+// 이미 발행된 슬러그 목록 — blog-content.ts에서 동적으로 추출
+function getExistingSlugs() {
+  const content = readFileSync(BLOG_CONTENT_FILE, 'utf-8');
+  const slugs = [];
+  const re = /slug:\s*['"]([^'"]+)['"]/g;
+  let m;
+  while ((m = re.exec(content)) !== null) slugs.push(m[1]);
+  return slugs;
+}
 
 const TOOL_SLUGS = [
   'text-counter',
@@ -132,7 +128,7 @@ function buildSystemPrompt() {
 function buildUserPrompt(entry) {
   const today = getTodayDate();
   const relatedTools = getRelatedToolsForCategory(entry.category);
-  const existingSlugs = EXISTING_SLUGS.slice(0, 5).join(', ');
+  const allSlugs = getExistingSlugs();
 
   return `다음 주제로 고품질 블로그 포스트를 작성하세요.
 
@@ -153,7 +149,7 @@ function buildUserPrompt(entry) {
 - 각 section content 300자 이상
 - conclusion 150자 이상
 - relatedTools: ${JSON.stringify(relatedTools)}
-- relatedPosts: ${JSON.stringify(EXISTING_SLUGS.slice(0, 3))}
+- relatedPosts: ${JSON.stringify(allSlugs.slice(-3))}
 - 본문에서 크레피카 도구 자연 연결 1~2회
 
 다음 JSON 구조로만 응답하세요 (코드 펜스 없이 순수 JSON):
@@ -181,7 +177,7 @@ function buildUserPrompt(entry) {
     "conclusion": "결론 텍스트"
   },
   "relatedTools": ${JSON.stringify(relatedTools)},
-  "relatedPosts": ${JSON.stringify(EXISTING_SLUGS.slice(0, 3))},
+  "relatedPosts": ${JSON.stringify(allSlugs.slice(-3))},
   "faq": [
     { "question": "질문?", "answer": "답변" }
   ]

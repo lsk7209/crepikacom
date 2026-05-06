@@ -106,6 +106,7 @@ export default function Home() {
         <meta name="keywords" content="크리에이터 도구, 무료 온라인 도구, 글자수 세기, qr 생성기, webp 변환, 해시태그 믹서, 인스타그램 도구, 네이버 seo" />
         <link rel="canonical" href="https://crepika.com/" />
         <meta property="og:url" content="https://crepika.com/" />
+        <meta property="og:locale" content="ko_KR" />
         <link rel="alternate" type="application/rss+xml" title="크레피카 블로그" href="https://crepika.com/rss.xml" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",

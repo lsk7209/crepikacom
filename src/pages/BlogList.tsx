@@ -66,6 +66,7 @@ export default function BlogList() {
                 <meta property="og:description" content="인스타그램 마케팅, 네이버 SEO, 소셜미디어 전략 등 크리에이터를 위한 실전 가이드와 팁" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://crepika.com/blog" />
+                <meta property="og:locale" content="ko_KR" />
                 <meta property="og:image" content="https://crepika.com/og-image.svg" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:image" content="https://crepika.com/og-image.svg" />
