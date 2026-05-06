@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import { Mail, MessageSquare, Globe, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
@@ -163,10 +164,10 @@ export default function Contact() {
 
         <div className="text-center">
           <p className="text-muted-foreground mb-4">다른 궁금한 점이 있으신가요?</p>
-          <a href="/about" className="text-primary font-bold hover:underline inline-flex items-center gap-1">
+          <Link to="/about" className="text-primary font-bold hover:underline inline-flex items-center gap-1">
             크레피카 팀 소개 더 알아보기
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </>
