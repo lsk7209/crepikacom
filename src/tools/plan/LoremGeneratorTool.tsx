@@ -5,6 +5,7 @@ import { Copy, Check } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { trackToolUse, trackCopyResult } from "@/utils/analytics";
 
 interface LoremGeneratorToolProps {
   onResult: (result: React.ReactNode) => void;
@@ -59,6 +60,7 @@ export function LoremGeneratorTool({ onResult, onError }: LoremGeneratorToolProp
   const [copied, setCopied] = useState(false);
 
   const handleGenerate = () => {
+    trackToolUse('lorem-generator');
     const corpus = language === 'English' ? LOREM_EN : LOREM_KR;
     const paragraphCount = LENGTH_MAP[length];
 
@@ -132,6 +134,7 @@ export function LoremGeneratorTool({ onResult, onError }: LoremGeneratorToolProp
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(generatedText);
+      trackCopyResult('lorem-generator');
       setCopied(true);
       toast({
         title: '복사 완료',

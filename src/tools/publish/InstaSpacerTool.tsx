@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { trackToolUse, trackCopyResult } from "@/utils/analytics";
 
 interface InstaSpacerToolProps {
   onResult: (result: React.ReactNode) => void;
@@ -27,6 +28,7 @@ export function InstaSpacerTool({ onResult, onError }: InstaSpacerToolProps) {
       return;
     }
 
+    trackToolUse('insta-spacer');
     // Format text for Instagram
     // Replace multiple spaces/tabs with single space
     let formatted = text.replace(/[ \t]+/g, ' ');
@@ -85,6 +87,7 @@ export function InstaSpacerTool({ onResult, onError }: InstaSpacerToolProps) {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(formattedText);
+      trackCopyResult('insta-spacer');
       setCopied(true);
       toast({
         title: '복사 완료',

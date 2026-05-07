@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import { Upload, Download, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { trackToolUse, trackCopyResult, trackDownload } from "@/utils/analytics";
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 const MAX_DIMENSION = 4000;
@@ -65,6 +66,7 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
       return;
     }
 
+    trackToolUse('webp-converter');
     onProcessing(true);
     onError(null);
 
@@ -200,6 +202,7 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
     link.download = `converted-${Date.now()}.webp`;
     document.body.appendChild(link);
     link.click();
+    trackDownload('webp-converter', 'webp');
     document.body.removeChild(link);
     toast({
       title: '다운로드 완료',

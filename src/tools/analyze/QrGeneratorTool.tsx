@@ -6,6 +6,7 @@ import { toast } from "@/hooks/use-toast";
 import { Download, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import QRCode from "qrcode";
+import { trackToolUse, trackCopyResult, trackDownload } from "@/utils/analytics";
 
 const MAX_URL_LENGTH = 2048;
 
@@ -52,6 +53,7 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
       });
     }
 
+    trackToolUse('qr-generator');
     const normalizedUrl = normalizeUrl(url);
 
     try {
@@ -119,6 +121,7 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
     link.download = `qr-code-${Date.now()}.png`;
     document.body.appendChild(link);
     link.click();
+    trackDownload('qr-generator', 'png');
     document.body.removeChild(link);
     toast({
       title: '다운로드 완료',

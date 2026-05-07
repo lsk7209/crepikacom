@@ -3,6 +3,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Calculator } from 'lucide-react';
+import { trackToolUse } from "@/utils/analytics";
 
 interface ByteCounterToolProps {
   onResult: (result: React.ReactNode) => void;
@@ -35,6 +36,7 @@ export function ByteCounterTool({ onResult, onError }: ByteCounterToolProps) {
       onError('텍스트를 입력하세요.');
       return;
     }
+    trackToolUse('byte-counter');
     calculateAndDisplay(text);
   };
 

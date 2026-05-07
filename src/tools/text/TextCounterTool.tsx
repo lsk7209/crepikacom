@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertCircle } from "lucide-react";
+import { trackToolUse } from "@/utils/analytics";
 
 interface TextCounterToolProps {
   onResult: (result: React.ReactNode) => void;
@@ -33,6 +34,7 @@ export function TextCounterTool({ onResult, onError }: TextCounterToolProps) {
       return;
     }
 
+    trackToolUse('text-counter');
     calculateAndDisplay(text);
   };
 

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Copy, Check, AlertCircle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { trackToolUse, trackCopyResult } from "@/utils/analytics";
 
 const MAX_HASHTAGS = 30;
 
@@ -39,6 +40,7 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
       return;
     }
 
+    trackToolUse('hashtag-mixer');
     // Extract hashtags from input
     // Split by various delimiters: space, comma, newline
     const rawTags = input.split(/[\s,\n]+/).filter(tag => tag.trim());
@@ -130,6 +132,7 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(shuffledTags);
+      trackCopyResult('hashtag-mixer');
       setCopied(true);
       toast({
         title: '복사 완료',
