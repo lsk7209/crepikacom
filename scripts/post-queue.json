@@ -3198,5 +3198,3816 @@
     "estimatedReadTime": "8분",
     "published": true,
     "publishedDate": "2026-05-07"
+  },
+  {
+    "id": 201,
+    "slug": "threads-marketing-complete-guide-meta-threads-follower-2026-",
+    "title": "Threads 마케팅 완전 가이드: Meta Threads로 팔로워 모으는 2026 전략",
+    "category": "guide",
+    "mainKeyword": "Threads 마케팅",
+    "extendedKeywords": [
+      "Threads 팔로워",
+      "Meta Threads",
+      "Threads 알고리즘"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": true,
+    "publishedDate": "2026-05-07"
+  },
+  {
+    "id": 202,
+    "slug": "pinterest-seo-complete-guide-pinterest-search",
+    "title": "Pinterest SEO 완전 가이드: 핀터레스트 검색 상위 노출로 트래픽 폭발시키기",
+    "category": "guide",
+    "mainKeyword": "Pinterest SEO",
+    "extendedKeywords": [
+      "핀터레스트 마케팅",
+      "핀터레스트 트래픽",
+      "Pinterest 키워드"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 203,
+    "slug": "discord-community-complete-guide-creator",
+    "title": "Discord 커뮤니티 운영 완전 가이드: 크리에이터를 위한 서버 구축과 팬 관리",
+    "category": "guide",
+    "mainKeyword": "Discord 커뮤니티",
+    "extendedKeywords": [
+      "디스코드 서버",
+      "Discord 운영",
+      "크리에이터 디스코드"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 204,
+    "slug": "makecom-automation-complete-guide-snsgoogle",
+    "title": "Make.com 자동화 완전 가이드: 노코드로 SNS·이메일·구글시트를 연결하는 법",
+    "category": "guide",
+    "mainKeyword": "Make.com 자동화",
+    "extendedKeywords": [
+      "Make 노코드",
+      "인테그로매트",
+      "Make 워크플로우"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "11분",
+    "published": false
+  },
+  {
+    "id": 205,
+    "slug": "midjourney-advanced-usage-guide-brand-marketing-complete-mas",
+    "title": "Midjourney 심화 활용 가이드: 브랜드 이미지와 마케팅 비주얼 제작 완전 정복",
+    "category": "guide",
+    "mainKeyword": "Midjourney 활용",
+    "extendedKeywords": [
+      "Midjourney 프롬프트",
+      "AI 이미지 마케팅",
+      "Midjourney 상업적 사용"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 206,
+    "slug": "sora-ai-guide-openai-sora-marketing-practical-method",
+    "title": "Sora AI 영상 생성 가이드: OpenAI Sora로 마케팅 영상 제작하는 실전 방법",
+    "category": "guide",
+    "mainKeyword": "Sora AI 영상",
+    "extendedKeywords": [
+      "Sora 사용법",
+      "AI 영상 생성",
+      "Sora 마케팅"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 207,
+    "slug": "capcut-editing-complete-guide-shortform-creator-editing",
+    "title": "CapCut 영상 편집 완전 가이드: 숏폼 크리에이터를 위한 모바일 편집 마스터클래스",
+    "category": "guide",
+    "mainKeyword": "CapCut 편집",
+    "extendedKeywords": [
+      "캡컷 사용법",
+      "CapCut 효과",
+      "숏폼 편집"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 208,
+    "slug": "optimizationcro-complete-guide-7",
+    "title": "전환율 최적화(CRO) 완전 가이드: 방문자를 고객으로 바꾸는 7단계 프레임워크",
+    "category": "guide",
+    "mainKeyword": "전환율 최적화",
+    "extendedKeywords": [
+      "CRO 전략",
+      "랜딩페이지 최적화",
+      "전환율 개선"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "11분",
+    "published": false
+  },
+  {
+    "id": 209,
+    "slug": "optimization-complete-guide",
+    "title": "랜딩페이지 최적화 완전 가이드: 클릭에서 구매까지 전환을 극대화하는 구조 설계",
+    "category": "guide",
+    "mainKeyword": "랜딩페이지 최적화",
+    "extendedKeywords": [
+      "랜딩페이지 디자인",
+      "랜딩페이지 전환",
+      "CTA 최적화"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 210,
+    "slug": "google-ads-beginner-guide-gdn-brand",
+    "title": "구글 디스플레이 광고 입문 가이드: GDN으로 잠재 고객에게 브랜드를 각인시키는 법",
+    "category": "guide",
+    "mainKeyword": "구글 디스플레이 광고",
+    "extendedKeywords": [
+      "GDN 광고",
+      "디스플레이 배너",
+      "구글 광고 타겟팅"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 211,
+    "slug": "facebookinstagram-ads-beginner-guide-meta-ads-manager-comple",
+    "title": "페이스북·인스타그램 광고 입문 가이드: Meta Ads Manager 완전 정복",
+    "category": "guide",
+    "mainKeyword": "Meta Ads",
+    "extendedKeywords": [
+      "페이스북 광고",
+      "인스타그램 광고",
+      "Meta 광고 설정"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "11분",
+    "published": false
+  },
+  {
+    "id": 212,
+    "slug": "naver-complete-guide-search-1-strategy",
+    "title": "네이버 스마트플레이스 완전 가이드: 지역 상권 검색 노출 1위 달성 전략",
+    "category": "guide",
+    "mainKeyword": "네이버 스마트플레이스",
+    "extendedKeywords": [
+      "스마트플레이스 최적화",
+      "네이버 플레이스 SEO",
+      "지역 검색 노출"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 213,
+    "slug": "naver-marketing-complete-guide-4050-community-strategy",
+    "title": "네이버 밴드 마케팅 완전 가이드: 40·50대 고객을 사로잡는 커뮤니티 전략",
+    "category": "guide",
+    "mainKeyword": "네이버 밴드 마케팅",
+    "extendedKeywords": [
+      "밴드 마케팅",
+      "네이버 밴드 광고",
+      "밴드 커뮤니티"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 214,
+    "slug": "kakao-complete-guide-kakao-strategy",
+    "title": "카카오맵 비즈니스 완전 가이드: 로컬 가게를 카카오 지도 상위에 올리는 전략",
+    "category": "guide",
+    "mainKeyword": "카카오맵 비즈니스",
+    "extendedKeywords": [
+      "카카오맵 최적화",
+      "카카오 플레이스",
+      "카카오 지도 노출"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 215,
+    "slug": "beehiiv-complete-guide-substack-growth-complete-mastery",
+    "title": "Beehiiv 뉴스레터 완전 가이드: Substack보다 성장에 강한 플랫폼 완전 정복",
+    "category": "guide",
+    "mainKeyword": "Beehiiv 뉴스레터",
+    "extendedKeywords": [
+      "Beehiiv 사용법",
+      "뉴스레터 플랫폼",
+      "Beehiiv vs Substack"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 216,
+    "slug": "marketing-complete-guide-blogyoutube-revenue",
+    "title": "제휴 마케팅 완전 가이드: 블로그·유튜브로 쿠팡파트너스 이상의 수익 만들기",
+    "category": "guide",
+    "mainKeyword": "제휴 마케팅",
+    "extendedKeywords": [
+      "어필리에이트 마케팅",
+      "제휴 수익화",
+      "제휴 링크 전략"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 217,
+    "slug": "complete-guide-a-to-z",
+    "title": "온라인 강의 제작 완전 가이드: 내 지식을 디지털 강의로 만드는 A to Z",
+    "category": "guide",
+    "mainKeyword": "온라인 강의 제작",
+    "extendedKeywords": [
+      "강의 플랫폼",
+      "디지털 강의",
+      "온라인 교육 수익화"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "11분",
+    "published": false
+  },
+  {
+    "id": 218,
+    "slug": "marketing-complete-guide-strategy",
+    "title": "웨비나 마케팅 완전 가이드: 온라인 세미나로 리드를 모으고 판매하는 전략",
+    "category": "guide",
+    "mainKeyword": "웨비나 마케팅",
+    "extendedKeywords": [
+      "웨비나 진행",
+      "온라인 세미나",
+      "웨비나 전환"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 219,
+    "slug": "notion-complete-guide-monetization-method",
+    "title": "Notion 템플릿 판매 완전 가이드: 내가 만든 템플릿으로 수익화하는 방법",
+    "category": "guide",
+    "mainKeyword": "Notion 템플릿 판매",
+    "extendedKeywords": [
+      "노션 템플릿",
+      "노션 수익화",
+      "디지털 상품 판매"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 220,
+    "slug": "complete-guide-pdf-strategy",
+    "title": "디지털 제품 가격 책정 완전 가이드: PDF부터 강의까지 최적 가격 설정 전략",
+    "category": "guide",
+    "mainKeyword": "디지털 제품 가격",
+    "extendedKeywords": [
+      "디지털 상품 가격",
+      "구독 가격 전략",
+      "가격 최적화"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 221,
+    "slug": "seo-complete-guide-robotstxtcanonicalsitemap-method",
+    "title": "기술적 SEO 완전 가이드: robots.txt·canonical·sitemap을 직접 설정하는 방법",
+    "category": "guide",
+    "mainKeyword": "기술적 SEO",
+    "extendedKeywords": [
+      "Technical SEO",
+      "robots.txt 설정",
+      "canonical URL"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "11분",
+    "published": false
+  },
+  {
+    "id": 222,
+    "slug": "seo-complete-guide-hreflang-search-optimization",
+    "title": "국제 SEO 완전 가이드: hreflang 설정으로 다국어 사이트 검색 최적화하기",
+    "category": "guide",
+    "mainKeyword": "국제 SEO",
+    "extendedKeywords": [
+      "다국어 SEO",
+      "hreflang 태그",
+      "글로벌 SEO"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 223,
+    "slug": "utm-complete-guide-marketing-method",
+    "title": "UTM 파라미터 완전 가이드: 마케팅 채널 성과를 정확하게 추적하는 방법",
+    "category": "guide",
+    "mainKeyword": "UTM 파라미터",
+    "extendedKeywords": [
+      "UTM 코드",
+      "캠페인 추적",
+      "GA4 UTM"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 224,
+    "slug": "google-discover-optimization-complete-guide-algorithm-conten",
+    "title": "구글 Discover 최적화 완전 가이드: 알고리즘이 추천하는 콘텐츠 만드는 법",
+    "category": "guide",
+    "mainKeyword": "구글 Discover",
+    "extendedKeywords": [
+      "Google Discover 최적화",
+      "뉴스피드 노출",
+      "Discover 트래픽"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 225,
+    "slug": "hotjar-analytics-complete-guide-ux",
+    "title": "Hotjar 히트맵 분석 완전 가이드: 방문자 행동을 시각화해서 UX 개선하기",
+    "category": "guide",
+    "mainKeyword": "Hotjar 분석",
+    "extendedKeywords": [
+      "히트맵 분석",
+      "UX 개선",
+      "방문자 행동 분석"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 226,
+    "slug": "customer-journey-map-complete-guide-marketing-2",
+    "title": "고객 여정 지도(Customer Journey Map) 완전 가이드: 마케팅 효율을 2배 높이는 설계법",
+    "category": "guide",
+    "mainKeyword": "고객 여정 지도",
+    "extendedKeywords": [
+      "Customer Journey",
+      "고객 경험 설계",
+      "마케팅 퍼널"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 227,
+    "slug": "complete-guide-automation-revenue",
+    "title": "세일즈 퍼널 구축 완전 가이드: 인지에서 구매까지 자동화된 수익 파이프라인 만들기",
+    "category": "guide",
+    "mainKeyword": "세일즈 퍼널",
+    "extendedKeywords": [
+      "퍼널 마케팅",
+      "자동화 퍼널",
+      "판매 깔때기"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "11분",
+    "published": false
+  },
+  {
+    "id": 228,
+    "slug": "ads-complete-guide-strategy",
+    "title": "리타겟팅 광고 완전 가이드: 한 번 방문한 고객을 구매자로 전환하는 전략",
+    "category": "guide",
+    "mainKeyword": "리타겟팅 광고",
+    "extendedKeywords": [
+      "리마케팅",
+      "Facebook Pixel",
+      "카카오 픽셀"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 229,
+    "slug": "community-complete-guide-brand-community-6-strategy",
+    "title": "온라인 커뮤니티 구축 완전 가이드: 브랜드 팬 커뮤니티를 만드는 6단계 전략",
+    "category": "guide",
+    "mainKeyword": "커뮤니티 구축",
+    "extendedKeywords": [
+      "커뮤니티 마케팅",
+      "팬 커뮤니티",
+      "온라인 커뮤니티 운영"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 230,
+    "slug": "1-creator-complete-guide-sns-revenue",
+    "title": "1인 크리에이터 세무·절세 완전 가이드: SNS 수익 신고와 합법적 비용 처리법",
+    "category": "guide",
+    "mainKeyword": "크리에이터 세무",
+    "extendedKeywords": [
+      "유튜버 세금",
+      "크리에이터 사업자",
+      "SNS 수익 신고"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 231,
+    "slug": "velog-blog-seo-complete-guide-blog",
+    "title": "Velog 개발자 블로그 SEO 완전 가이드: 기술 블로그로 취업과 브랜딩을 동시에",
+    "category": "guide",
+    "mainKeyword": "Velog SEO",
+    "extendedKeywords": [
+      "개발자 블로그",
+      "Velog 최적화",
+      "기술 블로그 SEO"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 232,
+    "slug": "blog-seo-complete-guide-google-strategy",
+    "title": "티스토리 블로그 SEO 완전 가이드: 구글 상위 노출을 위한 설정과 글쓰기 전략",
+    "category": "guide",
+    "mainKeyword": "티스토리 SEO",
+    "extendedKeywords": [
+      "티스토리 최적화",
+      "티스토리 구글 노출",
+      "티스토리 글쓰기"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 233,
+    "slug": "wordpress-blog-complete-guide-a-to-z",
+    "title": "WordPress 블로그 시작 완전 가이드: 호스팅 선택부터 첫 글 발행까지 A to Z",
+    "category": "guide",
+    "mainKeyword": "WordPress 블로그",
+    "extendedKeywords": [
+      "워드프레스 시작",
+      "워드프레스 설치",
+      "WordPress SEO"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "11분",
+    "published": false
+  },
+  {
+    "id": 234,
+    "slug": "elevenlabs-ai-complete-guide-automation",
+    "title": "ElevenLabs AI 음성 완전 가이드: 팟캐스트·영상 나레이션 자동화하는 법",
+    "category": "guide",
+    "mainKeyword": "ElevenLabs 음성",
+    "extendedKeywords": [
+      "AI 음성 생성",
+      "ElevenLabs 사용법",
+      "음성 자동화"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 235,
+    "slug": "perplexity-ai-complete-guide-content-analytics-10",
+    "title": "Perplexity AI 리서치 완전 가이드: 콘텐츠 기획과 경쟁사 분석을 10배 빠르게",
+    "category": "guide",
+    "mainKeyword": "Perplexity AI",
+    "extendedKeywords": [
+      "Perplexity 사용법",
+      "AI 검색",
+      "콘텐츠 리서치"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 236,
+    "slug": "ahrefs-beginner-complete-guide-seo-keyword-analytics",
+    "title": "Ahrefs 입문 완전 가이드: SEO 초보도 바로 쓸 수 있는 키워드·백링크 분석법",
+    "category": "guide",
+    "mainKeyword": "Ahrefs 입문",
+    "extendedKeywords": [
+      "Ahrefs 사용법",
+      "SEO 도구",
+      "키워드 분석 도구"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 237,
+    "slug": "semrush-complete-usage-guide-keyword-analytics",
+    "title": "SEMrush 완전 활용 가이드: 경쟁사 키워드부터 백링크 갭까지 분석하는 법",
+    "category": "guide",
+    "mainKeyword": "SEMrush 활용",
+    "extendedKeywords": [
+      "SEMrush 사용법",
+      "경쟁사 SEO 분석",
+      "SEMrush 키워드"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 238,
+    "slug": "tools-complete-guide-brand",
+    "title": "소셜 리스닝 도구 완전 가이드: 브랜드 언급과 경쟁사 동향을 실시간 모니터링하는 법",
+    "category": "guide",
+    "mainKeyword": "소셜 리스닝",
+    "extendedKeywords": [
+      "브랜드 모니터링",
+      "소셜 리스닝 도구",
+      "Brand24"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 239,
+    "slug": "instagram-broadcast-channel-complete-guide-strategy",
+    "title": "인스타그램 Broadcast Channel 완전 가이드: 팬과 직접 소통하는 새 채널 전략",
+    "category": "guide",
+    "mainKeyword": "인스타그램 채널",
+    "extendedKeywords": [
+      "Broadcast Channel",
+      "인스타 채널 만들기",
+      "인스타그램 DM 채널"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 240,
+    "slug": "youtube-monetization-complete-guide-strategy",
+    "title": "유튜브 멤버십 수익화 완전 가이드: 구독자를 유료 멤버로 전환하는 전략",
+    "category": "guide",
+    "mainKeyword": "유튜브 멤버십",
+    "extendedKeywords": [
+      "유튜브 멤버십 설정",
+      "채널 멤버십",
+      "유튜브 수익화"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 241,
+    "slug": "linkedin-complete-guide-content-strategy",
+    "title": "LinkedIn 뉴스레터 완전 가이드: 전문가 네트워크에 무료로 배포하는 콘텐츠 전략",
+    "category": "guide",
+    "mainKeyword": "LinkedIn 뉴스레터",
+    "extendedKeywords": [
+      "링크드인 뉴스레터",
+      "링크드인 콘텐츠",
+      "B2B 뉴스레터"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 242,
+    "slug": "pod-complete-guide",
+    "title": "POD(주문형 인쇄) 비즈니스 완전 가이드: 재고 없이 굿즈·티셔츠 판매 시작하기",
+    "category": "guide",
+    "mainKeyword": "POD 비즈니스",
+    "extendedKeywords": [
+      "주문형 인쇄",
+      "Print on demand",
+      "굿즈 판매"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 243,
+    "slug": "ads-complete-guide-ads-optimization-strategy",
+    "title": "쿠팡 광고(로켓그로스) 완전 가이드: 쿠팡 판매자를 위한 광고 최적화 전략",
+    "category": "guide",
+    "mainKeyword": "쿠팡 광고",
+    "extendedKeywords": [
+      "쿠팡 로켓그로스",
+      "쿠팡 ROAS",
+      "쿠팡 광고 최적화"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 244,
+    "slug": "kakao-ads-complete-guide-kakao-ads",
+    "title": "카카오모먼트 광고 완전 가이드: 카카오 앱 안에서 고객에게 닿는 광고 운영법",
+    "category": "guide",
+    "mainKeyword": "카카오모먼트 광고",
+    "extendedKeywords": [
+      "카카오 디지털 광고",
+      "카카오 타겟팅",
+      "카카오모먼트 설정"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 245,
+    "slug": "content-strategy-complete-guide",
+    "title": "콘텐츠 클러스터 전략 완전 가이드: 토픽 권위성 구축으로 도메인 점수 올리는 법",
+    "category": "guide",
+    "mainKeyword": "콘텐츠 클러스터",
+    "extendedKeywords": [
+      "Topic Cluster",
+      "Pillar Page",
+      "토픽 권위성"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 246,
+    "slug": "keyword-analytics-complete-guide-keyword",
+    "title": "경쟁사 키워드 갭 분석 완전 가이드: 경쟁자가 노리는 키워드를 먼저 가져오는 법",
+    "category": "guide",
+    "mainKeyword": "키워드 갭 분석",
+    "extendedKeywords": [
+      "경쟁사 키워드",
+      "Keyword Gap",
+      "키워드 분석"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 247,
+    "slug": "complete-guide-json-ld-search",
+    "title": "리치 스니펫 완전 가이드: JSON-LD 스키마로 검색 결과를 화려하게 만드는 법",
+    "category": "guide",
+    "mainKeyword": "리치 스니펫",
+    "extendedKeywords": [
+      "Rich Snippet",
+      "JSON-LD",
+      "구조화 데이터"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 248,
+    "slug": "search-optimization-complete-guide-google",
+    "title": "음성 검색 최적화 완전 가이드: 시리·구글 어시스턴트가 내 사이트를 읽게 만드는 법",
+    "category": "guide",
+    "mainKeyword": "음성 검색 최적화",
+    "extendedKeywords": [
+      "Voice Search SEO",
+      "음성 검색",
+      "시리 최적화"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 249,
+    "slug": "google-sge-brand-strategy-guide-ai-search-brand",
+    "title": "Google SGE 브랜드 인용 전략 가이드: AI 검색에서 내 브랜드가 언급되게 만드는 법",
+    "category": "guide",
+    "mainKeyword": "Google SGE 전략",
+    "extendedKeywords": [
+      "SGE 브랜드 노출",
+      "AI 검색 최적화",
+      "SGE 인용"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 250,
+    "slug": "seo-complete-guide-url",
+    "title": "사이트 구조 SEO 완전 가이드: URL 체계와 사이트맵 설계로 크롤링 효율 높이기",
+    "category": "guide",
+    "mainKeyword": "사이트 구조 SEO",
+    "extendedKeywords": [
+      "URL 구조",
+      "사이트 아키텍처",
+      "크롤링 최적화"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 251,
+    "slug": "hcu-content-guide-google-algorithm-strategy",
+    "title": "HCU(유용한 콘텐츠 업데이트) 대응 가이드: 구글 알고리즘 변화에서 살아남는 전략",
+    "category": "guide",
+    "mainKeyword": "HCU 대응",
+    "extendedKeywords": [
+      "유용한 콘텐츠 업데이트",
+      "Helpful Content",
+      "HCU 최적화"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 252,
+    "slug": "threads-algorithm-complete-analytics-follower-2026-strategy",
+    "title": "Threads 알고리즘 완전 분석: 노출과 팔로워를 동시에 늘리는 2026 전략",
+    "category": "tips",
+    "mainKeyword": "Threads 알고리즘",
+    "extendedKeywords": [
+      "Threads 노출",
+      "Meta Threads 팁",
+      "Threads 팔로워 늘리기"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 253,
+    "slug": "pinterest-optimization-7-tips-strategy",
+    "title": "Pinterest 핀 최적화 7가지 팁: 저장률과 클릭률을 동시에 높이는 비주얼 전략",
+    "category": "tips",
+    "mainKeyword": "Pinterest 핀 최적화",
+    "extendedKeywords": [
+      "Pinterest 저장",
+      "핀터레스트 트래픽",
+      "핀터레스트 팁"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 254,
+    "slug": "discord-usage-10-tips-creator-community-automation",
+    "title": "Discord 봇 활용 10가지 팁: 크리에이터 커뮤니티 자동화와 참여도 높이기",
+    "category": "tips",
+    "mainKeyword": "Discord 봇 활용",
+    "extendedKeywords": [
+      "디스코드 봇",
+      "Discord 자동화",
+      "커뮤니티 봇"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 255,
+    "slug": "makecom-sns-automation-5-tips",
+    "title": "Make.com 무료 플랜으로 SNS 자동화하는 5가지 실용 팁",
+    "category": "tips",
+    "mainKeyword": "Make.com 팁",
+    "extendedKeywords": [
+      "Make 무료",
+      "Make 시나리오",
+      "SNS 자동화 팁"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 256,
+    "slug": "capcut-shortform-editing-2-10-tips",
+    "title": "CapCut 숏폼 편집 속도 2배 높이는 10가지 팁: 전문가가 쓰는 숨겨진 기능",
+    "category": "tips",
+    "mainKeyword": "CapCut 팁",
+    "extendedKeywords": [
+      "캡컷 단축키",
+      "CapCut 고급",
+      "숏폼 편집 팁"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 257,
+    "slug": "cta-7-tips",
+    "title": "전환율 올리는 CTA 버튼 디자인 7가지 팁: 색상·문구·위치가 클릭을 만든다",
+    "category": "tips",
+    "mainKeyword": "CTA 버튼 최적화",
+    "extendedKeywords": [
+      "CTA 디자인",
+      "버튼 전환율",
+      "행동 유도 버튼"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 258,
+    "slug": "5-tips",
+    "title": "랜딩페이지 이탈률 줄이는 5가지 팁: 방문자가 머무르게 만드는 첫 화면 설계",
+    "category": "tips",
+    "mainKeyword": "랜딩페이지 이탈률",
+    "extendedKeywords": [
+      "이탈률 감소",
+      "랜딩페이지 팁",
+      "첫 화면 최적화"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 259,
+    "slug": "naver-optimization-5-tips-strategy",
+    "title": "네이버 스마트플레이스 사진 최적화 5가지 팁: 클릭률을 높이는 가게 사진 전략",
+    "category": "tips",
+    "mainKeyword": "스마트플레이스 사진",
+    "extendedKeywords": [
+      "스마트플레이스 최적화",
+      "네이버 플레이스 사진",
+      "가게 사진 팁"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 260,
+    "slug": "kakao-7-tips-strategy",
+    "title": "카카오맵 리뷰 관리 7가지 팁: 악성 리뷰 대응과 긍정 리뷰 유도 전략",
+    "category": "tips",
+    "mainKeyword": "카카오맵 리뷰",
+    "extendedKeywords": [
+      "카카오 리뷰 관리",
+      "온라인 리뷰",
+      "리뷰 응답"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 261,
+    "slug": "utm-5-tips",
+    "title": "UTM 파라미터 실수 없이 세팅하는 5가지 팁: 잘못된 데이터를 막는 추적 규칙",
+    "category": "tips",
+    "mainKeyword": "UTM 세팅 팁",
+    "extendedKeywords": [
+      "UTM 설정",
+      "캠페인 추적 팁",
+      "GA4 UTM 팁"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "5분",
+    "published": false
+  },
+  {
+    "id": 262,
+    "slug": "google-discover-7-tips-content",
+    "title": "구글 Discover 노출되는 글 쓰는 7가지 팁: 추천 피드에 올라타는 콘텐츠 공식",
+    "category": "tips",
+    "mainKeyword": "구글 Discover 팁",
+    "extendedKeywords": [
+      "Discover 노출",
+      "구글 피드 최적화",
+      "Discover 트래픽 팁"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 263,
+    "slug": "5-practical-tips-ux",
+    "title": "히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트",
+    "category": "tips",
+    "mainKeyword": "히트맵 활용 팁",
+    "extendedKeywords": [
+      "히트맵 분석",
+      "UX 개선 팁",
+      "방문자 클릭 데이터"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 264,
+    "slug": "tips-5-automation",
+    "title": "세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일",
+    "category": "tips",
+    "mainKeyword": "퍼널 이메일 시퀀스",
+    "extendedKeywords": [
+      "이메일 자동화 팁",
+      "퍼널 이메일",
+      "구매 유도 이메일"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 265,
+    "slug": "ads-roas-7-tips-ads",
+    "title": "리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정",
+    "category": "tips",
+    "mainKeyword": "리타겟팅 ROAS",
+    "extendedKeywords": [
+      "리마케팅 팁",
+      "ROAS 최적화",
+      "리타겟팅 설정"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 266,
+    "slug": "discord-30-growth-tips-0-100-practical-method",
+    "title": "Discord 서버 첫 30일 성장 팁: 0에서 100명 멤버 모으는 실전 방법",
+    "category": "tips",
+    "mainKeyword": "Discord 서버 성장",
+    "extendedKeywords": [
+      "디스코드 멤버 모으기",
+      "Discord 커뮤니티 성장",
+      "서버 홍보"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 267,
+    "slug": "seo-10",
+    "title": "기술적 SEO 체크리스트 10가지: 사이트 오픈 전 반드시 확인해야 할 설정",
+    "category": "tips",
+    "mainKeyword": "기술적 SEO 체크리스트",
+    "extendedKeywords": [
+      "Technical SEO 체크",
+      "SEO 기본 설정",
+      "사이트 SEO 점검"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 268,
+    "slug": "ahrefs-5-tips-keyword",
+    "title": "Ahrefs 무료로 쓰는 5가지 팁: 유료 구독 없이도 키워드·백링크 데이터 얻기",
+    "category": "tips",
+    "mainKeyword": "Ahrefs 무료 팁",
+    "extendedKeywords": [
+      "Ahrefs 무료 기능",
+      "SEO 무료 도구",
+      "Ahrefs 대안"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 269,
+    "slug": "5-json-ld-tips",
+    "title": "리치 스니펫 빠르게 달기 위한 5가지 JSON-LD 팁: 복사해서 바로 적용하기",
+    "category": "tips",
+    "mainKeyword": "JSON-LD 팁",
+    "extendedKeywords": [
+      "리치 스니펫 팁",
+      "JSON-LD 복사",
+      "구조화 데이터 팁"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 270,
+    "slug": "creator-5-tips-method",
+    "title": "크리에이터 세금 절약하는 5가지 합법적 팁: 사업용 지출을 비용으로 처리하는 방법",
+    "category": "tips",
+    "mainKeyword": "크리에이터 절세 팁",
+    "extendedKeywords": [
+      "유튜버 세금 절약",
+      "사업자 비용 처리",
+      "크리에이터 세무 팁"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 271,
+    "slug": "notion-7-tips",
+    "title": "Notion 템플릿 잘 팔리게 만드는 7가지 팁: 구매자가 원하는 설계 원칙",
+    "category": "tips",
+    "mainKeyword": "Notion 템플릿 판매 팁",
+    "extendedKeywords": [
+      "노션 템플릿 수익",
+      "노션 판매 팁",
+      "디지털 상품 팁"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 272,
+    "slug": "elevenlabs-tips-ai",
+    "title": "ElevenLabs로 팟캐스트 인트로 만드는 팁: AI 목소리로 전문가 느낌 내는 법",
+    "category": "tips",
+    "mainKeyword": "ElevenLabs 팁",
+    "extendedKeywords": [
+      "AI 음성 팁",
+      "팟캐스트 인트로",
+      "ElevenLabs 활용"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "5분",
+    "published": false
+  },
+  {
+    "id": 273,
+    "slug": "perplexity-blog-7-tips",
+    "title": "Perplexity로 블로그 글감 찾는 7가지 팁: 아이디어 고갈 없이 꾸준히 쓰는 법",
+    "category": "tips",
+    "mainKeyword": "Perplexity 블로그 팁",
+    "extendedKeywords": [
+      "Perplexity 활용",
+      "글감 찾기",
+      "AI 콘텐츠 기획"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 274,
+    "slug": "linkedin-algorithm-7-tips-strategy",
+    "title": "LinkedIn 알고리즘 공략 7가지 팁: 게시글 노출을 극대화하는 게시 전략",
+    "category": "tips",
+    "mainKeyword": "LinkedIn 알고리즘",
+    "extendedKeywords": [
+      "링크드인 노출 팁",
+      "LinkedIn 게시글",
+      "링크드인 알고리즘"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 275,
+    "slug": "facebook-pixel-tips-meta-ads",
+    "title": "Facebook Pixel 설치와 이벤트 추적 팁: Meta 광고 성과를 정확히 측정하는 법",
+    "category": "tips",
+    "mainKeyword": "Facebook Pixel 팁",
+    "extendedKeywords": [
+      "페이스북 픽셀",
+      "Meta Pixel 설치",
+      "이벤트 추적"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 276,
+    "slug": "7-tips",
+    "title": "온라인 강의 판매율 높이는 7가지 팁: 수강생이 지갑을 여는 강의 페이지 설계",
+    "category": "tips",
+    "mainKeyword": "온라인 강의 판매",
+    "extendedKeywords": [
+      "강의 전환율",
+      "강의 판매 팁",
+      "강의 페이지 최적화"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 277,
+    "slug": "content-optimization-tips-pillar-page-cluster-page",
+    "title": "콘텐츠 클러스터 링크 구조 최적화 팁: Pillar Page와 Cluster Page를 연결하는 법",
+    "category": "tips",
+    "mainKeyword": "콘텐츠 클러스터 팁",
+    "extendedKeywords": [
+      "Pillar Page 팁",
+      "Topic Cluster 링크",
+      "클러스터 SEO"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 278,
+    "slug": "google-sge-5-tips-ai-content-method",
+    "title": "구글 SGE 인용 늘리는 5가지 팁: AI가 내 콘텐츠를 답변에 포함시키는 방법",
+    "category": "tips",
+    "mainKeyword": "SGE 인용 팁",
+    "extendedKeywords": [
+      "SGE 최적화 팁",
+      "AI 검색 인용",
+      "SGE 전략"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 279,
+    "slug": "substack-tips-strategy",
+    "title": "Substack 무료에서 유료로 전환하는 팁: 구독자를 결제자로 바꾸는 전략",
+    "category": "tips",
+    "mainKeyword": "Substack 유료 전환",
+    "extendedKeywords": [
+      "Substack 수익화",
+      "유료 뉴스레터 팁",
+      "Substack 구독"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 280,
+    "slug": "7-tips-optimization-strategy",
+    "title": "쿠팡파트너스 클릭률 높이는 7가지 팁: 링크 배치와 앵커텍스트 최적화 전략",
+    "category": "tips",
+    "mainKeyword": "쿠팡파트너스 팁",
+    "extendedKeywords": [
+      "쿠팡파트너스 클릭",
+      "제휴링크 최적화",
+      "쿠팡 수익 팁"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 281,
+    "slug": "7-tips-strategy",
+    "title": "웨비나 참석률 높이는 7가지 팁: 등록 후 노쇼를 막는 리마인더 전략",
+    "category": "tips",
+    "mainKeyword": "웨비나 참석률",
+    "extendedKeywords": [
+      "웨비나 노쇼 방지",
+      "온라인 세미나 팁",
+      "웨비나 리마인더"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 282,
+    "slug": "threads-5",
+    "title": "Threads에서 바이럴되는 글 쓰는 5가지 패턴: 공유와 리포스트를 유도하는 문구",
+    "category": "tips",
+    "mainKeyword": "Threads 바이럴",
+    "extendedKeywords": [
+      "Threads 글쓰기",
+      "Meta Threads 바이럴",
+      "Threads 확산"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 283,
+    "slug": "pinterest-seo-optimization-tips-search",
+    "title": "Pinterest 보드 SEO 최적화 팁: 보드 제목과 설명이 검색 트래픽을 만든다",
+    "category": "tips",
+    "mainKeyword": "Pinterest 보드 SEO",
+    "extendedKeywords": [
+      "핀터레스트 보드",
+      "Pinterest 설명 최적화",
+      "핀터레스트 SEO 팁"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "5분",
+    "published": false
+  },
+  {
+    "id": 284,
+    "slug": "beehiiv-50-tips-content-optimization",
+    "title": "Beehiiv 뉴스레터 오픈율 50% 넘기는 팁: 제목·발송 시간·콘텐츠 최적화",
+    "category": "tips",
+    "mainKeyword": "Beehiiv 오픈율",
+    "extendedKeywords": [
+      "뉴스레터 오픈율",
+      "Beehiiv 팁",
+      "이메일 오픈율"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 285,
+    "slug": "google-discover-analytics-content",
+    "title": "구글 Discover 인사이트 분석: 어떤 콘텐츠가 피드에 추천되는가",
+    "category": "insights",
+    "mainKeyword": "구글 Discover 분석",
+    "extendedKeywords": [
+      "Discover 알고리즘",
+      "구글 추천 피드",
+      "Discover 데이터"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 286,
+    "slug": "threads-vs-xtwitter-vs-bluesky-sns-analytics-2026",
+    "title": "Threads vs X(트위터) vs Bluesky: 텍스트 SNS 플랫폼 현황 분석 2026",
+    "category": "insights",
+    "mainKeyword": "텍스트 SNS 비교",
+    "extendedKeywords": [
+      "Threads 분석",
+      "X 트위터 현황",
+      "Bluesky 성장"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 287,
+    "slug": "pinterest-marketing-roi-analytics",
+    "title": "Pinterest 마케팅 ROI 분석: 다른 플랫폼 대비 실제 트래픽 효율은?",
+    "category": "insights",
+    "mainKeyword": "Pinterest ROI",
+    "extendedKeywords": [
+      "핀터레스트 효과",
+      "Pinterest 트래픽 분석",
+      "핀터레스트 ROI"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 288,
+    "slug": "cro-12",
+    "title": "CRO 도입 후 전환율 변화: 국내 중소 비즈니스 12곳의 실제 데이터",
+    "category": "insights",
+    "mainKeyword": "CRO 효과 분석",
+    "extendedKeywords": [
+      "전환율 최적화 결과",
+      "CRO 데이터",
+      "전환율 변화"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 289,
+    "slug": "makecom-vs-zapier-2026-automation-tools-analytics",
+    "title": "Make.com vs Zapier: 2026년 자동화 도구 선택 기준 심층 분석",
+    "category": "insights",
+    "mainKeyword": "Make vs Zapier",
+    "extendedKeywords": [
+      "Make Zapier 비교",
+      "자동화 도구 비교",
+      "노코드 자동화"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 290,
+    "slug": "ai-tools-2026-soraklingrunway-comparison",
+    "title": "AI 영상 생성 도구 현황 2026: Sora·Kling·Runway 실제 사용 비교",
+    "category": "insights",
+    "mainKeyword": "AI 영상 도구 비교",
+    "extendedKeywords": [
+      "Sora vs Kling",
+      "AI 동영상 생성",
+      "AI 영상 비교"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 291,
+    "slug": "threads-analytics-instagram",
+    "title": "한국 Threads 사용자 현황 분석: 인스타그램을 대체할 수 있을까",
+    "category": "insights",
+    "mainKeyword": "한국 Threads 현황",
+    "extendedKeywords": [
+      "Threads 한국",
+      "Meta Threads 사용자",
+      "Threads 성장"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 292,
+    "slug": "comparison-stibee-vs-mailchimp-vs-beehiiv",
+    "title": "국내 뉴스레터 플랫폼 비교: Stibee vs Mailchimp vs Beehiiv 어느 것이 최선?",
+    "category": "insights",
+    "mainKeyword": "뉴스레터 플랫폼 비교",
+    "extendedKeywords": [
+      "스티비 비교",
+      "Mailchimp 대안",
+      "뉴스레터 플랫폼"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 293,
+    "slug": "creator-community-analytics-case",
+    "title": "디스코드 크리에이터 커뮤니티 성공 패턴 분석: 국내외 사례로 본 운영 원칙",
+    "category": "insights",
+    "mainKeyword": "Discord 커뮤니티 분석",
+    "extendedKeywords": [
+      "디스코드 성공 사례",
+      "크리에이터 커뮤니티 분석",
+      "Discord 운영 패턴"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 294,
+    "slug": "marketing-revenue-2026-revenue-analytics",
+    "title": "제휴 마케팅 수익 현황 2026: 국내 블로거·유튜버 실제 수익 분석",
+    "category": "insights",
+    "mainKeyword": "제휴 마케팅 수익 분석",
+    "extendedKeywords": [
+      "어필리에이트 수익",
+      "제휴 수익 현황",
+      "블로거 수익 데이터"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 295,
+    "slug": "2026-udemy101-revenue-analytics",
+    "title": "온라인 강의 플랫폼 현황 2026: Udemy·클래스101·탈잉 수익 구조 분석",
+    "category": "insights",
+    "mainKeyword": "온라인 강의 플랫폼",
+    "extendedKeywords": [
+      "클래스101 분석",
+      "탈잉 수익",
+      "온라인 교육 시장"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 296,
+    "slug": "hcu-6",
+    "title": "HCU 이후 트래픽 복구한 사이트들의 공통점: 6개월 데이터로 본 생존 패턴",
+    "category": "insights",
+    "mainKeyword": "HCU 트래픽 복구",
+    "extendedKeywords": [
+      "HCU 이후 회복",
+      "유용한 콘텐츠 업데이트",
+      "HCU 사례"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 297,
+    "slug": "seo-robotstxt-case-analytics",
+    "title": "기술적 SEO가 트래픽에 미치는 실제 영향: robots.txt 설정 오류 사례 분석",
+    "category": "insights",
+    "mainKeyword": "기술적 SEO 영향",
+    "extendedKeywords": [
+      "Technical SEO 사례",
+      "robots.txt 오류",
+      "SEO 기술 분석"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 298,
+    "slug": "ads-analytics-roas",
+    "title": "국내 리타겟팅 광고 성과 분석: 업종별 평균 ROAS와 최적 빈도",
+    "category": "insights",
+    "mainKeyword": "리타겟팅 광고 분석",
+    "extendedKeywords": [
+      "리마케팅 ROAS",
+      "리타겟팅 성과",
+      "광고 빈도 분석"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 299,
+    "slug": "pod-revenue-analytics-creator",
+    "title": "POD(주문형 인쇄) 비즈니스 실제 수익 분석: 크리에이터 굿즈 판매의 현실",
+    "category": "insights",
+    "mainKeyword": "POD 수익 분석",
+    "extendedKeywords": [
+      "주문형 인쇄 수익",
+      "굿즈 수익",
+      "크리에이터 굿즈"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 300,
+    "slug": "kakao-ads-analytics",
+    "title": "카카오모먼트 광고 성과 분석: 업종별 클릭률과 전환율 데이터",
+    "category": "insights",
+    "mainKeyword": "카카오모먼트 성과",
+    "extendedKeywords": [
+      "카카오 광고 분석",
+      "카카오모먼트 CTR",
+      "카카오 전환율"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 301,
+    "slug": "search-2026-search",
+    "title": "음성 검색 사용 현황 2026: 어시스턴트·스마트스피커가 바꾸는 검색 행동",
+    "category": "insights",
+    "mainKeyword": "음성 검색 현황",
+    "extendedKeywords": [
+      "스마트스피커 검색",
+      "음성 검색 트렌드",
+      "Voice Search 2026"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 302,
+    "slug": "substack-creator-revenue-revenue-analytics",
+    "title": "Substack 크리에이터 수익 현황: 국내외 유료 뉴스레터 구독자와 수익 분석",
+    "category": "insights",
+    "mainKeyword": "Substack 수익 분석",
+    "extendedKeywords": [
+      "Substack 크리에이터",
+      "뉴스레터 수익",
+      "유료 구독 현황"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 303,
+    "slug": "brand",
+    "title": "소셜 리스닝 데이터로 본 브랜드 위기 대응: 빠른 모니터링이 위기를 막는다",
+    "category": "insights",
+    "mainKeyword": "소셜 리스닝 위기 대응",
+    "extendedKeywords": [
+      "브랜드 위기 관리",
+      "소셜 모니터링",
+      "브랜드 리스크"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 304,
+    "slug": "linkedin-algorithm-2026-content",
+    "title": "LinkedIn 알고리즘 변화 2026: 어떤 콘텐츠가 더 넓게 노출되는가",
+    "category": "insights",
+    "mainKeyword": "LinkedIn 알고리즘 2026",
+    "extendedKeywords": [
+      "링크드인 알고리즘 변화",
+      "LinkedIn 노출 분석",
+      "링크드인 트렌드"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 305,
+    "slug": "community-comparison",
+    "title": "국내 커뮤니티 플랫폼 비교: 카페·밴드·디스코드·오픈채팅 어디가 가장 활성화됐나",
+    "category": "insights",
+    "mainKeyword": "커뮤니티 플랫폼 비교",
+    "extendedKeywords": [
+      "온라인 커뮤니티 분석",
+      "플랫폼 커뮤니티",
+      "커뮤니티 선택"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 306,
+    "slug": "vs-naver-revenue-comparison-monetization",
+    "title": "쿠팡파트너스 vs 네이버 애드포스트 수익 비교: 블로거를 위한 최적 수익화 채널",
+    "category": "insights",
+    "mainKeyword": "제휴 프로그램 비교",
+    "extendedKeywords": [
+      "쿠팡파트너스 수익",
+      "네이버 애드포스트",
+      "블로거 수익 비교"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 307,
+    "slug": "ai-tools-analytics-2026-claudechatgptgemini-content-marketin",
+    "title": "AI 글쓰기 도구 품질 분석 2026: Claude·ChatGPT·Gemini 콘텐츠 마케팅 실전 비교",
+    "category": "insights",
+    "mainKeyword": "AI 글쓰기 비교 2026",
+    "extendedKeywords": [
+      "Claude 글쓰기",
+      "ChatGPT 콘텐츠",
+      "AI 작성 품질"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 308,
+    "slug": "wordpress-seo",
+    "title": "WordPress 플러그인 없이 SEO 하는 법: 무거운 플러그인을 코드로 대체하는 인사이트",
+    "category": "insights",
+    "mainKeyword": "WordPress SEO 플러그인 대안",
+    "extendedKeywords": [
+      "워드프레스 SEO",
+      "Rank Math 대안",
+      "WordPress 최적화"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 309,
+    "slug": "content-niche-strategy-blog-growth",
+    "title": "콘텐츠 포화 시장에서 살아남는 Niche 전략: 데이터로 본 특화 블로그의 성장",
+    "category": "insights",
+    "mainKeyword": "니치 콘텐츠 전략",
+    "extendedKeywords": [
+      "특화 블로그",
+      "Niche 마케팅",
+      "틈새 시장 분석"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 310,
+    "slug": "e-e-a-t-analytics",
+    "title": "E-E-A-T 점수 올린 사이트들의 공통점: 저자 정보부터 인용까지 변경 패턴 분석",
+    "category": "insights",
+    "mainKeyword": "E-E-A-T 개선 사례",
+    "extendedKeywords": [
+      "EEAT 분석",
+      "저자 신뢰도",
+      "EEAT 최적화"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 311,
+    "slug": "revenue-2026-blog-rpm-analytics",
+    "title": "국내 애드센스 수익 현황 2026: 블로그 카테고리별 평균 RPM 분석",
+    "category": "insights",
+    "mainKeyword": "애드센스 RPM 분석",
+    "extendedKeywords": [
+      "애드센스 수익",
+      "블로그 RPM",
+      "카테고리별 RPM"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 312,
+    "slug": "threads-follower-0-1000-3-growth",
+    "title": "Threads 팔로워 0에서 1000까지: 3개월 성장 케이스",
+    "category": "case-study",
+    "mainKeyword": "Threads 팔로워 성장",
+    "extendedKeywords": [
+      "Threads 성장 케이스",
+      "Meta Threads 팔로워",
+      "Threads 시작"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 313,
+    "slug": "pinterest-seo-blog-5000-6-strategy",
+    "title": "Pinterest SEO로 블로그 월 방문자 5000명 늘린 케이스: 6개월 전략 공개",
+    "category": "case-study",
+    "mainKeyword": "Pinterest 트래픽 케이스",
+    "extendedKeywords": [
+      "Pinterest 블로그 트래픽",
+      "핀터레스트 성공 사례",
+      "Pinterest SEO 케이스"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 314,
+    "slug": "makecom-sns-70",
+    "title": "Make.com 도입으로 SNS 운영 시간 70% 절약한 케이스: 실제 워크플로우 공개",
+    "category": "case-study",
+    "mainKeyword": "Make.com 자동화 케이스",
+    "extendedKeywords": [
+      "Make 사례",
+      "자동화 효율",
+      "SNS 자동화 케이스"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 315,
+    "slug": "ab-3",
+    "title": "랜딩페이지 A/B 테스트로 전환율 3배 올린 케이스: 어떤 요소가 결정적이었나",
+    "category": "case-study",
+    "mainKeyword": "랜딩페이지 AB 테스트 케이스",
+    "extendedKeywords": [
+      "랜딩페이지 전환율 케이스",
+      "A/B 테스트 결과",
+      "전환율 개선 사례"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 316,
+    "slug": "naver-optimization-2",
+    "title": "네이버 스마트플레이스 최적화로 예약 2배 늘린 음식점 케이스",
+    "category": "case-study",
+    "mainKeyword": "스마트플레이스 예약 증가",
+    "extendedKeywords": [
+      "스마트플레이스 케이스",
+      "네이버 플레이스 최적화 사례",
+      "로컬 예약 증가"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 317,
+    "slug": "kakao-optimization-40",
+    "title": "카카오맵 최적화로 신규 방문객 40% 늘린 소상공인 케이스",
+    "category": "case-study",
+    "mainKeyword": "카카오맵 최적화 케이스",
+    "extendedKeywords": [
+      "카카오맵 성공 사례",
+      "로컬 비즈니스 케이스",
+      "카카오 지도 최적화"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 318,
+    "slug": "beehiiv-6-2000",
+    "title": "Beehiiv로 6개월 만에 구독자 2000명 달성한 뉴스레터 케이스",
+    "category": "case-study",
+    "mainKeyword": "Beehiiv 성장 케이스",
+    "extendedKeywords": [
+      "Beehiiv 구독자",
+      "뉴스레터 성장 케이스",
+      "이메일 리스트 구축"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 319,
+    "slug": "marketing-300-revenue-strategy",
+    "title": "제휴 마케팅으로 월 300만 원 수익 달성한 블로거의 전략 케이스",
+    "category": "case-study",
+    "mainKeyword": "제휴 마케팅 수익 케이스",
+    "extendedKeywords": [
+      "어필리에이트 성공 사례",
+      "블로그 수익 케이스",
+      "제휴 수익화"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 320,
+    "slug": "500-strategy",
+    "title": "온라인 강의 론칭 첫 달 500만 원 달성한 케이스: 사전 판매 전략 공개",
+    "category": "case-study",
+    "mainKeyword": "온라인 강의 론칭 케이스",
+    "extendedKeywords": [
+      "강의 론칭",
+      "디지털 강의 수익",
+      "강의 사전 판매"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 321,
+    "slug": "ads-roas-5-shopping",
+    "title": "리타겟팅 광고로 ROAS 5배 달성한 쇼핑몰 케이스: 설정 디테일 공개",
+    "category": "case-study",
+    "mainKeyword": "리타겟팅 ROAS 케이스",
+    "extendedKeywords": [
+      "리마케팅 사례",
+      "ROAS 5배",
+      "리타겟팅 성공"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 322,
+    "slug": "seo-3-60",
+    "title": "기술적 SEO 수정 후 3개월 만에 트래픽 60% 회복한 케이스",
+    "category": "case-study",
+    "mainKeyword": "기술적 SEO 케이스",
+    "extendedKeywords": [
+      "Technical SEO 사례",
+      "SEO 트래픽 회복",
+      "기술 SEO 적용"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 323,
+    "slug": "discord-2-creator",
+    "title": "Discord 서버로 강의 매출 2배 올린 크리에이터 케이스",
+    "category": "case-study",
+    "mainKeyword": "Discord 수익 케이스",
+    "extendedKeywords": [
+      "디스코드 커뮤니티 수익",
+      "Discord 강의 판매",
+      "크리에이터 디스코드 사례"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 324,
+    "slug": "content-6-30",
+    "title": "콘텐츠 클러스터 구축 6개월 만에 도메인 권위 점수 30 올린 케이스",
+    "category": "case-study",
+    "mainKeyword": "콘텐츠 클러스터 케이스",
+    "extendedKeywords": [
+      "Topic Cluster 사례",
+      "도메인 권위 성장",
+      "콘텐츠 클러스터 결과"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 325,
+    "slug": "substack-500-creator-strategy",
+    "title": "Substack으로 유료 구독자 500명 달성한 크리에이터의 전략 케이스",
+    "category": "case-study",
+    "mainKeyword": "Substack 구독자 케이스",
+    "extendedKeywords": [
+      "Substack 성공 사례",
+      "유료 뉴스레터 케이스",
+      "Substack 500명"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 326,
+    "slug": "google-discover-3000-content-strategy",
+    "title": "구글 Discover에서 하루 3000뷰 달성한 콘텐츠 전략 케이스",
+    "category": "case-study",
+    "mainKeyword": "구글 Discover 트래픽 케이스",
+    "extendedKeywords": [
+      "Discover 3000뷰",
+      "구글 피드 노출 케이스",
+      "Discover 성공"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 327,
+    "slug": "notion-100-marketing-strategy",
+    "title": "Notion 템플릿 첫 달 100개 판매한 케이스: 마케팅 채널과 가격 전략",
+    "category": "case-study",
+    "mainKeyword": "Notion 템플릿 판매 케이스",
+    "extendedKeywords": [
+      "노션 템플릿 판매 사례",
+      "디지털 상품 케이스",
+      "노션 수익 케이스"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 328,
+    "slug": "kling-ai-shortform-100",
+    "title": "Kling AI로 제작한 숏폼 영상 조회수 100만 달성 케이스",
+    "category": "case-study",
+    "mainKeyword": "Kling AI 영상 케이스",
+    "extendedKeywords": [
+      "Kling 활용 사례",
+      "AI 영상 바이럴",
+      "Kling 조회수"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 329,
+    "slug": "search-optimization-3",
+    "title": "음성 검색 최적화 후 이마트·스마트스피커 노출 3배 늘린 케이스",
+    "category": "case-study",
+    "mainKeyword": "음성 검색 최적화 케이스",
+    "extendedKeywords": [
+      "Voice Search 사례",
+      "스마트스피커 노출",
+      "음성 검색 케이스"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 330,
+    "slug": "facebook-pixel-ads-40",
+    "title": "Facebook Pixel 전환 추적 세팅으로 광고 비용 40% 절감한 케이스",
+    "category": "case-study",
+    "mainKeyword": "Facebook Pixel 케이스",
+    "extendedKeywords": [
+      "메타 픽셀 사례",
+      "광고 비용 절감 케이스",
+      "전환 추적 사례"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 331,
+    "slug": "runway-ai-editing-tools-complete-guide-ai-beginner",
+    "title": "Runway AI 영상 편집 도구 완전 가이드: 마케터를 위한 AI 영상 제작 입문",
+    "category": "guide",
+    "mainKeyword": "Runway AI 영상",
+    "extendedKeywords": [
+      "Runway 사용법",
+      "AI 영상 편집",
+      "Runway 마케팅"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 332,
+    "slug": "kling-ai-guide-complete-mastery",
+    "title": "Kling AI 사용 가이드: 텍스트로 영상 만드는 한국어 완전 정복",
+    "category": "guide",
+    "mainKeyword": "Kling AI 사용법",
+    "extendedKeywords": [
+      "Kling 가이드",
+      "텍스트 투 비디오",
+      "Kling 영상 생성"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 333,
+    "slug": "google-search-ads-360-beginner-guide-ppc-strategy",
+    "title": "구글 Search Ads 360 입문 가이드: 대규모 PPC 캠페인 관리 전략",
+    "category": "guide",
+    "mainKeyword": "Search Ads 360",
+    "extendedKeywords": [
+      "SA360 가이드",
+      "대규모 구글 광고",
+      "PPC 관리"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 334,
+    "slug": "instagram-threads-content-strategy-sns",
+    "title": "Instagram Threads 한국어 콘텐츠 전략: 텍스트 기반 SNS에서 팬 모으기",
+    "category": "guide",
+    "mainKeyword": "Threads 한국어 전략",
+    "extendedKeywords": [
+      "Threads 콘텐츠",
+      "한국어 Threads",
+      "Threads 마케팅 전략"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 335,
+    "slug": "stable-diffusion-complete-guide-ai",
+    "title": "Stable Diffusion 로컬 설치 완전 가이드: 무료로 AI 이미지를 무제한 생성하는 법",
+    "category": "guide",
+    "mainKeyword": "Stable Diffusion 설치",
+    "extendedKeywords": [
+      "Stable Diffusion 로컬",
+      "AI 이미지 무료",
+      "SD 설치 가이드"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 336,
+    "slug": "google-performance-max-complete-guide-ai-ads-automation-roas",
+    "title": "구글 Performance Max 캠페인 완전 가이드: AI 광고 자동화로 ROAS 높이기",
+    "category": "guide",
+    "mainKeyword": "Performance Max 가이드",
+    "extendedKeywords": [
+      "PMax 캠페인",
+      "구글 AI 광고",
+      "Performance Max"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 337,
+    "slug": "kakao-ads-complete-guide-kakao-ads-strategy",
+    "title": "카카오 비즈니스 광고 완전 가이드: 카카오 전 채널 통합 광고 운영 전략",
+    "category": "guide",
+    "mainKeyword": "카카오 비즈니스 광고",
+    "extendedKeywords": [
+      "카카오 광고",
+      "카카오 비즈니스",
+      "카카오 통합 광고"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 338,
+    "slug": "naver-searchads-complete-guide-brand-search-strategy",
+    "title": "네이버 검색광고 완전 가이드: 브랜드 검색·파워링크 넘어 통합 운영 전략",
+    "category": "guide",
+    "mainKeyword": "네이버 검색광고",
+    "extendedKeywords": [
+      "네이버 광고",
+      "검색광고 운영",
+      "네이버 광고 관리"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 339,
+    "slug": "apple-podcast-optimization-complete-guide-strategy",
+    "title": "Apple Podcast 최적화 완전 가이드: 팟캐스트 앱 상위 노출 전략",
+    "category": "guide",
+    "mainKeyword": "Apple Podcast 최적화",
+    "extendedKeywords": [
+      "팟캐스트 SEO",
+      "Apple Podcast 노출",
+      "팟캐스트 검색"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 340,
+    "slug": "spotify-growth-guide-spotify-for-podcasters",
+    "title": "Spotify 팟캐스트 성장 가이드: Spotify for Podcasters로 청취자 늘리기",
+    "category": "guide",
+    "mainKeyword": "Spotify 팟캐스트",
+    "extendedKeywords": [
+      "스포티파이 팟캐스트",
+      "팟캐스트 성장",
+      "Spotify 음악 마케팅"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 341,
+    "slug": "brand-brand-audit-complete-guide-brand-method",
+    "title": "브랜드 감사(Brand Audit) 완전 가이드: 내 브랜드의 현재 상태를 진단하는 방법",
+    "category": "guide",
+    "mainKeyword": "브랜드 감사",
+    "extendedKeywords": [
+      "Brand Audit",
+      "브랜드 진단",
+      "브랜드 일관성"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 342,
+    "slug": "analytics-complete-guide-analytics-6",
+    "title": "경쟁사 분석 프레임워크 완전 가이드: 체계적으로 경쟁자를 분석하는 6단계",
+    "category": "guide",
+    "mainKeyword": "경쟁사 분석",
+    "extendedKeywords": [
+      "경쟁 분석 방법",
+      "경쟁자 리서치",
+      "마케팅 경쟁 분석"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 343,
+    "slug": "substack-complete-guide-a-to-z",
+    "title": "Substack 시작 완전 가이드: 처음 뉴스레터를 만드는 사람을 위한 A to Z",
+    "category": "guide",
+    "mainKeyword": "Substack 시작",
+    "extendedKeywords": [
+      "Substack 가이드",
+      "뉴스레터 시작",
+      "Substack 설정"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 344,
+    "slug": "complete-guide",
+    "title": "고객 페르소나 만들기 완전 가이드: 데이터 기반으로 이상적인 고객을 정의하는 법",
+    "category": "guide",
+    "mainKeyword": "고객 페르소나",
+    "extendedKeywords": [
+      "페르소나 설정",
+      "타겟 고객 정의",
+      "고객 분석"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 345,
+    "slug": "marketing-complete-guide-strategy-1",
+    "title": "소셜 증명 마케팅 완전 가이드: 리뷰·후기·추천사로 신뢰를 만드는 전략",
+    "category": "guide",
+    "mainKeyword": "소셜 증명 마케팅",
+    "extendedKeywords": [
+      "소셜 프루프",
+      "리뷰 마케팅",
+      "후기 전략"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 346,
+    "slug": "instagram-close-friends-marketing-guide-vip-content-strategy",
+    "title": "인스타그램 Close Friends 마케팅 가이드: VIP 고객을 위한 프리미엄 콘텐츠 전략",
+    "category": "guide",
+    "mainKeyword": "인스타그램 Close Friends",
+    "extendedKeywords": [
+      "Close Friends 마케팅",
+      "인스타 친한친구",
+      "VIP 콘텐츠"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 347,
+    "slug": "youtube-community-complete-guide-strategy",
+    "title": "유튜브 Community 게시물 완전 가이드: 영상 없이 구독자와 소통하는 전략",
+    "category": "guide",
+    "mainKeyword": "유튜브 Community 게시물",
+    "extendedKeywords": [
+      "유튜브 커뮤니티",
+      "Community 탭 활용",
+      "유튜브 소통"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 348,
+    "slug": "google-ads-complete-guide-automation-ads",
+    "title": "Google Ads 스마트 캠페인 완전 가이드: 소상공인을 위한 자동화 광고 시작법",
+    "category": "guide",
+    "mainKeyword": "Google Ads 스마트 캠페인",
+    "extendedKeywords": [
+      "구글 스마트 광고",
+      "소상공인 광고",
+      "구글 자동 광고"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 349,
+    "slug": "canva-pro-vs-creator-pro",
+    "title": "Canva Pro vs 무료: 크리에이터에게 Pro가 필요한 시점과 대안",
+    "category": "tips",
+    "mainKeyword": "Canva Pro 비교",
+    "extendedKeywords": [
+      "Canva 유료",
+      "캔바 프로",
+      "Canva 무료 한계"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 350,
+    "slug": "midjourney-v6-tips-brand",
+    "title": "Midjourney v6 프롬프트 팁: 일관된 브랜드 이미지 만드는 고급 설정",
+    "category": "tips",
+    "mainKeyword": "Midjourney 프롬프트 팁",
+    "extendedKeywords": [
+      "Midjourney v6",
+      "AI 이미지 프롬프트",
+      "브랜드 이미지 생성"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 351,
+    "slug": "google-qa-usage-tips",
+    "title": "구글 비즈니스 프로필 Q&A 활용 팁: 자주 묻는 질문으로 클릭률 높이기",
+    "category": "tips",
+    "mainKeyword": "구글 비즈니스 Q&A",
+    "extendedKeywords": [
+      "GBP Q&A 최적화",
+      "구글 비즈니스 팁",
+      "로컬 SEO 팁"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "5분",
+    "published": false
+  },
+  {
+    "id": 352,
+    "slug": "semrush-keyword-usage-tips-keyword-500",
+    "title": "SEMrush 키워드 매직 툴 활용 팁: 롱테일 키워드 500개 빠르게 추출하기",
+    "category": "tips",
+    "mainKeyword": "SEMrush 키워드 팁",
+    "extendedKeywords": [
+      "SEMrush 팁",
+      "키워드 리서치 팁",
+      "롱테일 키워드 찾기"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 353,
+    "slug": "instagram-reels-tips",
+    "title": "Instagram Reels 자막 자동 생성 팁: 접근성과 시청 완료율을 동시에 높이는 법",
+    "category": "tips",
+    "mainKeyword": "릴스 자막 팁",
+    "extendedKeywords": [
+      "인스타그램 자막",
+      "릴스 접근성",
+      "자막 자동 생성"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "5분",
+    "published": false
+  },
+  {
+    "id": 354,
+    "slug": "optimization-tips-google-blog",
+    "title": "티스토리 카테고리 구조 최적화 팁: 구글이 좋아하는 블로그 구조 만들기",
+    "category": "tips",
+    "mainKeyword": "티스토리 구조 팁",
+    "extendedKeywords": [
+      "티스토리 카테고리",
+      "블로그 구조 SEO",
+      "티스토리 최적화 팁"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 355,
+    "slug": "notion-ai-tips-10",
+    "title": "Notion AI 글 초안 작성 팁: 아이디어에서 완성 글까지 10분에 끝내기",
+    "category": "tips",
+    "mainKeyword": "Notion AI 글쓰기",
+    "extendedKeywords": [
+      "Notion AI 팁",
+      "노션 AI 활용",
+      "노션 AI 글쓰기"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 356,
+    "slug": "google-analytics-4-tips",
+    "title": "구글 Analytics 4 맞춤 이벤트 설정 팁: 내 비즈니스에 맞는 데이터 수집하기",
+    "category": "tips",
+    "mainKeyword": "GA4 맞춤 이벤트",
+    "extendedKeywords": [
+      "GA4 커스텀 이벤트",
+      "구글 애널리틱스 팁",
+      "GA4 설정 팁"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 357,
+    "slug": "naver-tips-strategy",
+    "title": "네이버 밴드 게시글 알림 팁: 멤버 참여도를 높이는 발행 전략",
+    "category": "tips",
+    "mainKeyword": "네이버 밴드 알림 팁",
+    "extendedKeywords": [
+      "밴드 게시글 팁",
+      "네이버 밴드 참여",
+      "밴드 마케팅 팁"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "5분",
+    "published": false
+  },
+  {
+    "id": 358,
+    "slug": "kakao-tips",
+    "title": "카카오채널 세그먼트 메시지 팁: 고객 분류별 맞춤 메시지로 전환율 올리기",
+    "category": "tips",
+    "mainKeyword": "카카오채널 세그먼트",
+    "extendedKeywords": [
+      "카카오 타겟 메시지",
+      "채널 세그먼트",
+      "카카오 개인화"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 359,
+    "slug": "google-search-usage-tips-content-strategy",
+    "title": "구글 검색어 보고서 활용 팁: 서치콘솔 데이터로 콘텐츠 전략 개선하기",
+    "category": "tips",
+    "mainKeyword": "검색어 보고서 팁",
+    "extendedKeywords": [
+      "서치콘솔 팁",
+      "검색어 분석",
+      "콘텐츠 개선 팁"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 360,
+    "slug": "wordpress-5-tips",
+    "title": "WordPress 플러그인 없이 사이트 속도 올리는 5가지 팁",
+    "category": "tips",
+    "mainKeyword": "WordPress 속도 팁",
+    "extendedKeywords": [
+      "워드프레스 속도",
+      "플러그인 없이 최적화",
+      "WordPress 성능"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 361,
+    "slug": "linkedin-vs",
+    "title": "LinkedIn 아티클 vs 게시물: 언제 어떤 형식을 써야 성과가 높은가",
+    "category": "tips",
+    "mainKeyword": "LinkedIn 아티클 팁",
+    "extendedKeywords": [
+      "링크드인 아티클",
+      "LinkedIn 포스트 팁",
+      "링크드인 콘텐츠 형식"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 362,
+    "slug": "blogshortform-usage-tips",
+    "title": "웨비나 영상을 블로그·숏폼·뉴스레터로 재활용하는 팁",
+    "category": "tips",
+    "mainKeyword": "웨비나 콘텐츠 재활용",
+    "extendedKeywords": [
+      "콘텐츠 리퍼포징",
+      "웨비나 활용",
+      "콘텐츠 재활용 팁"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 363,
+    "slug": "brand-tips-tools-brand",
+    "title": "브랜드 컬러 팔레트 만드는 팁: 무료 도구로 전문가급 브랜드 색상 설정하기",
+    "category": "tips",
+    "mainKeyword": "브랜드 컬러 팔레트",
+    "extendedKeywords": [
+      "브랜드 색상",
+      "컬러 팔레트 설정",
+      "브랜드 디자인 팁"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "5분",
+    "published": false
+  },
+  {
+    "id": 364,
+    "slug": "apple-podcast-keyword-optimization-tips",
+    "title": "Apple Podcast 키워드 최적화 팁: 팟캐스트 앱에서 발견되는 에피소드 만들기",
+    "category": "tips",
+    "mainKeyword": "팟캐스트 키워드 팁",
+    "extendedKeywords": [
+      "팟캐스트 SEO 팁",
+      "Apple Podcast 키워드",
+      "팟캐스트 검색 최적화"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 365,
+    "slug": "tips-ahrefs-strategy-analytics",
+    "title": "경쟁사 백링크 훔쳐보기 팁: Ahrefs로 경쟁자 링크 전략 분석하는 법",
+    "category": "tips",
+    "mainKeyword": "경쟁사 백링크 분석",
+    "extendedKeywords": [
+      "경쟁사 링크 분석",
+      "Ahrefs 팁",
+      "백링크 경쟁 분석"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 366,
+    "slug": "marketing-tools-20-0-marketing",
+    "title": "소상공인을 위한 무료 마케팅 도구 20선: 예산 0원으로 시작하는 디지털 마케팅",
+    "category": "tips",
+    "mainKeyword": "소상공인 무료 도구",
+    "extendedKeywords": [
+      "소상공인 마케팅",
+      "무료 디지털 마케팅",
+      "창업 마케팅 팁"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 367,
+    "slug": "runway-vs-capcut-ai-editing-tools",
+    "title": "Runway vs CapCut: AI 영상 편집 도구 어느 것이 더 실용적인가",
+    "category": "insights",
+    "mainKeyword": "Runway vs CapCut",
+    "extendedKeywords": [
+      "AI 영상 편집 비교",
+      "Runway 비교",
+      "CapCut AI"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 368,
+    "slug": "pinterest-analytics-content",
+    "title": "한국 Pinterest 사용자 데이터 분석: 어떤 콘텐츠가 저장되고 클릭되나",
+    "category": "insights",
+    "mainKeyword": "한국 Pinterest 분석",
+    "extendedKeywords": [
+      "핀터레스트 한국",
+      "Pinterest 한국 사용자",
+      "핀터레스트 데이터"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 369,
+    "slug": "z-marketing-tiktok-bereal",
+    "title": "Z세대 마케팅 채널 우선순위 변화: TikTok에서 BeReal로, 다음은 어디인가",
+    "category": "insights",
+    "mainKeyword": "Z세대 마케팅 채널",
+    "extendedKeywords": [
+      "Z세대 SNS",
+      "Z세대 트렌드",
+      "Z세대 플랫폼"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 370,
+    "slug": "makecom-automation-roi-analytics",
+    "title": "Make.com 자동화 ROI 분석: 월 구독료 대비 실제 절감 시간 계산법",
+    "category": "insights",
+    "mainKeyword": "Make.com ROI",
+    "extendedKeywords": [
+      "Make 비용 효율",
+      "자동화 ROI",
+      "Make 절감 분석"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 371,
+    "slug": "marketing-revenue",
+    "title": "국내 제휴 마케팅 생태계 현황: 어떤 플랫폼이 가장 수익이 높은가",
+    "category": "insights",
+    "mainKeyword": "제휴 마케팅 생태계",
+    "extendedKeywords": [
+      "어필리에이트 플랫폼",
+      "제휴 현황",
+      "국내 제휴 분석"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 372,
+    "slug": "community-creator-revenue-discordpatreon-case-analytics",
+    "title": "커뮤니티 플랫폼이 크리에이터 수익에 미치는 영향: Discord·Patreon 사례 분석",
+    "category": "insights",
+    "mainKeyword": "커뮤니티 수익 분석",
+    "extendedKeywords": [
+      "Discord 수익",
+      "Patreon 분석",
+      "커뮤니티 수익화"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 373,
+    "slug": "ai-tools-method-2026-analytics",
+    "title": "AI 영상 도구가 유튜버 작업 방식을 바꾸는 방법: 2026년 제작 트렌드 분석",
+    "category": "insights",
+    "mainKeyword": "AI 영상 유튜버 변화",
+    "extendedKeywords": [
+      "AI 영상 트렌드",
+      "유튜버 제작 방식",
+      "AI 영상 제작"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 374,
+    "slug": "2026-revenue",
+    "title": "국내 온라인 강의 시장 현황 2026: 어느 카테고리가 수익이 높은가",
+    "category": "insights",
+    "mainKeyword": "온라인 강의 시장",
+    "extendedKeywords": [
+      "온라인 교육 시장 분석",
+      "강의 카테고리",
+      "에듀테크 현황"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 375,
+    "slug": "naver-vs-google",
+    "title": "네이버 스마트플레이스 vs 구글 비즈니스 프로필: 로컬 비즈니스 어디에 더 집중해야 하나",
+    "category": "insights",
+    "mainKeyword": "로컬 SEO 플랫폼 비교",
+    "extendedKeywords": [
+      "스마트플레이스 vs 구글",
+      "로컬 비즈니스 플랫폼",
+      "로컬 SEO 비교"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 376,
+    "slug": "stable-diffusion-vs-midjourney-2026",
+    "title": "Stable Diffusion vs Midjourney: 2026년 상업적 사용 현황과 선택 기준",
+    "category": "insights",
+    "mainKeyword": "AI 이미지 도구 2026",
+    "extendedKeywords": [
+      "Stable Diffusion 비교",
+      "Midjourney 상업적",
+      "AI 이미지 선택"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 377,
+    "slug": "kakao-ads-vs-google-ads-comparison",
+    "title": "카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교",
+    "category": "insights",
+    "mainKeyword": "카카오 vs 구글 광고",
+    "extendedKeywords": [
+      "광고 플랫폼 비교",
+      "카카오 광고 효율",
+      "국내 광고 분석"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 378,
+    "slug": "marketing-2026",
+    "title": "국내 이메일 마케팅 현황 2026: 오픈율·클릭률 업종별 벤치마크 데이터",
+    "category": "insights",
+    "mainKeyword": "이메일 마케팅 현황",
+    "extendedKeywords": [
+      "이메일 오픈율 평균",
+      "업종별 이메일 성과",
+      "이메일 벤치마크"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 379,
+    "slug": "social-ads-analytics-ads-strategy",
+    "title": "소셜미디어 광고 효율 하락의 원인 분석: 광고 피로도와 대안 전략",
+    "category": "insights",
+    "mainKeyword": "소셜 광고 효율 하락",
+    "extendedKeywords": [
+      "광고 피로도",
+      "소셜 광고 CPM",
+      "광고 효율 저하"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 380,
+    "slug": "perplexity-vs-chatgpt-content-tools-comparison-analytics",
+    "title": "Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석",
+    "category": "insights",
+    "mainKeyword": "Perplexity vs ChatGPT",
+    "extendedKeywords": [
+      "Perplexity 비교",
+      "AI 리서치 도구",
+      "ChatGPT 검색"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 381,
+    "slug": "capcut-reels-10-editing",
+    "title": "CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스",
+    "category": "case-study",
+    "mainKeyword": "CapCut 릴스 케이스",
+    "extendedKeywords": [
+      "CapCut 성공 사례",
+      "릴스 편집 케이스",
+      "숏폼 조회수 케이스"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 382,
+    "slug": "stable-diffusion-sns-content-90-brand",
+    "title": "Stable Diffusion으로 SNS 콘텐츠 제작비 90% 절감한 브랜드 케이스",
+    "category": "case-study",
+    "mainKeyword": "Stable Diffusion 브랜드 케이스",
+    "extendedKeywords": [
+      "AI 이미지 비용 절감",
+      "SD 상업적 케이스",
+      "AI 이미지 마케팅 사례"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 383,
+    "slug": "optimization-ads-2-shopping",
+    "title": "전환율 최적화로 광고비 절반에 매출 2배 달성한 쇼핑몰 케이스",
+    "category": "case-study",
+    "mainKeyword": "CRO 쇼핑몰 케이스",
+    "extendedKeywords": [
+      "전환율 최적화 사례",
+      "쇼핑몰 CRO",
+      "매출 개선 케이스"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 384,
+    "slug": "pinterest-1000-brand",
+    "title": "Pinterest로 이커머스 월 매출 1000만 원 늘린 핸드메이드 브랜드 케이스",
+    "category": "case-study",
+    "mainKeyword": "Pinterest 이커머스 케이스",
+    "extendedKeywords": [
+      "핀터레스트 쇼핑",
+      "이커머스 Pinterest",
+      "핸드메이드 마케팅"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 385,
+    "slug": "performance-max-roas-4",
+    "title": "Performance Max 도입 후 ROAS 4배 개선된 온라인몰 케이스",
+    "category": "case-study",
+    "mainKeyword": "Performance Max 케이스",
+    "extendedKeywords": [
+      "PMax 사례",
+      "구글 AI 광고 케이스",
+      "ROAS 개선 사례"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 386,
+    "slug": "brand-35",
+    "title": "브랜드 감사 후 리브랜딩으로 전환율 35% 올린 스타트업 케이스",
+    "category": "case-study",
+    "mainKeyword": "브랜드 감사 케이스",
+    "extendedKeywords": [
+      "리브랜딩 사례",
+      "브랜드 개선 케이스",
+      "브랜드 전환율"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 387,
+    "slug": "apple-podcast-10-creator-seo-strategy",
+    "title": "Apple Podcast 상위 10위 달성한 크리에이터의 SEO 전략 케이스",
+    "category": "case-study",
+    "mainKeyword": "팟캐스트 상위 케이스",
+    "extendedKeywords": [
+      "Apple Podcast 성공 사례",
+      "팟캐스트 SEO 케이스",
+      "팟캐스트 상위 노출"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 388,
+    "slug": "community-500",
+    "title": "커뮤니티 빌딩으로 제품 출시 첫날 500개 판매한 케이스",
+    "category": "case-study",
+    "mainKeyword": "커뮤니티 제품 출시 케이스",
+    "extendedKeywords": [
+      "커뮤니티 론칭 사례",
+      "팬 커뮤니티 케이스",
+      "제품 출시 마케팅"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 389,
+    "slug": "kakao-ads-optimization-cpl-50-brand",
+    "title": "카카오모먼트 광고 최적화로 CPL 50% 절감한 교육 브랜드 케이스",
+    "category": "case-study",
+    "mainKeyword": "카카오 광고 최적화 케이스",
+    "extendedKeywords": [
+      "카카오모먼트 사례",
+      "CPL 절감 케이스",
+      "교육 광고 케이스"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 390,
+    "slug": "45-saas",
+    "title": "소셜 증명 강화 후 신규 고객 전환율 45% 향상된 SaaS 케이스",
+    "category": "case-study",
+    "mainKeyword": "소셜 증명 케이스",
+    "extendedKeywords": [
+      "리뷰 마케팅 사례",
+      "소셜 프루프 케이스",
+      "SaaS 전환율"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 391,
+    "slug": "threads-brand-follower-5000-strategy",
+    "title": "국내 Threads 브랜드 계정 성공 케이스: 첫 달 팔로워 5000명 달성 전략",
+    "category": "case-study",
+    "mainKeyword": "Threads 브랜드 케이스",
+    "extendedKeywords": [
+      "Threads 브랜드 성장",
+      "Meta Threads 한국 사례",
+      "Threads 마케팅 케이스"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 392,
+    "slug": "elevenlabs-ai-80",
+    "title": "ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스",
+    "category": "case-study",
+    "mainKeyword": "ElevenLabs 나레이션 케이스",
+    "extendedKeywords": [
+      "AI 음성 사례",
+      "팟캐스트 제작비 절감",
+      "ElevenLabs 케이스"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 393,
+    "slug": "youtube-community-1000",
+    "title": "YouTube Community 게시물로 영상 없이 구독자 1000명 유지한 케이스",
+    "category": "case-study",
+    "mainKeyword": "유튜브 커뮤니티 케이스",
+    "extendedKeywords": [
+      "유튜브 Community 사례",
+      "구독자 유지 케이스",
+      "Community 탭 케이스"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 394,
+    "slug": "marketing-b2b-50",
+    "title": "웨비나 마케팅으로 B2B 리드 50개 확보한 스타트업 케이스",
+    "category": "case-study",
+    "mainKeyword": "웨비나 B2B 케이스",
+    "extendedKeywords": [
+      "웨비나 리드 사례",
+      "B2B 웨비나",
+      "온라인 세미나 케이스"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 395,
+    "slug": "google-ads-3",
+    "title": "Google Ads 스마트 캠페인으로 소상공인 월 예약 3배 늘린 케이스",
+    "category": "case-study",
+    "mainKeyword": "구글 스마트 광고 케이스",
+    "extendedKeywords": [
+      "스마트 캠페인 사례",
+      "소상공인 구글 광고",
+      "예약 증가 케이스"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 396,
+    "slug": "analytics-keyword-2-blog",
+    "title": "경쟁사 분석으로 키워드 갭 찾아 트래픽 2배 늘린 블로그 케이스",
+    "category": "case-study",
+    "mainKeyword": "키워드 갭 케이스",
+    "extendedKeywords": [
+      "경쟁사 키워드 케이스",
+      "키워드 갭 사례",
+      "트래픽 2배 케이스"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 397,
+    "slug": "marketing-automation-3",
+    "title": "소상공인 마케팅 자동화 도입 성공 케이스: 혼자서 3개 채널 운영하기",
+    "category": "case-study",
+    "mainKeyword": "소상공인 자동화 케이스",
+    "extendedKeywords": [
+      "소상공인 마케팅 사례",
+      "자동화 운영 케이스",
+      "1인 마케팅"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 398,
+    "slug": "spotify-200",
+    "title": "Spotify 팟캐스트로 강의 수강생 200명 모은 케이스: 팟캐스트 → 교육 퍼널",
+    "category": "case-study",
+    "mainKeyword": "팟캐스트 강의 퍼널 케이스",
+    "extendedKeywords": [
+      "Spotify 팟캐스트 케이스",
+      "팟캐스트 수강생",
+      "음성 콘텐츠 퍼널"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 399,
+    "slug": "instagram-close-friends-300",
+    "title": "인스타그램 Close Friends 기능으로 멤버십 월 구독자 300명 모은 케이스",
+    "category": "case-study",
+    "mainKeyword": "Close Friends 멤버십 케이스",
+    "extendedKeywords": [
+      "Close Friends 수익화 사례",
+      "인스타 멤버십 케이스",
+      "VIP 콘텐츠 케이스"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 400,
+    "slug": "brand-1",
+    "title": "소셜 리스닝으로 경쟁사 취약점을 발견해 시장 점유율 높인 브랜드 케이스",
+    "category": "case-study",
+    "mainKeyword": "소셜 리스닝 케이스",
+    "extendedKeywords": [
+      "소셜 모니터링 사례",
+      "경쟁사 분석 케이스",
+      "브랜드 성장 케이스"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 401,
+    "slug": "seo-advanced-optimization-google-50-keyword",
+    "title": "티스토리 SEO 심화 최적화 후 구글 상위 50개 키워드 달성 케이스",
+    "category": "case-study",
+    "mainKeyword": "티스토리 SEO 케이스",
+    "extendedKeywords": [
+      "티스토리 구글 상위",
+      "티스토리 트래픽 케이스",
+      "블로그 SEO 사례"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 402,
+    "slug": "discord-community-200-saas",
+    "title": "Discord 커뮤니티 운영으로 제품 개선 아이디어 200개 수집한 SaaS 케이스",
+    "category": "case-study",
+    "mainKeyword": "Discord 제품 개선 케이스",
+    "extendedKeywords": [
+      "Discord 고객 피드백",
+      "SaaS 커뮤니티",
+      "Discord 운영 사례"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 403,
+    "slug": "ahrefs-analytics-20-blog-6",
+    "title": "Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스",
+    "category": "case-study",
+    "mainKeyword": "Ahrefs 백링크 케이스",
+    "extendedKeywords": [
+      "Ahrefs 사용 사례",
+      "백링크 구축 케이스",
+      "도메인 점수 케이스"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 404,
+    "slug": "ads-2",
+    "title": "고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스",
+    "category": "case-study",
+    "mainKeyword": "페르소나 전환율 케이스",
+    "extendedKeywords": [
+      "고객 페르소나 사례",
+      "광고 전환 개선",
+      "타겟팅 최적화 케이스"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 405,
+    "slug": "google-discover-analytics",
+    "title": "구글 Discover로 유입된 독자의 뉴스레터 전환율 분석 케이스",
+    "category": "case-study",
+    "mainKeyword": "Discover 뉴스레터 케이스",
+    "extendedKeywords": [
+      "Discover 유입 분석",
+      "뉴스레터 전환 케이스",
+      "Discover 독자 행동"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 406,
+    "slug": "linkedin-b2b-20",
+    "title": "LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스",
+    "category": "case-study",
+    "mainKeyword": "LinkedIn 뉴스레터 케이스",
+    "extendedKeywords": [
+      "링크드인 리드 케이스",
+      "B2B 뉴스레터 사례",
+      "LinkedIn 수익 케이스"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 407,
+    "slug": "makecom-google-sheets-automation-content-90",
+    "title": "Make.com + Google Sheets 자동화로 콘텐츠 관리 시간 90% 줄인 케이스",
+    "category": "case-study",
+    "mainKeyword": "Make 구글시트 자동화 케이스",
+    "extendedKeywords": [
+      "Make 시트 자동화",
+      "콘텐츠 관리 자동화",
+      "Make 케이스 스터디"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 408,
+    "slug": "30",
+    "title": "세일즈 퍼널 이메일 시퀀스로 무료 강의 수강생의 30%를 유료로 전환한 케이스",
+    "category": "case-study",
+    "mainKeyword": "이메일 퍼널 전환 케이스",
+    "extendedKeywords": [
+      "이메일 시퀀스 사례",
+      "무료→유료 전환",
+      "퍼널 이메일 케이스"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 409,
+    "slug": "content-500-revenue",
+    "title": "제품 없이 콘텐츠만으로 월 500만 원 수익 만든 인포프리너 케이스",
+    "category": "case-study",
+    "mainKeyword": "인포프리너 케이스",
+    "extendedKeywords": [
+      "정보 제품 수익",
+      "콘텐츠 수익화 케이스",
+      "인포프리너"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 410,
+    "slug": "shorts-vs-reels-vs-clips-algorithm-comparison-analytics",
+    "title": "국내 Shorts vs 릴스 vs 클립 알고리즘 비교 분석: 플랫폼별 도달률 차이",
+    "category": "insights",
+    "mainKeyword": "숏폼 알고리즘 비교",
+    "extendedKeywords": [
+      "Shorts vs 릴스",
+      "숏폼 플랫폼 분석",
+      "숏폼 알고리즘"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 411,
+    "slug": "brand-analytics-marketing",
+    "title": "브랜드 스토리텔링 효과 분석: 감성 마케팅이 실제 전환율에 미치는 영향",
+    "category": "insights",
+    "mainKeyword": "브랜드 스토리텔링 효과",
+    "extendedKeywords": [
+      "감성 마케팅 분석",
+      "스토리텔링 전환",
+      "브랜드 스토리 효과"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 412,
+    "slug": "2026-content-marketing-aicommunity",
+    "title": "2026년 콘텐츠 마케팅 트렌드: AI·커뮤니티·개인화가 만드는 새로운 게임 규칙",
+    "category": "insights",
+    "mainKeyword": "콘텐츠 마케팅 트렌드 2026",
+    "extendedKeywords": [
+      "마케팅 트렌드",
+      "콘텐츠 AI",
+      "개인화 마케팅"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 413,
+    "slug": "chatgpt-seo-strategy-ai-search",
+    "title": "포스트 ChatGPT 시대 SEO 전략: AI가 답변하는 시대에서 검색 트래픽 지키기",
+    "category": "insights",
+    "mainKeyword": "포스트 ChatGPT SEO",
+    "extendedKeywords": [
+      "AI 검색 대응",
+      "ChatGPT 이후 SEO",
+      "AI 시대 SEO"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 414,
+    "slug": "ads-comparison-creator",
+    "title": "유료 구독 모델과 광고 모델 비교: 크리에이터에게 어느 것이 더 안정적인가",
+    "category": "insights",
+    "mainKeyword": "구독 vs 광고 모델",
+    "extendedKeywords": [
+      "수익 모델 비교",
+      "구독 수익",
+      "광고 수익 분석"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 415,
+    "slug": "marketing-2026-analytics",
+    "title": "국내 소상공인 디지털 마케팅 현황 2026: 예산·채널·성과 실태 분석",
+    "category": "insights",
+    "mainKeyword": "소상공인 디지털 마케팅 현황",
+    "extendedKeywords": [
+      "소상공인 마케팅 현황",
+      "소상공인 디지털",
+      "로컬 비즈니스 분석"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 416,
+    "slug": "creator-strategy-7-method",
+    "title": "크리에이터 번아웃 예방 전략: 지속 가능한 창작 루틴을 만드는 7가지 방법",
+    "category": "guide",
+    "mainKeyword": "크리에이터 번아웃 예방",
+    "extendedKeywords": [
+      "창작 지속성",
+      "번아웃 방지",
+      "크리에이터 루틴"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 417,
+    "slug": "1-creator-guide",
+    "title": "1인 크리에이터를 위한 법인 설립 가이드: 사업 확장 시점과 법인 전환 이점",
+    "category": "guide",
+    "mainKeyword": "크리에이터 법인 설립",
+    "extendedKeywords": [
+      "법인 전환",
+      "크리에이터 법인",
+      "사업자 법인"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 418,
+    "slug": "blog-adsense-revenue-complete-guide-ads-rpm-optimization-str",
+    "title": "블로그 AdSense 수익 극대화 완전 가이드: 광고 단위·위치·RPM 최적화 전략",
+    "category": "guide",
+    "mainKeyword": "AdSense 수익 극대화",
+    "extendedKeywords": [
+      "애드센스 최적화",
+      "AdSense RPM",
+      "블로그 광고 수익"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 419,
+    "slug": "naver-complete-guide-blog-ads-revenue-strategy",
+    "title": "네이버 애드포스트 완전 가이드: 블로그 광고 수익 극대화하는 설정 전략",
+    "category": "guide",
+    "mainKeyword": "네이버 애드포스트",
+    "extendedKeywords": [
+      "애드포스트 수익",
+      "네이버 블로그 광고",
+      "애드포스트 최적화"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 420,
+    "slug": "b2b-marketing-complete-guide-content-strategy",
+    "title": "B2B 마케팅 완전 가이드: 기업 대 기업 콘텐츠 전략으로 리드 창출하기",
+    "category": "guide",
+    "mainKeyword": "B2B 마케팅 가이드",
+    "extendedKeywords": [
+      "B2B 콘텐츠",
+      "B2B 리드 생성",
+      "기업 마케팅"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 421,
+    "slug": "marketing-complete-guide",
+    "title": "리뷰 마케팅 완전 가이드: 긍정 리뷰를 자동으로 모으는 시스템 구축법",
+    "category": "guide",
+    "mainKeyword": "리뷰 마케팅",
+    "extendedKeywords": [
+      "리뷰 수집",
+      "고객 후기 관리",
+      "리뷰 시스템"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 422,
+    "slug": "instagram-ads-complete-guide",
+    "title": "인스타그램 광고 캠페인 구조 완전 가이드: 목적별 최적 캠페인 설계법",
+    "category": "guide",
+    "mainKeyword": "인스타그램 광고 구조",
+    "extendedKeywords": [
+      "인스타 광고 설정",
+      "Meta 광고 캠페인",
+      "인스타 광고 최적화"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 423,
+    "slug": "ads-complete-guide-naver-shopping-ads-strategy",
+    "title": "스마트스토어 광고 완전 가이드: 네이버 쇼핑 광고로 매출 올리는 전략",
+    "category": "guide",
+    "mainKeyword": "스마트스토어 광고",
+    "extendedKeywords": [
+      "네이버 쇼핑 광고",
+      "스마트스토어 마케팅",
+      "쇼핑 검색 광고"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 424,
+    "slug": "google-tag-manager-beginner-guide-method",
+    "title": "Google Tag Manager 입문 가이드: 마케터가 직접 스크립트 관리하는 방법",
+    "category": "guide",
+    "mainKeyword": "Google Tag Manager",
+    "extendedKeywords": [
+      "GTM 설정",
+      "태그 매니저",
+      "GTM 입문"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 425,
+    "slug": "naver-modoo-complete-guide",
+    "title": "네이버 모두(Modoo!) 홈페이지 제작 완전 가이드: 무료로 비즈니스 사이트 만들기",
+    "category": "guide",
+    "mainKeyword": "네이버 모두 홈페이지",
+    "extendedKeywords": [
+      "모두 홈페이지",
+      "네이버 무료 홈페이지",
+      "Modoo 가이드"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 426,
+    "slug": "seo-complete-guide-search-optimization-strategy",
+    "title": "이커머스 SEO 완전 가이드: 상품 페이지부터 카테고리까지 검색 최적화 전략",
+    "category": "guide",
+    "mainKeyword": "이커머스 SEO",
+    "extendedKeywords": [
+      "쇼핑몰 SEO",
+      "온라인몰 검색 최적화",
+      "상품 SEO"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "10분",
+    "published": false
+  },
+  {
+    "id": 427,
+    "slug": "instagram-ads-ab-7-tips-2",
+    "title": "인스타그램 광고 AB 테스트 7가지 팁: 같은 예산으로 2배 성과 내는 법",
+    "category": "tips",
+    "mainKeyword": "인스타그램 광고 AB 테스트",
+    "extendedKeywords": [
+      "Meta 광고 AB 테스트",
+      "인스타 광고 팁",
+      "광고 최적화 팁"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 428,
+    "slug": "google-tag-manager-tips",
+    "title": "Google Tag Manager 트리거 설정 팁: 버튼 클릭과 폼 제출 정확히 추적하기",
+    "category": "tips",
+    "mainKeyword": "GTM 트리거 팁",
+    "extendedKeywords": [
+      "GTM 설정 팁",
+      "태그 매니저 팁",
+      "이벤트 추적 팁"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 429,
+    "slug": "optimization-7-tips",
+    "title": "스마트스토어 상품 이미지 최적화 7가지 팁: 첫 번째 사진이 구매율을 결정한다",
+    "category": "tips",
+    "mainKeyword": "스마트스토어 이미지 팁",
+    "extendedKeywords": [
+      "쇼핑몰 상품 사진",
+      "스마트스토어 사진 팁",
+      "상품 이미지 최적화"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 430,
+    "slug": "revenue-5-tips-rpm",
+    "title": "애드센스 수익 낮을 때 확인해야 할 5가지 팁: RPM 하락 원인 진단법",
+    "category": "tips",
+    "mainKeyword": "애드센스 수익 하락 팁",
+    "extendedKeywords": [
+      "애드센스 RPM 하락",
+      "AdSense 수익 낮음",
+      "광고 수익 개선 팁"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 431,
+    "slug": "b2b-content-marketing-tips-content",
+    "title": "B2B 콘텐츠 마케팅 이메일 팁: 구매 결정자를 움직이는 콘텐츠 형식",
+    "category": "tips",
+    "mainKeyword": "B2B 이메일 팁",
+    "extendedKeywords": [
+      "B2B 이메일 전략",
+      "기업 마케팅 이메일",
+      "B2B 콘텐츠 팁"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 432,
+    "slug": "naver-seo-tips-search",
+    "title": "네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기",
+    "category": "tips",
+    "mainKeyword": "네이버 모두 SEO 팁",
+    "extendedKeywords": [
+      "모두 홈페이지 팁",
+      "Modoo SEO",
+      "무료 홈페이지 검색 노출"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "5분",
+    "published": false
+  },
+  {
+    "id": 433,
+    "slug": "seo-tips",
+    "title": "이커머스 카테고리 페이지 SEO 팁: 상품보다 카테고리에 먼저 투자해야 하는 이유",
+    "category": "tips",
+    "mainKeyword": "카테고리 페이지 SEO",
+    "extendedKeywords": [
+      "이커머스 카테고리 SEO",
+      "쇼핑몰 카테고리 최적화",
+      "카테고리 트래픽"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 434,
+    "slug": "youtube-tips",
+    "title": "유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성",
+    "category": "tips",
+    "mainKeyword": "유튜브 멤버십 특혜",
+    "extendedKeywords": [
+      "유튜브 멤버십 팁",
+      "채널 멤버십 혜택",
+      "유튜브 유료 멤버"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 435,
+    "slug": "marketing-tips-7-method",
+    "title": "리뷰 마케팅 팁: 고객이 자발적으로 후기를 남기게 만드는 7가지 방법",
+    "category": "tips",
+    "mainKeyword": "자발적 리뷰 팁",
+    "extendedKeywords": [
+      "후기 유도 팁",
+      "리뷰 수집 방법",
+      "고객 리뷰 팁"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 436,
+    "slug": "ga4-usage-tips-strategy",
+    "title": "GA4 세그먼트 활용 팁: 방문자를 분류해서 맞춤 전략 수립하는 법",
+    "category": "tips",
+    "mainKeyword": "GA4 세그먼트 팁",
+    "extendedKeywords": [
+      "GA4 방문자 분류",
+      "구글 애널리틱스 세그먼트",
+      "GA4 분석 팁"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
+  },
+  {
+    "id": 437,
+    "slug": "ads-cpmcpc-analytics-ads",
+    "title": "국내 광고 플랫폼별 CPM·CPC 벤치마크 분석: 어디에 광고비를 써야 하나",
+    "category": "insights",
+    "mainKeyword": "광고 플랫폼 CPM 분석",
+    "extendedKeywords": [
+      "CPM 벤치마크",
+      "CPC 비교",
+      "광고비 효율"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 438,
+    "slug": "google-performance-max-analytics-automation-ads",
+    "title": "구글 Performance Max 실제 성과 분석: 자동화 광고의 빛과 그림자",
+    "category": "insights",
+    "mainKeyword": "Performance Max 분석",
+    "extendedKeywords": [
+      "PMax 성과",
+      "AI 광고 분석",
+      "Performance Max 한계"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 439,
+    "slug": "seo-google-shopping",
+    "title": "이커머스 SEO와 구글 쇼핑 노출의 관계: 상품 데이터 품질이 트래픽을 결정한다",
+    "category": "insights",
+    "mainKeyword": "이커머스 SEO 구글 쇼핑",
+    "extendedKeywords": [
+      "구글 쇼핑 SEO",
+      "상품 데이터 최적화",
+      "이커머스 검색 노출"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 440,
+    "slug": "b2b-marketing-roi-method",
+    "title": "B2B 마케팅 ROI 측정 방법: 리드 품질을 수치화하는 프레임워크",
+    "category": "insights",
+    "mainKeyword": "B2B 마케팅 ROI",
+    "extendedKeywords": [
+      "B2B 리드 측정",
+      "B2B ROI 계산",
+      "기업 마케팅 효율"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 441,
+    "slug": "naver-vs-google-revenue-comparison-analytics",
+    "title": "네이버 애드포스트 vs 구글 애드센스: 국내 블로거를 위한 수익 비교 분석",
+    "category": "insights",
+    "mainKeyword": "애드포스트 vs 애드센스",
+    "extendedKeywords": [
+      "블로그 광고 비교",
+      "애드센스 한국",
+      "애드포스트 수익 비교"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 442,
+    "slug": "gtm-marketing",
+    "title": "GTM으로 마케팅 데이터 품질 높이는 인사이트: 잘못된 태그가 의사결정을 망친다",
+    "category": "insights",
+    "mainKeyword": "GTM 데이터 품질",
+    "extendedKeywords": [
+      "태그 관리 인사이트",
+      "GTM 오류",
+      "마케팅 데이터 품질"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 443,
+    "slug": "1-creator-analytics",
+    "title": "1인 크리에이터가 법인으로 전환했을 때의 실제 변화: 세금·비용·신뢰도 분석",
+    "category": "insights",
+    "mainKeyword": "크리에이터 법인 효과",
+    "extendedKeywords": [
+      "크리에이터 법인 분석",
+      "법인 전환 효과",
+      "1인 사업 vs 법인"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "9분",
+    "published": false
+  },
+  {
+    "id": 444,
+    "slug": "marketing",
+    "title": "국내 리뷰 마케팅 현황: 소비자 구매 결정에서 후기의 영향력 데이터",
+    "category": "insights",
+    "mainKeyword": "리뷰 마케팅 현황",
+    "extendedKeywords": [
+      "리뷰 영향력",
+      "소비자 리뷰 데이터",
+      "후기 마케팅 분석"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 445,
+    "slug": "ads-analytics-ads-vs-brand-ads",
+    "title": "스마트스토어 광고 효율 분석: 상품 광고 vs 브랜드 광고 어느 것이 더 효과적인가",
+    "category": "insights",
+    "mainKeyword": "스마트스토어 광고 분석",
+    "extendedKeywords": [
+      "스마트스토어 광고 효율",
+      "네이버 상품 광고",
+      "브랜드 광고 비교"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "8분",
+    "published": false
+  },
+  {
+    "id": 446,
+    "slug": "gtm-ga4",
+    "title": "GTM으로 GA4 이벤트 자동 추적 설정한 이커머스 케이스",
+    "category": "case-study",
+    "mainKeyword": "GTM GA4 케이스",
+    "extendedKeywords": [
+      "GTM 이커머스 사례",
+      "GA4 이벤트 케이스",
+      "태그 매니저 케이스"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 447,
+    "slug": "naver-optimization-revenue-30-100",
+    "title": "네이버 애드포스트 최적화로 월 수익 30만 원에서 100만 원으로 높인 케이스",
+    "category": "case-study",
+    "mainKeyword": "애드포스트 수익 케이스",
+    "extendedKeywords": [
+      "애드포스트 최적화 사례",
+      "네이버 블로그 수익 케이스",
+      "광고 수익 증가"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 448,
+    "slug": "b2b-content-marketing-6-30",
+    "title": "B2B 콘텐츠 마케팅으로 6개월 만에 영업 사이클 30% 단축한 스타트업 케이스",
+    "category": "case-study",
+    "mainKeyword": "B2B 콘텐츠 케이스",
+    "extendedKeywords": [
+      "B2B 마케팅 사례",
+      "영업 사이클 단축",
+      "B2B 콘텐츠 효과"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 449,
+    "slug": "seo-300-growth-shopping",
+    "title": "이커머스 SEO로 오가닉 트래픽 300% 성장시킨 쇼핑몰 케이스",
+    "category": "case-study",
+    "mainKeyword": "이커머스 SEO 케이스",
+    "extendedKeywords": [
+      "쇼핑몰 트래픽 케이스",
+      "이커머스 SEO 사례",
+      "온라인몰 SEO"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 450,
+    "slug": "creator",
+    "title": "크리에이터 법인 전환 후 세금 절약과 투자 유치 성공한 케이스",
+    "category": "case-study",
+    "mainKeyword": "크리에이터 법인 케이스",
+    "extendedKeywords": [
+      "법인 전환 사례",
+      "크리에이터 세금 케이스",
+      "법인 투자 유치"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 451,
+    "slug": "automation-google-38-46",
+    "title": "리뷰 자동화 시스템 구축 후 구글 평점 3.8에서 4.6으로 올린 케이스",
+    "category": "case-study",
+    "mainKeyword": "리뷰 자동화 케이스",
+    "extendedKeywords": [
+      "구글 리뷰 개선",
+      "리뷰 수집 자동화",
+      "평점 향상 케이스"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 452,
+    "slug": "instagram-ads-ab-ads-45-brand",
+    "title": "인스타그램 광고 A/B 테스트로 광고 비용 45% 절감한 패션 브랜드 케이스",
+    "category": "case-study",
+    "mainKeyword": "인스타 광고 AB 케이스",
+    "extendedKeywords": [
+      "Meta 광고 A/B 사례",
+      "인스타 광고 최적화 케이스",
+      "광고 비용 절감 케이스"
+    ],
+    "author": "김민혁",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 453,
+    "slug": "ads-roas-8-usage-brand-ads-strategy",
+    "title": "스마트스토어 광고 ROAS 8배 달성한 생활용품 브랜드의 광고 전략 케이스",
+    "category": "case-study",
+    "mainKeyword": "스마트스토어 ROAS 케이스",
+    "extendedKeywords": [
+      "스마트스토어 광고 사례",
+      "네이버 광고 ROAS",
+      "생활용품 광고 케이스"
+    ],
+    "author": "박준영",
+    "estimatedReadTime": "7분",
+    "published": false
+  },
+  {
+    "id": 454,
+    "slug": "perplexity-seo-content-80",
+    "title": "Perplexity로 SEO 콘텐츠 조사 시간을 80% 줄인 에디터 케이스",
+    "category": "case-study",
+    "mainKeyword": "Perplexity 리서치 케이스",
+    "extendedKeywords": [
+      "Perplexity SEO 사례",
+      "AI 리서치 케이스",
+      "콘텐츠 조사 효율"
+    ],
+    "author": "이지수",
+    "estimatedReadTime": "6분",
+    "published": false
   }
 ]
