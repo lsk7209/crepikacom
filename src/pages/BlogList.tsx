@@ -1,11 +1,11 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Clock, Calendar, ArrowRight, Tag, User, Search } from "lucide-react";
+import { Clock, Calendar, ArrowRight, Tag, User, Search, BookOpen, Lightbulb, TrendingUp, Award } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getAllBlogPosts, BlogPost } from "@/data/blog-content";
 import { Input } from "@/components/ui/input";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 
 const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
     'guide': '가이드',
@@ -14,11 +14,18 @@ const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
     'case-study': '케이스 스터디'
 };
 
-const CATEGORY_THUMBNAILS: Record<BlogPost['category'], string> = {
-    'guide': '/images/og-guide.png',
-    'tips': '/images/og-tips.png',
-    'insights': '/images/og-insights.png',
-    'case-study': '/images/og-case-study.png',
+const CATEGORY_GRADIENTS: Record<BlogPost['category'], string> = {
+    'guide':        'from-blue-600 to-cyan-500',
+    'tips':         'from-violet-600 to-purple-500',
+    'insights':     'from-amber-500 to-orange-500',
+    'case-study':   'from-emerald-600 to-teal-500',
+};
+
+const CATEGORY_ICONS: Record<BlogPost['category'], React.ElementType> = {
+    'guide': BookOpen,
+    'tips': Lightbulb,
+    'insights': TrendingUp,
+    'case-study': Award,
 };
 
 const POSTS_PER_PAGE = 12;
@@ -204,16 +211,19 @@ export default function BlogList() {
                             className="group"
                         >
                             <Card className="h-full transition-all hover:shadow-lg hover:scale-105 hover:border-primary/50 overflow-hidden">
-                                <div className="w-full h-36 overflow-hidden">
-                                    <img
-                                        src={CATEGORY_THUMBNAILS[post.category]}
-                                        alt={CATEGORY_LABELS[post.category]}
-                                        className="w-full h-full object-cover"
-                                        loading="lazy"
-                                        width="1200"
-                                        height="630"
-                                    />
-                                </div>
+                                {(() => {
+                                    const Icon = CATEGORY_ICONS[post.category];
+                                    return (
+                                        <div className={`w-full h-36 bg-gradient-to-br ${CATEGORY_GRADIENTS[post.category]} flex flex-col items-center justify-center gap-2 relative overflow-hidden`}>
+                                            <Icon className="h-10 w-10 text-white/80" />
+                                            <span className="text-xs text-white/70 font-medium px-3 text-center line-clamp-1">
+                                                {post.keywords[0]}
+                                            </span>
+                                            <div className="absolute -right-4 -bottom-4 w-20 h-20 rounded-full bg-white/10" />
+                                            <div className="absolute -left-3 -top-3 w-14 h-14 rounded-full bg-white/5" />
+                                        </div>
+                                    );
+                                })()}
                                 <CardHeader>
                                     <div className="flex items-center justify-between mb-3">
                                         <Badge variant="outline">

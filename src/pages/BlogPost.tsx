@@ -1,6 +1,6 @@
 import { useParams, Navigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Clock, Calendar, ArrowLeft, ArrowRight, ExternalLink, Share2, Copy, Check } from "lucide-react";
+import { Clock, Calendar, ArrowLeft, ArrowRight, ExternalLink, Share2, Copy, Check, BookOpen, Lightbulb, TrendingUp, Award } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,9 +10,30 @@ import { getToolById } from "@/data/tools-config";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { MarkdownContent } from "@/lib/markdown";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const SITE_URL = "https://crepika.com";
+
+const CATEGORY_GRADIENTS: Record<string, string> = {
+    guide:          'from-blue-600/20 to-cyan-500/10',
+    tips:           'from-violet-600/20 to-purple-500/10',
+    insights:       'from-amber-500/20 to-orange-500/10',
+    'case-study':   'from-emerald-600/20 to-teal-500/10',
+};
+
+const CATEGORY_ACCENT: Record<string, string> = {
+    guide:          'text-blue-500 bg-blue-500/10',
+    tips:           'text-violet-500 bg-violet-500/10',
+    insights:       'text-amber-500 bg-amber-500/10',
+    'case-study':   'text-emerald-500 bg-emerald-500/10',
+};
+
+const CATEGORY_ICONS: Record<string, React.ElementType> = {
+    guide: BookOpen,
+    tips: Lightbulb,
+    insights: TrendingUp,
+    'case-study': Award,
+};
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 const CATEGORY_OG_IMAGES: Record<string, string> = {
@@ -161,6 +182,22 @@ export default function BlogPost() {
                     <span>/</span>
                     <span className="text-foreground line-clamp-1">{post.title}</span>
                 </nav>
+
+                {/* Category Hero Banner */}
+                {(() => {
+                    const Icon = CATEGORY_ICONS[post.category] ?? BookOpen;
+                    return (
+                        <div className={`w-full rounded-2xl bg-gradient-to-br ${CATEGORY_GRADIENTS[post.category] ?? 'from-primary/20 to-primary/10'} border border-primary/10 p-6 mb-8 flex items-center gap-5`}>
+                            <div className={`p-3 rounded-xl ${CATEGORY_ACCENT[post.category] ?? 'text-primary bg-primary/10'} flex-shrink-0`}>
+                                <Icon className="h-9 w-9" />
+                            </div>
+                            <div>
+                                <Badge variant="secondary" className="mb-1">{CATEGORY_LABELS_KO[post.category] ?? post.category}</Badge>
+                                <p className="text-sm text-muted-foreground">{post.readTime} 읽기 · {post.author}</p>
+                            </div>
+                        </div>
+                    );
+                })()}
 
                 {/* Header */}
                 <header className="mb-12">
