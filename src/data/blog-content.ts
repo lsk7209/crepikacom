@@ -11,7 +11,8 @@ export interface BlogPost {
   content: {
     introduction: string;
     sections: {
-      heading: string;
+      heading?: string;
+      title?: string;
       content: string;
       subsections?: {
         subheading: string;

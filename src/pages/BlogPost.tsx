@@ -10,6 +10,7 @@ import { getToolById } from "@/data/tools-config";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { MarkdownContent } from "@/lib/markdown";
+import { AdSlot } from "@/components/ad/AdSlot";
 import React, { useState, useEffect, useRef } from "react";
 
 const SITE_URL = "https://crepika.com";
@@ -235,21 +236,28 @@ export default function BlogPost() {
                     <MarkdownContent content={post.content.introduction} className="text-lg" />
                 </section>
 
+                {/* Ad: after introduction */}
+                <AdSlot type="top" strategy="instant" className="mb-10" />
+
                 {/* Main Sections */}
                 {post.content.sections.map((section, idx) => (
-                    <section key={idx} className="mb-12">
-                        <h2 className="text-3xl font-bold mb-6" id={`section-${idx}`}>
-                            {section.heading}
-                        </h2>
-                        <MarkdownContent content={section.content} />
+                    <React.Fragment key={idx}>
+                        <section className="mb-12">
+                            <h2 className="text-3xl font-bold mb-6" id={`section-${idx}`}>
+                                {section.heading ?? section.title}
+                            </h2>
+                            <MarkdownContent content={section.content} />
 
-                        {section.subsections?.map((sub, subIdx) => (
-                            <div key={subIdx} className="ml-4 mb-6 pl-4 border-l-4 border-primary/20 mt-6">
-                                <h3 className="text-2xl font-semibold mb-4">{sub.subheading}</h3>
-                                <MarkdownContent content={sub.content} />
-                            </div>
-                        ))}
-                    </section>
+                            {section.subsections?.map((sub, subIdx) => (
+                                <div key={subIdx} className="ml-4 mb-6 pl-4 border-l-4 border-primary/20 mt-6">
+                                    <h3 className="text-2xl font-semibold mb-4">{sub.subheading}</h3>
+                                    <MarkdownContent content={sub.content} />
+                                </div>
+                            ))}
+                        </section>
+                        {/* Ad: after 2nd section */}
+                        {idx === 1 && <AdSlot type="bottom" strategy="instant" className="mb-10" />}
+                    </React.Fragment>
                 ))}
 
                 {/* Conclusion */}
@@ -257,6 +265,9 @@ export default function BlogPost() {
                     <h2 className="text-2xl font-bold mb-4">결론</h2>
                     <MarkdownContent content={post.content.conclusion} />
                 </section>
+
+                {/* Ad: after conclusion */}
+                <AdSlot type="bottom" strategy="instant" className="mb-10" />
 
                 {/* Author / E-E-A-T */}
                 <section className="mb-16 bg-card border rounded-3xl p-8 shadow-sm">
@@ -387,7 +398,7 @@ function ReadingProgressBar() {
     );
 }
 
-function TableOfContents({ sections }: { sections: { heading: string }[] }) {
+function TableOfContents({ sections }: { sections: { heading?: string; title?: string }[] }) {
     const [active, setActive] = useState(0);
     useEffect(() => {
         const handler = () => {
@@ -411,7 +422,7 @@ function TableOfContents({ sections }: { sections: { heading: string }[] }) {
                             href={`#section-${i}`}
                             className={`block px-2 py-1 rounded transition-colors ${active === i ? 'text-primary font-semibold bg-primary/10' : 'text-muted-foreground hover:text-primary'}`}
                         >
-                            {i + 1}. {s.heading}
+                            {i + 1}. {s.heading ?? s.title}
                         </a>
                     </li>
                 ))}
