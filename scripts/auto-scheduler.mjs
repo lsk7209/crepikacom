@@ -200,6 +200,8 @@ async function publishOne() {
     injectIntoBlogContent(post);
     injectIntoSitemap(post);
     injectIntoRss(post);
+    // Auto-fix quality issues (clichés, short description) before git push
+    try { execSync(`node scripts/fix-new-post.mjs "${post.slug}"`, { cwd: ROOT, stdio: 'inherit' }); } catch {}
     markPublished(entry);
     gitPush(post);
     await pingSearchEngines(post.slug);
