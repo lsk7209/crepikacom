@@ -476,7 +476,8 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "12분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 31,
@@ -491,7 +492,8 @@
     ],
     "author": "박준영",
     "estimatedReadTime": "10분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 32,
@@ -506,7 +508,8 @@
     ],
     "author": "박준영",
     "estimatedReadTime": "11분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 33,
@@ -521,7 +524,8 @@
     ],
     "author": "박준영",
     "estimatedReadTime": "11분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 34,

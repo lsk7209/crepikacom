@@ -268,6 +268,38 @@
     <guid>https://crepika.com/blog/content-calendar-annual-planning-guide</guid>
     <dc:creator>이지수</dc:creator>
   </item>
+  <item>
+    <title>크리에이터 수익화 완벽 가이드: 구독자 0명에서 월 수익 실현까지</title>
+    <link>https://crepika.com/blog/creator-monetization-complete-guide</link>
+    <description>유튜브, 인스타그램, 블로그 크리에이터를 위한 수익화 전략. 광고, 협찬, 디지털 상품, 멤버십까지 단계별 수익화 로드맵을 안내합니다.</description>
+    <pubDate>Wed, 07 May 2026 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/creator-monetization-complete-guide</guid>
+    <dc:creator>이지수</dc:creator>
+  </item>
+  <item>
+    <title>구글 서치 콘솔 완벽 가이드: 검색 데이터로 SEO 최적화하기</title>
+    <link>https://crepika.com/blog/google-search-console-guide</link>
+    <description>구글 서치 콘솔 설치부터 검색 성과 분석, 색인 관리, 오류 수정까지. GSC 데이터를 활용한 SEO 개선 전략을 단계별로 알아봅니다.</description>
+    <pubDate>Wed, 07 May 2026 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/google-search-console-guide</guid>
+    <dc:creator>박준영</dc:creator>
+  </item>
+  <item>
+    <title>GA4 구글 애널리틱스 4 입문 가이드: 데이터로 콘텐츠 전략 세우기</title>
+    <link>https://crepika.com/blog/ga4-google-analytics-beginner-guide</link>
+    <description>GA4 설치부터 핵심 보고서 해석, 이벤트 추적, 전환 설정까지. 데이터 초보자도 GA4로 사이트 개선 인사이트를 뽑아내는 방법을 안내합니다.</description>
+    <pubDate>Wed, 07 May 2026 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/ga4-google-analytics-beginner-guide</guid>
+    <dc:creator>박준영</dc:creator>
+  </item>
+  <item>
+    <title>Core Web Vitals 개선 가이드: LCP·INP·CLS 실전 최적화</title>
+    <link>https://crepika.com/blog/core-web-vitals-improvement-guide</link>
+    <description>구글 페이지 경험 신호인 Core Web Vitals(LCP·INP·CLS)를 실전에서 개선하는 방법. PageSpeed Insights 활용법과 단계별 최적화 체크리스트를 제공합니다.</description>
+    <pubDate>Wed, 07 May 2026 00:00:00 GMT</pubDate>
+    <guid>https://crepika.com/blog/core-web-vitals-improvement-guide</guid>
+    <dc:creator>박준영</dc:creator>
+  </item>
 
   <item>
     <title>소셜미디어 텍스트 최적화 완전 가이드: 플랫폼별 글자수·톤·구조 전략</title>
