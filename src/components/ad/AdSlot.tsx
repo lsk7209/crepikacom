@@ -44,25 +44,38 @@ export function AdSlot({ type, strategy, isProcessing, className, slotId }: AdSl
     (type === 'bottom' && strategy !== 'download_focused');
 
   useEffect(() => {
-    if (!visible || pushed.current) return;
+    // Only push when a real slotId is provided (manual ad unit).
+    // Auto-ads are served by the adsbygoogle.js script alone — no push needed.
+    if (!visible || pushed.current || !slotId) return;
     pushed.current = true;
     try {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
     } catch {
       // adsense not ready
     }
-  }, [visible]);
+  }, [visible, slotId]);
 
   if (!visible) return null;
 
+  // No slotId: render a spacing container for auto-ads natural placement.
+  if (!slotId) {
+    return (
+      <div
+        className={cn("w-full", MIN_HEIGHT[type], className)}
+        aria-hidden="true"
+        data-ad-placeholder={type}
+      />
+    );
+  }
+
+  // Manual ad unit with explicit slotId
   return (
     <div className={cn("w-full overflow-hidden", MIN_HEIGHT[type], className)}>
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}
         data-ad-client={AD_CLIENT}
-        data-ad-slot={slotId ?? ""}
+        data-ad-slot={slotId}
         data-ad-format={FORMAT[type]}
         data-full-width-responsive="true"
       />

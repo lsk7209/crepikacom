@@ -12,14 +12,14 @@
   "icons": [
     {
       "src": "/og-image.png",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "sizes": "1200x630",
+      "type": "image/png",
       "purpose": "any"
     },
     {
       "src": "/og-image.png",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "sizes": "1200x630",
+      "type": "image/png",
       "purpose": "maskable"
     }
   ],
@@ -27,7 +27,7 @@
     {
       "src": "/og-image.png",
       "sizes": "1200x630",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "form_factor": "wide",
       "label": "크레피카 메인 화면"
     }
