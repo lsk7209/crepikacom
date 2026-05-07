@@ -5310,7 +5310,7 @@ GSC에서 CWV 불량 URL을 확인하고, PageSpeed Insights로 구체적인 개
 2. 속성 만들기 → GA4 선택
 3. 데이터 스트림 → 웹 → URL 입력
 4. Measurement ID (G-XXXXXXXXXX) 복사
-5. `<head>` 태그에 다음 스크립트 삽입:
+5. HTML head 태그에 다음 스크립트 삽입:
 
 \`\`\`html
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
