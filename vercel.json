@@ -10,12 +10,6 @@
       ]
     },
     {
-      "source": "/(.*\\.(svg|png|ico|webp|jpg|jpeg|gif|woff|woff2|ttf))",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
       "source": "/(sitemap\\.xml|rss\\.xml|robots\\.txt|ads\\.txt)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600" }
