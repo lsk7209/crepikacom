@@ -1404,7 +1404,8 @@
     ],
     "author": "김민혁",
     "estimatedReadTime": "6분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 89,
@@ -1419,7 +1420,8 @@
     ],
     "author": "김민혁",
     "estimatedReadTime": "5분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 90,
@@ -1434,7 +1436,8 @@
     ],
     "author": "김민혁",
     "estimatedReadTime": "5분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 91,
