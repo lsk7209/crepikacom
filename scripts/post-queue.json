@@ -1516,7 +1516,8 @@
     ],
     "author": "김민혁",
     "estimatedReadTime": "5분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 96,
@@ -1531,7 +1532,8 @@
     ],
     "author": "김민혁",
     "estimatedReadTime": "5분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 97,
@@ -1546,7 +1548,8 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "5분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 98,
@@ -1561,7 +1564,8 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "5분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 99,
