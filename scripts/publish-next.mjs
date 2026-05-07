@@ -206,13 +206,28 @@ function buildUserPrompt(entry) {
 }
 
 function postToTs(post) {
-  const escaped = JSON.stringify(post, (key, value) => {
-    if (typeof value === 'string') return value.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-    return value;
-  }, 2);
-  return escaped
-    .replace(/"([^"]+)":/g, '$1:')
-    .replace(/"/g, "'");
+  // Serialize to JSON, then convert to TypeScript syntax.
+  // Use backtick template literals for string values to avoid single-quote
+  // escaping issues (the old approach caused \' → \\\' double-escaping via replacer).
+  const json = JSON.stringify(post, null, 2);
+
+  // Step 1: unquote simple identifier keys
+  let ts = json.replace(/"([a-zA-Z_][a-zA-Z0-9_]*)":/g, '$1:');
+
+  // Step 2: convert remaining "..." JSON strings to `...` backtick literals
+  // JSON body may contain: \\ \" \n \r \t \uXXXX
+  ts = ts.replace(/"((?:[^"\\]|\\.)*)"/g, (match, jsonBody) => {
+    let val;
+    try { val = JSON.parse('"' + jsonBody + '"'); } catch { return match; }
+    // Encode for backtick: escape \, `, ${
+    const bt = val
+      .replace(/\\/g, '\\\\')
+      .replace(/`/g, '\\`')
+      .replace(/\$\{/g, '\\${');
+    return '`' + bt + '`';
+  });
+
+  return ts;
 }
 
 function injectIntoBlogContent(post) {
