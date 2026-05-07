@@ -812,7 +812,8 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "8분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 52,
@@ -827,7 +828,8 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "9분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 53,
@@ -842,7 +844,8 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "7분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 54,
@@ -857,7 +860,8 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "7분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 55,
@@ -872,7 +876,8 @@
     ],
     "author": "김민혁",
     "estimatedReadTime": "8분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 56,
@@ -887,7 +892,8 @@
     ],
     "author": "김민혁",
     "estimatedReadTime": "10분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 57,
@@ -902,7 +908,8 @@
     ],
     "author": "박준영",
     "estimatedReadTime": "10분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 58,
@@ -917,7 +924,8 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "7분",
-    "published": false
+    "published": true,
+    "publishedDate": "2026-05-07"
   },
   {
     "id": 59,
