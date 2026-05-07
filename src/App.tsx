@@ -2,9 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import Home from "./pages/Home";
 import { KeyboardShortcutsModal } from "@/components/KeyboardShortcutsModal";
 import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
@@ -22,6 +22,13 @@ const queryClient = new QueryClient();
 
 function AppContent() {
   const { showHelp, setShowHelp } = useGlobalShortcuts();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof (window as any).gtag !== 'undefined') {
+      (window as any).gtag('config', 'G-P8LJ76FVM4', { page_path: location.pathname });
+    }
+  }, [location.pathname]);
 
   return (
     <>
