@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "@/hooks/use-toast";
 import { Upload, Download, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -20,7 +21,7 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
   const [webpDataUrl, setWebpDataUrl] = useState<string | null>(null);
   const [originalSize, setOriginalSize] = useState<number>(0);
   const [convertedSize, setConvertedSize] = useState<number>(0);
-  const [showHighResWarning, setShowHighResWarning] = useState(false);
+  const [quality, setQuality] = useState<string>("80");
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
@@ -50,7 +51,6 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
     setOriginalSize(selectedFile.size);
     setWebpDataUrl(null);
     setConvertedSize(0);
-    setShowHighResWarning(false);
     onError(null);
     onResult(null);
   };
@@ -70,15 +70,13 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
     onProcessing(true);
     onError(null);
 
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
     try {
       const reader = new FileReader();
       reader.onload = (e) => {
         const img = new Image();
         img.onload = () => {
-          if (img.width > MAX_DIMENSION || img.height > MAX_DIMENSION) {
-            setShowHighResWarning(true);
+          const isHighRes = img.width > MAX_DIMENSION || img.height > MAX_DIMENSION;
+          if (isHighRes) {
             toast({
               title: '경고',
               description: '고해상도 이미지는 브라우저가 느려질 수 있습니다.',
@@ -127,7 +125,7 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
 
               onResult(
                 <div className="space-y-4">
-                  {showHighResWarning && (
+                  {isHighRes && (
                     <Alert>
                       <AlertCircle className="h-4 w-4" />
                       <AlertDescription>
@@ -176,7 +174,7 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
               });
             },
             'image/webp',
-            0.8
+            parseInt(quality) / 100
           );
         };
         img.src = e.target?.result as string;
@@ -250,6 +248,21 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
             </AlertDescription>
           </Alert>
         )}
+
+        <div className="space-y-2">
+          <Label htmlFor="quality-select">변환 품질</Label>
+          <Select value={quality} onValueChange={setQuality}>
+            <SelectTrigger id="quality-select" aria-label="WebP 품질 선택">
+              <SelectValue placeholder="품질 선택" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="60">낮음 (60%) — 파일 크기 최소</SelectItem>
+              <SelectItem value="80">보통 (80%) — 균형</SelectItem>
+              <SelectItem value="90">높음 (90%) — 고화질</SelectItem>
+              <SelectItem value="95">최고 (95%) — 무손실에 가까움</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
     ),
     actionSlot: (

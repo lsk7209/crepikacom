@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -18,6 +18,11 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
   const [input, setInput] = useState("");
   const [shuffledTags, setShuffledTags] = useState("");
   const [copied, setCopied] = useState(false);
+  const copiedTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => { if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current); };
+  }, []);
 
   // Fisher-Yates shuffle algorithm
   const shuffleArray = <T,>(array: T[]): T[] => {
@@ -51,8 +56,14 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
       return cleaned.startsWith('#') ? cleaned : `#${cleaned}`;
     });
 
-    // Remove duplicates (case-insensitive)
-    const uniqueTags = [...new Set(normalizedTags.map(tag => tag.toLowerCase()))];
+    // Remove duplicates (case-insensitive, preserve original case)
+    const seen = new Set<string>();
+    const uniqueTags = normalizedTags.filter(tag => {
+      const lower = tag.toLowerCase();
+      if (seen.has(lower)) return false;
+      seen.add(lower);
+      return true;
+    });
 
     // Validate if any valid hashtags exist
     const validTags = uniqueTags.filter(tag => 
@@ -133,12 +144,13 @@ export function HashtagMixerTool({ onResult, onError }: HashtagMixerToolProps) {
     try {
       await navigator.clipboard.writeText(shuffledTags);
       trackCopyResult('hashtag-mixer');
+      if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current);
       setCopied(true);
       toast({
         title: '복사 완료',
         description: '해시태그가 클립보드에 복사되었습니다.',
       });
-      setTimeout(() => setCopied(false), 2000);
+      copiedTimerRef.current = setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       toast({
         variant: 'destructive',

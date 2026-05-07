@@ -45,7 +45,7 @@ export function ByteCounterTool({ onResult, onError }: ByteCounterToolProps) {
     const charsWithoutSpaces = input.replace(/\s/g, '').length;
     const lineCount = input.split('\n').length;
     const byteCount = calculateBytes(input);
-    const koreanCount = (input.match(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g) || []).length;
+    const koreanCount = (input.match(/[ㄱ-ㅎㅏ-ㅣ가-힣]/g) || []).length;
     const englishCount = (input.match(/[a-zA-Z]/g) || []).length;
 
     const result = (

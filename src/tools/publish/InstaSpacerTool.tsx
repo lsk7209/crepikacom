@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -16,6 +16,11 @@ export function InstaSpacerTool({ onResult, onError }: InstaSpacerToolProps) {
   const [text, setText] = useState("");
   const [formattedText, setFormattedText] = useState("");
   const [copied, setCopied] = useState(false);
+  const copiedTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => { if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current); };
+  }, []);
 
   const handleFormat = () => {
     if (!text.trim()) {
@@ -88,12 +93,13 @@ export function InstaSpacerTool({ onResult, onError }: InstaSpacerToolProps) {
     try {
       await navigator.clipboard.writeText(formattedText);
       trackCopyResult('insta-spacer');
+      if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current);
       setCopied(true);
       toast({
         title: '복사 완료',
         description: '클립보드에 복사되었습니다.',
       });
-      setTimeout(() => setCopied(false), 2000);
+      copiedTimerRef.current = setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       toast({
         variant: 'destructive',

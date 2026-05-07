@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
@@ -58,6 +58,11 @@ export function LoremGeneratorTool({ onResult, onError }: LoremGeneratorToolProp
   const [length, setLength] = useState<Length>('medium');
   const [generatedText, setGeneratedText] = useState("");
   const [copied, setCopied] = useState(false);
+  const copiedTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => { if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current); };
+  }, []);
 
   const handleGenerate = () => {
     trackToolUse('lorem-generator');
@@ -135,12 +140,13 @@ export function LoremGeneratorTool({ onResult, onError }: LoremGeneratorToolProp
     try {
       await navigator.clipboard.writeText(generatedText);
       trackCopyResult('lorem-generator');
+      if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current);
       setCopied(true);
       toast({
         title: '복사 완료',
         description: '텍스트가 클립보드에 복사되었습니다.',
       });
-      setTimeout(() => setCopied(false), 2000);
+      copiedTimerRef.current = setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       toast({
         variant: 'destructive',

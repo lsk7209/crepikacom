@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -19,6 +19,26 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
   const [url, setUrl] = useState("");
   const [qrDataUrl, setQrDataUrl] = useState<string | null>(null);
   const [showLongUrlWarning, setShowLongUrlWarning] = useState(false);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
+  }, []);
+
+  useEffect(() => {
+    if (!url.trim() || url.length < 4) return;
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      const normalizedUrl = normalizeUrl(url.trim());
+      QRCode.toDataURL(normalizedUrl, { width: 400, margin: 2, color: { dark: '#000000', light: '#FFFFFF' } })
+        .then(dataUrl => {
+          setQrDataUrl(dataUrl);
+          onError(null);
+          onResult(buildQrResult(dataUrl, url.length > MAX_URL_LENGTH));
+        })
+        .catch(() => {});
+    }, 400);
+  }, [url]);
 
   const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newUrl = e.target.value;
@@ -34,6 +54,36 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
     }
     return trimmed;
   };
+
+  const buildQrResult = (dataUrl: string, isLongUrl: boolean) => (
+    <div className="space-y-4">
+      {isLongUrl && (
+        <Alert>
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>
+            URL이 너무 깁니다. 단축 URL 사용을 권장합니다.
+          </AlertDescription>
+        </Alert>
+      )}
+      <div className="flex justify-center">
+        <div className="bg-white p-4 rounded-lg border-2 border-border inline-block">
+          <img
+            src={dataUrl}
+            alt="생성된 QR 코드"
+            className="w-64 h-64"
+          />
+        </div>
+      </div>
+      <Button
+        onClick={handleDownload}
+        className="w-full"
+        size="lg"
+      >
+        <Download className="mr-2 h-4 w-4" />
+        PNG 다운로드
+      </Button>
+    </div>
+  );
 
   const handleGenerate = async () => {
     if (!url.trim()) {
@@ -67,36 +117,7 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
       });
       setQrDataUrl(dataUrl);
       onError(null);
-
-      onResult(
-        <div className="space-y-4">
-          {showLongUrlWarning && (
-            <Alert>
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription>
-                URL이 너무 깁니다. 단축 URL 사용을 권장합니다.
-              </AlertDescription>
-            </Alert>
-          )}
-          <div className="flex justify-center">
-            <div className="bg-white p-4 rounded-lg border-2 border-border inline-block">
-              <img
-                src={dataUrl}
-                alt="생성된 QR 코드"
-                className="w-64 h-64"
-              />
-            </div>
-          </div>
-          <Button
-            onClick={handleDownload}
-            className="w-full"
-            size="lg"
-          >
-            <Download className="mr-2 h-4 w-4" />
-            PNG 다운로드
-          </Button>
-        </div>
-      );
+      onResult(buildQrResult(dataUrl, url.length > MAX_URL_LENGTH));
 
       toast({
         title: 'QR 코드 생성 완료',
