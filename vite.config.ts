@@ -25,6 +25,7 @@ export default defineConfig(({ mode }) => ({
           if (id.includes('node_modules/@radix-ui')) return 'ui';
           if (id.includes('node_modules/qrcode')) return 'qrcode';
           if (id.includes('node_modules/react-helmet')) return 'helmet';
+          if (id.includes('node_modules/recharts')) return 'recharts';
         },
       },
     },
