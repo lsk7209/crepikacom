@@ -2162,6 +2162,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["Make.com 자동화", "노코드 자동화", "Integromat", "SNS 자동화", "업무 자동화"],
   },
+  {
+    slug: "midjourney-advanced-usage-guide-brand-marketing-complete-mas",
+    title: "Midjourney 심화 활용 가이드: 브랜드 이미지와 마케팅 비주얼 제작 완전 정복",
+    description: "Midjourney로 브랜드 아이덴티티에 맞는 마케팅 비주얼을 제작하는 심화 가이드. 프롬프트 엔지니어링부터 일관된 브랜드 이미지 생성 실전법.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "22분",
+    author: "이지수",
+    keywords: ["Midjourney 활용법", "AI 이미지 생성", "브랜드 비주얼", "마케팅 이미지 제작", "Midjourney 프롬프트"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

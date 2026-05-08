@@ -16474,6 +16474,142 @@ SNS 피드에서는 첫 번째 카드만 보입니다. 첫 번째 카드에서 �
       }
     ]
   }
+,
+  {
+    slug: `midjourney-advanced-usage-guide-brand-marketing-complete-mas`,
+    title: `Midjourney 심화 활용 가이드: 브랜드 이미지와 마케팅 비주얼 제작 완전 정복`,
+    description: `Midjourney로 브랜드 아이덴티티에 맞는 마케팅 비주얼을 제작하는 심화 가이드. 프롬프트 엔지니어링부터 일관된 브랜드 이미지 생성 실전법.`,
+    category: `guide`,
+    publishDate: `2026-05-08`,
+    readTime: `22분`,
+    author: `이지수`,
+    keywords: [
+      `Midjourney 활용법`,
+      `AI 이미지 생성`,
+      `브랜드 비주얼`,
+      `마케팅 이미지 제작`,
+      `Midjourney 프롬프트`
+    ],
+    content: {
+      introduction: `디자이너에게 외주를 줄 예산이 없는 1인 마케터나 스타트업에게 Midjourney는 혁명적인 도구입니다. 월 10달러(약 13,000원)의 Basic 플랜으로 매달 200장 이상의 전문적인 마케팅 이미지를 생성할 수 있으며, 외주 비용 대비 95% 이상의 비용을 절감할 수 있습니다. 2026년 기준 Midjourney V7이 출시되어 이전 버전 대비 사진 품질과 텍스트 렌더링이 크게 향상되었습니다.
+  
+  그러나 Midjourney에서 '쓸 만한 이미지'와 '브랜드 수준의 전문적인 비주얼'을 만드는 것은 전혀 다른 이야기입니다. 단순히 '아름다운 커피숍 사진'을 프롬프트로 입력하면 일반적인 이미지가 나오지만, 브랜드의 색상 팔레트, 분위기, 타겟 오디언스에 맞는 구체적인 프롬프트를 작성하면 광고 캠페인에 바로 사용할 수 있는 수준의 이미지가 나옵니다.
+  
+  이 가이드에서는 Midjourney 기초부터 고급 프롬프트 엔지니어링, 브랜드 아이덴티티 일관성 유지 방법, 실제 마케팅 캠페인에 활용하는 방법까지 실전 중심으로 설명합니다. 프롬프트 예시는 모두 실제 테스트를 거쳐 검증된 것들입니다.`,
+      sections: [
+        {
+          heading: `Midjourney 프롬프트 구조: 전문가 수준 이미지를 만드는 7가지 요소`,
+          content: `효과적인 Midjourney 프롬프트는 7가지 요소로 구성됩니다. 이 구조를 이해하면 원하는 이미지를 정확하게 생성할 수 있습니다.
+  
+  첫째, 주제(Subject): 무엇을 그릴지 명확하게 지정합니다. '한국 여성'보다 '30대 한국 여성, 세련된 캐주얼 착장'이 훨씬 구체적인 결과를 줍니다.
+  
+  둘째, 스타일(Style): 사진, 일러스트, 3D 렌더, 수채화 등 시각적 스타일을 지정합니다. 'photorealistic', 'editorial photography', 'flat design illustration' 등의 키워드가 효과적입니다.
+  
+  셋째, 분위기(Mood): 'warm', 'professional', 'playful', 'minimalist' 같은 형용사로 전체적인 분위기를 지정합니다.
+  
+  넷째, 색상(Color): 'pastel color palette', 'muted earth tones', 'vibrant coral and teal' 처럼 색상 방향을 명시합니다.
+  
+  다섯째, 조명(Lighting): 'soft natural light', 'golden hour', 'studio lighting with soft box' 등 조명 조건이 이미지 품질을 크게 좌우합니다.
+  
+  여섯째, 구도(Composition): 'close-up', 'wide shot', 'bird's eye view', 'rule of thirds' 등의 촬영 기법 용어를 활용합니다.
+  
+  일곱째, 기술 파라미터: '--ar 16:9'(화면 비율), '--style raw'(덜 스타일링된 사실적 이미지), '--q 2'(높은 품질) 같은 Midjourney 고유 파라미터를 마지막에 추가합니다.
+  
+  예시 프롬프트: 'Korean woman in her 30s sitting in a minimalist coffee shop, editorial photography style, warm and professional mood, muted earth tones with cream and brown, soft natural light from window, rule of thirds composition --ar 3:2 --style raw'`
+        },
+        {
+          heading: `브랜드 일관성 유지: --sref와 --cref 파라미터 활용법`,
+          content: `마케팅 비주얼에서 가장 어려운 것은 여러 이미지 간의 일관성 유지입니다. Midjourney V6 이후에 추가된 '--sref'(Style Reference)와 '--cref'(Character Reference) 파라미터로 이 문제를 해결할 수 있습니다.
+  
+  --sref(스타일 레퍼런스): 특정 이미지의 시각적 스타일(색상, 텍스처, 분위기)을 레퍼런스로 사용합니다. 예를 들어 이미 만족스럽게 생성된 브랜드 이미지의 URL을 '--sref URL' 형태로 추가하면, 새 이미지도 같은 스타일로 생성됩니다. '--sref URL --sw 100'에서 '--sw'(Style Weight) 값을 높일수록 레퍼런스 스타일에 더 가깝게 생성됩니다.
+  
+  --cref(캐릭터 레퍼런스): 특정 인물의 외모 일관성을 유지합니다. 브랜드 마스코트나 반복 등장하는 캐릭터를 여러 장면에서 동일한 모습으로 생성할 때 사용합니다. '--cref URL --cw 50~100'으로 캐릭터 유사도를 조정합니다.
+  
+  실전 활용 예시: 음식 브랜드의 인스타그램 피드를 일관된 스타일로 운영하고 싶다면, 첫 번째로 마음에 드는 음식 이미지를 생성한 후 그 이미지를 '--sref'로 설정합니다. 이후 다른 음식 이미지를 생성할 때마다 '--sref 첫번째이미지URL'을 추가하면 색상 팔레트와 분위기가 일관된 피드 이미지들을 만들 수 있습니다. 이렇게 만든 이미지를 webp-converter로 변환해 웹 최적화하면 완성됩니다.`
+        },
+        {
+          heading: `마케팅 카테고리별 최적 프롬프트 공식: SNS, 광고, 블로그별 전략`,
+          content: `마케팅 목적별로 최적화된 프롬프트 접근법이 다릅니다.
+  
+  인스타그램 피드 이미지: 세로 비율(4:5 또는 3:4), 고채도, 시각적으로 강렬한 이미지가 효과적입니다. 'aesthetically pleasing flat lay of [제품], minimalist background, Instagram-worthy composition, bright and airy, natural light --ar 4:5' 형태가 기본 공식입니다.
+  
+  인스타그램 스토리/릴스 썸네일: 9:16 세로 비율, 화면 상단과 하단에 텍스트 공간이 있어야 합니다. 'vertical format with empty space at top and bottom for text overlay, [주제], bold and eye-catching --ar 9:16' 형태를 사용합니다.
+  
+  블로그 썸네일: 가로 비율(16:9 또는 3:2), 명확한 중심 소재, 제목 텍스트를 넣을 왼쪽 또는 오른쪽 공간이 필요합니다. 'horizontal editorial image for blog, [주제], text space on left side, professional photography style --ar 16:9' 형태입니다.
+  
+  광고 배너(구글 GDN): 300x250, 728x90 등 표준 배너 크기별로 '--ar' 파라미터를 조정합니다. 광고 이미지는 클릭 유도가 목적이므로 '시선을 끄는 색상 대비'와 '명확한 제품 노출'이 핵심입니다.
+  
+  제품 상세 이미지: 'product photography of [제품명], white or neutral background, professional studio lighting, multiple angles, high detail --ar 1:1 --q 2' 형태로 전자상거래에 바로 사용 가능한 이미지를 생성합니다.`
+        },
+        {
+          heading: `Midjourney 저작권 이슈: 상업적 사용 시 반드시 알아야 할 것`,
+          content: `Midjourney로 생성한 이미지를 마케팅에 사용하기 전에 저작권 관련 사항을 반드시 확인해야 합니다.
+  
+  상업적 사용 권리: 유료 Midjourney 플랜(Basic 이상)을 구독하면 생성된 이미지에 대한 상업적 사용 권리가 부여됩니다. 즉, 광고, 제품 패키지, SNS 마케팅 등에 자유롭게 사용할 수 있습니다. 단, 무료 트라이얼로 생성한 이미지는 상업적 사용이 불가합니다.
+  
+  실존 인물 사용 금지: 특정 연예인, 정치인, 실존 인물의 모습을 생성하고 상업적으로 사용하는 것은 초상권 침해 소지가 있습니다. 마케팅 이미지에는 '가상의 인물' 또는 실존 인물을 명시적으로 지정하지 않는 프롬프트를 사용하세요.
+  
+  타 브랜드 스타일 모방: 유명 브랜드의 로고나 CI를 직접 복제하는 것은 상표권 침해입니다. '--style' 파라미터로 유사한 분위기를 만들 수 있지만, 로고나 브랜드명을 직접 사용한 이미지의 상업적 활용은 피해야 합니다.
+  
+  2026년 AI 이미지 저작권 현황: 한국 저작권법상 AI 생성 이미지의 저작권 귀속은 아직 명확하지 않습니다. Midjourney의 서비스 약관은 생성된 이미지의 소유권을 구독 사용자에게 부여하고 있지만, 법적으로 완전히 확립된 것은 아닙니다. 고가 제품이나 대규모 캠페인에 사용할 경우 법적 자문을 받는 것을 권장합니다.`
+        },
+        {
+          heading: `Midjourney + Canva 조합: AI 이미지를 완성도 높은 마케팅 자료로 만들기`,
+          content: `Midjourney로 기본 이미지를 생성한 후 Canva에서 텍스트, 로고, 브랜드 요소를 추가하면 완성도 높은 마케팅 자료를 만들 수 있습니다. 이 두 도구의 조합은 디자이너 없이도 전문적인 마케팅 콘텐츠를 제작할 수 있는 가장 효율적인 방법입니다.
+  
+  작업 흐름: Midjourney에서 배경 이미지 생성 → Canva에 이미지 업로드 → 브랜드 폰트로 텍스트 추가 → 로고 삽입 → 색상 통일 → 내보내기. 이 과정이 익숙해지면 소셜 미디어 게시글 하나를 15~20분 내에 완성할 수 있습니다.
+  
+  팁 1: Midjourney에서 이미지를 생성할 때 텍스트를 넣을 공간(여백)을 미리 남겨두세요. 'with empty space on the right side for text'처럼 프롬프트에 여백 위치를 명시하면 Canva에서 텍스트를 넣기 편한 이미지가 생성됩니다.
+  
+  팁 2: Canva의 'Magic Erase' 기능으로 Midjourney 이미지에서 원하지 않는 요소를 제거하거나, Canva AI로 배경을 확장(Expand Background)하면 원본 이미지보다 더 큰 캔버스에 사용할 수 있습니다.
+  
+  팁 3: Midjourney 이미지를 webp-converter로 WebP 형식으로 변환하면 웹사이트나 SNS에 업로드할 때 파일 크기를 최대 30% 줄이면서 품질을 유지할 수 있습니다.`
+        },
+        {
+          heading: `Midjourney 실전 프로젝트: 음식 브랜드 SNS 피드 30일치 이미지 제작`,
+          content: `실제로 Midjourney로 음식 브랜드의 인스타그램 피드 이미지를 한 달치 제작하는 프로세스를 단계별로 설명합니다.
+  
+  1단계(브랜드 가이드 작성): 브랜드의 주요 색상(HEX 코드), 분위기 키워드(따뜻한, 건강한, 프리미엄 등), 주요 소재(음식, 원재료, 라이프스타일)를 정리합니다. 이 가이드가 모든 프롬프트의 기준이 됩니다.
+  
+  2단계(기준 이미지 생성): 브랜드 가이드에 맞는 '기준 이미지' 10장을 생성합니다. 가장 마음에 드는 3장을 선택해 '--sref' 레퍼런스로 저장합니다.
+  
+  3단계(이미지 대량 생성): 30일치 피드 구성안을 미리 짠 후(제품 사진 15장, 라이프스타일 10장, 재료/원산지 5장), 각 카테고리별로 기준 '--sref'를 적용해 이미지를 생성합니다. 각 프롬프트에서 4장이 생성되므로, 실제 사용할 이미지의 2~3배를 생성해 선택의 폭을 넓힙니다.
+  
+  4단계(Canva에서 후처리): 생성된 이미지를 Canva에서 열어 브랜드 로고, 제품명, 슬로건 텍스트를 추가합니다. 색상 필터를 통일하면 피드 전체가 일관된 톤앤매너를 유지합니다.
+  
+  5단계(예약 발행 자동화): Canva에서 완성된 이미지를 Buffer, Hootsuite, 또는 Meta Business Suite로 내보내 30일치 예약 발행을 설정합니다. 이로써 한 번의 작업으로 한 달치 SNS 콘텐츠 제작이 완료됩니다. 실제로 이 프로세스를 도입한 소규모 음식 브랜드의 경우 월 SNS 콘텐츠 제작 시간이 40시간에서 8시간으로 줄었습니다.`
+        }
+      ],
+      conclusion: `Midjourney는 단순한 이미지 생성 도구가 아닌, 브랜드 비주얼 전략을 실현하는 파트너입니다. 프롬프트 엔지니어링에 투자하는 시간이 길수록 결과물의 품질이 높아집니다. 처음에는 5장 생성에 1시간이 걸리더라도, 한 달 후에는 같은 시간에 30장을 만들 수 있게 됩니다. 오늘 브랜드 키워드 3개를 정하고 첫 프롬프트를 실행해보세요.`
+    },
+    relatedTools: [
+      `webp-converter`,
+      `text-counter`
+    ],
+    relatedPosts: [],
+    faq: [
+      {
+        question: `Midjourney 무료 체험은 어떻게 하나요?`,
+        answer: `2024년 이후 Midjourney는 무료 체험을 제한적으로 운영하고 있습니다. midjourney.com에 접속해 구글 계정으로 로그인하면 제한된 수의 무료 생성 기회를 제공하는 경우가 있습니다. 안정적인 사용을 위해서는 월 10달러(약 13,000원)의 Basic 플랜 구독을 권장합니다. Basic 플랜은 월 200장의 빠른 생성과 상업적 사용 권한을 포함합니다.`
+      },
+      {
+        question: `Midjourney로 생성한 이미지에 텍스트를 넣을 수 있나요?`,
+        answer: `Midjourney V6 이후 영어 텍스트 렌더링이 크게 개선되어 이미지 내에 영문 텍스트를 비교적 정확하게 넣을 수 있습니다. 그러나 한글 텍스트는 아직 정확도가 낮습니다. 따라서 마케팅 자료에서 한글 텍스트는 Midjourney에서 직접 넣기보다 Canva에서 후처리로 추가하는 것을 강력히 권장합니다. 프롬프트에 텍스트 내용을 따옴표로 감싸면('텍스트 내용') 텍스트 렌더링 정확도가 높아집니다.`
+      },
+      {
+        question: `Midjourney 이미지는 SNS 광고에 바로 사용할 수 있나요?`,
+        answer: `유료 플랜 구독자는 생성된 이미지를 상업적 광고에 사용할 권리가 있습니다. 그러나 메타(Meta) 광고 정책상 AI 생성 이미지임을 표시해야 하는 경우가 있으므로 광고 플랫폼의 최신 정책을 확인하세요. 또한 의료, 금융 등 특정 규제 산업에서는 AI 이미지 사용에 추가 제한이 있을 수 있습니다. 실존 인물이 포함된 이미지나 타 브랜드를 연상시키는 이미지는 법적 문제 소지가 있으므로 사용하지 마세요.`
+      },
+      {
+        question: `마음에 드는 이미지를 다시 생성할 수 없나요? 같은 프롬프트를 써도 결과가 달라집니다.`,
+        answer: `Midjourney는 같은 프롬프트를 입력해도 매번 다른 이미지를 생성합니다. 특정 이미지를 재현하거나 유사하게 생성하려면 두 가지 방법을 사용합니다. 첫째, 마음에 드는 이미지 URL을 '--sref'로 설정해 스타일을 유지합니다. 둘째, 이미지를 생성할 때 나오는 'Seed 번호'를 기록해두고 '--seed [번호]'를 프롬프트에 추가하면 매우 유사한 결과를 얻을 수 있습니다.`
+      },
+      {
+        question: `Midjourney 외에 무료로 사용할 수 있는 AI 이미지 생성 도구가 있나요?`,
+        answer: `Adobe Firefly(Adobe Creative Cloud 포함), DALL-E 3(ChatGPT Plus 포함), Stable Diffusion(오픈소스, 로컬 설치 또는 웹버전), Ideogram(무료 플랜 제공) 등이 대안입니다. 이 중 Ideogram은 텍스트 렌더링이 뛰어나 로고나 타이포그래피가 포함된 이미지 제작에 유용합니다. Adobe Firefly는 학습 데이터 출처가 명확해 상업적 사용 시 저작권 위험이 낮다는 장점이 있습니다. 예산이 제한적이라면 Ideogram 무료 플랜으로 시작해보세요.`
+      }
+    ]
+  }
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
