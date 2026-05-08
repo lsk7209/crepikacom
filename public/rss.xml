@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Fri, 08 May 2026 02:39:55 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 08 May 2026 06:50:43 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -1934,6 +1934,16 @@
     <pubDate>Fri, 08 May 2026 02:39:55 GMT</pubDate>
     <guid>https://crepika.com/blog/midjourney-advanced-usage-guide-brand-marketing-complete-mas</guid>
     <dc:creator>이지수</dc:creator>
+  </item>
+
+
+  <item>
+    <title>Sora AI 영상 생성 가이드: OpenAI Sora로 마케팅 영상 제작하는 실전 방법</title>
+    <link>https://crepika.com/blog/sora-ai-guide-openai-sora-marketing-practical-method</link>
+    <description>OpenAI Sora로 마케팅 영상을 제작하는 실전 가이드. 텍스트 프롬프트부터 영상 편집 연동까지 광고·SNS 영상 제작 비용을 90% 줄이는 방법.</description>
+    <pubDate>Fri, 08 May 2026 06:50:43 GMT</pubDate>
+    <guid>https://crepika.com/blog/sora-ai-guide-openai-sora-marketing-practical-method</guid>
+    <dc:creator>박준영</dc:creator>
   </item>
 
 </channel>

@@ -2172,6 +2172,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["Midjourney 활용법", "AI 이미지 생성", "브랜드 비주얼", "마케팅 이미지 제작", "Midjourney 프롬프트"],
   },
+  {
+    slug: "sora-ai-guide-openai-sora-marketing-practical-method",
+    title: "Sora AI 영상 생성 가이드: OpenAI Sora로 마케팅 영상 제작하는 실전 방법",
+    description: "OpenAI Sora로 마케팅 영상을 제작하는 실전 가이드. 텍스트 프롬프트부터 영상 편집 연동까지 광고·SNS 영상 제작 비용을 90% 줄이는 방법.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "18분",
+    author: "박준영",
+    keywords: ["Sora AI", "AI 영상 생성", "OpenAI Sora", "마케팅 영상 제작", "AI 비디오 생성"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
