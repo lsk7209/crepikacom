@@ -2152,6 +2152,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["Discord 커뮤니티", "Discord 서버 구축", "Discord 마케팅", "크리에이터 커뮤니티", "Discord 수익화"],
   },
+  {
+    slug: "makecom-automation-complete-guide-snsgoogle",
+    title: "Make.com 자동화 완전 가이드: 노코드로 SNS·이메일·구글시트를 연결하는 법",
+    description: "Make.com으로 반복 업무를 자동화하는 실전 가이드. SNS 게시글 자동 발행, 이메일 자동화, 구글 시트 연동까지 노코드로 구현하는 방법.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "21분",
+    author: "김민혁",
+    keywords: ["Make.com 자동화", "노코드 자동화", "Integromat", "SNS 자동화", "업무 자동화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
