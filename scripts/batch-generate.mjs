@@ -11,6 +11,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { spawn } from 'child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT          = join(__dirname, '..');
@@ -23,12 +24,6 @@ const BLOG_CONTENT  = join(ROOT, 'src', 'data', 'blog-content.ts');
 mkdirSync(DRAFTS_DIR, { recursive: true });
 mkdirSync(FAILED_DIR, { recursive: true });
 
-const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
-if (!ANTHROPIC_API_KEY && process.argv[2] !== '--status') {
-  console.error('❌ ANTHROPIC_API_KEY 없음'); process.exit(1);
-}
-
-const MODEL       = 'claude-sonnet-4-6';
 const CONCURRENCY = 3;
 const MAX_RETRIES = 3;
 
@@ -116,24 +111,27 @@ const AUTHOR_PERSONAS = {
 명확하고 단계적인 문체로, 구체적 도구명과 사용법을 포함해 작성하세요.`,
 };
 
-// ── Claude API 호출 ───────────────────────────────────────────
-async function callClaude(system, user) {
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': ANTHROPIC_API_KEY,
-      'anthropic-version': '2023-06-01',
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 16000,
-      system,
-      messages: [{ role: 'user', content: user }],
-    }),
+// ── claude CLI 호출 (API키 불필요) ────────────────────────────
+function callClaude(system, user) {
+  return new Promise((resolve, reject) => {
+    const fullPrompt = system ? `${system}\n\n---\n${user}` : user;
+    const proc = spawn('claude', ['--print', '--dangerously-skip-permissions'], {
+      stdio: ['pipe', 'pipe', 'pipe'],
+    });
+    const timer = setTimeout(() => { proc.kill(); reject(new Error('타임아웃 (3분)')); }, 180000);
+    let out = '';
+    let err = '';
+    proc.stdout.on('data', d => out += d.toString());
+    proc.stderr.on('data', d => err += d.toString());
+    proc.on('close', code => {
+      clearTimeout(timer);
+      if (code !== 0 && code !== null) reject(new Error(`claude exit ${code}: ${err.slice(0, 100)}`));
+      else resolve(out.trim());
+    });
+    proc.on('error', e => { clearTimeout(timer); reject(e); });
+    proc.stdin.write(fullPrompt, 'utf-8');
+    proc.stdin.end();
   });
-  if (!res.ok) throw new Error(`API ${res.status}: ${await res.text()}`);
-  return (await res.json()).content[0].text;
 }
 
 // ── 단일 글 생성 ──────────────────────────────────────────────

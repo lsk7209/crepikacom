@@ -11,7 +11,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
+import { execSync, spawnSync } from 'child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -19,12 +19,7 @@ const BLOG_CONTENT  = join(ROOT, 'src', 'data', 'blog-content.ts');
 const META_SCRIPT   = join(ROOT, 'scripts', 'gen-meta.mjs');
 const REPORT_FILE   = join(ROOT, 'scripts', 'quality-report-final.json');
 
-const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const DRY = process.argv[2] === '--dry';
-
-if (!ANTHROPIC_API_KEY && !DRY) { console.error('❌ ANTHROPIC_API_KEY 없음'); process.exit(1); }
-
-const MODEL = 'claude-sonnet-4-6';
 const BATCH_SIZE = 50;
 const CLICHE_WORDS = ['결론적으로', '중요한 것은', '매우 중요합니다', '이러한 측면에서', '다시 말해서', '한마디로 말씀드리면'];
 
@@ -94,24 +89,18 @@ function scoreSegment(seg) {
   return { score: Math.min(score, 100), issues, sectionCount: sections.length, faqCount: faqs.length };
 }
 
-// ── Claude API ────────────────────────────────────────────────
+// ── claude CLI 호출 (API키 불필요) ────────────────────────────
 async function callClaude(system, user) {
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': ANTHROPIC_API_KEY,
-      'anthropic-version': '2023-06-01',
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 8000,
-      system,
-      messages: [{ role: 'user', content: user }],
-    }),
+  const fullPrompt = system ? `${system}\n\n---\n${user}` : user;
+  const result = spawnSync('claude', ['--print', '--dangerously-skip-permissions'], {
+    input: fullPrompt,
+    encoding: 'utf-8',
+    maxBuffer: 20 * 1024 * 1024,
+    timeout: 180000,
   });
-  if (!res.ok) throw new Error(`API ${res.status}: ${await res.text()}`);
-  return (await res.json()).content[0].text;
+  if (result.error) throw result.error;
+  if (result.status !== 0) throw new Error(`claude exit ${result.status}`);
+  return result.stdout.trim();
 }
 
 // ── 특정 약점 구간만 보강 요청 ────────────────────────────────

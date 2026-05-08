@@ -9,16 +9,12 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { spawnSync } from 'child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 const QUEUE_FILE  = join(ROOT, 'scripts', 'post-queue.json');
 const OUTPUT_FILE = join(ROOT, 'scripts', 'titles-input.json');
-
-const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
-if (!ANTHROPIC_API_KEY) { console.error('❌ ANTHROPIC_API_KEY 없음'); process.exit(1); }
-
-const MODEL = 'claude-sonnet-4-6';
 
 // ── 3인 페르소나 정의 ─────────────────────────────────────────
 const PERSONAS = [
@@ -67,24 +63,18 @@ function isDuplicate(title, existingTitles, threshold = 0.6) {
   return false;
 }
 
-// ── Claude API 호출 ───────────────────────────────────────────
+// ── claude CLI 호출 (API키 불필요) ────────────────────────────
 async function callClaude(system, user) {
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': ANTHROPIC_API_KEY,
-      'anthropic-version': '2023-06-01',
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 8000,
-      system,
-      messages: [{ role: 'user', content: user }],
-    }),
+  const fullPrompt = system ? `${system}\n\n---\n${user}` : user;
+  const result = spawnSync('claude', ['--print', '--dangerously-skip-permissions'], {
+    input: fullPrompt,
+    encoding: 'utf-8',
+    maxBuffer: 20 * 1024 * 1024,
+    timeout: 300000, // 5분
   });
-  if (!res.ok) throw new Error(`API 오류 ${res.status}: ${await res.text()}`);
-  return (await res.json()).content[0].text;
+  if (result.error) throw result.error;
+  if (result.status !== 0) throw new Error(`claude exit ${result.status}`);
+  return result.stdout.trim();
 }
 
 // ── 1 페르소나에서 N개 제목 생성 ─────────────────────────────
@@ -159,26 +149,23 @@ async function main() {
 
   for (const persona of PERSONAS) {
     console.log(`\n[${persona.name}] ${persona.role}`);
-    let batch = await generateTitlesForPersona(persona, allTitles, 115);
-
-    // 중복 제거
     const deduped = [];
-    for (const item of batch) {
-      if (!item.title || isDuplicate(item.title, allTitles)) continue;
-      deduped.push(item);
-      allTitles.push(item.title);
-    }
 
-    // 100개 부족 시 재시도
-    if (deduped.length < 100) {
-      console.log(`  ↻ ${persona.name} 부족 (${deduped.length}/100) — 추가 생성...`);
-      const extra = await generateTitlesForPersona(persona, allTitles, 100 - deduped.length + 20);
-      for (const item of extra) {
+    // 50개씩 최대 4번 호출해서 100개 채우기
+    for (let round = 1; round <= 4 && deduped.length < 100; round++) {
+      const need = Math.min(60, 100 - deduped.length + 10); // 10개 버퍼
+      console.log(`  📝 ${persona.name} 라운드${round} — ${need}개 요청`);
+      const batch = await generateTitlesForPersona(persona, allTitles, need);
+
+      for (const item of batch) {
         if (deduped.length >= 100) break;
         if (!item.title || isDuplicate(item.title, allTitles)) continue;
         deduped.push(item);
         allTitles.push(item.title);
       }
+      console.log(`  ✓ 라운드${round} 후 누적: ${deduped.length}/100`);
+
+      if (deduped.length >= 100) break;
     }
 
     const final = deduped.slice(0, 100);
