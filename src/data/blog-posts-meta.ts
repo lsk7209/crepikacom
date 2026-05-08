@@ -2202,6 +2202,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["전환율 최적화", "CRO", "A/B 테스트", "랜딩페이지 최적화", "웹사이트 전환율"],
   },
+  {
+    slug: "optimization-complete-guide",
+    title: "랜딩페이지 최적화 완전 가이드: 클릭에서 구매까지 전환을 극대화하는 구조 설계",
+    description: "랜딩페이지 최적화로 클릭을 구매로 전환하는 완전 가이드. 헤드라인 공식, 소셜 프루프 배치, 폼 최적화 등 전환율을 3배 높이는 구조 설계 방법.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "21분",
+    author: "박준영",
+    keywords: ["랜딩페이지 최적화", "랜딩페이지 전환율", "랜딩페이지 구조", "CTA 최적화", "랜딩페이지 제작"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
