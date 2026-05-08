@@ -12,7 +12,7 @@ export default function Privacy() {
           content="크레피카 개인정보처리방침. 모든 도구는 브라우저 내에서 처리되며 서버에 데이터를 전송하지 않습니다. Google AdSense 광고 및 쿠키 정책을 포함합니다."
         />
         <link rel="canonical" href="https://crepika.com/privacy" />
-        <meta name="robots" content="noindex,follow" />
+        <meta name="robots" content="index,follow" />
       </Helmet>
 
       <div className="container px-4 py-12 mx-auto max-w-4xl">

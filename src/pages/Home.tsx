@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight, Sparkles, Search, Star, Zap, Lock, Gift,
-  MousePointerClick, Type, FileImage, BarChart2, CheckCircle2,
+  MousePointerClick, Type, FileImage, CheckCircle2,
 } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { getRecentTools, getFavoriteTools, toggleFavoriteTool, isFavoriteTool } from "@/utils/localStorage";
