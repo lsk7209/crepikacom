@@ -2182,6 +2182,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["Sora AI", "AI 영상 생성", "OpenAI Sora", "마케팅 영상 제작", "AI 비디오 생성"],
   },
+  {
+    slug: "capcut-editing-complete-guide-shortform-creator-editing",
+    title: "CapCut 영상 편집 완전 가이드: 숏폼 크리에이터를 위한 모바일 편집 마스터클래스",
+    description: "CapCut으로 틱톡·인스타 릴스·유튜브 쇼츠 영상을 전문가처럼 편집하는 완전 가이드. 기초부터 고급 효과, AI 기능까지 모바일 편집 완전 정복.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "20분",
+    author: "이지수",
+    keywords: ["CapCut 편집", "숏폼 편집", "릴스 편집", "모바일 영상 편집", "CapCut 사용법"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
