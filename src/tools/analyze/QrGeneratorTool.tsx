@@ -6,7 +6,7 @@ import { toast } from "@/hooks/use-toast";
 import { Download, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import QRCode from "qrcode";
-import { trackToolUse, trackCopyResult, trackDownload } from "@/utils/analytics";
+import { trackToolUse, trackDownload } from "@/utils/analytics";
 
 const MAX_URL_LENGTH = 2048;
 
@@ -17,7 +17,6 @@ interface QrGeneratorToolProps {
 
 export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
   const [url, setUrl] = useState("");
-  const [qrDataUrl, setQrDataUrl] = useState<string | null>(null);
   const [showLongUrlWarning, setShowLongUrlWarning] = useState(false);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -32,7 +31,6 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
       const normalizedUrl = normalizeUrl(url.trim());
       QRCode.toDataURL(normalizedUrl, { width: 400, margin: 2, color: { dark: '#000000', light: '#FFFFFF' } })
         .then(dataUrl => {
-          setQrDataUrl(dataUrl);
           onError(null);
           onResult(buildQrResult(dataUrl, url.length > MAX_URL_LENGTH));
         })
@@ -75,7 +73,16 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
         </div>
       </div>
       <Button
-        onClick={handleDownload}
+        onClick={() => {
+          const link = document.createElement('a');
+          link.href = dataUrl;
+          link.download = `qr-code-${Date.now()}.png`;
+          document.body.appendChild(link);
+          link.click();
+          trackDownload('qr-generator', 'png');
+          document.body.removeChild(link);
+          toast({ title: '다운로드 완료', description: 'QR 코드가 다운로드되었습니다.' });
+        }}
         className="w-full"
         size="lg"
       >
@@ -115,7 +122,6 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
           light: '#FFFFFF',
         },
       });
-      setQrDataUrl(dataUrl);
       onError(null);
       onResult(buildQrResult(dataUrl, url.length > MAX_URL_LENGTH));
 
@@ -132,22 +138,6 @@ export function QrGeneratorTool({ onResult, onError }: QrGeneratorToolProps) {
       });
       console.error(error);
     }
-  };
-
-  const handleDownload = () => {
-    if (!qrDataUrl) return;
-
-    const link = document.createElement('a');
-    link.href = qrDataUrl;
-    link.download = `qr-code-${Date.now()}.png`;
-    document.body.appendChild(link);
-    link.click();
-    trackDownload('qr-generator', 'png');
-    document.body.removeChild(link);
-    toast({
-      title: '다운로드 완료',
-      description: 'QR 코드가 다운로드되었습니다.',
-    });
   };
 
   return {
