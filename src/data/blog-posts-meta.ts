@@ -2192,6 +2192,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["CapCut 편집", "숏폼 편집", "릴스 편집", "모바일 영상 편집", "CapCut 사용법"],
   },
+  {
+    slug: "optimizationcro-complete-guide-7",
+    title: "전환율 최적화(CRO) 완전 가이드: 방문자를 고객으로 바꾸는 7단계 프레임워크",
+    description: "전환율 최적화(CRO) 7단계 프레임워크로 웹사이트 방문자를 고객으로 전환하는 방법. A/B 테스트, 히트맵 분석, UX 개선까지 데이터 기반 CRO 완전 가이드.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "23분",
+    author: "김민혁",
+    keywords: ["전환율 최적화", "CRO", "A/B 테스트", "랜딩페이지 최적화", "웹사이트 전환율"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
