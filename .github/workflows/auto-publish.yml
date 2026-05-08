@@ -2,9 +2,9 @@ name: Auto Publish Blog Post
 
 on:
   schedule:
-    # 5시간 간격 (UTC 0, 5, 10, 15, 20시)
+    # 5시간 간격 (UTC 기준: 0, 5, 10, 15, 20시 = KST 9, 14, 19, 24, 5시)
     - cron: '0 0,5,10,15,20 * * *'
-  workflow_dispatch:
+  workflow_dispatch:  # 수동 실행 버튼
 
 permissions:
   contents: write
@@ -12,44 +12,36 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Check remaining posts
+      - name: Check remaining drafts
         id: check
         run: |
-          REMAINING=$(node -e "const q=require('./scripts/post-queue.json'); console.log(q.filter(e=>!e.published).length)")
+          REMAINING=$(node -e "
+            const fs = require('fs');
+            const q = JSON.parse(fs.readFileSync('scripts/post-queue.json','utf-8'));
+            const draftsDir = 'scripts/drafts';
+            const count = q.filter(e => !e.published && fs.existsSync(draftsDir+'/'+e.slug+'.json')).length;
+            console.log(count);
+          ")
           echo "remaining=$REMAINING" >> $GITHUB_OUTPUT
-          echo "📊 남은 발행 대기 포스트: $REMAINING 개"
+          echo "📊 발행 가능한 드래프트: $REMAINING 개"
 
-      - name: Publish next post
+      - name: Publish one post from drafts
         if: steps.check.outputs.remaining != '0'
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: node scripts/publish-next.mjs
+        run: node scripts/publish-once.mjs
 
-      - name: Commit and push
-        if: steps.check.outputs.remaining != '0'
-        run: |
-          git config user.email "auto-publisher@crepika.com"
-          git config user.name "크레피카 자동 발행"
-          git add -A
-          if git diff --staged --quiet; then
-            echo "변경사항 없음 — 건너뜀"
-          else
-            TITLE=$(cat .last-published-title 2>/dev/null || echo "새 포스트")
-            git commit -m "Auto-publish: ${TITLE}"
-            git push
-            echo "✅ 푸시 완료: ${TITLE}"
-          fi
-
-      - name: No posts remaining
+      - name: All done
         if: steps.check.outputs.remaining == '0'
-        run: echo "✅ 모든 200개 포스트 발행 완료!"
+        run: echo "✅ 모든 드래프트 발행 완료!"
