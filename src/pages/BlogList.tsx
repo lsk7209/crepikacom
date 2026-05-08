@@ -3,25 +3,25 @@ import { Helmet } from "react-helmet";
 import { Clock, Calendar, ArrowRight, Tag, User, Search, BookOpen, Lightbulb, TrendingUp, Award } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { getAllBlogPosts, BlogPost } from "@/data/blog-content";
+import { getAllBlogMeta, BlogPostMeta } from "@/data/blog-posts-meta";
 import { Input } from "@/components/ui/input";
 import React, { useMemo } from "react";
 
-const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
+const CATEGORY_LABELS: Record<string, string> = {
     'guide': '가이드',
     'tips': '팁 & 트릭',
     'insights': '인사이트',
     'case-study': '케이스 스터디'
 };
 
-const CATEGORY_GRADIENTS: Record<BlogPost['category'], string> = {
+const CATEGORY_GRADIENTS: Record<string, string> = {
     'guide':        'from-blue-600 to-cyan-500',
     'tips':         'from-violet-600 to-purple-500',
     'insights':     'from-amber-500 to-orange-500',
     'case-study':   'from-emerald-600 to-teal-500',
 };
 
-const CATEGORY_ICONS: Record<BlogPost['category'], React.ElementType> = {
+const CATEGORY_ICONS: Record<string, React.ElementType> = {
     'guide': BookOpen,
     'tips': Lightbulb,
     'insights': TrendingUp,
@@ -33,14 +33,12 @@ const POSTS_PER_PAGE = 12;
 const VALID_CATEGORIES = ['guide', 'tips', 'insights', 'case-study'] as const;
 
 export default function BlogList() {
-    const allPosts = getAllBlogPosts();
+    const allPosts = getAllBlogMeta();
     const [searchParams, setSearchParams] = useSearchParams();
 
     const rawCat = searchParams.get('category') ?? 'all';
-    const selectedCategory: BlogPost['category'] | 'all' =
-        (VALID_CATEGORIES as readonly string[]).includes(rawCat)
-            ? (rawCat as BlogPost['category'])
-            : 'all';
+    const selectedCategory: string =
+        (VALID_CATEGORIES as readonly string[]).includes(rawCat) ? rawCat : 'all';
 
     const searchQuery = searchParams.get('q') ?? '';
 
@@ -103,7 +101,7 @@ export default function BlogList() {
         return { ...base, ...overrides };
     };
 
-    const handleCategoryChange = (cat: BlogPost['category'] | 'all') => {
+    const handleCategoryChange = (cat: string) => {
         const params: Record<string, string> = {};
         if (cat !== 'all') params.category = cat;
         if (searchQuery) params.q = searchQuery;
@@ -195,7 +193,7 @@ export default function BlogList() {
                             key={key}
                             variant={selectedCategory === key ? 'default' : 'outline'}
                             className="cursor-pointer px-4 py-2"
-                            onClick={() => handleCategoryChange(key as BlogPost['category'])}
+                            onClick={() => handleCategoryChange(key)}
                         >
                             {label}
                         </Badge>

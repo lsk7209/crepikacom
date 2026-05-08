@@ -5,8 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import { Suspense, lazy, useEffect } from "react";
-import Home from "./pages/Home";
 import { KeyboardShortcutsModal } from "@/components/KeyboardShortcutsModal";
+
+const Home = lazy(() => import("./pages/Home"));
 import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
 
 const ToolPage = lazy(() => import("./pages/tools/ToolPage"));

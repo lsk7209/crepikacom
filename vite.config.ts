@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks(id) {
           if (id.includes('blog-content')) return 'blog-data';
+          if (id.includes('blog-posts-meta')) return 'blog-meta';
           if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/') || id.includes('node_modules/react-router-dom') || id.includes('node_modules/@tanstack/react-query') || id.includes('node_modules/react-helmet')) return 'vendor';
           if (id.includes('node_modules/@radix-ui')) return 'ui';
           if (id.includes('node_modules/qrcode')) return 'qrcode';

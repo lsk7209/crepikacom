@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { getRecentTools, getFavoriteTools, toggleFavoriteTool, isFavoriteTool } from "@/utils/localStorage";
+import { AdSlot } from "@/components/ad/AdSlot";
 
 const RecentBlogPosts = lazy(() => import("./home/RecentBlogPosts"));
 
@@ -242,8 +243,8 @@ export default function Home() {
           )}
         </div>
 
-        {/* ── 광고 삽입 공간 ────────────────────────────────── */}
-        <div className="py-4" aria-hidden="true" />
+        {/* ── 광고 ──────────────────────────────────────────── */}
+        <AdSlot type="top" strategy="instant" className="mb-6" />
 
         {/* ── 즐겨찾기 ─────────────────────────────────────── */}
         {favoriteToolConfigs.length > 0 && (
@@ -345,8 +346,8 @@ export default function Home() {
           </div>
         )}
 
-        {/* ── 광고 삽입 공간 ────────────────────────────────── */}
-        <div className="py-8" aria-hidden="true" />
+        {/* ── 광고 ──────────────────────────────────────────── */}
+        <AdSlot type="bottom" strategy="instant" className="my-8" />
 
         {/* ── How it Works ─────────────────────────────────── */}
         <section className="mb-16">
@@ -415,8 +416,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 광고 삽입 공간 ────────────────────────────────── */}
-        <div className="py-4" aria-hidden="true" />
+        {/* ── 광고 ──────────────────────────────────────────── */}
+        <AdSlot type="loading" strategy="instant" className="mb-8" />
 
         {/* ── 최신 블로그 포스트 (lazy) ────────────────────── */}
         <Suspense fallback={<div className="mt-4 mb-8 h-48 animate-pulse bg-muted/30 rounded-lg" />}>

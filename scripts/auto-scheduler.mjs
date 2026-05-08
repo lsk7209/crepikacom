@@ -126,7 +126,7 @@ function injectIntoRss(post) {
 // ────────────────────────────────────────────────
 function gitPush(post) {
   const msg = `Auto-publish: ${post.title.slice(0, 60)}`;
-  execSync('git add src/data/blog-content.ts public/sitemap.xml public/rss.xml scripts/post-queue.json', { cwd: ROOT });
+  execSync('git add src/data/blog-content.ts src/data/blog-posts-meta.ts public/sitemap.xml public/rss.xml scripts/post-queue.json', { cwd: ROOT });
   execSync(`git commit -m "${msg.replace(/"/g, "'")}"`, { cwd: ROOT });
   execSync('git push origin main', { cwd: ROOT });
   console.log('🚀 git push 완료 → Vercel 배포 시작');
@@ -202,6 +202,8 @@ async function publishOne() {
     injectIntoRss(post);
     // Auto-fix quality issues (clichés, short description) before git push
     try { execSync(`node scripts/fix-new-post.mjs "${post.slug}"`, { cwd: ROOT, stdio: 'inherit' }); } catch {}
+    // Regenerate blog-posts-meta.ts (lightweight listing data)
+    try { execSync('node scripts/gen-meta.mjs', { cwd: ROOT, stdio: 'inherit' }); } catch {}
     markPublished(entry);
     gitPush(post);
     await pingSearchEngines(post.slug);
