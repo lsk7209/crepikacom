@@ -2252,6 +2252,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["네이버 밴드 마케팅", "밴드 커뮤니티", "40대 50대 마케팅", "밴드 광고", "중장년 SNS"],
   },
+  {
+    slug: "kakao-complete-guide-kakao-strategy",
+    title: "카카오맵 비즈니스 완전 가이드: 로컬 가게를 카카오 지도 상위에 올리는 전략",
+    description: "카카오 채널과 카카오 광고를 활용해 국내 잠재 고객을 효과적으로 확보하는 완벽 전략 가이드입니다. 카카오톡 채널 개설부터 카카오모먼트 광고 세팅, 친구 추가 유도 캠페인 설계까지 단계별 실전 방법을 상세히 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "16분",
+    author: "김민혁",
+    keywords: ["카카오맵 비즈니스", "카카오 지도 등록", "카카오 플레이스", "로컬 마케팅", "카카오맵 최적화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
