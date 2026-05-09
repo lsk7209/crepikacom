@@ -2242,6 +2242,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["네이버 스마트플레이스", "네이버 지역 검색", "스마트플레이스 최적화", "네이버 플레이스 광고", "로컬 SEO"],
   },
+  {
+    slug: "naver-marketing-complete-guide-4050-community-strategy",
+    title: "네이버 밴드 마케팅 완전 가이드: 40·50대 고객을 사로잡는 커뮤니티 전략",
+    description: "네이버 밴드로 40·50대 고객층을 공략하는 커뮤니티 마케팅 완전 가이드. 밴드 개설부터 콘텐츠 전략, 광고, 수익화까지 실전 운영 방법. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "17분",
+    author: "이지수",
+    keywords: ["네이버 밴드 마케팅", "밴드 커뮤니티", "40대 50대 마케팅", "밴드 광고", "중장년 SNS"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
