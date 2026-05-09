@@ -2232,6 +2232,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["메타 광고", "페이스북 광고", "인스타그램 광고", "Meta Ads Manager", "SNS 광고"],
   },
+  {
+    slug: "naver-complete-guide-search-1-strategy",
+    title: "네이버 스마트플레이스 완전 가이드: 지역 상권 검색 노출 1위 달성 전략",
+    description: "네이버 스마트플레이스 최적화로 지역 검색 상위 노출을 달성하는 완전 가이드. 업체 정보 최적화, 리뷰 관리, 스마트플레이스 광고까지 실전 전략.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "18분",
+    author: "박준영",
+    keywords: ["네이버 스마트플레이스", "네이버 지역 검색", "스마트플레이스 최적화", "네이버 플레이스 광고", "로컬 SEO"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
