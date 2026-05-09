@@ -2222,6 +2222,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["구글 디스플레이 광고", "GDN", "구글 광고", "배너 광고", "구글 리마케팅"],
   },
+  {
+    slug: "facebookinstagram-ads-beginner-guide-meta-ads-manager-comple",
+    title: "페이스북·인스타그램 광고 입문 가이드: Meta Ads Manager 완전 정복",
+    description: "Meta Ads Manager로 페이스북·인스타그램 광고를 처음 시작하는 완전 가이드. 캠페인 구조, 타겟팅, 소재 제작, 성과 분석까지 실전 광고 운영법.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "22분",
+    author: "이지수",
+    keywords: ["메타 광고", "페이스북 광고", "인스타그램 광고", "Meta Ads Manager", "SNS 광고"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
