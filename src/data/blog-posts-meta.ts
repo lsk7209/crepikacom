@@ -2212,6 +2212,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["랜딩페이지 최적화", "랜딩페이지 전환율", "랜딩페이지 구조", "CTA 최적화", "랜딩페이지 제작"],
   },
+  {
+    slug: "google-ads-beginner-guide-gdn-brand",
+    title: "구글 디스플레이 광고 입문 가이드: GDN으로 잠재 고객에게 브랜드를 각인시키는 법",
+    description: "구글 디스플레이 광고(GDN) 입문 가이드. 캠페인 설정, 타겟팅, 배너 디자인, 리마케팅까지 브랜드 인지도와 전환을 동시에 높이는 실전 방법.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "19분",
+    author: "김민혁",
+    keywords: ["구글 디스플레이 광고", "GDN", "구글 광고", "배너 광고", "구글 리마케팅"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
