@@ -2282,6 +2282,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["제휴 마케팅", "쿠팡파트너스", "어필리에이트 마케팅", "블로그 수익", "유튜브 수익"],
   },
+  {
+    slug: "complete-guide-a-to-z",
+    title: "온라인 강의 제작 완전 가이드: 내 지식을 디지털 강의로 만드는 A to Z",
+    description: "온라인 강의를 처음 만드는 분을 위한 완전 가이드. 주제 선정, 커리큘럼 설계, 촬영, 플랫폼 선택, 마케팅까지 강의 런칭 전 과정을 단계별로 설명합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "22분",
+    author: "이지수",
+    keywords: ["온라인 강의 제작", "디지털 강의", "강의 플랫폼", "크몽 강의", "탈잉 강의"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
