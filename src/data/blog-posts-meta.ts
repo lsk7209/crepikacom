@@ -2262,6 +2262,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["카카오맵 비즈니스", "카카오 지도 등록", "카카오 플레이스", "로컬 마케팅", "카카오맵 최적화"],
   },
+  {
+    slug: "beehiiv-complete-guide-substack-growth-complete-mastery",
+    title: "Beehiiv 뉴스레터 완전 가이드: Substack보다 성장에 강한 플랫폼 완전 정복",
+    description: "Beehiiv로 뉴스레터를 시작하고 성장시키는 완전 가이드. Substack 비교, 구독자 1000명 달성 전략, 수익화까지 크리에이터를 위한 뉴스레터 완전 정복.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "20분",
+    author: "박준영",
+    keywords: ["Beehiiv 뉴스레터", "뉴스레터 성장", "Beehiiv vs Substack", "이메일 마케팅", "뉴스레터 수익화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
