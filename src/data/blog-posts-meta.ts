@@ -2302,6 +2302,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["웨비나 마케팅", "온라인 세미나", "리드 수집", "웨비나 판매", "오토웨비나"],
   },
+  {
+    slug: "notion-complete-guide-monetization-method",
+    title: "Notion 템플릿 판매 완전 가이드: 내가 만든 템플릿으로 수익화하는 방법",
+    description: "Notion 템플릿을 만들고 판매해 수익화하는 완전 가이드. 베스트셀러 주제 선정, 템플릿 제작, 판매 채널, 마케팅까지 Notion 템플릿 수익화 전략.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "17분",
+    author: "이지수",
+    keywords: ["Notion 템플릿 판매", "노션 수익화", "디지털 제품 판매", "노션 템플릿 만들기", "Gumroad 판매"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

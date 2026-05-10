@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Sun, 10 May 2026 15:49:46 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 10 May 2026 20:42:24 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2064,6 +2064,16 @@
     <pubDate>Sun, 10 May 2026 15:49:46 GMT</pubDate>
     <guid>https://crepika.com/blog/marketing-complete-guide-strategy</guid>
     <dc:creator>박준영</dc:creator>
+  </item>
+
+
+  <item>
+    <title>Notion 템플릿 판매 완전 가이드: 내가 만든 템플릿으로 수익화하는 방법</title>
+    <link>https://crepika.com/blog/notion-complete-guide-monetization-method</link>
+    <description>Notion 템플릿을 만들고 판매해 수익화하는 완전 가이드. 베스트셀러 주제 선정, 템플릿 제작, 판매 채널, 마케팅까지 Notion 템플릿 수익화 전략.</description>
+    <pubDate>Sun, 10 May 2026 20:42:24 GMT</pubDate>
+    <guid>https://crepika.com/blog/notion-complete-guide-monetization-method</guid>
+    <dc:creator>이지수</dc:creator>
   </item>
 
 </channel>
