@@ -2272,6 +2272,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["Beehiiv 뉴스레터", "뉴스레터 성장", "Beehiiv vs Substack", "이메일 마케팅", "뉴스레터 수익화"],
   },
+  {
+    slug: "marketing-complete-guide-blogyoutube-revenue",
+    title: "제휴 마케팅 완전 가이드: 블로그·유튜브로 쿠팡파트너스 이상의 수익 만들기",
+    description: "제휴 마케팅으로 블로그·유튜브에서 쿠팡파트너스를 넘는 수익을 만드는 완전 가이드. 플랫폼 선택부터 콘텐츠 전략, 수익 극대화까지 실전 방법. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "21분",
+    author: "김민혁",
+    keywords: ["제휴 마케팅", "쿠팡파트너스", "어필리에이트 마케팅", "블로그 수익", "유튜브 수익"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
