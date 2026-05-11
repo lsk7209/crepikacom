@@ -2312,6 +2312,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["Notion 템플릿 판매", "노션 수익화", "디지털 제품 판매", "노션 템플릿 만들기", "Gumroad 판매"],
   },
+  {
+    slug: "complete-guide-pdf-strategy",
+    title: "디지털 제품 가격 책정 완전 가이드: PDF부터 강의까지 최적 가격 설정 전략",
+    description: "PDF, 템플릿, 강의 등 디지털 제품의 최적 가격을 설정하는 완전 가이드. 가격 심리학, 앵커링, 번들 전략, 가격 테스트까지 수익을 극대화하는 가격 책정법.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "19분",
+    author: "김민혁",
+    keywords: ["디지털 제품 가격 책정", "디지털 제품 가격", "강의 가격 설정", "PDF 판매 가격", "가격 심리학"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
