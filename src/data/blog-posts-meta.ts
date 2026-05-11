@@ -2332,6 +2332,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["기술적 SEO", "robots.txt 설정", "canonical 태그", "XML 사이트맵", "크롤링 최적화"],
   },
+  {
+    slug: "seo-complete-guide-hreflang-search-optimization",
+    title: "국제 SEO 완전 가이드: hreflang 설정으로 다국어 사이트 검색 최적화하기",
+    description: "hreflang 태그를 올바르게 구현해 한국어·영어·일본어 사용자에게 맞는 페이지를 노출하고 다국어 사이트의 검색 트래픽을 극대화하는 방법을 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["국제 SEO", "hreflang 설정", "다국어 SEO", "국제화 검색최적화", "다국어 사이트"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
