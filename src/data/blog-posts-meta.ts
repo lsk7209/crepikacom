@@ -2342,6 +2342,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["국제 SEO", "hreflang 설정", "다국어 SEO", "국제화 검색최적화", "다국어 사이트"],
   },
+  {
+    slug: "utm-complete-guide-marketing-method",
+    title: "UTM 파라미터 완전 가이드: 마케팅 채널 성과를 정확하게 추적하는 방법",
+    description: "UTM 파라미터 5가지를 올바르게 설정해 구글 애널리틱스에서 마케팅 채널별 전환율과 ROI를 정확하게 측정하고 예산을 최적화하는 실전 가이드입니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "박준영",
+    keywords: ["UTM 파라미터", "마케팅 추적", "구글 애널리틱스", "캠페인 추적", "마케팅 ROI"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
