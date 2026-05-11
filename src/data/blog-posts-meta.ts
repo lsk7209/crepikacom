@@ -2322,6 +2322,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["디지털 제품 가격 책정", "디지털 제품 가격", "강의 가격 설정", "PDF 판매 가격", "가격 심리학"],
   },
+  {
+    slug: "seo-complete-guide-robotstxtcanonicalsitemap-method",
+    title: "기술적 SEO 완전 가이드: robots.txt·canonical·sitemap을 직접 설정하는 방법",
+    description: "robots.txt, canonical 태그, XML 사이트맵을 직접 설정해 검색엔진 크롤링 효율을 높이고 중복 콘텐츠 문제를 해결하는 실전 가이드입니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["기술적 SEO", "robots.txt 설정", "canonical 태그", "XML 사이트맵", "크롤링 최적화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
