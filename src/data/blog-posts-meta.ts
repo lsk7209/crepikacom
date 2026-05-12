@@ -2392,6 +2392,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["세일즈 퍼널", "마케팅 자동화", "수익 파이프라인", "이메일 자동화", "전환율 최적화"],
   },
+  {
+    slug: "ads-complete-guide-strategy",
+    title: "리타겟팅 광고 완전 가이드: 한 번 방문한 고객을 구매자로 전환하는 전략",
+    description: "픽셀 설치부터 세그먼트 구성, 광고 소재 전략까지 리타겟팅 캠페인 전체 프로세스를 설명하고 ROAS를 높이는 실전 최적화 방법을 안내합니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["리타겟팅 광고", "리마케팅", "픽셀 설치", "전환 최적화", "ROAS 향상"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
