@@ -2382,6 +2382,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["고객 여정 지도", "Customer Journey Map", "고객 경험 설계", "마케팅 퍼널", "CX 최적화"],
   },
+  {
+    slug: "complete-guide-automation-revenue",
+    title: "세일즈 퍼널 구축 완전 가이드: 인지에서 구매까지 자동화된 수익 파이프라인 만들기",
+    description: "세일즈 퍼널 4단계 설계부터 이메일 자동화, 리타겟팅, 분석까지 한 번 만들면 24시간 작동하는 자동화 수익 파이프라인 구축 방법을 단계별로 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["세일즈 퍼널", "마케팅 자동화", "수익 파이프라인", "이메일 자동화", "전환율 최적화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
