@@ -2362,6 +2362,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["구글 Discover", "Discover 최적화", "구글 피드 노출", "E-E-A-T", "콘텐츠 추천 알고리즘"],
   },
+  {
+    slug: "hotjar-analytics-complete-guide-ux",
+    title: "Hotjar 히트맵 분석 완전 가이드: 방문자 행동을 시각화해서 UX 개선하기",
+    description: "Hotjar 히트맵, 세션 녹화, 설문조사 기능을 활용해 사용자 행동 데이터를 수집하고 전환율을 높이는 UX 개선 인사이트를 도출하는 방법을 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "김민혁",
+    keywords: ["Hotjar", "히트맵 분석", "UX 개선", "사용자 행동 분석", "전환율 최적화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
