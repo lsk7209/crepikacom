@@ -2372,6 +2372,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["Hotjar", "히트맵 분석", "UX 개선", "사용자 행동 분석", "전환율 최적화"],
   },
+  {
+    slug: "customer-journey-map-complete-guide-marketing-2",
+    title: "고객 여정 지도(Customer Journey Map) 완전 가이드: 마케팅 효율을 2배 높이는 설계법",
+    description: "고객 여정 지도를 직접 만들고 각 접점에서의 고객 경험을 개선해 마케팅 효율과 전환율을 높이는 체계적인 프레임워크와 실전 제작 방법을 소개합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["고객 여정 지도", "Customer Journey Map", "고객 경험 설계", "마케팅 퍼널", "CX 최적화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
