@@ -2402,6 +2402,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["리타겟팅 광고", "리마케팅", "픽셀 설치", "전환 최적화", "ROAS 향상"],
   },
+  {
+    slug: "community-complete-guide-brand-community-6-strategy",
+    title: "온라인 커뮤니티 구축 완전 가이드: 브랜드 팬 커뮤니티를 만드는 6단계 전략",
+    description: "브랜드 팬 커뮤니티를 처음부터 만드는 6단계 전략을 소개합니다. 플랫폼 선택부터 콘텐츠 운영, 멤버 성장, 수익화까지 온라인 커뮤니티 성장 프레임워크를 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["온라인 커뮤니티", "브랜드 커뮤니티", "커뮤니티 마케팅", "팬 커뮤니티 구축", "커뮤니티 운영"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
