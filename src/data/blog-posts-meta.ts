@@ -2452,6 +2452,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["WordPress 시작", "워드프레스 호스팅", "워드프레스 블로그 만들기", "워드프레스 설치", "블로그 개설"],
   },
+  {
+    slug: "elevenlabs-ai-complete-guide-automation",
+    title: "ElevenLabs AI 음성 완전 가이드: 팟캐스트·영상 나레이션 자동화하는 법",
+    description: "ElevenLabs로 실제와 구분하기 어려운 AI 음성을 생성하고 팟캐스트, 유튜브 나레이션, 오디오북 제작을 자동화하는 방법을 단계별로 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["ElevenLabs", "AI 음성 생성", "팟캐스트 자동화", "나레이션 AI", "TTS 도구"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
