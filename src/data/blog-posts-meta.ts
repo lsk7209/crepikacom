@@ -2422,6 +2422,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["크리에이터 세금", "유튜브 수익 신고", "종합소득세", "1인 크리에이터 절세", "SNS 수익 세금"],
   },
+  {
+    slug: "velog-blog-seo-complete-guide-blog",
+    title: "Velog 개발자 블로그 SEO 완전 가이드: 기술 블로그로 취업과 브랜딩을 동시에",
+    description: "Velog에서 구글 상위 노출을 달성하고 개발자 브랜드를 구축하는 SEO 전략을 단계별로 안내합니다. 취업과 커리어 성장을 동시에 잡으세요. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["Velog SEO", "개발자 블로그", "기술 블로그", "개발자 브랜딩", "Velog 최적화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
