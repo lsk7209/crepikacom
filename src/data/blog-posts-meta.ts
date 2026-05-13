@@ -2442,6 +2442,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["티스토리 SEO", "블로그 구글 상위 노출", "티스토리 최적화", "블로그 수익화", "구글 노출 전략"],
   },
+  {
+    slug: "wordpress-blog-complete-guide-a-to-z",
+    title: "WordPress 블로그 시작 완전 가이드: 호스팅 선택부터 첫 글 발행까지 A to Z",
+    description: "WordPress 블로그를 처음 시작하는 분을 위한 단계별 완전 가이드입니다. 호스팅 비교, 설치, 테마 설정, 플러그인, 첫 글 발행까지 모두 다룹니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "15분",
+    author: "김민혁",
+    keywords: ["WordPress 시작", "워드프레스 호스팅", "워드프레스 블로그 만들기", "워드프레스 설치", "블로그 개설"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
