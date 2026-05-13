@@ -2432,6 +2432,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["Velog SEO", "개발자 블로그", "기술 블로그", "개발자 브랜딩", "Velog 최적화"],
   },
+  {
+    slug: "blog-seo-complete-guide-google-strategy",
+    title: "티스토리 블로그 SEO 완전 가이드: 구글 상위 노출을 위한 설정과 글쓰기 전략",
+    description: "티스토리 블로그에서 구글 검색 상위 노출을 달성하는 SEO 설정법과 콘텐츠 전략을 체계적으로 안내합니다. 수익화까지 이어지는 실전 가이드. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "13분",
+    author: "이지수",
+    keywords: ["티스토리 SEO", "블로그 구글 상위 노출", "티스토리 최적화", "블로그 수익화", "구글 노출 전략"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
