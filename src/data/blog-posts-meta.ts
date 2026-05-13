@@ -2412,6 +2412,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["온라인 커뮤니티", "브랜드 커뮤니티", "커뮤니티 마케팅", "팬 커뮤니티 구축", "커뮤니티 운영"],
   },
+  {
+    slug: "1-creator-complete-guide-sns-revenue",
+    title: "1인 크리에이터 세무·절세 완전 가이드: SNS 수익 신고와 합법적 비용 처리법",
+    description: "유튜브·인스타그램·블로그 수익을 종합소득세 신고하는 방법과 장비·소프트웨어·통신비 등 합법적으로 경비 처리할 수 있는 항목을 상세히 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["크리에이터 세금", "유튜브 수익 신고", "종합소득세", "1인 크리에이터 절세", "SNS 수익 세금"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
