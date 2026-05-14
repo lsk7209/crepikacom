@@ -2482,6 +2482,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["Ahrefs 사용법", "SEO 키워드 분석", "백링크 분석", "Ahrefs 입문", "SEO 도구"],
   },
+  {
+    slug: "semrush-complete-usage-guide-keyword-analytics",
+    title: "SEMrush 완전 활용 가이드: 경쟁사 키워드부터 백링크 갭까지 분석하는 법",
+    description: "SEMrush의 강력한 기능을 실전에서 활용하는 방법을 알아봅니다. 경쟁사 키워드 분석, 백링크 갭, 광고 인텔리전스, 콘텐츠 마케팅 도구까지 완전 가이드.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "13분",
+    author: "박준영",
+    keywords: ["SEMrush 사용법", "경쟁사 키워드 분석", "백링크 갭 분석", "SEMrush 활용", "SEO 도구 비교"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
