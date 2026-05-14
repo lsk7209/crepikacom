@@ -2502,6 +2502,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["소셜 리스닝", "브랜드 모니터링", "경쟁사 모니터링", "온라인 평판 관리", "소셜 미디어 분석"],
   },
+  {
+    slug: "instagram-broadcast-channel-complete-guide-strategy",
+    title: "인스타그램 Broadcast Channel 완전 가이드: 팬과 직접 소통하는 새 채널 전략",
+    description: "인스타그램 Broadcast Channel을 활용해 팔로워와 직접 소통하고 충성 팬 커뮤니티를 구축하는 방법을 단계별로 안내합니다. 콘텐츠 전략까지 포함.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["인스타그램 Broadcast Channel", "인스타그램 방송 채널", "팬 커뮤니티", "인스타그램 마케팅", "크리에이터 전략"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
