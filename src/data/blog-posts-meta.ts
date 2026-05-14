@@ -2462,6 +2462,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["ElevenLabs", "AI 음성 생성", "팟캐스트 자동화", "나레이션 AI", "TTS 도구"],
   },
+  {
+    slug: "perplexity-ai-complete-guide-content-analytics-10",
+    title: "Perplexity AI 리서치 완전 가이드: 콘텐츠 기획과 경쟁사 분석을 10배 빠르게",
+    description: "Perplexity AI를 활용해 콘텐츠 주제 발굴, 경쟁사 분석, 시장 조사를 기존 방법보다 10배 빠르게 수행하는 실전 리서치 방법론을 공개합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["Perplexity AI", "AI 리서치 도구", "콘텐츠 기획", "경쟁사 분석", "AI 검색"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
