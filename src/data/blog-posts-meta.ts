@@ -2492,6 +2492,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["SEMrush 사용법", "경쟁사 키워드 분석", "백링크 갭 분석", "SEMrush 활용", "SEO 도구 비교"],
   },
+  {
+    slug: "tools-complete-guide-brand",
+    title: "소셜 리스닝 도구 완전 가이드: 브랜드 언급과 경쟁사 동향을 실시간 모니터링하는 법",
+    description: "소셜 리스닝 도구를 활용해 브랜드 언급, 경쟁사 동향, 업계 트렌드를 실시간으로 모니터링하는 방법을 주요 도구 비교와 함께 안내합니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["소셜 리스닝", "브랜드 모니터링", "경쟁사 모니터링", "온라인 평판 관리", "소셜 미디어 분석"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
