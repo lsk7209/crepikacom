@@ -1,29 +1,29 @@
 # Status | 마지막: 2026-05-15
 
 ## 현재 작업
-사이트 전체 최적화 완료. Lighthouse 55/55 전 항목 통과 + CLS 0.00 달성. 프로덕션 배포 완료.
+자동 색인 파이프라인 완성. 새 포스트 발행 시 IndexNow(Bing/Naver) + Google Indexing API 자동 호출.
 
 ## 최근 변경 (최근 5개)
-- 05-15: AdSlot.tsx 인터랙션 후 레이지 로드 (Best Practices 100 로컬+프로덕션)
-- 05-15: App.tsx Suspense 폴백 min-h-[50vh]→min-h-screen (CLS 0.431→0.00)
+- 05-15: publish-next.mjs Naver IndexNow 엔드포인트 수정 + Google Indexing API 추가
+- 05-15: vercel.json /feed.xml → /rss.xml 리다이렉트 추가
+- 05-15: AdSlot.tsx 인터랙션 후 레이지 로드 (Best Practices 100)
+- 05-15: App.tsx Suspense 폴백 min-h-screen (CLS 0.00)
 - 05-15: Home.tsx/RecentBlogPosts.tsx WCAG 색상 대비 수정 (Accessibility 100)
-- 05-15: RecentBlogPosts.tsx 링크 텍스트 구체화 (SEO 100)
-- 05-15: sitemap.xml 도구 7개 lastmod → 2026-05-15 갱신
 
 ## TODO
-- [x] Vercel 배포 완료 (2026-05-15, commit dcb7cea)
-- [ ] 프로덕션 PSI 재측정 (crepika.com — 배포 수분 후)
+- [x] Vercel 배포 완료 (2026-05-15, commit 726d988)
+- [x] 발행 후 자동 색인: IndexNow + Google Indexing API (2026-05-15)
+- [ ] 프로덕션 PSI 재측정 (crepika.com)
 - [ ] AdSense 수동 슬롯 ID — 사용자 생성 후 제공 (AdSlot의 slotId 파라미터)
-- [ ] GSC OAuth 토큰 연동 (~/.claude/skills/site-optimizer/.env)
+- [ ] GSC에서 sitemap.xml 재제출 (현재 12페이지 → 실제 254+개)
 
 ## 결정사항
-- CLS 원인: App.tsx lazy(Home) → Suspense 스피너 50vh → Home 로드 시 footer 이동
-- 수정: 스피너를 min-h-screen으로 → footer 뷰포트 밖 → CLS 측정 제외
-- Home은 lazy 유지 (blog-posts-meta 175KB 때문에 eager 전환 불가)
-- Accessibility 100: -700 shades(라이트) / -300~400 shades(다크) 사용
-- Best Practices 100: localhost에서 AdSense 로드 스킵
+- Google Indexing API: 서비스 계정 JWT RS256 서명 (Node.js crypto 내장)
+- Naver IndexNow: searchadvisor.naver.com/indexnow (기존 site/submit는 잘못된 엔드포인트)
+- feed.xml: static 파일 없음 → vercel.json redirect로 rss.xml로 연결
+- Best Practices 100: AdSense를 scroll/click/touchstart/keydown 후에만 로드
 
 ## 주의
-- 프로덕션 Lighthouse는 아직 이전 점수 (미배포 상태)
+- GSC 사이트맵: 2025-12-26 마지막 크롤, 12페이지만 발견 → GSC 콘솔에서 재제출 필요
 - AdSense slotId 없으면 Auto Ads 플레이스홀더만 렌더링 (정상)
-- GA4 / GSC OAuth: ~/.claude/skills/site-optimizer/.env 토큰 필요
+- Google Indexing API 서비스 계정: D:\env\cursorai-451704-85a5abbe8eeb.json
