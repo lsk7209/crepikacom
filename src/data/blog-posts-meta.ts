@@ -2542,6 +2542,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["POD 비즈니스", "주문형 인쇄", "굿즈 판매", "티셔츠 판매", "무재고 쇼핑몰"],
   },
+  {
+    slug: "ads-complete-guide-ads-optimization-strategy",
+    title: "쿠팡 광고(로켓그로스) 완전 가이드: 쿠팡 판매자를 위한 광고 최적화 전략",
+    description: "쿠팡 광고(로켓그로스) 구조와 입찰 전략을 완전 분석했습니다. 검색 광고부터 디스플레이 광고까지, 쿠팡 판매자가 ROAS를 높이는 실전 최적화 방법을 단계별로 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "13분",
+    author: "이지수",
+    keywords: ["쿠팡 광고", "로켓그로스", "쿠팡 판매자", "쿠팡 ROAS", "쿠팡 검색 광고"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
