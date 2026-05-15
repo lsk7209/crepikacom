@@ -2562,6 +2562,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["카카오모먼트", "카카오 광고", "카카오톡 광고", "모바일 광고", "카카오 타겟팅"],
   },
+  {
+    slug: "content-strategy-complete-guide",
+    title: "콘텐츠 클러스터 전략 완전 가이드: 토픽 권위성 구축으로 도메인 점수 올리는 법",
+    description: "콘텐츠 클러스터 전략으로 특정 토픽에서 도메인 권위성을 구축하는 방법을 완전 정리했습니다. 필라 페이지와 클러스터 페이지 설계부터 내부 링크 구조까지 SEO 실전 가이드입니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["콘텐츠 클러스터", "토픽 권위성", "필라 페이지", "도메인 권위성", "내부 링크 전략"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
