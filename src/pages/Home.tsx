@@ -679,7 +679,24 @@ export default function Home() {
         <AdSlot type="bottom" strategy="instant" className="mb-8" />
 
         {/* ── 최신 블로그 포스트 ────────────────────────────── */}
-        <Suspense fallback={null}>
+        <Suspense
+          fallback={
+            <section className="mt-20 mb-8">
+              <div className="flex items-center justify-between mb-8">
+                <div className="h-8 bg-muted rounded-md w-52 animate-pulse" />
+                <div className="h-5 bg-muted rounded-md w-36 animate-pulse" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[0, 1, 2].map((i) => (
+                  <div
+                    key={i}
+                    className="rounded-lg border bg-card h-44 animate-pulse"
+                  />
+                ))}
+              </div>
+            </section>
+          }
+        >
           <RecentBlogPosts />
         </Suspense>
       </div>

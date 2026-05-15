@@ -93,7 +93,8 @@ All colors MUST be HSL.
 }
 
 /* 폴드 아래 섹션 렌더링 지연 — 초기 페이지 로드 성능 개선 */
+/* auto 키워드: 이전 렌더링 크기를 기억해 CLS 방지 */
 .content-lazy {
   content-visibility: auto;
-  contain-intrinsic-size: 0 400px;
+  contain-intrinsic-size: auto 400px;
 }
