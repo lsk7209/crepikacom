@@ -11,9 +11,10 @@
 - 05-15: sitemap.xml 도구 7개 lastmod → 2026-05-15 갱신
 
 ## TODO
-- [ ] Vercel 배포 (git push origin main)
+- [x] Vercel 배포 완료 (2026-05-15, commit d08d341)
 - [ ] AdSense 수동 슬롯 ID — 사용자 생성 후 제공 (AdSlot의 slotId 파라미터)
 - [ ] GSC OAuth 토큰 연동 (~/.claude/skills/site-optimizer/.env)
+- [ ] 프로덕션 Lighthouse 재측정 (배포 후 PSI로 확인)
 
 ## 결정사항
 - CLS 원인: App.tsx lazy(Home) → Suspense 스피너 50vh → Home 로드 시 footer 이동
