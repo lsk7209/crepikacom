@@ -14,9 +14,10 @@
 - [x] Vercel 배포 완료 (2026-05-15, commit 726d988)
 - [x] 발행 후 자동 색인: IndexNow + Google Indexing API (2026-05-15)
 - [x] 기존 포스트 236개 /tools/ 링크 일괄 추가 (2026-05-16)
-- [ ] 프로덕션 PSI 재측정 (crepika.com)
+- [x] GSC sitemap.xml 재제출 — API로 자동 제출 완료, submitted: 265 (2026-05-16)
+- [x] Lighthouse 측정: Performance 82, A11y 100, BP 100, SEO 100 (2026-05-16)
+- [ ] Vercel 대시보드: crepika.com을 primary domain으로 설정 (현재 www→non-www 307 리다이렉트 780ms 낭비)
 - [ ] AdSense 수동 슬롯 ID — 사용자 생성 후 제공 (AdSlot의 slotId 파라미터)
-- [ ] GSC에서 sitemap.xml 재제출 (현재 12페이지 → 실제 254+개)
 
 ## 결정사항
 - Google Indexing API: 서비스 계정 JWT RS256 서명 (Node.js crypto 내장)

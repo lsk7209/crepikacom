@@ -49,13 +49,18 @@
     />
     <meta name="twitter:image" content="https://crepika.com/og-image.png" />
     <meta name="twitter:image:alt" content="크레피카 — 크리에이터 필수 도구함" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8LJ76FVM4"></script>
+    <!-- Google tag (gtag.js) — load after page is interactive to avoid unused-JS penalty -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-P8LJ76FVM4');
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-P8LJ76FVM4';
+        document.head.appendChild(s);
+      });
     </script>
     <meta name="google-site-verification" content="SnCEePaQ1vG2VA6IcsjGkyTju8ATmi9U-XB39g9cnpI" />
     <meta name="naver-site-verification" content="af141c75250f4ad9f6784b297014704bf36a652a" />
