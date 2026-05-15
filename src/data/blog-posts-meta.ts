@@ -2572,6 +2572,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["콘텐츠 클러스터", "토픽 권위성", "필라 페이지", "도메인 권위성", "내부 링크 전략"],
   },
+  {
+    slug: "keyword-analytics-complete-guide-keyword",
+    title: "경쟁사 키워드 갭 분석 완전 가이드: 경쟁자가 노리는 키워드를 먼저 가져오는 법",
+    description: "경쟁사 키워드 갭 분석으로 경쟁자가 트래픽을 얻는 키워드를 파악하고 선점하는 방법을 완전 정리했습니다. Ahrefs·SEMrush를 활용한 실전 갭 분석 프로세스를 단계별로 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["키워드 갭 분석", "경쟁사 분석", "SEO 키워드", "Ahrefs 사용법", "SEMrush 키워드"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
