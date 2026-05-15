@@ -1,14 +1,14 @@
 # Status | 마지막: 2026-05-16
 
 ## 현재 작업
-전체 코드 감사 완료. 모든 페이지 SEO/스키마/메타 정상. Vercel 도메인 설정 대기 중.
+pingSearchEngines 수정 완료. 드래프트 264개 평균 94점 (90점+ 88%). 발행 자동화 준비 완료.
 
 ## 최근 변경 (최근 5개)
-- 05-16: llms-full.txt · rss.xml 날짜 갱신 (2026-05-16)
-- 05-16: ai-index.json updated 날짜 갱신 (2026-05-16)
+- 05-16: auto-scheduler.mjs — Naver IndexNow 엔드포인트 수정 + Google Indexing API 추가
+- 05-16: CLS 수정 — contain-intrinsic-size: auto 400px (index.css)
+- 05-16: CLS 수정 — Suspense skeleton fallback 추가 (Home.tsx RecentBlogPosts)
 - 05-16: TooltipProvider 제거 → @radix-ui ui 청크 완전 lazy
 - 05-16: react-query 제거 → vendor 번들 ~30KB 절감
-- 05-16: AppShell lucide 제거 → icons 청크 완전 lazy
 
 ## TODO
 - [x] Vercel 배포 완료 (2026-05-15, commit 726d988)
@@ -18,7 +18,8 @@
 - [x] Lighthouse 측정: Performance 82, A11y 100, BP 100, SEO 100 (2026-05-16)
 - [x] 코드 최적화: react-query·TooltipProvider 제거, icons·ui 청크 완전 lazy (05-16)
 - [x] 전체 페이지 SEO 감사: Home·BlogList·BlogPost·About·Contact·NotFound 모두 정상 (05-16)
-- [ ] Lighthouse 재측정 — 현재 배포 기준 Performance 목표 90+
+- [x] CLS 0.431 수정: contain-intrinsic-size auto + Suspense skeleton (05-16)
+- [ ] **배포 후** https://pagespeed.web.dev/ 에서 재측정 — CLS < 0.1, Performance 90+ 목표
 - [ ] **[사용자 필수]** Vercel 대시보드 → Settings → Domains → crepika.com primary 설정 (307 리다이렉트 780ms 제거, 최대 단일 성능 향상)
 - [ ] AdSense 수동 슬롯 ID — 사용자 생성 후 제공 (AdSlot의 slotId 파라미터)
 

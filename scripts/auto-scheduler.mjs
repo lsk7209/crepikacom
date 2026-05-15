@@ -11,6 +11,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
+import { createSign } from 'crypto';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -133,15 +134,78 @@ function gitPush(post) {
 }
 
 // ────────────────────────────────────────────────
+// Google Indexing API (JWT RS256)
+// ────────────────────────────────────────────────
+async function googleIndexingApiPing(url) {
+  const SA_PATH = 'D:/env/cursorai-451704-85a5abbe8eeb.json';
+  const sa = JSON.parse(readFileSync(SA_PATH, 'utf-8'));
+
+  const now = Math.floor(Date.now() / 1000);
+  const header = Buffer.from(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).toString('base64url');
+  const payload = Buffer.from(JSON.stringify({
+    iss: sa.client_email,
+    sub: sa.client_email,
+    scope: 'https://www.googleapis.com/auth/indexing',
+    aud: 'https://oauth2.googleapis.com/token',
+    iat: now,
+    exp: now + 3600,
+  })).toString('base64url');
+
+  const sigInput = `${header}.${payload}`;
+  const sign = createSign('RSA-SHA256');
+  sign.update(sigInput);
+  const sig = sign.sign(sa.private_key, 'base64url');
+  const jwt = `${sigInput}.${sig}`;
+
+  const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+      assertion: jwt,
+    }),
+  });
+  const tokenData = await tokenRes.json();
+  if (!tokenData.access_token) throw new Error(`token error: ${JSON.stringify(tokenData)}`);
+
+  const indexRes = await fetch('https://indexing.googleapis.com/v3/urlNotifications:publish', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${tokenData.access_token}`,
+    },
+    body: JSON.stringify({ url, type: 'URL_UPDATED' }),
+  });
+  return indexRes.status;
+}
+
+// ────────────────────────────────────────────────
 // 검색엔진 핑
 // ────────────────────────────────────────────────
 async function pingSearchEngines(slug) {
   const url = `${SITE_URL}/blog/${slug}`;
-  const key = 'crepika2026indexnow';
+  const indexNowKey = 'crepika2026indexnow';
+  const indexNowBody = JSON.stringify({
+    host: 'crepika.com',
+    key: indexNowKey,
+    keyLocation: `${SITE_URL}/${indexNowKey}.txt`,
+    urlList: [url],
+  });
+
   await Promise.allSettled([
-    fetch(`https://api.indexnow.org/indexnow?url=${encodeURIComponent(url)}&key=${key}`).then(r => console.log(`📡 IndexNow: ${r.status}`)).catch(() => {}),
-    fetch(`https://www.bing.com/ping?sitemap=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`).then(r => console.log(`📡 Bing: ${r.status}`)).catch(() => {}),
-    fetch(`https://searchadvisor.naver.com/site/submit?url=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`).then(r => console.log(`📡 Naver: ${r.status}`)).catch(() => {}),
+    fetch('https://www.bing.com/indexnow', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: indexNowBody,
+    }).then(r => console.log(`📡 Bing IndexNow: ${r.status}`)).catch(() => {}),
+    fetch('https://searchadvisor.naver.com/indexnow', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: indexNowBody,
+    }).then(r => console.log(`📡 Naver IndexNow: ${r.status}`)).catch(() => {}),
+    googleIndexingApiPing(url)
+      .then(status => console.log(`📡 Google Indexing API: ${status}`))
+      .catch(e => console.log(`📡 Google Indexing API 실패: ${e.message}`)),
   ]);
 }
 
