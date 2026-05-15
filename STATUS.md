@@ -1,13 +1,13 @@
 # Status | 마지막: 2026-05-16
 
 ## 현재 작업
-기존 포스트 236개 일괄 개선 완료. 모든 포스트에 /tools/ 링크 + E-E-A-T 신호 추가.
+Performance 최적화 완료 (lazy loading). Vercel 배포 중 — 측정 대기.
 
 ## 최근 변경 (최근 5개)
+- 05-16: Home.tsx RecentBlogPosts lazy load → 179KB blog-posts-meta 초기 렌더 제외
+- 05-16: App.tsx Toaster/Sonner/KeyboardShortcutsModal lazy load + GA4 defer
 - 05-16: blog-content.ts 236개 포스트 /tools/ 링크 + E-E-A-T 신호 일괄 추가
 - 05-16: scripts/improve-posts.mjs 배치 개선 스크립트 추가
-- 05-15: publish-next.mjs 프롬프트 개선 (AUTHOR_PERSONAS, CREPIKA_TOOLS)
-- 05-15: publish-next.mjs Naver IndexNow 엔드포인트 수정 + Google Indexing API 추가
 - 05-15: AdSlot.tsx 인터랙션 후 레이지 로드 (Best Practices 100)
 
 ## TODO
@@ -16,6 +16,8 @@
 - [x] 기존 포스트 236개 /tools/ 링크 일괄 추가 (2026-05-16)
 - [x] GSC sitemap.xml 재제출 — API로 자동 제출 완료, submitted: 265 (2026-05-16)
 - [x] Lighthouse 측정: Performance 82, A11y 100, BP 100, SEO 100 (2026-05-16)
+- [x] Lazy load: GA4, Toaster, Sonner, KeyboardShortcutsModal, RecentBlogPosts (05-16)
+- [ ] Lighthouse 재측정 — lazy loading 배포 후 Performance 90+ 목표
 - [ ] Vercel 대시보드: crepika.com을 primary domain으로 설정 (현재 www→non-www 307 리다이렉트 780ms 낭비)
 - [ ] AdSense 수동 슬롯 ID — 사용자 생성 후 제공 (AdSlot의 slotId 파라미터)
 
