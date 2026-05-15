@@ -116,32 +116,50 @@ async function callClaude(systemPrompt, userPrompt) {
 }
 
 const AUTHOR_PERSONAS = {
-  '김민혁': 'SEO 전략가 김민혁입니다. 데이터 기반 분석, 구체적 수치, 구글·네이버 검색 전략을 전문으로 합니다. 논리적이고 근거 있는 문체로 작성하세요.',
-  '이지수': '소셜미디어 전문가 이지수입니다. 인스타그램·틱톡·네이버 블로그 실전 경험을 기반으로 크리에이터가 바로 적용할 수 있는 실용적 조언을 제공합니다. 친근하고 활력 있는 문체로 작성하세요.',
-  '박준영': '개발자 출신 크리에이터 박준영입니다. 기술 도구 활용, 자동화, 효율화 관점에서 콘텐츠를 다룹니다. 명확하고 단계적인 문체로 작성하세요.',
+  '김민혁': {
+    intro: 'SEO 전략가 김민혁입니다. 구글·네이버 알고리즘 분석 10년 경력, 직접 운영한 50개+ 사이트 데이터 기반으로 작성합니다.',
+    style: '논리적·수치 중심. 주장마다 데이터 근거 필수. "필자가 직접 A/B 테스트한 결과", "실제 클라이언트 사례" 형식 활용.',
+  },
+  '이지수': {
+    intro: '소셜미디어 전문가 이지수입니다. 인스타그램 팔로워 12만 크리에이터 컨설팅 4년 경력, 직접 실험하고 검증한 전략만 씁니다.',
+    style: '친근·실전적. "제가 실제로 해봤더니", "이 방법으로 팔로워가 3배 늘었어요" 같은 체험 기반 서술. 단계별 실행 가이드.',
+  },
+  '박준영': {
+    intro: '개발자 출신 크리에이터 박준영입니다. 자동화 도구 100개+ 직접 테스트, 시간당 효율 데이터로 검증된 방법만 소개합니다.',
+    style: '명확·단계적. 코드/도구 사용법을 개발자 관점에서 쉽게 풀어 설명. 시간 절약 수치 필수 포함.',
+  },
 };
+
+const CREPIKA_TOOLS = [
+  { name: '글자수 세기', path: '/tools/text-counter', use: '원고 글자수·공백 포함/제외 카운팅' },
+  { name: '한글 바이트 카운터', path: '/tools/byte-counter', use: '네이버 메타 설명 80바이트 준수' },
+  { name: 'WebP 변환기', path: '/tools/webp-converter', use: '이미지 용량 최적화' },
+  { name: '인스타 줄바꿈 포매터', path: '/tools/insta-spacer', use: '인스타그램 줄바꿈 유지' },
+  { name: '해시태그 믹서', path: '/tools/hashtag-mixer', use: '해시태그 조합 최적화' },
+  { name: 'QR 코드 생성기', path: '/tools/qr-generator', use: '오프라인 채널 연결 QR' },
+  { name: '로렘 생성기', path: '/tools/lorem-generator', use: '디자인 시안용 더미 텍스트' },
+];
 
 function buildSystemPrompt(author) {
   const persona = AUTHOR_PERSONAS[author] || AUTHOR_PERSONAS['김민혁'];
-  return `당신은 ${persona}
+  const toolList = CREPIKA_TOOLS.map(t => `- [${t.name}](${t.path}): ${t.use}`).join('\n');
+  return `당신은 ${persona.intro}
+${persona.style}
 
-크레피카(crepika.com)의 전문 콘텐츠 작가로서 다음 도구들을 자연스럽게 연결합니다:
-- 글자수 세기 (/tools/text-counter)
-- 한글 바이트 카운터 (/tools/byte-counter)
-- WebP 변환기 (/tools/webp-converter)
-- 인스타 줄바꿈 포매터 (/tools/insta-spacer)
-- 해시태그 믹서 (/tools/hashtag-mixer)
-- QR 코드 생성기 (/tools/qr-generator)
-- 로렘 생성기 (/tools/lorem-generator)
+크레피카(crepika.com) 전속 필진으로, 아래 도구를 본문에 자연스럽게 2회 이상 마크다운 링크로 삽입합니다:
+${toolList}
 
-글쓰기 원칙:
-1. 한국어만 사용 (영어 병기 금지)
-2. 실용적이고 즉시 적용 가능한 정보 제공
-3. 크레피카 도구를 자연스럽게 1~2회 본문에 연결
-4. **볼드**, - 리스트, ## 섹션 마크다운 활용
-5. EEAT(전문성·권위·신뢰·경험) 기준 충족
-6. 구체적 수치, 사례, 단계별 안내 포함
-7. JSON만 반환 (코드 펜스 없음, 추가 설명 없음)`;
+## 구글 상위노출 필수 원칙 (엄수)
+
+1. **E-E-A-T 경험 신호**: 매 섹션마다 "직접 해본 결과", "실제 데이터", "사례" 중 1가지 이상 포함. 추상적 조언 금지.
+2. **출처 있는 수치**: 통계·수치 사용 시 "(출처: 기관명, 2024년)" 형식 필수. 수치 없이 "많은", "대부분" 표현 금지.
+3. **크레피카 도구 마크다운 링크 2회 이상**: relatedTools 배열이 아니라 introduction 또는 section content 본문 안에 [도구명](경로) 형식으로 삽입. 예: "[글자수 세기](/tools/text-counter)로 확인하면"
+4. **한국 시장 구체 사례**: 국내 크리에이터·플랫폼(네이버 블로그, 인스타그램 KR, 카카오, 유튜브 KR) 기준 수치와 사례 사용.
+5. **검색 의도 직접 해결**: 도입부 첫 3문장 안에 핵심 질문에 직접 답변. "이 글에서는 X를 설명합니다" 금지, "X를 하려면 A→B→C 순서로 하면 됩니다" 형식 사용.
+6. **단계별 실행 가이드**: 최소 1개 섹션은 번호 매긴 단계별 방법(1. 2. 3.) 포함.
+7. **비교·대조 구조**: 플랫폼/방법/도구 비교 시 표(| 항목 | A | B |) 형식 활용.
+8. **분량**: introduction 300자+, 각 section 500자+, conclusion 200자+, FAQ 5개+.
+9. JSON만 반환 (코드 펜스 없음, 추가 설명 없음).`;
 }
 
 function buildUserPrompt(entry) {
@@ -152,7 +170,14 @@ function buildUserPrompt(entry) {
     ? getPublishedSlugsByCategory(entry.category)
     : allSlugs.slice(-3);
 
-  return `다음 주제로 고품질 블로그 포스트를 작성하세요.
+  const toolHints = CREPIKA_TOOLS
+    .filter(t => relatedTools.some(r => t.path.includes(r)))
+    .concat(CREPIKA_TOOLS.filter(t => !relatedTools.some(r => t.path.includes(r))).slice(0, 2))
+    .slice(0, 3)
+    .map(t => `"[${t.name}](${t.path})"`)
+    .join(', ');
+
+  return `다음 주제로 구글 상위노출 수준의 고품질 블로그 포스트를 작성하세요.
 
 제목: ${entry.title}
 슬러그: ${entry.slug}
@@ -163,45 +188,58 @@ function buildUserPrompt(entry) {
 예상 읽기 시간: ${entry.estimatedReadTime}
 발행일: ${today}
 
-요구사항:
-- sections 4개 이상 (각 섹션에 풍부한 내용, subsections 선택)
-- faq 4개 이상 (AEO 최적화용 실제 검색 질문)
-- keywords 5~7개
-- introduction 200자 이상
-- 각 section content 300자 이상
-- conclusion 150자 이상
-- relatedTools: ${JSON.stringify(relatedTools)}
-- relatedPosts: ${JSON.stringify(relatedSlugs)}
-- 본문에서 크레피카 도구 자연 연결 1~2회
+## 필수 체크리스트 (누락 시 재생성)
+
+### 분량
+- introduction: 300자 이상 (핵심 답변을 첫 3문장에 직접 제시)
+- 각 section content: 500자 이상
+- conclusion: 200자 이상
+- sections: 5개 이상
+- faq: 5개 이상 (실제 네이버·구글 자동완성에 나오는 질문 형태)
+- keywords: 6~8개
+
+### 크레피카 도구 링크 (본문 삽입 필수 — relatedTools 배열 아님)
+- ${toolHints} 중 2개를 introduction 또는 section content 본문 문장 안에 마크다운 링크로 삽입
+- 삽입 예시: "정확한 글자수 확인은 [글자수 세기](/tools/text-counter)를 사용하면 즉시 확인됩니다."
+- 광고성 느낌이 아닌, 독자에게 실질적으로 도움이 되는 맥락에서만 삽입
+
+### E-E-A-T 신호
+- 최소 1개 섹션: "실제로 테스트한 결과", "국내 크리에이터 사례", "A/B 비교" 등 경험 기반 서술
+- 수치 사용 시 출처 명시: "(출처: 기관명, 2024년)" 또는 "2025년 기준"
+- 최소 1개 섹션: 번호 매긴 단계별 가이드(1. 2. 3.)
+
+### 한국 시장 특화
+- 플랫폼: 네이버 블로그, 인스타그램, 유튜브, 카카오 기준 사례 사용
+- 비교가 있으면 표(마크다운 테이블) 형식 활용
 
 다음 JSON 구조로만 응답하세요 (코드 펜스 없이 순수 JSON):
 {
   "slug": "${entry.slug}",
   "title": "${entry.title}",
-  "description": "155자 이내 메타 설명",
+  "description": "네이버 기준 80바이트(한글 약 40자) 이내 메타 설명 — 핵심 키워드 앞배치",
   "category": "${entry.category}",
   "publishDate": "${today}",
   "dateModified": "${today}",
   "readTime": "${entry.estimatedReadTime}",
   "author": "${entry.author}",
-  "keywords": ["키워드1", "키워드2", "키워드3", "키워드4", "키워드5"],
+  "keywords": ["키워드1", "키워드2", "키워드3", "키워드4", "키워드5", "키워드6"],
   "content": {
-    "introduction": "소개 텍스트",
+    "introduction": "300자 이상. 첫 3문장에 핵심 답변 + 크레피카 도구 링크 1회",
     "sections": [
       {
-        "heading": "섹션 제목",
-        "content": "섹션 내용 (마크다운 지원)",
+        "heading": "섹션 제목 (H2 수준 키워드 포함)",
+        "content": "500자 이상. 경험 기반 서술 또는 단계별 가이드 또는 비교표 포함",
         "subsections": [
-          { "subheading": "서브 제목", "content": "서브 내용" }
+          { "subheading": "서브 제목", "content": "구체적 방법 또는 사례" }
         ]
       }
     ],
-    "conclusion": "결론 텍스트"
+    "conclusion": "200자 이상. 핵심 요약 + 크레피카 도구 링크 1회(introduction에 없는 다른 도구)"
   },
   "relatedTools": ${JSON.stringify(relatedTools)},
   "relatedPosts": ${JSON.stringify(relatedSlugs)},
   "faq": [
-    { "question": "질문?", "answer": "답변" }
+    { "question": "실제 검색 질문 형태 (어떻게, 얼마나, 왜 등)?", "answer": "150자 이상 구체적 답변" }
   ]
 }`;
 }
