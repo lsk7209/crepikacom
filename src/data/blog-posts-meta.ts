@@ -2512,6 +2512,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["인스타그램 Broadcast Channel", "인스타그램 방송 채널", "팬 커뮤니티", "인스타그램 마케팅", "크리에이터 전략"],
   },
+  {
+    slug: "youtube-monetization-complete-guide-strategy",
+    title: "유튜브 멤버십 수익화 완전 가이드: 구독자를 유료 멤버로 전환하는 전략",
+    description: "유튜브 채널 멤버십을 활성화하고 무료 구독자를 유료 멤버로 전환하는 전략을 단계별로 안내합니다. 멤버십 혜택 설계부터 수익 극대화까지. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["유튜브 멤버십", "유튜브 수익화", "구독자 수익화", "채널 멤버십", "유튜브 크리에이터"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
