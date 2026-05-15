@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/feed.xml", "destination": "/rss.xml", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],

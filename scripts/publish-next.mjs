@@ -5,6 +5,7 @@
  */
 
 import { readFileSync, writeFileSync } from 'fs';
+import { createSign } from 'crypto';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -355,6 +356,41 @@ async function main() {
   console.log(`🔗 URL: ${SITE_URL}/blog/${post.slug}`);
 }
 
+async function getGoogleAccessToken() {
+  try {
+    const SA_PATH = 'D:/env/cursorai-451704-85a5abbe8eeb.json';
+    const sa = JSON.parse(readFileSync(SA_PATH, 'utf-8'));
+    const now = Math.floor(Date.now() / 1000);
+    const header = Buffer.from(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).toString('base64url');
+    const payload = Buffer.from(JSON.stringify({
+      iss: sa.client_email,
+      scope: 'https://www.googleapis.com/auth/indexing',
+      aud: 'https://oauth2.googleapis.com/token',
+      exp: now + 3600,
+      iat: now,
+    })).toString('base64url');
+    const sigInput = `${header}.${payload}`;
+    const sign = createSign('RSA-SHA256');
+    sign.update(sigInput);
+    const sig = sign.sign(sa.private_key, 'base64url');
+    const jwt = `${sigInput}.${sig}`;
+    const res = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`,
+    });
+    if (!res.ok) {
+      console.warn(`⚠️ Google 토큰 발급 실패: ${res.status}`);
+      return null;
+    }
+    const data = await res.json();
+    return data.access_token;
+  } catch (e) {
+    console.warn(`⚠️ Google 토큰 오류: ${e.message}`);
+    return null;
+  }
+}
+
 async function pingSearchEngines(slug) {
   const url = `${SITE_URL}/blog/${slug}`;
   const INDEXNOW_KEY = 'crepika2026indexnow';
@@ -363,18 +399,37 @@ async function pingSearchEngines(slug) {
     // IndexNow (Bing, Yandex, Seznam 등 동시)
     fetch(`https://api.indexnow.org/indexnow?url=${encodeURIComponent(url)}&key=${INDEXNOW_KEY}`)
       .then(r => console.log(`📡 IndexNow 핑: ${r.status}`))
-      .catch(() => {}),
+      .catch(e => console.warn(`⚠️ IndexNow 실패: ${e.message}`)),
     // Bing 사이트맵 핑
     fetch(`https://www.bing.com/ping?sitemap=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`)
       .then(r => console.log(`📡 Bing 핑: ${r.status}`))
-      .catch(() => {}),
-    // 네이버 사이트맵 핑
-    fetch(`https://searchadvisor.naver.com/site/submit?url=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`)
-      .then(r => console.log(`📡 Naver 핑: ${r.status}`))
-      .catch(() => {}),
+      .catch(e => console.warn(`⚠️ Bing 실패: ${e.message}`)),
+    // 네이버 IndexNow 핑
+    fetch(`https://searchadvisor.naver.com/indexnow?url=${encodeURIComponent(url)}&key=${INDEXNOW_KEY}`)
+      .then(r => console.log(`📡 Naver IndexNow 핑: ${r.status}`))
+      .catch(e => console.warn(`⚠️ Naver 실패: ${e.message}`)),
   ];
 
   await Promise.allSettled(pings);
+
+  // Google Indexing API
+  const token = await getGoogleAccessToken();
+  if (token) {
+    try {
+      const res = await fetch('https://indexing.googleapis.com/v3/urlNotifications:publish', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({ url, type: 'URL_UPDATED' }),
+      });
+      console.log(`📡 Google Indexing API: ${res.status}`);
+    } catch (e) {
+      console.warn(`⚠️ Google Indexing API 실패: ${e.message}`);
+    }
+  }
+
   console.log(`✅ 검색엔진 핑 완료`);
 }
 
