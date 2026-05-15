@@ -562,7 +562,7 @@ export default function Home() {
         <AdSlot type="bottom" strategy="instant" className="my-8" />
 
         {/* ── How it Works ─────────────────────────────────── */}
-        <section className="mb-16">
+        <section className="mb-16 content-lazy">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-3">사용 방법</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
@@ -593,7 +593,7 @@ export default function Home() {
         </section>
 
         {/* ── 왜 크레피카인가요? ──────────────────────────────── */}
-        <section className="mb-12 text-center">
+        <section className="mb-12 text-center content-lazy">
           <h2 className="text-3xl font-bold mb-4">왜 크레피카인가요?</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-10">
             크레피카는 1인 크리에이터, 블로거, 마케터를 위한 필수 도구를
@@ -639,7 +639,7 @@ export default function Home() {
         </section>
 
         {/* ── 사용자 유형별 추천 ──────────────────────────────── */}
-        <section className="mb-16">
+        <section className="mb-16 content-lazy">
           <h2 className="text-3xl font-bold text-center mb-8">
             이런 분들께 딱 맞습니다
           </h2>
