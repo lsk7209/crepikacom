@@ -2532,6 +2532,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["LinkedIn 뉴스레터", "링크드인 콘텐츠 전략", "B2B 마케팅", "전문가 네트워크", "LinkedIn 알고리즘"],
   },
+  {
+    slug: "pod-complete-guide",
+    title: "POD(주문형 인쇄) 비즈니스 완전 가이드: 재고 없이 굿즈·티셔츠 판매 시작하기",
+    description: "재고 부담 없이 티셔츠·굿즈를 판매하는 POD 비즈니스 완전 가이드입니다. 플랫폼 선택부터 디자인 제작, 마케팅 전략까지 수익화 로드맵을 단계별로 설명합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "14분",
+    author: "김민혁",
+    keywords: ["POD 비즈니스", "주문형 인쇄", "굿즈 판매", "티셔츠 판매", "무재고 쇼핑몰"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
