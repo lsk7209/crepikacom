@@ -1,5 +1,4 @@
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import { Suspense, lazy, useEffect } from "react";
@@ -26,8 +25,6 @@ const Terms = lazy(() => import("./pages/Terms"));
 const Contact = lazy(() => import("./pages/Contact"));
 const BlogList = lazy(() => import("./pages/BlogList"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
-
-const queryClient = new QueryClient();
 
 function AppContent() {
   const { showHelp, setShowHelp } = useGlobalShortcuts();
@@ -78,13 +75,11 @@ function AppContent() {
 }
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <BrowserRouter>
-        <AppContent />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <TooltipProvider>
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
+  </TooltipProvider>
 );
 
 export default App;
