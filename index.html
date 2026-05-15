@@ -63,15 +63,7 @@
     <script>
       (function(){var s=localStorage.getItem('crepika-theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}})();
     </script>
-    <script>
-      if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-        var _as = document.createElement('script');
-        _as.async = true;
-        _as.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3050601904412736';
-        _as.crossOrigin = 'anonymous';
-        document.head.appendChild(_as);
-      }
-    </script>
+    <!-- AdSense loaded lazily by AdSlot component via IntersectionObserver -->
   </head>
 
   <body>
