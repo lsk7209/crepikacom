@@ -10,7 +10,7 @@
       ]
     },
     {
-      "source": "/(sitemap\\.xml|rss\\.xml|robots\\.txt|ads\\.txt)",
+      "source": "/(sitemap\\.xml|rss\\.xml|robots\\.txt|ads\\.txt|llms\\.txt|llms-full\\.txt|ai-index\\.json)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600" }
       ]

@@ -91,3 +91,9 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* 폴드 아래 섹션 렌더링 지연 — 초기 페이지 로드 성능 개선 */
+.content-lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px;
+}

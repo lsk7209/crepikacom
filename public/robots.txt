@@ -41,6 +41,13 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+# Block aggressive scrapers
+User-agent: Bytespider
+Disallow: /
+
 User-agent: *
 Allow: /
 

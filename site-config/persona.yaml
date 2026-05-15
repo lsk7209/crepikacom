@@ -1,0 +1,96 @@
+site:
+  name: 크레피카
+  name_en: Crepika
+  domain: crepika.com
+  tagline: 로그인 없이 3초 만에 끝나는 크리에이터 도구
+  description: |
+    국내 크리에이터(블로거·인스타그래머·유튜버·마케터)를 위한 무료 온라인 도구함.
+    QR 코드 생성기, 텍스트 카운터, WebP 변환기 등 7가지 도구를 로그인 없이 즉시 사용.
+    마케팅·SEO 가이드 블로그를 함께 운영해 실전 인사이트를 제공한다.
+
+target_audience:
+  primary:
+    - 한국 1인 크리에이터 (블로그·인스타그램·유튜브 운영자)
+    - 소규모 브랜드 마케터
+    - 프리랜서 디자이너·콘텐츠 작가
+  demographics:
+    age: 20-40대
+    region: 대한민국
+    skill_level: 중급 이하 (도구 사용법 자세히 설명 필요)
+
+brand_voice:
+  tone: 친근하고 실용적, 군더더기 없이
+  formality: 반말 금지 / 격식체 + 가벼운 구어체 혼용
+  keywords:
+    - 무료
+    - 로그인 불필요
+    - 3초 만에
+    - 즉시
+    - 크리에이터
+  signature:
+    avoid:
+      - 혁신적인
+      - 놀라운
+      - 최고의
+      - 압도적인
+    prefer:
+      - 빠른
+      - 간편한
+      - 실용적인
+      - 바로 쓰는
+
+content:
+  tools:
+    - id: text-counter
+      ko: 텍스트 카운터
+      focus_keyword: 글자수 세기
+    - id: byte-counter
+      ko: 한글 바이트 카운터
+      focus_keyword: 바이트 계산기
+    - id: lorem-generator
+      ko: 로렘 입숨 생성기
+      focus_keyword: 로렘 입숨
+    - id: webp-converter
+      ko: WebP 변환기
+      focus_keyword: WebP 변환
+    - id: insta-spacer
+      ko: 인스타 줄바꿈 포매터
+      focus_keyword: 인스타그램 줄바꿈
+    - id: hashtag-mixer
+      ko: 해시태그 믹서
+      focus_keyword: 해시태그 생성기
+    - id: qr-generator
+      ko: QR 코드 생성기
+      focus_keyword: QR 코드 생성기
+
+  blog:
+    categories:
+      - guide: 완벽 가이드
+      - tips: 실전 팁
+      - insights: 인사이트
+      - case-study: 사례 연구
+    authors:
+      - name: 김민혁
+        role: SEO·마케팅 전문가
+      - name: 이지수
+        role: 콘텐츠 크리에이터
+      - name: 박지영
+        role: SNS 마케터
+
+seo:
+  title_template: "{page_title} | 크레피카"
+  naver_title_max: 40
+  naver_desc_max: 80
+  google_title_max: 60
+  google_desc_max: 160
+  canonical_base: https://crepika.com
+  og_locale: ko_KR
+  og_image: https://crepika.com/og-image.png
+
+monetization:
+  adsense_pub_id: ca-pub-3050601904412736
+  model: auto_ads_plus_slots
+  strategy: |
+    자동광고 활성화 + 도구 페이지 전략적 수동 슬롯.
+    process_heavy 도구(WebP 변환기)에 변환 중 광고 노출.
+    download_focused 도구에 다운로드 전 광고 삽입.

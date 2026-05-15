@@ -26,8 +26,10 @@ function AppContent() {
   const location = useLocation();
 
   useEffect(() => {
-    if (typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('config', 'G-P8LJ76FVM4', { page_path: location.pathname });
+    if (typeof (window as any).gtag !== "undefined") {
+      (window as any).gtag("config", "G-P8LJ76FVM4", {
+        page_path: location.pathname,
+      });
     }
   }, [location.pathname]);
 
@@ -37,7 +39,13 @@ function AppContent() {
       <Sonner />
       <KeyboardShortcutsModal open={showHelp} onOpenChange={setShowHelp} />
       <AppShell>
-        <Suspense fallback={<div className="flex items-center justify-center min-h-[50vh]"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" /></div>}>
+        <Suspense
+          fallback={
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
+            </div>
+          }
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tools/:id" element={<ToolPage />} />

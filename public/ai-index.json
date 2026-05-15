@@ -1,0 +1,68 @@
+{
+  "site": {
+    "name": "크레피카",
+    "name_en": "Crepika",
+    "url": "https://crepika.com",
+    "description": "국내 크리에이터를 위한 무료 온라인 도구함. 로그인 없이 즉시 사용 가능.",
+    "locale": "ko_KR",
+    "topics": ["크리에이터 도구", "마케팅", "SEO", "소셜미디어", "콘텐츠 제작"],
+    "updated": "2026-05-15"
+  },
+  "tools": [
+    {
+      "id": "text-counter",
+      "title": "텍스트 카운터",
+      "description": "글자 수, 단어 수, 줄 수를 실시간으로 계산하는 무료 도구",
+      "url": "https://crepika.com/tools/text-counter",
+      "keywords": ["글자수 세기", "텍스트 카운터", "문자수 계산"]
+    },
+    {
+      "id": "byte-counter",
+      "title": "한글 바이트 카운터",
+      "description": "한글·영문 바이트 수 정확 계산. SMS, DB 글자수 제한 확인용.",
+      "url": "https://crepika.com/tools/byte-counter",
+      "keywords": ["바이트 계산기", "한글 바이트", "SMS 글자수"]
+    },
+    {
+      "id": "lorem-generator",
+      "title": "로렘 입숨 생성기",
+      "description": "디자인 시안용 한국어·영어 더미 텍스트 즉시 생성",
+      "url": "https://crepika.com/tools/lorem-generator",
+      "keywords": ["로렘 입숨", "더미 텍스트", "샘플 텍스트"]
+    },
+    {
+      "id": "webp-converter",
+      "title": "WebP 변환기",
+      "description": "JPG/PNG를 WebP로 변환해 이미지 용량을 최대 80% 줄이는 무료 도구",
+      "url": "https://crepika.com/tools/webp-converter",
+      "keywords": ["WebP 변환", "이미지 최적화", "JPG to WebP"]
+    },
+    {
+      "id": "insta-spacer",
+      "title": "인스타 줄바꿈 포매터",
+      "description": "인스타그램 캡션 줄바꿈이 깨지지 않도록 포맷팅하는 도구",
+      "url": "https://crepika.com/tools/insta-spacer",
+      "keywords": ["인스타그램 줄바꿈", "인스타 캡션", "줄바꿈 포매터"]
+    },
+    {
+      "id": "hashtag-mixer",
+      "title": "해시태그 믹서",
+      "description": "해시태그 그룹을 무작위 조합해 알고리즘 페널티를 방지하는 도구",
+      "url": "https://crepika.com/tools/hashtag-mixer",
+      "keywords": ["해시태그 생성기", "해시태그 믹서", "인스타 해시태그"]
+    },
+    {
+      "id": "qr-generator",
+      "title": "QR 코드 생성기",
+      "description": "URL·텍스트를 QR 코드로 즉시 변환·다운로드하는 무료 도구",
+      "url": "https://crepika.com/tools/qr-generator",
+      "keywords": ["QR 코드 생성기", "QR 코드 만들기", "무료 QR"]
+    }
+  ],
+  "blog": {
+    "url": "https://crepika.com/blog",
+    "rss": "https://crepika.com/rss.xml",
+    "categories": ["guide", "tips", "insights", "case-study"],
+    "count": 254
+  }
+}
