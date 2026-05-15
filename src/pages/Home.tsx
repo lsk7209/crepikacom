@@ -38,8 +38,9 @@ import {
   isFavoriteTool,
 } from "@/utils/localStorage";
 import { AdSlot } from "@/components/ad/AdSlot";
+import { Suspense, lazy } from "react";
 
-import RecentBlogPosts from "./home/RecentBlogPosts";
+const RecentBlogPosts = lazy(() => import("./home/RecentBlogPosts"));
 
 const CATEGORY_COLORS: Record<
   Category,
@@ -678,7 +679,9 @@ export default function Home() {
         <AdSlot type="bottom" strategy="instant" className="mb-8" />
 
         {/* ── 최신 블로그 포스트 ────────────────────────────── */}
-        <RecentBlogPosts />
+        <Suspense fallback={null}>
+          <RecentBlogPosts />
+        </Suspense>
       </div>
     </>
   );
