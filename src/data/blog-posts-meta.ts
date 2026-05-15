@@ -2552,6 +2552,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["쿠팡 광고", "로켓그로스", "쿠팡 판매자", "쿠팡 ROAS", "쿠팡 검색 광고"],
   },
+  {
+    slug: "kakao-ads-complete-guide-kakao-ads",
+    title: "카카오모먼트 광고 완전 가이드: 카카오 앱 안에서 고객에게 닿는 광고 운영법",
+    description: "카카오모먼트 광고 플랫폼의 구조와 실전 운영 전략을 완전 정리했습니다. 카카오톡·다음·카카오스토리에서 타겟 고객에게 효과적으로 도달하는 광고 최적화 방법을 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["카카오모먼트", "카카오 광고", "카카오톡 광고", "모바일 광고", "카카오 타겟팅"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

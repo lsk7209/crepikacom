@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Fri, 15 May 2026 16:48:53 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 15 May 2026 20:56:51 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2314,6 +2314,16 @@
     <pubDate>Fri, 15 May 2026 16:48:53 GMT</pubDate>
     <guid>https://crepika.com/blog/ads-complete-guide-ads-optimization-strategy</guid>
     <dc:creator>이지수</dc:creator>
+  </item>
+
+
+  <item>
+    <title>카카오모먼트 광고 완전 가이드: 카카오 앱 안에서 고객에게 닿는 광고 운영법</title>
+    <link>https://crepika.com/blog/kakao-ads-complete-guide-kakao-ads</link>
+    <description>카카오모먼트 광고 플랫폼의 구조와 실전 운영 전략을 완전 정리했습니다. 카카오톡·다음·카카오스토리에서 타겟 고객에게 효과적으로 도달하는 광고 최적화 방법을 안내합니다.</description>
+    <pubDate>Fri, 15 May 2026 20:56:51 GMT</pubDate>
+    <guid>https://crepika.com/blog/kakao-ads-complete-guide-kakao-ads</guid>
+    <dc:creator>박준영</dc:creator>
   </item>
 
 </channel>
