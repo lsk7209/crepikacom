@@ -412,21 +412,29 @@ async function pingSearchEngines(slug) {
 
   await Promise.allSettled(pings);
 
-  // Google Indexing API
+  // Google Indexing API + GSC 사이트맵 재제출
   const token = await getGoogleAccessToken();
   if (token) {
     try {
       const res = await fetch('https://indexing.googleapis.com/v3/urlNotifications:publish', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        },
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
         body: JSON.stringify({ url, type: 'URL_UPDATED' }),
       });
       console.log(`📡 Google Indexing API: ${res.status}`);
     } catch (e) {
       console.warn(`⚠️ Google Indexing API 실패: ${e.message}`);
+    }
+    try {
+      const siteUrl = encodeURIComponent(`${SITE_URL}/`);
+      const sitemapUrl = encodeURIComponent(`${SITE_URL}/sitemap.xml`);
+      const res = await fetch(
+        `https://www.googleapis.com/webmasters/v3/sites/${siteUrl}/sitemaps/${sitemapUrl}`,
+        { method: 'PUT', headers: { 'Authorization': `Bearer ${token}` } }
+      );
+      console.log(`📡 GSC 사이트맵 재제출: ${res.status}`);
+    } catch (e) {
+      console.warn(`⚠️ GSC 사이트맵 재제출 실패: ${e.message}`);
     }
   }
 
