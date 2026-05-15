@@ -1,14 +1,14 @@
 # Status | 마지막: 2026-05-16
 
 ## 현재 작업
-Performance 최적화 완료 (lazy loading). Vercel 배포 중 — 측정 대기.
+Performance 최적화 완료. Vercel 배포 완료 — Lighthouse 재측정 대기.
 
 ## 최근 변경 (최근 5개)
+- 05-16: AppShell lucide 제거 → icons 청크 완전 lazy (초기 번들에서 제거)
+- 05-16: content-visibility:auto → How it Works / 왜 크레피카 / 사용자 유형 3개 섹션
+- 05-16: vite 청크 분리: helmet + icons 별도 lazy 청크
 - 05-16: Home.tsx RecentBlogPosts lazy load → 179KB blog-posts-meta 초기 렌더 제외
 - 05-16: App.tsx Toaster/Sonner/KeyboardShortcutsModal lazy load + GA4 defer
-- 05-16: blog-content.ts 236개 포스트 /tools/ 링크 + E-E-A-T 신호 일괄 추가
-- 05-16: scripts/improve-posts.mjs 배치 개선 스크립트 추가
-- 05-15: AdSlot.tsx 인터랙션 후 레이지 로드 (Best Practices 100)
 
 ## TODO
 - [x] Vercel 배포 완료 (2026-05-15, commit 726d988)
@@ -17,8 +17,9 @@ Performance 최적화 완료 (lazy loading). Vercel 배포 중 — 측정 대기
 - [x] GSC sitemap.xml 재제출 — API로 자동 제출 완료, submitted: 265 (2026-05-16)
 - [x] Lighthouse 측정: Performance 82, A11y 100, BP 100, SEO 100 (2026-05-16)
 - [x] Lazy load: GA4, Toaster, Sonner, KeyboardShortcutsModal, RecentBlogPosts (05-16)
-- [ ] Lighthouse 재측정 — lazy loading 배포 후 Performance 90+ 목표
-- [ ] Vercel 대시보드: crepika.com을 primary domain으로 설정 (현재 www→non-www 307 리다이렉트 780ms 낭비)
+- [x] AppShell 인라인 SVG → icons 청크 완전 lazy 전환 (05-16)
+- [ ] Lighthouse 재측정 — 현재 배포 기준 Performance 목표 90+
+- [ ] **[사용자 필수]** Vercel 대시보드 → Settings → Domains → crepika.com primary 설정 (307 리다이렉트 780ms 제거, 최대 단일 성능 향상)
 - [ ] AdSense 수동 슬롯 ID — 사용자 생성 후 제공 (AdSlot의 slotId 파라미터)
 
 ## 결정사항
