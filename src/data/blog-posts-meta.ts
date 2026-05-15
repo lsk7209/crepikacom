@@ -2522,6 +2522,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["유튜브 멤버십", "유튜브 수익화", "구독자 수익화", "채널 멤버십", "유튜브 크리에이터"],
   },
+  {
+    slug: "linkedin-complete-guide-content-strategy",
+    title: "LinkedIn 뉴스레터 완전 가이드: 전문가 네트워크에 무료로 배포하는 콘텐츠 전략",
+    description: "LinkedIn 뉴스레터를 활용해 전문가 네트워크에 무료로 콘텐츠를 배포하는 전략을 단계별로 정리했습니다. 구독자 확보부터 알고리즘 활용법까지 실전 가이드를 제공합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["LinkedIn 뉴스레터", "링크드인 콘텐츠 전략", "B2B 마케팅", "전문가 네트워크", "LinkedIn 알고리즘"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
