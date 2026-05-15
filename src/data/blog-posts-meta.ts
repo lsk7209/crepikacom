@@ -2582,6 +2582,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["키워드 갭 분석", "경쟁사 분석", "SEO 키워드", "Ahrefs 사용법", "SEMrush 키워드"],
   },
+  {
+    slug: "complete-guide-json-ld-search",
+    title: "리치 스니펫 완전 가이드: JSON-LD 스키마로 검색 결과를 화려하게 만드는 법",
+    description: "JSON-LD 스키마 마크업으로 리치 스니펫을 구현하는 완전 가이드입니다. FAQ, 별점, 레시피, 제품 등 주요 스키마 유형별 코드와 구글 검색 결과 CTR을 높이는 실전 방법을 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "13분",
+    author: "이지수",
+    keywords: ["리치 스니펫", "JSON-LD 스키마", "구조화된 데이터", "스키마 마크업", "검색 결과 최적화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
