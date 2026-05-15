@@ -1,4 +1,3 @@
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import { Suspense, lazy, useEffect } from "react";
@@ -75,11 +74,9 @@ function AppContent() {
 }
 
 const App = () => (
-  <TooltipProvider>
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
-  </TooltipProvider>
+  <BrowserRouter>
+    <AppContent />
+  </BrowserRouter>
 );
 
 export default App;
