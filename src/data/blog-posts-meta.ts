@@ -2632,6 +2632,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["HCU 대응", "유용한 콘텐츠 업데이트", "구글 알고리즘", "콘텐츠 감사", "EEAT"],
   },
+  {
+    slug: "threads-algorithm-complete-analytics-follower-2026-strategy",
+    title: "Threads 알고리즘 완전 분석: 노출과 팔로워를 동시에 늘리는 2026 전략",
+    description: "2026년 Threads 알고리즘 작동 방식과 최신 노출 전략을 완전 분석했습니다. 팔로워 증가와 도달률을 동시에 높이는 콘텐츠 전략, 최적 발행 시간, 참여율 높이는 방법을 안내합니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "박준영",
+    keywords: ["Threads 알고리즘", "Threads 팔로워 늘리기", "Threads 노출 전략", "메타 Threads", "Threads 콘텐츠"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
