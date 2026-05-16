@@ -2612,6 +2612,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["Google SGE", "AI 검색 최적화", "AEO", "브랜드 인용", "EEAT"],
   },
+  {
+    slug: "seo-complete-guide-url",
+    title: "사이트 구조 SEO 완전 가이드: URL 체계와 사이트맵 설계로 크롤링 효율 높이기",
+    description: "사이트 구조 SEO 완전 가이드입니다. 크롤링 효율을 높이는 URL 체계 설계, XML 사이트맵 최적화, 크롤 버짓 관리, 내부 링크 구조까지 실전 방법을 단계별로 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["사이트 구조 SEO", "URL 최적화", "XML 사이트맵", "크롤 버짓", "내부 링크"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
