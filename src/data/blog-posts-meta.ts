@@ -2592,6 +2592,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["리치 스니펫", "JSON-LD 스키마", "구조화된 데이터", "스키마 마크업", "검색 결과 최적화"],
   },
+  {
+    slug: "search-optimization-complete-guide-google",
+    title: "음성 검색 최적화 완전 가이드: 시리·구글 어시스턴트가 내 사이트를 읽게 만드는 법",
+    description: "음성 검색 최적화(VSO) 완전 가이드입니다. 시리·구글 어시스턴트·빅스비가 내 사이트를 검색 결과로 읽는 Featured Snippet 전략, 자연어 키워드, 로컬 SEO까지 실전 방법을 안내합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["음성 검색 최적화", "Voice Search SEO", "Featured Snippet", "구글 어시스턴트", "자연어 SEO"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
