@@ -2622,6 +2622,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["사이트 구조 SEO", "URL 최적화", "XML 사이트맵", "크롤 버짓", "내부 링크"],
   },
+  {
+    slug: "hcu-content-guide-google-algorithm-strategy",
+    title: "HCU(유용한 콘텐츠 업데이트) 대응 가이드: 구글 알고리즘 변화에서 살아남는 전략",
+    description: "구글 HCU(Helpful Content Update) 피해를 극복하고 회복하는 전략을 완전 정리했습니다. 유용한 콘텐츠의 기준, EEAT 강화, 콘텐츠 감사, AI 생성 콘텐츠 대응까지 실전 가이드를 제공합니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "13분",
+    author: "이지수",
+    keywords: ["HCU 대응", "유용한 콘텐츠 업데이트", "구글 알고리즘", "콘텐츠 감사", "EEAT"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
