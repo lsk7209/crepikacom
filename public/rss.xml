@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Sat, 16 May 2026 02:35:56 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 16 May 2026 07:12:03 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2364,6 +2364,16 @@
     <pubDate>Sat, 16 May 2026 02:35:56 GMT</pubDate>
     <guid>https://crepika.com/blog/search-optimization-complete-guide-google</guid>
     <dc:creator>김민혁</dc:creator>
+  </item>
+
+
+  <item>
+    <title>Google SGE 브랜드 인용 전략 가이드: AI 검색에서 내 브랜드가 언급되게 만드는 법</title>
+    <link>https://crepika.com/blog/google-sge-brand-strategy-guide-ai-search-brand</link>
+    <description>Google SGE(AI 개요)와 AI 검색에서 브랜드가 인용·언급되도록 만드는 실전 전략을 안내합니다. EEAT 강화, 브랜드 언급 최적화, AI 친화적 콘텐츠 구조로 AEO(Answer Engine Optimization)를 구현하는 방법입니다.</description>
+    <pubDate>Sat, 16 May 2026 07:12:03 GMT</pubDate>
+    <guid>https://crepika.com/blog/google-sge-brand-strategy-guide-ai-search-brand</guid>
+    <dc:creator>박준영</dc:creator>
   </item>
 
 </channel>

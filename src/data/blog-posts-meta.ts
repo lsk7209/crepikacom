@@ -2602,6 +2602,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["음성 검색 최적화", "Voice Search SEO", "Featured Snippet", "구글 어시스턴트", "자연어 SEO"],
   },
+  {
+    slug: "google-sge-brand-strategy-guide-ai-search-brand",
+    title: "Google SGE 브랜드 인용 전략 가이드: AI 검색에서 내 브랜드가 언급되게 만드는 법",
+    description: "Google SGE(AI 개요)와 AI 검색에서 브랜드가 인용·언급되도록 만드는 실전 전략을 안내합니다. EEAT 강화, 브랜드 언급 최적화, AI 친화적 콘텐츠 구조로 AEO(Answer Engine Optimization)를 구현하는 방법입니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "13분",
+    author: "박준영",
+    keywords: ["Google SGE", "AI 검색 최적화", "AEO", "브랜드 인용", "EEAT"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
