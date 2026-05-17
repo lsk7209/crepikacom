@@ -266,6 +266,10 @@ async function publishOne() {
   const { entry, post, draftPath } = next;
   console.log(`\n📰 발행 시작: [${entry.id}] ${entry.title.slice(0, 60)}`);
 
+  // Normalize publishDate to today (drafts had future dates from batch generation)
+  post.publishDate = getTodayDate();
+  if (post.dateModified) post.dateModified = getTodayDate();
+
   try {
     injectIntoBlogContent(post);
     injectIntoSitemap(post);
