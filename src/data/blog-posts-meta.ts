@@ -2822,6 +2822,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["크리에이터 세금", "유튜버 세금", "사업자 등록", "경비 처리", "종합소득세"],
   },
+  {
+    slug: "notion-7-tips",
+    title: "Notion 템플릿 잘 팔리게 만드는 7가지 팁: 구매자가 원하는 설계 원칙",
+    description: "Notion 템플릿을 만들었는데 판매가 안 된다면 설계에 문제가 있을 가능성이 높습니다. 구매자의 심리와 사용 패턴을 반영한 7가지 상품 설계 원칙을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-17",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["Notion 템플릿", "Notion 판매", "디지털 상품", "Notion 수익화", "템플릿 제작"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
