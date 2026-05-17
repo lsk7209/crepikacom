@@ -2762,6 +2762,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["이메일 시퀀스", "세일즈 퍼널", "이메일 자동화", "드립 캠페인", "이메일 마케팅"],
   },
+  {
+    slug: "ads-roas-7-tips-ads",
+    title: "리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정",
+    description: "리타겟팅 광고는 설정만 잘 해도 ROAS가 3~10배 차이납니다. 오디언스 세분화부터 광고 피로도 관리까지 실전에서 검증된 7가지 최적화 전략을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-17",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["리타겟팅 광고", "ROAS 최적화", "Meta 리타겟팅", "광고 최적화", "리마케팅"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

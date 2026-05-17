@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Sun, 17 May 2026 13:20:23 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 17 May 2026 13:38:11 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2524,6 +2524,16 @@
     <pubDate>Sun, 17 May 2026 13:20:23 GMT</pubDate>
     <guid>https://crepika.com/blog/tips-5-automation</guid>
     <dc:creator>박준영</dc:creator>
+  </item>
+
+
+  <item>
+    <title>리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정</title>
+    <link>https://crepika.com/blog/ads-roas-7-tips-ads</link>
+    <description>리타겟팅 광고는 설정만 잘 해도 ROAS가 3~10배 차이납니다. 오디언스 세분화부터 광고 피로도 관리까지 실전에서 검증된 7가지 최적화 전략을 정리했습니다.</description>
+    <pubDate>Sun, 17 May 2026 13:38:11 GMT</pubDate>
+    <guid>https://crepika.com/blog/ads-roas-7-tips-ads</guid>
+    <dc:creator>이지수</dc:creator>
   </item>
 
 </channel>
