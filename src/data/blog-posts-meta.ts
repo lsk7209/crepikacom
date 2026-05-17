@@ -2752,6 +2752,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
+  {
+    slug: "tips-5-automation",
+    title: "세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일",
+    description: "마케팅 자동화 도구로 반복 업무를 획기적으로 줄이는 5가지 실전 팁입니다. Make.com과 Zapier, HubSpot을 활용한 이메일 시퀀스, SNS 예약 발행, 리드 관리 자동화 흐름을 단계별로 상세히 설명합니다.",
+    category: "tips",
+    publishDate: "2026-05-17",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["이메일 시퀀스", "세일즈 퍼널", "이메일 자동화", "드립 캠페인", "이메일 마케팅"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
