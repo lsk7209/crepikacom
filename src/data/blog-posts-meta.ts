@@ -2772,6 +2772,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["리타겟팅 광고", "ROAS 최적화", "Meta 리타겟팅", "광고 최적화", "리마케팅"],
   },
+  {
+    slug: "discord-30-growth-tips-0-100-practical-method",
+    title: "Discord 서버 첫 30일 성장 팁: 0에서 100명 멤버 모으는 실전 방법",
+    description: "Discord 서버를 만들었지만 멤버가 늘지 않나요? 처음 30일 안에 100명 이상의 활성 멤버를 모으는 단계별 성장 전략과 커뮤니티 운영 팁을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-17",
+    readTime: "8분",
+    author: "김민혁",
+    keywords: ["Discord 서버 운영", "Discord 멤버 모으기", "커뮤니티 성장", "Discord 마케팅", "온라인 커뮤니티"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
