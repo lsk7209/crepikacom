@@ -2792,6 +2792,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["기술적 SEO", "SEO 체크리스트", "사이트 론칭", "Technical SEO", "검색엔진 최적화"],
   },
+  {
+    slug: "ahrefs-5-tips-keyword",
+    title: "Ahrefs 무료로 쓰는 5가지 팁: 유료 구독 없이도 키워드·백링크 데이터 얻기",
+    description: "Ahrefs 유료 플랜 없이도 활용 가능한 무료 기능 5가지를 정리했습니다. 키워드 조사부터 백링크 분석까지, 예산 없이도 SEO 데이터를 수집하는 실전 방법입니다.",
+    category: "tips",
+    publishDate: "2026-05-17",
+    readTime: "7분",
+    author: "이지수",
+    keywords: ["Ahrefs 무료", "키워드 조사 무료", "백링크 분석", "SEO 도구", "무료 SEO"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

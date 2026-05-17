@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Sun, 17 May 2026 19:01:57 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 17 May 2026 19:30:13 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2554,6 +2554,16 @@
     <pubDate>Sun, 17 May 2026 19:01:57 GMT</pubDate>
     <guid>https://crepika.com/blog/seo-10</guid>
     <dc:creator>박준영</dc:creator>
+  </item>
+
+
+  <item>
+    <title>Ahrefs 무료로 쓰는 5가지 팁: 유료 구독 없이도 키워드·백링크 데이터 얻기</title>
+    <link>https://crepika.com/blog/ahrefs-5-tips-keyword</link>
+    <description>Ahrefs 유료 플랜 없이도 활용 가능한 무료 기능 5가지를 정리했습니다. 키워드 조사부터 백링크 분석까지, 예산 없이도 SEO 데이터를 수집하는 실전 방법입니다.</description>
+    <pubDate>Sun, 17 May 2026 19:30:13 GMT</pubDate>
+    <guid>https://crepika.com/blog/ahrefs-5-tips-keyword</guid>
+    <dc:creator>이지수</dc:creator>
   </item>
 
 </channel>
