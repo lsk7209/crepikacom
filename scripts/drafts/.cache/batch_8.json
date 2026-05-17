@@ -1,0 +1,422 @@
+﻿[
+    {
+        "id":  675,
+        "slug":  "creator-tips-practical-method",
+        "title":  "크리에이터 경비 처리 팁: 장비·소프트웨어·제작비를 세금에서 합법적으로 공제하는 실전 방법",
+        "category":  "tips",
+        "mainKeyword":  "크리에이터 경비 처리",
+        "extendedKeywords":  [
+                                 "세금 공제",
+                                 "크리에이터 비용 처리",
+                                 "소득세 절감"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  676,
+        "slug":  "canva-brand-tips-content",
+        "title":  "Canva 브랜드 키트 설정 팁: 폰트·색상·로고를 한 번 설정하면 모든 콘텐츠가 일관되는 구성법",
+        "category":  "tips",
+        "mainKeyword":  "Canva 브랜드 키트",
+        "extendedKeywords":  [
+                                 "캔바 설정",
+                                 "브랜드 일관성",
+                                 "디자인 효율화"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  677,
+        "slug":  "midjourney-tips-usage",
+        "title":  "Midjourney 스타일 재현성 높이는 팁: 같은 이미지 스타일을 반복 생성하는 시드값·레퍼런스 활용법",
+        "category":  "tips",
+        "mainKeyword":  "Midjourney 스타일 일관성",
+        "extendedKeywords":  [
+                                 "미드저니 시드값",
+                                 "AI 이미지 스타일",
+                                 "Midjourney 고급 팁"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  678,
+        "slug":  "creator-ab-tips-method",
+        "title":  "소규모 크리에이터 A/B 테스트 팁: 트래픽 적어도 통계적으로 유효한 결과를 빠르게 얻는 방법",
+        "category":  "tips",
+        "mainKeyword":  "A/B 테스트 방법",
+        "extendedKeywords":  [
+                                 "통계적 유의성",
+                                 "소규모 테스트",
+                                 "전환율 실험"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "6분",
+        "published":  false
+    },
+    {
+        "id":  679,
+        "slug":  "1-creator-tips",
+        "title":  "1인 법인 크리에이터 급여 설정 팁: 대표이사 급여와 법인 유보금 배분으로 세금 최소화하는 기준",
+        "category":  "tips",
+        "mainKeyword":  "법인 크리에이터 급여",
+        "extendedKeywords":  [
+                                 "법인 급여 설정",
+                                 "대표이사 급여",
+                                 "세금 최소화"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  680,
+        "slug":  "n8n-tips-automation-24-method",
+        "title":  "n8n 무료 셀프호스팅 팁: 클라우드 비용 없이 자동화 서버를 24시간 운영하는 최소 구성 방법",
+        "category":  "tips",
+        "mainKeyword":  "n8n 셀프호스팅",
+        "extendedKeywords":  [
+                                 "n8n 설치",
+                                 "자동화 서버 무료",
+                                 "셀프호스팅 자동화"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  681,
+        "slug":  "perplexity-pro-tips-analytics-ai-search-30-method",
+        "title":  "Perplexity Pro 리서치 팁: 경쟁사 분석·트렌드 조사를 AI 검색으로 30분에 끝내는 방법",
+        "category":  "tips",
+        "mainKeyword":  "Perplexity Pro 활용",
+        "extendedKeywords":  [
+                                 "AI 검색 리서치",
+                                 "경쟁사 분석",
+                                 "시장 트렌드 조사"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  682,
+        "slug":  "tips-30",
+        "title":  "구독 이탈률 낮추는 팁: 멤버십 첫 30일 온보딩 시퀀스로 장기 구독을 유도하는 이메일 설계",
+        "category":  "tips",
+        "mainKeyword":  "구독 이탈률 감소",
+        "extendedKeywords":  [
+                                 "온보딩 이메일",
+                                 "멤버십 리텐션",
+                                 "구독 유지 전략"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "6분",
+        "published":  false
+    },
+    {
+        "id":  683,
+        "slug":  "saas-tips-14-3",
+        "title":  "SaaS 무료 체험 전환율 높이는 팁: 14일 트라이얼에서 유료 결제를 결정하는 3가지 핵심 활성화 지점",
+        "category":  "tips",
+        "mainKeyword":  "SaaS 무료 체험 전환",
+        "extendedKeywords":  [
+                                 "트라이얼 전환율",
+                                 "SaaS 온보딩",
+                                 "유료 전환 최적화"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "6분",
+        "published":  false
+    },
+    {
+        "id":  684,
+        "slug":  "creator-tips-practical-method-1",
+        "title":  "크리에이터 부가세 신고 팁: 간이과세자·일반과세자 선택 기준과 환급받는 실전 절세 방법",
+        "category":  "tips",
+        "mainKeyword":  "크리에이터 부가세",
+        "extendedKeywords":  [
+                                 "부가세 신고",
+                                 "간이과세자",
+                                 "세금 환급"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  685,
+        "slug":  "analytics-tips-ga4-method",
+        "title":  "그로스해킹 퍼널 분석 팁: GA4·메타픽셀 데이터로 전환을 막는 이탈 지점을 찾아내는 방법",
+        "category":  "tips",
+        "mainKeyword":  "그로스해킹 퍼널 분석",
+        "extendedKeywords":  [
+                                 "GA4 분석",
+                                 "퍼널 이탈",
+                                 "전환 최적화 분석"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "6분",
+        "published":  false
+    },
+    {
+        "id":  686,
+        "slug":  "kling-ai-tips-method",
+        "title":  "Kling AI 영상 품질 개선 팁: 프롬프트 파라미터 조정으로 아티팩트·모션 오류를 줄이는 방법",
+        "category":  "tips",
+        "mainKeyword":  "Kling AI 품질",
+        "extendedKeywords":  [
+                                 "AI 영상 품질",
+                                 "Kling 프롬프트",
+                                 "AI 영상 최적화"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  687,
+        "slug":  "ai-tools-creator-1-chatgptmidjourneycanva-analytics",
+        "title":  "AI 도구가 크리에이터 1인 제작 비용을 바꾸는 방식: ChatGPT·Midjourney·Canva 도입 전후 비용 구조 분석",
+        "category":  "insights",
+        "mainKeyword":  "AI 도구 비용 절감",
+        "extendedKeywords":  [
+                                 "크리에이터 AI 도입",
+                                 "제작 비용 분석",
+                                 "AI 경제성"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  688,
+        "slug":  "automation-2026-makecomzapiern8n-creator-analytics",
+        "title":  "노코드 자동화 시장 현황 2026: Make.com·Zapier·n8n 국내 사용 패턴과 크리에이터 도입률 분석",
+        "category":  "insights",
+        "mainKeyword":  "노코드 자동화 시장",
+        "extendedKeywords":  [
+                                 "노코드 트렌드",
+                                 "자동화 플랫폼 비교",
+                                 "국내 자동화 현황"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  689,
+        "slug":  "creator-1-analytics",
+        "title":  "크리에이터 법인 설립 증가 추세: 1인 사업자가 법인으로 전환하는 시점과 이유 데이터 분석",
+        "category":  "insights",
+        "mainKeyword":  "크리에이터 법인 전환",
+        "extendedKeywords":  [
+                                 "법인 설립 동기",
+                                 "1인 법인 트렌드",
+                                 "크리에이터 세금 구조"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  690,
+        "slug":  "2026-saas-strategy-comparison",
+        "title":  "구독 모델 이탈률 데이터 2026: 국내 멤버십·뉴스레터·SaaS의 월별 이탈 패턴과 유지 전략 비교",
+        "category":  "insights",
+        "mainKeyword":  "구독 이탈률 데이터",
+        "extendedKeywords":  [
+                                 "멤버십 이탈률",
+                                 "SaaS 이탈 분석",
+                                 "구독 리텐션 전략"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  691,
+        "slug":  "ai-content-algorithm-search-sns-ai-content-analytics",
+        "title":  "AI 콘텐츠 탐지 알고리즘의 진화: 검색엔진과 SNS가 AI 생성 콘텐츠를 처리하는 방식 변화 분석",
+        "category":  "insights",
+        "mainKeyword":  "AI 콘텐츠 탐지",
+        "extendedKeywords":  [
+                                 "AI 글 탐지",
+                                 "구글 AI 콘텐츠 정책",
+                                 "SEO와 AI 콘텐츠"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  692,
+        "slug":  "chatgpt-vs-claude-vs-gemini-content-comparison-creator-usage",
+        "title":  "ChatGPT vs Claude vs Gemini: 한국어 콘텐츠 생성 품질 비교와 크리에이터 실무 활용 차이",
+        "category":  "insights",
+        "mainKeyword":  "AI 모델 비교",
+        "extendedKeywords":  [
+                                 "ChatGPT 비교",
+                                 "Claude AI 활용",
+                                 "생성형 AI 선택"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  693,
+        "slug":  "analytics-creator-3",
+        "title":  "그로스해킹 실패 패턴 분석: 국내 스타트업·크리에이터가 실험을 잘못 설계하는 3가지 공통 오류",
+        "category":  "insights",
+        "mainKeyword":  "그로스해킹 실패 원인",
+        "extendedKeywords":  [
+                                 "그로스 실험 설계",
+                                 "마케팅 실수",
+                                 "데이터 기반 성장"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  694,
+        "slug":  "saas-strategy-2026-b2b",
+        "title":  "SaaS 가격 전략 변화 2026: 시트 기반에서 사용량 기반으로 이동하는 국내 B2B 소프트웨어 트렌드",
+        "category":  "insights",
+        "mainKeyword":  "SaaS 가격 전략",
+        "extendedKeywords":  [
+                                 "사용량 기반 요금제",
+                                 "B2B SaaS 가격",
+                                 "플리싱 트렌드"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  695,
+        "slug":  "creator-2026-revenue-analytics",
+        "title":  "크리에이터 세금 부담 실태 2026: 수익 구간별 실효세율과 법인·개인 구조 절세 차이 분석",
+        "category":  "insights",
+        "mainKeyword":  "크리에이터 세금 실태",
+        "extendedKeywords":  [
+                                 "크리에이터 실효세율",
+                                 "법인 vs 개인사업자 세금",
+                                 "절세 구조 비교"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  696,
+        "slug":  "midjourneysorakling-creator-ai-tools",
+        "title":  "Midjourney·Sora·Kling 국내 크리에이터 도입 현황: AI 영상·이미지 도구의 제작비 절감 효과 데이터",
+        "category":  "insights",
+        "mainKeyword":  "AI 영상 이미지 도구 비교",
+        "extendedKeywords":  [
+                                 "AI 제작 도구 현황",
+                                 "크리에이터 AI 도입률",
+                                 "AI 제작비 절감"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  697,
+        "slug":  "vs-vs-ai-creator-tools-analytics",
+        "title":  "노션 vs 옵시디언 vs 노션AI: 크리에이터 지식 관리 도구 선택 기준과 실무 생산성 차이 분석",
+        "category":  "insights",
+        "mainKeyword":  "지식 관리 도구 비교",
+        "extendedKeywords":  [
+                                 "노션 vs 옵시디언",
+                                 "PKM 도구",
+                                 "크리에이터 생산성 도구"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  698,
+        "slug":  "automation-tools-creator-makecom-analytics",
+        "title":  "자동화 도구가 크리에이터 운영 시간을 줄이는 방식: Make.com 사용자 실제 시간 절감 데이터 분석",
+        "category":  "insights",
+        "mainKeyword":  "자동화 시간 절감 효과",
+        "extendedKeywords":  [
+                                 "Make.com 효과",
+                                 "업무 자동화 ROI",
+                                 "크리에이터 생산성"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  699,
+        "slug":  "1-creator-saas-2026-tools-roi-analytics",
+        "title":  "한국 1인 크리에이터 SaaS 지출 구조 2026: 월별 도구 비용과 ROI를 따지는 합리적 기준 분석",
+        "category":  "insights",
+        "mainKeyword":  "크리에이터 SaaS 비용",
+        "extendedKeywords":  [
+                                 "SaaS 구독 비용",
+                                 "도구 ROI 분석",
+                                 "크리에이터 비용 구조"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  700,
+        "slug":  "ab-creator-analytics",
+        "title":  "A/B 테스트 문화가 부재한 이유: 한국 크리에이터·마케터가 데이터 실험을 기피하는 구조적 원인 분석",
+        "category":  "insights",
+        "mainKeyword":  "A/B 테스트 문화",
+        "extendedKeywords":  [
+                                 "데이터 기반 의사결정",
+                                 "마케팅 실험 문화",
+                                 "한국 디지털 마케팅"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  701,
+        "slug":  "2026-ai-tools-anthropicopenaigoogle-creator",
+        "title":  "2026년 AI 도구 생태계 재편: Anthropic·OpenAI·Google 경쟁이 크리에이터 워크플로우에 미치는 영향",
+        "category":  "insights",
+        "mainKeyword":  "AI 도구 생태계 변화",
+        "extendedKeywords":  [
+                                 "생성형 AI 경쟁",
+                                 "AI 워크플로우",
+                                 "크리에이터 AI 전략"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  702,
+        "slug":  "makecom-automation-content-20-1",
+        "title":  "Make.com 자동화로 콘텐츠 발행 시간 주 20시간 줄인 1인 마케터의 워크플로우 구조 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "Make.com 자동화 사례",
+        "extendedKeywords":  [
+                                 "콘텐츠 자동화 사례",
+                                 "1인 마케터 자동화",
+                                 "시간 절감 케이스"
+                             ],
+        "author":  "박준영",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    }
+]

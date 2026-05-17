@@ -1,0 +1,422 @@
+﻿[
+    {
+        "id":  479,
+        "slug":  "shopping-seo-tips-navergoogle-shopping-search-algorithm",
+        "title":  "쇼핑몰 상품명 SEO 팁: 네이버·구글 쇼핑 검색 알고리즘에 맞는 작명 공식",
+        "category":  "tips",
+        "mainKeyword":  "상품명 SEO 최적화",
+        "extendedKeywords":  [
+                                 "네이버 쇼핑 상품명",
+                                 "이커머스 키워드",
+                                 "상품 검색 노출"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  480,
+        "slug":  "instagram-reels-optimization-tips-3",
+        "title":  "인스타그램 릴스 썸네일 최적화 팁: 피드에서 클릭률을 3배 높이는 디자인 원칙",
+        "category":  "tips",
+        "mainKeyword":  "릴스 썸네일 최적화",
+        "extendedKeywords":  [
+                                 "인스타그램 릴스 클릭률",
+                                 "릴스 디자인",
+                                 "SNS 썸네일 전략"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  481,
+        "slug":  "kakao-tips-ab-method",
+        "title":  "카카오 채널 메시지 오픈율 높이는 팁: 발송 시간·문구·버튼 A/B 테스트 방법",
+        "category":  "tips",
+        "mainKeyword":  "카카오 채널 오픈율",
+        "extendedKeywords":  [
+                                 "카카오 메시지 최적화",
+                                 "카카오 A/B 테스트",
+                                 "메시지 마케팅"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  482,
+        "slug":  "5-tips-2-method",
+        "title":  "스마트스토어 리뷰 늘리는 5가지 팁: 구매 후 리뷰 전환율을 2배로 올리는 방법",
+        "category":  "tips",
+        "mainKeyword":  "스마트스토어 리뷰 전략",
+        "extendedKeywords":  [
+                                 "스마트스토어 리뷰 관리",
+                                 "구매 후기 증가",
+                                 "리뷰 전환율"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  483,
+        "slug":  "sns-tips-ads-algorithm-strategy",
+        "title":  "오가닉 SNS 도달률 높이는 팁: 광고 없이도 효과적인 알고리즘 친화 게시물 전략",
+        "category":  "tips",
+        "mainKeyword":  "SNS 오가닉 도달률",
+        "extendedKeywords":  [
+                                 "인스타그램 도달률",
+                                 "SNS 알고리즘",
+                                 "오가닉 마케팅"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  484,
+        "slug":  "tips",
+        "title":  "퍼스트파티 데이터 수집 팁: 서드파티 쿠키 종료 시대에 고객 데이터 확보하는 법",
+        "category":  "tips",
+        "mainKeyword":  "퍼스트파티 데이터",
+        "extendedKeywords":  [
+                                 "쿠키리스 마케팅",
+                                 "고객 데이터 수집",
+                                 "데이터 프라이버시"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  485,
+        "slug":  "google-keyword-tips-keyword",
+        "title":  "구글 애드워즈 키워드 정제 팁: 실제 구매 전환으로 이어지는 키워드만 골라내는 법",
+        "category":  "tips",
+        "mainKeyword":  "구글 광고 키워드 최적화",
+        "extendedKeywords":  [
+                                 "검색 광고 키워드",
+                                 "전환 키워드 분석",
+                                 "광고 키워드 정제"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  486,
+        "slug":  "brand-blog-cta-optimization-tips",
+        "title":  "브랜드 블로그 CTA 최적화 팁: 독자를 구독자·구매자로 전환하는 버튼 설계 원칙",
+        "category":  "tips",
+        "mainKeyword":  "블로그 CTA 최적화",
+        "extendedKeywords":  [
+                                 "CTA 버튼 디자인",
+                                 "블로그 전환율",
+                                 "리드 전환 최적화"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  487,
+        "slug":  "xtwitter-marketing-tips-brand-follower-strategy",
+        "title":  "X(트위터) 비즈니스 계정 마케팅 팁: 국내 브랜드가 팔로워를 빠르게 모으는 전략",
+        "category":  "tips",
+        "mainKeyword":  "X 트위터 마케팅",
+        "extendedKeywords":  [
+                                 "트위터 브랜드 계정",
+                                 "X 팔로워 늘리기",
+                                 "SNS 브랜딩"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  488,
+        "slug":  "2026-naver-view-algorithm-analytics-blog",
+        "title":  "2026년 네이버 VIEW 탭 알고리즘 변화 분석: 블로그 순위를 결정하는 핵심 요인",
+        "category":  "insights",
+        "mainKeyword":  "네이버 VIEW 알고리즘",
+        "extendedKeywords":  [
+                                 "네이버 검색 알고리즘",
+                                 "블로그 노출 순위",
+                                 "VIEW 탭 최적화"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  489,
+        "slug":  "ai-search-keyword-strategy-seo",
+        "title":  "AI 검색 시대의 키워드 전략 변화: 기존 SEO와 무엇이 달라지고 있는가",
+        "category":  "insights",
+        "mainKeyword":  "AI 검색 SEO 변화",
+        "extendedKeywords":  [
+                                 "AI 개요 SEO",
+                                 "검색 트렌드 변화",
+                                 "GEO 전략"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  490,
+        "slug":  "youtube-ads-2026-vs-ads-comparison",
+        "title":  "한국 유튜브 광고 시장 현황 2026: 인스트림 vs 범퍼 광고 효율 비교 데이터",
+        "category":  "insights",
+        "mainKeyword":  "유튜브 광고 효율",
+        "extendedKeywords":  [
+                                 "유튜브 인스트림 광고",
+                                 "범퍼 광고",
+                                 "영상 광고 비교"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  491,
+        "slug":  "mz-sns-2026-analytics",
+        "title":  "국내 MZ세대 SNS 이용 행태 2026: 플랫폼별 체류 시간과 구매 영향력 분석",
+        "category":  "insights",
+        "mainKeyword":  "MZ세대 SNS 행태",
+        "extendedKeywords":  [
+                                 "MZ세대 소비 트렌드",
+                                 "SNS 구매 영향",
+                                 "세대별 마케팅"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  492,
+        "slug":  "content-seo-vs-shortform-search",
+        "title":  "콘텐츠 길이와 SEO 성과의 관계: 롱폼 vs 숏폼 어느 쪽이 검색에 더 유리한가",
+        "category":  "insights",
+        "mainKeyword":  "콘텐츠 길이 SEO",
+        "extendedKeywords":  [
+                                 "롱폼 콘텐츠",
+                                 "숏폼 SEO",
+                                 "최적 콘텐츠 길이"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  493,
+        "slug":  "search-blog-analytics",
+        "title":  "제로클릭 검색 증가가 국내 블로그 트래픽에 미치는 실제 영향 분석",
+        "category":  "insights",
+        "mainKeyword":  "제로클릭 검색",
+        "extendedKeywords":  [
+                                 "검색 트래픽 감소",
+                                 "SGE 영향",
+                                 "블로그 유입 변화"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  494,
+        "slug":  "marketing-follower-3",
+        "title":  "국내 인플루언서 마케팅 효율 데이터: 팔로워 수보다 중요한 3가지 성과 지표",
+        "category":  "insights",
+        "mainKeyword":  "인플루언서 마케팅 효율",
+        "extendedKeywords":  [
+                                 "인플루언서 ROI",
+                                 "마이크로 인플루언서 효과",
+                                 "콘텐츠 마케팅 지표"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  495,
+        "slug":  "brand-search-brand-method",
+        "title":  "브랜드 검색량과 전환율의 상관관계: 오가닉 브랜드 효과를 수치로 증명하는 방법",
+        "category":  "insights",
+        "mainKeyword":  "브랜드 검색량 전환율",
+        "extendedKeywords":  [
+                                 "브랜드 인지도 측정",
+                                 "검색 광고 브랜드 효과",
+                                 "마케팅 ROI"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  496,
+        "slug":  "vs-vs-2026",
+        "title":  "소셜커머스 vs 오픈마켓 vs 자사몰: 2026년 국내 이커머스 채널별 트래픽 현황",
+        "category":  "insights",
+        "mainKeyword":  "이커머스 채널 비교",
+        "extendedKeywords":  [
+                                 "자사몰 vs 오픈마켓",
+                                 "쿠팡 vs 스마트스토어",
+                                 "이커머스 트래픽 분석"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  497,
+        "slug":  "content-ads",
+        "title":  "브랜디드 콘텐츠와 퍼포먼스 광고의 시너지: 데이터로 본 최적 예산 배분 비율",
+        "category":  "insights",
+        "mainKeyword":  "브랜디드 콘텐츠 퍼포먼스",
+        "extendedKeywords":  [
+                                 "광고 예산 배분",
+                                 "브랜드 광고 ROI",
+                                 "콘텐츠 마케팅 전략"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  498,
+        "slug":  "b2c-marketing-kakao-comparison-analytics",
+        "title":  "국내 B2C 이메일 마케팅의 한계와 카카오톡 채널의 대체 효과 비교 분석",
+        "category":  "insights",
+        "mainKeyword":  "이메일 vs 카카오 마케팅",
+        "extendedKeywords":  [
+                                 "국내 이메일 오픈율",
+                                 "카카오 채널 효율",
+                                 "메시지 마케팅 비교"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  499,
+        "slug":  "shortform-brand-analytics",
+        "title":  "숏폼 영상이 브랜드 인지도에 미치는 장기 효과: 국내 케이스 기반 데이터 분석",
+        "category":  "insights",
+        "mainKeyword":  "숏폼 브랜드 인지도",
+        "extendedKeywords":  [
+                                 "쇼츠 브랜딩 효과",
+                                 "릴스 마케팅 ROI",
+                                 "숏폼 콘텐츠 전략"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  500,
+        "slug":  "creator-2026-monetization",
+        "title":  "글로벌 크리에이터 이코노미 트렌드가 국내에 주는 시사점: 2026년 수익화 변화",
+        "category":  "insights",
+        "mainKeyword":  "크리에이터 이코노미 트렌드",
+        "extendedKeywords":  [
+                                 "크리에이터 수익화",
+                                 "구독 경제",
+                                 "콘텐츠 비즈니스 모델"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  501,
+        "slug":  "search-ads-automation-tools-ads-vs",
+        "title":  "검색 광고 자동화 도구 도입 후 국내 광고주 성과 변화: 효율 vs 통제권 딜레마",
+        "category":  "insights",
+        "mainKeyword":  "광고 자동화 효율",
+        "extendedKeywords":  [
+                                 "스마트 캠페인",
+                                 "광고 자동화 리스크",
+                                 "퍼포먼스맥스 분석"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  502,
+        "slug":  "google-sge-content",
+        "title":  "구글 SGE 도입 이후 국내 블로거 트래픽 실측 데이터: 어떤 콘텐츠가 살아남는가",
+        "category":  "insights",
+        "mainKeyword":  "구글 SGE 트래픽 변화",
+        "extendedKeywords":  [
+                                 "AI 개요 검색",
+                                 "SGE SEO 대응",
+                                 "검색 결과 변화"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  503,
+        "slug":  "naver-blog-1000-revenue-creator-seo-strategy",
+        "title":  "네이버 블로그로 월 1000만 원 수익 만든 뷰티 크리에이터의 SEO 전략 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "네이버 블로그 수익화",
+        "extendedKeywords":  [
+                                 "블로그 수익 케이스",
+                                 "뷰티 블로그 SEO",
+                                 "블로그 수익 1000만원"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  504,
+        "slug":  "ga4-ads-roas-25",
+        "title":  "GA4 전환 추적 설정 후 광고 ROAS 2.5배 개선된 온라인 교육 플랫폼 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "GA4 ROAS 개선",
+        "extendedKeywords":  [
+                                 "GA4 전환 추적 사례",
+                                 "교육 플랫폼 마케팅",
+                                 "광고 성과 개선"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  505,
+        "slug":  "chatgpt-content-70-3",
+        "title":  "ChatGPT로 콘텐츠 제작 시간 70% 줄이고 유입 트래픽 3배 늘린 티스토리 블로거 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "ChatGPT 블로그 운영",
+        "extendedKeywords":  [
+                                 "AI 콘텐츠 제작 사례",
+                                 "티스토리 트래픽 성장",
+                                 "블로그 AI 활용"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  506,
+        "slug":  "kakao-automation-80",
+        "title":  "카카오 채널 자동화로 고객 상담 시간 80% 줄인 소상공인 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "카카오 채널 자동화 사례",
+        "extendedKeywords":  [
+                                 "카카오 챗봇",
+                                 "소상공인 자동화",
+                                 "고객 응대 효율화"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    }
+]

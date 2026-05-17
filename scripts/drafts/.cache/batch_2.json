@@ -1,0 +1,422 @@
+﻿[
+    {
+        "id":  507,
+        "slug":  "youtube-seo-optimization-0-100-growth",
+        "title":  "유튜브 SEO 최적화로 조회수 0에서 월 100만 뷰까지 성장한 교육 채널 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "유튜브 SEO 성장 사례",
+        "extendedKeywords":  [
+                                 "유튜브 채널 성장",
+                                 "교육 유튜브 전략",
+                                 "조회수 늘리기"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  508,
+        "slug":  "strategy-3",
+        "title":  "이메일 뉴스레터 세그먼트 전략으로 구매 전환율 3배 올린 온라인몰 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "이메일 세그먼트 전환",
+        "extendedKeywords":  [
+                                 "뉴스레터 전환율",
+                                 "이메일 마케팅 사례",
+                                 "구독자 세분화"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  509,
+        "slug":  "naver-shopping-seo-optimization-500-brand",
+        "title":  "네이버 쇼핑 SEO 최적화로 자연 유입 500% 늘린 건강기능식품 브랜드 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "네이버 쇼핑 SEO 사례",
+        "extendedKeywords":  [
+                                 "쇼핑 오가닉 트래픽",
+                                 "건강식품 마케팅",
+                                 "상품 검색 최적화"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  510,
+        "slug":  "google-30-shopping",
+        "title":  "구글 리타겟팅으로 장바구니 이탈 고객 30% 재전환한 의류 쇼핑몰 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "장바구니 이탈 리타겟팅",
+        "extendedKeywords":  [
+                                 "리타겟팅 광고 사례",
+                                 "이커머스 전환율 개선",
+                                 "디스플레이 광고 성과"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  511,
+        "slug":  "content-marketing-6-mau-1",
+        "title":  "국내 스타트업이 콘텐츠 마케팅만으로 6개월에 MAU 1만 명 달성한 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "콘텐츠 마케팅 MAU 성장",
+        "extendedKeywords":  [
+                                 "스타트업 콘텐츠 전략",
+                                 "오가닉 성장 사례",
+                                 "MAU 증가 전략"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  512,
+        "slug":  "content-strategy-1000",
+        "title":  "와디즈 크라우드펀딩 콘텐츠 전략으로 목표 금액 1000% 달성한 테크 스타트업 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "와디즈 펀딩 콘텐츠 전략",
+        "extendedKeywords":  [
+                                 "크라우드펀딩 성공 사례",
+                                 "와디즈 마케팅",
+                                 "펀딩 스토리텔링"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  513,
+        "slug":  "ugc-strategy-ads-40-brand",
+        "title":  "UGC 전략 전환 후 광고비 40% 절감하고 전환율 올린 뷰티 브랜드 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "UGC 마케팅 사례",
+        "extendedKeywords":  [
+                                 "UGC 전략",
+                                 "인플루언서 대체",
+                                 "소비자 제작 콘텐츠"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  514,
+        "slug":  "google-shopping-ads-optimization-300-shopping",
+        "title":  "구글 쇼핑 광고 최적화로 신규 고객 월 300명 꾸준히 유입시킨 쇼핑몰 케이스",
+        "category":  "case-study",
+        "mainKeyword":  "구글 쇼핑 광고 성과",
+        "extendedKeywords":  [
+                                 "구글 쇼핑 최적화",
+                                 "쇼핑 광고 ROAS",
+                                 "신규 고객 유입"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  515,
+        "slug":  "tiktok-marketing-complete-guide-brand-z-shortform-content-st",
+        "title":  "틱톡 마케팅 완전 가이드: 국내 브랜드가 Z세대 공략하는 숏폼 콘텐츠 전략",
+        "category":  "guide",
+        "mainKeyword":  "틱톡 마케팅",
+        "extendedKeywords":  [
+                                 "틱톡 광고",
+                                 "Z세대 마케팅",
+                                 "숏폼 콘텐츠 전략"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "12분",
+        "published":  false
+    },
+    {
+        "id":  516,
+        "slug":  "linkedin-b2b-marketing-complete-guide",
+        "title":  "링크드인 B2B 마케팅 완전 가이드: 한국 기업이 글로벌 리드를 확보하는 법",
+        "category":  "guide",
+        "mainKeyword":  "링크드인 마케팅",
+        "extendedKeywords":  [
+                                 "링크드인 B2B",
+                                 "글로벌 리드 확보",
+                                 "링크드인 광고"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "14분",
+        "published":  false
+    },
+    {
+        "id":  517,
+        "slug":  "naver-complete-guide-search-strategy",
+        "title":  "네이버 스마트플레이스 완전 가이드: 로컬 비즈니스 검색 상위 노출 전략",
+        "category":  "guide",
+        "mainKeyword":  "네이버 스마트플레이스",
+        "extendedKeywords":  [
+                                 "로컬 SEO",
+                                 "스마트플레이스 최적화",
+                                 "네이버 지도 노출"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "11분",
+        "published":  false
+    },
+    {
+        "id":  518,
+        "slug":  "seo-complete-guide-algorithm-optimization-strategy",
+        "title":  "쿠팡 SEO 완전 가이드: 상품 노출 순위를 결정하는 알고리즘과 최적화 전략",
+        "category":  "guide",
+        "mainKeyword":  "쿠팡 SEO",
+        "extendedKeywords":  [
+                                 "쿠팡 상품 노출",
+                                 "쿠팡 알고리즘",
+                                 "쿠팡 판매 전략"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "13분",
+        "published":  false
+    },
+    {
+        "id":  519,
+        "slug":  "optimization-complete-guide-2-cta-strategy",
+        "title":  "랜딩 페이지 최적화 완전 가이드: 전환율을 2배 높이는 카피·디자인·CTA 전략",
+        "category":  "guide",
+        "mainKeyword":  "랜딩 페이지 최적화",
+        "extendedKeywords":  [
+                                 "전환율 최적화",
+                                 "CTA 설계",
+                                 "랜딩 페이지 카피"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "15분",
+        "published":  false
+    },
+    {
+        "id":  520,
+        "slug":  "marketing-complete-guide-content-brand",
+        "title":  "팟캐스트 마케팅 완전 가이드: 오디오 콘텐츠로 브랜드 권위를 구축하는 법",
+        "category":  "guide",
+        "mainKeyword":  "팟캐스트 마케팅",
+        "extendedKeywords":  [
+                                 "팟캐스트 수익화",
+                                 "오디오 콘텐츠 전략",
+                                 "팟캐스트 운영"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  521,
+        "slug":  "google-complete-guide-lcpfidcls-seo",
+        "title":  "구글 코어 웹 바이탈 완전 가이드: LCP·FID·CLS 개선으로 SEO 순위 올리기",
+        "category":  "guide",
+        "mainKeyword":  "코어 웹 바이탈",
+        "extendedKeywords":  [
+                                 "LCP 최적화",
+                                 "페이지 속도 개선",
+                                 "Core Web Vitals SEO"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "13분",
+        "published":  false
+    },
+    {
+        "id":  522,
+        "slug":  "marketing-complete-guide-marketing-monetization",
+        "title":  "어필리에이트 마케팅 완전 가이드: 국내 제휴 마케팅으로 수익화하는 시스템 구축법",
+        "category":  "guide",
+        "mainKeyword":  "어필리에이트 마케팅",
+        "extendedKeywords":  [
+                                 "제휴 마케팅",
+                                 "쿠팡 파트너스",
+                                 "블로그 수익화"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "12분",
+        "published":  false
+    },
+    {
+        "id":  523,
+        "slug":  "google-complete-guide",
+        "title":  "구글 스키마 마크업 완전 가이드: 리치 결과 노출로 클릭률 높이는 구조화 데이터",
+        "category":  "guide",
+        "mainKeyword":  "스키마 마크업",
+        "extendedKeywords":  [
+                                 "리치 스니펫",
+                                 "구조화 데이터",
+                                 "Schema.org SEO"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "11분",
+        "published":  false
+    },
+    {
+        "id":  524,
+        "slug":  "youtube-monetization-complete-guide-adsshopping-4-revenue",
+        "title":  "유튜브 수익화 완전 가이드: 광고·멤버십·슈퍼챗·쇼핑 4가지 수익 채널 설계법",
+        "category":  "guide",
+        "mainKeyword":  "유튜브 수익화",
+        "extendedKeywords":  [
+                                 "유튜브 광고 수익",
+                                 "유튜브 멤버십",
+                                 "유튜브 쇼핑"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "14분",
+        "published":  false
+    },
+    {
+        "id":  525,
+        "slug":  "complete-guide-strategy",
+        "title":  "고객 여정 지도 완전 가이드: 인지부터 구매·재구매까지 터치포인트 설계 전략",
+        "category":  "guide",
+        "mainKeyword":  "고객 여정 지도",
+        "extendedKeywords":  [
+                                 "Customer Journey Map",
+                                 "터치포인트 설계",
+                                 "구매 퍼널 최적화"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "13분",
+        "published":  false
+    },
+    {
+        "id":  526,
+        "slug":  "seo-complete-guide-2026-optimization-strategy",
+        "title":  "모바일 SEO 완전 가이드: 2026년 모바일 퍼스트 인덱싱 시대 최적화 전략",
+        "category":  "guide",
+        "mainKeyword":  "모바일 SEO",
+        "extendedKeywords":  [
+                                 "모바일 퍼스트 인덱싱",
+                                 "반응형 웹 SEO",
+                                 "모바일 검색 최적화"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "11분",
+        "published":  false
+    },
+    {
+        "id":  527,
+        "slug":  "ads-complete-guide-roas",
+        "title":  "소셜 미디어 광고 예산 배분 완전 가이드: 채널별 ROAS 기반 최적 투자 비율",
+        "category":  "guide",
+        "mainKeyword":  "소셜 미디어 광고 예산",
+        "extendedKeywords":  [
+                                 "광고비 배분",
+                                 "채널별 ROAS",
+                                 "SNS 광고 전략"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "12분",
+        "published":  false
+    },
+    {
+        "id":  528,
+        "slug":  "brand-complete-guide-content-strategy",
+        "title":  "브랜드 스토리텔링 완전 가이드: 감성 콘텐츠로 충성 고객을 만드는 내러티브 전략",
+        "category":  "guide",
+        "mainKeyword":  "브랜드 스토리텔링",
+        "extendedKeywords":  [
+                                 "브랜드 내러티브",
+                                 "감성 마케팅",
+                                 "콘텐츠 스토리텔링"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  529,
+        "slug":  "naver-complete-guide-community-marketing",
+        "title":  "네이버 밴드 비즈니스 완전 가이드: 커뮤니티 기반 마케팅으로 충성 고객 만들기",
+        "category":  "guide",
+        "mainKeyword":  "네이버 밴드 마케팅",
+        "extendedKeywords":  [
+                                 "밴드 커뮤니티",
+                                 "네이버 밴드 광고",
+                                 "커뮤니티 마케팅"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  530,
+        "slug":  "revenue-2-7-tips-optimization-content",
+        "title":  "쿠팡 파트너스 수익 2배 올리는 7가지 팁: 링크 최적화부터 콘텐츠 연계까지",
+        "category":  "tips",
+        "mainKeyword":  "쿠팡 파트너스",
+        "extendedKeywords":  [
+                                 "쿠팡 파트너스 수익",
+                                 "제휴링크 최적화",
+                                 "블로그 쿠팡 연계"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  531,
+        "slug":  "7-tips-ab",
+        "title":  "이메일 제목줄 오픈율 높이는 7가지 팁: A/B 테스트 데이터로 검증된 제목 공식",
+        "category":  "tips",
+        "mainKeyword":  "이메일 오픈율",
+        "extendedKeywords":  [
+                                 "이메일 제목 최적화",
+                                 "뉴스레터 오픈율",
+                                 "이메일 A/B 테스트"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "6분",
+        "published":  false
+    },
+    {
+        "id":  532,
+        "slug":  "linkedin-algorithm-usage-tips-1",
+        "title":  "링크드인 알고리즘 활용 팁: 게시물 초반 1시간이 도달률을 결정하는 이유",
+        "category":  "tips",
+        "mainKeyword":  "링크드인 알고리즘",
+        "extendedKeywords":  [
+                                 "링크드인 게시물 노출",
+                                 "링크드인 도달률",
+                                 "링크드인 콘텐츠 전략"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  533,
+        "slug":  "google-ctr-tips-optimization-30",
+        "title":  "구글 서치 콘솔 CTR 높이는 팁: 메타 디스크립션 최적화로 클릭률 30% 올리기",
+        "category":  "tips",
+        "mainKeyword":  "메타 디스크립션 최적화",
+        "extendedKeywords":  [
+                                 "CTR 개선",
+                                 "서치 콘솔 활용",
+                                 "SERP 클릭률"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "6분",
+        "published":  false
+    },
+    {
+        "id":  534,
+        "slug":  "blog-5-tips",
+        "title":  "블로그 이탈률 낮추는 5가지 팁: 첫 문단이 독자를 붙잡는 글쓰기 구조",
+        "category":  "tips",
+        "mainKeyword":  "블로그 이탈률",
+        "extendedKeywords":  [
+                                 "블로그 체류 시간",
+                                 "이탈률 개선",
+                                 "블로그 글쓰기 구조"
+                             ],
+        "author":  "김민혁",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    }
+]

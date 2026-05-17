@@ -1,0 +1,422 @@
+﻿[
+    {
+        "id":  619,
+        "slug":  "youtube-live-complete-guide",
+        "title":  "유튜브 라이브 스트리밍 완전 가이드: 슈퍼챗과 멤버십을 동시에 극대화하는 방송 설계",
+        "category":  "guide",
+        "mainKeyword":  "유튜브 라이브 스트리밍",
+        "extendedKeywords":  [
+                                 "유튜브 슈퍼챗 늘리기",
+                                 "유튜브 라이브 수익화",
+                                 "유튜브 라이브 방송 전략"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  620,
+        "slug":  "linkedin-complete-guide-b2b-method",
+        "title":  "링크드인 뉴스레터 완전 가이드: 플랫폼 내 구독자를 모아 B2B 리드로 전환하는 방법",
+        "category":  "guide",
+        "mainKeyword":  "링크드인 뉴스레터",
+        "extendedKeywords":  [
+                                 "링크드인 뉴스레터 구독자",
+                                 "링크드인 B2B 리드",
+                                 "링크드인 뉴스레터 설정"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  621,
+        "slug":  "complete-guide-strategy-1",
+        "title":  "탈잉 튜터 완전 가이드: 재능 판매 첫 등록부터 상위 노출·후기 수집까지 운영 전략",
+        "category":  "guide",
+        "mainKeyword":  "탈잉 튜터",
+        "extendedKeywords":  [
+                                 "탈잉 강사 등록",
+                                 "탈잉 수익화",
+                                 "탈잉 상위 노출"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  622,
+        "slug":  "instagram-ads-complete-guide-follower",
+        "title":  "인스타그램 광고 완전 가이드: 소규모 예산으로 팔로워 증가와 판매를 동시에 달성하는 법",
+        "category":  "guide",
+        "mainKeyword":  "인스타그램 광고",
+        "extendedKeywords":  [
+                                 "인스타그램 광고 예산",
+                                 "인스타 광고 팔로워 늘리기",
+                                 "인스타그램 광고 설정"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "11분",
+        "published":  false
+    },
+    {
+        "id":  623,
+        "slug":  "youtube-complete-guide-content-monetization-6",
+        "title":  "브이로그 유튜브 채널 완전 가이드: 일상 콘텐츠로 수익화까지 도달하는 6개월 로드맵",
+        "category":  "guide",
+        "mainKeyword":  "브이로그 유튜브 채널",
+        "extendedKeywords":  [
+                                 "브이로그 수익화",
+                                 "일상 유튜브 성장",
+                                 "브이로그 채널 운영"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  624,
+        "slug":  "instagram-complete-guide-follower-growth-strategy",
+        "title":  "인스타그램 콜라보 포스팅 완전 가이드: 협업 게시물로 팔로워를 상호 성장시키는 전략",
+        "category":  "guide",
+        "mainKeyword":  "인스타그램 콜라보 포스팅",
+        "extendedKeywords":  [
+                                 "인스타그램 협업 게시물",
+                                 "인스타 콜라보 설정",
+                                 "인스타그램 공동 피드"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  625,
+        "slug":  "tiktok-complete-guide-brand-ads",
+        "title":  "틱톡 비즈니스 계정 전환 완전 가이드: 브랜드 계정 설정부터 광고 연동까지 전 과정",
+        "category":  "guide",
+        "mainKeyword":  "틱톡 비즈니스 계정",
+        "extendedKeywords":  [
+                                 "틱톡 비즈니스 전환",
+                                 "틱톡 광고 계정 연동",
+                                 "틱톡 브랜드 계정 설정"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  626,
+        "slug":  "naver-complete-guide-search-content-strategy",
+        "title":  "네이버 포스트 완전 가이드: 검색 상위 노출을 극대화하는 전문가 콘텐츠 발행 전략",
+        "category":  "guide",
+        "mainKeyword":  "네이버 포스트",
+        "extendedKeywords":  [
+                                 "네이버 포스트 SEO",
+                                 "네이버 포스트 노출",
+                                 "네이버 포스트 운영법"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  627,
+        "slug":  "instagram-complete-guide-follower-1",
+        "title":  "인스타그램 스토리 하이라이트 완전 가이드: 첫 방문자를 팔로워로 전환하는 프로필 설계",
+        "category":  "guide",
+        "mainKeyword":  "인스타그램 하이라이트",
+        "extendedKeywords":  [
+                                 "인스타 하이라이트 구성",
+                                 "인스타그램 프로필 최적화",
+                                 "인스타 첫 방문 전환"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  628,
+        "slug":  "instagram-tips-algorithm-content-5",
+        "title":  "인스타그램 저장수 높이는 팁: 알고리즘이 유익한 콘텐츠로 분류하는 게시물 패턴 5가지",
+        "category":  "tips",
+        "mainKeyword":  "인스타그램 저장수",
+        "extendedKeywords":  [
+                                 "인스타그램 저장 늘리기",
+                                 "인스타 알고리즘 저장",
+                                 "인스타그램 도달률 높이기"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "6분",
+        "published":  false
+    },
+    {
+        "id":  629,
+        "slug":  "tips-ab",
+        "title":  "뉴스레터 발송 최적 타이밍 팁: 요일·시간대별 A/B 테스트로 검증된 개봉률 공식",
+        "category":  "tips",
+        "mainKeyword":  "뉴스레터 개봉률",
+        "extendedKeywords":  [
+                                 "뉴스레터 발송 시간",
+                                 "이메일 오픈율 높이기",
+                                 "뉴스레터 A/B 테스트"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "6분",
+        "published":  false
+    },
+    {
+        "id":  630,
+        "slug":  "kakao-2-tips-optimization-practical-method",
+        "title":  "카카오채널 메시지 클릭률 2배 올리는 팁: 버튼 문구와 이미지 배치 최적화 실전 방법",
+        "category":  "tips",
+        "mainKeyword":  "카카오채널 클릭률",
+        "extendedKeywords":  [
+                                 "카카오채널 CTR",
+                                 "카카오 메시지 최적화",
+                                 "카카오채널 광고 효율"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  631,
+        "slug":  "tips-3-editing",
+        "title":  "팟캐스트 청취 완료율 높이는 팁: 오프닝 3분 구성이 이탈률을 결정하는 편집 원칙",
+        "category":  "tips",
+        "mainKeyword":  "팟캐스트 청취 완료율",
+        "extendedKeywords":  [
+                                 "팟캐스트 이탈률 낮추기",
+                                 "팟캐스트 오프닝 구성",
+                                 "팟캐스트 편집 전략"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "6분",
+        "published":  false
+    },
+    {
+        "id":  632,
+        "slug":  "youtube-tips-20",
+        "title":  "유튜브 엔드카드 전환율 높이는 팁: 영상 마지막 20초로 구독과 다음 조회를 동시에 올리는 법",
+        "category":  "tips",
+        "mainKeyword":  "유튜브 엔드카드",
+        "extendedKeywords":  [
+                                 "유튜브 엔드카드 설정",
+                                 "유튜브 카드 클릭률",
+                                 "유튜브 구독 유도"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  633,
+        "slug":  "tips-strategy",
+        "title":  "온라인 코스 환불율 낮추는 팁: 수강 전 기대 조정과 온보딩 설계로 만족도를 높이는 전략",
+        "category":  "tips",
+        "mainKeyword":  "온라인 코스 환불",
+        "extendedKeywords":  [
+                                 "강의 환불 방지",
+                                 "수강생 온보딩",
+                                 "온라인 강의 만족도"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "7분",
+        "published":  false
+    },
+    {
+        "id":  634,
+        "slug":  "tips-twitterlinkedin-growth",
+        "title":  "서브스택 초기 구독자 늘리는 팁: 트위터·링크드인 크로스포스팅으로 뉴스레터를 성장시키는 법",
+        "category":  "tips",
+        "mainKeyword":  "서브스택 구독자 늘리기",
+        "extendedKeywords":  [
+                                 "서브스택 성장 전략",
+                                 "서브스택 크로스포스팅",
+                                 "뉴스레터 초기 구독자"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "6분",
+        "published":  false
+    },
+    {
+        "id":  635,
+        "slug":  "shortform-optimization-tips-vs-method",
+        "title":  "숏폼 영상 자막 최적화 팁: 자동 자막 vs 수동 자막, 조회수 차이를 만드는 설정 방법",
+        "category":  "tips",
+        "mainKeyword":  "숏폼 자막 최적화",
+        "extendedKeywords":  [
+                                 "릴스 자막 설정",
+                                 "틱톡 자막 효과",
+                                 "유튜브 쇼츠 자막"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  636,
+        "slug":  "optimization-tips",
+        "title":  "퍼스널 브랜딩 프로필 사진·바이오 최적화 팁: 플랫폼별 첫인상이 팔로우율을 결정하는 이유",
+        "category":  "tips",
+        "mainKeyword":  "퍼스널 브랜딩 프로필",
+        "extendedKeywords":  [
+                                 "인스타그램 바이오 최적화",
+                                 "링크드인 프로필 사진",
+                                 "SNS 첫인상 전략"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "6분",
+        "published":  false
+    },
+    {
+        "id":  637,
+        "slug":  "youtube-tips-community-strategy",
+        "title":  "유튜브 댓글 관리 팁: 커뮤니티 활성화와 채널 신뢰도를 동시에 높이는 답글 전략",
+        "category":  "tips",
+        "mainKeyword":  "유튜브 댓글 관리",
+        "extendedKeywords":  [
+                                 "유튜브 커뮤니티 활성화",
+                                 "유튜브 댓글 답글",
+                                 "유튜브 채널 신뢰도"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  638,
+        "slug":  "tiktok-tips-content-5",
+        "title":  "틱톡 영상 공유수 높이는 팁: 타 플랫폼 확산을 유도하는 콘텐츠 구성 요소 5가지",
+        "category":  "tips",
+        "mainKeyword":  "틱톡 영상 공유",
+        "extendedKeywords":  [
+                                 "틱톡 바이럴 요소",
+                                 "틱톡 공유 유도",
+                                 "틱톡 도달률 높이기"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  639,
+        "slug":  "tips-0-50-practical-method",
+        "title":  "당근마켓 비즈니스 계정 후기 빠르게 쌓는 팁: 초기 0개에서 50개까지 도달하는 실전 방법",
+        "category":  "tips",
+        "mainKeyword":  "당근마켓 후기",
+        "extendedKeywords":  [
+                                 "당근마켓 비즈니스 후기",
+                                 "당근마켓 리뷰 쌓기",
+                                 "당근마켓 신뢰도"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  640,
+        "slug":  "instagram-reels-optimization-tips",
+        "title":  "인스타그램 릴스 커버 이미지 최적화 팁: 피드 탐색 중 클릭을 유도하는 썸네일 구성 원칙",
+        "category":  "tips",
+        "mainKeyword":  "릴스 커버 이미지",
+        "extendedKeywords":  [
+                                 "릴스 썸네일 최적화",
+                                 "인스타그램 릴스 커버",
+                                 "릴스 클릭률 높이기"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "5분",
+        "published":  false
+    },
+    {
+        "id":  641,
+        "slug":  "2026-instagram-shopping",
+        "title":  "2026년 인스타그램 쇼핑 기능 업데이트: 국내 셀러가 주목해야 할 변화와 전환율 시사점",
+        "category":  "insights",
+        "mainKeyword":  "인스타그램 쇼핑 2026",
+        "extendedKeywords":  [
+                                 "인스타그램 쇼핑 업데이트",
+                                 "인스타 커머스 전환율",
+                                 "인스타그램 쇼핑 국내"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  642,
+        "slug":  "z-vs-sns-comparison-content-optimization-strategy",
+        "title":  "Z세대 vs 밀레니얼 SNS 소비 패턴 비교: 콘텐츠 형식·길이·톤의 세대별 최적화 전략",
+        "category":  "insights",
+        "mainKeyword":  "Z세대 SNS 소비",
+        "extendedKeywords":  [
+                                 "Z세대 밀레니얼 비교",
+                                 "세대별 SNS 전략",
+                                 "Z세대 콘텐츠 선호"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  643,
+        "slug":  "creator-2026-creator-revenue-growth-analytics",
+        "title":  "국내 크리에이터 이코노미 규모 2026: 플랫폼별 크리에이터 수익 구조와 성장 지표 분석",
+        "category":  "insights",
+        "mainKeyword":  "크리에이터 이코노미 2026",
+        "extendedKeywords":  [
+                                 "크리에이터 수익 구조",
+                                 "국내 크리에이터 시장",
+                                 "크리에이터 이코노미 성장"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "10분",
+        "published":  false
+    },
+    {
+        "id":  644,
+        "slug":  "youtube-shorts-monetization-creator-analytics",
+        "title":  "유튜브 쇼츠 수익화 정책 변화가 국내 크리에이터에게 미치는 실질적 영향 분석",
+        "category":  "insights",
+        "mainKeyword":  "유튜브 쇼츠 수익화",
+        "extendedKeywords":  [
+                                 "유튜브 쇼츠 광고 수익",
+                                 "쇼츠 수익화 조건",
+                                 "유튜브 쇼츠 정책 변경"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "8분",
+        "published":  false
+    },
+    {
+        "id":  645,
+        "slug":  "algorithm-vs-creator",
+        "title":  "알고리즘 의존 vs 팬덤 의존: 지속 가능한 크리에이터 비즈니스를 결정하는 핵심 변수",
+        "category":  "insights",
+        "mainKeyword":  "크리에이터 비즈니스 지속가능성",
+        "extendedKeywords":  [
+                                 "크리에이터 팬덤 구축",
+                                 "알고리즘 의존 리스크",
+                                 "크리에이터 수익 다각화"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    },
+    {
+        "id":  646,
+        "slug":  "shortform-growth-tiktokinstagram-shopping",
+        "title":  "숏폼 커머스의 성장: 틱톡샵·인스타그램 쇼핑 국내 도입 현황과 소비자 구매 데이터",
+        "category":  "insights",
+        "mainKeyword":  "숏폼 커머스",
+        "extendedKeywords":  [
+                                 "틱톡샵 국내",
+                                 "인스타그램 쇼핑 데이터",
+                                 "라이브 커머스 성장"
+                             ],
+        "author":  "이지수",
+        "estimatedReadTime":  "9분",
+        "published":  false
+    }
+]

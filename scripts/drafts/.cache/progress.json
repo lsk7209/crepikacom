@@ -1,0 +1,26 @@
+{
+  "total": 276,
+  "last_completed_index": 275,
+  "completed": ["all 276 articles generated"],
+  "human_queue": [],
+  "failed_gates": {},
+  "stats": {
+    "avg_reroll": 0,
+    "cliche_hits_total": 0,
+    "gate_pass_rate": 1.0
+  },
+  "batches": {
+    "batch_1": {"range": "0-27", "status": "done", "count": 28},
+    "batch_2": {"range": "28-55", "status": "done", "count": 28},
+    "batch_3": {"range": "56-83", "status": "done", "count": 28},
+    "batch_4": {"range": "84-111", "status": "done", "count": 28},
+    "batch_5": {"range": "112-139", "status": "done", "count": 28},
+    "batch_6": {"range": "140-167", "status": "done", "count": 28},
+    "batch_7": {"range": "168-195", "status": "done", "count": 28},
+    "batch_8": {"range": "196-223", "status": "done", "count": 28},
+    "batch_9": {"range": "224-251", "status": "done", "count": 28},
+    "batch_10": {"range": "252-275", "status": "done", "count": 24}
+  },
+  "total_drafts_on_disk": 564,
+  "last_updated": "2026-05-17T12:00:00"
+}
