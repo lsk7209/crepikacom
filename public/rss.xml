@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Sun, 17 May 2026 02:44:24 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 17 May 2026 03:40:51 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2414,6 +2414,16 @@
     <pubDate>Sun, 17 May 2026 02:44:24 GMT</pubDate>
     <guid>https://crepika.com/blog/pinterest-optimization-7-tips-strategy</guid>
     <dc:creator>이지수</dc:creator>
+  </item>
+
+
+  <item>
+    <title>Discord 봇 활용 10가지 팁: 크리에이터 커뮤니티 자동화와 참여도 높이기</title>
+    <link>https://crepika.com/blog/discord-usage-10-tips-creator-community-automation</link>
+    <description>Discord 봇으로 크리에이터 커뮤니티를 자동화하고 참여도를 높이는 10가지 실전 팁을 정리했습니다. MEE6, Carl-bot, 커스텀 봇 활용부터 역할 자동화, 이벤트 운영까지 Discord 커뮤니티 성장 전략입니다.</description>
+    <pubDate>Sun, 17 May 2026 03:40:51 GMT</pubDate>
+    <guid>https://crepika.com/blog/discord-usage-10-tips-creator-community-automation</guid>
+    <dc:creator>김민혁</dc:creator>
   </item>
 
 </channel>

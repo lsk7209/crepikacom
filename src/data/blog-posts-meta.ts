@@ -2652,6 +2652,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["Pinterest 최적화", "Pinterest SEO", "핀 클릭률", "Pinterest 마케팅", "비주얼 콘텐츠"],
   },
+  {
+    slug: "discord-usage-10-tips-creator-community-automation",
+    title: "Discord 봇 활용 10가지 팁: 크리에이터 커뮤니티 자동화와 참여도 높이기",
+    description: "Discord 봇으로 크리에이터 커뮤니티를 자동화하고 참여도를 높이는 10가지 실전 팁을 정리했습니다. MEE6, Carl-bot, 커스텀 봇 활용부터 역할 자동화, 이벤트 운영까지 Discord 커뮤니티 성장 전략입니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "김민혁",
+    keywords: ["Discord 봇", "Discord 커뮤니티", "Discord 자동화", "MEE6", "크리에이터 커뮤니티"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
