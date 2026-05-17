@@ -77,20 +77,26 @@ function getNextDraft() {
 // blog-content.ts 삽입
 // ────────────────────────────────────────────────
 function postToTs(post) {
-  // Use backtick template literals for string values to prevent single-quote
-  // double-escaping (the old replacer approach caused \' → \\' → build error).
-  const json = JSON.stringify(post, null, 2);
-  let ts = json.replace(/"([a-zA-Z_][a-zA-Z0-9_]*)":/g, '$1:');
-  ts = ts.replace(/"((?:[^"\\]|\\.)*)"/g, (match, jsonBody) => {
-    let val;
-    try { val = JSON.parse('"' + jsonBody + '"'); } catch { return match; }
-    const bt = val
-      .replace(/\\/g, '\\\\')
-      .replace(/`/g, '\\`')
-      .replace(/\$\{/g, '\\${');
-    return '`' + bt + '`';
-  });
-  return ts;
+  // Recursively convert the JS object to a TypeScript object literal.
+  // All strings become template literals so multi-line content is always valid.
+  function escTs(str) {
+    return str.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
+  }
+  function toTs(val, depth) {
+    const pad = '  '.repeat(depth);
+    const ipad = '  '.repeat(depth + 1);
+    if (val === null) return 'null';
+    if (typeof val === 'boolean' || typeof val === 'number') return String(val);
+    if (typeof val === 'string') return '`' + escTs(val) + '`';
+    if (Array.isArray(val)) {
+      if (val.length === 0) return '[]';
+      const items = val.map(v => ipad + toTs(v, depth + 1));
+      return '[\n' + items.join(',\n') + ',\n' + pad + ']';
+    }
+    const entries = Object.entries(val).map(([k, v]) => ipad + k + ': ' + toTs(v, depth + 1));
+    return '{\n' + entries.join(',\n') + ',\n' + pad + '}';
+  }
+  return toTs(post, 1);
 }
 
 function injectIntoBlogContent(post) {
