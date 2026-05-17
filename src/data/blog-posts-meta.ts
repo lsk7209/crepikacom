@@ -2802,6 +2802,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["Ahrefs 무료", "키워드 조사 무료", "백링크 분석", "SEO 도구", "무료 SEO"],
   },
+  {
+    slug: "5-json-ld-tips",
+    title: "리치 스니펫 빠르게 달기 위한 5가지 JSON-LD 팁: 복사해서 바로 적용하기",
+    description: "JSON-LD 구조화 데이터를 처음 적용하는 분들을 위해 복사해서 바로 쓸 수 있는 5가지 스키마 템플릿과 실수 없이 적용하는 팁을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-17",
+    readTime: "8분",
+    author: "김민혁",
+    keywords: ["JSON-LD", "리치 스니펫", "구조화 데이터", "Schema Markup", "SEO 스키마"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

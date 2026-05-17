@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Sun, 17 May 2026 19:30:13 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 17 May 2026 23:29:44 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2564,6 +2564,16 @@
     <pubDate>Sun, 17 May 2026 19:30:13 GMT</pubDate>
     <guid>https://crepika.com/blog/ahrefs-5-tips-keyword</guid>
     <dc:creator>이지수</dc:creator>
+  </item>
+
+
+  <item>
+    <title>리치 스니펫 빠르게 달기 위한 5가지 JSON-LD 팁: 복사해서 바로 적용하기</title>
+    <link>https://crepika.com/blog/5-json-ld-tips</link>
+    <description>JSON-LD 구조화 데이터를 처음 적용하는 분들을 위해 복사해서 바로 쓸 수 있는 5가지 스키마 템플릿과 실수 없이 적용하는 팁을 정리했습니다.</description>
+    <pubDate>Sun, 17 May 2026 23:29:44 GMT</pubDate>
+    <guid>https://crepika.com/blog/5-json-ld-tips</guid>
+    <dc:creator>김민혁</dc:creator>
   </item>
 
 </channel>
