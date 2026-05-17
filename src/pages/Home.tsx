@@ -1,4 +1,4 @@
-import { Link, useSearchParams } from "react-router-dom";
+﻿import { Link, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import {
   CATEGORY_LABELS,
@@ -30,7 +30,7 @@ import {
   FileImage,
   CheckCircle2,
 } from "lucide-react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import {
   getRecentTools,
   getFavoriteTools,

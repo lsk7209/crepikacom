@@ -1,5 +1,5 @@
-import { useParams, Navigate, Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+﻿import { useParams, Navigate, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   Clock,
   Calendar,

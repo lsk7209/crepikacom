@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { ToolLayout } from "@/components/layout/ToolLayout";
 import { getToolById } from "@/data/tools-config";
 import { TextCounterTool } from "@/tools/text/TextCounterTool";

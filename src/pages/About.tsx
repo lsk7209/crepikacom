@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Sparkles, Zap, Shield, Heart, Users, Award, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

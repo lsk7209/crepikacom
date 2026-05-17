@@ -1,5 +1,5 @@
-import { Link, useSearchParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
+﻿import { Link, useSearchParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   Clock,
   Calendar,

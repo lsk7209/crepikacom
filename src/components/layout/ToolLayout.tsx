@@ -1,6 +1,6 @@
-import { ToolConfig, Category } from "@/data/tools-config";
+﻿import { ToolConfig, Category } from "@/data/tools-config";
 import { AdSlot } from "@/components/ad/AdSlot";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ChevronRight, Home as HomeIcon } from "lucide-react";
 

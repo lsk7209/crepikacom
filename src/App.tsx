@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { AppShell } from "@/components/layout/AppShell";
 import { Suspense, lazy, useEffect } from "react";
 import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
@@ -74,9 +75,11 @@ function AppContent() {
 }
 
 const App = () => (
-  <BrowserRouter>
-    <AppContent />
-  </BrowserRouter>
+  <HelmetProvider>
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
+  </HelmetProvider>
 );
 
 export default App;
