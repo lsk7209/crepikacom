@@ -2682,6 +2682,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["CapCut 팁", "CapCut 편집", "숏폼 편집", "릴스 편집", "동영상 편집 속도"],
   },
+  {
+    slug: "cta-7-tips",
+    title: "전환율 올리는 CTA 버튼 디자인 7가지 팁: 색상·문구·위치가 클릭을 만든다",
+    description: "전환율을 높이는 CTA 버튼 디자인 7가지 핵심 팁을 정리했습니다. 색상 심리학, 문구 최적화, 버튼 위치, A/B 테스트 방법까지 클릭률을 높이는 CTA 실전 가이드입니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["CTA 버튼", "전환율 최적화", "CRO", "버튼 디자인", "랜딩 페이지 최적화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
