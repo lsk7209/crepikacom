@@ -2812,6 +2812,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["JSON-LD", "리치 스니펫", "구조화 데이터", "Schema Markup", "SEO 스키마"],
   },
+  {
+    slug: "creator-5-tips-method",
+    title: "크리에이터 세금 절약하는 5가지 합법적 팁: 사업용 지출을 비용으로 처리하는 방법",
+    description: "유튜버, 블로거, 디지털 크리에이터가 알아야 할 합법적 세금 절약 방법 5가지. 사업 경비 처리부터 종합소득세 절감 전략까지 실무 중심으로 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-17",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["크리에이터 세금", "유튜버 세금", "사업자 등록", "경비 처리", "종합소득세"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
