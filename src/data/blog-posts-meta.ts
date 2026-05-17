@@ -2702,6 +2702,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["랜딩페이지 이탈률", "바운스레이트", "랜딩페이지 최적화", "CRO", "첫 화면 설계"],
   },
+  {
+    slug: "naver-optimization-5-tips-strategy",
+    title: "네이버 스마트플레이스 사진 최적화 5가지 팁: 클릭률을 높이는 가게 사진 전략",
+    description: "네이버 스마트플레이스 사진 최적화 5가지 팁을 정리했습니다. 클릭률을 높이는 메인 사진 선택, 카테고리별 사진 구성, 촬영 팁, 업데이트 주기까지 가게 노출을 높이는 스마트플레이스 전략을 안내합니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["네이버 스마트플레이스", "스마트플레이스 사진", "가게 사진", "네이버 지도 최적화", "로컬 SEO"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
