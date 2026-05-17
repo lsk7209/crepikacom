@@ -2722,6 +2722,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["카카오맵 리뷰", "리뷰 관리", "악성 리뷰 대응", "카카오맵 최적화", "로컬 마케팅"],
   },
+  {
+    slug: "utm-5-tips",
+    title: "UTM 파라미터 실수 없이 세팅하는 5가지 팁: 잘못된 데이터를 막는 추적 규칙",
+    description: "UTM 파라미터를 잘못 세팅하면 GA4 데이터 전체가 오염됩니다. 현업에서 자주 발생하는 실수 패턴 5가지와 올바른 추적 규칙을 단계별로 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "8분",
+    author: "박준영",
+    keywords: ["UTM 파라미터", "UTM 세팅", "GA4 추적", "마케팅 데이터", "캠페인 추적"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

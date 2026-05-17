@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Sun, 17 May 2026 07:31:27 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 17 May 2026 11:02:08 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2484,6 +2484,16 @@
     <pubDate>Sun, 17 May 2026 07:31:27 GMT</pubDate>
     <guid>https://crepika.com/blog/kakao-7-tips-strategy</guid>
     <dc:creator>김민혁</dc:creator>
+  </item>
+
+
+  <item>
+    <title>UTM 파라미터 실수 없이 세팅하는 5가지 팁: 잘못된 데이터를 막는 추적 규칙</title>
+    <link>https://crepika.com/blog/utm-5-tips</link>
+    <description>UTM 파라미터를 잘못 세팅하면 GA4 데이터 전체가 오염됩니다. 현업에서 자주 발생하는 실수 패턴 5가지와 올바른 추적 규칙을 단계별로 정리했습니다.</description>
+    <pubDate>Sun, 17 May 2026 11:02:08 GMT</pubDate>
+    <guid>https://crepika.com/blog/utm-5-tips</guid>
+    <dc:creator>박준영</dc:creator>
   </item>
 
 </channel>
