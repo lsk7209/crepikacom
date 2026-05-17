@@ -231,6 +231,7 @@ export default function Home() {
           title="크레피카 블로그"
           href="https://crepika.com/rss.xml"
         />
+        <link rel="alternate" type="text/plain" title="크레피카 LLMs.txt" href="https://crepika.com/llms.txt" />
         <meta property="og:image" content="https://crepika.com/og-image.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
