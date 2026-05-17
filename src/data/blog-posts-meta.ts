@@ -2662,6 +2662,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["Discord 봇", "Discord 커뮤니티", "Discord 자동화", "MEE6", "크리에이터 커뮤니티"],
   },
+  {
+    slug: "makecom-sns-automation-5-tips",
+    title: "Make.com 무료 플랜으로 SNS 자동화하는 5가지 실용 팁",
+    description: "Make.com 무료 플랜으로 SNS 콘텐츠 발행, 알림, 데이터 수집을 자동화하는 5가지 실용적인 팁을 정리했습니다. 코딩 없이 구현하는 인스타그램, Threads, 블로그 자동화 시나리오를 안내합니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "박준영",
+    keywords: ["Make.com 자동화", "SNS 자동화", "노코드 자동화", "Make.com 무료", "소셜 미디어 자동화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
