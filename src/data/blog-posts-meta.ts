@@ -2712,6 +2712,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["네이버 스마트플레이스", "스마트플레이스 사진", "가게 사진", "네이버 지도 최적화", "로컬 SEO"],
   },
+  {
+    slug: "kakao-7-tips-strategy",
+    title: "카카오맵 리뷰 관리 7가지 팁: 악성 리뷰 대응과 긍정 리뷰 유도 전략",
+    description: "카카오맵 리뷰 관리 7가지 핵심 팁을 정리했습니다. 악성 리뷰 신고·대응법, 긍정 리뷰 유도 전략, 오너 댓글 작성법, 리뷰 모니터링까지 카카오맵 평점을 높이는 실전 가이드입니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["카카오맵 리뷰", "리뷰 관리", "악성 리뷰 대응", "카카오맵 최적화", "로컬 마케팅"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
