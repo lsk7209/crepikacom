@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Sun, 17 May 2026 11:02:08 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 17 May 2026 13:00:31 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2494,6 +2494,16 @@
     <pubDate>Sun, 17 May 2026 11:02:08 GMT</pubDate>
     <guid>https://crepika.com/blog/utm-5-tips</guid>
     <dc:creator>박준영</dc:creator>
+  </item>
+
+
+  <item>
+    <title>구글 Discover 노출되는 글 쓰는 7가지 팁: 추천 피드에 올라타는 콘텐츠 공식</title>
+    <link>https://crepika.com/blog/google-discover-7-tips-content</link>
+    <description>구글 Discover는 검색 없이도 독자를 데려오는 채널입니다. 피드에 노출되는 콘텐츠의 패턴 7가지를 분석해 실제 적용 가능한 작성 공식으로 정리했습니다.</description>
+    <pubDate>Sun, 17 May 2026 13:00:31 GMT</pubDate>
+    <guid>https://crepika.com/blog/google-discover-7-tips-content</guid>
+    <dc:creator>이지수</dc:creator>
   </item>
 
 </channel>

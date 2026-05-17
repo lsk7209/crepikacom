@@ -2732,6 +2732,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["UTM 파라미터", "UTM 세팅", "GA4 추적", "마케팅 데이터", "캠페인 추적"],
   },
+  {
+    slug: "google-discover-7-tips-content",
+    title: "구글 Discover 노출되는 글 쓰는 7가지 팁: 추천 피드에 올라타는 콘텐츠 공식",
+    description: "구글 Discover는 검색 없이도 독자를 데려오는 채널입니다. 피드에 노출되는 콘텐츠의 패턴 7가지를 분석해 실제 적용 가능한 작성 공식으로 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["구글 Discover", "Discover 최적화", "콘텐츠 추천 피드", "모바일 SEO", "구글 알고리즘"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
