@@ -29,10 +29,10 @@ export default defineConfig(({ mode }) => ({
           if (
             id.includes("node_modules/react-dom") ||
             id.includes("node_modules/react/") ||
-            id.includes("node_modules/react-router-dom")
+            id.includes("node_modules/react-router-dom") ||
+            id.includes("node_modules/react-helmet-async")
           )
             return "vendor";
-          if (id.includes("node_modules/react-helmet")) return "helmet";
           if (id.includes("node_modules/@radix-ui")) return "ui";
           if (id.includes("node_modules/lucide-react")) return "icons";
           if (id.includes("node_modules/qrcode")) return "qrcode";
