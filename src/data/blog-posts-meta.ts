@@ -2832,6 +2832,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["Notion 템플릿", "Notion 판매", "디지털 상품", "Notion 수익화", "템플릿 제작"],
   },
+  {
+    slug: "elevenlabs-tips-ai",
+    title: "ElevenLabs로 팟캐스트 인트로 만드는 팁: AI 목소리로 전문가 느낌 내는 법",
+    description: "ElevenLabs AI 음성 생성 도구로 팟캐스트 인트로, 아웃트로, 광고 멘트를 직접 제작하는 방법과 자연스러운 음성을 만드는 실전 팁을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-17",
+    readTime: "8분",
+    author: "김민혁",
+    keywords: ["ElevenLabs", "AI 음성", "팟캐스트 제작", "TTS", "AI 크리에이터"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
