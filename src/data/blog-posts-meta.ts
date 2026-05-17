@@ -2642,6 +2642,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["Threads 알고리즘", "Threads 팔로워 늘리기", "Threads 노출 전략", "메타 Threads", "Threads 콘텐츠"],
   },
+  {
+    slug: "pinterest-optimization-7-tips-strategy",
+    title: "Pinterest 핀 최적화 7가지 팁: 저장률과 클릭률을 동시에 높이는 비주얼 전략",
+    description: "Pinterest 핀 최적화 7가지 핵심 팁을 정리했습니다. 저장률과 클릭률을 동시에 높이는 이미지 디자인, 제목·설명 최적화, 키워드 전략, 발행 시간까지 Pinterest SEO 실전 가이드입니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["Pinterest 최적화", "Pinterest SEO", "핀 클릭률", "Pinterest 마케팅", "비주얼 콘텐츠"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
