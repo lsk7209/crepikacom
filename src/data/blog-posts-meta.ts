@@ -2692,6 +2692,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["CTA 버튼", "전환율 최적화", "CRO", "버튼 디자인", "랜딩 페이지 최적화"],
   },
+  {
+    slug: "5-tips",
+    title: "랜딩페이지 이탈률 줄이는 5가지 팁: 방문자가 머무르게 만드는 첫 화면 설계",
+    description: "랜딩페이지 이탈률을 낮추는 5가지 실전 팁을 정리했습니다. 첫 화면 설계, 로딩 속도, 명확한 가치 제안, 신뢰 신호 배치, 모바일 최적화까지 방문자가 머무르게 만드는 랜딩페이지 전략을 안내합니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["랜딩페이지 이탈률", "바운스레이트", "랜딩페이지 최적화", "CRO", "첫 화면 설계"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
