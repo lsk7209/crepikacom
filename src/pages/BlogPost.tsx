@@ -102,11 +102,21 @@ export default function BlogPost() {
     "case-study": "케이스 스터디",
   };
 
+  // Compute wordCount from content for AEO/GEO ranking signal
+  const wordCount =
+    (post.content.introduction?.length ?? 0) +
+    post.content.sections.reduce(
+      (s, sec) => s + (sec.content?.length ?? 0),
+      0,
+    ) +
+    (post.content.conclusion?.length ?? 0);
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.description,
+    wordCount,
     image: {
       "@type": "ImageObject",
       url: ogImage,
