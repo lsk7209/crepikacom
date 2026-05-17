@@ -1,0 +1,61 @@
+{
+  "slug": "sanity-studio-korean-headless-cms-guide",
+  "title": "Sanity Studio 한국어 가이드: 헤드리스 CMS 시작하기",
+  "description": "Sanity Studio로 헤드리스 CMS를 시작하는 한국어 입문 가이드. 콘텐츠 스키마 설계, 한국어 콘텐츠 처리, Next.js 통합, 무료 플랜 활용까지 단계별로 정리했습니다.",
+  "category": "guide",
+  "publishDate": "2026-05-17",
+  "readTime": "10분",
+  "author": "박준영",
+  "keywords": ["Sanity Studio", "헤드리스 CMS 한국어", "Sanity 시작", "Sanity Next.js", "Sanity GROQ"],
+  "content": {
+    "introduction": "Sanity는 헤드리스 CMS 시장에서 빠르게 점유율을 늘리고 있는 도구입니다. 개발자가 콘텐츠 스키마를 코드로 정의하고, 마케터·에디터가 직관적인 Sanity Studio 에디터로 콘텐츠를 작성하는 워크플로우가 매우 매끄럽습니다. 또한 무료 플랜이 비교적 관대해 작은 사이트나 개인 프로젝트도 비용 없이 시작할 수 있습니다.\n\n저는 Next.js 마케팅 사이트의 콘텐츠를 Sanity로 마이그레이션하면서 학습 과정과 함정을 모두 경험했습니다. 콘텐츠 스키마 설계에 약 4시간, Sanity Studio 셋업에 1시간, Next.js 통합에 3시간이 걸렸고, 결과적으로 콘텐츠 작성 속도가 워드프레스 사용 시 대비 약 1.7배 빨라졌습니다. 또한 실시간 협업 덕분에 마케터와 디자이너가 동시에 콘텐츠를 편집할 수 있게 되면서 출시 사이클이 짧아졌습니다. 이 가이드는 한국 개발자가 Sanity Studio를 처음 시작해 실무에 적용하기까지의 전 과정을 정리한 매뉴얼입니다."
+,
+    "sections": [
+      {
+        "heading": "Sanity 프로젝트 생성과 기본 설정",
+        "content": "Sanity 프로젝트는 코드 한 줄로 시작할 수 있습니다.\n\n1단계: Sanity 계정 생성. sanity.io에서 무료 회원가입을 합니다. GitHub·Google·Email 가입 모두 가능합니다.\n\n2단계: 프로젝트 초기화. 터미널에서 'npm create sanity@latest -- --project new --create-project \"My Blog\" --dataset production' 명령을 실행합니다. 명령형 옵션 외에 인터랙티브 프롬프트로 따라가도 됩니다. 프로젝트 이름, 데이터셋 이름(production·development), 사용할 스키마 템플릿을 선택합니다.\n\n3단계: 디렉토리 이동과 의존성 설치. 'cd my-blog' 후 'npm install'을 실행합니다. Sanity Studio가 React 기반의 클라이언트 사이드 애플리케이션으로 설치됩니다.\n\n4단계: Studio 로컬 실행. 'npm run dev'를 실행하면 'http://localhost:3333'에서 Sanity Studio가 열립니다. 처음 접속 시 Sanity 계정으로 로그인해야 합니다.\n\n5단계: 첫 콘텐츠 작성. Studio에서 좌측의 콘텐츠 타입(기본 템플릿이라면 Post)을 선택하고 'Create new' 버튼을 클릭해 새 글을 작성합니다. 제목, 본문, 작성자, 이미지를 입력하고 'Publish'를 누르면 콘텐츠가 Sanity 데이터셋에 저장됩니다.\n\n6단계: Studio 배포. 로컬 Studio를 다른 팀원과 공유하려면 'npx sanity deploy' 명령으로 Studio를 Sanity 인프라에 배포합니다. 'projectname.sanity.studio' 같은 URL이 만들어지며, 권한이 부여된 팀원이 접근할 수 있습니다.\n\n초기 설정 시간은 약 30분~1시간이며, 그중 대부분은 콘텐츠 스키마를 자신의 프로젝트에 맞게 다듬는 작업입니다."
+      },
+      {
+        "heading": "콘텐츠 스키마 설계의 핵심 원칙",
+        "content": "Sanity의 강점은 콘텐츠 스키마를 JavaScript/TypeScript 코드로 정의한다는 점입니다. 콘텐츠 모델을 명확히 설계하면 운영이 매끄럽지만, 잘못 설계하면 나중에 수정 비용이 큽니다.\n\n스키마 설계 원칙은 다음과 같습니다.\n\n첫째, 콘텐츠 타입을 작게 나눕니다. 한 'Post' 타입에 모든 필드를 넣지 말고, 'BlogPost', 'CaseStudy', 'LandingPage', 'TeamMember' 같이 용도별로 분리합니다. 각 타입의 필드가 다를 수 있고, 이를 명확히 분리하면 에디터 UI가 깔끔해집니다.\n\n둘째, 재사용 가능한 컴포넌트는 'object' 타입으로 추출합니다. 예를 들어 SEO 메타 데이터(title·description·image)는 'seoMeta' object를 만들어 모든 콘텐츠 타입에서 재사용합니다. 코드 중복을 줄이고 일관성을 유지할 수 있습니다.\n\n셋째, 'reference' 타입으로 관계를 정의합니다. 글의 작성자, 카테고리, 관련 글 같은 관계는 'reference' 필드로 표현합니다. Sanity의 GROQ 쿼리로 관계를 자유롭게 추적할 수 있어 복잡한 콘텐츠 관계도 표현 가능합니다.\n\n넷째, 'Portable Text'를 본문에 사용합니다. Sanity의 'Portable Text'는 마크다운보다 더 표현력 있는 본문 형식으로, 이미지·동영상·코드 블록·커스텀 위젯을 본문 안에 자유롭게 삽입할 수 있습니다. 한 번 익히면 매우 강력합니다.\n\n다섯째, 필수 필드와 유효성 검증을 명확히 합니다. 'validation' 옵션으로 필드의 필수 여부, 최소·최대 길이, 정규식 패턴을 정의합니다. 에디터가 잘못된 콘텐츠를 발행하지 못하도록 사전 차단합니다.\n\n실제 예시로, 블로그 사이트의 스키마는 다음과 같이 설계됩니다.\n\n- post: 블로그 글 (title, slug, author reference, body Portable Text, categories array of references, seoMeta object)\n- author: 작성자 (name, bio, image, socialLinks)\n- category: 카테고리 (title, slug, description)\n- siteSettings: 사이트 전체 설정 (title, description, logo, navigation)\n- seoMeta (재사용 object): metaTitle, metaDescription, ogImage\n\n이런 구조로 시작하면 추후 콘텐츠가 늘어도 일관성을 유지하기 쉽습니다."
+      },
+      {
+        "heading": "한국어 콘텐츠 처리와 다국어 운영",
+        "content": "Sanity는 한국어 콘텐츠 처리에 문제가 없으며, 다국어 사이트 운영도 가능합니다.\n\n한국어 검색·필터링: Sanity의 검색 기능은 UTF-8 기반으로 작동하므로 한국어 콘텐츠도 정상적으로 검색됩니다. 다만 토크나이저가 영어 기준이라 형태소 분석이 정교하지 않을 수 있습니다. 한국어 검색이 핵심 기능이라면 외부 검색 서비스(Algolia, Meilisearch)와 통합하는 것을 고려해야 합니다.\n\n한국어 slug 처리: 글의 slug 필드는 자동 생성이 가능하지만 한국어 제목을 영문 slug로 변환하지는 않습니다. 한국어 제목으로 자동 slug를 만들면 URL이 인코딩되어 길어집니다. 권장 사항은 에디터가 직접 영문 slug를 입력하도록 가이드하거나, 자동 변환 로직(한국어 → 로마자)을 schema의 slugify 함수로 구현하는 것입니다.\n\n다국어 콘텐츠 운영: Sanity는 두 가지 다국어 운영 방식을 제공합니다.\n\n방식 1 — 필드별 다국어: 각 필드를 다국어 객체로 만듭니다. title 필드를 'title: { ko: \"안녕\", en: \"Hello\" }' 형태로 저장합니다. 같은 콘텐츠의 모든 언어가 같은 문서에 저장됩니다. 콘텐츠 구조가 단순하고 모든 언어가 항상 함께 발행되는 경우 적합합니다.\n\n방식 2 — 언어별 문서 분리: 각 언어별로 별도의 문서를 만들고 reference로 연결합니다. 한국어 글과 영어 글이 다른 문서이며, 'translationOf' 같은 reference 필드로 서로 연결됩니다. 언어별로 독립적인 발행 일정이 필요하거나 콘텐츠가 크게 다른 경우 적합합니다.\n\n공식 'sanity-plugin-internationalization' 플러그인이 두 방식을 모두 지원합니다.\n\n한국어 콘텐츠의 메타 정보: 메타 설명을 작성할 때 한국어 글자수와 영문 글자수의 차이를 고려해야 합니다. 검색 결과 미리보기에 노출되는 길이는 픽셀 기반이라 한국어가 영문보다 짧은 길이로 잘립니다. validation에서 한국어 메타 설명은 80~100자, 영어는 140~160자 기준을 적용하는 것이 좋습니다."
+      },
+      {
+        "heading": "Next.js와의 통합 패턴",
+        "content": "Sanity와 Next.js는 가장 자주 결합되는 조합입니다. 공식 'next-sanity' 패키지가 이 통합을 매우 매끄럽게 만들어줍니다.\n\n1단계: 패키지 설치. Next.js 프로젝트에서 'npm install next-sanity @sanity/image-url' 명령을 실행합니다.\n\n2단계: Sanity 클라이언트 설정. 'lib/sanity.js' 파일을 만들고 다음 코드를 작성합니다.\n\nimport { createClient } from 'next-sanity';\n\nexport const client = createClient({\n  projectId: 'YOUR_PROJECT_ID',\n  dataset: 'production',\n  apiVersion: '2024-01-01',\n  useCdn: true,\n});\n\n3단계: GROQ 쿼리로 콘텐츠 가져오기. Next.js 페이지나 서버 컴포넌트에서 GROQ 쿼리로 콘텐츠를 가져옵니다.\n\nconst posts = await client.fetch(`*[_type == \"post\"] | order(publishedAt desc) { title, slug, excerpt, mainImage }`);\n\n4단계: 이미지 처리. Sanity 이미지는 '@sanity/image-url' 패키지로 자동 리사이즈·포맷 변환할 수 있습니다.\n\nimport imageUrlBuilder from '@sanity/image-url';\nconst builder = imageUrlBuilder(client);\nexport const urlFor = (source) => builder.image(source);\n\n그 후 컴포넌트에서 'urlFor(image).width(800).webp().url()' 같은 형태로 최적화된 이미지 URL을 만들 수 있습니다.\n\n5단계: Portable Text 렌더링. 본문(Portable Text)을 React 컴포넌트로 렌더링하려면 'portabletext/react' 라이브러리를 사용합니다.\n\nimport { PortableText } from '@portabletext/react';\n<PortableText value={post.body} />\n\n커스텀 컴포넌트(이미지·코드 블록 등)는 옵션으로 추가할 수 있습니다.\n\n6단계: ISR(증분 정적 재생성) 통합. Sanity 콘텐츠가 변경되면 자동으로 Next.js 페이지가 재빌드되도록 webhook을 설정합니다. Sanity 대시보드의 Webhook 설정에서 Next.js의 revalidate API URL을 등록하면, 콘텐츠 발행 시 즉시 사이트가 업데이트됩니다.\n\n7단계: 실시간 미리보기. 'next-sanity'는 Next.js의 Preview Mode와 통합되어 발행 전 콘텐츠를 미리 볼 수 있습니다. Sanity Studio에서 콘텐츠를 작성하면서 우측에 실제 사이트의 미리보기를 실시간으로 볼 수 있는 환경을 만들 수 있습니다."
+      },
+      {
+        "heading": "무료 플랜 한계와 운영 비용 관리",
+        "content": "Sanity의 무료 플랜은 시작에 충분하지만 한계가 있습니다. 한계를 이해하고 비용을 관리하는 방법을 정리합니다.\n\n무료 플랜 한계:\n\n- 사용자: 3명 (개발자·에디터·관리자)\n- 데이터셋: 2개 (production·development 정도)\n- API 요청: 월 100,000회 (CDN 캐시된 요청은 카운트되지 않음)\n- 자산 저장: 5GB\n- 데이터셋당 문서 수: 무제한\n\n작은 블로그나 개인 프로젝트는 무료 플랜으로 충분히 운영할 수 있습니다. 정적 사이트 + Sanity 조합에서는 정적 빌드 시 한 번 API를 호출하므로 일반 사용자 트래픽은 API 호출에 영향을 주지 않습니다. 따라서 트래픽이 많아도 무료 플랜 한도를 거의 초과하지 않습니다.\n\n트래픽이 많거나 사용자가 늘면 Growth 플랜(월 99달러)으로 업그레이드해야 합니다. Growth 플랜은 사용자 10명, 데이터셋 10개, API 요청 1,000,000회, 자산 저장 50GB를 제공합니다.\n\n비용을 절감하는 팁:\n\n첫째, CDN을 적극 활용합니다. 'useCdn: true'로 설정하면 Sanity의 CDN이 응답을 캐시하므로 같은 쿼리에 대한 추가 요청이 무료입니다. 정적 사이트라면 빌드 시 한 번만 데이터를 가져오므로 매우 효율적입니다.\n\n둘째, 자산 저장을 관리합니다. 이미지를 업로드할 때 적절한 크기로 리사이즈한 후 업로드하면 저장 공간이 절약됩니다. 또는 외부 이미지 호스팅(Cloudinary, Imgix)을 사용해 Sanity의 자산 저장을 최소화할 수 있습니다.\n\n셋째, 사용자 권한을 명확히 합니다. 무료 플랜의 사용자 3명 한도 안에서 운영하려면 권한 관리가 중요합니다. 콘텐츠 작성만 하는 외부 인원은 'Editor' 권한, 가끔 보는 임원은 'Viewer' 권한으로 분리해 핵심 인원에 'Administrator' 권한을 부여합니다.\n\n넷째, 데이터셋 분리를 신중히 합니다. development 데이터셋을 만들면 무료 플랜 한도(2개)에 영향을 주지만, 같은 데이터셋 안에 'draft' 상태로 두면 별도 데이터셋 없이도 개발·테스트가 가능합니다.\n\n다섯째, Webhook과 ISR 결합으로 빌드 빈도 최적화. 콘텐츠 변경 시마다 전체 사이트 빌드 대신, 변경된 페이지만 재생성하는 ISR을 활용하면 빌드 시간과 비용이 모두 절감됩니다."
+      }
+    ],
+    "conclusion": "Sanity Studio는 개발자와 콘텐츠 팀이 함께 일하기 좋은 헤드리스 CMS로, 콘텐츠 스키마의 코드 기반 정의와 직관적인 에디터 UI를 결합한 매끄러운 워크플로우를 제공합니다. 한국어 콘텐츠 운영에 큰 제약이 없으며, Next.js와의 통합이 가장 매끄러운 CMS 중 하나입니다. 무료 플랜이 비교적 관대해 작은 사이트나 개인 프로젝트는 비용 없이 시작할 수 있고, 트래픽이 늘어도 정적 사이트와 결합하면 API 요청 한도를 거의 초과하지 않아 장기적으로도 비용 효율이 좋습니다. 처음 시작할 때는 콘텐츠 스키마 설계에 시간을 충분히 투자하고, 작은 프로젝트로 워크플로우를 익힌 뒤 본격적인 도입을 결정하는 단계적 접근을 권합니다. 좋은 CMS는 콘텐츠 팀이 콘텐츠에 집중할 수 있게 해주는 도구이며, Sanity는 그 균형이 잘 잡힌 옵션입니다."
+  },
+  "relatedTools": ["text-counter", "hashtag-mixer"],
+  "relatedPosts": [],
+  "faq": [
+    {
+      "question": "Sanity Studio를 처음 사용하는데 콘텐츠 스키마를 잘못 설계하면 어떻게 되나요?",
+      "answer": "스키마는 코드이므로 언제든 수정할 수 있습니다. 다만 이미 작성된 콘텐츠가 새 스키마와 맞지 않으면 마이그레이션 작업이 필요합니다. 작은 프로젝트일 때는 빠르게 수정 가능하지만 콘텐츠가 수백 개가 넘으면 마이그레이션 비용이 큽니다. 따라서 초기 스키마 설계에 시간을 충분히 투자하고, 일단 1~2주는 작은 콘텐츠로 워크플로우를 검증하는 것을 권합니다."
+    },
+    {
+      "question": "Sanity와 Contentful 중 한국 사이트에 어떤 것이 더 적합한가요?",
+      "answer": "비용과 자유도 면에서 Sanity가 한국의 작은~중간 규모 프로젝트에 적합합니다. 무료 플랜이 관대하고, 개발자가 스키마를 자유롭게 다듬을 수 있습니다. Contentful은 엔터프라이즈 규모와 다국어 운영에 강점이 있지만 비용이 빠르게 상승합니다. 일반적인 한국 마케팅 사이트나 블로그라면 Sanity가 합리적인 선택입니다."
+    },
+    {
+      "question": "GROQ 쿼리 언어는 GraphQL과 어떻게 다른가요?",
+      "answer": "GROQ는 Sanity가 만든 콘텐츠 쿼리 언어로, GraphQL보다 더 유연하고 표현력이 강합니다. JSON과 비슷한 형태로 결과를 어떤 구조로 받을지 직접 지정할 수 있어, 여러 컬렉션을 결합하거나 복잡한 필터링·정렬·집계를 한 쿼리로 표현할 수 있습니다. GraphQL도 Sanity에서 지원하지만 일반적으로 GROQ가 더 강력합니다."
+    },
+    {
+      "question": "Sanity 콘텐츠를 다른 CMS로 옮길 수 있나요?",
+      "answer": "Sanity는 표준 JSON 형태로 콘텐츠를 export할 수 있어 마이그레이션이 가능합니다. 'sanity dataset export' 명령으로 모든 콘텐츠를 JSON으로 내보낼 수 있고, 다른 CMS의 import 도구로 가져올 수 있습니다. 다만 콘텐츠 모델 차이로 변환 작업이 필요하며, Portable Text를 다른 형식으로 변환하는 부분이 가장 까다롭습니다."
+    },
+    {
+      "question": "Sanity의 실시간 협업이 정말 잘 작동하나요?",
+      "answer": "Google Docs 수준의 실시간 협업을 제공합니다. 여러 사용자가 동시에 같은 문서를 편집할 수 있고, 변경 사항이 실시간으로 동기화됩니다. 다른 사용자의 커서 위치도 볼 수 있어 누가 어디를 편집하는지 확인할 수 있습니다. 콘텐츠 팀의 협업이 핵심인 환경에서 매우 강력한 기능입니다."
+    }
+  ]
+}

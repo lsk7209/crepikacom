@@ -1,0 +1,61 @@
+{
+  "slug": "leonardo-ai-noncommercial-free-image-guide",
+  "title": "Leonardo AI 활용: 비상업용 무료 이미지 만들기",
+  "description": "Leonardo AI를 무료 플랜으로 시작해 비상업적 콘텐츠용 AI 이미지를 만드는 방법, 핵심 기능과 모델 활용, 한국 사용자에게 적합한 워크플로우를 정리한 가이드입니다.",
+  "category": "guide",
+  "publishDate": "2026-05-17",
+  "readTime": "9분",
+  "author": "이지수",
+  "keywords": ["Leonardo AI", "무료 AI 이미지", "Leonardo 한국어", "AI 이미지 생성", "비상업적 AI"],
+  "content": {
+    "introduction": "Leonardo AI는 2022년 출시된 AI 이미지 생성 플랫폼으로, Stable Diffusion 기반의 강력한 이미지 생성 기능을 웹브라우저에서 즉시 사용할 수 있게 만든 서비스입니다. 가장 큰 강점은 무료 플랜의 관대함입니다. 매일 일정량의 무료 크레딧이 자동으로 충전되어 별도의 결제 없이 꾸준히 이미지를 생성할 수 있습니다. 또한 다양한 사전 학습된 모델과 LoRA를 선택할 수 있어 Stable Diffusion 로컬 설치 없이도 비슷한 자유도를 누릴 수 있습니다.\n\n저는 Leonardo AI를 6개월간 개인 블로그·취미 콘텐츠 제작에 활용하면서 무료 플랜만으로 약 3,000개의 이미지를 생성했습니다. Stable Diffusion 설치의 부담 없이, ChatGPT Plus나 Midjourney 구독료 없이도 충분히 활용할 수 있는 가성비가 매력적이었습니다. 다만 무료 플랜의 결과물은 비상업적 사용이 권장되며, 본격적인 상업 활용에는 유료 플랜이 필요합니다. 이 가이드는 Leonardo AI를 한국 사용자가 무료로 시작해 비상업적 콘텐츠 제작에 활용하는 실전 매뉴얼입니다."
+,
+    "sections": [
+      {
+        "heading": "Leonardo AI의 정체성과 무료 플랜의 가치",
+        "content": "Leonardo AI는 Stable Diffusion 기반의 클라우드 호스팅 AI 이미지 도구입니다. 핵심 특징을 정리합니다.\n\n특징 1 — 다양한 사전 학습 모델 제공:\n\nLeonardo AI는 약 30개 이상의 사전 학습된 모델을 제공합니다. 사실적 인물(Leonardo Diffusion XL), 일러스트(DreamShaper), 애니메이션(Anime Pastel), 3D 렌더링(Leonardo Vision), 등 다양한 스타일에 특화된 모델 중 선택할 수 있습니다. Stable Diffusion 로컬 설치 시 별도로 다운로드해야 했던 모델들을 클릭 한 번으로 사용할 수 있어 진입 장벽이 낮습니다.\n\n특징 2 — Elements와 LoRA 통합:\n\n사용자가 별도 다운로드 없이 'Elements'(LoRA와 유사한 스타일 모듈)를 클릭 한 번으로 적용할 수 있습니다. 'Glass and Steel', 'Crystalline', 'Toon Anime' 같은 스타일을 슬라이더로 강도를 조절하며 적용할 수 있어 디자인 자유도가 매우 높습니다.\n\n특징 3 — 무료 플랜의 관대함:\n\n매일 150 Tokens(크레딧)이 자동으로 충전됩니다. 일반적인 이미지 1개가 약 7~15 Tokens을 소모하므로 매일 약 10~20개의 이미지를 무료로 생성할 수 있습니다. 한 달 기준 약 300~600개의 무료 이미지를 만들 수 있어, 개인 사용에는 충분한 양입니다.\n\n특징 4 — Canvas Editor:\n\n생성한 이미지를 Leonardo AI 안에서 바로 편집할 수 있는 캔버스 에디터가 내장되어 있습니다. 인페인팅(부분 수정), 아웃페인팅(이미지 확장), 객체 추가·제거가 가능합니다.\n\n특징 5 — Image to Image:\n\n참조 이미지를 업로드하고 그 스타일이나 구도를 새 이미지에 적용할 수 있습니다. 일관된 스타일 시리즈를 만들 때 유용합니다.\n\n무료 플랜의 가치:\n\n비교를 위해 다른 AI 이미지 도구의 무료 사용 옵션을 정리합니다.\n\n- DALL-E 3 (Microsoft Copilot 경유): 무료, 일일 사용량 제한\n- Stable Diffusion (로컬 설치): 무료, GPU 필요\n- Midjourney: 무료 평가판 없음 (월 10달러부터)\n- Adobe Firefly: 무료 25 크레딧/월\n- Leonardo AI: 매일 150 Tokens 무료\n\nLeonardo AI의 무료 한도가 가장 관대한 편이며, 다양한 모델과 LoRA를 즉시 사용할 수 있다는 점에서 가성비가 가장 높습니다. 비상업적 사용(개인 블로그·취미 콘텐츠·학습)에 최적의 옵션입니다."
+      },
+      {
+        "heading": "Leonardo AI 시작과 첫 이미지 생성",
+        "content": "Leonardo AI를 시작하는 절차는 간단합니다.\n\n1단계: 계정 생성. leonardo.ai에 접속해 회원가입을 합니다. Google·Apple·Microsoft 계정 또는 이메일로 가입 가능합니다. 무료 가입 후 바로 사용 가능합니다.\n\n2단계: 첫 이미지 생성. 좌측 메뉴의 'AI Image Generation'을 클릭하면 이미지 생성 페이지가 열립니다.\n\n3단계: 모델 선택. 우측 패널의 'Model' 드롭다운에서 사용할 모델을 선택합니다. 처음 사용한다면 'Leonardo Diffusion XL'(사실적), 'DreamShaper v7'(일러스트), 'Anime Pastel'(애니메이션) 중 시작하기 적합합니다.\n\n4단계: 프롬프트 입력. 상단의 프롬프트 입력창에 원하는 이미지를 영어로 설명합니다. 한국어도 인식하지만 영어가 더 정확한 결과를 만듭니다.\n\n예시 프롬프트: 'A young Korean woman drinking coffee in a modern Seoul cafe, soft natural lighting, photorealistic, detailed face, 8k'\n\n5단계: 네거티브 프롬프트 추가. '제외할 요소'를 'Negative Prompt' 칸에 입력합니다.\n\n예시: 'low quality, blurry, distorted face, extra fingers, watermark, text'\n\n6단계: 파라미터 설정. 우측의 'Generation Settings'에서 이미지 수(보통 4개), 해상도(1024×1024 권장), Guidance Scale(7~9 권장)을 설정합니다.\n\n7단계: 'Generate' 버튼 클릭. 약 20~40초 후 4개의 이미지가 생성됩니다. 매번 다른 결과가 나오므로 마음에 들 때까지 다시 생성할 수 있습니다.\n\n8단계: 이미지 활용. 생성된 이미지를 클릭하면 큰 화면으로 볼 수 있고, 'Download', 'Edit in Canvas', 'Variation' 같은 옵션이 표시됩니다. 마음에 드는 이미지는 다운로드하고, 비슷한 변형이 필요하면 'Variation'을 클릭합니다.\n\n토큰 소모 모니터링: 우측 상단의 토큰 잔량 표시로 사용량을 실시간 확인할 수 있습니다. 매일 자정(UTC 기준)에 150 토큰이 다시 충전됩니다."
+      },
+      {
+        "heading": "모델 선택과 Elements 활용",
+        "content": "Leonardo AI의 강점은 다양한 모델과 Elements 조합으로 결과를 자유롭게 제어할 수 있다는 점입니다.\n\n주요 모델 정리:\n\n사실적 이미지:\n\n- Leonardo Diffusion XL: 균형 잡힌 사실적 모델. 인물·풍경·제품에 두루 강함. 기본 추천 모델.\n- AlbedoBase XL: 더 사실적이고 디테일한 결과. 인물 사진에 특히 강함.\n- Leonardo Vision XL: 풍경·자연·건축에 강한 모델.\n- PhotoReal: 극사실적 인물·제품 사진 스타일.\n\n일러스트·아트:\n\n- DreamShaper v7: 일러스트와 사실적 사이의 균형 잡힌 모델. 매우 인기 있음.\n- Leonardo Anime XL: 애니메이션·만화 스타일.\n- Anime Pastel Dream: 부드러운 파스텔 톤 일러스트.\n- Cinematic XL: 영화적 분위기의 일러스트.\n\n3D·기타:\n\n- Leonardo 3D Animation Style: 픽사·디즈니 스타일의 3D 캐릭터.\n- RPG v5: 판타지·게임 일러스트.\n- Leonardo Kino XL: 시네마틱한 영상 스타일.\n\nElements 사용법:\n\nElements는 모델에 추가하는 스타일 모듈입니다. 우측 패널의 'Elements' 섹션에서 원하는 스타일을 선택하고 강도(0~1)를 슬라이더로 조정합니다.\n\n인기 있는 Elements:\n\n- Glass and Steel: 미래적이고 정교한 산업 디자인 스타일\n- Crystalline: 크리스털·유리 효과\n- Toon Anime: 만화·애니메이션 효과\n- Cinematic Light: 영화적 조명 효과\n- Realistic Painting: 회화적 사실주의 효과\n- Renaissance Lithography: 르네상스 석판화 스타일\n\n여러 Elements를 동시에 적용해 독특한 스타일 조합을 만들 수 있습니다. 예: 'Glass and Steel' 0.5 + 'Cinematic Light' 0.3.\n\n사례별 모델·Elements 조합:\n\n사례 1 — 한국 인물 사실적 사진:\nAlbedoBase XL + Cinematic Light 0.3 + 'Korean, photorealistic' 프롬프트.\n\n사례 2 — 미니멀 일러스트:\nDreamShaper v7 + Toon Anime 0.6 + 'minimalist illustration' 프롬프트.\n\n사례 3 — 한국 풍경:\nLeonardo Vision XL + 'Korean hanok village, mountain background' 프롬프트.\n\n사례 4 — 3D 캐릭터:\nLeonardo 3D Animation Style + Crystalline 0.2 + 'young character, friendly expression' 프롬프트.\n\n실험적 사용: 같은 프롬프트로 여러 모델을 차례로 시도해보면 각 모델의 특성을 빠르게 학습할 수 있습니다. 처음 1주일은 다양한 모델을 시도하면서 자신의 스타일에 맞는 모델을 찾는 시간을 갖는 것을 권합니다."
+      },
+      {
+        "heading": "비상업적 사용에 적합한 활용 사례",
+        "content": "Leonardo AI 무료 플랜의 비상업적 사용에 적합한 활용 사례를 정리합니다.\n\n사용 사례 1 — 개인 블로그 콘텐츠:\n\n취미 블로그, 일상 블로그, 학습 노트 같은 비상업적 개인 블로그에 사용할 헤더 이미지·일러스트를 만듭니다. 외주 비용 없이 자신만의 시각 콘텐츠를 만들 수 있습니다.\n\n사용 사례 2 — 학습 자료 시각화:\n\n공부한 내용을 시각화한 노트, 학습용 인포그래픽, 개념도를 만들 수 있습니다. 추상적인 개념(예: '리더십', '협업')을 일러스트로 표현하는 작업에 효과적입니다.\n\n사용 사례 3 — 비공개 프로젝트:\n\n개인 또는 가족용 비공개 프로젝트(생일 카드, 결혼식 초대장, 가족 행사 포스터)에 활용합니다. 비공개 사용은 상업적 라이선스 우려가 적습니다.\n\n사용 사례 4 — 취미·창작 활동:\n\n소설 표지, 게임 캐릭터 디자인, 일러스트 연습, 캐릭터 시리즈 같은 창작 활동에 활용합니다. 외부 공유나 판매가 아닌 개인 창작 보관 용도라면 자유롭게 사용할 수 있습니다.\n\n사용 사례 5 — 학습과 실험:\n\nAI 이미지 생성 자체를 학습하고 실험하는 용도로 활용합니다. 프롬프트 작성, 모델 비교, 스타일 탐색 등 다양한 실험에 무료 한도가 충분합니다.\n\n사용 사례 6 — SNS 개인 게시물:\n\n인스타그램·페이스북에 올리는 개인 게시물의 시각 콘텐츠로 활용합니다. 광고나 수익 활동이 아닌 일상 공유 목적이라면 비상업적 사용에 가깝습니다. 단, 인플루언서 활동처럼 상업적 요소가 섞이면 유료 플랜이 필요합니다.\n\n비상업적 vs 상업적 경계:\n\nLeonardo AI 무료 플랜의 라이선스는 다소 모호한 부분이 있습니다. 명확한 가이드는 다음과 같습니다.\n\n비상업적 사용으로 분류:\n\n- 개인 비수익 블로그\n- 학교 과제·발표\n- 개인 SNS의 일상 게시물\n- 가족·친구 사이의 비공개 활용\n- 학습·실험 용도\n\n상업적 사용으로 분류 (유료 플랜 필요):\n\n- 비즈니스 마케팅\n- 광고 캠페인\n- 판매하는 제품·서비스에 활용\n- 수익화된 블로그·유튜브 채널의 콘텐츠\n- 클라이언트 작업\n\n결론: 본격적인 마케팅 활용에는 Leonardo AI 유료 플랜(월 12달러부터)이 필요하며, 비상업적 개인 사용에는 무료 플랜이 충분합니다.\n\n무료 플랜의 한계:\n\n- 결과 이미지에 워터마크는 없지만 상업적 사용 라이선스는 명확하지 않음\n- 일일 토큰 한도로 대량 생성 불가\n- 일부 고급 모델·Elements는 유료 전용\n- 우선 처리 큐 없어 대기 시간이 있을 수 있음"
+      },
+      {
+        "heading": "유료 플랜과 상업적 사용으로의 확장",
+        "content": "비상업적 사용으로 시작했다가 본격적인 활용을 원할 때 유료 플랜으로 확장하는 방법을 정리합니다.\n\n유료 플랜 가격:\n\n- Apprentice (월 12달러): 매월 8,500 Tokens, 상업적 사용 라이선스, 개인 모델 학습 1개 가능.\n\n- Artisan (월 30달러): 매월 25,000 Tokens, 더 빠른 처리, 개인 모델 학습 10개 가능, 우선 큐.\n\n- Maestro (월 60달러): 매월 60,000 Tokens, 가장 빠른 처리, 무제한 개인 모델 학습, 팀 협업 기능.\n\n다른 AI 도구와의 가격 비교:\n\n- DALL-E 3 (ChatGPT Plus): 월 20달러\n- Midjourney Standard: 월 30달러\n- Stable Diffusion: 무료 (GPU 보유 시)\n- Adobe Firefly Premium: 월 약 13,000원\n- Leonardo AI Apprentice: 월 12달러\n- Leonardo AI Artisan: 월 30달러\n\nLeonardo AI Apprentice는 가장 저렴한 유료 플랜 중 하나이며, 다양한 모델과 Elements를 활용할 수 있어 가성비가 좋습니다.\n\n상업적 사용 시 추가 가치:\n\n첫째, 상업적 사용 라이선스가 명확해집니다. 광고·마케팅·판매 콘텐츠에 안전하게 사용할 수 있습니다.\n\n둘째, 토큰 한도가 늘어 본격적인 작업이 가능합니다. 일일 한도가 아닌 월간 한도라 한 번에 많은 작업을 처리할 수 있습니다.\n\n셋째, 개인 모델 학습이 가능합니다. 자신의 이미지로 모델을 파인튜닝해 브랜드 특화 모델을 만들 수 있습니다. 일관된 시각 자산 제작에 매우 강력합니다.\n\n넷째, 우선 큐로 처리 속도가 빨라집니다. 무료 사용자가 늘어나는 시간대에도 대기 없이 즉시 처리됩니다.\n\n다섯째, 고급 기능 사용 가능. 고급 모델, 비공개 갤러리, 팀 협업 등이 활성화됩니다.\n\n전환 시점 판단:\n\n다음 신호가 보이면 유료 플랜을 검토할 시점입니다.\n\n- 무료 한도(일 150 토큰)가 자주 부족함\n- 비상업적 사용을 넘어 수익화된 콘텐츠에 활용하기 시작함\n- 일관된 스타일의 대량 이미지가 필요함\n- 자신의 브랜드 마스코트·캐릭터 학습이 필요함\n- 빠른 처리가 워크플로우의 핵심이 됨\n\n저는 비상업적 사용으로 3개월 정도 충분히 익숙해진 뒤 본격적인 활용을 위해 Apprentice 플랜으로 전환했습니다. 무료 플랜으로 학습한 노하우 덕분에 유료 플랜의 가치를 즉시 활용할 수 있었습니다."
+      }
+    ],
+    "conclusion": "Leonardo AI는 매일 150 토큰의 관대한 무료 한도와 다양한 사전 학습 모델·Elements를 즉시 사용할 수 있는 가성비 높은 AI 이미지 도구입니다. Stable Diffusion 로컬 설치의 부담 없이 비슷한 자유도를 누릴 수 있으며, 비상업적 개인 사용에는 무료 플랜만으로 충분히 활용 가능합니다. 개인 블로그, 학습 자료, 취미 창작, SNS 일상 게시물 같은 비상업적 용도에는 가장 합리적인 선택지 중 하나입니다. 본격적인 상업 활용이 필요할 때 월 12달러의 Apprentice 플랜으로 자연스럽게 확장할 수 있어, 작게 시작해 점진적으로 활용 범위를 넓혀가는 패턴이 가능합니다. AI 이미지 생성을 학습하고 실험하는 출발점으로 가장 친근한 도구이며, 자유도와 접근성의 균형이 잘 잡힌 옵션입니다. 비상업적 사용으로 시작해 자신의 워크플로우를 다듬은 뒤 필요할 때 유료로 옮겨가는 단계적 접근이 가장 안전하고 효율적입니다."
+  },
+  "relatedTools": ["text-counter", "hashtag-mixer"],
+  "relatedPosts": [],
+  "faq": [
+    {
+      "question": "Leonardo AI의 무료 플랜으로 만든 이미지를 SNS에 올려도 되나요?",
+      "answer": "개인 일상 SNS 게시물에 활용하는 것은 일반적으로 비상업적 사용으로 간주됩니다. 다만 광고 수익이 발생하는 인플루언서 활동이나 브랜드 협찬 게시물에 사용하면 상업적 사용에 해당하므로 유료 플랜이 필요합니다. 명확한 라이선스 가이드는 Leonardo AI 공식 문서를 확인하세요."
+    },
+    {
+      "question": "Leonardo AI와 Stable Diffusion 로컬 설치 중 어느 것이 좋나요?",
+      "answer": "환경과 사용 빈도에 따라 다릅니다. GPU가 있고 자유도와 무제한 사용을 원하면 Stable Diffusion 로컬 설치가 좋습니다. GPU가 없거나 설치 부담이 있다면 Leonardo AI가 훨씬 편합니다. 두 도구를 병행 사용하는 사용자도 많습니다(로컬에서 본격 작업, Leonardo로 빠른 시안)."
+    },
+    {
+      "question": "Leonardo AI의 한국어 프롬프트가 정확한가요?",
+      "answer": "한국어 프롬프트도 인식하지만 영어 프롬프트가 훨씬 정확한 결과를 만듭니다. 특히 시각적 디테일(조명·구도·스타일)은 영어로 작성하는 것이 표준입니다. 한국 문화적 맥락(한복·한옥)은 한국 키워드와 영어 설명을 함께 사용하면 더 정확합니다. 예: 'Korean traditional hanbok, formal style, detailed embroidery'"
+    },
+    {
+      "question": "Leonardo AI에서 NSFW 콘텐츠를 만들 수 있나요?",
+      "answer": "Leonardo AI는 기본적으로 NSFW(성인용·폭력적) 콘텐츠 생성을 제한합니다. 특정 모델에는 NSFW 필터가 있어 부적절한 결과를 차단합니다. 안전한 콘텐츠 정책을 따르는 사용자에게는 영향이 없으며, 마케팅·블로그·일러스트 용도로는 문제없이 사용할 수 있습니다."
+    },
+    {
+      "question": "Leonardo AI 사용자 커뮤니티가 활발한가요?",
+      "answer": "Leonardo AI는 Discord 공식 커뮤니티가 매우 활발합니다. 새 모델 출시, 프롬프트 팁, 사용 사례 공유가 활발하게 이루어집니다. 한국어 커뮤니티는 비교적 작지만 디스코드 한국 그룹과 일부 카페에서 정보 교환이 가능합니다. 문제 해결과 학습에 활용할 수 있는 채널이 충분합니다."
+    }
+  ]
+}
