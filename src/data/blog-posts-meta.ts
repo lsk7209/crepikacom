@@ -2742,6 +2742,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["구글 Discover", "Discover 최적화", "콘텐츠 추천 피드", "모바일 SEO", "구글 알고리즘"],
   },
+  {
+    slug: "5-practical-tips-ux",
+    title: "히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트",
+    description: "히트맵 데이터를 그냥 보는 것과 제대로 읽는 것은 다릅니다. 클릭·스크롤·무브 데이터를 실제 UX 개선으로 연결하는 5가지 분석 방법을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-17",
+    readTime: "8분",
+    author: "김민혁",
+    keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
