@@ -134,7 +134,7 @@ function injectIntoRss(post) {
 function gitPush(post) {
   const msg = `Auto-publish: ${post.title.slice(0, 60)}`;
   execSync('git add src/data/blog-content.ts src/data/blog-posts-meta.ts public/sitemap.xml public/rss.xml scripts/post-queue.json', { cwd: ROOT });
-  execSync(`git commit -m "${msg.replace(/"/g, "'")}"`, { cwd: ROOT });
+  execSync(`git -c user.email="lsk7209@gmail.com" -c user.name="lsk7209" commit -m "${msg.replace(/"/g, "'")}"`, { cwd: ROOT });
   execSync('git push origin main', { cwd: ROOT });
   console.log('🚀 git push 완료 → Vercel 배포 시작');
 }
