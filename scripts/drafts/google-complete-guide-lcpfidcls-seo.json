@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "google-complete-guide-lcpfidcls-seo",
   "title": "구글 코어 웹 바이탈 완전 가이드: LCP·FID·CLS 개선으로 SEO 순위 올리기",
   "description": "구글 Core Web Vitals(LCP, FID, CLS)가 SEO 순위에 미치는 영향과 각 지표를 실제로 개선하는 방법을 단계별로 정리합니다. 페이지 속도 최적화부터 레이아웃 시프트 방지까지 실전 가이드입니다.",
@@ -17,7 +17,7 @@
       },
       {
         "heading": "LCP 개선: 페이지 로딩 속도 높이기",
-        "content": "LCP 개선에 가장 효과적인 방법은 이미지 최적화입니다. 히어로 이미지를 WebP 형식으로 변환하면 JPEG 대비 25~35% 파일 크기를 줄일 수 있습니다. 파일 크기가 줄면 로딩 시간이 단축됩니다. 이미지에 width와 height 속성을 명시하면 브라우저가 이미지 공간을 미리 확보해 LCP와 CLS 모두 개선됩니다. HTML `<link rel="preload">`로 히어로 이미지를 미리 로드하도록 설정하면 LCP가 추가로 단축됩니다. 서버 응답 시간(TTFB, Time to First Byte)을 줄이는 것도 중요합니다. 좋은 호스팅 서비스 선택, CDN(Content Delivery Network) 사용, 서버 캐싱 설정이 여기에 해당합니다.",
+        "content": "LCP 개선에 가장 효과적인 방법은 이미지 최적화입니다. 히어로 이미지를 WebP 형식으로 변환하면 JPEG 대비 25~35% 파일 크기를 줄일 수 있습니다. 파일 크기가 줄면 로딩 시간이 단축됩니다. 이미지에 width와 height 속성을 명시하면 브라우저가 이미지 공간을 미리 확보해 LCP와 CLS 모두 개선됩니다. HTML `<link rel=preload>`로 히어로 이미지를 미리 로드하도록 설정하면 LCP가 추가로 단축됩니다. 서버 응답 시간(TTFB, Time to First Byte)을 줄이는 것도 중요합니다. 좋은 호스팅 서비스 선택, CDN(Content Delivery Network) 사용, 서버 캐싱 설정이 여기에 해당합니다.",
         "subsections": []
       },
       {
