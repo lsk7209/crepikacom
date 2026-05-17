@@ -2672,6 +2672,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["Make.com 자동화", "SNS 자동화", "노코드 자동화", "Make.com 무료", "소셜 미디어 자동화"],
   },
+  {
+    slug: "capcut-shortform-editing-2-10-tips",
+    title: "CapCut 숏폼 편집 속도 2배 높이는 10가지 팁: 전문가가 쓰는 숨겨진 기능",
+    description: "CapCut을 활용해 숏폼 영상 편집 속도를 2배 높이는 10가지 핵심 팁입니다. 자동 자막 생성, 트렌드 효과 적용, AI 보이스오버, 화면 비율 최적화까지 틱톡·릴스·쇼츠에 바로 쓸 수 있는 편집 기법을 안내합니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["CapCut 팁", "CapCut 편집", "숏폼 편집", "릴스 편집", "동영상 편집 속도"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
