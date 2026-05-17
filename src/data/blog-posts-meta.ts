@@ -2782,6 +2782,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["Discord 서버 운영", "Discord 멤버 모으기", "커뮤니티 성장", "Discord 마케팅", "온라인 커뮤니티"],
   },
+  {
+    slug: "seo-10",
+    title: "기술적 SEO 체크리스트 10가지: 사이트 오픈 전 반드시 확인해야 할 설정",
+    description: "사이트를 오픈하기 전에 기술적 SEO 설정을 놓치면 검색 노출이 몇 달씩 지연됩니다. 론칭 전 반드시 점검해야 할 10가지 기술 SEO 체크리스트를 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-17",
+    readTime: "10분",
+    author: "박준영",
+    keywords: ["기술적 SEO", "SEO 체크리스트", "사이트 론칭", "Technical SEO", "검색엔진 최적화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

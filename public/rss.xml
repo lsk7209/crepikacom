@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Sun, 17 May 2026 18:39:51 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 17 May 2026 19:01:57 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2544,6 +2544,16 @@
     <pubDate>Sun, 17 May 2026 18:39:51 GMT</pubDate>
     <guid>https://crepika.com/blog/discord-30-growth-tips-0-100-practical-method</guid>
     <dc:creator>김민혁</dc:creator>
+  </item>
+
+
+  <item>
+    <title>기술적 SEO 체크리스트 10가지: 사이트 오픈 전 반드시 확인해야 할 설정</title>
+    <link>https://crepika.com/blog/seo-10</link>
+    <description>사이트를 오픈하기 전에 기술적 SEO 설정을 놓치면 검색 노출이 몇 달씩 지연됩니다. 론칭 전 반드시 점검해야 할 10가지 기술 SEO 체크리스트를 정리했습니다.</description>
+    <pubDate>Sun, 17 May 2026 19:01:57 GMT</pubDate>
+    <guid>https://crepika.com/blog/seo-10</guid>
+    <dc:creator>박준영</dc:creator>
   </item>
 
 </channel>
