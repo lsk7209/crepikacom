@@ -21,6 +21,15 @@ interface AdSlotProps {
 const AD_CLIENT = "ca-pub-3050601904412736";
 const ADSENSE_SRC = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}`;
 
+// AdSense slot IDs from env vars (set in Vercel dashboard or .env.local).
+// Fallback to undefined → placeholder only (no ad request).
+const SLOT_IDS: Partial<Record<AdSlotType, string>> = {
+  top: import.meta.env.VITE_ADSENSE_SLOT_TOP,
+  bottom: import.meta.env.VITE_ADSENSE_SLOT_BOTTOM,
+  loading: import.meta.env.VITE_ADSENSE_SLOT_LOADING,
+  download: import.meta.env.VITE_ADSENSE_SLOT_DOWNLOAD,
+};
+
 const FORMAT: Record<AdSlotType, string> = {
   top: "horizontal",
   bottom: "auto",
@@ -87,6 +96,7 @@ export function AdSlot({
   slotId,
 }: AdSlotProps) {
   const pushed = useRef(false);
+  const effectiveSlotId = slotId ?? SLOT_IDS[type];
 
   const visible =
     type === "top" ||
@@ -97,7 +107,7 @@ export function AdSlot({
   useEffect(() => {
     if (!visible) return;
     loadAdSenseOnInteraction(() => {
-      if (pushed.current || !slotId) return;
+      if (pushed.current || !effectiveSlotId) return;
       pushed.current = true;
       try {
         ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push(
@@ -107,11 +117,11 @@ export function AdSlot({
         // adsense not ready
       }
     });
-  }, [visible, slotId]);
+  }, [visible, effectiveSlotId]);
 
   if (!visible) return null;
 
-  if (!slotId) {
+  if (!effectiveSlotId) {
     return (
       <div
         className={cn("w-full", MIN_HEIGHT[type], className)}
@@ -127,7 +137,7 @@ export function AdSlot({
         className="adsbygoogle"
         style={{ display: "block" }}
         data-ad-client={AD_CLIENT}
-        data-ad-slot={slotId}
+        data-ad-slot={effectiveSlotId}
         data-ad-format={FORMAT[type]}
         data-full-width-responsive="true"
       />
