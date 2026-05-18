@@ -43,7 +43,7 @@
         "subsections": []
       }
     ],
-    "conclusion": "WebP 변환은 블로그 속도 최적화에서 가장 낮은 비용으로 가장 큰 효과를 내는 방법입니다. JPEG 대비 25~34%의 파일 크기 절감은 LCP 점수 개선으로 이어지고, Core Web Vitals 개선은 구글 검색 순위에 긍정적인 신호를 보냅니다. 워드프레스 블로거라면 EWWW Image Optimizer로 30분 안에 전체 미디어 라이브러리를 WebP로 전환할 수 있습니다. 정적 사이트라면 Squoosh로 개별 이미지를 변환하고 `<picture>` 태그로 폴백을 구현하세요. WebP 변환 후 PageSpeed Insights로 전후를 비교하고, GSC Core Web Vitals 보고서에서 4주 후 실제 개선 효과를 확인하는 것을 권장합니다."
+    "conclusion": "WebP 변환은 블로그 속도 최적화에서 가장 낮은 비용으로 가장 큰 효과를 내는 방법입니다. JPEG 대비 25~34%의 파일 크기 절감은 LCP 점수 개선으로 이어지고, Core Web Vitals 개선은 구글 검색 순위에 긍정적인 신호를 보냅니다.\n\n워드프레스 블로거라면 EWWW Image Optimizer로 30분 안에 전체 미디어 라이브러리를 WebP로 전환할 수 있습니다. 정적 사이트라면 Squoosh로 개별 이미지를 변환하고 `<picture>` 태그로 폴백을 구현하세요. WebP 변환 후 PageSpeed Insights로 전후를 비교하고, GSC Core Web Vitals 보고서에서 4주 후 실제 개선 효과를 확인하는 것을 권장합니다.\n\n이미지 최적화는 블로그 속도 개선의 시작입니다. WebP 변환을 완료했다면 다음 단계로 지연 로딩, 반응형 이미지(srcset), LCP 이미지 사전 로드를 순차적으로 적용해보세요. 이 모든 최적화를 완료하면 대부분의 블로그에서 PageSpeed Insights 모바일 점수 70점 이상, LCP 2.5초 이하 달성이 가능합니다. 속도 개선은 곧 이탈률 감소, 체류 시간 증가, 그리고 장기적인 검색 순위 향상으로 이어지는 선순환을 만들어냅니다."
   },
   "faq": [
     {
