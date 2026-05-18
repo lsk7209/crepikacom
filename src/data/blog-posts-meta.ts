@@ -2912,6 +2912,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["Substack유료전환", "서브스택유료구독", "뉴스레터유료화전략", "Substack구독자전환", "뉴스레터수익화"],
   },
+  {
+    slug: "7-tips-optimization-strategy",
+    title: "쿠팡파트너스 클릭률 높이는 7가지 팁: 링크 배치와 앵커텍스트 최적화 전략",
+    description: "쿠팡파트너스 수익을 높이려면 링크를 많이 다는 것보다 전략적으로 배치하는 것이 중요합니다. 클릭률을 높이는 링크 위치, 앵커텍스트, 콘텐츠 유형 최적화 팁을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "8분",
+    author: "이지수",
+    keywords: ["쿠팡파트너스", "제휴마케팅", "쿠팡파트너스 수익", "앵커텍스트", "블로그 수익화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
