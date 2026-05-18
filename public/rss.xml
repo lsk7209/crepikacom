@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Sun, 17 May 2026 23:32:39 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 18 May 2026 02:30:32 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2604,6 +2604,16 @@
     <pubDate>Sun, 17 May 2026 23:32:39 GMT</pubDate>
     <guid>https://crepika.com/blog/elevenlabs-tips-ai</guid>
     <dc:creator>김민혁</dc:creator>
+  </item>
+
+
+  <item>
+    <title>Perplexity로 블로그 글감 찾는 7가지 팁: 아이디어 고갈 없이 꾸준히 쓰는 법</title>
+    <link>https://crepika.com/blog/perplexity-blog-7-tips</link>
+    <description>블로그 글감이 떨어져 막막할 때 Perplexity AI를 활용하면 무한한 아이디어 소스를 얻을 수 있습니다. 검색부터 아이디어 발굴까지 7가지 실전 활용법을 소개합니다.</description>
+    <pubDate>Mon, 18 May 2026 02:30:32 GMT</pubDate>
+    <guid>https://crepika.com/blog/perplexity-blog-7-tips</guid>
+    <dc:creator>박준영</dc:creator>
   </item>
 
 </channel>

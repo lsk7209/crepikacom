@@ -2842,6 +2842,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["ElevenLabs", "AI 음성", "팟캐스트 제작", "TTS", "AI 크리에이터"],
   },
+  {
+    slug: "perplexity-blog-7-tips",
+    title: "Perplexity로 블로그 글감 찾는 7가지 팁: 아이디어 고갈 없이 꾸준히 쓰는 법",
+    description: "블로그 글감이 떨어져 막막할 때 Perplexity AI를 활용하면 무한한 아이디어 소스를 얻을 수 있습니다. 검색부터 아이디어 발굴까지 7가지 실전 활용법을 소개합니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "8분",
+    author: "박준영",
+    keywords: ["Perplexity AI", "블로그 아이디어", "콘텐츠 기획", "AI 글쓰기", "블로그 글감"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
