@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Mon, 18 May 2026 02:54:46 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 18 May 2026 04:46:12 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2624,6 +2624,16 @@
     <pubDate>Mon, 18 May 2026 02:54:46 GMT</pubDate>
     <guid>https://crepika.com/blog/linkedin-algorithm-7-tips-strategy</guid>
     <dc:creator>이지수</dc:creator>
+  </item>
+
+
+  <item>
+    <title>Facebook Pixel 설치와 이벤트 추적 팁: Meta 광고 성과를 정확히 측정하는 법</title>
+    <link>https://crepika.com/blog/facebook-pixel-tips-meta-ads</link>
+    <description>Facebook Pixel을 제대로 설치하지 않으면 Meta 광고비를 낭비합니다. 픽셀 설치부터 이벤트 추적, CAPI 연동까지 정확한 광고 측정을 위한 실전 팁을 정리했습니다.</description>
+    <pubDate>Mon, 18 May 2026 04:46:12 GMT</pubDate>
+    <guid>https://crepika.com/blog/facebook-pixel-tips-meta-ads</guid>
+    <dc:creator>김민혁</dc:creator>
   </item>
 
 </channel>

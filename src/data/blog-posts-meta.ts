@@ -2862,6 +2862,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["LinkedIn 알고리즘", "LinkedIn 마케팅", "LinkedIn 게시 전략", "B2B 소셜미디어", "LinkedIn 도달률"],
   },
+  {
+    slug: "facebook-pixel-tips-meta-ads",
+    title: "Facebook Pixel 설치와 이벤트 추적 팁: Meta 광고 성과를 정확히 측정하는 법",
+    description: "Facebook Pixel을 제대로 설치하지 않으면 Meta 광고비를 낭비합니다. 픽셀 설치부터 이벤트 추적, CAPI 연동까지 정확한 광고 측정을 위한 실전 팁을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["Facebook Pixel", "Meta 픽셀", "이벤트 추적", "Meta 광고", "CAPI"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
