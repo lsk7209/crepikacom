@@ -2972,6 +2972,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["구글 Discover", "Discover 최적화", "구글 피드", "콘텐츠 추천 알고리즘", "SEO 트래픽"],
   },
+  {
+    slug: "threads-vs-xtwitter-vs-bluesky-sns-analytics-2026",
+    title: "Threads vs X(트위터) vs Bluesky: 텍스트 SNS 플랫폼 현황 분석 2026",
+    description: "2026년 텍스트 기반 SNS 3강 구도를 사용자 수, 알고리즘, 광고 수익화, 한국 사용자 규모, 크리에이터 친화도 기준으로 비교 분석한 인사이트 리포트.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "14분",
+    author: "박준영",
+    keywords: ["Threads비교분석", "트위터X비교", "Bluesky한국", "텍스트SNS2026", "SNS플랫폼선택"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
