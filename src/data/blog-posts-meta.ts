@@ -2872,6 +2872,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["Facebook Pixel", "Meta 픽셀", "이벤트 추적", "Meta 광고", "CAPI"],
   },
+  {
+    slug: "7-tips",
+    title: "온라인 강의 판매율 높이는 7가지 팁: 수강생이 지갑을 여는 강의 페이지 설계",
+    description: "온라인 강의를 만들었지만 판매가 안 된다면 강의 페이지에 문제가 있을 가능성이 높습니다. 수강 결정을 유도하는 랜딩 페이지 설계 7가지 원칙을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["온라인 강의 판매", "강의 랜딩 페이지", "온라인 교육 마케팅", "전환율 최적화", "강의 판매 전략"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
