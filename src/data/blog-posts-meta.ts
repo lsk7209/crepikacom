@@ -2952,6 +2952,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["Pinterest보드SEO", "Pinterest검색최적화", "보드제목키워드", "Pinterest트래픽", "핀터레스트SEO팁", "보드설명최적화", "Pinterest자연검색"],
   },
+  {
+    slug: "beehiiv-50-tips-content-optimization",
+    title: "Beehiiv 뉴스레터 오픈율 50% 넘기는 팁: 제목·발송 시간·콘텐츠 최적화",
+    description: "Beehiiv 뉴스레터의 오픈율을 50% 이상으로 끌어올리는 제목 작성법, 최적 발송 시간, 콘텐츠 구성 전략을 데이터 기반으로 정리했습니다. Beehiiv 오픈율, 뉴스레터 최적화에 대한 실전 가이드.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["Beehiiv 오픈율", "뉴스레터 최적화", "이메일 마케팅", "뉴스레터 제목", "Beehiiv 전략"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
