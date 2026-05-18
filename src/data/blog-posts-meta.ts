@@ -2932,6 +2932,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["웨비나 참석률", "노쇼 방지", "리마인더 전략", "웨비나 마케팅", "이메일 자동화"],
   },
+  {
+    slug: "threads-5",
+    title: "Threads에서 바이럴되는 글 쓰는 5가지 패턴: 공유와 리포스트를 유도하는 문구",
+    description: "Threads 리포스트와 공유를 만드는 5가지 바이럴 글쓰기 패턴을 문장 구조, 실제 사례, 수치 근거와 함께 정리한 실전 작성 가이드. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["Threads바이럴글", "스레드리포스트전략", "Threads공유유도문구", "SNS바이럴콘텐츠", "Threads글쓰기패턴"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
