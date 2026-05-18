@@ -2902,6 +2902,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["구글 SGE", "AI Overviews", "GEO", "AI 검색 최적화", "검색엔진 AEO"],
   },
+  {
+    slug: "substack-tips-strategy",
+    title: "Substack 무료에서 유료로 전환하는 팁: 구독자를 결제자로 바꾸는 전략",
+    description: "Substack 무료 구독자를 유료 결제자로 전환하는 전환율 최적화 전략. 유료화 타이밍 설정, 오퍼 설계, 전환 이메일 시퀀스, 가격 책정 기준을 수치와 함께 정리.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "박준영",
+    keywords: ["Substack유료전환", "서브스택유료구독", "뉴스레터유료화전략", "Substack구독자전환", "뉴스레터수익화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
