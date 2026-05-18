@@ -2982,6 +2982,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["Threads비교분석", "트위터X비교", "Bluesky한국", "텍스트SNS2026", "SNS플랫폼선택"],
   },
+  {
+    slug: "pinterest-marketing-roi-analytics",
+    title: "Pinterest 마케팅 ROI 분석: 다른 플랫폼 대비 실제 트래픽 효율은?",
+    description: "Pinterest와 인스타그램·구글·메타 광고의 트래픽 효율, 전환율, CPM, 핀 수명을 데이터로 비교 분석합니다. 카테고리별 ROI 차이와 Pinterest 투자가 유리한 비즈니스 유형을 구체적으로 정리합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "박준영",
+    keywords: ["PinterestROI", "Pinterest트래픽효율", "소셜미디어ROI비교", "Pinterest마케팅비용", "Pinterest전환율", "마케팅채널비교", "Pinterest광고효율"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

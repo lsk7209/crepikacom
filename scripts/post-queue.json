@@ -4590,8 +4590,9 @@
     ],
     "author": "김민혁",
     "estimatedReadTime": "8분",
-    "published": false,
-    "scheduledDate": "2026-05-19T03:00"
+    "published": true,
+    "scheduledDate": "2026-05-19T03:00",
+    "publishedDate": "2026-05-18"
   },
   {
     "id": 288,
