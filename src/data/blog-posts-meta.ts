@@ -2922,6 +2922,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["쿠팡파트너스", "제휴마케팅", "쿠팡파트너스 수익", "앵커텍스트", "블로그 수익화"],
   },
+  {
+    slug: "7-tips-strategy",
+    title: "웨비나 참석률 높이는 7가지 팁: 등록 후 노쇼를 막는 리마인더 전략",
+    description: "웨비나 등록자의 절반 이상이 실제로 참석하지 않는 노쇼 문제를 해결하는 실전 리마인더 전략 7가지를 단계별로 정리했습니다. 웨비나 참석률, 노쇼 방지에 대한 실전 가이드.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "10분",
+    author: "김민혁",
+    keywords: ["웨비나 참석률", "노쇼 방지", "리마인더 전략", "웨비나 마케팅", "이메일 자동화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
