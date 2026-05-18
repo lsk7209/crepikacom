@@ -43,34 +43,53 @@ const publishLog = existsSync(PUBLISH_LOG) ? JSON.parse(readFileSync(PUBLISH_LOG
 function getTodayDate() { return new Date().toISOString().split('T')[0]; }
 
 function jitteredSleep() {
-  const jitter = MIN_JITTER_MS + Math.random() * (MAX_JITTER_MS - MIN_JITTER_MS);
-  let sleepMs = BASE_INTERVAL_MS + jitter;
+  // scheduledDate 기반으로 다음 발행 시각까지 정확히 대기
+  let sleepMs = msUntilNextScheduled();
 
-  // 새벽 1~5시(KST = UTC+9) 발행 억제: 50% 확률로 추가 대기
-  const kstHour = (new Date().getUTCHours() + 9) % 24;
-  if (kstHour >= 1 && kstHour < 5 && Math.random() < 0.5) {
-    sleepMs += 3 * 60 * 60 * 1000; // +3시간
-    console.log('🌙 새벽 시간 감지 — 발행 시간 지연');
+  // 새벽 1~5시(KST = UTC+9) 발행 억제: 다음 슬롯이 새벽이면 건너뜀
+  const nextTime = new Date(Date.now() + sleepMs);
+  const kstHour = (nextTime.getUTCHours() + 9) % 24;
+  if (kstHour >= 1 && kstHour < 5) {
+    // 오전 5시까지 추가 대기
+    const kstNow = new Date(Date.now() + 9 * 3600000);
+    const kst5am = new Date(kstNow);
+    kst5am.setUTCHours(kst5am.getUTCHours() - 9); // UTC로 변환
+    kst5am.setHours(5 - 9 < 0 ? 5 - 9 + 24 : 5 - 9, 0, 0, 0);
+    const extra = kst5am - Date.now();
+    if (extra > 0) { sleepMs += extra; console.log('🌙 새벽 시간 감지 — 오전 5시 이후로 지연'); }
   }
 
   const mins = Math.round(sleepMs / 60000);
-  const nextTime = new Date(Date.now() + sleepMs);
-  console.log(`⏰ 다음 발행: ${nextTime.toLocaleString('ko-KR')} (${mins}분 후)\n`);
+  const next = new Date(Date.now() + sleepMs);
+  console.log(`⏰ 다음 발행: ${next.toLocaleString('ko-KR')} (${mins}분 후)\n`);
   return new Promise(r => setTimeout(r, sleepMs));
 }
 
 function getNextDraft() {
   if (!existsSync(DRAFTS_DIR)) return null;
   const queue = JSON.parse(readFileSync(QUEUE_FILE, 'utf-8'));
-  // Find first unpublished queue entry that has a draft file
+  const now = new Date();
   const unpublished = queue.filter(e => !e.published);
   for (const entry of unpublished) {
+    // scheduledDate가 있으면 그 시각이 지났을 때만 발행
+    if (entry.scheduledDate && new Date(entry.scheduledDate) > now) return null;
     const draftPath = join(DRAFTS_DIR, `${entry.slug}.json`);
     if (existsSync(draftPath)) {
       return { entry, post: JSON.parse(readFileSync(draftPath, 'utf-8')), draftPath };
     }
   }
   return null;
+}
+
+function msUntilNextScheduled() {
+  const queue = JSON.parse(readFileSync(QUEUE_FILE, 'utf-8'));
+  const now = new Date();
+  const next = queue.filter(e => !e.published && e.scheduledDate)
+    .map(e => new Date(e.scheduledDate))
+    .filter(d => d > now)
+    .sort((a, b) => a - b)[0];
+  if (!next) return BASE_INTERVAL_MS;
+  return Math.max(next - now, 60 * 1000); // 최소 1분
 }
 
 // ────────────────────────────────────────────────
@@ -248,7 +267,7 @@ ${todayLogs.map(l => `- [${l.title.slice(0, 50)}](${SITE_URL}/blog/${l.slug})`).
 function markPublished(entry) {
   const queue = JSON.parse(readFileSync(QUEUE_FILE, 'utf-8'));
   const e = queue.find(q => q.id === entry.id);
-  if (e) { e.published = true; e.publishedDate = getTodayDate(); }
+  if (e) { e.published = true; e.publishedDate = getTodayDate(); delete e.scheduledDate; }
   writeFileSync(QUEUE_FILE, JSON.stringify(queue, null, 2), 'utf-8');
 }
 
