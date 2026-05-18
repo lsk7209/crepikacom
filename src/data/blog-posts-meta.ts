@@ -2852,6 +2852,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["Perplexity AI", "블로그 아이디어", "콘텐츠 기획", "AI 글쓰기", "블로그 글감"],
   },
+  {
+    slug: "linkedin-algorithm-7-tips-strategy",
+    title: "LinkedIn 알고리즘 공략 7가지 팁: 게시글 노출을 극대화하는 게시 전략",
+    description: "LinkedIn 알고리즘이 어떤 게시글을 더 많이 노출하는지 분석하고, 도달률을 극대화하는 7가지 게시 전략을 정리했습니다. 팔로워 수보다 전략이 중요합니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["LinkedIn 알고리즘", "LinkedIn 마케팅", "LinkedIn 게시 전략", "B2B 소셜미디어", "LinkedIn 도달률"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
