@@ -2892,6 +2892,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["토픽 클러스터", "Pillar Page", "Cluster Page", "내부 링크 SEO", "콘텐츠 전략"],
   },
+  {
+    slug: "google-sge-5-tips-ai-content-method",
+    title: "구글 SGE 인용 늘리는 5가지 팁: AI가 내 콘텐츠를 답변에 포함시키는 방법",
+    description: "구글 AI Overviews(SGE)에 내 콘텐츠가 인용되려면 일반 SEO와 다른 전략이 필요합니다. AI 답변 인용률을 높이는 5가지 콘텐츠 최적화 방법을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "8분",
+    author: "김민혁",
+    keywords: ["구글 SGE", "AI Overviews", "GEO", "AI 검색 최적화", "검색엔진 AEO"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Mon, 18 May 2026 05:15:11 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 18 May 2026 05:41:46 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2654,6 +2654,16 @@
     <pubDate>Mon, 18 May 2026 05:15:11 GMT</pubDate>
     <guid>https://crepika.com/blog/content-optimization-tips-pillar-page-cluster-page</guid>
     <dc:creator>이지수</dc:creator>
+  </item>
+
+
+  <item>
+    <title>구글 SGE 인용 늘리는 5가지 팁: AI가 내 콘텐츠를 답변에 포함시키는 방법</title>
+    <link>https://crepika.com/blog/google-sge-5-tips-ai-content-method</link>
+    <description>구글 AI Overviews(SGE)에 내 콘텐츠가 인용되려면 일반 SEO와 다른 전략이 필요합니다. AI 답변 인용률을 높이는 5가지 콘텐츠 최적화 방법을 정리했습니다.</description>
+    <pubDate>Mon, 18 May 2026 05:41:46 GMT</pubDate>
+    <guid>https://crepika.com/blog/google-sge-5-tips-ai-content-method</guid>
+    <dc:creator>김민혁</dc:creator>
   </item>
 
 </channel>
