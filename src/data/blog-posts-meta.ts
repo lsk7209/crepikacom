@@ -2942,6 +2942,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["Threads바이럴글", "스레드리포스트전략", "Threads공유유도문구", "SNS바이럴콘텐츠", "Threads글쓰기패턴"],
   },
+  {
+    slug: "pinterest-seo-optimization-tips-search",
+    title: "Pinterest 보드 SEO 최적화 팁: 보드 제목과 설명이 검색 트래픽을 만든다",
+    description: "Pinterest 보드 제목과 설명을 SEO 원칙에 맞게 최적화해 검색 트래픽을 늘리는 실전 팁을 정리합니다. 키워드 배치, 설명 구조, 핀 태그 전략까지 단계별 가이드입니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["Pinterest보드SEO", "Pinterest검색최적화", "보드제목키워드", "Pinterest트래픽", "핀터레스트SEO팁", "보드설명최적화", "Pinterest자연검색"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
