@@ -2962,6 +2962,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["Beehiiv 오픈율", "뉴스레터 최적화", "이메일 마케팅", "뉴스레터 제목", "Beehiiv 전략"],
   },
+  {
+    slug: "google-discover-analytics-content",
+    title: "구글 Discover 인사이트 분석: 어떤 콘텐츠가 피드에 추천되는가",
+    description: "구글 Discover 피드에 추천되는 콘텐츠의 공통 패턴을 데이터와 사례로 분석합니다. 트래픽 급증을 만드는 Discover 최적화 전략을 다룹니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "박준영",
+    keywords: ["구글 Discover", "Discover 최적화", "구글 피드", "콘텐츠 추천 알고리즘", "SEO 트래픽"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
