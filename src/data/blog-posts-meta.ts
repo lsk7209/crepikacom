@@ -2882,6 +2882,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["온라인 강의 판매", "강의 랜딩 페이지", "온라인 교육 마케팅", "전환율 최적화", "강의 판매 전략"],
   },
+  {
+    slug: "content-optimization-tips-pillar-page-cluster-page",
+    title: "콘텐츠 클러스터 링크 구조 최적화 팁: Pillar Page와 Cluster Page를 연결하는 법",
+    description: "토픽 클러스터 전략에서 Pillar Page와 Cluster Page를 올바르게 연결하지 않으면 SEO 효과가 반감됩니다. 내부 링크 구조를 최적화하는 실전 방법을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["토픽 클러스터", "Pillar Page", "Cluster Page", "내부 링크 SEO", "콘텐츠 전략"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
