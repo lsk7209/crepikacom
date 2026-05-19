@@ -3022,6 +3022,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["AI 영상 생성", "Sora AI", "Kling AI", "Runway AI", "AI 비디오 도구 비교"],
   },
+  {
+    slug: "threads-analytics-instagram",
+    title: "한국 Threads 사용자 현황 분석: 인스타그램을 대체할 수 있을까",
+    description: "2026년 한국 Threads 월간 활성 사용자 수, 연령별 분포, 사용 패턴, 인스타그램과의 관계를 데이터로 분석하고 대체 가능성을 진단한 인사이트 리포트.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["한국Threads사용자", "스레드인스타그램비교", "Threads현황분석", "SNS플랫폼분석", "Threads한국시장"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
