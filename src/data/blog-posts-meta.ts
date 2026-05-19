@@ -3032,6 +3032,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["한국Threads사용자", "스레드인스타그램비교", "Threads현황분석", "SNS플랫폼분석", "Threads한국시장"],
   },
+  {
+    slug: "comparison-stibee-vs-mailchimp-vs-beehiiv",
+    title: "국내 뉴스레터 플랫폼 비교: Stibee vs Mailchimp vs Beehiiv 어느 것이 최선?",
+    description: "Stibee, Mailchimp, Beehiiv를 가격, 기능, 국내 환경 적합성, 수익화 측면에서 비교합니다. 국내 뉴스레터 운영자에게 맞는 플랫폼 선택 가이드를 제공합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["Stibee 뉴스레터", "Mailchimp 한국", "Beehiiv 비교", "뉴스레터 플랫폼 선택", "이메일 마케팅 툴"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
