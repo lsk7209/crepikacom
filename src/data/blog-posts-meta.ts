@@ -3012,6 +3012,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["Make.com vs Zapier", "업무 자동화 툴", "노코드 자동화", "Make Zapier 비교", "마케팅 자동화"],
   },
+  {
+    slug: "ai-tools-2026-soraklingrunway-comparison",
+    title: "AI 영상 생성 도구 현황 2026: Sora·Kling·Runway 실제 사용 비교",
+    description: "2026년 AI 영상 생성 도구 3강인 Sora, Kling, Runway를 실제 사용 관점에서 비교합니다. 화질, 생성 속도, 가격, 활용 사례별 최적 도구를 분석합니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["AI 영상 생성", "Sora AI", "Kling AI", "Runway AI", "AI 비디오 도구 비교"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
