@@ -4607,8 +4607,9 @@
     ],
     "author": "박준영",
     "estimatedReadTime": "9분",
-    "published": false,
-    "scheduledDate": "2026-05-19T08:00"
+    "published": true,
+    "scheduledDate": "2026-05-19T08:00",
+    "publishedDate": "2026-05-19"
   },
   {
     "id": 289,

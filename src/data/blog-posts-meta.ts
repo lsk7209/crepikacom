@@ -2992,6 +2992,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["PinterestROI", "Pinterest트래픽효율", "소셜미디어ROI비교", "Pinterest마케팅비용", "Pinterest전환율", "마케팅채널비교", "Pinterest광고효율"],
   },
+  {
+    slug: "cro-12",
+    title: "CRO 도입 후 전환율 변화: 국내 중소 비즈니스 12곳의 실제 데이터",
+    description: "국내 중소 비즈니스 12곳의 CRO(전환율 최적화) 도입 전후 실제 데이터를 분석합니다. 업종별 성과 차이와 가장 효과적인 CRO 기법을 공개합니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["CRO 전환율 최적화", "국내 CRO 사례", "중소기업 마케팅", "A/B 테스트", "랜딩 페이지 최적화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
