@@ -3002,6 +3002,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["CRO 전환율 최적화", "국내 CRO 사례", "중소기업 마케팅", "A/B 테스트", "랜딩 페이지 최적화"],
   },
+  {
+    slug: "makecom-vs-zapier-2026-automation-tools-analytics",
+    title: "Make.com vs Zapier: 2026년 자동화 도구 선택 기준 심층 분석",
+    description: "Make.com과 Zapier의 2026년 현재 기능, 가격, 활용 사례, 학습 난이도를 심층 비교합니다. 자신에게 맞는 자동화 도구를 선택하는 기준을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["Make.com vs Zapier", "업무 자동화 툴", "노코드 자동화", "Make Zapier 비교", "마케팅 자동화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
