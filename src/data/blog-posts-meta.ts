@@ -3062,6 +3062,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["제휴 마케팅 수익", "국내 블로거 수익", "유튜버 수입", "애필리에이트 마케팅", "콘텐츠 크리에이터 수익"],
   },
+  {
+    slug: "2026-udemy101-revenue-analytics",
+    title: "온라인 강의 플랫폼 현황 2026: Udemy·클래스101·탈잉 수익 구조 분석",
+    description: "2026년 Udemy, 클래스101, 탈잉의 수익 구조와 강사 실제 수익을 비교 분석합니다. 각 플랫폼의 특성과 강사로서 선택 기준을 데이터로 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["온라인 강의 수익", "Udemy 강사", "클래스101 수익", "탈잉 튜터", "온라인 교육 플랫폼 비교"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
