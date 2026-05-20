@@ -3052,6 +3052,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["디스코드 커뮤니티", "크리에이터 커뮤니티", "Discord 운영", "온라인 커뮤니티 성공", "커뮤니티 마케팅"],
   },
+  {
+    slug: "marketing-revenue-2026-revenue-analytics",
+    title: "제휴 마케팅 수익 현황 2026: 국내 블로거·유튜버 실제 수익 분석",
+    description: "2026년 국내 블로거와 유튜버의 제휴 마케팅 실제 수익 현황을 분석합니다. 업종별 수수료율, 수익 규모, 최적 제휴 마케팅 채널을 데이터로 정리했습니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["제휴 마케팅 수익", "국내 블로거 수익", "유튜버 수입", "애필리에이트 마케팅", "콘텐츠 크리에이터 수익"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
