@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Tue, 19 May 2026 21:16:48 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 20 May 2026 02:51:47 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2804,6 +2804,16 @@
     <pubDate>Tue, 19 May 2026 21:16:48 GMT</pubDate>
     <guid>https://crepika.com/blog/comparison-stibee-vs-mailchimp-vs-beehiiv</guid>
     <dc:creator>이지수</dc:creator>
+  </item>
+
+
+  <item>
+    <title>디스코드 크리에이터 커뮤니티 성공 패턴 분석: 국내외 사례로 본 운영 원칙</title>
+    <link>https://crepika.com/blog/creator-community-analytics-case</link>
+    <description>성공한 디스코드 크리에이터 커뮤니티의 공통 운영 패턴을 국내외 사례와 함께 분석합니다. 활성 커뮤니티를 만들고 유지하는 핵심 원칙을 데이터로 정리했습니다.</description>
+    <pubDate>Wed, 20 May 2026 02:51:47 GMT</pubDate>
+    <guid>https://crepika.com/blog/creator-community-analytics-case</guid>
+    <dc:creator>김민혁</dc:creator>
   </item>
 
 </channel>

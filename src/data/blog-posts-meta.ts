@@ -3042,6 +3042,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["Stibee 뉴스레터", "Mailchimp 한국", "Beehiiv 비교", "뉴스레터 플랫폼 선택", "이메일 마케팅 툴"],
   },
+  {
+    slug: "creator-community-analytics-case",
+    title: "디스코드 크리에이터 커뮤니티 성공 패턴 분석: 국내외 사례로 본 운영 원칙",
+    description: "성공한 디스코드 크리에이터 커뮤니티의 공통 운영 패턴을 국내외 사례와 함께 분석합니다. 활성 커뮤니티를 만들고 유지하는 핵심 원칙을 데이터로 정리했습니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["디스코드 커뮤니티", "크리에이터 커뮤니티", "Discord 운영", "온라인 커뮤니티 성공", "커뮤니티 마케팅"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
