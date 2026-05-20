@@ -3072,6 +3072,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["온라인 강의 수익", "Udemy 강사", "클래스101 수익", "탈잉 튜터", "온라인 교육 플랫폼 비교"],
   },
+  {
+    slug: "hcu-6",
+    title: "HCU 이후 트래픽 복구한 사이트들의 공통점: 6개월 데이터로 본 생존 패턴",
+    description: "구글 HCU(Helpful Content Update) 이후 트래픽을 복구한 사이트들의 공통 패턴을 6개월 데이터로 분석합니다. 회복 사이트와 회복 실패 사이트의 결정적 차이를 밝힙니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["HCU 회복", "구글 알고리즘 업데이트", "SEO 트래픽 복구", "Helpful Content Update", "검색 트래픽 회복"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
