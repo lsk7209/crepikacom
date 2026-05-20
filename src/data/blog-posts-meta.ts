@@ -3082,6 +3082,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["HCU 회복", "구글 알고리즘 업데이트", "SEO 트래픽 복구", "Helpful Content Update", "검색 트래픽 회복"],
   },
+  {
+    slug: "seo-robotstxt-case-analytics",
+    title: "기술적 SEO가 트래픽에 미치는 실제 영향: robots.txt 설정 오류 사례 분석",
+    description: "robots.txt 설정 오류가 검색 트래픽에 미치는 실제 영향을 사례로 분석합니다. 기술적 SEO 문제를 조기에 발견하고 수정하는 방법을 단계별로 안내합니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["robots.txt 오류", "기술적 SEO", "검색 트래픽 감소", "SEO 진단", "구글 인덱싱 문제"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
