@@ -3122,6 +3122,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["카카오모먼트 광고", "카카오 광고 성과", "카카오 CTR", "국내 디지털 광고", "카카오 타겟팅"],
   },
+  {
+    slug: "search-2026-search",
+    title: "음성 검색 사용 현황 2026: 어시스턴트·스마트스피커가 바꾸는 검색 행동",
+    description: "2026년 음성 검색 최신 통계와 함께 구글 어시스턴트·시리·알렉사가 검색 행동에 미치는 변화를 심층 분석합니다. 국내외 데이터 기반으로 음성 SEO 전략을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["음성검색", "스마트스피커", "voice search", "음성SEO", "검색행동변화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Thu, 21 May 2026 12:43:01 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 21 May 2026 17:29:23 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2884,6 +2884,16 @@
     <pubDate>Thu, 21 May 2026 12:43:01 GMT</pubDate>
     <guid>https://crepika.com/blog/kakao-ads-analytics</guid>
     <dc:creator>박준영</dc:creator>
+  </item>
+
+
+  <item>
+    <title>음성 검색 사용 현황 2026: 어시스턴트·스마트스피커가 바꾸는 검색 행동</title>
+    <link>https://crepika.com/blog/search-2026-search</link>
+    <description>2026년 음성 검색 최신 통계와 함께 구글 어시스턴트·시리·알렉사가 검색 행동에 미치는 변화를 심층 분석합니다. 국내외 데이터 기반으로 음성 SEO 전략을 제시합니다.</description>
+    <pubDate>Thu, 21 May 2026 17:29:23 GMT</pubDate>
+    <guid>https://crepika.com/blog/search-2026-search</guid>
+    <dc:creator>이지수</dc:creator>
   </item>
 
 </channel>
