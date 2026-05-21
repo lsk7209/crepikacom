@@ -3092,6 +3092,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["robots.txt 오류", "기술적 SEO", "검색 트래픽 감소", "SEO 진단", "구글 인덱싱 문제"],
   },
+  {
+    slug: "ads-analytics-roas",
+    title: "국내 리타겟팅 광고 성과 분석: 업종별 평균 ROAS와 최적 빈도",
+    description: "국내 리타겟팅 광고의 업종별 평균 ROAS와 광고 노출 빈도 최적화 데이터를 분석합니다. Meta, 구글, 카카오 리타겟팅의 실제 성과 차이를 비교합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["리타겟팅 광고 ROAS", "국내 광고 성과", "광고 빈도 최적화", "Meta 리타겟팅", "구글 리마케팅"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

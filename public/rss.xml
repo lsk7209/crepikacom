@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Wed, 20 May 2026 21:48:48 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 21 May 2026 02:55:09 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2854,6 +2854,16 @@
     <pubDate>Wed, 20 May 2026 21:48:48 GMT</pubDate>
     <guid>https://crepika.com/blog/seo-robotstxt-case-analytics</guid>
     <dc:creator>박준영</dc:creator>
+  </item>
+
+
+  <item>
+    <title>국내 리타겟팅 광고 성과 분석: 업종별 평균 ROAS와 최적 빈도</title>
+    <link>https://crepika.com/blog/ads-analytics-roas</link>
+    <description>국내 리타겟팅 광고의 업종별 평균 ROAS와 광고 노출 빈도 최적화 데이터를 분석합니다. Meta, 구글, 카카오 리타겟팅의 실제 성과 차이를 비교합니다.</description>
+    <pubDate>Thu, 21 May 2026 02:55:09 GMT</pubDate>
+    <guid>https://crepika.com/blog/ads-analytics-roas</guid>
+    <dc:creator>이지수</dc:creator>
   </item>
 
 </channel>
