@@ -3132,6 +3132,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["음성검색", "스마트스피커", "voice search", "음성SEO", "검색행동변화"],
   },
+  {
+    slug: "substack-creator-revenue-revenue-analytics",
+    title: "Substack 크리에이터 수익 현황: 국내외 유료 뉴스레터 구독자와 수익 분석",
+    description: "2026년 Substack 크리에이터 수익 실태를 국내외 데이터로 분석. 유료 구독자 수별 평균 수익, 전환율 분포, 주제별 수익 차이, 상위 1% 계정과 중위 계정의 격차를 공개.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["Substack수익분석", "서브스택크리에이터수익", "뉴스레터수익현황", "Substack유료구독통계", "뉴스레터수익화현실"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
