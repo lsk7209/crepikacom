@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Thu, 21 May 2026 08:29:53 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 21 May 2026 12:43:01 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2874,6 +2874,16 @@
     <pubDate>Thu, 21 May 2026 08:29:53 GMT</pubDate>
     <guid>https://crepika.com/blog/pod-revenue-analytics-creator</guid>
     <dc:creator>김민혁</dc:creator>
+  </item>
+
+
+  <item>
+    <title>카카오모먼트 광고 성과 분석: 업종별 클릭률과 전환율 데이터</title>
+    <link>https://crepika.com/blog/kakao-ads-analytics</link>
+    <description>카카오모먼트 광고의 업종별 클릭률(CTR)과 전환율 실데이터를 분석합니다. 카카오 광고의 강점과 약점, 최적 활용 전략을 국내 사례와 함께 정리했습니다.</description>
+    <pubDate>Thu, 21 May 2026 12:43:01 GMT</pubDate>
+    <guid>https://crepika.com/blog/kakao-ads-analytics</guid>
+    <dc:creator>박준영</dc:creator>
   </item>
 
 </channel>

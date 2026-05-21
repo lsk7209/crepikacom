@@ -3112,6 +3112,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["POD 비즈니스", "주문형 인쇄 수익", "크리에이터 굿즈", "Redbubble", "Printful 수익"],
   },
+  {
+    slug: "kakao-ads-analytics",
+    title: "카카오모먼트 광고 성과 분석: 업종별 클릭률과 전환율 데이터",
+    description: "카카오모먼트 광고의 업종별 클릭률(CTR)과 전환율 실데이터를 분석합니다. 카카오 광고의 강점과 약점, 최적 활용 전략을 국내 사례와 함께 정리했습니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["카카오모먼트 광고", "카카오 광고 성과", "카카오 CTR", "국내 디지털 광고", "카카오 타겟팅"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
