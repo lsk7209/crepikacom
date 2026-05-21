@@ -3102,6 +3102,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["리타겟팅 광고 ROAS", "국내 광고 성과", "광고 빈도 최적화", "Meta 리타겟팅", "구글 리마케팅"],
   },
+  {
+    slug: "pod-revenue-analytics-creator",
+    title: "POD(주문형 인쇄) 비즈니스 실제 수익 분석: 크리에이터 굿즈 판매의 현실",
+    description: "크리에이터의 POD(주문형 인쇄) 굿즈 비즈니스 실제 수익 구조를 분석합니다. Redbubble, Printful, 국내 플랫폼별 수익성과 성공 전략을 데이터로 정리했습니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["POD 비즈니스", "주문형 인쇄 수익", "크리에이터 굿즈", "Redbubble", "Printful 수익"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
