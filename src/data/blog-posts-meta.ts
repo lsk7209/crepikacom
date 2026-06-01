@@ -3152,6 +3152,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["소셜리스닝", "브랜드위기관리", "온라인평판관리", "위기대응전략", "브랜드모니터링"],
   },
+  {
+    slug: "linkedin-algorithm-2026-content",
+    title: "LinkedIn 알고리즘 변화 2026: 어떤 콘텐츠가 더 넓게 노출되는가",
+    description: "2026년 LinkedIn 알고리즘의 주요 변화를 분석하고, 현재 더 넓은 노출을 받는 콘텐츠 유형과 전략을 데이터 기반으로 정리한 인사이트 리포트.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "이지수",
+    keywords: ["링크드인 알고리즘 2026", "LinkedIn 알고리즘 변화", "링크드인 노출", "링크드인 콘텐츠 전략", "소셜미디어 알고리즘", "링크드인 트렌드"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
