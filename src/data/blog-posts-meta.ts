@@ -3162,6 +3162,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["링크드인 알고리즘 2026", "LinkedIn 알고리즘 변화", "링크드인 노출", "링크드인 콘텐츠 전략", "소셜미디어 알고리즘", "링크드인 트렌드"],
   },
+  {
+    slug: "community-comparison",
+    title: "국내 커뮤니티 플랫폼 비교: 카페·밴드·디스코드·오픈채팅 어디가 가장 활성화됐나",
+    description: "네이버 카페, 밴드, 디스코드, 카카오 오픈채팅의 2026년 활성 사용자 데이터와 커뮤니티 특성을 비교합니다. 목적별 최적 플랫폼 선택 기준과 운영 전략을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "10분",
+    author: "김민혁",
+    keywords: ["커뮤니티플랫폼비교", "네이버카페", "디스코드운영", "카카오오픈채팅", "온라인커뮤니티"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
