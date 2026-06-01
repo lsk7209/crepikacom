@@ -3172,6 +3172,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["커뮤니티플랫폼비교", "네이버카페", "디스코드운영", "카카오오픈채팅", "온라인커뮤니티"],
   },
+  {
+    slug: "vs-naver-revenue-comparison-monetization",
+    title: "쿠팡파트너스 vs 네이버 애드포스트 수익 비교: 블로거를 위한 최적 수익화 채널",
+    description: "쿠팡파트너스와 네이버 애드포스트의 수익 구조, 클릭당 단가, 전환율을 블로그 카테고리별로 비교합니다. 어떤 수익화 채널이 내 블로그에 더 적합한지 판단 기준을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["쿠팡파트너스수익", "네이버애드포스트", "블로그수익화", "제휴마케팅비교", "블로그광고수익"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
