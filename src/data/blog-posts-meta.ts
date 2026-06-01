@@ -3142,6 +3142,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["Substack수익분석", "서브스택크리에이터수익", "뉴스레터수익현황", "Substack유료구독통계", "뉴스레터수익화현실"],
   },
+  {
+    slug: "brand",
+    title: "소셜 리스닝 데이터로 본 브랜드 위기 대응: 빠른 모니터링이 위기를 막는다",
+    description: "소셜 리스닝 도구를 활용한 브랜드 위기 조기 감지와 대응 전략을 실제 데이터와 사례로 분석합니다. 국내외 기업의 위기 대응 패턴과 모니터링 시스템 구축법을 소개합니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["소셜리스닝", "브랜드위기관리", "온라인평판관리", "위기대응전략", "브랜드모니터링"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
