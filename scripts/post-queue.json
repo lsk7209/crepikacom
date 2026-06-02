@@ -4930,8 +4930,9 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "9분",
-    "published": false,
-    "scheduledDate": "2026-05-23T07:00"
+    "published": true,
+    "scheduledDate": "2026-05-23T07:00",
+    "publishedDate": "2026-06-02"
   },
   {
     "id": 308,

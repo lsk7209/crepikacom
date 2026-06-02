@@ -3182,6 +3182,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["쿠팡파트너스수익", "네이버애드포스트", "블로그수익화", "제휴마케팅비교", "블로그광고수익"],
   },
+  {
+    slug: "ai-tools-analytics-2026-claudechatgptgemini-content-marketin",
+    title: "AI 글쓰기 도구 품질 분석 2026: Claude·ChatGPT·Gemini 콘텐츠 마케팅 실전 비교",
+    description: "Claude, ChatGPT, Gemini를 콘텐츠 마케팅 실무에서 비교합니다. 블로그 포스트, 카피라이팅, SEO 콘텐츠 생성 품질과 속도를 2026년 최신 기준으로 분석합니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["AI글쓰기도구비교", "Claude vs ChatGPT", "Gemini콘텐츠", "AI마케팅도구", "콘텐츠마케팅AI"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
