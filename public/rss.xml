@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Tue, 02 Jun 2026 04:20:12 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 02 Jun 2026 09:11:22 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -2954,6 +2954,16 @@
     <pubDate>Tue, 02 Jun 2026 04:20:12 GMT</pubDate>
     <guid>https://crepika.com/blog/ai-tools-analytics-2026-claudechatgptgemini-content-marketin</guid>
     <dc:creator>이지수</dc:creator>
+  </item>
+
+
+  <item>
+    <title>WordPress 플러그인 없이 SEO 하는 법: 코드로 직접 구현하는 고성능 SEO 인사이트</title>
+    <link>https://crepika.com/blog/wordpress-seo</link>
+    <description>Yoast·RankMath 없이도 WordPress SEO를 완성하는 코드 기반 접근법을 소개합니다. 메타 태그, 구조화 데이터, 사이트맵 등을 직접 구현해 사이트 속도와 SEO를 동시에 개선합니다.</description>
+    <pubDate>Tue, 02 Jun 2026 09:11:22 GMT</pubDate>
+    <guid>https://crepika.com/blog/wordpress-seo</guid>
+    <dc:creator>김민혁</dc:creator>
   </item>
 
 </channel>

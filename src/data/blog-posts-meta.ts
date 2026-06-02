@@ -3192,6 +3192,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["AI글쓰기도구비교", "Claude vs ChatGPT", "Gemini콘텐츠", "AI마케팅도구", "콘텐츠마케팅AI"],
   },
+  {
+    slug: "wordpress-seo",
+    title: "WordPress 플러그인 없이 SEO 하는 법: 코드로 직접 구현하는 고성능 SEO 인사이트",
+    description: "Yoast·RankMath 없이도 WordPress SEO를 완성하는 코드 기반 접근법을 소개합니다. 메타 태그, 구조화 데이터, 사이트맵 등을 직접 구현해 사이트 속도와 SEO를 동시에 개선합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["WordPress SEO", "플러그인없는SEO", "워드프레스최적화", "SEO코드구현", "WordPress성능최적화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
