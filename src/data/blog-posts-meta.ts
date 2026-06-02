@@ -3212,6 +3212,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "박준영",
     keywords: ["니치블로그전략", "특화블로그성장", "틈새키워드", "롱테일SEO", "블로그차별화전략"],
   },
+  {
+    slug: "e-e-a-t-analytics",
+    title: "E-E-A-T 점수 올린 사이트들의 공통점: 저자 정보부터 인용까지 변경 패턴 분석",
+    description: "구글 E-E-A-T 기준을 충족해 검색 순위가 오른 사이트들의 실제 변경 패턴을 분석합니다. 저자 정보 강화, 인용 출처 표시, 콘텐츠 업데이트 전략의 구체적 실행법을 공개합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["EEAT최적화", "구글신뢰도", "저자권위성", "SEO신뢰성강화", "콘텐츠품질평가"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
