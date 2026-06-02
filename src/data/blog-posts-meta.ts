@@ -3222,6 +3222,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["EEAT최적화", "구글신뢰도", "저자권위성", "SEO신뢰성강화", "콘텐츠품질평가"],
   },
+  {
+    slug: "revenue-2026-blog-rpm-analytics",
+    title: "국내 애드센스 수익 현황 2026: 블로그 카테고리별 평균 RPM 분석",
+    description: "2026년 국내 구글 애드센스 수익 데이터를 카테고리별로 분석합니다. 금융·법률·의료·IT 등 분야별 평균 RPM 현황과 RPM을 높이는 콘텐츠 및 최적화 전략을 공개합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "10분",
+    author: "김민혁",
+    keywords: ["애드센스RPM", "블로그수익카테고리", "구글애드센스수익", "RPM최적화", "블로그광고수익2026"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
