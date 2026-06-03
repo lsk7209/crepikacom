@@ -3242,6 +3242,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["Threads팔로워늘리기", "스레드성장케이스", "Threads1000팔로워", "SNS계정성장전략", "Threads초보가이드"],
   },
+  {
+    slug: "pinterest-seo-blog-5000-6-strategy",
+    title: "Pinterest SEO로 블로그 월 방문자 5000명 늘린 케이스: 6개월 전략 공개",
+    description: "라이프스타일 블로그가 Pinterest SEO로 6개월 만에 월 방문자를 5,200명 추가로 늘린 실제 과정을 공개합니다. 보드 재설계, 핀 최적화, 에버그린 콘텐츠 전략을 수치와 함께 단계별로 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "14분",
+    author: "이지수",
+    keywords: ["Pinterest SEO케이스", "블로그트래픽증가", "Pinterest방문자", "핀터레스트블로그", "Pinterest에버그린", "블로그SEO", "Pinterest6개월전략"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
