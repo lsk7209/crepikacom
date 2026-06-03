@@ -3252,6 +3252,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "이지수",
     keywords: ["Pinterest SEO케이스", "블로그트래픽증가", "Pinterest방문자", "핀터레스트블로그", "Pinterest에버그린", "블로그SEO", "Pinterest6개월전략"],
   },
+  {
+    slug: "makecom-sns-70",
+    title: "Make.com 도입으로 SNS 운영 시간 70% 절약한 케이스: 실제 워크플로우 공개",
+    description: "Make.com 자동화로 SNS 운영에 쓰던 하루 3시간을 1시간 미만으로 줄인 실제 워크플로우를 공개합니다. 콘텐츠 배포, 모니터링, 리포팅 자동화 시나리오를 단계별로 설명합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["Make.com자동화", "SNS자동화", "소셜미디어자동화", "노코드자동화", "콘텐츠배포자동화"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {

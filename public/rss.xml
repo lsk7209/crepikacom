@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Wed, 03 Jun 2026 09:54:50 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 03 Jun 2026 14:46:10 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -3014,6 +3014,16 @@
     <pubDate>Wed, 03 Jun 2026 09:54:50 GMT</pubDate>
     <guid>https://crepika.com/blog/pinterest-seo-blog-5000-6-strategy</guid>
     <dc:creator>이지수</dc:creator>
+  </item>
+
+
+  <item>
+    <title>Make.com 도입으로 SNS 운영 시간 70% 절약한 케이스: 실제 워크플로우 공개</title>
+    <link>https://crepika.com/blog/makecom-sns-70</link>
+    <description>Make.com 자동화로 SNS 운영에 쓰던 하루 3시간을 1시간 미만으로 줄인 실제 워크플로우를 공개합니다. 콘텐츠 배포, 모니터링, 리포팅 자동화 시나리오를 단계별로 설명합니다.</description>
+    <pubDate>Wed, 03 Jun 2026 14:46:10 GMT</pubDate>
+    <guid>https://crepika.com/blog/makecom-sns-70</guid>
+    <dc:creator>김민혁</dc:creator>
   </item>
 
 </channel>
