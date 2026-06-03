@@ -80,60 +80,82 @@ function markPublished(entry) {
   writeFileSync(QUEUE_FILE, JSON.stringify(queue, null, 2), 'utf-8');
 }
 
-async function pingSearchEngines(slug) {
-  const url = `${SITE_URL}/blog/${slug}`;
+// slugs: 배치로 발행된 글 slug 배열. IndexNow는 글별, 사이트맵 핑은 1회.
+async function pingSearchEngines(slugs) {
   const key = 'crepika2026indexnow';
-  await Promise.allSettled([
-    fetch(`https://api.indexnow.org/indexnow?url=${encodeURIComponent(url)}&key=${key}`)
-      .then(r => console.log(`📡 IndexNow: ${r.status}`)).catch(() => {}),
+  const tasks = slugs.map(slug => {
+    const url = `${SITE_URL}/blog/${slug}`;
+    return fetch(`https://api.indexnow.org/indexnow?url=${encodeURIComponent(url)}&key=${key}`)
+      .then(r => console.log(`📡 IndexNow ${slug}: ${r.status}`)).catch(() => {});
+  });
+  tasks.push(
     fetch(`https://www.bing.com/ping?sitemap=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`)
       .then(r => console.log(`📡 Bing: ${r.status}`)).catch(() => {}),
     fetch(`https://searchadvisor.naver.com/site/submit?url=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`)
       .then(r => console.log(`📡 Naver: ${r.status}`)).catch(() => {}),
-  ]);
+  );
+  await Promise.allSettled(tasks);
 }
 
 async function main() {
-  const next = getNextDraft();
-  if (!next) {
+  // BATCH_SIZE편을 한 번에 inject한 뒤 1 commit/push로 묶어 Vercel 빌드 횟수를 줄인다.
+  // BATCH_SIZE=1 이면 기존 단발 발행과 동일(하위호환). DRY_RUN=1 이면 git push 생략.
+  const BATCH_SIZE = Math.max(1, parseInt(process.env.BATCH_SIZE || '5', 10));
+  const DRY_RUN = process.env.DRY_RUN === '1';
+
+  const published = [];
+  for (let i = 0; i < BATCH_SIZE; i++) {
+    const next = getNextDraft();
+    if (!next) break;
+    const { entry, post } = next;
+    console.log(`📰 [${published.length + 1}/${BATCH_SIZE}] 발행: [${entry.id}] ${post.title}`);
+
+    injectIntoBlogContent(post);
+    injectIntoSitemap(post);
+    injectIntoRss(post);
+
+    // 클리셰 자동 수정 (글별)
+    try { execSync(`node scripts/fix-new-post.mjs "${post.slug}"`, { cwd: ROOT, stdio: 'inherit' }); } catch {}
+
+    markPublished(entry);
+    published.push(post);
+  }
+
+  if (published.length === 0) {
     console.log('✅ 모든 드래프트 발행 완료 — 큐 소진');
     process.exit(0);
   }
 
-  const { entry, post } = next;
-  console.log(`📰 발행: [${entry.id}] ${post.title}`);
-
-  injectIntoBlogContent(post);
-  injectIntoSitemap(post);
-  injectIntoRss(post);
-
-  // 클리셰 자동 수정
-  try { execSync(`node scripts/fix-new-post.mjs "${post.slug}"`, { cwd: ROOT, stdio: 'inherit' }); } catch {}
-
-  // blog-posts-meta.ts 재생성
+  // blog-posts-meta.ts 재생성 (배치당 1회)
   try { execSync('node scripts/gen-meta.mjs', { cwd: ROOT, stdio: 'inherit' }); } catch {}
 
-  markPublished(entry);
+  // 로컬 발행 로그 누적 (커밋 대상 아님 — 기존 동작 유지)
+  const publishLog = existsSync(PUBLISH_LOG) ? JSON.parse(readFileSync(PUBLISH_LOG, 'utf-8')) : [];
+  for (const post of published) publishLog.push({ date: getTodayDate(), slug: post.slug, title: post.title });
+  writeFileSync(PUBLISH_LOG, JSON.stringify(publishLog, null, 2), 'utf-8');
 
-  // git commit + push (GitHub Actions 환경에서 자격증명은 workflow에서 처리)
-  const msg = `Auto-publish: ${post.title.slice(0, 60)}`;
+  if (DRY_RUN) {
+    console.log(`🧪 DRY_RUN — git push 생략. ${published.length}편 inject 완료(워킹트리 확인용).`);
+    console.log(`   발행분: ${published.map(p => p.slug).join(', ')}`);
+    return;
+  }
+
+  // git commit + push (배치당 1회 → Vercel 빌드 1회)
+  const titles = published.map(p => p.title.slice(0, 40)).join(', ');
+  const msg = `Auto-publish: ${published.length}편 (${titles})`.slice(0, 180);
   execSync('git config user.email "auto-publisher@crepika.com"', { cwd: ROOT });
   execSync('git config user.name "크레피카 자동 발행"', { cwd: ROOT });
   execSync('git add src/data/blog-content.ts src/data/blog-posts-meta.ts public/sitemap.xml public/rss.xml scripts/post-queue.json', { cwd: ROOT });
   execSync(`git commit -m "${msg.replace(/"/g, "'")}"`, { cwd: ROOT });
   execSync('git push origin main', { cwd: ROOT });
-  console.log(`🚀 git push 완료 → Vercel 배포 시작`);
+  console.log(`🚀 git push 완료 (${published.length}편 1커밋) → Vercel 배포 1회`);
 
-  await pingSearchEngines(post.slug);
-
-  const publishLog = existsSync(PUBLISH_LOG) ? JSON.parse(readFileSync(PUBLISH_LOG, 'utf-8')) : [];
-  publishLog.push({ date: getTodayDate(), slug: post.slug, title: post.title });
-  writeFileSync(PUBLISH_LOG, JSON.stringify(publishLog, null, 2), 'utf-8');
+  // 발행분 일괄 검색엔진 핑 (push 후 — 404 방지)
+  await pingSearchEngines(published.map(p => p.slug));
 
   const queue = JSON.parse(readFileSync(QUEUE_FILE, 'utf-8'));
   const remaining = queue.filter(e => !e.published).length;
-  console.log(`✅ 발행 완료: ${SITE_URL}/blog/${post.slug}`);
-  console.log(`📊 남은 글: ${remaining}개`);
+  console.log(`✅ 배치 발행 완료: ${published.length}편 / 남은 글: ${remaining}개`);
 }
 
 main().catch(e => { console.error('❌ 오류:', e.message); process.exit(1); });

@@ -2,8 +2,8 @@ name: Auto Publish Blog Post
 
 on:
   schedule:
-    # 5시간 간격 (UTC 기준: 0, 5, 10, 15, 20시 = KST 9, 14, 19, 24, 5시)
-    - cron: '0 0,5,10,15,20 * * *'
+    # 하루 1회 (UTC 0시 = KST 9시). 빌드 비용 절감: 5편을 1배치로 묶어 1회 push.
+    - cron: '0 0 * * *'
   workflow_dispatch:  # 수동 실행 버튼
 
 permissions:
@@ -38,8 +38,10 @@ jobs:
           echo "remaining=$REMAINING" >> $GITHUB_OUTPUT
           echo "📊 발행 가능한 드래프트: $REMAINING 개"
 
-      - name: Publish one post from drafts
+      - name: Publish batch from drafts
         if: steps.check.outputs.remaining != '0'
+        env:
+          BATCH_SIZE: '5'
         run: node scripts/publish-once.mjs
 
       - name: All done

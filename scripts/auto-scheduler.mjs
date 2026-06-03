@@ -3,6 +3,11 @@
  * 5시간 ± jitter 자동 발행 스케줄러
  * scripts/drafts/{slug}.json 에서 순서대로 발행 → git push → Vercel 자동 배포
  *
+ * ⚠️ 비용 주의: 이 스크립트는 글 1편당 git push(=Vercel 풀 빌드 1회)를 일으킨다.
+ *    정식 자동발행 경로는 .github/workflows/auto-publish.yml(하루 1회, BATCH_SIZE=5편 1배치 push)이다.
+ *    빌드 비용 절감을 위해 가급적 이 로컬 루프 대신 GitHub Actions 배치 경로를 사용할 것.
+ *    부득이 로컬 루프를 쓸 경우, gitPush 를 매 발행이 아니라 N편 누적 후 1회만 호출하도록 묶어라.
+ *
  * 실행: node scripts/auto-scheduler.mjs
  * 중단: echo $null > scripts/stop.signal  (PowerShell)
  *       또는 touch scripts/stop.signal    (bash)
