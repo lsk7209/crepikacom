@@ -3232,6 +3232,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["애드센스RPM", "블로그수익카테고리", "구글애드센스수익", "RPM최적화", "블로그광고수익2026"],
   },
+  {
+    slug: "threads-follower-0-1000-3-growth",
+    title: "Threads 팔로워 0에서 1000까지: 3개월 성장 케이스",
+    description: "Threads 계정을 0에서 시작해 3개월 만에 팔로워 1000명을 달성한 실제 성장 과정, 전략 변화, 수치 기록을 월별로 정리한 케이스 스터디.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["Threads팔로워늘리기", "스레드성장케이스", "Threads1000팔로워", "SNS계정성장전략", "Threads초보가이드"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
