@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Wed, 03 Jun 2026 14:46:10 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 03 Jun 2026 18:48:40 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -3024,6 +3024,16 @@
     <pubDate>Wed, 03 Jun 2026 14:46:10 GMT</pubDate>
     <guid>https://crepika.com/blog/makecom-sns-70</guid>
     <dc:creator>김민혁</dc:creator>
+  </item>
+
+
+  <item>
+    <title>랜딩페이지 A/B 테스트로 전환율 3배 올린 케이스: 어떤 요소가 결정적이었나</title>
+    <link>https://crepika.com/blog/ab-3</link>
+    <description>랜딩페이지 A/B 테스트로 6주 만에 전환율을 1.2%에서 3.7%로 높인 실제 케이스를 분석합니다. 헤드라인, CTA 버튼, 사회적 증거 요소 중 어떤 변경이 가장 큰 차이를 만들었는지 공개합니다.</description>
+    <pubDate>Wed, 03 Jun 2026 18:48:40 GMT</pubDate>
+    <guid>https://crepika.com/blog/ab-3</guid>
+    <dc:creator>박준영</dc:creator>
   </item>
 
 </channel>

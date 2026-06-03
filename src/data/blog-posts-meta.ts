@@ -3262,6 +3262,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     author: "김민혁",
     keywords: ["Make.com자동화", "SNS자동화", "소셜미디어자동화", "노코드자동화", "콘텐츠배포자동화"],
   },
+  {
+    slug: "ab-3",
+    title: "랜딩페이지 A/B 테스트로 전환율 3배 올린 케이스: 어떤 요소가 결정적이었나",
+    description: "랜딩페이지 A/B 테스트로 6주 만에 전환율을 1.2%에서 3.7%로 높인 실제 케이스를 분석합니다. 헤드라인, CTA 버튼, 사회적 증거 요소 중 어떤 변경이 가장 큰 차이를 만들었는지 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["랜딩페이지최적화", "AB테스트", "전환율최적화", "CRO", "랜딩페이지전환율"],
+  },
 ];
 
 export function getAllBlogMeta(): BlogPostMeta[] {
