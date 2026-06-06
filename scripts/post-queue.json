@@ -5270,8 +5270,9 @@
     ],
     "author": "박준영",
     "estimatedReadTime": "7분",
-    "published": false,
-    "scheduledDate": "2026-05-27T11:00"
+    "published": true,
+    "scheduledDate": "2026-05-27T11:00",
+    "publishedDate": "2026-06-06"
   },
   {
     "id": 328,
@@ -5286,8 +5287,9 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "6분",
-    "published": false,
-    "scheduledDate": "2026-05-27T16:00"
+    "published": true,
+    "scheduledDate": "2026-05-27T16:00",
+    "publishedDate": "2026-06-06"
   },
   {
     "id": 329,
@@ -5302,8 +5304,9 @@
     ],
     "author": "김민혁",
     "estimatedReadTime": "7분",
-    "published": false,
-    "scheduledDate": "2026-05-27T21:00"
+    "published": true,
+    "scheduledDate": "2026-05-27T21:00",
+    "publishedDate": "2026-06-06"
   },
   {
     "id": 330,
@@ -5318,8 +5321,9 @@
     ],
     "author": "박준영",
     "estimatedReadTime": "7분",
-    "published": false,
-    "scheduledDate": "2026-05-28T02:00"
+    "published": true,
+    "scheduledDate": "2026-05-28T02:00",
+    "publishedDate": "2026-06-06"
   },
   {
     "id": 331,
@@ -5334,8 +5338,9 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "8분",
-    "published": false,
-    "scheduledDate": "2026-05-28T07:00"
+    "published": true,
+    "scheduledDate": "2026-05-28T07:00",
+    "publishedDate": "2026-06-06"
   },
   {
     "id": 332,
