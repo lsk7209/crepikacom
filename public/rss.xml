@@ -5,7 +5,7 @@
   <link>https://crepika.com/blog</link>
   <description>네이버, 인스타그램, 유튜브 크리에이터를 위한 최신 마케팅 전략과 SEO 최적화 팁을 공유합니다.</description>
   <language>ko-kr</language>
-  <lastBuildDate>Sat, 06 Jun 2026 01:52:45 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 07 Jun 2026 02:07:10 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -3194,6 +3194,56 @@
     <pubDate>Sat, 06 Jun 2026 01:52:45 GMT</pubDate>
     <guid>https://crepika.com/blog/runway-ai-editing-tools-complete-guide-ai-beginner</guid>
     <dc:creator>이지수</dc:creator>
+  </item>
+
+
+  <item>
+    <title>Kling AI 사용 가이드: 텍스트로 영상 만드는 한국어 완전 정복</title>
+    <link>https://crepika.com/blog/kling-ai-guide-complete-mastery</link>
+    <description>Kling AI를 처음부터 끝까지 한국어로 완전히 설명합니다. 가입부터 텍스트-투-비디오, 이미지-투-비디오, 고급 프롬프트 기법까지 실전 예제와 함께 모든 기능을 마스터하세요.</description>
+    <pubDate>Sun, 07 Jun 2026 02:07:09 GMT</pubDate>
+    <guid>https://crepika.com/blog/kling-ai-guide-complete-mastery</guid>
+    <dc:creator>김민혁</dc:creator>
+  </item>
+
+
+  <item>
+    <title>구글 Search Ads 360 입문 가이드: 대규모 PPC 캠페인 관리 전략</title>
+    <link>https://crepika.com/blog/google-search-ads-360-beginner-guide-ppc-strategy</link>
+    <description>구글 Search Ads 360(SA360)의 핵심 기능과 대규모 PPC 캠페인 관리 전략을 입문자 관점에서 완전히 설명합니다. 통합 입찰, 예산 관리, 크로스 채널 최적화까지 실전 가이드입니다.</description>
+    <pubDate>Sun, 07 Jun 2026 02:07:09 GMT</pubDate>
+    <guid>https://crepika.com/blog/google-search-ads-360-beginner-guide-ppc-strategy</guid>
+    <dc:creator>박준영</dc:creator>
+  </item>
+
+
+  <item>
+    <title>Instagram Threads 한국어 콘텐츠 전략: 텍스트 기반 SNS에서 팬 모으기</title>
+    <link>https://crepika.com/blog/instagram-threads-content-strategy-sns</link>
+    <description>Instagram Threads에서 한국어 콘텐츠로 팬 베이스를 만드는 실전 전략을 담았습니다. 알고리즘 이해부터 콘텐츠 포맷, 게시 전략, 팔로워를 고객으로 전환하는 방법까지 완전 가이드입니다.</description>
+    <pubDate>Sun, 07 Jun 2026 02:07:10 GMT</pubDate>
+    <guid>https://crepika.com/blog/instagram-threads-content-strategy-sns</guid>
+    <dc:creator>이지수</dc:creator>
+  </item>
+
+
+  <item>
+    <title>Stable Diffusion 로컬 설치 완전 가이드: 무료로 AI 이미지를 무제한 생성하는 법</title>
+    <link>https://crepika.com/blog/stable-diffusion-complete-guide-ai</link>
+    <description>Stable Diffusion을 PC에 로컬 설치해 무료로 무제한 AI 이미지를 생성하는 방법을 처음부터 끝까지 설명합니다. AUTOMATIC1111 WebUI 설치부터 모델 다운로드, 프롬프트 작성, LoRA 활용까지 완전 가이드입니다.</description>
+    <pubDate>Sun, 07 Jun 2026 02:07:10 GMT</pubDate>
+    <guid>https://crepika.com/blog/stable-diffusion-complete-guide-ai</guid>
+    <dc:creator>김민혁</dc:creator>
+  </item>
+
+
+  <item>
+    <title>구글 Performance Max 캠페인 완전 가이드: AI 광고 자동화로 ROAS 높이기</title>
+    <link>https://crepika.com/blog/google-performance-max-complete-guide-ai-ads-automation-roas</link>
+    <description>구글 Performance Max(PMax) 캠페인을 처음부터 끝까지 완전히 설명합니다. 에셋 그룹 구성, 신호 전략, 제외 키워드, ROAS 목표 설정까지 실전 운용 방법을 담은 완전 가이드입니다.</description>
+    <pubDate>Sun, 07 Jun 2026 02:07:10 GMT</pubDate>
+    <guid>https://crepika.com/blog/google-performance-max-complete-guide-ai-ads-automation-roas</guid>
+    <dc:creator>박준영</dc:creator>
   </item>
 
 </channel>
