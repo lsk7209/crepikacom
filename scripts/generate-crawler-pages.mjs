@@ -19,6 +19,8 @@ const shell = ({ title, description, canonical, heading, sections, robots = "ind
     <meta property="og:url" content="${canonical}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="크레피카">
+    <meta name="google-adsense-account" content="ca-pub-3050601904412736">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3050601904412736" crossorigin="anonymous"></script>
     <style>
       body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7;color:#172033;margin:0;background:#f8fafc}
       main{max-width:880px;margin:0 auto;padding:48px 20px 72px}
