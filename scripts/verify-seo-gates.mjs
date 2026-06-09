@@ -550,8 +550,10 @@ function validateQualityAutomation() {
     ".github/workflows/auto-publish-tools.yml",
   ]) {
     const body = requireFile(path);
-    if (!body.includes("FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true")) {
-      fail(`${path} must opt GitHub JavaScript actions into the Node 24 runtime.`);
+    for (const marker of ["actions/checkout@v6", "actions/setup-node@v6"]) {
+      if (!body.includes(marker)) {
+        fail(`${path} must use ${marker} so GitHub JavaScript actions target Node 24.`);
+      }
     }
   }
 }
