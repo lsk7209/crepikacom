@@ -636,6 +636,195 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "internal-link-anchor-planner": {
+    id: "internal-link-anchor-planner",
+    buttonLabel: "앵커 문구 설계하기",
+    fields: [
+      { key: "sourceTopic", label: "현재 글 주제", type: "text", placeholder: "예: 블로그 SEO 점검" },
+      { key: "targetPages", label: "연결할 내부 페이지", type: "textarea", placeholder: "SEO 제목 길이 검사기\n메타 설명 검사기\n문단 가독성 검사기" },
+      { key: "keyword", label: "핵심 키워드", type: "text", placeholder: "예: 블로그 SEO" },
+    ],
+    run: ({ sourceTopic, targetPages, keyword }) => {
+      const pages = targetPages
+        .split("\n")
+        .map((page) => page.trim())
+        .filter(Boolean)
+        .slice(0, 8);
+      const topic = sourceTopic.trim() || "현재 글";
+      const key = keyword.trim() || "핵심 주제";
+      const anchors = pages.map((page, index) => {
+        const patterns = [
+          `${page}로 ${key} 상태 확인하기`,
+          `${topic} 단계에서 ${page} 함께 점검하기`,
+          `${key} 개선 전 ${page} 사용하기`,
+          `${page} 결과를 기준으로 다음 문단 보강하기`,
+        ];
+        return `${index + 1}. ${page}\n- 앵커: ${patterns[index % patterns.length]}\n- 위치: 관련 설명 직후 또는 체크리스트 문단`;
+      });
+
+      return {
+        summary: pages.length ? `${pages.length}개의 내부 링크 앵커 초안을 만들었습니다.` : "연결할 내부 페이지를 입력해 주세요.",
+        output: anchors.join("\n\n") || "예: SEO 제목 길이 검사기로 제목 노출 상태 확인하기",
+        metrics: [
+          { label: "링크 후보", value: `${pages.length}개`, tone: "primary" },
+          { label: "권장 본문 위치", value: pages.length >= 2 ? "충분" : "보강 필요", tone: "accent" },
+          { label: "키워드", value: key },
+        ],
+        tips: [
+          "앵커는 '여기', '클릭'보다 연결 대상의 효용이 보이는 문구가 좋습니다.",
+          "한 문단에 링크를 몰아넣지 말고 관련 설명 바로 뒤에 배치하세요.",
+          "SEO 목적 글은 본문 안에 관련 내부 링크 2개 이상을 자연스럽게 연결하는 편이 좋습니다.",
+        ],
+      };
+    },
+  },
+  "serp-snippet-preview": {
+    id: "serp-snippet-preview",
+    buttonLabel: "검색결과 미리보기",
+    fields: [
+      { key: "title", label: "Meta Title", type: "textarea", placeholder: "블로그 SEO 점검 체크리스트 - 제목부터 내부링크까지" },
+      { key: "description", label: "Meta Description", type: "textarea", placeholder: "블로그 SEO 점검에 필요한 제목, 설명, H태그, 내부 링크, Alt Text 기준을 한 번에 확인하세요." },
+      { key: "url", label: "URL", type: "text", placeholder: "https://crepika.com/blog/seo-checklist" },
+    ],
+    run: ({ title, description, url }) => {
+      const cleanTitle = title.trim().replace(/\s+/g, " ");
+      const cleanDescription = description.trim().replace(/\s+/g, " ");
+      const cleanUrl = url.trim() || "https://crepika.com/blog/example";
+      const titleOk = cleanTitle.length >= 25 && cleanTitle.length <= 60;
+      const descOk = cleanDescription.length >= 70 && cleanDescription.length <= 155;
+      const score = (titleOk ? 45 : 24) + (descOk ? 40 : 20) + (/^https:\/\/[^/]+\/[a-z0-9-/]+$/i.test(cleanUrl) ? 15 : 7);
+
+      return {
+        summary:
+          score >= 85
+            ? "검색결과에서 잘 읽히는 스니펫 구성입니다."
+            : "제목 길이, 설명 길이, URL 가독성을 조금 더 조정하세요.",
+        output: `${cleanTitle || "제목을 입력하세요"}\n${cleanUrl}\n${cleanDescription || "설명을 입력하세요"}`,
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "Title", value: `${cleanTitle.length}자`, tone: "accent" },
+          { label: "Description", value: `${cleanDescription.length}자` },
+        ],
+        tips: [
+          "핵심 키워드는 제목과 설명 앞쪽에 자연스럽게 배치하세요.",
+          "URL은 사람이 읽고 주제를 알 수 있는 영문 소문자 경로가 좋습니다.",
+          "설명은 요약만 하지 말고 사용자가 얻는 결과를 함께 보여주세요.",
+        ],
+      };
+    },
+  },
+  "alt-text-helper": {
+    id: "alt-text-helper",
+    buttonLabel: "Alt Text 만들기",
+    fields: [
+      { key: "imageContext", label: "이미지 설명", type: "textarea", placeholder: "예: 블로그 SEO 체크리스트 화면 캡처, H태그와 메타 설명 항목이 보임" },
+      { key: "keyword", label: "관련 키워드", type: "text", placeholder: "예: 블로그 SEO 체크리스트" },
+    ],
+    run: ({ imageContext, keyword }) => {
+      const context = imageContext.trim().replace(/\s+/g, " ");
+      const key = keyword.trim();
+      const alt = context
+        ? `${key ? `${key} - ` : ""}${context}`.slice(0, 125)
+        : "이미지의 핵심 내용과 사용자가 봐야 할 정보를 구체적으로 입력하세요.";
+      const score =
+        (context.length >= 20 && context.length <= 120 ? 45 : 22) +
+        (key && alt.includes(key) ? 25 : key ? 10 : 15) +
+        (!/(이미지|사진|그림)$/.test(alt) ? 20 : 10) +
+        (alt.length <= 125 ? 10 : 4);
+
+      return {
+        summary: score >= 80 ? "사용자와 검색엔진 모두 이해하기 쉬운 대체 텍스트입니다." : "이미지의 목적과 맥락을 조금 더 구체화하세요.",
+        output: alt,
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "길이", value: `${alt.length}자`, tone: "accent" },
+          { label: "키워드", value: key ? "반영" : "미입력" },
+        ],
+        tips: [
+          "Alt Text는 보이지 않는 키워드 삽입 공간이 아니라 이미지 이해를 돕는 설명입니다.",
+          "장식 이미지는 빈 alt가 나을 수 있고, 정보 이미지는 핵심 정보를 반드시 적어야 합니다.",
+          "같은 이미지를 반복 사용할 때도 페이지 맥락에 맞게 문구를 조정하세요.",
+        ],
+      };
+    },
+  },
+  "content-freshness-checklist": {
+    id: "content-freshness-checklist",
+    buttonLabel: "최신성 점검하기",
+    fields: [
+      { key: "lastUpdated", label: "마지막 수정일", type: "text", placeholder: "예: 2026-01-15" },
+      { key: "topic", label: "글 주제", type: "text", placeholder: "예: 애드센스 승인 기준" },
+      { key: "hasStats", label: "수치/정책/가격 정보 포함 여부", type: "text", placeholder: "예: 포함 / 없음" },
+    ],
+    run: ({ lastUpdated, topic, hasStats }) => {
+      const date = new Date(lastUpdated.trim());
+      const validDate = !Number.isNaN(date.getTime());
+      const ageDays = validDate ? Math.floor((Date.now() - date.getTime()) / 86400000) : null;
+      const sensitive = /(포함|있음|yes|y|정책|가격|수치)/i.test(hasStats);
+      const topicText = topic.trim() || "해당 글";
+      const risk = !validDate || (ageDays !== null && ageDays > (sensitive ? 90 : 180));
+      const score = validDate ? Math.max(35, 100 - Math.max(0, (ageDays ?? 0) - (sensitive ? 60 : 120)) * 0.35) : 45;
+
+      return {
+        summary: risk ? `${topicText}은 최신성 보강이 필요합니다.` : `${topicText}은 현재 기준으로 최신성 위험이 낮습니다.`,
+        output: [
+          `마지막 수정일: ${validDate ? date.toISOString().slice(0, 10) : "확인 필요"}`,
+          `경과일: ${ageDays === null ? "계산 불가" : `${ageDays}일`}`,
+          `업데이트 우선순위: ${risk ? "높음" : "보통"}`,
+          "점검 항목: 통계, 정책, 도구 화면, 가격, 링크, 스크린샷, FAQ",
+        ].join("\n"),
+        metrics: [
+          { label: "점수", value: `${Math.round(score)}점`, tone: "primary" },
+          { label: "수정 경과", value: ageDays === null ? "미확인" : `${ageDays}일`, tone: "accent" },
+          { label: "민감 정보", value: sensitive ? "있음" : "낮음" },
+        ],
+        tips: [
+          "정책, 가격, 플랫폼 UI를 다루는 글은 3개월 단위로 재검토하세요.",
+          "수정했다면 본문에 최근 확인일이나 변경 요약을 짧게 남기세요.",
+          "깨진 외부 링크와 오래된 스크린샷은 신뢰도를 빠르게 떨어뜨립니다.",
+        ],
+      };
+    },
+  },
+  "eeat-signal-checker": {
+    id: "eeat-signal-checker",
+    buttonLabel: "E-E-A-T 신호 검사하기",
+    fields: [
+      { key: "content", label: "본문 또는 개요", type: "textarea", placeholder: "검사할 글의 개요, 도입부, 핵심 문단을 붙여넣으세요." },
+      { key: "author", label: "작성자/경험 정보", type: "text", placeholder: "예: 직접 운영한 블로그 사례 포함" },
+    ],
+    run: ({ content, author }) => {
+      const text = `${content}\n${author}`.trim();
+      const hasExperience = /(직접|경험|사례|운영|테스트|실험|결과)/.test(text);
+      const hasEvidence = /(출처|공식|자료|통계|링크|문서|기준)/.test(text);
+      const hasSpecifics = /[0-9]|단계|체크리스트|예시|표/.test(text);
+      const hasAuthor = author.trim().length >= 8;
+      const score = [hasExperience, hasEvidence, hasSpecifics, hasAuthor].filter(Boolean).length * 25;
+
+      return {
+        summary:
+          score >= 75
+            ? "경험, 근거, 구체성이 비교적 잘 드러납니다."
+            : "경험 근거와 작성자 맥락을 더 분명히 보강해야 합니다.",
+        output: [
+          `경험 신호: ${hasExperience ? "있음" : "부족"}`,
+          `근거 신호: ${hasEvidence ? "있음" : "부족"}`,
+          `구체성 신호: ${hasSpecifics ? "있음" : "부족"}`,
+          `작성자 맥락: ${hasAuthor ? "있음" : "부족"}`,
+        ].join("\n"),
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "경험", value: hasExperience ? "있음" : "부족", tone: "accent" },
+          { label: "근거", value: hasEvidence ? "있음" : "부족" },
+        ],
+        tips: [
+          "직접 해본 과정, 실패 지점, 전후 결과를 넣으면 경험 신호가 강해집니다.",
+          "정책이나 수치가 있는 글은 공식 문서나 신뢰할 수 있는 출처를 함께 연결하세요.",
+          "작성자 소개, 문의 페이지, 사이트 소개가 있으면 신뢰 구조가 더 자연스럽습니다.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {
