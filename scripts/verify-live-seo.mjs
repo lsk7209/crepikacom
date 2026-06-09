@@ -21,6 +21,17 @@ const LEGACY_TOOL_REDIRECTS = {
   "sns-analytics": "ctr-calculator",
   "sns-calendar": "utm-url-builder",
 };
+const PUBLIC_ENDPOINT_HEADER_EXPECTATIONS = {
+  "/robots.txt": { contentType: "text/plain", cacheControl: "public, max-age=3600, s-maxage=3600" },
+  "/ads.txt": { contentType: "text/plain", cacheControl: "public, max-age=3600, s-maxage=3600" },
+  "/sitemap.xml": { contentType: "application/xml", cacheControl: "public, max-age=3600, s-maxage=3600" },
+  "/rss.xml": { contentType: "application/xml", cacheControl: "public, max-age=3600, s-maxage=3600" },
+  "/feed.xml": { contentType: "application/xml", cacheControl: "public, max-age=3600, s-maxage=3600" },
+  "/.well-known/security.txt": { contentType: "text/plain", cacheControl: "public, max-age=3600, s-maxage=3600" },
+  "/llms.txt": { contentType: "text/plain", cacheControl: "public, max-age=3600, s-maxage=3600" },
+  "/llms-full.txt": { contentType: "text/plain", cacheControl: "public, max-age=3600, s-maxage=3600" },
+  "/ai-index.json": { contentType: "application/json", cacheControl: "public, max-age=3600, s-maxage=3600" },
+};
 
 const failures = [];
 
@@ -162,14 +173,41 @@ function validateAdSenseAutoAds(path, body) {
   };
 }
 
+function validatePublicEndpointHeaders(path, response) {
+  const expected = PUBLIC_ENDPOINT_HEADER_EXPECTATIONS[path];
+  if (!expected) return null;
+
+  const contentType = response.headers.get("content-type") ?? "";
+  const cacheControl = response.headers.get("cache-control") ?? "";
+  const xContentTypeOptions = response.headers.get("x-content-type-options") ?? "";
+
+  if (!contentType.toLowerCase().startsWith(expected.contentType)) {
+    fail(`${path} must use ${expected.contentType} content-type; got ${contentType || "missing"}.`);
+  }
+  if (cacheControl !== expected.cacheControl) {
+    fail(`${path} must use cache-control ${expected.cacheControl}; got ${cacheControl || "missing"}.`);
+  }
+  if (xContentTypeOptions.toLowerCase() !== "nosniff") {
+    fail(`${path} must send X-Content-Type-Options: nosniff.`);
+  }
+
+  return {
+    contentType,
+    cacheControl,
+    xContentTypeOptions,
+  };
+}
+
 async function validateTextEndpoint(path, predicate, message) {
   const { response, body } = await get(path);
   if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
+  const headers = validatePublicEndpointHeaders(path, response);
   if (!predicate(body)) fail(message);
   return {
     path,
     status: response.status,
     bytes: body.length,
+    ...(headers ? { headers } : {}),
   };
 }
 
@@ -177,6 +215,7 @@ async function validateAiIndexEndpoint() {
   const path = "/ai-index.json";
   const { response, body } = await get(path);
   if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
+  const headers = validatePublicEndpointHeaders(path, response);
 
   let aiIndex = null;
   try {
@@ -206,6 +245,7 @@ async function validateAiIndexEndpoint() {
     path,
     status: response.status,
     bytes: body.length,
+    ...(headers ? { headers } : {}),
     aiIndex: {
       site: siteOk,
       tools: toolCount,
