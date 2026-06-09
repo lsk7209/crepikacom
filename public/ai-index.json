@@ -76,8 +76,14 @@
       "insights",
       "case-study"
     ],
-    "count": 357,
+    "count": 358,
     "latest": [
+      {
+        "title": "유튜브 Community 게시물 완전 가이드: 영상 없이 구독자와 소통하는 전략",
+        "url": "https://crepika.com/blog/youtube-community-complete-guide-strategy",
+        "description": "유튜브 Community 탭 기능을 활용해 영상을 올리지 않는 날에도 구독자와 소통하고 채널 성장을 유지하는 전략을 알아봅니다. 게시물 유형별 활용법부터 알고리즘 이해까지 완전 가이드입니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "인스타그램 Close Friends 마케팅 가이드: VIP 고객을 위한 프리미엄 콘텐츠 전략",
         "url": "https://crepika.com/blog/instagram-close-friends-marketing-guide-vip-content-strategy",
@@ -142,12 +148,6 @@
         "title": "Instagram Threads 한국어 콘텐츠 전략: 텍스트 기반 SNS에서 팬 모으기",
         "url": "https://crepika.com/blog/instagram-threads-content-strategy-sns",
         "description": "Instagram Threads에서 한국어 콘텐츠로 팬 베이스를 만드는 실전 전략을 담았습니다. 알고리즘 이해부터 콘텐츠 포맷, 게시 전략, 팔로워를 고객으로 전환하는 방법까지 완전 가이드입니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "구글 Search Ads 360 입문 가이드: 대규모 PPC 캠페인 관리 전략",
-        "url": "https://crepika.com/blog/google-search-ads-360-beginner-guide-ppc-strategy",
-        "description": "구글 Search Ads 360(SA360)의 핵심 기능과 대규모 PPC 캠페인 관리 전략을 입문자 관점에서 완전히 설명합니다. 통합 입찰, 예산 관리, 크로스 채널 최적화까지 실전 가이드입니다.",
         "date": "2026-05-18"
       }
     ]

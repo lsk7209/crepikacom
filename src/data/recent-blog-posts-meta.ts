@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "youtube-community-complete-guide-strategy",
+    title: "유튜브 Community 게시물 완전 가이드: 영상 없이 구독자와 소통하는 전략",
+    description: "유튜브 Community 탭 기능을 활용해 영상을 올리지 않는 날에도 구독자와 소통하고 채널 성장을 유지하는 전략을 알아봅니다. 게시물 유형별 활용법부터 알고리즘 이해까지 완전 가이드입니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["유튜브 Community", "유튜브 커뮤니티", "유튜브 게시물", "구독자 소통", "유튜브 성장 전략"],
+  },
+  {
     slug: "instagram-close-friends-marketing-guide-vip-content-strategy",
     title: "인스타그램 Close Friends 마케팅 가이드: VIP 고객을 위한 프리미엄 콘텐츠 전략",
     description: "인스타그램 Close Friends 기능을 활용해 VIP 고객에게 독점 콘텐츠를 제공하는 마케팅 전략을 소개합니다. 멤버십 구축, 콘텐츠 기획, 전환율 향상까지 실전 노하우를 공유합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "14분",
     author: "박준영",
     keywords: ["소셜 증명", "Social Proof", "고객 리뷰", "전환율 최적화", "신뢰 마케팅"],
-  },
-  {
-    slug: "substack-complete-guide-a-to-z",
-    title: "Substack 시작 완전 가이드: 처음 뉴스레터를 만드는 사람을 위한 A to Z",
-    description: "Substack으로 뉴스레터를 시작하는 모든 과정을 처음부터 끝까지 안내합니다. 계정 설정부터 첫 구독자 확보, 유료 전환 전략까지 실전 노하우를 담은 완전 가이드입니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "16분",
-    author: "이지수",
-    keywords: ["Substack", "뉴스레터", "서브스택 시작", "유료 뉴스레터", "콘텐츠 크리에이터"],
   },
 ];
