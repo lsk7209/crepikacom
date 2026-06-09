@@ -380,6 +380,32 @@ function validateIndexingAutomation() {
   }
 }
 
+function validateToolPublicationAutomation() {
+  const workflow = requireFile(".github/workflows/auto-publish-tools.yml");
+  if (!workflow.includes('cron: "7 * * * *"')) {
+    fail("auto-publish-tools.yml must run hourly so the five-hour gate can publish the next due tool.");
+  }
+  if (!workflow.includes('TOOL_PUBLISH_MIN_HOURS: "5"')) {
+    fail("auto-publish-tools.yml must enforce TOOL_PUBLISH_MIN_HOURS=5.");
+  }
+  if (!workflow.includes("node scripts/publish-tool-once.mjs")) {
+    fail("auto-publish-tools.yml must run scripts/publish-tool-once.mjs.");
+  }
+
+  const bat = requireFile("scripts/start-scheduler.bat").replace(/\r\n/g, "\n");
+  if (!bat.includes("cd /d D:\\web\\crepikacom")) {
+    fail("start-scheduler.bat must point at the current D:\\web\\crepikacom workspace.");
+  }
+  if (!bat.includes("node scripts/publish-tool-once.mjs")) {
+    fail("start-scheduler.bat must run the utility tool publisher, not the blog scheduler.");
+  }
+
+  const vbs = requireFile("scripts/start-scheduler.vbs");
+  if (!vbs.includes("D:\\web\\crepikacom\\scripts\\start-scheduler.bat")) {
+    fail("start-scheduler.vbs must launch the current workspace scheduler batch file.");
+  }
+}
+
 function validateQueueCoverage(queue) {
   if (queue.length !== 100) {
     fail(`tool-queue.json should contain 100 planned tools; found ${queue.length}.`);
@@ -423,6 +449,7 @@ function main() {
   validateSitemapAndRss(queue, posts);
   validateGeneratedIndexes(queue, posts);
   validateIndexingAutomation();
+  validateToolPublicationAutomation();
 
   for (const message of warnings) {
     console.warn(`WARN ${message}`);
@@ -447,6 +474,7 @@ function main() {
           rss: "ok",
           adsenseAutoAdsOnly: "ok",
           indexingAutomation: "ok",
+          toolPublicationAutomation: "ok",
           toolQueue: queue.reduce((acc, item) => {
             acc[item.status] = (acc[item.status] || 0) + 1;
             return acc;
