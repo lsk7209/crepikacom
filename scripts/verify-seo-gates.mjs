@@ -110,6 +110,25 @@ function listDirectories(path) {
     .map((entry) => entry.replace(/\\/g, "/").split("/").pop());
 }
 
+function listFilesByName(root, fileName) {
+  if (!existsSync(root)) return [];
+  const matches = [];
+  const stack = [root];
+  while (stack.length) {
+    const current = stack.pop();
+    for (const name of readdirSync(current)) {
+      const path = join(current, name);
+      const stat = statSync(path);
+      if (stat.isDirectory()) {
+        stack.push(path);
+      } else if (name === fileName) {
+        matches.push(path);
+      }
+    }
+  }
+  return matches;
+}
+
 function hasMojibakeMarker(body) {
   return /[\uFFFD]|쨌|\?щ|\?대|\?댁|\?ъ|\?꾧/.test(body);
 }
@@ -200,6 +219,37 @@ function validateCrawlerPage(path, canonicalUrl) {
   ]) {
     if (!body.includes(marker)) {
       fail(`${path} is missing crawler metadata marker: ${marker}`);
+    }
+  }
+}
+
+function validateStaticHtmlBasics() {
+  for (const path of listFilesByName("public", "index.html")) {
+    const body = validateTextEncoding(path);
+    const hLevels = [...body.matchAll(/<h([1-6])\b/gi)].map((match) => Number(match[1]));
+    const h1Count = hLevels.filter((level) => level === 1).length;
+
+    if (!/<title>[^<]{10,}<\/title>/i.test(body)) {
+      fail(`${path} is missing a meaningful title tag.`);
+    }
+    if (!/<meta\s+name="description"\s+content="[^"]{40,}"/i.test(body)) {
+      fail(`${path} is missing a meaningful meta description.`);
+    }
+    if (!/<link\s+rel="canonical"\s+href="https:\/\/crepika\.com\//i.test(body)) {
+      fail(`${path} is missing a canonical crepika.com URL.`);
+    }
+    if (h1Count !== 1) {
+      fail(`${path} must have exactly one H1; found ${h1Count}.`);
+    }
+    if (hLevels[0] !== 1) {
+      fail(`${path} heading hierarchy must start with H1.`);
+    }
+
+    for (let index = 1; index < hLevels.length; index++) {
+      if (hLevels[index] > hLevels[index - 1] + 1) {
+        fail(`${path} has a skipped heading level: H${hLevels[index - 1]} to H${hLevels[index]}.`);
+        break;
+      }
     }
   }
 }
@@ -445,6 +495,7 @@ function main() {
   const queue = JSON.parse(requireFile("scripts/tool-queue.json"));
   const posts = loadRenderablePosts();
   validatePublicFiles();
+  validateStaticHtmlBasics();
   validateQueueCoverage(queue);
   validateSitemapAndRss(queue, posts);
   validateGeneratedIndexes(queue, posts);
@@ -472,6 +523,7 @@ function main() {
           robots: "ok",
           sitemap: "ok",
           rss: "ok",
+          staticHtmlBasics: "ok",
           adsenseAutoAdsOnly: "ok",
           indexingAutomation: "ok",
           toolPublicationAutomation: "ok",
