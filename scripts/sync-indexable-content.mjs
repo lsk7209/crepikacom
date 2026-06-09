@@ -1,11 +1,13 @@
 #!/usr/bin/env node
-import { readFileSync, renameSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
 import vm from "node:vm";
 
 const SITE_URL = "https://crepika.com";
 const BLOG_FILE = "src/data/blog-content.ts";
 const META_FILE = "src/data/blog-posts-meta.ts";
 const RECENT_META_FILE = "src/data/recent-blog-posts-meta.ts";
+const RUNTIME_POSTS_DIR = "src/data/blog-posts";
 const SITEMAP_FILE = "public/sitemap.xml";
 const RSS_FILE = "public/rss.xml";
 const AI_INDEX_FILE = "public/ai-index.json";
@@ -110,9 +112,27 @@ function stripMarkdown(value) {
 }
 
 function writeText(file, data) {
+  mkdirSync(dirname(file), { recursive: true });
   const tmp = `${file}.tmp`;
   writeFileSync(tmp, data, "utf8");
   renameSync(tmp, file);
+}
+
+function resetGeneratedDirectory(path) {
+  const target = resolve(path);
+  const allowed = resolve("src/data/blog-posts");
+  if (target !== allowed) {
+    throw new Error(`Refusing to reset unexpected directory: ${path}`);
+  }
+  rmSync(target, { recursive: true, force: true });
+  mkdirSync(target, { recursive: true });
+}
+
+function writeRuntimePostShards(posts) {
+  resetGeneratedDirectory(RUNTIME_POSTS_DIR);
+  for (const post of posts) {
+    writeText(`${RUNTIME_POSTS_DIR}/${post.slug}.json`, `${JSON.stringify(post)}\n`);
+  }
 }
 
 function writeMeta(posts) {
@@ -341,7 +361,8 @@ ${posts.map((post) => `- ${SITE_URL}/blog/${post.slug} - ${post.title}`).join("\
 
 const posts = loadPosts();
 writeMeta(posts);
+writeRuntimePostShards(posts);
 writeSitemap(posts);
 writeRss(posts);
 writeAiFiles(posts);
-console.log(`Synced ${posts.length} renderable posts to meta, sitemap, RSS, and AI index files.`);
+console.log(`Synced ${posts.length} renderable posts to meta, runtime shards, sitemap, RSS, and AI index files.`);

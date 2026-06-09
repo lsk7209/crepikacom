@@ -20,7 +20,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { getBlogPostBySlug, getRelatedPosts } from "@/data/blog-content";
+import type { BlogPost as BlogPostData } from "@/data/blog-content";
+import { getRelatedPostMeta, loadBlogPostBySlug } from "@/data/blog-post-loader";
 import { getToolById } from "@/data/tools-config";
 import {
   Accordion,
@@ -89,7 +90,7 @@ const AUTHOR_AVATARS: Record<string, string> = {
   박준영: "/images/avatar-parkjy.svg",
 };
 
-function estimateWordCount(post: NonNullable<ReturnType<typeof getBlogPostBySlug>>) {
+function estimateWordCount(post: BlogPostData) {
   const raw = [
     post.content.introduction,
     ...post.content.sections.flatMap((section) => [
@@ -111,10 +112,28 @@ function estimateWordCount(post: NonNullable<ReturnType<typeof getBlogPostBySlug
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const conclusionRef = useRef<HTMLElement>(null);
+  const [post, setPost] = useState<BlogPostData | null | undefined>(undefined);
 
-  const post = slug ? getBlogPostBySlug(slug) : undefined;
+  useEffect(() => {
+    let cancelled = false;
+    setPost(undefined);
+    if (!slug) {
+      setPost(null);
+      return;
+    }
+    loadBlogPostBySlug(slug)
+      .then((loadedPost) => {
+        if (!cancelled) setPost(loadedPost);
+      })
+      .catch(() => {
+        if (!cancelled) setPost(null);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [slug]);
 
-  const relatedPosts = getRelatedPosts(slug, 3);
+  const relatedPosts = post ? getRelatedPostMeta(post, 3) : [];
   const relatedTools = post?.relatedTools
     .map((id) => getToolById(id))
     .filter(Boolean) ?? [];
@@ -228,6 +247,14 @@ export default function BlogPost() {
     observer.observe(el);
     return () => observer.disconnect();
   }, [post]);
+
+  if (post === undefined) {
+    return (
+      <div className="flex min-h-[50vh] items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
+      </div>
+    );
+  }
 
   if (!post) return <Navigate to="/blog" replace />;
 

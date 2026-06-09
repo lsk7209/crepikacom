@@ -313,6 +313,33 @@ function validateGeneratedIndexes(queue, posts) {
     validateTextEncoding(path);
   }
 
+  const shardDir = join("src", "data", "blog-posts");
+  const shards = listDirectories(shardDir).length
+    ? []
+    : existsSync(shardDir)
+      ? readdirSync(shardDir).filter((name) => name.endsWith(".json"))
+      : [];
+  if (!existsSync(shardDir)) {
+    fail("src/data/blog-posts is missing generated per-post runtime shards.");
+  } else if (shards.length !== posts.length) {
+    fail(`Generated blog post shard count (${shards.length}) does not match renderable posts (${posts.length}).`);
+  }
+  for (const post of posts) {
+    const shard = join(shardDir, `${post.slug}.json`);
+    if (!existsSync(shard)) {
+      fail(`Generated blog post shard is missing: ${post.slug}`);
+      continue;
+    }
+    try {
+      const body = JSON.parse(validateTextEncoding(shard));
+      if (body.slug !== post.slug || body.title !== post.title || !body.content?.sections?.length) {
+        fail(`Generated blog post shard does not match source post: ${post.slug}`);
+      }
+    } catch (error) {
+      fail(`Generated blog post shard is not valid JSON: ${post.slug} (${error instanceof Error ? error.message : error})`);
+    }
+  }
+
   const recentMeta = validateTextEncoding(RECENT_META_FILE);
   for (const post of posts.slice().reverse().slice(0, Math.min(3, posts.length))) {
     if (!recentMeta.includes(`slug: ${JSON.stringify(post.slug)}`)) {
