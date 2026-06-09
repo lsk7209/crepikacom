@@ -600,7 +600,10 @@ function TableOfContents({
     return () => window.removeEventListener("scroll", handler);
   }, [sections]);
   return (
-    <nav className="mb-8 rounded-xl border border-cyan-400/15 bg-muted/30 p-5 text-sm">
+    <nav
+      aria-label="글 목차"
+      className="mb-8 rounded-xl border border-cyan-400/15 bg-muted/30 p-5 text-sm"
+    >
       <p className="mb-3 flex items-center gap-2 font-semibold text-foreground">
         <ListChecks className="h-4 w-4 text-cyan-300" />
         목차
@@ -610,6 +613,7 @@ function TableOfContents({
           <li key={i}>
             <a
               href={`#section-${i}`}
+              aria-current={active === i ? "location" : undefined}
               className={`block px-2 py-1 rounded transition-colors ${active === i ? "text-primary font-semibold bg-primary/10" : "text-muted-foreground hover:text-primary"}`}
             >
               {i + 1}. {s.heading ?? s.title}

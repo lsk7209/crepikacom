@@ -103,7 +103,10 @@ export function ToolLayout({
 
         {/* Header - 3-Second Rule: Title + Problem at top */}
         <header className="mb-6 text-center">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h1
+            id="tool-title"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+          >
             {config.titleKo}
           </h1>
           <p className="text-sm text-muted-foreground/70 mb-2">
@@ -115,7 +118,10 @@ export function ToolLayout({
         </header>
 
         {/* Main Tool Interface - 3-Second Rule: Input + Action visible without scroll */}
-        <main className="bg-card rounded-lg border shadow-sm p-4 md:p-6 mb-6">
+        <section
+          className="bg-card rounded-lg border shadow-sm p-4 md:p-6 mb-6"
+          aria-labelledby="tool-title"
+        >
           {/* Input Section */}
           <div className="mb-4">
             {inputSlot}
@@ -152,7 +158,7 @@ export function ToolLayout({
               {resultSlot}
             </div>
           )}
-        </main>
+        </section>
 
         {/* SEO Article */}
         <article className="prose prose-sm max-w-none dark:prose-invert">

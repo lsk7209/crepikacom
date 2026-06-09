@@ -134,6 +134,7 @@ async function main() {
   // static pages aligned with src/data/blog-content.ts.
   execSync('node scripts/sync-indexable-content.mjs', { cwd: ROOT, stdio: 'inherit' });
   execSync('node scripts/generate-crawler-pages.mjs', { cwd: ROOT, stdio: 'inherit' });
+  execSync('node scripts/verify-seo-gates.mjs', { cwd: ROOT, stdio: 'inherit' });
 
   // 로컬 발행 로그 누적 (커밋 대상 아님 — 기존 동작 유지)
   const publishLog = existsSync(PUBLISH_LOG) ? JSON.parse(readFileSync(PUBLISH_LOG, 'utf-8')) : [];
@@ -168,7 +169,7 @@ async function main() {
     '-m',
     JSON.stringify('Directive: Regenerate sitemap, RSS, AI index, llms files, and crawler pages after every scheduled content batch.'),
     '-m',
-    JSON.stringify('Tested: validatePost checks passed; indexable content regenerated'),
+    JSON.stringify('Tested: publish-once content injection passed; indexable content regenerated; verify:seo passed before commit'),
     '-m',
     JSON.stringify('Not-tested: Live Vercel deployment is handled by GitHub integration after push'),
   ].join(' ');

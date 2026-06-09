@@ -269,7 +269,27 @@ function stripMarkdown(value) {
     .trim();
 }
 
-function renderShell({ title, description, canonical, heading, bodyHtml, type = "website" }) {
+function renderJsonLd(data) {
+  const items = Array.isArray(data) ? data : [data];
+  return items
+    .filter(Boolean)
+    .map((item) => {
+      const json = JSON.stringify(item).replaceAll("<", "\\u003c");
+      return `    <script type="application/ld+json">${json}</script>`;
+    })
+    .join("\n");
+}
+
+function renderShell({
+  title,
+  description,
+  canonical,
+  heading,
+  bodyHtml,
+  type = "website",
+  structuredData = [],
+}) {
+  const jsonLd = renderJsonLd(structuredData);
   return `<!doctype html>
 <html lang="ko">
   <head>
@@ -286,7 +306,7 @@ function renderShell({ title, description, canonical, heading, bodyHtml, type = 
     <meta property="og:site_name" content="Crepika">
     <meta name="google-adsense-account" content="ca-pub-3050601904412736">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3050601904412736" crossorigin="anonymous"></script>
-    <style>
+${jsonLd ? `${jsonLd}\n` : ""}    <style>
       :root{color-scheme:light}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.7;color:#172033;margin:0;background:#f8fafc}
       main{max-width:860px;margin:0 auto;padding:44px 20px 72px}nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px}
       a{color:#0f766e}h1{font-size:2.2rem;line-height:1.2;margin:0 0 18px}h2{margin-top:34px;font-size:1.35rem}h3{margin-top:24px;font-size:1.08rem}
@@ -320,8 +340,42 @@ function writePage(path, html) {
 
 function renderStaticPage(page) {
   const paragraphs = page.body.map((text, index) => `<p${index === 0 ? ' class="lede"' : ""}>${escapeHtml(text)}</p>`).join("\n");
+  const path = new URL(page.canonical).pathname;
+  const isTool = path.startsWith("/tools/");
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${page.canonical}#webpage`,
+      url: page.canonical,
+      name: page.title,
+      description: page.description,
+      inLanguage: "ko-KR",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      publisher: { "@id": `${siteUrl}/#organization` },
+    },
+    isTool
+      ? {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: page.heading,
+          applicationCategory: "UtilitiesApplication",
+          operatingSystem: "Web Browser",
+          url: page.canonical,
+          description: page.description,
+          inLanguage: "ko-KR",
+          offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "KRW",
+          },
+          publisher: { "@id": `${siteUrl}/#organization` },
+        }
+      : null,
+  ];
   return renderShell({
     ...page,
+    structuredData,
     bodyHtml: `${paragraphs}
       <section class="panel"><h2>Useful links</h2><ul><li><a href="/blog">Browse blog guides</a></li><li><a href="/tools/text-counter">Open creator tools</a></li><li><a href="/contact">Report corrections</a></li></ul></section>`,
   });
@@ -335,18 +389,44 @@ function renderBlogIndex(posts) {
     description: "Browse Crepika guides about SEO, SNS marketing, image optimization, content workflows, and free creator tools.",
     canonical: `${siteUrl}/blog`,
     heading: "Crepika Blog",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${siteUrl}/blog#collection`,
+      url: `${siteUrl}/blog`,
+      name: "Crepika Blog",
+      description: "Browse practical SEO, SNS marketing, creator workflow, image optimization, and publishing checks.",
+      inLanguage: "ko-KR",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: latest.length,
+        itemListElement: latest.slice(0, 20).map((post, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${siteUrl}/blog/${post.slug}`,
+          name: post.title,
+        })),
+      },
+    },
     bodyHtml: `<p class="lede">Browse practical guides for SEO, SNS marketing, creator workflows, image optimization, and publishing checks.</p><section class="panel"><h2>Latest guides</h2><ol class="post-list">${links}</ol></section>`,
   });
 }
 
 function renderBlogPost(post) {
   const sections = post.content.sections
-    .map((section) => {
+    .map((section, index) => {
       const title = section.heading || section.title || "Guide section";
       const subsections = (section.subsections ?? [])
         .map((subsection) => `<h3>${escapeHtml(subsection.subheading)}</h3><p>${escapeHtml(stripMarkdown(subsection.content))}</p>`)
         .join("\n");
-      return `<section class="panel"><h2>${escapeHtml(title)}</h2><p>${escapeHtml(stripMarkdown(section.content))}</p>${subsections}</section>`;
+      return `<section class="panel" id="section-${index}"><h2>${escapeHtml(title)}</h2><p>${escapeHtml(stripMarkdown(section.content))}</p>${subsections}</section>`;
+    })
+    .join("\n");
+  const toc = post.content.sections
+    .map((section, index) => {
+      const title = section.heading || section.title || `Section ${index + 1}`;
+      return `<li><a href="#section-${index}">${escapeHtml(title)}</a></li>`;
     })
     .join("\n");
   const faq = (post.faq ?? [])
@@ -360,8 +440,28 @@ function renderBlogPost(post) {
     canonical: `${siteUrl}/blog/${post.slug}`,
     heading: post.title,
     type: "article",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": `${siteUrl}/blog/${post.slug}#article`,
+      headline: post.title,
+      description: post.description,
+      url: `${siteUrl}/blog/${post.slug}`,
+      datePublished: post.publishDate,
+      dateModified: post.dateModified || post.publishDate,
+      author: {
+        "@type": "Person",
+        name: post.author || "Crepika",
+      },
+      publisher: { "@id": `${siteUrl}/#organization` },
+      mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
+      inLanguage: "ko-KR",
+      articleSection: post.category,
+      keywords: (post.keywords ?? []).join(", "),
+    },
     bodyHtml: `<p class="lede">${escapeHtml(post.description)}</p>
-      <p class="muted">Published: ${escapeHtml(post.publishDate)} 쨌 Category: ${escapeHtml(post.category)} 쨌 Read time: ${escapeHtml(post.readTime)}</p>
+      <p class="muted">Published: ${escapeHtml(post.publishDate)} &middot; Category: ${escapeHtml(post.category)} &middot; Read time: ${escapeHtml(post.readTime)}</p>
+      <nav class="panel" aria-label="Article table of contents"><h2>Table of contents</h2><ol>${toc}</ol></nav>
       <section class="panel"><h2>Overview</h2><p>${escapeHtml(stripMarkdown(post.content.introduction))}</p></section>
       ${sections}
       <section class="panel"><h2>Conclusion</h2><p>${escapeHtml(stripMarkdown(post.content.conclusion))}</p></section>

@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
+import vm from "node:vm";
 
 const SITE_URL = "https://crepika.com";
+const BLOG_FILE = "src/data/blog-content.ts";
 const PUBLISHER_ID = "pub-3050601904412736";
 const ADSENSE_CLIENT = "ca-pub-3050601904412736";
 const ADS_TXT_LINE = `google.com, ${PUBLISHER_ID}, DIRECT, f08c47fec0942fa0`;
@@ -48,12 +50,75 @@ function extractXmlTags(source, tag) {
   return [...source.matchAll(re)].map((match) => match[1].trim());
 }
 
+function extractArrayLiteral(source, marker) {
+  const markerIndex = source.indexOf(marker);
+  if (markerIndex === -1) {
+    fail(`Marker not found: ${marker}`);
+    return "[]";
+  }
+  const assignmentIndex = source.indexOf("=", markerIndex);
+  const start = source.indexOf("[", assignmentIndex);
+  if (assignmentIndex === -1 || start === -1) {
+    fail(`Array assignment not found for marker: ${marker}`);
+    return "[]";
+  }
+
+  let depth = 0;
+  let quote = "";
+  let escaped = false;
+  for (let i = start; i < source.length; i++) {
+    const ch = source[i];
+    if (quote) {
+      if (escaped) escaped = false;
+      else if (ch === "\\") escaped = true;
+      else if (ch === quote) quote = "";
+      continue;
+    }
+    if (ch === "'" || ch === '"' || ch === "`") {
+      quote = ch;
+      continue;
+    }
+    if (ch === "[") depth++;
+    if (ch === "]") depth--;
+    if (depth === 0) return source.slice(start, i + 1);
+  }
+
+  fail(`Array end not found for marker: ${marker}`);
+  return "[]";
+}
+
+function loadRenderablePosts() {
+  const source = requireFile(BLOG_FILE);
+  const arrayLiteral = extractArrayLiteral(source, "export const BLOG_POSTS");
+  try {
+    return vm
+      .runInNewContext(`(${arrayLiteral})`, {})
+      .filter((post) => post?.slug && post?.title && post?.content?.sections?.length)
+      .sort((a, b) => String(a.publishDate).localeCompare(String(b.publishDate)));
+  } catch (error) {
+    fail(`Could not parse ${BLOG_FILE}: ${error instanceof Error ? error.message : error}`);
+    return [];
+  }
+}
+
 function listDirectories(path) {
   if (!existsSync(path)) return [];
   return readdirSync(path)
     .map((name) => join(path, name))
     .filter((entry) => statSync(entry).isDirectory())
     .map((entry) => entry.replace(/\\/g, "/").split("/").pop());
+}
+
+function hasMojibakeMarker(body) {
+  return /[\uFFFD]|쨌|\?щ|\?대|\?댁|\?ъ|\?꾧/.test(body);
+}
+
+function validateTextEncoding(path) {
+  const body = requireFile(path);
+  if (hasMojibakeMarker(body)) {
+    fail(`${path} contains mojibake markers; regenerate or fix UTF-8 source text.`);
+  }
+  return body;
 }
 
 function validatePublicFiles() {
@@ -75,7 +140,7 @@ function validatePublicFiles() {
     }
   }
 
-  const index = requireFile("index.html");
+  const index = validateTextEncoding("index.html");
   if (!index.includes(`name="google-adsense-account" content="${ADSENSE_CLIENT}"`)) {
     fail("index.html is missing the google-adsense-account meta tag.");
   }
@@ -115,7 +180,30 @@ function validatePublicFiles() {
   }
 }
 
-function validateSitemapAndRss(queue) {
+function validateCrawlerPage(path, canonicalUrl) {
+  const body = validateTextEncoding(path);
+  if (!body.includes(`<link rel="canonical" href="${canonicalUrl}">`)) {
+    fail(`${path} is missing the expected canonical URL.`);
+  }
+  if (!/name="robots"\s+content="index,follow"/i.test(body)) {
+    fail(`${path} is missing an index,follow robots meta tag.`);
+  }
+  for (const marker of [
+    'name="description"',
+    'property="og:title"',
+    'property="og:description"',
+    'property="og:url"',
+    'name="google-adsense-account"',
+    "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+    'type="application/ld+json"',
+  ]) {
+    if (!body.includes(marker)) {
+      fail(`${path} is missing crawler metadata marker: ${marker}`);
+    }
+  }
+}
+
+function validateSitemapAndRss(queue, posts) {
   const sitemap = requireFile("public/sitemap.xml");
   if (!sitemap.startsWith('<?xml version="1.0" encoding="UTF-8"?>')) {
     fail("sitemap.xml is missing the expected XML declaration.");
@@ -156,6 +244,24 @@ function validateSitemapAndRss(queue) {
     if (item.path && !existsSync(join("public", ...item.path.split("/").filter(Boolean), "index.html"))) {
       fail(`Published tool is missing its crawler page: ${item.id}`);
     }
+    if (item.path) {
+      validateCrawlerPage(
+        join("public", ...item.path.split("/").filter(Boolean), "index.html"),
+        `${SITE_URL}${item.path}`,
+      );
+    }
+  }
+
+  const blogLocs = locs.filter((loc) => loc.startsWith(`${SITE_URL}/blog/`));
+  if (blogLocs.length !== posts.length) {
+    fail(`sitemap.xml blog URL count (${blogLocs.length}) does not match renderable posts (${posts.length}).`);
+  }
+  for (const post of posts) {
+    const url = `${SITE_URL}/blog/${post.slug}`;
+    if (!sitemap.includes(`<loc>${url}</loc>`)) {
+      fail(`Renderable blog post is missing from sitemap.xml: ${post.slug}`);
+    }
+    validateCrawlerPage(join("public", "blog", post.slug, "index.html"), url);
   }
 
   const rss = requireFile("public/rss.xml");
@@ -175,22 +281,35 @@ function validateSitemapAndRss(queue) {
   if (items > 100) {
     fail(`rss.xml should be capped at 100 items; found ${items}.`);
   }
+  for (const post of posts.slice().reverse().slice(0, Math.min(20, posts.length))) {
+    const url = `${SITE_URL}/blog/${post.slug}`;
+    if (!rss.includes(`<link>${url}</link>`)) {
+      fail(`Recent blog post is missing from rss.xml: ${post.slug}`);
+    }
+  }
 }
 
 function validateGeneratedIndexes(queue) {
-  const aiIndex = JSON.parse(requireFile("public/ai-index.json"));
+  const aiIndex = JSON.parse(validateTextEncoding("public/ai-index.json"));
   if (aiIndex?.site?.url !== SITE_URL) {
     fail("ai-index.json site.url does not match the canonical site URL.");
+  }
+  if (aiIndex?.site?.name_ko !== "크레피카") {
+    fail("ai-index.json site.name_ko must be the readable Korean brand name.");
   }
   if (aiIndex?.blog?.rss !== `${SITE_URL}/rss.xml`) {
     fail("ai-index.json blog.rss does not match the canonical RSS URL.");
   }
 
-  const llms = requireFile("public/llms.txt");
-  const llmsFull = requireFile("public/llms-full.txt");
+  const llms = validateTextEncoding("public/llms.txt");
+  const llmsFull = validateTextEncoding("public/llms-full.txt");
   for (const [path, body] of [["public/llms.txt", llms], ["public/llms-full.txt", llmsFull]]) {
     if (!body.includes(SITE_URL)) fail(`${path} is missing the canonical site URL.`);
     if (!body.includes(`${SITE_URL}/rss.xml`)) fail(`${path} is missing the RSS URL.`);
+  }
+
+  for (const path of ["public/rss.xml", "public/blog/index.html"]) {
+    validateTextEncoding(path);
   }
 
   const publicToolDirs = listDirectories("public/tools");
@@ -238,9 +357,10 @@ function validateQueueCoverage(queue) {
 
 function main() {
   const queue = JSON.parse(requireFile("scripts/tool-queue.json"));
+  const posts = loadRenderablePosts();
   validatePublicFiles();
   validateQueueCoverage(queue);
-  validateSitemapAndRss(queue);
+  validateSitemapAndRss(queue, posts);
   validateGeneratedIndexes(queue);
 
   for (const message of warnings) {

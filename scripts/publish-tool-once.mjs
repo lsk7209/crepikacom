@@ -198,6 +198,7 @@ function main() {
 
   run("node scripts/sync-indexable-content.mjs");
   run("node scripts/generate-crawler-pages.mjs");
+  run("node scripts/verify-seo-gates.mjs");
 
   console.log(
     JSON.stringify(

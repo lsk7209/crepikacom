@@ -238,7 +238,7 @@ function writeAiFiles(posts) {
   const aiIndex = {
     site: {
       name: "Crepika",
-      name_ko: "?щ젅?쇱뭅",
+      name_ko: "크레피카",
       url: SITE_URL,
       description: "Free browser-based creator tools plus SEO and SNS content guides for Korean creators.",
       locale: "ko_KR",

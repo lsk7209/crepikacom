@@ -19,10 +19,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Badge, badgeVariants } from "@/components/ui/badge";
 import { getAllBlogMeta, BlogPostMeta } from "@/data/blog-posts-meta";
 import { Input } from "@/components/ui/input";
 import React, { useMemo } from "react";
+import { cn } from "@/lib/utils";
 
 const CATEGORY_LABELS: Record<string, string> = {
   guide: "가이드",
@@ -256,26 +257,38 @@ export default function BlogList() {
 
         {/* Category Filter */}
         <div className="flex flex-wrap gap-2 justify-center mb-12">
-          <Badge
-            variant={selectedCategory === "all" ? "default" : "outline"}
-            className="cursor-pointer px-4 py-2"
+          <button
+            type="button"
+            aria-pressed={selectedCategory === "all"}
+            className={cn(
+              badgeVariants({
+                variant: selectedCategory === "all" ? "default" : "outline",
+              }),
+              "cursor-pointer px-4 py-2",
+            )}
             onClick={() => handleCategoryChange("all")}
           >
             전체
-          </Badge>
+          </button>
           {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
             (() => {
               const Icon = CATEGORY_ICONS[key];
               return (
-                <Badge
+                <button
                   key={key}
-                  variant={selectedCategory === key ? "default" : "outline"}
-                  className="cursor-pointer gap-1.5 px-4 py-2"
+                  type="button"
+                  aria-pressed={selectedCategory === key}
+                  className={cn(
+                    badgeVariants({
+                      variant: selectedCategory === key ? "default" : "outline",
+                    }),
+                    "cursor-pointer gap-1.5 px-4 py-2",
+                  )}
                   onClick={() => handleCategoryChange(key)}
                 >
                   <Icon className="h-3.5 w-3.5" />
                   {label}
-                </Badge>
+                </button>
               );
             })()
           ))}
@@ -375,10 +388,11 @@ export default function BlogList() {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-2 mt-10">
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-10">
             <button
               onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
               disabled={currentPage === 1}
+              aria-label="이전 페이지"
               className="px-4 py-2 rounded-lg border text-sm font-medium disabled:opacity-40 hover:bg-muted transition-colors"
             >
               이전
@@ -405,6 +419,8 @@ export default function BlogList() {
                   <button
                     key={p}
                     onClick={() => handlePageChange(p as number)}
+                    aria-label={`${p}페이지로 이동`}
+                    aria-current={currentPage === p ? "page" : undefined}
                     className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${currentPage === p ? "bg-primary text-primary-foreground border-primary" : "hover:bg-muted"}`}
                   >
                     {p}
@@ -416,11 +432,12 @@ export default function BlogList() {
                 handlePageChange(Math.min(totalPages, currentPage + 1))
               }
               disabled={currentPage === totalPages}
+              aria-label="다음 페이지"
               className="px-4 py-2 rounded-lg border text-sm font-medium disabled:opacity-40 hover:bg-muted transition-colors"
             >
               다음
             </button>
-            <span className="text-sm text-muted-foreground ml-2">
+            <span className="basis-full text-center text-sm text-muted-foreground sm:basis-auto sm:ml-2">
               {currentPage}/{totalPages} 페이지 ({filteredPosts.length}개)
             </span>
           </div>
