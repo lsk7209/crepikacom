@@ -43,8 +43,8 @@ function processInline(text: string): React.ReactNode {
           const isExt = url.startsWith('http');
           parts.push(
             isExt
-              ? <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">{linkText}</a>
-              : <Link key={i} to={url} className="text-primary underline hover:text-primary/80">{linkText}</Link>
+              ? <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline decoration-primary/40 underline-offset-4 hover:text-primary/80">{linkText}</a>
+              : <Link key={i} to={url} className="font-medium text-primary underline decoration-primary/40 underline-offset-4 hover:text-primary/80">{linkText}</Link>
           );
           i = cp + 1;
           continue;
@@ -77,12 +77,12 @@ export function MarkdownContent({ content, className = '' }: { content: string; 
 
     // Headings
     if (trimmed.startsWith('### ')) {
-      elements.push(<h3 key={i} className="text-xl font-bold mt-6 mb-3">{processInline(trimmed.slice(4))}</h3>);
+      elements.push(<h3 key={i} className="text-xl font-bold mt-6 mb-3 text-foreground">{processInline(trimmed.slice(4))}</h3>);
       i++;
       continue;
     }
     if (trimmed.startsWith('## ')) {
-      elements.push(<h2 key={i} className="text-2xl font-bold mt-8 mb-4">{processInline(trimmed.slice(3))}</h2>);
+      elements.push(<h2 key={i} className="text-2xl font-bold mt-8 mb-4 text-foreground">{processInline(trimmed.slice(3))}</h2>);
       i++;
       continue;
     }
@@ -92,11 +92,11 @@ export function MarkdownContent({ content, className = '' }: { content: string; 
       const items: React.ReactNode[] = [];
       while (i < lines.length && lines[i].trim().startsWith('- ')) {
         const txt = lines[i].trim().slice(2);
-        items.push(<li key={i} className="mb-1">{processInline(txt)}</li>);
+        items.push(<li key={i} className="mb-2 pl-1 marker:text-cyan-300">{processInline(txt)}</li>);
         i++;
       }
       elements.push(
-        <ul key={`ul-${i}`} className="list-disc list-inside mb-4 space-y-1 ml-2 text-base leading-relaxed">
+        <ul key={`ul-${i}`} className="mb-5 ml-5 list-disc space-y-1 text-base leading-8 text-foreground/90">
           {items}
         </ul>
       );
@@ -108,11 +108,11 @@ export function MarkdownContent({ content, className = '' }: { content: string; 
       const items: React.ReactNode[] = [];
       while (i < lines.length && /^\d+\.\s/.test(lines[i].trim())) {
         const txt = lines[i].trim().replace(/^\d+\.\s/, '');
-        items.push(<li key={i} className="mb-1">{processInline(txt)}</li>);
+        items.push(<li key={i} className="mb-2 pl-1 marker:text-amber-300">{processInline(txt)}</li>);
         i++;
       }
       elements.push(
-        <ol key={`ol-${i}`} className="list-decimal list-inside mb-4 space-y-1 ml-2 text-base leading-relaxed">
+        <ol key={`ol-${i}`} className="mb-5 ml-5 list-decimal space-y-1 text-base leading-8 text-foreground/90">
           {items}
         </ol>
       );
@@ -120,7 +120,7 @@ export function MarkdownContent({ content, className = '' }: { content: string; 
     }
 
     elements.push(
-      <p key={i} className="mb-4 text-base leading-relaxed">
+      <p key={i} className="mb-5 text-base leading-8 text-foreground/90">
         {processInline(trimmed)}
       </p>
     );

@@ -45,6 +45,11 @@ const CATEGORY_ICONS: Record<string, React.ElementType> = {
   "case-study": Award,
 };
 
+const CARD_ACCENTS = [
+  "before:bg-cyan-400/80 hover:shadow-cyan-500/10",
+  "before:bg-amber-400/80 hover:shadow-amber-500/10",
+] as const;
+
 const POSTS_PER_PAGE = 12;
 
 const VALID_CATEGORIES = ["guide", "tips", "insights", "case-study"] as const;
@@ -272,14 +277,16 @@ export default function BlogList() {
 
         {/* Blog Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {paginatedPosts.map((post) => (
+          {paginatedPosts.map((post, index) => (
             <Link key={post.slug} to={`/blog/${post.slug}`} className="group">
-              <Card className="h-full transition-all hover:shadow-lg hover:scale-105 hover:border-primary/50 overflow-hidden">
+              <Card
+                className={`relative h-full overflow-hidden transition-all before:absolute before:inset-x-0 before:top-0 before:h-1 hover:-translate-y-1 hover:shadow-xl hover:border-primary/40 ${CARD_ACCENTS[index % CARD_ACCENTS.length]}`}
+              >
                 {(() => {
                   const Icon = CATEGORY_ICONS[post.category];
                   return (
                     <div
-                      className={`w-full h-36 bg-gradient-to-br ${CATEGORY_GRADIENTS[post.category]} flex flex-col items-center justify-center gap-2 relative overflow-hidden`}
+                      className={`w-full h-36 bg-gradient-to-br ${CATEGORY_GRADIENTS[post.category]} flex flex-col items-center justify-center gap-2 relative overflow-hidden border-b border-white/10`}
                     >
                       <Icon className="h-10 w-10 text-white/80" />
                       <span className="text-xs text-white/70 font-medium px-3 text-center line-clamp-1">
@@ -290,17 +297,17 @@ export default function BlogList() {
                     </div>
                   );
                 })()}
-                <CardHeader>
+                <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-3">
                     <Badge variant="outline">
                       {CATEGORY_LABELS[post.category]}
                     </Badge>
                     <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
-                  <CardTitle className="group-hover:text-primary transition-colors line-clamp-2">
+                  <CardTitle className="leading-tight group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}
                   </CardTitle>
-                  <CardDescription className="line-clamp-3 mt-2">
+                  <CardDescription className="line-clamp-3 mt-2 leading-relaxed">
                     {post.description}
                   </CardDescription>
                 </CardHeader>

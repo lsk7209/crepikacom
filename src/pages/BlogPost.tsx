@@ -53,6 +53,11 @@ const CATEGORY_ICONS: Record<string, React.ElementType> = {
   insights: TrendingUp,
   "case-study": Award,
 };
+
+const SECTION_ACCENTS = [
+  "border-cyan-400/50 bg-cyan-400/10 text-cyan-200",
+  "border-amber-400/50 bg-amber-400/10 text-amber-200",
+] as const;
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 const CATEGORY_OG_IMAGES: Record<string, string> = {
@@ -353,10 +358,14 @@ export default function BlogPost() {
         )}
 
         {/* Introduction */}
-        <section className="mb-12">
+        <section className="mb-12 rounded-lg border border-cyan-400/20 bg-cyan-400/5 p-5 md:p-6">
+          <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-cyan-200">
+            <Lightbulb className="h-4 w-4" />
+            핵심 요약
+          </div>
           <MarkdownContent
             content={post.content.introduction}
-            className="text-lg"
+            className="text-lg [&_p:last-child]:mb-0"
           />
         </section>
 
@@ -364,15 +373,23 @@ export default function BlogPost() {
         {post.content.sections.map((section, idx) => (
           <React.Fragment key={idx}>
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6" id={`section-${idx}`}>
-                {section.heading ?? section.title}
+              <h2
+                className="mb-6 flex scroll-mt-24 items-start gap-3 text-3xl font-bold leading-tight"
+                id={`section-${idx}`}
+              >
+                <span
+                  className={`mt-1 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-md border text-sm font-bold ${SECTION_ACCENTS[idx % SECTION_ACCENTS.length]}`}
+                >
+                  {idx + 1}
+                </span>
+                <span>{section.heading ?? section.title}</span>
               </h2>
               <MarkdownContent content={section.content} />
 
               {section.subsections?.map((sub, subIdx) => (
                 <div
                   key={subIdx}
-                  className="ml-4 mb-6 pl-4 border-l-4 border-primary/20 mt-6"
+                  className="ml-2 mb-6 mt-6 border-l-4 border-amber-400/30 bg-amber-400/[0.03] pl-4"
                 >
                   <h3 className="text-2xl font-semibold mb-4">
                     {sub.subheading}
@@ -387,9 +404,9 @@ export default function BlogPost() {
         {/* Conclusion */}
         <section
           ref={conclusionRef}
-          className="mb-12 bg-muted/30 rounded-lg p-6"
+          className="mb-12 rounded-lg border border-amber-400/20 bg-amber-400/5 p-6"
         >
-          <h2 className="text-2xl font-bold mb-4">결론</h2>
+          <h2 className="text-2xl font-bold mb-4 text-amber-100">결론</h2>
           <MarkdownContent content={post.content.conclusion} />
         </section>
 
