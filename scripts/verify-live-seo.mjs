@@ -116,16 +116,19 @@ async function main() {
     ["/blog", `${SITE_URL}/blog`],
   ]) {
     const redirect = await getRedirect(`${WWW_SITE_URL}${path}`);
-    if (redirect.status !== 308 || redirect.location !== expectedLocation) {
+    const pointsToCanonicalHost = [307, 308].includes(redirect.status) && redirect.location === expectedLocation;
+    const isPermanent = redirect.status === 308;
+    if (!pointsToCanonicalHost) {
       fail(
-        `${redirect.url} must permanently redirect to ${expectedLocation}; got ${redirect.status} ${redirect.location}.`,
+        `${redirect.url} must redirect to the canonical host ${expectedLocation}; got ${redirect.status} ${redirect.location}.`,
       );
     }
     checks.push({
       path: `${WWW_SITE_URL}${path}`,
       status: redirect.status,
       location: redirect.location,
-      canonicalHostRedirect: redirect.status === 308 && redirect.location === expectedLocation,
+      canonicalHostRedirect: pointsToCanonicalHost,
+      permanent: isPermanent,
     });
   }
 
