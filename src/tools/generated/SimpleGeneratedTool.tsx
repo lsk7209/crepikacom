@@ -1446,6 +1446,190 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "collaboration-email-builder": {
+    id: "collaboration-email-builder",
+    buttonLabel: "협업 메일 만들기",
+    fields: [
+      { key: "brand", label: "브랜드/담당자", type: "text", placeholder: "예: 브랜드명 또는 담당자님" },
+      { key: "creator", label: "내 채널 소개", type: "textarea", placeholder: "예: 블로그와 인스타그램에서 크리에이터 도구와 SEO 팁을 다룹니다." },
+      { key: "offer", label: "제안 내용", type: "textarea", placeholder: "예: 제품 사용 경험 기반 리뷰 콘텐츠와 숏폼 2개 제작" },
+    ],
+    run: ({ brand, creator, offer }) => {
+      const brandText = brand.trim() || "담당자님";
+      const creatorText = creator.trim() || "저는 특정 독자층을 대상으로 실용 콘텐츠를 제작하는 크리에이터입니다.";
+      const offerText = offer.trim() || "브랜드 메시지와 독자 니즈를 연결한 콘텐츠 협업을 제안드립니다.";
+      const email = [
+        `제목: ${brandText}와 함께할 콘텐츠 협업 제안드립니다`,
+        "",
+        `안녕하세요, ${brandText}.`,
+        "",
+        creatorText,
+        "",
+        "이번에 아래와 같은 협업을 제안드리고 싶습니다.",
+        offerText,
+        "",
+        "협업 시 기대할 수 있는 부분은 다음과 같습니다.",
+        "1. 실제 사용 맥락을 담은 자연스러운 콘텐츠",
+        "2. 블로그/SNS 채널을 활용한 재활용 가능한 노출",
+        "3. 결과 확인이 쉬운 링크와 CTA 구성",
+        "",
+        "검토 가능하시면 간단한 회신 부탁드립니다. 감사합니다.",
+      ].join("\n");
+
+      return {
+        summary: "브랜드 담당자에게 보낼 협업 제안 메일 초안입니다.",
+        output: email,
+        metrics: [
+          { label: "길이", value: `${email.length}자`, tone: "primary" },
+          { label: "구성", value: "소개/제안/기대효과", tone: "accent" },
+          { label: "대상", value: brandText },
+        ],
+        tips: [
+          "첫 메일은 길게 설득하기보다 왜 적합한 협업인지 빠르게 보여주세요.",
+          "채널 수치, 대표 콘텐츠, 예상 산출물을 구체적으로 넣으면 답장률이 좋아집니다.",
+          "가격부터 앞세우기보다 협업 목적과 산출물 범위를 먼저 합의하세요.",
+        ],
+      };
+    },
+  },
+  "comment-reply-template-builder": {
+    id: "comment-reply-template-builder",
+    buttonLabel: "댓글 답변 만들기",
+    fields: [
+      { key: "comment", label: "받은 댓글", type: "textarea", placeholder: "예: 이 방법은 초보자도 바로 적용할 수 있나요?" },
+      { key: "tone", label: "톤", type: "text", placeholder: "예: 친절한 전문가, 짧고 따뜻하게" },
+      { key: "nextAction", label: "다음 행동", type: "text", placeholder: "예: 관련 체크리스트 확인하기" },
+    ],
+    run: ({ comment, tone, nextAction }) => {
+      const commentText = comment.trim() || "질문 주셔서 감사합니다.";
+      const toneText = tone.trim() || "친절하게";
+      const actionText = nextAction.trim() || "필요하면 관련 글도 함께 확인해 보세요.";
+      const replies = [
+        `${commentText}\n\n좋은 질문입니다. 핵심은 먼저 작은 기준부터 적용해보는 것입니다. ${actionText}`,
+        `${toneText} 답변드리면, 처음에는 전부 완벽히 하려 하기보다 가장 영향이 큰 한 가지부터 확인하는 편이 좋습니다. ${actionText}`,
+        `맞습니다. 이 부분에서 많이 막히는데요. 우선 현재 상태를 점검한 뒤 부족한 항목만 보강해보세요. ${actionText}`,
+      ];
+
+      return {
+        summary: "상황별로 바로 다듬어 쓸 수 있는 댓글 답변 3개를 만들었습니다.",
+        output: replies.map((reply, index) => `${index + 1}. ${reply}`).join("\n\n"),
+        metrics: [
+          { label: "답변", value: `${replies.length}개`, tone: "primary" },
+          { label: "톤", value: toneText, tone: "accent" },
+          { label: "CTA", value: nextAction.trim() ? "있음" : "기본" },
+        ],
+        tips: [
+          "댓글 답변은 먼저 인정, 다음에 핵심 답변, 마지막에 추가 행동 순서가 자연스럽습니다.",
+          "모든 댓글에 링크를 넣으면 홍보처럼 보일 수 있으니 필요한 경우에만 연결하세요.",
+          "반복 질문은 FAQ나 블로그 글로 확장하면 콘텐츠 소재가 됩니다.",
+        ],
+      };
+    },
+  },
+  "pinned-comment-cta-builder": {
+    id: "pinned-comment-cta-builder",
+    buttonLabel: "고정댓글 CTA 만들기",
+    fields: [
+      { key: "content", label: "게시물 내용", type: "textarea", placeholder: "게시물이나 영상의 핵심 내용을 입력하세요." },
+      { key: "goal", label: "목표 행동", type: "text", placeholder: "예: 블로그 글 확인, 저장, 댓글 참여, 자료 다운로드" },
+    ],
+    run: ({ content, goal }) => {
+      const topic = content.trim().split(/[.\n]/)[0]?.slice(0, 80) || "오늘 콘텐츠";
+      const goalText = goal.trim() || "저장하고 필요할 때 다시 확인하기";
+      const ctas = [
+        `${topic}가 필요했다면 이 댓글을 저장해두세요. 다음 단계는 ${goalText}입니다.`,
+        `핵심만 다시 정리하면: 지금 할 일은 ${goalText}. 놓치지 않게 고정해둡니다.`,
+        `더 자세히 보고 싶다면 ${goalText}. 질문은 댓글로 남겨주세요.`,
+        `이 콘텐츠가 도움 됐다면 저장 후 ${goalText}까지 이어가 보세요.`,
+      ];
+
+      return {
+        summary: "게시물 목적에 맞는 고정댓글 CTA 후보를 만들었습니다.",
+        output: ctas.map((cta, index) => `${index + 1}. ${cta}`).join("\n"),
+        metrics: [
+          { label: "CTA 후보", value: `${ctas.length}개`, tone: "primary" },
+          { label: "목표", value: goalText, tone: "accent" },
+          { label: "주제", value: topic },
+        ],
+        tips: [
+          "고정댓글은 본문을 반복하기보다 다음 행동을 분명히 보여주는 역할이 좋습니다.",
+          "하나의 댓글에 여러 행동을 요구하면 전환이 약해집니다.",
+          "질문 유도형 CTA는 커뮤니티 반응을 만들 때 유용합니다.",
+        ],
+      };
+    },
+  },
+  "content-repurpose-planner": {
+    id: "content-repurpose-planner",
+    buttonLabel: "재활용 계획 만들기",
+    fields: [
+      { key: "source", label: "원본 콘텐츠", type: "textarea", placeholder: "예: 블로그 SEO 체크리스트 글" },
+      { key: "platforms", label: "재활용 플랫폼", type: "text", placeholder: "예: 인스타그램, 유튜브 쇼츠, 링크드인, 스레드" },
+    ],
+    run: ({ source, platforms }) => {
+      const sourceText = source.trim() || "원본 콘텐츠";
+      const platformList = (platforms.trim() || "인스타그램, 유튜브 쇼츠, 링크드인, 스레드")
+        .split(/[,/]+/)
+        .map((item) => item.trim())
+        .filter(Boolean);
+      const plans = platformList.map((platform) => {
+        if (/쇼츠|릴스|short/i.test(platform)) return `${platform}: 핵심 3가지를 45초 대본과 자막 카드로 변환`;
+        if (/인스타/i.test(platform)) return `${platform}: 체크리스트형 캐러셀 5장과 저장 CTA로 변환`;
+        if (/링크드인/i.test(platform)) return `${platform}: 경험에서 얻은 기준 3가지 인사이트 글로 변환`;
+        if (/스레드|x/i.test(platform)) return `${platform}: 번호가 붙은 5~7개 짧은 포스트로 분할`;
+        return `${platform}: 핵심 요약, 예시, CTA를 플랫폼 문법에 맞게 재구성`;
+      });
+
+      return {
+        summary: `${platformList.length}개 플랫폼용 콘텐츠 재활용 계획을 만들었습니다.`,
+        output: [`원본: ${sourceText}`, "", ...plans].join("\n"),
+        metrics: [
+          { label: "플랫폼", value: `${platformList.length}개`, tone: "primary" },
+          { label: "원본", value: sourceText.slice(0, 30), tone: "accent" },
+          { label: "목적", value: "Repurpose" },
+        ],
+        tips: [
+          "원본을 그대로 복사하지 말고 플랫폼마다 소비 방식에 맞게 구조를 바꾸세요.",
+          "하나의 블로그 글은 캐러셀, 쇼츠, 스레드, 뉴스레터 소재로 나눌 수 있습니다.",
+          "재활용 콘텐츠마다 원문 링크나 관련 도구 CTA를 자연스럽게 연결하세요.",
+        ],
+      };
+    },
+  },
+  "publishing-calendar-planner": {
+    id: "publishing-calendar-planner",
+    buttonLabel: "발행 캘린더 만들기",
+    fields: [
+      { key: "themes", label: "콘텐츠 주제", type: "textarea", placeholder: "SEO 점검\nSNS 캡션\n애드센스 승인\n이미지 최적화" },
+      { key: "days", label: "발행 일수", type: "number", placeholder: "14" },
+    ],
+    run: ({ themes, days }) => {
+      const themeList = themes.split("\n").map((line) => line.trim()).filter(Boolean);
+      const fallbackThemes = ["SEO 점검", "SNS 글쓰기", "콘텐츠 재활용", "크리에이터 도구"];
+      const topics = themeList.length ? themeList : fallbackThemes;
+      const totalDays = Math.min(30, Math.max(7, Number(days) || 14));
+      const rows = Array.from({ length: totalDays }, (_, index) => {
+        const topic = topics[index % topics.length];
+        const format = ["블로그 글", "인스타그램", "쇼츠/릴스", "스레드"][index % 4];
+        return `Day ${index + 1}: ${topic} - ${format} - CTA: 관련 도구 확인`;
+      });
+
+      return {
+        summary: `${totalDays}일 콘텐츠 발행 캘린더 초안입니다.`,
+        output: rows.join("\n"),
+        metrics: [
+          { label: "기간", value: `${totalDays}일`, tone: "primary" },
+          { label: "주제", value: `${topics.length}개`, tone: "accent" },
+          { label: "포맷", value: "4종 순환" },
+        ],
+        tips: [
+          "같은 주제를 여러 포맷으로 재활용하면 제작 부담이 줄어듭니다.",
+          "발행 캘린더에는 제작일, 검수일, 발행일을 분리해두는 편이 안전합니다.",
+          "성과가 좋은 주제는 다음 주 캘린더에서 확장 콘텐츠로 이어가세요.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {

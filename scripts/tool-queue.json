@@ -410,7 +410,7 @@
     "type": "builder",
     "intent": "브랜드나 크리에이터에게 보낼 협업 제안 메일 구조를 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-16T01:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/collaboration-email-builder"
@@ -423,7 +423,7 @@
     "type": "builder",
     "intent": "자주 받는 댓글에 쓸 자연스러운 답변 템플릿을 만듭니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-16T06:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/comment-reply-template-builder"
@@ -436,7 +436,7 @@
     "type": "builder",
     "intent": "SNS 고정댓글에 쓸 행동 유도 문구를 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-16T11:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/pinned-comment-cta-builder"
@@ -449,7 +449,7 @@
     "type": "builder",
     "intent": "하나의 아이디어를 블로그, 릴스, 스레드, 뉴스레터로 확장합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-16T16:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/content-repurpose-planner"
@@ -462,7 +462,7 @@
     "type": "builder",
     "intent": "플랫폼별 목표에 맞춰 주간 발행 계획을 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-16T21:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/publishing-calendar-planner"
