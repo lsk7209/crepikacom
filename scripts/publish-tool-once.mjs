@@ -116,6 +116,7 @@ function commitAndPush(tool) {
       "src/data/tools-config.ts",
       "public/sitemap.xml",
       "public/ai-index.json",
+      "public/feed.xml",
       "public/llms.txt",
       "public/llms-full.txt",
       `public/tools/${tool.id}`,

@@ -177,6 +177,13 @@ function validatePublicFiles() {
   if (!existsSync("public/feed.xml")) {
     fail("public/feed.xml is missing; keep a feed.xml alias for RSS client compatibility.");
   }
+  const vercelConfig = requireFile("vercel.json");
+  if (/\"source\"\s*:\s*\"\/feed\.xml\"/i.test(vercelConfig)) {
+    fail("vercel.json must not redirect /feed.xml now that public/feed.xml is generated.");
+  }
+  if (!vercelConfig.includes("feed\\\\.xml")) {
+    fail("vercel.json cache headers must include feed.xml.");
+  }
 
   const manualAdSlotFiles = [];
   for (const root of ["src", "public"]) {
