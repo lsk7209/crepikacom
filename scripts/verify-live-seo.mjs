@@ -927,6 +927,7 @@ async function validateDiscoveryConsistency() {
     guid.startsWith(`${SITE_URL}/blog/`),
   );
   const rssItems = parseRssItems(rssResult.body).filter((item) => item.link.startsWith(`${SITE_URL}/blog/`));
+  const feedItems = parseRssItems(feedResult.body).filter((item) => item.link.startsWith(`${SITE_URL}/blog/`));
 
   const duplicateSitemapUrls = listDuplicateValues(sitemapBlogUrls);
   const duplicateRssLinks = listDuplicateValues(rssLinks);
@@ -957,7 +958,12 @@ async function validateDiscoveryConsistency() {
       fail(`RSS/feed item is missing from sitemap.xml: ${url}`);
     }
     const rssItem = rssItems[index];
+    const feedItem = feedItems[index];
     const rssDate = rssPubDateToDateOnly(rssItem?.pubDate ?? "", `rss.xml pubDate for ${url}`);
+    const feedDate = rssPubDateToDateOnly(feedItem?.pubDate ?? "", `feed.xml pubDate for ${url}`);
+    if (feedDate && rssDate && feedDate !== rssDate) {
+      fail(`feed.xml pubDate for ${url} must match rss.xml pubDate date (${rssDate}); got ${feedDate}.`);
+    }
     const sitemapLastmod = sitemapEntries.get(url)?.lastmod;
     if (rssDate && sitemapLastmod !== rssDate) {
       fail(`sitemap.xml lastmod for recent RSS item ${url} must match rss.xml pubDate date (${rssDate}); got ${sitemapLastmod || "missing"}.`);

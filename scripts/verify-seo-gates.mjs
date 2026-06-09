@@ -321,6 +321,28 @@ function validateDateNotFuture(value, context) {
   }
 }
 
+function parseRssItems(source) {
+  return [...source.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((match) => {
+    const item = match[1];
+    return {
+      link: item.match(/<link>([\s\S]*?)<\/link>/)?.[1]?.trim() ?? "",
+      guid: item.match(/<guid[^>]*>([\s\S]*?)<\/guid>/)?.[1]?.trim() ?? "",
+      pubDate: item.match(/<pubDate>([\s\S]*?)<\/pubDate>/)?.[1]?.trim() ?? "",
+    };
+  });
+}
+
+function rssPubDateToDateOnly(value, context) {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) {
+    fail(`${context} must be a valid RSS pubDate; got ${value || "missing"}.`);
+    return "";
+  }
+  const dateOnly = parsed.toISOString().slice(0, 10);
+  validateDateNotFuture(dateOnly, context);
+  return dateOnly;
+}
+
 function extractAnchorHrefs(body) {
   return [...body.matchAll(/<a\b[^>]*\shref=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1]);
 }
@@ -970,20 +992,21 @@ function validateSitemapAndRss(queue, posts) {
   if (!rss.includes("<language>ko-KR</language>")) {
     fail("rss.xml must declare ko-KR language.");
   }
-  const items = countMatches(rss, /<item>/g);
-  if (items < 20) {
-    fail(`rss.xml should expose a substantial recent feed; found ${items} items.`);
+  const itemCount = countMatches(rss, /<item>/g);
+  if (itemCount < 20) {
+    fail(`rss.xml should expose a substantial recent feed; found ${itemCount} items.`);
   }
-  if (items > 100) {
-    fail(`rss.xml should be capped at 100 items; found ${items}.`);
+  if (itemCount > 100) {
+    fail(`rss.xml should be capped at 100 items; found ${itemCount}.`);
   }
-  const expectedRecentBlogUrls = posts
+  const recentPosts = posts
     .slice()
     .reverse()
-    .slice(0, Math.min(100, posts.length))
-    .map((post) => `${SITE_URL}/blog/${post.slug}`);
+    .slice(0, Math.min(100, posts.length));
+  const expectedRecentBlogUrls = recentPosts.map((post) => `${SITE_URL}/blog/${post.slug}`);
   const rssLinks = extractXmlTags(rss, "link").filter((link) => link.startsWith(`${SITE_URL}/blog/`));
   const rssGuids = extractXmlTags(rss, "guid").filter((guid) => guid.startsWith(`${SITE_URL}/blog/`));
+  const rssItems = parseRssItems(rss).filter((item) => item.link.startsWith(`${SITE_URL}/blog/`));
   const duplicateRssLinks = listDuplicateValues(rssLinks);
   if (duplicateRssLinks.length) {
     fail(`rss.xml has duplicate item links: ${[...new Set(duplicateRssLinks)].slice(0, 10).join(", ")}`);
@@ -997,6 +1020,15 @@ function validateSitemapAndRss(queue, posts) {
     }
     if (rssGuids[index] !== url) {
       fail(`rss.xml guid ${index + 1} must match its canonical link ${url}; got ${rssGuids[index] || "missing"}.`);
+    }
+    const expectedLastmod = recentPosts[index]?.dateModified || recentPosts[index]?.publishDate;
+    const rssDate = rssPubDateToDateOnly(rssItems[index]?.pubDate ?? "", `rss.xml pubDate for ${url}`);
+    const sitemapLastmod = sitemapEntries.get(url)?.lastmod;
+    if (rssDate && expectedLastmod && rssDate !== expectedLastmod) {
+      fail(`rss.xml pubDate for ${url} must match post metadata (${expectedLastmod}); got ${rssDate}.`);
+    }
+    if (rssDate && sitemapLastmod !== rssDate) {
+      fail(`sitemap.xml lastmod for recent RSS item ${url} must match rss.xml pubDate date (${rssDate}); got ${sitemapLastmod || "missing"}.`);
     }
   }
   for (const post of posts.slice().reverse().slice(0, Math.min(20, posts.length))) {
@@ -1016,12 +1048,13 @@ function validateSitemapAndRss(queue, posts) {
   if (!feed.includes("<language>ko-KR</language>")) {
     fail("feed.xml must declare ko-KR language.");
   }
-  const feedItems = countMatches(feed, /<item>/g);
-  if (feedItems !== items) {
-    fail(`feed.xml item count (${feedItems}) must match rss.xml (${items}).`);
+  const feedItemCount = countMatches(feed, /<item>/g);
+  if (feedItemCount !== itemCount) {
+    fail(`feed.xml item count (${feedItemCount}) must match rss.xml (${itemCount}).`);
   }
   const feedLinks = extractXmlTags(feed, "link").filter((link) => link.startsWith(`${SITE_URL}/blog/`));
   const feedGuids = extractXmlTags(feed, "guid").filter((guid) => guid.startsWith(`${SITE_URL}/blog/`));
+  const feedItems = parseRssItems(feed).filter((item) => item.link.startsWith(`${SITE_URL}/blog/`));
   const duplicateFeedLinks = listDuplicateValues(feedLinks);
   if (duplicateFeedLinks.length) {
     fail(`feed.xml has duplicate item links: ${[...new Set(duplicateFeedLinks)].slice(0, 10).join(", ")}`);
@@ -1032,9 +1065,14 @@ function validateSitemapAndRss(queue, posts) {
   if (JSON.stringify(feedGuids) !== JSON.stringify(rssGuids)) {
     fail("feed.xml item guids must exactly match rss.xml item guids.");
   }
-  for (const url of rssLinks) {
+  for (const [index, url] of rssLinks.entries()) {
     if (!locs.includes(url)) {
       fail(`RSS/feed item is missing from sitemap.xml: ${url}`);
+    }
+    const feedDate = rssPubDateToDateOnly(feedItems[index]?.pubDate ?? "", `feed.xml pubDate for ${url}`);
+    const rssDate = rssPubDateToDateOnly(rssItems[index]?.pubDate ?? "", `rss.xml pubDate for ${url}`);
+    if (feedDate && rssDate && feedDate !== rssDate) {
+      fail(`feed.xml pubDate for ${url} must match rss.xml pubDate date (${rssDate}); got ${feedDate}.`);
     }
   }
   for (const post of posts.slice().reverse().slice(0, Math.min(20, posts.length))) {
