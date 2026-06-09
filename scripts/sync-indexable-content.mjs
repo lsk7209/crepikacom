@@ -2,7 +2,7 @@
 import { readFileSync, renameSync, writeFileSync } from "node:fs";
 import vm from "node:vm";
 
-const SITE_URL = "https://www.crepika.com";
+const SITE_URL = "https://crepika.com";
 const BLOG_FILE = "src/data/blog-content.ts";
 const META_FILE = "src/data/blog-posts-meta.ts";
 const SITEMAP_FILE = "public/sitemap.xml";

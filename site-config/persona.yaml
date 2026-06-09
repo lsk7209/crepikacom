@@ -62,9 +62,9 @@ seo:
   naver_desc_max: 80
   google_title_max: 60
   google_desc_max: 160
-  canonical_base: https://www.crepika.com
+  canonical_base: https://crepika.com
   og_locale: ko_KR
-  og_image: https://www.crepika.com/og-image.png
+  og_image: https://crepika.com/og-image.png
 
 monetization:
   adsense_pub_id: ca-pub-3050601904412736

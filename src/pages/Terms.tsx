@@ -12,12 +12,12 @@ export default function Terms() {
           content="크레피카 이용약관. 무료 온라인 크리에이터 도구 사용 시 적용되는 서비스 이용 조건, 금지 행위, 면책 조항을 확인하세요."
         />
         <meta name="keywords" content="이용약관, 서비스 약관, 크레피카 정책, 사용 조건" />
-        <link rel="canonical" href="https://www.crepika.com/terms" />
+        <link rel="canonical" href="https://crepika.com/terms" />
         <meta name="robots" content="index,follow" />
         <meta property="og:title" content="이용약관 | 크레피카" />
         <meta property="og:description" content="크레피카 이용약관. 무료 온라인 크리에이터 도구 사용 시 적용되는 서비스 이용 조건을 확인하세요." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.crepika.com/terms" />
+        <meta property="og:url" content="https://crepika.com/terms" />
         <meta property="og:site_name" content="크레피카" />
       </Helmet>
 

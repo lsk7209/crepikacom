@@ -31,7 +31,7 @@ import { MarkdownContent } from "@/lib/markdown";
 import { trackBlogRead } from "@/utils/analytics";
 import React, { useState, useEffect, useRef } from "react";
 
-const SITE_URL = "https://www.crepika.com";
+const SITE_URL = "https://crepika.com";
 
 const CATEGORY_GRADIENTS: Record<string, string> = {
   guide: "from-blue-600/20 to-cyan-500/10",

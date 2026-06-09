@@ -38,14 +38,14 @@ export default function About() {
           content="크레피카(Crepika)는 크리에이터를 위한 전문 도구를 만드는 팀입니다. SEO, SNS 마케팅, 이미지 최적화 전문가들이 제공하는 100% 무료 도구들을 만나보세요."
         />
         <meta name="keywords" content="크레피카 소개, SEO 전문가, 마케팅 팀, 무료 크리에이터 도구, E-E-A-T" />
-        <link rel="canonical" href="https://www.crepika.com/about" />
+        <link rel="canonical" href="https://crepika.com/about" />
         <meta property="og:title" content="서비스 소개 및 팀 정보 | 크레피카" />
         <meta property="og:description" content="크레피카(Crepika)는 크리에이터를 위한 전문 도구를 만드는 팀입니다. SEO, SNS 마케팅, 이미지 최적화 전문가들이 제공하는 100% 무료 도구들을 만나보세요." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.crepika.com/about" />
+        <meta property="og:url" content="https://crepika.com/about" />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:site_name" content="크레피카" />
-        <meta property="og:image" content="https://www.crepika.com/og-image.png" />
+        <meta property="og:image" content="https://crepika.com/og-image.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -53,21 +53,21 @@ export default function About() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="서비스 소개 및 팀 정보 | 크레피카" />
         <meta name="twitter:description" content="크레피카 팀 소개. SEO, 소셜미디어, 개발 전문가들이 만드는 크리에이터 무료 도구 서비스." />
-        <meta name="twitter:image" content="https://www.crepika.com/og-image.png" />
+        <meta name="twitter:image" content="https://crepika.com/og-image.png" />
         <meta name="twitter:image:alt" content="크레피카 팀 소개" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "AboutPage",
-          "url": "https://www.crepika.com/about",
+          "url": "https://crepika.com/about",
           "name": "크레피카 팀 소개",
           "description": "크리에이터를 위한 무료 온라인 도구 서비스 크레피카의 팀과 철학을 소개합니다.",
           "mainEntity": {
             "@type": "Organization",
-            "@id": "https://www.crepika.com/#organization",
+            "@id": "https://crepika.com/#organization",
             "name": "크레피카",
             "alternateName": "Crepika",
-            "url": "https://www.crepika.com",
-            "logo": "https://www.crepika.com/og-image.png",
+            "url": "https://crepika.com",
+            "logo": "https://crepika.com/og-image.png",
             "email": "support@crepika.com",
             "foundingDate": "2025",
             "description": "국내 크리에이터를 위한 무료 온라인 도구 서비스. 로그인 없이 3초 안에 사용 가능한 QR 생성기, 글자수 세기, WebP 변환기 등을 제공합니다.",
@@ -76,32 +76,32 @@ export default function About() {
             "member": [
               {
                 "@type": "Person",
-                "@id": "https://www.crepika.com/about#kimminhy",
+                "@id": "https://crepika.com/about#kimminhy",
                 "name": "김민혁",
                 "jobTitle": "SEO & 콘텐츠 전략가",
                 "description": "10년차 디지털 마케터이자 SEO 전략가. 데이터 기반 콘텐츠 최적화 전문가로 구글·네이버 양대 검색 생태계에서 크리에이터 성장을 지원합니다.",
-                "image": "https://www.crepika.com/images/avatar-kimminhy.svg",
-                "worksFor": { "@id": "https://www.crepika.com/#organization" },
+                "image": "https://crepika.com/images/avatar-kimminhy.svg",
+                "worksFor": { "@id": "https://crepika.com/#organization" },
                 "knowsAbout": ["SEO", "콘텐츠 마케팅", "네이버 블로그 최적화", "구글 검색 최적화", "AEO", "GEO", "디지털 마케팅", "키워드 전략"]
               },
               {
                 "@type": "Person",
-                "@id": "https://www.crepika.com/about#leejisu",
+                "@id": "https://crepika.com/about#leejisu",
                 "name": "이지수",
                 "jobTitle": "소셜 미디어 스페셜리스트",
                 "description": "수백 명의 크리에이터·브랜드 SNS 성장을 컨설팅한 소셜 미디어 전문가. 인스타그램·유튜브 알고리즘 기반 실전 전략을 공유합니다.",
-                "image": "https://www.crepika.com/images/avatar-leejisu.svg",
-                "worksFor": { "@id": "https://www.crepika.com/#organization" },
+                "image": "https://crepika.com/images/avatar-leejisu.svg",
+                "worksFor": { "@id": "https://crepika.com/#organization" },
                 "knowsAbout": ["인스타그램 마케팅", "소셜 미디어 전략", "SNS 알고리즘", "해시태그 전략", "콘텐츠 크리에이터", "릴스 최적화", "틱톡 마케팅"]
               },
               {
                 "@type": "Person",
-                "@id": "https://www.crepika.com/about#parkjy",
+                "@id": "https://crepika.com/about#parkjy",
                 "name": "박준영",
                 "jobTitle": "수석 개발자",
                 "description": "크레피카 수석 개발자. 사용자 데이터 보안과 도구 성능을 책임지며 브라우저 내 안전한 처리 아키텍처를 설계합니다.",
-                "image": "https://www.crepika.com/images/avatar-parkjy.svg",
-                "worksFor": { "@id": "https://www.crepika.com/#organization" },
+                "image": "https://crepika.com/images/avatar-parkjy.svg",
+                "worksFor": { "@id": "https://crepika.com/#organization" },
                 "knowsAbout": ["웹 개발", "React", "TypeScript", "WebP 최적화", "프론트엔드 성능", "브라우저 보안", "QR 코드"]
               }
             ]
@@ -111,8 +111,8 @@ export default function About() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.crepika.com" },
-            { "@type": "ListItem", "position": 2, "name": "서비스 소개", "item": "https://www.crepika.com/about" }
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://crepika.com" },
+            { "@type": "ListItem", "position": 2, "name": "서비스 소개", "item": "https://crepika.com/about" }
           ]
         })}</script>
       </Helmet>

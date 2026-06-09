@@ -6,7 +6,7 @@ import { readFileSync } from "node:fs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
-const siteUrl = "https://www.crepika.com";
+const siteUrl = "https://crepika.com";
 
 const staticPages = [
   {

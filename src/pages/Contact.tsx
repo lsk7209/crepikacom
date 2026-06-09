@@ -13,14 +13,14 @@ export default function Contact() {
           content="크레피카에 문의하기. 서비스 이용 중 불편한 점이나 제안 사항이 있으신가요? 24시간 이내에 답변해 드리겠습니다."
         />
         <meta name="keywords" content="문의하기, 고객지원, 피드백, 크레피카 연락처, 광고 문의" />
-        <link rel="canonical" href="https://www.crepika.com/contact" />
+        <link rel="canonical" href="https://crepika.com/contact" />
         <meta property="og:title" content="문의하기 | 크레피카" />
         <meta property="og:description" content="크레피카에 문의하기. 서비스 이용 중 불편한 점이나 제안 사항이 있으신가요? 24시간 이내에 답변해 드리겠습니다." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.crepika.com/contact" />
+        <meta property="og:url" content="https://crepika.com/contact" />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:site_name" content="크레피카" />
-        <meta property="og:image" content="https://www.crepika.com/og-image.png" />
+        <meta property="og:image" content="https://crepika.com/og-image.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -28,19 +28,19 @@ export default function Contact() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="문의하기 | 크레피카" />
         <meta name="twitter:description" content="크레피카에 문의하기. 24시간 이내 답변. 기술 문의, 제휴, 새 도구 제안 모두 환영합니다." />
-        <meta name="twitter:image" content="https://www.crepika.com/og-image.png" />
+        <meta name="twitter:image" content="https://crepika.com/og-image.png" />
         <meta name="twitter:image:alt" content="크레피카 문의하기" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ContactPage",
           "name": "크레피카 문의하기",
-          "url": "https://www.crepika.com/contact",
+          "url": "https://crepika.com/contact",
           "description": "크레피카 고객 지원 및 문의 페이지",
           "mainEntity": {
             "@type": "Organization",
             "name": "크레피카",
             "email": "support@crepika.com",
-            "url": "https://www.crepika.com"
+            "url": "https://crepika.com"
           }
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
@@ -57,8 +57,8 @@ export default function Contact() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.crepika.com" },
-            { "@type": "ListItem", "position": 2, "name": "문의하기", "item": "https://www.crepika.com/contact" }
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://crepika.com" },
+            { "@type": "ListItem", "position": 2, "name": "문의하기", "item": "https://crepika.com/contact" }
           ]
         })}</script>
       </Helmet>

@@ -41,8 +41,8 @@ def choose_site(available_sites: list[str], requested_site: str) -> str:
     candidates = [
         requested_site,
         requested_site.rstrip("/"),
-        "https://www.crepika.com/",
-        "https://www.crepika.com",
+        "https://crepika.com/",
+        "https://crepika.com",
         "https://crepika.com/",
         "https://crepika.com",
         "sc-domain:crepika.com",

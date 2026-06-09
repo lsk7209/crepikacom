@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ChevronRight, Home as HomeIcon } from "lucide-react";
 
-const SITE_URL = "https://www.crepika.com";
+const SITE_URL = "https://crepika.com";
 const TOOL_OG_IMAGES: Record<Category, string> = {
   plan:    `${SITE_URL}/images/og-tool-plan.png`,
   create:  `${SITE_URL}/images/og-tool-create.png`,
@@ -48,7 +48,7 @@ export function ToolLayout({
     "url": canonicalUrl,
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
     "operatingSystem": "Web Browser",
-    "publisher": { "@type": "Organization", "name": "크레피카", "url": "https://www.crepika.com" }
+    "publisher": { "@type": "Organization", "name": "크레피카", "url": "https://crepika.com" }
   } : null;
 
   // BreadcrumbList schema
@@ -56,7 +56,7 @@ export function ToolLayout({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.crepika.com" },
+      { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://crepika.com" },
       { "@type": "ListItem", "position": 2, "name": config.titleKo, "item": canonicalUrl }
     ]
   };
