@@ -1733,6 +1733,23 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   analyze: '분석',
 };
 
+const TOOL_ID_ALIASES: Record<string, string> = {
+  'email-analytics': 'ctr-calculator',
+  'email-template': 'text-counter',
+  'hash-generator': 'hashtag-mixer',
+  'hashtag-generator': 'hashtag-mixer',
+  'instagram-spacer': 'insta-spacer',
+  'platform-compare': 'utm-url-builder',
+  'pricing-calculator': 'adsense-rpm-calculator',
+  'revenue-calculator': 'adsense-rpm-calculator',
+  'sns-analytics': 'ctr-calculator',
+  'sns-calendar': 'utm-url-builder',
+};
+
+function resolveToolId(id: string): string {
+  return TOOL_ID_ALIASES[id] ?? id;
+}
+
 export function searchTools(query: string): ToolConfig[] {
   const publishedTools = TOOLS_CONFIG.filter(tool => tool.publicationStatus !== 'ready' && tool.publicationStatus !== 'draft');
   if (!query.trim()) return publishedTools;
@@ -1753,7 +1770,8 @@ export function searchTools(query: string): ToolConfig[] {
 }
 
 export function getToolById(id: string): ToolConfig | undefined {
-  return TOOLS_CONFIG.find(tool => tool.id === id && tool.publicationStatus !== 'ready' && tool.publicationStatus !== 'draft');
+  const resolvedId = resolveToolId(id);
+  return TOOLS_CONFIG.find(tool => tool.id === resolvedId && tool.publicationStatus !== 'ready' && tool.publicationStatus !== 'draft');
 }
 
 export function getToolsByCategory(category: Category): ToolConfig[] {

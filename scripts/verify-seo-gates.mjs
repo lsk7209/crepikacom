@@ -43,6 +43,18 @@ const STATIC_PUBLIC_TOOL_IDS = new Set([
   "hashtag-mixer",
   "qr-generator",
 ]);
+const TOOL_ID_ALIASES = {
+  "email-analytics": "ctr-calculator",
+  "email-template": "text-counter",
+  "hash-generator": "hashtag-mixer",
+  "hashtag-generator": "hashtag-mixer",
+  "instagram-spacer": "insta-spacer",
+  "platform-compare": "utm-url-builder",
+  "pricing-calculator": "adsense-rpm-calculator",
+  "revenue-calculator": "adsense-rpm-calculator",
+  "sns-analytics": "ctr-calculator",
+  "sns-calendar": "utm-url-builder",
+};
 
 const failures = [];
 const warnings = [];
@@ -251,6 +263,17 @@ function validatePublicFiles() {
   );
   if (!hasWwwPermanentRedirect) {
     fail("vercel.json must permanently redirect www.crepika.com paths to the canonical apex host.");
+  }
+  for (const [legacyToolId, canonicalToolId] of Object.entries(TOOL_ID_ALIASES)) {
+    const hasLegacyToolRedirect = parsedVercelConfig?.redirects?.some(
+      (redirect) =>
+        redirect?.source === `/tools/${legacyToolId}` &&
+        redirect?.destination === `/tools/${canonicalToolId}` &&
+        redirect?.permanent === true,
+    );
+    if (!hasLegacyToolRedirect) {
+      fail(`vercel.json must permanently redirect /tools/${legacyToolId} to /tools/${canonicalToolId}.`);
+    }
   }
   if (/\"source\"\s*:\s*\"\/feed\.xml\"/i.test(vercelConfig)) {
     fail("vercel.json must not redirect /feed.xml now that public/feed.xml is generated.");
@@ -713,12 +736,36 @@ function validateQueueCoverage(queue) {
   }
 }
 
+function validateBlogRelatedTools(posts) {
+  const config = requireFile("src/data/tools-config.ts");
+  const configuredToolIds = new Set([...config.matchAll(/\bid:\s*["']([^"']+)["']/g)].map((match) => match[1]));
+  const publishedToolIds = new Set([...STATIC_PUBLIC_TOOL_IDS, ...queuePublishedIds()]);
+
+  for (const post of posts) {
+    for (const rawToolId of post.relatedTools ?? []) {
+      const resolvedToolId = TOOL_ID_ALIASES[rawToolId] ?? rawToolId;
+      if (!configuredToolIds.has(resolvedToolId)) {
+        fail(`Blog post ${post.slug} references unknown related tool: ${rawToolId}.`);
+      }
+      if (!publishedToolIds.has(resolvedToolId)) {
+        fail(`Blog post ${post.slug} references an unpublished related tool: ${rawToolId}.`);
+      }
+    }
+  }
+}
+
+function queuePublishedIds() {
+  const queue = JSON.parse(requireFile("scripts/tool-queue.json"));
+  return queue.filter((item) => item.status === "published").map((item) => item.id);
+}
+
 function main() {
   const queue = JSON.parse(requireFile("scripts/tool-queue.json"));
   const posts = loadRenderablePosts();
   validatePublicFiles();
   validateStaticHtmlBasics();
   validateQueueCoverage(queue);
+  validateBlogRelatedTools(posts);
   validateSitemapAndRss(queue, posts);
   validateGeneratedIndexes(queue, posts);
   validateIndexingAutomation();
@@ -749,6 +796,7 @@ function main() {
           feed: "ok",
           staticHtmlBasics: "ok",
           adsenseAutoAdsOnly: "ok",
+          blogRelatedTools: "ok",
           indexingAutomation: "ok",
           toolPublicationAutomation: "ok",
           qualityAutomation: "ok",

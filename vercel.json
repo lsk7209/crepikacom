@@ -7,6 +7,56 @@
       ],
       "destination": "https://crepika.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/tools/hashtag-generator",
+      "destination": "/tools/hashtag-mixer",
+      "permanent": true
+    },
+    {
+      "source": "/tools/hash-generator",
+      "destination": "/tools/hashtag-mixer",
+      "permanent": true
+    },
+    {
+      "source": "/tools/instagram-spacer",
+      "destination": "/tools/insta-spacer",
+      "permanent": true
+    },
+    {
+      "source": "/tools/email-template",
+      "destination": "/tools/text-counter",
+      "permanent": true
+    },
+    {
+      "source": "/tools/pricing-calculator",
+      "destination": "/tools/adsense-rpm-calculator",
+      "permanent": true
+    },
+    {
+      "source": "/tools/platform-compare",
+      "destination": "/tools/utm-url-builder",
+      "permanent": true
+    },
+    {
+      "source": "/tools/sns-analytics",
+      "destination": "/tools/ctr-calculator",
+      "permanent": true
+    },
+    {
+      "source": "/tools/revenue-calculator",
+      "destination": "/tools/adsense-rpm-calculator",
+      "permanent": true
+    },
+    {
+      "source": "/tools/email-analytics",
+      "destination": "/tools/ctr-calculator",
+      "permanent": true
+    },
+    {
+      "source": "/tools/sns-calendar",
+      "destination": "/tools/utm-url-builder",
+      "permanent": true
     }
   ],
   "rewrites": [
