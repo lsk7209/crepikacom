@@ -1630,6 +1630,210 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "hook-strength-checker": {
+    id: "hook-strength-checker",
+    buttonLabel: "훅 강도 검사하기",
+    fields: [
+      { key: "hook", label: "훅 문장", type: "textarea", placeholder: "예: 블로그 SEO에서 초보자가 가장 많이 놓치는 3가지" },
+      { key: "audience", label: "대상", type: "text", placeholder: "예: 애드센스 승인 준비 중인 블로거" },
+    ],
+    run: ({ hook, audience }) => {
+      const text = hook.trim().replace(/\s+/g, " ");
+      const audienceText = audience.trim();
+      const hasAudience = audienceText ? text.includes(audienceText) || /(초보|블로거|크리에이터|마케터|사업자|운영자)/.test(text) : /(초보|블로거|크리에이터|마케터|사업자|운영자)/.test(text);
+      const hasSpecific = /[0-9]|가지|단계|체크|전후|실수|비교/.test(text);
+      const hasTension = /(놓치|실수|막히|손해|어렵|왜|문제|주의|전)/.test(text);
+      const lengthOk = text.length >= 18 && text.length <= 55;
+      const score = (lengthOk ? 25 : 10) + (hasAudience ? 25 : 8) + (hasSpecific ? 25 : 8) + (hasTension ? 25 : 8);
+
+      return {
+        summary:
+          score >= 80
+            ? "멈춰 볼 이유가 비교적 분명한 훅 문장입니다."
+            : "대상, 구체성, 긴장 요소를 더 앞쪽에 보강하세요.",
+        output: [
+          `대상 신호: ${hasAudience ? "있음" : "부족"}`,
+          `구체성: ${hasSpecific ? "있음" : "부족"}`,
+          `긴장/문제: ${hasTension ? "있음" : "부족"}`,
+          `권장 리라이트: ${audienceText || "타겟 독자"}가 놓치기 쉬운 ${text || "핵심 주제"} 체크 포인트`,
+        ].join("\n"),
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "길이", value: `${text.length}자`, tone: "accent" },
+          { label: "대상", value: audienceText || "자동 판단" },
+        ],
+        tips: [
+          "훅은 주제 소개보다 시청자가 겪는 문제를 먼저 보여줄 때 강해집니다.",
+          "숫자, 실수, 체크리스트, 전후 변화는 정보형 콘텐츠 훅에 잘 맞습니다.",
+          "영상이나 본문에서 바로 증명할 수 없는 과장형 훅은 피하세요.",
+        ],
+      };
+    },
+  },
+  "caption-line-break-cleaner": {
+    id: "caption-line-break-cleaner",
+    buttonLabel: "줄바꿈 정리하기",
+    fields: [
+      { key: "caption", label: "캡션", type: "textarea", placeholder: "인스타그램이나 SNS 캡션을 붙여넣으세요." },
+      { key: "maxLine", label: "권장 줄 길이", type: "number", placeholder: "34" },
+    ],
+    run: ({ caption, maxLine }) => {
+      const max = Math.min(80, Math.max(18, Number(maxLine) || 34));
+      const words = caption.trim().replace(/\s+/g, " ").split(" ").filter(Boolean);
+      const lines: string[] = [];
+      let current = "";
+      for (const word of words) {
+        if ((current ? `${current} ${word}` : word).length <= max) {
+          current = current ? `${current} ${word}` : word;
+        } else {
+          if (current) lines.push(current);
+          current = word;
+        }
+      }
+      if (current) lines.push(current);
+      const paragraphs = lines.reduce<string[]>((acc, line, index) => {
+        acc.push(line);
+        if ((index + 1) % 3 === 0) acc.push("");
+        return acc;
+      }, []);
+      const output = paragraphs.join("\n").trim();
+
+      return {
+        summary: `${lines.length}줄로 캡션 줄바꿈을 정리했습니다.`,
+        output,
+        metrics: [
+          { label: "줄 수", value: `${lines.length}줄`, tone: "primary" },
+          { label: "권장 길이", value: `${max}자`, tone: "accent" },
+          { label: "원문 길이", value: `${caption.trim().length}자` },
+        ],
+        tips: [
+          "모바일 캡션은 한 줄이 길면 읽기 어렵습니다.",
+          "3줄 단위로 빈 줄을 넣으면 정보형 캡션을 스캔하기 쉬워집니다.",
+          "첫 줄과 마지막 CTA는 따로 분리하면 행동 유도가 더 선명합니다.",
+        ],
+      };
+    },
+  },
+  "emoji-density-checker": {
+    id: "emoji-density-checker",
+    buttonLabel: "이모지 밀도 검사하기",
+    fields: [
+      { key: "text", label: "SNS 문구", type: "textarea", placeholder: "검사할 캡션이나 프로필 문구를 붙여넣으세요." },
+    ],
+    run: ({ text }) => {
+      const body = text.trim();
+      const emojiMatches = body.match(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu) ?? [];
+      const emojiCount = emojiMatches.length;
+      const plainLength = body.replace(/\s/g, "").length;
+      const density = plainLength ? (emojiCount / plainLength) * 100 : 0;
+      const score = density <= 2.5 ? 90 : density <= 5 ? 70 : density <= 8 ? 50 : 30;
+
+      return {
+        summary:
+          score >= 80
+            ? "이모지 사용량이 과하지 않은 편입니다."
+            : "이모지가 많아 핵심 문구의 가독성을 해칠 수 있습니다.",
+        output: [
+          `이모지 수: ${emojiCount}개`,
+          `공백 제외 글자수: ${plainLength}자`,
+          `이모지 밀도: ${density.toFixed(2)}%`,
+          `권장: 강조용 이모지는 문단당 0~1개 정도로 제한`,
+        ].join("\n"),
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "이모지", value: `${emojiCount}개`, tone: "accent" },
+          { label: "밀도", value: `${density.toFixed(2)}%` },
+        ],
+        tips: [
+          "이모지는 구조를 돕는 용도로 쓰고, 문장마다 반복하지 않는 편이 좋습니다.",
+          "브랜드가 전문적인 톤이라면 이모지를 더 적게 쓰는 것이 안전합니다.",
+          "중요한 CTA는 이모지보다 명확한 동사로 전달하세요.",
+        ],
+      };
+    },
+  },
+  "sns-cta-library-builder": {
+    id: "sns-cta-library-builder",
+    buttonLabel: "CTA 라이브러리 만들기",
+    fields: [
+      { key: "goal", label: "목표 행동", type: "text", placeholder: "예: 저장, 댓글, 프로필 링크 클릭, 블로그 방문" },
+      { key: "topic", label: "콘텐츠 주제", type: "text", placeholder: "예: 블로그 SEO 체크리스트" },
+    ],
+    run: ({ goal, topic }) => {
+      const goalText = goal.trim() || "저장";
+      const topicText = topic.trim() || "이 콘텐츠";
+      const ctas = [
+        `${topicText}가 필요하다면 지금 ${goalText}해두세요.`,
+        `나중에 다시 볼 수 있게 ${goalText}해두면 좋습니다.`,
+        `다음 단계가 필요하다면 프로필 링크에서 ${topicText} 자료를 확인하세요.`,
+        `이 기준이 도움 됐다면 댓글로 지금 막힌 부분을 남겨주세요.`,
+        `${topicText}를 적용하기 전 체크리스트처럼 다시 확인해보세요.`,
+        `비슷한 주제를 더 보고 싶다면 팔로우하고 다음 글도 확인하세요.`,
+      ];
+
+      return {
+        summary: `${ctas.length}개의 SNS CTA 문구를 만들었습니다.`,
+        output: ctas.map((cta, index) => `${index + 1}. ${cta}`).join("\n"),
+        metrics: [
+          { label: "CTA", value: `${ctas.length}개`, tone: "primary" },
+          { label: "목표", value: goalText, tone: "accent" },
+          { label: "주제", value: topicText },
+        ],
+        tips: [
+          "CTA는 한 게시물에 하나의 행동만 분명히 요청하는 편이 좋습니다.",
+          "저장형 콘텐츠는 '나중에 다시 보기' 이유를 함께 적으세요.",
+          "링크 클릭 CTA는 링크에서 얻을 결과를 구체적으로 보여줘야 합니다.",
+        ],
+      };
+    },
+  },
+  "image-aspect-ratio-checker": {
+    id: "image-aspect-ratio-checker",
+    buttonLabel: "비율 계산하기",
+    fields: [
+      { key: "width", label: "가로(px)", type: "number", placeholder: "1080" },
+      { key: "height", label: "세로(px)", type: "number", placeholder: "1350" },
+    ],
+    run: ({ width, height }) => {
+      const w = Math.max(1, Number(width) || 1080);
+      const h = Math.max(1, Number(height) || 1350);
+      const gcd = (a: number, b: number): number => (b ? gcd(b, a % b) : a);
+      const divisor = gcd(w, h);
+      const ratioW = Math.round(w / divisor);
+      const ratioH = Math.round(h / divisor);
+      const decimal = w / h;
+      const presets = [
+        { name: "Instagram portrait", ratio: 4 / 5 },
+        { name: "Square", ratio: 1 },
+        { name: "Story/Reels", ratio: 9 / 16 },
+        { name: "YouTube thumbnail", ratio: 16 / 9 },
+        { name: "OG image", ratio: 1.91 },
+      ];
+      const nearest = presets.reduce((best, item) =>
+        Math.abs(item.ratio - decimal) < Math.abs(best.ratio - decimal) ? item : best,
+      );
+
+      return {
+        summary: `이미지 비율은 ${ratioW}:${ratioH}입니다.`,
+        output: [
+          `입력 크기: ${w} x ${h}px`,
+          `간단 비율: ${ratioW}:${ratioH}`,
+          `소수 비율: ${decimal.toFixed(3)}`,
+          `가장 가까운 프리셋: ${nearest.name}`,
+        ].join("\n"),
+        metrics: [
+          { label: "비율", value: `${ratioW}:${ratioH}`, tone: "primary" },
+          { label: "크기", value: `${w}x${h}`, tone: "accent" },
+          { label: "프리셋", value: nearest.name },
+        ],
+        tips: [
+          "인스타그램 세로형 피드는 4:5, 릴스와 스토리는 9:16이 일반적입니다.",
+          "OG 이미지는 보통 1200x630에 가까운 1.91:1 비율을 사용합니다.",
+          "업로드 전 플랫폼별 안전 영역에 텍스트가 잘리지 않는지 확인하세요.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {

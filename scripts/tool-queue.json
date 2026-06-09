@@ -475,7 +475,7 @@
     "type": "score-checker",
     "intent": "짧은 훅 문장의 구체성, 긴장감, 독자 적합도를 점검합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-17T02:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/hook-strength-checker"
@@ -488,7 +488,7 @@
     "type": "text-transform",
     "intent": "캡션의 불필요한 공백과 줄바꿈을 정리합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-17T07:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/caption-line-break-cleaner"
@@ -501,7 +501,7 @@
     "type": "score-checker",
     "intent": "이모지 사용량이 과도한지, 문장 가독성을 해치는지 점검합니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-17T12:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/emoji-density-checker"
@@ -514,7 +514,7 @@
     "type": "builder",
     "intent": "플랫폼과 퍼널 단계별 CTA 문구 후보를 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-17T17:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/sns-cta-library-builder"
@@ -527,7 +527,7 @@
     "type": "calculator",
     "intent": "이미지 크기와 비율이 플랫폼 요구사항에 맞는지 계산합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-17T22:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/image-aspect-ratio-checker"
