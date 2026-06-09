@@ -447,6 +447,126 @@ export const GENERATED_TOOL_CONTENT: Record<string, ToolDetailedContent> = {
     ],
     relatedResources: relatedBasics,
   },
+  "markdown-cleaner": {
+    id: "markdown-cleaner",
+    introduction:
+      "마크다운 정리기는 복사 과정에서 흐트러진 공백, 줄바꿈, 제목 간격을 정돈하는 도구입니다. 블로그 초안, README, 노션에서 옮긴 글을 발행 전 빠르게 다듬을 때 유용합니다.",
+    howToUse: {
+      steps: ["마크다운 원문을 붙여넣습니다.", "정리 버튼을 누릅니다.", "결과를 미리 확인하고 필요한 부분을 복사합니다."],
+      tips: ["정리 후 H1, H2, H3 위계는 직접 한 번 더 확인하세요.", "긴 글은 섹션 단위로 정리하면 검토가 쉽습니다."],
+    },
+    keyBenefits: ["불필요한 빈 줄과 끝 공백을 줄입니다.", "제목 앞 공백을 정리해 렌더링 오류를 줄입니다.", "발행 전 문서 품질 점검 시간을 줄입니다."],
+    faq: [
+      { question: "마크다운 내용이 바뀌나요?", answer: "문장 자체를 고쳐 쓰지는 않고 공백, 줄바꿈, 제목 간격처럼 형식 중심으로 정리합니다." },
+      { question: "코드 블록도 완벽히 보존되나요?", answer: "간단한 정리용 도구이므로 긴 기술 문서는 결과를 미리보기에서 확인한 뒤 사용하세요." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "html-entity-converter": {
+    id: "html-entity-converter",
+    introduction:
+      "HTML 엔티티 변환기는 일반 텍스트를 HTML에 안전하게 넣을 수 있는 엔티티로 바꾸거나, 이미 인코딩된 엔티티를 읽기 쉬운 텍스트로 되돌립니다.",
+    howToUse: {
+      steps: ["변환할 텍스트를 붙여넣습니다.", "엔티티가 있으면 디코딩, 없으면 인코딩 결과를 생성합니다.", "HTML 템플릿이나 문서에 맞게 복사합니다."],
+      tips: ["사용자 입력을 HTML에 표시할 때는 인코딩된 값을 쓰세요.", "CMS에서 꺼낸 글이 &amp; 형태로 보이면 디코딩해 검토하세요."],
+    },
+    keyBenefits: ["HTML 표시 오류를 줄입니다.", "복사된 엔티티 문자를 빠르게 읽을 수 있습니다.", "간단한 코드 삽입 전 텍스트를 안전하게 준비합니다."],
+    faq: [
+      { question: "모든 HTML 엔티티를 지원하나요?", answer: "자주 쓰는 amp, lt, gt, quot, #39 중심으로 처리합니다." },
+      { question: "보안용 escaping으로 써도 되나요?", answer: "간단한 텍스트 표시에는 도움이 되지만, 실제 앱 보안은 프레임워크의 escaping 기능을 함께 사용해야 합니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "json-formatter": {
+    id: "json-formatter",
+    introduction:
+      "JSON 포매터는 JSON 문자열을 검증하고 보기 좋은 정렬본과 압축본을 동시에 만들어 줍니다. JSON-LD, 설정 파일, API 응답을 빠르게 확인할 때 사용할 수 있습니다.",
+    howToUse: {
+      steps: ["JSON을 입력창에 붙여넣습니다.", "포맷 버튼을 누릅니다.", "정렬본 또는 압축본을 목적에 맞게 복사합니다."],
+      tips: ["오류가 나면 trailing comma와 따옴표 없는 key를 먼저 확인하세요.", "JSON-LD는 발행 전 Google Rich Results Test로 추가 확인하는 것이 좋습니다."],
+    },
+    keyBenefits: ["JSON 유효성을 즉시 확인합니다.", "리뷰용 정렬본과 삽입용 압축본을 함께 제공합니다.", "구조화 데이터 작업 실수를 줄입니다."],
+    faq: [
+      { question: "JSON5도 지원하나요?", answer: "아니요. 표준 JSON만 처리합니다." },
+      { question: "민감한 데이터를 넣어도 되나요?", answer: "브라우저에서 처리되지만, 공개 도구에는 API 키나 개인정보를 넣지 않는 습관이 안전합니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "csv-to-markdown-table": {
+    id: "csv-to-markdown-table",
+    introduction:
+      "CSV 마크다운 표 변환기는 간단한 CSV 행을 블로그, README, 문서에 바로 넣을 수 있는 마크다운 테이블로 바꿉니다.",
+    howToUse: {
+      steps: ["첫 줄에 헤더가 있는 CSV를 붙여넣습니다.", "변환 버튼을 누릅니다.", "생성된 마크다운 표를 복사합니다."],
+      tips: ["쉼표가 셀 내부에 들어간 복잡한 CSV는 스프레드시트에서 먼저 정리하세요.", "모바일 독자를 위해 표 열은 너무 많지 않게 유지하세요."],
+    },
+    keyBenefits: ["표 작성 시간을 줄입니다.", "문서와 블로그에 맞는 마크다운 형식을 생성합니다.", "간단한 비교표와 체크표를 빠르게 만듭니다."],
+    faq: [
+      { question: "따옴표로 감싼 CSV도 완벽히 처리하나요?", answer: "이 도구는 단순 CSV용입니다. 복잡한 CSV는 전문 파서나 스프레드시트 정리를 권장합니다." },
+      { question: "헤더가 없어도 되나요?", answer: "첫 줄을 헤더로 사용하므로, 가능하면 열 이름을 포함해 주세요." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "markdown-to-plain-text": {
+    id: "markdown-to-plain-text",
+    introduction:
+      "마크다운 일반 텍스트 변환기는 제목, 링크, 강조 문법을 제거해 이메일, SNS, CMS 입력란에 붙이기 쉬운 텍스트를 만듭니다.",
+    howToUse: {
+      steps: ["마크다운 원문을 붙여넣습니다.", "변환 버튼을 누릅니다.", "일반 텍스트 결과를 복사합니다."],
+      tips: ["링크 URL이 필요한 경우 변환 전 별도로 보관하세요.", "문법 제거 후 문단 흐름이 자연스러운지 읽어보세요."],
+    },
+    keyBenefits: ["마크다운 문법을 빠르게 제거합니다.", "SNS 캡션과 이메일 초안으로 재사용하기 쉽습니다.", "복사 붙여넣기 오류를 줄입니다."],
+    faq: [
+      { question: "링크 주소도 보존되나요?", answer: "기본 결과는 링크 텍스트만 남깁니다. URL이 필요하면 원문을 따로 확인하세요." },
+      { question: "HTML 태그도 제거하나요?", answer: "주로 마크다운 문법 제거용입니다. HTML 제거가 필요하면 별도 정리가 필요합니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "text-deduplicator": {
+    id: "text-deduplicator",
+    introduction:
+      "텍스트 중복 제거기는 줄 단위 목록에서 중복과 빈 줄을 제거하고 원래 순서를 유지합니다. 키워드, 제목 후보, 체크리스트 정리에 적합합니다.",
+    howToUse: {
+      steps: ["중복이 섞인 목록을 붙여넣습니다.", "제거 버튼을 누릅니다.", "정리된 목록을 복사합니다."],
+      tips: ["대소문자를 무시하고 같은 줄을 중복으로 처리합니다.", "비슷하지만 완전히 같지 않은 문장은 직접 검토하세요."],
+    },
+    keyBenefits: ["키워드 목록을 빠르게 정리합니다.", "제목 후보 중복을 줄입니다.", "작업 목록의 노이즈를 줄여 검토 속도를 높입니다."],
+    faq: [
+      { question: "순서가 바뀌나요?", answer: "아니요. 처음 등장한 순서를 유지합니다." },
+      { question: "띄어쓰기 차이도 중복으로 보나요?", answer: "앞뒤 공백은 제거하고 비교하지만 문장 중간의 띄어쓰기 차이는 별도 항목으로 남을 수 있습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "case-converter": {
+    id: "case-converter",
+    introduction:
+      "케이스 변환기는 텍스트를 lower, upper, title, kebab, snake, camel case로 변환합니다. URL 슬러그, 변수명, 파일명, 문서 제목 형식을 맞출 때 유용합니다.",
+    howToUse: {
+      steps: ["변환할 텍스트를 입력합니다.", "변환 버튼을 누릅니다.", "필요한 케이스 결과를 복사합니다."],
+      tips: ["URL에는 kebab-case가 읽기 좋습니다.", "코드 변수에는 프로젝트 규칙에 맞는 camelCase 또는 snake_case를 사용하세요."],
+    },
+    keyBenefits: ["여러 케이스를 한 번에 생성합니다.", "파일명과 URL 슬러그 작성 시간을 줄입니다.", "명명 규칙을 일관되게 유지합니다."],
+    faq: [
+      { question: "한국어도 변환되나요?", answer: "한국어는 대소문자 변환 대상은 아니지만 단어 분리와 슬러그 형태 정리에 활용할 수 있습니다." },
+      { question: "공백이 많은 문장도 처리하나요?", answer: "네. 여러 구분자를 단어 단위로 나눠 주요 케이스를 생성합니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "regex-escape-tool": {
+    id: "regex-escape-tool",
+    introduction:
+      "정규식 이스케이프 도구는 점, 괄호, 더하기, 물음표 같은 특수문자가 포함된 텍스트를 정규식에서 문자 그대로 찾을 수 있도록 변환합니다.",
+    howToUse: {
+      steps: ["문자 그대로 찾고 싶은 텍스트를 입력합니다.", "이스케이프 버튼을 누릅니다.", "생성된 패턴을 검색 또는 코드에 사용합니다."],
+      tips: ["이미 정규식으로 작성한 패턴은 이스케이프하지 마세요.", "언어별 정규식 문법 차이가 있으므로 실제 환경에서 테스트하세요."],
+    },
+    keyBenefits: ["특수문자 때문에 검색 패턴이 깨지는 문제를 줄입니다.", "로그 검색과 코드 검색용 literal pattern을 빠르게 만듭니다.", "정규식 초보자의 실수를 줄입니다."],
+    faq: [
+      { question: "정규식을 만들어 주나요?", answer: "복잡한 정규식을 설계하지는 않고 입력 텍스트를 문자 그대로 찾기 좋게 이스케이프합니다." },
+      { question: "어떤 특수문자를 처리하나요?", answer: "점, 별표, 더하기, 물음표, 괄호, 대괄호, 중괄호, 파이프, 역슬래시 등 일반적인 정규식 특수문자를 처리합니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
   "faq-schema-builder": {
     id: "faq-schema-builder",
     introduction:

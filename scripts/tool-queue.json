@@ -1112,7 +1112,7 @@
     "type": "text-transform",
     "intent": "어수선한 마크다운 간격과 제목 구조를 정리합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-27T07:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/markdown-cleaner"
@@ -1125,7 +1125,7 @@
     "type": "text-transform",
     "intent": "HTML 엔티티와 일반 텍스트를 서로 변환합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-27T12:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/html-entity-converter"
@@ -1138,7 +1138,7 @@
     "type": "text-transform",
     "intent": "JSON을 검증, 정렬, 압축합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-27T17:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/json-formatter"
@@ -1151,7 +1151,7 @@
     "type": "text-transform",
     "intent": "CSV 데이터를 마크다운 테이블로 변환합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-27T22:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/csv-to-markdown-table"
@@ -1164,7 +1164,7 @@
     "type": "text-transform",
     "intent": "마크다운 문법을 제거해 복사하기 좋은 텍스트로 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-28T03:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/markdown-to-plain-text"
@@ -1177,7 +1177,7 @@
     "type": "text-transform",
     "intent": "중복된 줄을 제거하면서 기존 순서를 유지합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-28T08:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/text-deduplicator"
@@ -1190,7 +1190,7 @@
     "type": "text-transform",
     "intent": "lower, upper, title, kebab, snake, camel case로 변환합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-28T13:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/case-converter"
@@ -1203,7 +1203,7 @@
     "type": "text-transform",
     "intent": "텍스트를 정규식에서 안전하게 쓸 수 있도록 이스케이프합니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-28T18:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/regex-escape-tool"

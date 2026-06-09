@@ -3376,6 +3376,249 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "markdown-cleaner": {
+    id: "markdown-cleaner",
+    buttonLabel: "Clean markdown",
+    fields: [
+      { key: "text", label: "Markdown text", type: "textarea", placeholder: "# Title\n\n\n- item\n\n\n## Section" },
+    ],
+    run: ({ text }) => {
+      const cleaned = text
+        .replace(/\r\n/g, "\n")
+        .replace(/[ \t]+$/gm, "")
+        .replace(/\n{3,}/g, "\n\n")
+        .replace(/^(#{1,6})([^\s#])/gm, "$1 $2")
+        .trim();
+      const headings = (cleaned.match(/^#{1,6}\s+/gm) ?? []).length;
+
+      return {
+        summary: `Cleaned markdown with ${headings} headings.`,
+        output: cleaned,
+        metrics: [
+          { label: "Characters", value: cleaned.length.toLocaleString(), tone: "primary" },
+          { label: "Headings", value: headings.toLocaleString(), tone: "accent" },
+          { label: "Lines", value: cleaned.split("\n").length.toLocaleString() },
+        ],
+        tips: [
+          "Review heading hierarchy after cleanup because spacing fixes do not decide content structure.",
+          "Keep one blank line between sections for better readability in most markdown renderers.",
+          "Run the final text through preview before publishing long-form content.",
+        ],
+      };
+    },
+  },
+  "html-entity-converter": {
+    id: "html-entity-converter",
+    buttonLabel: "Convert entities",
+    fields: [
+      { key: "text", label: "Text or HTML entities", type: "textarea", placeholder: "Tom & Jerry <b>guide</b> or Tom &amp; Jerry" },
+    ],
+    run: ({ text }) => {
+      const hasEntity = /&(?:amp|lt|gt|quot|#39);/.test(text);
+      const output = hasEntity
+        ? text.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&")
+        : text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+
+      return {
+        summary: hasEntity ? "Decoded common HTML entities." : "Encoded text as safe HTML entities.",
+        output,
+        metrics: [
+          { label: "Mode", value: hasEntity ? "Decode" : "Encode", tone: "primary" },
+          { label: "Length", value: output.length.toLocaleString(), tone: "accent" },
+          { label: "Lines", value: output.split(/\r?\n/).length.toLocaleString() },
+        ],
+        tips: [
+          "Use encoded output when displaying user-provided text inside HTML.",
+          "Decode before editing copy that came from an HTML source or CMS export.",
+          "This handles common entities, not every named HTML entity in the full spec.",
+        ],
+      };
+    },
+  },
+  "json-formatter": {
+    id: "json-formatter",
+    buttonLabel: "Format JSON",
+    fields: [
+      { key: "json", label: "JSON", type: "textarea", placeholder: "{\"name\":\"Crepika\",\"tools\":100}" },
+    ],
+    run: ({ json }) => {
+      const parsed = JSON.parse(json);
+      const pretty = JSON.stringify(parsed, null, 2);
+      const minified = JSON.stringify(parsed);
+
+      return {
+        summary: "JSON is valid and formatted.",
+        output: `${pretty}\n\n--- minified ---\n${minified}`,
+        metrics: [
+          { label: "Pretty length", value: pretty.length.toLocaleString(), tone: "primary" },
+          { label: "Minified", value: minified.length.toLocaleString(), tone: "accent" },
+          { label: "Type", value: Array.isArray(parsed) ? "Array" : typeof parsed },
+        ],
+        tips: [
+          "Keep JSON-LD valid before adding it to a page template.",
+          "Minified JSON is useful for embedding, while pretty JSON is better for review.",
+          "If parsing fails, check trailing commas and unquoted keys first.",
+        ],
+      };
+    },
+  },
+  "csv-to-markdown-table": {
+    id: "csv-to-markdown-table",
+    buttonLabel: "Convert to table",
+    fields: [
+      { key: "csv", label: "CSV", type: "textarea", placeholder: "Name,Score\nTitle,90\nMeta,85" },
+    ],
+    run: ({ csv }) => {
+      const rows = csv.trim().split(/\r?\n/).map((line) => line.split(",").map((cell) => cell.trim()));
+      const width = Math.max(...rows.map((row) => row.length));
+      const normalize = (row: string[]) => Array.from({ length: width }, (_, index) => row[index] ?? "");
+      const [head = [], ...body] = rows.map(normalize);
+      const table = [
+        `| ${head.join(" | ")} |`,
+        `| ${head.map(() => "---").join(" | ")} |`,
+        ...body.map((row) => `| ${row.join(" | ")} |`),
+      ].join("\n");
+
+      return {
+        summary: `Converted ${body.length.toLocaleString()} data rows to a markdown table.`,
+        output: table,
+        metrics: [
+          { label: "Rows", value: body.length.toLocaleString(), tone: "primary" },
+          { label: "Columns", value: width.toLocaleString(), tone: "accent" },
+          { label: "Characters", value: table.length.toLocaleString() },
+        ],
+        tips: [
+          "This simple converter is best for comma-separated data without embedded commas.",
+          "Keep table columns short so mobile readers do not need excessive horizontal scrolling.",
+          "For long data, summarize the key rows in prose before the table.",
+        ],
+      };
+    },
+  },
+  "markdown-to-plain-text": {
+    id: "markdown-to-plain-text",
+    buttonLabel: "Strip markdown",
+    fields: [
+      { key: "markdown", label: "Markdown", type: "textarea", placeholder: "## Guide\nUse **clear CTA** and [links](https://example.com)." },
+    ],
+    run: ({ markdown }) => {
+      const plain = markdown
+        .replace(/```[\s\S]*?```/g, "")
+        .replace(/`([^`]+)`/g, "$1")
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+        .replace(/[*_~>#-]/g, "")
+        .replace(/\n{3,}/g, "\n\n")
+        .trim();
+      const words = plain ? plain.split(/\s+/).length : 0;
+
+      return {
+        summary: `Converted markdown to plain text with ${words.toLocaleString()} words.`,
+        output: plain,
+        metrics: [
+          { label: "Words", value: words.toLocaleString(), tone: "primary" },
+          { label: "Characters", value: plain.length.toLocaleString(), tone: "accent" },
+          { label: "Lines", value: plain.split(/\r?\n/).length.toLocaleString() },
+        ],
+        tips: [
+          "Plain text is useful for email drafts, social captions, and CMS fields that reject markdown.",
+          "Review removed links manually if the destination URL is important.",
+          "Keep paragraph breaks after stripping so the copy remains readable.",
+        ],
+      };
+    },
+  },
+  "text-deduplicator": {
+    id: "text-deduplicator",
+    buttonLabel: "Remove duplicates",
+    fields: [
+      { key: "text", label: "Lines", type: "textarea", placeholder: "keyword one\nkeyword two\nkeyword one" },
+    ],
+    run: ({ text }) => {
+      const seen = new Set<string>();
+      const lines = text.split(/\r?\n/);
+      const unique = lines.filter((line) => {
+        const key = line.trim().toLowerCase();
+        if (!key || seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+
+      return {
+        summary: `Removed ${(lines.length - unique.length).toLocaleString()} duplicate or blank lines.`,
+        output: unique.join("\n"),
+        metrics: [
+          { label: "Unique", value: unique.length.toLocaleString(), tone: "primary" },
+          { label: "Removed", value: (lines.length - unique.length).toLocaleString(), tone: "accent" },
+          { label: "Original", value: lines.length.toLocaleString() },
+        ],
+        tips: [
+          "Use this for keyword lists, title pools, and checklist cleanup before clustering.",
+          "Duplicates are compared case-insensitively after trimming spaces.",
+          "Review near-duplicates separately because this tool removes exact line duplicates only.",
+        ],
+      };
+    },
+  },
+  "case-converter": {
+    id: "case-converter",
+    buttonLabel: "Convert case",
+    fields: [
+      { key: "text", label: "Text", type: "textarea", placeholder: "Creator Utility Toolkit" },
+    ],
+    run: ({ text }) => {
+      const words = text.trim().split(/[^A-Za-z0-9가-힣]+/).filter(Boolean);
+      const lowerWords = words.map((word) => word.toLowerCase());
+      const camel = lowerWords.map((word, index) => index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1)).join("");
+      const variants = [
+        `lower: ${text.toLowerCase()}`,
+        `UPPER: ${text.toUpperCase()}`,
+        `Title: ${lowerWords.map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")}`,
+        `kebab: ${lowerWords.join("-")}`,
+        `snake: ${lowerWords.join("_")}`,
+        `camel: ${camel}`,
+      ].join("\n");
+
+      return {
+        summary: `Generated ${words.length ? 6 : 0} case variants.`,
+        output: variants,
+        metrics: [
+          { label: "Words", value: words.length.toLocaleString(), tone: "primary" },
+          { label: "Variants", value: "6", tone: "accent" },
+          { label: "Characters", value: text.length.toLocaleString() },
+        ],
+        tips: [
+          "Use kebab-case for URL slugs and snake_case for many config keys.",
+          "Camel case is useful for variable names but not for readable public URLs.",
+          "Review Korean mixed text manually because case conversion mostly affects Latin letters.",
+        ],
+      };
+    },
+  },
+  "regex-escape-tool": {
+    id: "regex-escape-tool",
+    buttonLabel: "Escape regex text",
+    fields: [
+      { key: "text", label: "Literal text", type: "textarea", placeholder: "price (USD) + tax?" },
+    ],
+    run: ({ text }) => {
+      const escaped = text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+      return {
+        summary: "Escaped special regex characters for literal matching.",
+        output: escaped,
+        metrics: [
+          { label: "Original", value: text.length.toLocaleString(), tone: "primary" },
+          { label: "Escaped", value: escaped.length.toLocaleString(), tone: "accent" },
+          { label: "Added", value: (escaped.length - text.length).toLocaleString() },
+        ],
+        tips: [
+          "Use escaped output when you want a regex to match the exact text.",
+          "Do not escape text that is already intended to be a regex pattern.",
+          "Test the final pattern in your target language because regex flavors can differ.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {
