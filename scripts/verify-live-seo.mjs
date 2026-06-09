@@ -147,6 +147,50 @@ function listDuplicateValues(values) {
   return values.filter((value, index) => values.indexOf(value) !== index);
 }
 
+function parseDateOnly(value, context) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    fail(`${context} must use YYYY-MM-DD format; got ${value || "missing"}.`);
+    return null;
+  }
+  const parsed = new Date(`${value}T00:00:00.000Z`);
+  if (Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== value) {
+    fail(`${context} is not a valid calendar date: ${value}.`);
+    return null;
+  }
+  return parsed;
+}
+
+function validateDateNotFuture(value, context) {
+  const parsed = parseDateOnly(value, context);
+  if (!parsed) return;
+  const today = new Date().toISOString().slice(0, 10);
+  if (value > today) {
+    fail(`${context} must not be in the future; got ${value}, today is ${today}.`);
+  }
+}
+
+function parseRssItems(source) {
+  return [...source.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((match) => {
+    const item = match[1];
+    return {
+      link: item.match(/<link>([\s\S]*?)<\/link>/)?.[1]?.trim() ?? "",
+      guid: item.match(/<guid[^>]*>([\s\S]*?)<\/guid>/)?.[1]?.trim() ?? "",
+      pubDate: item.match(/<pubDate>([\s\S]*?)<\/pubDate>/)?.[1]?.trim() ?? "",
+    };
+  });
+}
+
+function rssPubDateToDateOnly(value, context) {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) {
+    fail(`${context} must be a valid RSS pubDate; got ${value || "missing"}.`);
+    return "";
+  }
+  const dateOnly = parsed.toISOString().slice(0, 10);
+  validateDateNotFuture(dateOnly, context);
+  return dateOnly;
+}
+
 function extractAnchorHrefs(body) {
   return [...body.matchAll(/<a\b[^>]*\shref=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1]);
 }
@@ -831,8 +875,17 @@ async function validateDiscoveryConsistency() {
     loc.startsWith(`${SITE_URL}/blog/`),
   );
   const sitemapUrls = extractXmlTags(sitemapResult.body, "loc");
+  const sitemapEntries = new Map(
+    [...sitemapResult.body.matchAll(/<url>\s*<loc>([\s\S]*?)<\/loc>\s*<lastmod>([\s\S]*?)<\/lastmod>[\s\S]*?<\/url>/g)].map(
+      (match) => [match[1].trim(), { lastmod: match[2].trim() }],
+    ),
+  );
+  if (sitemapEntries.size !== sitemapUrls.length) {
+    fail(`sitemap.xml must expose one lastmod for every URL; found ${sitemapEntries.size} lastmod blocks for ${sitemapUrls.length} URLs.`);
+  }
   for (const url of sitemapUrls) {
     validateReadableCanonicalUrl(url, "Live sitemap URL");
+    validateDateNotFuture(sitemapEntries.get(url)?.lastmod ?? "", `Live sitemap lastmod for ${url}`);
   }
   const sitemapReachability = await mapWithConcurrency(sitemapUrls, 12, async (url) => {
     try {
@@ -873,6 +926,7 @@ async function validateDiscoveryConsistency() {
   const feedGuids = extractXmlTags(feedResult.body, "guid").filter((guid) =>
     guid.startsWith(`${SITE_URL}/blog/`),
   );
+  const rssItems = parseRssItems(rssResult.body).filter((item) => item.link.startsWith(`${SITE_URL}/blog/`));
 
   const duplicateSitemapUrls = listDuplicateValues(sitemapBlogUrls);
   const duplicateRssLinks = listDuplicateValues(rssLinks);
@@ -902,6 +956,12 @@ async function validateDiscoveryConsistency() {
     if (!sitemapBlogUrls.includes(url)) {
       fail(`RSS/feed item is missing from sitemap.xml: ${url}`);
     }
+    const rssItem = rssItems[index];
+    const rssDate = rssPubDateToDateOnly(rssItem?.pubDate ?? "", `rss.xml pubDate for ${url}`);
+    const sitemapLastmod = sitemapEntries.get(url)?.lastmod;
+    if (rssDate && sitemapLastmod !== rssDate) {
+      fail(`sitemap.xml lastmod for recent RSS item ${url} must match rss.xml pubDate date (${rssDate}); got ${sitemapLastmod || "missing"}.`);
+    }
   }
 
   let aiIndex = null;
@@ -925,6 +985,7 @@ async function validateDiscoveryConsistency() {
   return {
     path: "discovery-consistency",
     sitemapReadableUrls: sitemapUrls.length,
+    sitemapLastmodUrls: sitemapEntries.size,
     sitemapReachableUrls: sitemapReachability.filter((entry) => entry.status === 200 && !entry.redirected && entry.finalUrl === entry.url).length,
     sitemapRedirectedUrls: redirectedSitemapUrls.length,
     sitemapNon200Urls: unreachableSitemapUrls.length,
