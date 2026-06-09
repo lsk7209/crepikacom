@@ -438,6 +438,55 @@ function validateSocialImageMeta(path, body) {
   }
 }
 
+function extractImageTags(body) {
+  return [...body.matchAll(/<img\b(?:"[^"]*"|'[^']*'|\{[^}]*\}|[^>])*>/gi)].map((match) => match[0]);
+}
+
+function hasAttribute(tag, name) {
+  const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`\\s${escapedName}(?:\\s*=|\\s|>|$)`, "i").test(tag);
+}
+
+function getAttributeValue(tag, name) {
+  const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(`\\s${escapedName}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|\\{([^}]*)\\})`, "i");
+  const match = tag.match(pattern);
+  return match?.[1] ?? match?.[2] ?? match?.[3] ?? "";
+}
+
+function validateInlineImageAlt(path, body) {
+  for (const [index, tag] of extractImageTags(body).entries()) {
+    const hidden =
+      /aria-hidden\s*=\s*(?:"true"|'true'|\{true\})/i.test(tag) ||
+      /role\s*=\s*(?:"presentation"|'presentation'|"none"|'none')/i.test(tag);
+    const hasAlt = hasAttribute(tag, "alt");
+    const altValue = getAttributeValue(tag, "alt").trim();
+    if (!hasAlt) {
+      fail(`${path} image ${index + 1} is missing alt text.`);
+    }
+    if (hasAlt && !altValue && !hidden) {
+      fail(`${path} image ${index + 1} has empty alt text without a decorative image marker.`);
+    }
+  }
+}
+
+function validateSourceInlineImageAlt() {
+  const stack = ["src"];
+  while (stack.length) {
+    const current = stack.pop();
+    for (const name of readdirSync(current)) {
+      const path = join(current, name);
+      const stat = statSync(path);
+      if (stat.isDirectory()) {
+        stack.push(path);
+        continue;
+      }
+      if (!/\.(tsx?|jsx?|html)$/.test(name)) continue;
+      validateInlineImageAlt(path, read(path));
+    }
+  }
+}
+
 function validatePublicFiles() {
   validateImageAssets();
 
@@ -477,6 +526,7 @@ function validatePublicFiles() {
   }
   validateSocialImageMeta("index.html", index);
   validateSiteIdentitySchema("index.html", index);
+  validateInlineImageAlt("index.html", index);
   if (!index.includes(`href="${SITE_URL}/rss.xml"`)) {
     fail("index.html is missing the RSS alternate link.");
   }
@@ -602,6 +652,7 @@ function validateCrawlerPage(path, canonicalUrl) {
     validateArticleTrustSchema(path, body, canonicalUrl);
   }
   validateSocialImageMeta(path, body);
+  validateInlineImageAlt(path, body);
   validateInternalLinks(path, body);
 }
 
@@ -625,6 +676,7 @@ function validateStaticHtmlBasics() {
     }
     validateSiteIdentitySchema(path, body);
     validateSocialImageMeta(path, body);
+    validateInlineImageAlt(path, body);
     validateInternalLinks(path, body);
     if (h1Count !== 1) {
       fail(`${path} must have exactly one H1; found ${h1Count}.`);
@@ -1064,6 +1116,7 @@ function main() {
   const queue = JSON.parse(requireFile("scripts/tool-queue.json"));
   const posts = loadRenderablePosts();
   validatePublicFiles();
+  validateSourceInlineImageAlt();
   validateStaticHtmlBasics();
   validateQueueCoverage(queue);
   validateBlogRelatedTools(posts);

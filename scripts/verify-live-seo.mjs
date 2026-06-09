@@ -149,6 +149,43 @@ function hasMeaningfulMeta(body, options = {}) {
   };
 }
 
+function extractImageTags(body) {
+  return [...body.matchAll(/<img\b(?:"[^"]*"|'[^']*'|\{[^}]*\}|[^>])*>/gi)].map((match) => match[0]);
+}
+
+function hasAttribute(tag, name) {
+  const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`\\s${escapedName}(?:\\s*=|\\s|>|$)`, "i").test(tag);
+}
+
+function getAttributeValue(tag, name) {
+  const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(`\\s${escapedName}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|\\{([^}]*)\\})`, "i");
+  const match = tag.match(pattern);
+  return match?.[1] ?? match?.[2] ?? match?.[3] ?? "";
+}
+
+function validateInlineImageAlt(path, body) {
+  const imageTags = extractImageTags(body);
+  for (const [index, tag] of imageTags.entries()) {
+    const hidden =
+      /aria-hidden\s*=\s*(?:"true"|'true'|\{true\})/i.test(tag) ||
+      /role\s*=\s*(?:"presentation"|'presentation'|"none"|'none')/i.test(tag);
+    const hasAlt = hasAttribute(tag, "alt");
+    const altValue = getAttributeValue(tag, "alt").trim();
+    if (!hasAlt) {
+      fail(`${path} image ${index + 1} is missing alt text.`);
+    }
+    if (hasAlt && !altValue && !hidden) {
+      fail(`${path} image ${index + 1} has empty alt text without a decorative image marker.`);
+    }
+  }
+  return {
+    images: imageTags.length,
+    altChecked: imageTags.length,
+  };
+}
+
 async function validateSocialImage(path, body) {
   const ogImage = extractMetaContent(body, "property", "og:image");
   const twitterImage = extractMetaContent(body, "name", "twitter:image");
@@ -861,6 +898,7 @@ async function main() {
       htmlBasics: meta,
       structuredData,
       siteIdentitySchema: validateSiteIdentitySchema(path, body),
+      inlineImageAlt: validateInlineImageAlt(path, body),
       socialImage: await validateSocialImage(path, body),
       internalLinks: await validateInternalLinks(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
@@ -887,6 +925,7 @@ async function main() {
       htmlBasics: meta,
       structuredData,
       ...(siteIdentitySchema ? { siteIdentitySchema } : {}),
+      inlineImageAlt: validateInlineImageAlt(path, body),
       socialImage: await validateSocialImage(path, body),
       internalLinks: await validateInternalLinks(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
@@ -916,6 +955,7 @@ async function main() {
       structuredData,
       siteIdentitySchema,
       articleTrustSchema,
+      inlineImageAlt: validateInlineImageAlt(path, body),
       socialImage: await validateSocialImage(path, body),
       internalLinks: await validateInternalLinks(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
