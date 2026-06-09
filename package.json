@@ -8,6 +8,7 @@
     "build": "node scripts/sync-indexable-content.mjs && node scripts/generate-crawler-pages.mjs && vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
+    "verify:seo": "node scripts/verify-seo-gates.mjs",
     "preview": "vite preview",
     "og:convert": "node scripts/convert-og-images.mjs"
   },

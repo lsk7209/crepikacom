@@ -1,0 +1,281 @@
+#!/usr/bin/env node
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { join } from "node:path";
+
+const SITE_URL = "https://crepika.com";
+const PUBLISHER_ID = "pub-3050601904412736";
+const ADSENSE_CLIENT = "ca-pub-3050601904412736";
+const ADS_TXT_LINE = `google.com, ${PUBLISHER_ID}, DIRECT, f08c47fec0942fa0`;
+const STATIC_PUBLIC_TOOL_IDS = new Set([
+  "text-counter",
+  "byte-counter",
+  "lorem-generator",
+  "webp-converter",
+  "insta-spacer",
+  "hashtag-mixer",
+  "qr-generator",
+]);
+
+const failures = [];
+const warnings = [];
+
+function fail(message) {
+  failures.push(message);
+}
+
+function warn(message) {
+  warnings.push(message);
+}
+
+function read(path) {
+  return readFileSync(path, "utf8");
+}
+
+function requireFile(path) {
+  if (!existsSync(path)) {
+    fail(`Missing required file: ${path}`);
+    return "";
+  }
+  return read(path);
+}
+
+function countMatches(value, pattern) {
+  return (value.match(pattern) ?? []).length;
+}
+
+function extractXmlTags(source, tag) {
+  const re = new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`, "g");
+  return [...source.matchAll(re)].map((match) => match[1].trim());
+}
+
+function listDirectories(path) {
+  if (!existsSync(path)) return [];
+  return readdirSync(path)
+    .map((name) => join(path, name))
+    .filter((entry) => statSync(entry).isDirectory())
+    .map((entry) => entry.replace(/\\/g, "/").split("/").pop());
+}
+
+function validatePublicFiles() {
+  const ads = requireFile("public/ads.txt").trim();
+  if (ads !== ADS_TXT_LINE) {
+    fail(`ads.txt must contain exactly: ${ADS_TXT_LINE}`);
+  }
+
+  const robots = requireFile("public/robots.txt");
+  if (!robots.includes(`Sitemap: ${SITE_URL}/sitemap.xml`)) {
+    fail("robots.txt is missing the canonical sitemap URL.");
+  }
+  if (/User-agent:\s*\*\s*[\r\n]+Disallow:\s*\/\s*(?:[\r\n]|$)/i.test(robots)) {
+    fail("robots.txt blocks all crawlers.");
+  }
+  for (const bot of ["Googlebot", "Bingbot", "Yeti", "NaverBot", "Daumoa", "GPTBot", "OAI-SearchBot"]) {
+    if (!robots.includes(`User-agent: ${bot}`)) {
+      warn(`robots.txt has no explicit section for ${bot}.`);
+    }
+  }
+
+  const index = requireFile("index.html");
+  if (!index.includes(`name="google-adsense-account" content="${ADSENSE_CLIENT}"`)) {
+    fail("index.html is missing the google-adsense-account meta tag.");
+  }
+  const loaderCount = countMatches(index, new RegExp(`pagead2\\.googlesyndication\\.com/pagead/js/adsbygoogle\\.js\\?client=${ADSENSE_CLIENT}`, "g"));
+  if (loaderCount !== 1) {
+    fail(`index.html must load the AdSense Auto Ads script exactly once; found ${loaderCount}.`);
+  }
+  if (!index.includes(`<link rel="canonical" href="${SITE_URL}/"`)) {
+    fail("index.html is missing the home canonical URL.");
+  }
+  if (!index.includes(`href="${SITE_URL}/rss.xml"`)) {
+    fail("index.html is missing the RSS alternate link.");
+  }
+
+  const manualAdSlotFiles = [];
+  for (const root of ["src", "public"]) {
+    const stack = [root];
+    while (stack.length) {
+      const current = stack.pop();
+      for (const name of readdirSync(current)) {
+        const path = join(current, name);
+        const stat = statSync(path);
+        if (stat.isDirectory()) {
+          stack.push(path);
+          continue;
+        }
+        if (!/\.(tsx?|html|mjs|js)$/.test(name)) continue;
+        const body = read(path);
+        if (/<ins[^>]+class=["'][^"']*adsbygoogle/i.test(body) || /adsbygoogle\.push\s*\(/.test(body)) {
+          manualAdSlotFiles.push(path);
+        }
+      }
+    }
+  }
+  if (manualAdSlotFiles.length) {
+    fail(`Manual AdSense slots are present despite Auto Ads-only policy: ${manualAdSlotFiles.join(", ")}`);
+  }
+}
+
+function validateSitemapAndRss(queue) {
+  const sitemap = requireFile("public/sitemap.xml");
+  if (!sitemap.startsWith('<?xml version="1.0" encoding="UTF-8"?>')) {
+    fail("sitemap.xml is missing the expected XML declaration.");
+  }
+  if (!sitemap.includes('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"')) {
+    fail("sitemap.xml is missing the sitemap namespace.");
+  }
+  const locs = extractXmlTags(sitemap, "loc");
+  if (!locs.length) fail("sitemap.xml has no <loc> entries.");
+  const duplicateLocs = locs.filter((loc, index) => locs.indexOf(loc) !== index);
+  if (duplicateLocs.length) {
+    fail(`sitemap.xml has duplicate URLs: ${[...new Set(duplicateLocs)].slice(0, 10).join(", ")}`);
+  }
+  for (const loc of locs) {
+    if (!loc.startsWith(`${SITE_URL}/`)) {
+      fail(`sitemap.xml contains a non-canonical host URL: ${loc}`);
+    }
+    if (/[?#]/.test(loc)) {
+      fail(`sitemap.xml contains query or hash URL: ${loc}`);
+    }
+  }
+
+  const readyOrDraft = queue.filter((item) => item.status !== "published");
+  for (const item of readyOrDraft) {
+    if (item.path && sitemap.includes(`${SITE_URL}${item.path}`)) {
+      fail(`Non-published tool is exposed in sitemap.xml: ${item.id}`);
+    }
+    if (item.path && existsSync(join("public", ...item.path.split("/").filter(Boolean)))) {
+      fail(`Non-published tool has a crawler-visible public directory: ${item.id}`);
+    }
+  }
+
+  const published = queue.filter((item) => item.status === "published");
+  for (const item of published) {
+    if (item.path && !sitemap.includes(`${SITE_URL}${item.path}`)) {
+      fail(`Published tool is missing from sitemap.xml: ${item.id}`);
+    }
+    if (item.path && !existsSync(join("public", ...item.path.split("/").filter(Boolean), "index.html"))) {
+      fail(`Published tool is missing its crawler page: ${item.id}`);
+    }
+  }
+
+  const rss = requireFile("public/rss.xml");
+  if (!rss.includes("<rss ") || !rss.includes("<channel>")) {
+    fail("rss.xml is missing rss/channel tags.");
+  }
+  if (!rss.includes(`href="${SITE_URL}/rss.xml"`)) {
+    fail("rss.xml is missing the atom self link.");
+  }
+  if (!rss.includes("<language>ko-KR</language>")) {
+    fail("rss.xml must declare ko-KR language.");
+  }
+  const items = countMatches(rss, /<item>/g);
+  if (items < 20) {
+    fail(`rss.xml should expose a substantial recent feed; found ${items} items.`);
+  }
+  if (items > 100) {
+    fail(`rss.xml should be capped at 100 items; found ${items}.`);
+  }
+}
+
+function validateGeneratedIndexes(queue) {
+  const aiIndex = JSON.parse(requireFile("public/ai-index.json"));
+  if (aiIndex?.site?.url !== SITE_URL) {
+    fail("ai-index.json site.url does not match the canonical site URL.");
+  }
+  if (aiIndex?.blog?.rss !== `${SITE_URL}/rss.xml`) {
+    fail("ai-index.json blog.rss does not match the canonical RSS URL.");
+  }
+
+  const llms = requireFile("public/llms.txt");
+  const llmsFull = requireFile("public/llms-full.txt");
+  for (const [path, body] of [["public/llms.txt", llms], ["public/llms-full.txt", llmsFull]]) {
+    if (!body.includes(SITE_URL)) fail(`${path} is missing the canonical site URL.`);
+    if (!body.includes(`${SITE_URL}/rss.xml`)) fail(`${path} is missing the RSS URL.`);
+  }
+
+  const publicToolDirs = listDirectories("public/tools");
+  const publishedIds = new Set(queue.filter((item) => item.status === "published").map((item) => item.id));
+  const unexpectedDirs = publicToolDirs.filter((id) => !publishedIds.has(id) && !STATIC_PUBLIC_TOOL_IDS.has(id));
+  if (unexpectedDirs.length) {
+    fail(`public/tools contains non-published tool directories: ${unexpectedDirs.join(", ")}`);
+  }
+}
+
+function validateQueueCoverage(queue) {
+  if (queue.length !== 100) {
+    fail(`tool-queue.json should contain 100 planned tools; found ${queue.length}.`);
+  }
+
+  const ids = queue.map((item) => item.id);
+  const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
+  if (duplicateIds.length) {
+    fail(`tool-queue.json has duplicate IDs: ${[...new Set(duplicateIds)].join(", ")}`);
+  }
+
+  const config = requireFile("src/data/tools-config.ts");
+  const component = requireFile("src/tools/generated/SimpleGeneratedTool.tsx");
+  const generatedContent = requireFile("src/data/generated-tool-content.ts");
+
+  for (const item of queue) {
+    if (!item.id || !item.path || !item.status) {
+      fail(`Tool queue item has missing id/path/status: ${JSON.stringify(item)}`);
+      continue;
+    }
+    if (!["published", "ready", "draft", "scheduled"].includes(item.status)) {
+      fail(`Tool ${item.id} has an invalid status: ${item.status}`);
+    }
+    if (!config.includes(`id: '${item.id}'`) && !config.includes(`id: "${item.id}"`)) {
+      fail(`Tool ${item.id} is missing from tools-config.ts.`);
+    }
+    if (!component.includes(`"${item.id}"`) && !component.includes(`'${item.id}'`)) {
+      fail(`Tool ${item.id} is missing from SimpleGeneratedTool.tsx.`);
+    }
+    if (!generatedContent.includes(`"${item.id}"`) && !generatedContent.includes(`'${item.id}'`)) {
+      fail(`Tool ${item.id} is missing generated detailed content.`);
+    }
+  }
+}
+
+function main() {
+  const queue = JSON.parse(requireFile("scripts/tool-queue.json"));
+  validatePublicFiles();
+  validateQueueCoverage(queue);
+  validateSitemapAndRss(queue);
+  validateGeneratedIndexes(queue);
+
+  for (const message of warnings) {
+    console.warn(`WARN ${message}`);
+  }
+
+  if (failures.length) {
+    console.error("SEO gate verification failed:");
+    for (const message of failures) {
+      console.error(`- ${message}`);
+    }
+    process.exit(1);
+  }
+
+  console.log(
+    JSON.stringify(
+      {
+        ok: true,
+        checks: {
+          adsTxt: "ok",
+          robots: "ok",
+          sitemap: "ok",
+          rss: "ok",
+          adsenseAutoAdsOnly: "ok",
+          toolQueue: queue.reduce((acc, item) => {
+            acc[item.status] = (acc[item.status] || 0) + 1;
+            return acc;
+          }, {}),
+        },
+        warnings: warnings.length,
+      },
+      null,
+      2,
+    ),
+  );
+}
+
+main();

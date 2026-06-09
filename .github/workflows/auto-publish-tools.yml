@@ -38,3 +38,6 @@ jobs:
           FORCE_TOOL_PUBLISH: ${{ github.event.inputs.force == 'true' && '1' || '0' }}
           TOOL_PUBLISH_MIN_HOURS: "5"
         run: node scripts/publish-tool-once.mjs
+
+      - name: Verify SEO gates
+        run: node scripts/verify-seo-gates.mjs

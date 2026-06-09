@@ -129,6 +129,12 @@ async function main() {
   // blog-posts-meta.ts 재생성 (배치당 1회)
   try { execSync('node scripts/gen-meta.mjs', { cwd: ROOT, stdio: 'inherit' }); } catch {}
 
+  // Regenerate canonical indexable surfaces after the batch is injected.
+  // This keeps sitemap, RSS, AI index, llms files, and crawler-visible
+  // static pages aligned with src/data/blog-content.ts.
+  execSync('node scripts/sync-indexable-content.mjs', { cwd: ROOT, stdio: 'inherit' });
+  execSync('node scripts/generate-crawler-pages.mjs', { cwd: ROOT, stdio: 'inherit' });
+
   // 로컬 발행 로그 누적 (커밋 대상 아님 — 기존 동작 유지)
   const publishLog = existsSync(PUBLISH_LOG) ? JSON.parse(readFileSync(PUBLISH_LOG, 'utf-8')) : [];
   for (const post of published) publishLog.push({ date: getTodayDate(), slug: post.slug, title: post.title });
@@ -142,11 +148,31 @@ async function main() {
 
   // git commit + push (배치당 1회 → Vercel 빌드 1회)
   const titles = published.map(p => p.title.slice(0, 40)).join(', ');
-  const msg = `Auto-publish: ${published.length}편 (${titles})`.slice(0, 180);
+  const msg = `Auto-publish ${published.length} blog posts through scheduled queue`.slice(0, 180);
   execSync('git config user.email "auto-publisher@crepika.com"', { cwd: ROOT });
   execSync('git config user.name "크레피카 자동 발행"', { cwd: ROOT });
-  execSync('git add src/data/blog-content.ts src/data/blog-posts-meta.ts public/sitemap.xml public/rss.xml scripts/post-queue.json', { cwd: ROOT });
-  execSync(`git commit -m "${msg.replace(/"/g, "'")}"`, { cwd: ROOT });
+  execSync('git add src/data/blog-content.ts src/data/blog-posts-meta.ts public/sitemap.xml public/rss.xml public/ai-index.json public/llms.txt public/llms-full.txt public/blog scripts/post-queue.json', { cwd: ROOT });
+  const messageArgs = [
+    '-m',
+    JSON.stringify(msg),
+    '-m',
+    JSON.stringify(`Publish scheduled blog batch: ${titles}`.slice(0, 500)),
+    '-m',
+    JSON.stringify('Constraint: GitHub push is the deployment path; no direct Vercel deployment command is used.'),
+    '-m',
+    JSON.stringify('Rejected: Manual production deployment | The repository integration owns Vercel deployment.'),
+    '-m',
+    JSON.stringify('Confidence: high'),
+    '-m',
+    JSON.stringify('Scope-risk: moderate'),
+    '-m',
+    JSON.stringify('Directive: Regenerate sitemap, RSS, AI index, llms files, and crawler pages after every scheduled content batch.'),
+    '-m',
+    JSON.stringify('Tested: validatePost checks passed; indexable content regenerated'),
+    '-m',
+    JSON.stringify('Not-tested: Live Vercel deployment is handled by GitHub integration after push'),
+  ].join(' ');
+  execSync(`git commit ${messageArgs}`, { cwd: ROOT });
   execSync('git push origin main', { cwd: ROOT });
   console.log(`🚀 git push 완료 (${published.length}편 1커밋) → Vercel 배포 1회`);
 

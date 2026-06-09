@@ -2,9 +2,9 @@ name: Auto Publish Blog Post
 
 on:
   schedule:
-    # 하루 1회 (UTC 0시 = KST 9시). 빌드 비용 절감: 5편을 1배치로 묶어 1회 push.
-    - cron: '0 0 * * *'
-  workflow_dispatch:  # 수동 실행 버튼
+    # Run once per day and publish a small batch to reduce Vercel build churn.
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Check remaining drafts
         id: check
@@ -32,18 +32,21 @@ jobs:
             const fs = require('fs');
             const q = JSON.parse(fs.readFileSync('scripts/post-queue.json','utf-8'));
             const draftsDir = 'scripts/drafts';
-            const count = q.filter(e => !e.published && fs.existsSync(draftsDir+'/'+e.slug+'.json')).length;
+            const count = q.filter(e => !e.published && fs.existsSync(draftsDir + '/' + e.slug + '.json')).length;
             console.log(count);
           ")
-          echo "remaining=$REMAINING" >> $GITHUB_OUTPUT
-          echo "📊 발행 가능한 드래프트: $REMAINING 개"
+          echo "remaining=$REMAINING" >> "$GITHUB_OUTPUT"
+          echo "Publishable drafts: $REMAINING"
 
       - name: Publish batch from drafts
         if: steps.check.outputs.remaining != '0'
         env:
-          BATCH_SIZE: '5'
+          BATCH_SIZE: "5"
         run: node scripts/publish-once.mjs
+
+      - name: Verify SEO gates
+        run: node scripts/verify-seo-gates.mjs
 
       - name: All done
         if: steps.check.outputs.remaining == '0'
-        run: echo "✅ 모든 드래프트 발행 완료!"
+        run: echo "All drafts have been published."
