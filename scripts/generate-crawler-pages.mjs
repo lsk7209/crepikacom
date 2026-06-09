@@ -8,6 +8,12 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
 const siteUrl = "https://crepika.com";
 const toolQueueFile = join(root, "scripts", "tool-queue.json");
+const securityTxt = `Contact: mailto:support@crepika.com
+Preferred-Languages: ko, en
+Canonical: ${siteUrl}/.well-known/security.txt
+Policy: ${siteUrl}/privacy
+Expires: 2027-06-10T00:00:00Z
+`;
 
 const alwaysPublishedToolPaths = new Set([
   "/tools/text-counter",
@@ -480,5 +486,7 @@ writePage("blog/index.html", renderBlogIndex(posts));
 for (const post of posts) {
   writePage(`blog/${post.slug}/index.html`, renderBlogPost(post));
 }
+
+writePage(".well-known/security.txt", securityTxt);
 
 console.log(`Generated ${staticPages.length + toolPages.length + 1 + posts.length} crawler-visible pages.`);

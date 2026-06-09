@@ -113,6 +113,18 @@ async function main() {
       "feed.xml is not a substantial ko-KR RSS feed alias.",
     ),
   );
+  checks.push(
+    await validateTextEndpoint(
+      "/.well-known/security.txt",
+      (body) =>
+        body.includes("Contact: mailto:support@crepika.com") &&
+        body.includes("Preferred-Languages: ko, en") &&
+        body.includes(`Canonical: ${SITE_URL}/.well-known/security.txt`) &&
+        body.includes(`Policy: ${SITE_URL}/privacy`) &&
+        body.includes("Expires: 2027-06-10T00:00:00Z"),
+      "security.txt must expose the canonical support contact and policy URL.",
+    ),
+  );
 
   for (const path of SAMPLE_HTML_PATHS) {
     const { response, body } = await get(path);

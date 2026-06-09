@@ -184,6 +184,22 @@ function validatePublicFiles() {
   if (!vercelConfig.includes("feed\\\\.xml")) {
     fail("vercel.json cache headers must include feed.xml.");
   }
+  if (!vercelConfig.includes("/.well-known/security.txt")) {
+    fail("vercel.json cache headers must include /.well-known/security.txt.");
+  }
+
+  const securityTxt = requireFile("public/.well-known/security.txt");
+  for (const marker of [
+    "Contact: mailto:support@crepika.com",
+    "Preferred-Languages: ko, en",
+    `Canonical: ${SITE_URL}/.well-known/security.txt`,
+    `Policy: ${SITE_URL}/privacy`,
+    "Expires: 2027-06-10T00:00:00Z",
+  ]) {
+    if (!securityTxt.includes(marker)) {
+      fail(`security.txt is missing marker: ${marker}`);
+    }
+  }
 
   const manualAdSlotFiles = [];
   for (const root of ["src", "public"]) {
