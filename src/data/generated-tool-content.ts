@@ -1627,4 +1627,154 @@ export const GENERATED_TOOL_CONTENT: Record<string, ToolDetailedContent> = {
     ],
     relatedResources: relatedBasics,
   },
+  "image-alt-batch-planner": {
+    id: "image-alt-batch-planner",
+    introduction:
+      "이미지 Alt 일괄 설계기는 여러 이미지 설명을 페이지 주제에 맞는 대체 텍스트 초안으로 바꾸는 도구입니다. 이미지 SEO와 접근성에서 Alt Text는 단순 키워드 삽입칸이 아니라, 이미지를 볼 수 없는 사용자가 같은 정보를 이해하도록 돕는 설명입니다.",
+    howToUse: {
+      steps: [
+        "페이지 주제나 글 제목을 입력합니다.",
+        "이미지별 설명을 줄바꿈으로 입력합니다.",
+        "생성된 Alt Text 초안을 확인합니다.",
+        "장식 이미지와 의미 있는 이미지를 구분해 실제 페이지에 적용합니다.",
+      ],
+      tips: [
+        "Alt Text에는 이미지가 보여주는 정보와 페이지 맥락을 함께 담으세요.",
+        "같은 키워드를 모든 이미지에 반복하면 오히려 부자연스럽습니다.",
+        "스크린샷, 차트, 절차 이미지는 결과나 핵심 정보를 구체적으로 설명하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "접근성 보완", description: "이미지를 볼 수 없는 사용자에게 필요한 정보를 전달합니다." },
+      { title: "이미지 SEO 정리", description: "본문 문맥과 맞는 대체 텍스트를 빠짐없이 준비할 수 있습니다." },
+      { title: "업로드 실수 감소", description: "이미지가 많은 글에서도 Alt Text 누락을 줄입니다." },
+    ],
+    faq: [
+      { question: "Alt Text에 키워드를 꼭 넣어야 하나요?", answer: "필요할 때 자연스럽게 넣으면 좋지만, 이미지 설명보다 키워드 반복이 앞서면 품질이 떨어집니다." },
+      { question: "장식 이미지는 어떻게 하나요?", answer: "의미 전달이 없는 장식 이미지는 빈 alt를 쓰는 것이 접근성에 더 적절할 수 있습니다." },
+      { question: "모든 이미지에 다른 Alt Text가 필요한가요?", answer: "이미지의 역할과 문맥이 다르면 다른 설명이 필요합니다. 반복 이미지는 페이지 맥락에 맞게 조정하세요." },
+      { question: "파일명과 Alt Text는 같아도 되나요?", answer: "역할이 다릅니다. 파일명은 관리와 보조 신호, Alt Text는 사용자에게 전달할 설명으로 작성하세요." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "favicon-checklist-builder": {
+    id: "favicon-checklist-builder",
+    introduction:
+      "파비콘 체크리스트 생성기는 브라우저 탭, 북마크, 모바일 홈 화면, PWA 환경에서 사이트 아이콘이 제대로 보이도록 준비 항목을 정리합니다. 파비콘은 작은 요소지만 사이트 신뢰와 브랜드 인식에 직접적인 영향을 주며, 애드센스 검수 관점에서도 완성도 있는 사이트 인상을 만듭니다.",
+    howToUse: {
+      steps: [
+        "브랜드명이나 사이트명을 입력합니다.",
+        "현재 로고 원본 상태를 입력합니다.",
+        "필요한 아이콘 크기와 확인 항목을 생성합니다.",
+        "밝은 탭, 어두운 탭, 모바일 홈 화면에서 실제 식별성을 확인합니다.",
+      ],
+      tips: [
+        "파비콘은 로고 전체보다 단순한 심볼이 작은 크기에서 잘 보입니다.",
+        "투명 배경 아이콘은 다크 모드 탭에서 사라지지 않는지 확인하세요.",
+        "아이콘 파일을 바꾼 뒤에는 브라우저 캐시 때문에 즉시 반영되지 않을 수 있습니다.",
+      ],
+    },
+    keyBenefits: [
+      { title: "브랜드 완성도 향상", description: "탭과 북마크에서 사이트를 쉽게 구분할 수 있게 합니다." },
+      { title: "모바일 대응", description: "Apple touch icon과 PWA 아이콘 준비 항목을 함께 확인합니다." },
+      { title: "운영 체크리스트", description: "아이콘 크기와 표시 환경을 빠짐없이 점검합니다." },
+    ],
+    faq: [
+      { question: "favicon.ico만 있으면 충분한가요?", answer: "기본 브라우저 탭에는 도움이 되지만 모바일 홈 화면과 PWA까지 고려하면 여러 크기가 필요합니다." },
+      { question: "로고를 그대로 축소하면 되나요?", answer: "작은 크기에서는 복잡한 로고가 뭉개질 수 있어 단순한 심볼 버전을 권장합니다." },
+      { question: "파비콘이 SEO 순위에 영향을 주나요?", answer: "직접 순위 요소라기보다 브랜드 신뢰와 사용자 인식에 영향을 주는 완성도 요소입니다." },
+      { question: "아이콘 변경 후 안 보이면 어떻게 하나요?", answer: "브라우저와 CDN 캐시를 확인하고, 파일명이나 manifest 참조가 올바른지 점검하세요." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "open-graph-image-checklist": {
+    id: "open-graph-image-checklist",
+    introduction:
+      "오픈그래프 이미지 체크리스트는 링크 공유 시 보이는 대표 이미지의 크기, 비율, 문구 길이, 안전 영역을 점검합니다. 좋은 OG 이미지는 검색 순위를 직접 올리는 요소는 아니지만, SNS와 메신저 공유에서 클릭 전 이해도를 높이고 콘텐츠 신뢰감을 만듭니다.",
+    howToUse: {
+      steps: [
+        "OG 이미지의 가로와 세로 크기를 입력합니다.",
+        "이미지 안에 넣은 대표 문구를 입력합니다.",
+        "비율, 최소 크기, 문구 길이 평가를 확인합니다.",
+        "공유 미리보기에서 잘리는 가장자리와 작은 화면 가독성을 다시 확인합니다.",
+      ],
+      tips: [
+        "대부분의 공유 환경에서는 1200x630, 1.91:1 비율이 안정적입니다.",
+        "핵심 문구와 얼굴, 제품, 결과 화면은 중앙 안전 영역에 배치하세요.",
+        "문구가 길면 공유 카드에서 읽기 어렵기 때문에 본문 제목보다 짧게 쓰세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "공유 이미지 품질 개선", description: "링크 공유 시 이미지가 잘리거나 흐릿해 보이는 문제를 줄입니다." },
+      { title: "클릭 전 이해도 향상", description: "사용자가 링크를 누르기 전에 콘텐츠 가치를 빠르게 파악하게 합니다." },
+      { title: "브랜드 신뢰 보강", description: "일관된 OG 이미지는 사이트가 관리되고 있다는 인상을 줍니다." },
+    ],
+    faq: [
+      { question: "OG 이미지는 꼭 1200x630이어야 하나요?", answer: "필수는 아니지만 가장 널리 쓰이는 안정적인 기준입니다. 1.91:1 비율을 크게 벗어나지 않는 것이 좋습니다." },
+      { question: "텍스트 없이 이미지만 써도 되나요?", answer: "가능하지만 공유 카드만 보고 내용을 이해하기 어렵다면 짧은 핵심 문구를 넣는 편이 좋습니다." },
+      { question: "블로그 글마다 다른 OG 이미지가 필요한가요?", answer: "중요 글은 주제별 이미지를 따로 준비하면 공유 클릭과 브랜드 인식에 도움이 됩니다." },
+      { question: "이미지 용량도 중요한가요?", answer: "네. 너무 큰 OG 이미지는 로딩과 공유 미리보기 생성에 불리할 수 있어 압축도 함께 필요합니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "file-size-unit-converter": {
+    id: "file-size-unit-converter",
+    introduction:
+      "파일 용량 단위 변환기는 Bytes, KB, MB, GB 값을 빠르게 바꾸는 도구입니다. 이미지 최적화, 번들 크기 점검, 페이지 전송량 비교를 할 때 단위가 섞이면 판단이 느려지므로, 같은 기준으로 변환해 보는 것이 중요합니다.",
+    howToUse: {
+      steps: [
+        "변환할 용량 값을 입력합니다.",
+        "현재 단위를 입력합니다.",
+        "Bytes, KB, MB, GB 변환 결과를 확인합니다.",
+        "페이지 전체 이미지 용량과 번들 용량을 같은 단위로 비교합니다.",
+      ],
+      tips: [
+        "웹 성능 점검에서는 KB와 MB를 함께 보면 팀원에게 설명하기 쉽습니다.",
+        "이미지 한 장보다 페이지 전체 전송량을 기준으로 최적화 우선순위를 정하세요.",
+        "빌드 결과의 큰 chunk 경고는 MB 단위로 환산해 실제 영향을 판단하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "단위 혼선 감소", description: "Bytes, KB, MB, GB를 한 번에 비교할 수 있습니다." },
+      { title: "성능 개선 판단", description: "이미지와 JS 번들 용량을 같은 기준으로 점검합니다." },
+      { title: "보고서 작성 보조", description: "최적화 전후 용량을 설명하기 쉬운 단위로 정리합니다." },
+    ],
+    faq: [
+      { question: "KB는 1000 bytes인가요 1024 bytes인가요?", answer: "이 도구는 웹 개발에서 흔히 쓰는 1024 기준으로 계산합니다." },
+      { question: "이미지 용량은 어느 정도가 적당한가요?", answer: "사용 위치와 크기에 따라 다르지만, 표시 크기에 맞게 리사이즈하고 압축하는 것이 우선입니다." },
+      { question: "빌드 chunk 경고와 관련 있나요?", answer: "네. 큰 JS chunk를 MB 단위로 보면 코드 분할 필요성을 판단하기 쉽습니다." },
+      { question: "애드센스 검수와 관련이 있나요?", answer: "간접적으로 관련이 있습니다. 페이지가 빠르고 안정적으로 로드될수록 사용자 경험이 좋아집니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "utm-consistency-checker": {
+    id: "utm-consistency-checker",
+    introduction:
+      "UTM 일관성 검사기는 여러 캠페인 URL에서 utm_source, utm_medium, utm_campaign 누락과 대소문자, 공백 표기 흔들림을 점검합니다. GA4에서는 Instagram과 instagram이 다른 값처럼 나뉠 수 있어, 발행 전 네이밍을 맞추는 것이 중요합니다.",
+    howToUse: {
+      steps: [
+        "검사할 캠페인 URL을 줄바꿈으로 입력합니다.",
+        "UTM 필수값 누락과 source, medium 종류를 확인합니다.",
+        "대문자와 공백 이슈를 정리합니다.",
+        "캠페인 문서에 사용할 소문자 네이밍 규칙을 고정합니다.",
+      ],
+      tips: [
+        "utm_source는 instagram, newsletter, google처럼 유입처를 고정해 쓰세요.",
+        "utm_medium은 social, email, cpc처럼 매체 유형을 일관되게 유지하세요.",
+        "내부 링크에 UTM을 붙이면 원본 유입 분석이 깨질 수 있으니 주의하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "GA4 데이터 정리", description: "같은 캠페인이 여러 표기로 쪼개지는 문제를 줄입니다." },
+      { title: "발행 전 오류 점검", description: "필수 UTM 누락을 캠페인 공개 전에 찾습니다." },
+      { title: "마케팅 링크 운영 개선", description: "반복 캠페인에서 재사용 가능한 네이밍 기준을 만듭니다." },
+    ],
+    faq: [
+      { question: "UTM 필수값은 무엇인가요?", answer: "일반적으로 utm_source, utm_medium, utm_campaign을 기본 필수값으로 봅니다." },
+      { question: "대문자를 쓰면 안 되나요?", answer: "기술적으로 가능하지만 리포트가 쪼개질 수 있어 소문자 규칙을 권장합니다." },
+      { question: "utm_content도 검사해야 하나요?", answer: "소재나 위치 구분이 필요하면 유용하지만 모든 링크에 필수는 아닙니다." },
+      { question: "내부 링크에도 UTM을 써도 되나요?", answer: "대부분 권장하지 않습니다. 내부 이동에 UTM을 쓰면 원래 유입 출처 분석이 흐려질 수 있습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
 };

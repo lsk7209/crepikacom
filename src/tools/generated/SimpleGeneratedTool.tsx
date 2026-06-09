@@ -2239,6 +2239,204 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "image-alt-batch-planner": {
+    id: "image-alt-batch-planner",
+    buttonLabel: "Alt 일괄 설계하기",
+    fields: [
+      { key: "topic", label: "페이지 주제", type: "text", placeholder: "예: 블로그 SEO 체크리스트" },
+      { key: "images", label: "이미지 설명 목록", type: "textarea", placeholder: "검색 결과 미리보기 화면\nH태그 구조 예시\n메타 설명 작성 화면" },
+    ],
+    run: ({ topic, images }) => {
+      const topicText = topic.trim() || "페이지 주제";
+      const lines = images.split("\n").map((line) => line.trim()).filter(Boolean);
+      const altTexts = (lines.length ? lines : ["대표 이미지", "본문 예시 이미지", "결과 화면"]).map((line, index) => {
+        const clean = line.replace(/\s+/g, " ");
+        return `${index + 1}. ${topicText} - ${clean}을 보여주는 이미지`;
+      });
+      const averageLength = Math.round(altTexts.join("").length / altTexts.length);
+
+      return {
+        summary: `${altTexts.length}개의 이미지 Alt Text 초안을 만들었습니다.`,
+        output: altTexts.join("\n"),
+        metrics: [
+          { label: "Alt", value: `${altTexts.length}개`, tone: "primary" },
+          { label: "평균 길이", value: `${averageLength}자`, tone: "accent" },
+          { label: "주제", value: topicText },
+        ],
+        tips: [
+          "Alt Text는 키워드 반복보다 이미지가 전달하는 정보를 설명해야 합니다.",
+          "장식 이미지는 빈 alt를 쓰고, 의미 있는 이미지만 설명을 작성하세요.",
+          "같은 이미지를 여러 페이지에서 쓸 때도 페이지 맥락에 맞게 문구를 조정하세요.",
+        ],
+      };
+    },
+  },
+  "favicon-checklist-builder": {
+    id: "favicon-checklist-builder",
+    buttonLabel: "파비콘 체크리스트 만들기",
+    fields: [
+      { key: "brand", label: "브랜드/사이트명", type: "text", placeholder: "예: 크레피카" },
+      { key: "source", label: "원본 로고 상태", type: "textarea", placeholder: "예: SVG 로고 있음, 어두운 배경에서 잘 보임, 작은 크기 테스트 필요" },
+    ],
+    run: ({ brand, source }) => {
+      const brandText = brand.trim() || "사이트";
+      const sourceText = source.trim() || "원본 로고 확인 필요";
+      const checklist = [
+        "16x16 favicon.ico 또는 PNG 확인",
+        "32x32 브라우저 탭 아이콘 확인",
+        "180x180 Apple touch icon 확인",
+        "192x192 및 512x512 PWA 아이콘 확인",
+        "밝은/어두운 브라우저 탭에서 식별성 확인",
+        "로고 주변 투명 여백 과다 여부 확인",
+      ];
+
+      return {
+        summary: `${brandText} 파비콘 준비 체크리스트를 생성했습니다.`,
+        output: [`브랜드: ${brandText}`, `원본 상태: ${sourceText}`, "", ...checklist.map((item) => `- ${item}`)].join("\n"),
+        metrics: [
+          { label: "항목", value: `${checklist.length}개`, tone: "primary" },
+          { label: "브랜드", value: brandText, tone: "accent" },
+          { label: "상태", value: sourceText.length > 20 ? "메모 있음" : "간단" },
+        ],
+        tips: [
+          "파비콘은 로고 전체보다 단순한 심볼이 작은 크기에서 더 잘 보입니다.",
+          "배경색이 투명한 경우 다크 모드 탭에서도 식별되는지 확인하세요.",
+          "사이트맵이나 SEO보다 먼저 브라우저 탭에서 브랜드 인식이 되는지 보는 것이 실용적입니다.",
+        ],
+      };
+    },
+  },
+  "open-graph-image-checklist": {
+    id: "open-graph-image-checklist",
+    buttonLabel: "OG 이미지 점검하기",
+    fields: [
+      { key: "width", label: "가로(px)", type: "number", placeholder: "1200" },
+      { key: "height", label: "세로(px)", type: "number", placeholder: "630" },
+      { key: "text", label: "이미지 안 문구", type: "textarea", placeholder: "블로그 SEO 체크리스트 7가지" },
+    ],
+    run: ({ width, height, text }) => {
+      const w = Math.max(1, Number(width) || 1200);
+      const h = Math.max(1, Number(height) || 630);
+      const ratio = w / h;
+      const ratioOk = Math.abs(ratio - 1.91) < 0.12;
+      const sizeOk = w >= 1200 && h >= 630;
+      const textLength = text.trim().replace(/\s+/g, " ").length;
+      const textOk = textLength > 0 && textLength <= 42;
+      const score = (ratioOk ? 35 : 15) + (sizeOk ? 30 : 12) + (textOk ? 25 : 10) + 10;
+
+      return {
+        summary: score >= 80 ? "공유용 OG 이미지 기준에 잘 맞습니다." : "크기, 비율, 문구 길이를 더 다듬으세요.",
+        output: [
+          `크기: ${w} x ${h}`,
+          `비율: ${ratio.toFixed(2)}:1 (${ratioOk ? "권장 범위" : "조정 권장"})`,
+          `최소 크기: ${sizeOk ? "통과" : "1200x630 이상 권장"}`,
+          `문구 길이: ${textLength}자 (${textOk ? "적정" : "축약 권장"})`,
+        ].join("\n"),
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "비율", value: `${ratio.toFixed(2)}:1`, tone: "accent" },
+          { label: "문구", value: `${textLength}자` },
+        ],
+        tips: [
+          "OG 이미지는 1200x630에 가까운 1.91:1 비율이 가장 무난합니다.",
+          "핵심 문구는 중앙에 두고 가장자리에는 중요한 정보를 배치하지 마세요.",
+          "카카오톡, X, 링크드인처럼 공유 환경별 미리보기를 한 번씩 확인하세요.",
+        ],
+      };
+    },
+  },
+  "file-size-unit-converter": {
+    id: "file-size-unit-converter",
+    buttonLabel: "용량 변환하기",
+    fields: [
+      { key: "value", label: "용량 값", type: "number", placeholder: "1536" },
+      { key: "unit", label: "단위", type: "text", placeholder: "KB, MB, GB, bytes" },
+    ],
+    run: ({ value, unit }) => {
+      const input = Math.max(0, Number(value) || 0);
+      const unitText = unit.trim().toLowerCase();
+      const multipliers: Record<string, number> = {
+        b: 1,
+        byte: 1,
+        bytes: 1,
+        kb: 1024,
+        mb: 1024 ** 2,
+        gb: 1024 ** 3,
+      };
+      const bytes = input * (multipliers[unitText] ?? multipliers.kb);
+      const kb = bytes / 1024;
+      const mb = kb / 1024;
+      const gb = mb / 1024;
+
+      return {
+        summary: `${input.toLocaleString()} ${unitText || "KB"}를 주요 단위로 변환했습니다.`,
+        output: [
+          `Bytes: ${Math.round(bytes).toLocaleString()}`,
+          `KB: ${kb.toFixed(2)}`,
+          `MB: ${mb.toFixed(3)}`,
+          `GB: ${gb.toFixed(4)}`,
+        ].join("\n"),
+        metrics: [
+          { label: "KB", value: kb.toFixed(2), tone: "primary" },
+          { label: "MB", value: mb.toFixed(3), tone: "accent" },
+          { label: "Bytes", value: Math.round(bytes).toLocaleString() },
+        ],
+        tips: [
+          "웹 성능 점검에서는 KB와 MB를 함께 보면 페이지 무게를 설명하기 쉽습니다.",
+          "이미지 한 장보다 페이지 전체 전송량을 기준으로 최적화 우선순위를 정하세요.",
+          "동영상과 고해상도 이미지는 GB 단위 저장소 비용까지 함께 고려하세요.",
+        ],
+      };
+    },
+  },
+  "utm-consistency-checker": {
+    id: "utm-consistency-checker",
+    buttonLabel: "UTM 일관성 검사하기",
+    fields: [
+      { key: "urls", label: "UTM URL 목록", type: "textarea", placeholder: "https://example.com/?utm_source=instagram&utm_medium=social&utm_campaign=launch\nhttps://example.com/?utm_source=Instagram&utm_medium=Social&utm_campaign=launch" },
+    ],
+    run: ({ urls }) => {
+      const lines = urls.split("\n").map((line) => line.trim()).filter(Boolean);
+      const rows = lines.map((line) => {
+        try {
+          const parsed = new URL(line);
+          return {
+            source: parsed.searchParams.get("utm_source") ?? "",
+            medium: parsed.searchParams.get("utm_medium") ?? "",
+            campaign: parsed.searchParams.get("utm_campaign") ?? "",
+          };
+        } catch {
+          return { source: "", medium: "", campaign: "" };
+        }
+      });
+      const missing = rows.filter((row) => !row.source || !row.medium || !row.campaign).length;
+      const sourceSet = new Set(rows.map((row) => row.source).filter(Boolean));
+      const mediumSet = new Set(rows.map((row) => row.medium).filter(Boolean));
+      const caseIssues = rows.filter((row) => [row.source, row.medium, row.campaign].some((value) => /[A-Z]|\s/.test(value))).length;
+      const score = Math.max(20, 100 - missing * 20 - Math.max(0, sourceSet.size - 1) * 8 - Math.max(0, mediumSet.size - 1) * 8 - caseIssues * 10);
+
+      return {
+        summary: score >= 80 ? "UTM 네이밍이 비교적 일관적입니다." : "UTM 누락 또는 표기 흔들림을 정리해야 합니다.",
+        output: [
+          `검사 URL: ${lines.length}개`,
+          `필수 UTM 누락: ${missing}개`,
+          `source 종류: ${Array.from(sourceSet).join(", ") || "없음"}`,
+          `medium 종류: ${Array.from(mediumSet).join(", ") || "없음"}`,
+          `대문자/공백 이슈: ${caseIssues}개`,
+        ].join("\n"),
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "누락", value: `${missing}개`, tone: missing ? "muted" : "accent" },
+          { label: "URL", value: `${lines.length}개` },
+        ],
+        tips: [
+          "utm_source와 utm_medium은 소문자 영문으로 고정하면 GA4 리포트가 깔끔해집니다.",
+          "같은 캠페인 안에서는 source, medium, campaign 네이밍 규칙을 문서화하세요.",
+          "내부 링크에는 UTM을 붙이지 않는 편이 원본 유입 분석에 안전합니다.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {

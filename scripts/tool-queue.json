@@ -670,7 +670,7 @@
     "type": "builder",
     "intent": "여러 이미지의 alt text 작업표를 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-20T05:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/image-alt-batch-planner"
@@ -683,7 +683,7 @@
     "type": "builder",
     "intent": "사이트에 필요한 파비콘과 앱 아이콘 크기 목록을 정리합니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-20T10:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/favicon-checklist-builder"
@@ -696,7 +696,7 @@
     "type": "score-checker",
     "intent": "OG 이미지 크기, 문구 길이, 안전 영역을 점검합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-20T15:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/open-graph-image-checklist"
@@ -709,7 +709,7 @@
     "type": "calculator",
     "intent": "bytes, KB, MB, GB, MiB 단위를 변환합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-20T20:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/file-size-unit-converter"
@@ -735,7 +735,7 @@
     "type": "score-checker",
     "intent": "대소문자, 공백, 소스명 혼용 등 UTM 오류를 점검합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-21T06:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/utm-consistency-checker"
