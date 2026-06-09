@@ -2437,6 +2437,208 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "url-encoder-decoder": {
+    id: "url-encoder-decoder",
+    buttonLabel: "URL 변환하기",
+    fields: [
+      { key: "text", label: "URL 또는 텍스트", type: "textarea", placeholder: "https://example.com/search?q=블로그 SEO 체크리스트" },
+    ],
+    run: ({ text }) => {
+      const raw = text.trim();
+      const encoded = encodeURI(raw);
+      let decoded = raw;
+      try {
+        decoded = decodeURI(raw);
+      } catch {
+        decoded = "디코딩할 수 없는 형식입니다.";
+      }
+      const componentEncoded = encodeURIComponent(raw);
+
+      return {
+        summary: "URL 인코딩과 디코딩 결과를 생성했습니다.",
+        output: [
+          "encodeURI:",
+          encoded,
+          "",
+          "decodeURI:",
+          decoded,
+          "",
+          "encodeURIComponent:",
+          componentEncoded,
+        ].join("\n"),
+        metrics: [
+          { label: "원본", value: `${raw.length}자`, tone: "primary" },
+          { label: "인코딩", value: `${encoded.length}자`, tone: "accent" },
+          { label: "컴포넌트", value: `${componentEncoded.length}자` },
+        ],
+        tips: [
+          "전체 URL은 encodeURI, 쿼리 값 하나는 encodeURIComponent가 더 안전합니다.",
+          "한글, 공백, 특수문자가 섞인 캠페인 링크는 공유 전 인코딩 상태를 확인하세요.",
+          "이미 인코딩된 값을 다시 인코딩하면 %25가 늘어나는 중복 인코딩 문제가 생길 수 있습니다.",
+        ],
+      };
+    },
+  },
+  "query-string-parser": {
+    id: "query-string-parser",
+    buttonLabel: "쿼리 분석하기",
+    fields: [
+      { key: "url", label: "URL", type: "textarea", placeholder: "https://example.com/page?utm_source=instagram&utm_medium=social&id=123" },
+    ],
+    run: ({ url }) => {
+      const raw = url.trim();
+      const query = raw.includes("?") ? raw.slice(raw.indexOf("?") + 1).split("#")[0] : raw.replace(/^\?/, "");
+      const params = new URLSearchParams(query);
+      const rows = Array.from(params.entries());
+      const duplicateKeys = rows
+        .map(([key]) => key)
+        .filter((key, index, keys) => keys.indexOf(key) !== index);
+      const utmCount = rows.filter(([key]) => key.startsWith("utm_")).length;
+
+      return {
+        summary: `${rows.length}개의 쿼리 파라미터를 분석했습니다.`,
+        output: rows.length
+          ? rows.map(([key, value], index) => `${index + 1}. ${key} = ${value || "(empty)"}`).join("\n")
+          : "쿼리 파라미터가 없습니다.",
+        metrics: [
+          { label: "파라미터", value: `${rows.length}개`, tone: "primary" },
+          { label: "UTM", value: `${utmCount}개`, tone: "accent" },
+          { label: "중복 키", value: `${new Set(duplicateKeys).size}개` },
+        ],
+        tips: [
+          "빈 값이 있는 파라미터는 추적 리포트에서 의도와 다르게 처리될 수 있습니다.",
+          "동일한 키가 여러 번 나오면 서버와 분석 도구마다 처리 방식이 다를 수 있습니다.",
+          "UTM 값은 소문자와 하이픈 또는 언더스코어 규칙을 미리 정해두세요.",
+        ],
+      };
+    },
+  },
+  "link-cleanup-tool": {
+    id: "link-cleanup-tool",
+    buttonLabel: "링크 정리하기",
+    fields: [
+      { key: "url", label: "원본 URL", type: "textarea", placeholder: "https://example.com/page?utm_source=instagram&fbclid=abc&utm_medium=social#section" },
+      { key: "keep", label: "유지할 파라미터", type: "text", placeholder: "utm_source,utm_medium,utm_campaign" },
+    ],
+    run: ({ url, keep }) => {
+      const keepSet = new Set((keep.trim() || "utm_source,utm_medium,utm_campaign,utm_content,utm_term")
+        .split(",")
+        .map((item) => item.trim())
+        .filter(Boolean));
+      let cleaned = url.trim();
+      let removed = 0;
+      try {
+        const parsed = new URL(cleaned);
+        const next = new URLSearchParams();
+        parsed.searchParams.forEach((value, key) => {
+          if (keepSet.has(key)) {
+            next.set(key, value);
+          } else {
+            removed += 1;
+          }
+        });
+        parsed.search = next.toString();
+        parsed.hash = "";
+        cleaned = parsed.toString();
+      } catch {
+        cleaned = url.trim().split("#")[0];
+      }
+
+      return {
+        summary: `${removed}개의 불필요한 파라미터를 제거했습니다.`,
+        output: cleaned,
+        metrics: [
+          { label: "제거", value: `${removed}개`, tone: "primary" },
+          { label: "유지 규칙", value: `${keepSet.size}개`, tone: "accent" },
+          { label: "길이", value: `${cleaned.length}자` },
+        ],
+        tips: [
+          "fbclid, gclid 같은 자동 추적값은 공유용 링크에서는 제거해도 되는 경우가 많습니다.",
+          "캠페인 성과 분석이 필요하면 UTM 파라미터는 유지하세요.",
+          "정리한 링크가 실제로 열리는지 게시 전 한 번 클릭해 확인하세요.",
+        ],
+      };
+    },
+  },
+  "qr-campaign-url-builder": {
+    id: "qr-campaign-url-builder",
+    buttonLabel: "QR 캠페인 URL 만들기",
+    fields: [
+      { key: "url", label: "랜딩 URL", type: "text", placeholder: "https://example.com/landing" },
+      { key: "campaign", label: "캠페인명", type: "text", placeholder: "offline-event" },
+      { key: "location", label: "QR 배치 위치", type: "text", placeholder: "poster, flyer, booth" },
+    ],
+    run: ({ url, campaign, location }) => {
+      const landing = url.trim() || "https://example.com";
+      const campaignText = campaign.trim().toLowerCase().replace(/\s+/g, "-") || "qr-campaign";
+      const locationText = location.trim().toLowerCase().replace(/\s+/g, "-") || "offline";
+      let output = landing;
+      try {
+        const parsed = new URL(landing);
+        parsed.searchParams.set("utm_source", "qr");
+        parsed.searchParams.set("utm_medium", "offline");
+        parsed.searchParams.set("utm_campaign", campaignText);
+        parsed.searchParams.set("utm_content", locationText);
+        output = parsed.toString();
+      } catch {
+        output = `${landing}?utm_source=qr&utm_medium=offline&utm_campaign=${encodeURIComponent(campaignText)}&utm_content=${encodeURIComponent(locationText)}`;
+      }
+
+      return {
+        summary: "QR 코드용 캠페인 추적 URL을 생성했습니다.",
+        output,
+        metrics: [
+          { label: "source", value: "qr", tone: "primary" },
+          { label: "medium", value: "offline", tone: "accent" },
+          { label: "campaign", value: campaignText },
+        ],
+        tips: [
+          "QR 배치 위치는 utm_content로 구분하면 포스터, 전단, 부스 성과를 비교하기 쉽습니다.",
+          "QR 코드는 인쇄 전에 실제 스마트폰으로 스캔해 랜딩과 리다이렉트를 확인하세요.",
+          "오프라인 캠페인은 짧고 안정적인 랜딩 URL을 쓰는 편이 좋습니다.",
+        ],
+      };
+    },
+  },
+  "redirect-chain-notes-builder": {
+    id: "redirect-chain-notes-builder",
+    buttonLabel: "리다이렉트 기록표 만들기",
+    fields: [
+      { key: "urls", label: "리다이렉트 URL 흐름", type: "textarea", placeholder: "http://example.com\nhttps://example.com\nhttps://www.example.com\nhttps://example.com/final" },
+      { key: "reason", label: "점검 목적", type: "text", placeholder: "예: www/non-www 정리, 캠페인 링크 점검" },
+    ],
+    run: ({ urls, reason }) => {
+      const lines = urls.split("\n").map((line) => line.trim()).filter(Boolean);
+      const steps = lines.map((line, index) => {
+        const arrow = index === lines.length - 1 ? "최종" : "redirect";
+        return `${index + 1}. ${line} -> ${arrow}`;
+      });
+      const chainLength = Math.max(0, lines.length - 1);
+      const risk = chainLength <= 1 ? "낮음" : chainLength <= 2 ? "보통" : "높음";
+
+      return {
+        summary: `리다이렉트 체인 위험도는 ${risk}입니다.`,
+        output: [
+          `점검 목적: ${reason.trim() || "리다이렉트 흐름 확인"}`,
+          `체인 길이: ${chainLength}`,
+          "",
+          ...steps,
+          "",
+          "권장: 최종 URL까지 1회 이내로 이동하도록 정리",
+        ].join("\n"),
+        metrics: [
+          { label: "체인", value: `${chainLength}회`, tone: "primary" },
+          { label: "위험도", value: risk, tone: risk === "낮음" ? "accent" : "muted" },
+          { label: "URL", value: `${lines.length}개` },
+        ],
+        tips: [
+          "http, www, trailing slash 정책이 섞이면 불필요한 리다이렉트가 생깁니다.",
+          "캠페인 URL은 QR 인쇄나 광고 집행 전에 최종 랜딩까지 직접 확인하세요.",
+          "긴 체인은 속도, 크롤링, 추적 파라미터 보존에 불리할 수 있습니다.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {

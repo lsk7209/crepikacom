@@ -1777,4 +1777,154 @@ export const GENERATED_TOOL_CONTENT: Record<string, ToolDetailedContent> = {
     ],
     relatedResources: relatedBasics,
   },
+  "url-encoder-decoder": {
+    id: "url-encoder-decoder",
+    introduction:
+      "URL 인코더 디코더는 한글, 공백, 특수문자가 포함된 URL이나 쿼리 값을 안전하게 인코딩하고 다시 디코딩하는 도구입니다. 캠페인 링크, 검색어 링크, 공유 URL을 만들 때 인코딩이 틀어지면 추적 값이 깨지거나 사용자가 잘못된 페이지로 이동할 수 있습니다.",
+    howToUse: {
+      steps: [
+        "URL 또는 변환할 텍스트를 입력합니다.",
+        "encodeURI, decodeURI, encodeURIComponent 결과를 확인합니다.",
+        "전체 URL에는 encodeURI 결과를 참고합니다.",
+        "쿼리 값 하나에는 encodeURIComponent 결과를 참고합니다.",
+      ],
+      tips: [
+        "이미 인코딩된 URL을 다시 인코딩하면 %25가 늘어나는 중복 인코딩 문제가 생깁니다.",
+        "UTM 값에 공백이나 한글이 들어가면 리포트가 지저분해질 수 있어 영문 소문자 규칙을 권장합니다.",
+        "공유 전에는 실제 브라우저에서 최종 URL이 열리는지 확인하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "링크 깨짐 예방", description: "한글과 특수문자가 포함된 URL을 안전하게 변환합니다." },
+      { title: "캠페인 URL 점검", description: "UTM 값과 검색어가 의도대로 전달되는지 확인할 수 있습니다." },
+      { title: "디버깅 시간 단축", description: "인코딩과 디코딩 결과를 한 번에 비교합니다." },
+    ],
+    faq: [
+      { question: "encodeURI와 encodeURIComponent는 무엇이 다른가요?", answer: "encodeURI는 전체 URL에, encodeURIComponent는 쿼리 값 하나처럼 URL의 일부에 쓰는 것이 일반적입니다." },
+      { question: "한글 URL을 써도 되나요?", answer: "가능하지만 공유와 추적 안정성을 위해 인코딩 결과를 확인하는 것이 좋습니다." },
+      { question: "중복 인코딩은 왜 문제인가요?", answer: "% 문자가 다시 인코딩되어 URL이 길어지고 원래 값 복원이 어려워질 수 있습니다." },
+      { question: "SEO에 영향이 있나요?", answer: "읽기 쉬운 URL과 안정적인 canonical 관리가 더 중요합니다. 인코딩은 링크가 정확히 작동하게 돕는 기술적 보조 요소입니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "query-string-parser": {
+    id: "query-string-parser",
+    introduction:
+      "쿼리스트링 분석기는 긴 URL 안의 파라미터를 키와 값으로 분해해 보여주는 도구입니다. UTM 캠페인, 검색 필터, 추천 코드처럼 여러 값이 붙은 링크는 발행 전에 누락, 빈 값, 중복 키를 확인해야 GA4와 서버 로그 분석이 깔끔해집니다.",
+    howToUse: {
+      steps: [
+        "분석할 전체 URL 또는 쿼리스트링을 입력합니다.",
+        "파라미터 키와 값을 확인합니다.",
+        "UTM 개수와 중복 키 여부를 확인합니다.",
+        "필요 없는 값은 링크 정리 도구로 정리합니다.",
+      ],
+      tips: [
+        "빈 값이 있는 파라미터는 분석 도구에서 의도와 다르게 처리될 수 있습니다.",
+        "같은 키가 여러 번 나오면 서버와 브라우저 처리 방식이 달라질 수 있습니다.",
+        "utm_source, utm_medium, utm_campaign은 발행 전 반드시 확인하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "파라미터 구조 확인", description: "긴 URL의 쿼리 값을 빠르게 분해합니다." },
+      { title: "UTM 오류 예방", description: "캠페인 필수값 누락과 중복을 미리 찾습니다." },
+      { title: "링크 디버깅", description: "공유 링크가 의도한 값을 전달하는지 확인합니다." },
+    ],
+    faq: [
+      { question: "쿼리스트링은 무엇인가요?", answer: "URL에서 물음표 뒤에 붙는 key=value 형식의 파라미터 묶음입니다." },
+      { question: "중복 파라미터가 있으면 안 되나요?", answer: "기술적으로 가능하지만 도구마다 처리 방식이 달라 분석과 서버 동작이 흔들릴 수 있습니다." },
+      { question: "UTM이 아닌 파라미터도 봐야 하나요?", answer: "네. 추천 코드, 필터, 세션 값처럼 사용자 경험이나 추적에 영향을 주는 값도 확인해야 합니다." },
+      { question: "내부 링크 쿼리도 분석할 수 있나요?", answer: "가능합니다. 다만 내부 링크에 UTM을 붙이는 것은 원본 유입 분석을 흐릴 수 있습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "link-cleanup-tool": {
+    id: "link-cleanup-tool",
+    introduction:
+      "링크 정리 도구는 공유 URL에서 불필요한 추적 파라미터와 해시를 제거하고, 필요한 UTM 값만 남기는 도구입니다. 너무 긴 URL은 신뢰감을 떨어뜨리고 메신저나 SNS에서 잘려 보일 수 있으므로 공개 링크는 짧고 의도가 분명해야 합니다.",
+    howToUse: {
+      steps: [
+        "정리할 원본 URL을 입력합니다.",
+        "유지할 파라미터 목록을 쉼표로 입력합니다.",
+        "정리된 URL을 복사합니다.",
+        "브라우저에서 최종 랜딩과 추적 값이 유지되는지 확인합니다.",
+      ],
+      tips: [
+        "fbclid, 임시 세션 값, 불필요한 해시는 공유 링크에서 제거해도 되는 경우가 많습니다.",
+        "광고와 캠페인 분석이 필요하면 UTM 값은 유지하세요.",
+        "정리 후 canonical URL과 실제 랜딩 URL이 충돌하지 않는지 확인하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "공유 링크 정돈", description: "불필요하게 긴 URL을 읽기 쉬운 형태로 정리합니다." },
+      { title: "추적값 관리", description: "필요한 UTM만 남겨 캠페인 분석을 유지합니다." },
+      { title: "신뢰도 개선", description: "사용자가 클릭하기 부담스러운 지저분한 링크를 줄입니다." },
+    ],
+    faq: [
+      { question: "모든 추적 파라미터를 지워도 되나요?", answer: "아닙니다. 광고나 캠페인 성과 분석에 필요한 UTM은 유지해야 합니다." },
+      { question: "해시 값은 왜 제거하나요?", answer: "페이지 안 특정 위치 이동에만 쓰는 값이라 공유 목적에 따라 불필요할 수 있습니다." },
+      { question: "정리한 링크가 깨질 수 있나요?", answer: "가능합니다. 일부 사이트는 특정 파라미터가 있어야 동작하므로 정리 후 실제 접속 테스트가 필요합니다." },
+      { question: "SEO용 canonical과 같은가요?", answer: "다릅니다. 링크 정리는 공유와 추적용이고 canonical은 검색엔진에 대표 URL을 알려주는 요소입니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "qr-campaign-url-builder": {
+    id: "qr-campaign-url-builder",
+    introduction:
+      "QR 캠페인 URL 빌더는 포스터, 전단, 부스, 오프라인 안내문에 넣을 QR 코드용 UTM 추적 URL을 생성합니다. 오프라인 유입은 그냥 QR만 만들면 성과가 흐려지기 쉬우므로, 배치 위치와 캠페인명을 URL에 구조적으로 남기는 것이 좋습니다.",
+    howToUse: {
+      steps: [
+        "랜딩 URL을 입력합니다.",
+        "캠페인명을 입력합니다.",
+        "QR이 놓일 위치를 입력합니다.",
+        "생성된 URL로 QR 코드를 만들고 실제 스마트폰으로 테스트합니다.",
+      ],
+      tips: [
+        "utm_source는 qr, utm_medium은 offline으로 고정하면 오프라인 유입을 묶어 보기 쉽습니다.",
+        "포스터, 전단, 부스처럼 배치 위치는 utm_content로 구분하세요.",
+        "인쇄 전에는 QR 스캔, 리다이렉트, 모바일 랜딩 속도를 반드시 확인하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "오프라인 유입 추적", description: "QR 코드 방문을 GA4에서 구분할 수 있게 합니다." },
+      { title: "배치 위치 비교", description: "포스터와 전단 등 QR 위치별 성과를 나눠 볼 수 있습니다." },
+      { title: "캠페인 운영 정리", description: "오프라인 링크도 온라인 캠페인과 같은 규칙으로 관리합니다." },
+    ],
+    faq: [
+      { question: "QR 코드 자체도 생성하나요?", answer: "이 도구는 QR에 넣을 추적 URL을 만듭니다. QR 이미지는 별도 QR 생성 도구로 만들면 됩니다." },
+      { question: "utm_source를 꼭 qr로 해야 하나요?", answer: "필수는 아니지만 오프라인 QR 유입을 일관되게 묶기 위해 qr을 권장합니다." },
+      { question: "긴 URL을 QR로 만들면 문제가 있나요?", answer: "QR이 복잡해져 인쇄 품질과 스캔 안정성이 떨어질 수 있습니다. 가능하면 안정적인 랜딩 URL을 쓰세요." },
+      { question: "인쇄 후 URL을 바꿀 수 있나요?", answer: "직접 URL을 넣었다면 어렵습니다. 변경 가능성을 고려하면 짧은 리다이렉트 URL을 중간에 두는 방식도 검토할 수 있습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "redirect-chain-notes-builder": {
+    id: "redirect-chain-notes-builder",
+    introduction:
+      "리다이렉트 체인 기록표는 URL이 최종 페이지까지 이동하는 흐름을 기록하고 체인 길이와 위험도를 정리하는 도구입니다. http에서 https, www에서 non-www, 캠페인 단축 링크까지 여러 번 이동하면 속도와 추적 파라미터 보존, 크롤링 효율에 불리할 수 있습니다.",
+    howToUse: {
+      steps: [
+        "확인한 리다이렉트 URL 흐름을 줄바꿈으로 입력합니다.",
+        "점검 목적을 입력합니다.",
+        "체인 길이와 위험도를 확인합니다.",
+        "가능하면 최종 URL까지 1회 이내로 이동하도록 정리합니다.",
+      ],
+      tips: [
+        "도메인 대표 정책은 www/non-www 중 하나로 고정하세요.",
+        "http와 https, trailing slash, 대소문자 정책이 섞이지 않게 관리하세요.",
+        "캠페인 링크는 리다이렉트 과정에서 UTM이 사라지지 않는지 확인해야 합니다.",
+      ],
+    },
+    keyBenefits: [
+      { title: "리다이렉트 흐름 문서화", description: "URL 이동 과정을 기록해 문제를 설명하기 쉽게 만듭니다." },
+      { title: "속도와 크롤링 보완", description: "불필요한 이동을 줄여 사용자와 검색엔진 모두에 유리한 구조를 만듭니다." },
+      { title: "캠페인 링크 안정화", description: "리다이렉트 중 UTM과 랜딩 URL이 유지되는지 점검합니다." },
+    ],
+    faq: [
+      { question: "리다이렉트는 몇 번까지 괜찮나요?", answer: "가능하면 0~1회가 좋습니다. 여러 번 이어지는 체인은 속도와 크롤링 효율에 불리합니다." },
+      { question: "302와 301은 어떻게 다른가요?", answer: "301은 영구 이동, 302는 임시 이동에 가깝습니다. 대표 도메인 정리는 보통 301을 사용합니다." },
+      { question: "UTM이 리다이렉트 중 사라질 수 있나요?", answer: "네. 서버 설정에 따라 쿼리스트링이 보존되지 않을 수 있어 실제 테스트가 필요합니다." },
+      { question: "Vercel 도메인 리다이렉트도 점검해야 하나요?", answer: "네. apex, www, 임시 도메인 이동 흐름이 과도하지 않은지 확인하는 것이 좋습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
 };

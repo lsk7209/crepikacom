@@ -748,7 +748,7 @@
     "type": "text-transform",
     "intent": "URL 구성요소를 인코딩하거나 디코딩합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-21T11:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/url-encoder-decoder"
@@ -761,7 +761,7 @@
     "type": "text-transform",
     "intent": "URL 쿼리 파라미터를 표 형태로 분해합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-21T16:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/query-string-parser"
@@ -774,7 +774,7 @@
     "type": "text-transform",
     "intent": "불필요한 추적 파라미터를 제거해 공유하기 좋은 링크를 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-21T21:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/link-cleanup-tool"
@@ -787,7 +787,7 @@
     "type": "builder",
     "intent": "QR 코드용 캠페인 URL과 UTM 규칙을 함께 설계합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-22T02:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/qr-campaign-url-builder"
@@ -800,7 +800,7 @@
     "type": "builder",
     "intent": "확인한 리다이렉트 경로를 문서화하는 표를 만듭니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-22T07:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/redirect-chain-notes-builder"
