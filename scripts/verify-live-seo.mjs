@@ -6,6 +6,16 @@ const ADS_TXT_LINE = "google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0
 const ROOT_HTML_PATHS = ["/"];
 const SAMPLE_HTML_PATHS = ["/blog", "/tools/qr-generator", "/about", "/contact", "/privacy", "/terms"];
 const SAMPLE_ARTICLE_PATH = "/blog/review-psychology-marketing";
+const EXPECTED_JSON_LD_TYPES = {
+  "/": ["WebSite", "Organization"],
+  "/blog": ["CollectionPage", "BreadcrumbList"],
+  "/tools/qr-generator": ["WebPage", "SoftwareApplication", "BreadcrumbList"],
+  "/about": ["WebPage", "BreadcrumbList"],
+  "/contact": ["WebPage", "BreadcrumbList"],
+  "/privacy": ["WebPage", "BreadcrumbList"],
+  "/terms": ["WebPage", "BreadcrumbList"],
+  [SAMPLE_ARTICLE_PATH]: ["Article", "BreadcrumbList"],
+};
 const READABLE_HOME_MARKERS = ["\uD06C\uB808\uD53C\uCE74", "\uB85C\uADF8\uC778", "\uBB34\uB8CC"];
 const REQUIRED_CRAWLER_SHELL_MARKERS = ["\uAE00 \uBAA9\uCC28", "\uB2E4\uC74C \uB2E8\uACC4", "\uC0AC\uC774\uD2B8 \uAC80\uD1A0 \uC815\uBCF4"];
 const FORBIDDEN_CRAWLER_SHELL_MARKERS = ["Table of contents", "Next step", "Site and review context"];
@@ -111,8 +121,45 @@ function extractJsonLdObjects(body) {
   return objects;
 }
 
+function extractJsonLdTypes(objects) {
+  const types = [];
+  const stack = [...objects];
+  while (stack.length) {
+    const entry = stack.shift();
+    if (!entry || typeof entry !== "object") continue;
+    if (entry["@type"]) {
+      types.push(...(Array.isArray(entry["@type"]) ? entry["@type"] : [entry["@type"]]));
+    }
+    if (Array.isArray(entry["@graph"])) {
+      stack.push(...entry["@graph"]);
+    }
+  }
+  return [...new Set(types)];
+}
+
 function hasJsonLdType(body, type) {
   return extractJsonLdObjects(body).some((entry) => entry?.["@type"] === type);
+}
+
+function validateJsonLdTypes(path, body) {
+  const expectedTypes = EXPECTED_JSON_LD_TYPES[path] ?? [];
+  const objects = extractJsonLdObjects(body);
+  const types = extractJsonLdTypes(objects);
+
+  if (!objects.length) {
+    fail(`${path} must expose parseable JSON-LD structured data.`);
+  }
+  for (const type of expectedTypes) {
+    if (!types.includes(type)) {
+      fail(`${path} JSON-LD must include ${type}.`);
+    }
+  }
+
+  return {
+    blocks: (body.match(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>/gi) ?? []).length,
+    types,
+    expectedTypes,
+  };
 }
 
 function allowsGeneralCrawlers(body) {
@@ -416,6 +463,7 @@ async function main() {
     const { response, body } = await get(path);
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
     const headers = validateHtmlHeaders(path, response);
+    const structuredData = validateJsonLdTypes(path, body);
     const meta = hasMeaningfulMeta(body, { requireH1: false, requireBreadcrumb: false });
     for (const [name, ok] of Object.entries(meta)) {
       if (!ok) fail(`${path} is missing live root HTML marker: ${name}.`);
@@ -431,6 +479,7 @@ async function main() {
       bytes: body.length,
       headers,
       htmlBasics: meta,
+      structuredData,
       adsensePolicy: validateAdSenseAutoAds(path, body),
       readableRootText: true,
     });
@@ -440,6 +489,7 @@ async function main() {
     const { response, body } = await get(path);
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
     const headers = validateHtmlHeaders(path, response);
+    const structuredData = validateJsonLdTypes(path, body);
     const meta = hasMeaningfulMeta(body);
     for (const [name, ok] of Object.entries(meta)) {
       if (!ok) fail(`${path} is missing live HTML marker: ${name}.`);
@@ -451,6 +501,7 @@ async function main() {
       bytes: body.length,
       headers,
       htmlBasics: meta,
+      structuredData,
       adsensePolicy: validateAdSenseAutoAds(path, body),
     });
   }
@@ -460,6 +511,7 @@ async function main() {
     const { response, body } = await get(path);
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
     const headers = validateHtmlHeaders(path, response);
+    const structuredData = validateJsonLdTypes(path, body);
     const meta = hasMeaningfulMeta(body);
     for (const [name, ok] of Object.entries(meta)) {
       if (!ok) fail(`${path} is missing live article HTML marker: ${name}.`);
@@ -472,6 +524,7 @@ async function main() {
       bytes: body.length,
       headers,
       htmlBasics: meta,
+      structuredData,
       adsensePolicy: validateAdSenseAutoAds(path, body),
       shellLanguage,
     });
