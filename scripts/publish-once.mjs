@@ -7,7 +7,7 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
+import { execFileSync, execSync } from 'child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT        = join(__dirname, '..');
@@ -82,19 +82,14 @@ function markPublished(entry) {
 
 // slugs: 배치로 발행된 글 slug 배열. IndexNow는 글별, 사이트맵 핑은 1회.
 async function pingSearchEngines(slugs) {
-  const key = 'crepika2026indexnow';
-  const tasks = slugs.map(slug => {
-    const url = `${SITE_URL}/blog/${slug}`;
-    return fetch(`https://api.indexnow.org/indexnow?url=${encodeURIComponent(url)}&key=${key}`)
-      .then(r => console.log(`📡 IndexNow ${slug}: ${r.status}`)).catch(() => {});
-  });
-  tasks.push(
-    fetch(`https://www.bing.com/ping?sitemap=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`)
-      .then(r => console.log(`📡 Bing: ${r.status}`)).catch(() => {}),
-    fetch(`https://searchadvisor.naver.com/site/submit?url=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`)
-      .then(r => console.log(`📡 Naver: ${r.status}`)).catch(() => {}),
-  );
-  await Promise.allSettled(tasks);
+  try {
+    execFileSync(process.execPath, ['scripts/notify-indexing.mjs', '--slugs', slugs.join(',')], {
+      cwd: ROOT,
+      stdio: 'inherit',
+    });
+  } catch (error) {
+    console.warn('Indexing notification failed without blocking publication:', error instanceof Error ? error.message : error);
+  }
 }
 
 async function main() {

@@ -328,6 +328,31 @@ function validateGeneratedIndexes(queue, posts) {
   }
 }
 
+function validateIndexingAutomation() {
+  const notifier = requireFile("scripts/notify-indexing.mjs");
+  for (const marker of [
+    "https://api.indexnow.org/indexnow",
+    "https://searchadvisor.naver.com/indexnow",
+    "https://www.bing.com/ping?sitemap=",
+    "https://indexing.googleapis.com/v3/urlNotifications:publish",
+    "https://www.googleapis.com/webmasters/v3/sites/",
+  ]) {
+    if (!notifier.includes(marker)) {
+      fail(`notify-indexing.mjs is missing indexing endpoint: ${marker}`);
+    }
+  }
+
+  for (const path of ["scripts/publish-once.mjs", "scripts/publish-tool-once.mjs"]) {
+    const body = requireFile(path);
+    if (!body.includes("scripts/notify-indexing.mjs")) {
+      fail(`${path} must route scheduled indexing notifications through scripts/notify-indexing.mjs.`);
+    }
+    if (body.includes("searchadvisor.naver.com/site/submit")) {
+      fail(`${path} still uses the stale Naver site submit URL instead of Naver IndexNow.`);
+    }
+  }
+}
+
 function validateQueueCoverage(queue) {
   if (queue.length !== 100) {
     fail(`tool-queue.json should contain 100 planned tools; found ${queue.length}.`);
@@ -370,6 +395,7 @@ function main() {
   validateQueueCoverage(queue);
   validateSitemapAndRss(queue, posts);
   validateGeneratedIndexes(queue, posts);
+  validateIndexingAutomation();
 
   for (const message of warnings) {
     console.warn(`WARN ${message}`);
@@ -393,6 +419,7 @@ function main() {
           sitemap: "ok",
           rss: "ok",
           adsenseAutoAdsOnly: "ok",
+          indexingAutomation: "ok",
           toolQueue: queue.reduce((acc, item) => {
             acc[item.status] = (acc[item.status] || 0) + 1;
             return acc;

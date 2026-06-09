@@ -42,6 +42,7 @@ jobs:
         if: steps.check.outputs.remaining != '0'
         env:
           BATCH_SIZE: "5"
+          GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON }}
         run: node scripts/publish-once.mjs
 
       - name: Verify SEO gates

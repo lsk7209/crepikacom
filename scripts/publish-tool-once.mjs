@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from "node:child_process";
+import { execFileSync, execSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -9,6 +9,7 @@ const QUEUE_FILE = join(ROOT, "scripts", "tool-queue.json");
 const TOOLS_CONFIG_FILE = join(ROOT, "src", "data", "tools-config.ts");
 const SYNC_SCRIPT = join(ROOT, "scripts", "sync-indexable-content.mjs");
 const CRAWLER_SCRIPT = join(ROOT, "scripts", "generate-crawler-pages.mjs");
+const SITE_URL = "https://crepika.com";
 const MIN_HOURS = Number(process.env.TOOL_PUBLISH_MIN_HOURS || "5");
 const FORCE = process.env.FORCE_TOOL_PUBLISH === "1";
 const DRY_RUN = process.env.DRY_RUN === "1";
@@ -143,6 +144,21 @@ function commitAndPush(tool) {
   run("git push origin main");
 }
 
+function notifyIndexing(tool) {
+  try {
+    execFileSync(process.execPath, ["scripts/notify-indexing.mjs", "--urls", `${SITE_URL}${tool.path}`], {
+      cwd: ROOT,
+      stdio: "inherit",
+    });
+  } catch (error) {
+    console.warn(
+      `Indexing notification failed without blocking tool publication: ${
+        error instanceof Error ? error.message : error
+      }`,
+    );
+  }
+}
+
 function main() {
   if (!existsSync(QUEUE_FILE)) {
     throw new Error("Missing scripts/tool-queue.json");
@@ -215,6 +231,7 @@ function main() {
   );
 
   commitAndPush(next);
+  notifyIndexing(next);
 }
 
 try {
