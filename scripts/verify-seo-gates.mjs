@@ -5,6 +5,7 @@ import vm from "node:vm";
 
 const SITE_URL = "https://crepika.com";
 const BLOG_FILE = "src/data/blog-content.ts";
+const RECENT_META_FILE = "src/data/recent-blog-posts-meta.ts";
 const PUBLISHER_ID = "pub-3050601904412736";
 const ADSENSE_CLIENT = "ca-pub-3050601904412736";
 const ADS_TXT_LINE = `google.com, ${PUBLISHER_ID}, DIRECT, f08c47fec0942fa0`;
@@ -289,7 +290,7 @@ function validateSitemapAndRss(queue, posts) {
   }
 }
 
-function validateGeneratedIndexes(queue) {
+function validateGeneratedIndexes(queue, posts) {
   const aiIndex = JSON.parse(validateTextEncoding("public/ai-index.json"));
   if (aiIndex?.site?.url !== SITE_URL) {
     fail("ai-index.json site.url does not match the canonical site URL.");
@@ -310,6 +311,13 @@ function validateGeneratedIndexes(queue) {
 
   for (const path of ["public/rss.xml", "public/blog/index.html"]) {
     validateTextEncoding(path);
+  }
+
+  const recentMeta = validateTextEncoding(RECENT_META_FILE);
+  for (const post of posts.slice().reverse().slice(0, Math.min(3, posts.length))) {
+    if (!recentMeta.includes(`slug: ${JSON.stringify(post.slug)}`)) {
+      fail(`${RECENT_META_FILE} is missing recent post: ${post.slug}`);
+    }
   }
 
   const publicToolDirs = listDirectories("public/tools");
@@ -361,7 +369,7 @@ function main() {
   validatePublicFiles();
   validateQueueCoverage(queue);
   validateSitemapAndRss(queue, posts);
-  validateGeneratedIndexes(queue);
+  validateGeneratedIndexes(queue, posts);
 
   for (const message of warnings) {
     console.warn(`WARN ${message}`);

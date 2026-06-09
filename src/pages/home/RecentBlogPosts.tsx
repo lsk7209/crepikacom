@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { getAllBlogMeta } from "@/data/blog-posts-meta";
+import { recentBlogPostsMeta } from "@/data/recent-blog-posts-meta";
 
 const CATEGORY_LABELS: Record<string, string> = {
   guide: "가이드",
@@ -21,7 +21,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 export default function RecentBlogPosts() {
-  const recentPosts = getAllBlogMeta().slice(0, 3);
+  const recentPosts = recentBlogPostsMeta;
 
   return (
     <section className="mt-20 mb-8">
