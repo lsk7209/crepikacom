@@ -116,6 +116,10 @@ function extractXmlTags(source, tag) {
   return [...source.matchAll(re)].map((match) => match[1].trim());
 }
 
+function listDuplicateValues(values) {
+  return values.filter((value, index) => values.indexOf(value) !== index);
+}
+
 function extractArrayLiteral(source, marker) {
   const markerIndex = source.indexOf(marker);
   if (markerIndex === -1) {
@@ -415,7 +419,7 @@ function validateSitemapAndRss(queue, posts) {
   }
   const locs = extractXmlTags(sitemap, "loc");
   if (!locs.length) fail("sitemap.xml has no <loc> entries.");
-  const duplicateLocs = locs.filter((loc, index) => locs.indexOf(loc) !== index);
+  const duplicateLocs = listDuplicateValues(locs);
   if (duplicateLocs.length) {
     fail(`sitemap.xml has duplicate URLs: ${[...new Set(duplicateLocs)].slice(0, 10).join(", ")}`);
   }
@@ -483,6 +487,28 @@ function validateSitemapAndRss(queue, posts) {
   if (items > 100) {
     fail(`rss.xml should be capped at 100 items; found ${items}.`);
   }
+  const expectedRecentBlogUrls = posts
+    .slice()
+    .reverse()
+    .slice(0, Math.min(100, posts.length))
+    .map((post) => `${SITE_URL}/blog/${post.slug}`);
+  const rssLinks = extractXmlTags(rss, "link").filter((link) => link.startsWith(`${SITE_URL}/blog/`));
+  const rssGuids = extractXmlTags(rss, "guid").filter((guid) => guid.startsWith(`${SITE_URL}/blog/`));
+  const duplicateRssLinks = listDuplicateValues(rssLinks);
+  if (duplicateRssLinks.length) {
+    fail(`rss.xml has duplicate item links: ${[...new Set(duplicateRssLinks)].slice(0, 10).join(", ")}`);
+  }
+  if (rssLinks.length !== expectedRecentBlogUrls.length) {
+    fail(`rss.xml item link count (${rssLinks.length}) must match expected recent posts (${expectedRecentBlogUrls.length}).`);
+  }
+  for (const [index, url] of expectedRecentBlogUrls.entries()) {
+    if (rssLinks[index] !== url) {
+      fail(`rss.xml item ${index + 1} must be ${url}; got ${rssLinks[index] || "missing"}.`);
+    }
+    if (rssGuids[index] !== url) {
+      fail(`rss.xml guid ${index + 1} must match its canonical link ${url}; got ${rssGuids[index] || "missing"}.`);
+    }
+  }
   for (const post of posts.slice().reverse().slice(0, Math.min(20, posts.length))) {
     const url = `${SITE_URL}/blog/${post.slug}`;
     if (!rss.includes(`<link>${url}</link>`)) {
@@ -504,6 +530,23 @@ function validateSitemapAndRss(queue, posts) {
   if (feedItems !== items) {
     fail(`feed.xml item count (${feedItems}) must match rss.xml (${items}).`);
   }
+  const feedLinks = extractXmlTags(feed, "link").filter((link) => link.startsWith(`${SITE_URL}/blog/`));
+  const feedGuids = extractXmlTags(feed, "guid").filter((guid) => guid.startsWith(`${SITE_URL}/blog/`));
+  const duplicateFeedLinks = listDuplicateValues(feedLinks);
+  if (duplicateFeedLinks.length) {
+    fail(`feed.xml has duplicate item links: ${[...new Set(duplicateFeedLinks)].slice(0, 10).join(", ")}`);
+  }
+  if (JSON.stringify(feedLinks) !== JSON.stringify(rssLinks)) {
+    fail("feed.xml item links must exactly match rss.xml item links.");
+  }
+  if (JSON.stringify(feedGuids) !== JSON.stringify(rssGuids)) {
+    fail("feed.xml item guids must exactly match rss.xml item guids.");
+  }
+  for (const url of rssLinks) {
+    if (!locs.includes(url)) {
+      fail(`RSS/feed item is missing from sitemap.xml: ${url}`);
+    }
+  }
   for (const post of posts.slice().reverse().slice(0, Math.min(20, posts.length))) {
     const url = `${SITE_URL}/blog/${post.slug}`;
     if (!feed.includes(`<link>${url}</link>`)) {
@@ -522,6 +565,20 @@ function validateGeneratedIndexes(queue, posts) {
   }
   if (aiIndex?.blog?.rss !== `${SITE_URL}/rss.xml`) {
     fail("ai-index.json blog.rss does not match the canonical RSS URL.");
+  }
+  if (aiIndex?.blog?.count !== posts.length) {
+    fail(`ai-index.json blog.count (${aiIndex?.blog?.count}) does not match renderable posts (${posts.length}).`);
+  }
+  const expectedLatestUrls = posts
+    .slice()
+    .reverse()
+    .slice(0, 12)
+    .map((post) => `${SITE_URL}/blog/${post.slug}`);
+  const aiLatestUrls = Array.isArray(aiIndex?.blog?.latest)
+    ? aiIndex.blog.latest.map((post) => post?.url)
+    : [];
+  if (JSON.stringify(aiLatestUrls) !== JSON.stringify(expectedLatestUrls)) {
+    fail("ai-index.json blog.latest URLs must match the 12 newest renderable posts.");
   }
 
   const llms = validateTextEncoding("public/llms.txt");

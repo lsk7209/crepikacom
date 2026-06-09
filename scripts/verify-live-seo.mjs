@@ -61,6 +61,15 @@ function countMatches(value, pattern) {
   return (value.match(pattern) ?? []).length;
 }
 
+function extractXmlTags(source, tag) {
+  const re = new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`, "g");
+  return [...source.matchAll(re)].map((match) => match[1].trim());
+}
+
+function listDuplicateValues(values) {
+  return values.filter((value, index) => values.indexOf(value) !== index);
+}
+
 async function get(path) {
   const url = path.startsWith("http") ? path : `${SITE_URL}${path}`;
   const response = await fetch(url, {
@@ -332,6 +341,93 @@ async function validateAiIndexEndpoint() {
   };
 }
 
+async function validateDiscoveryConsistency() {
+  const [sitemapResult, rssResult, feedResult, aiIndexResult] = await Promise.all([
+    get("/sitemap.xml"),
+    get("/rss.xml"),
+    get("/feed.xml"),
+    get("/ai-index.json"),
+  ]);
+
+  for (const { url, response } of [sitemapResult, rssResult, feedResult, aiIndexResult]) {
+    if (!response.ok) fail(`${url} returned HTTP ${response.status} during discovery consistency validation.`);
+  }
+
+  const sitemapBlogUrls = extractXmlTags(sitemapResult.body, "loc").filter((loc) =>
+    loc.startsWith(`${SITE_URL}/blog/`),
+  );
+  const rssLinks = extractXmlTags(rssResult.body, "link").filter((link) =>
+    link.startsWith(`${SITE_URL}/blog/`),
+  );
+  const rssGuids = extractXmlTags(rssResult.body, "guid").filter((guid) =>
+    guid.startsWith(`${SITE_URL}/blog/`),
+  );
+  const feedLinks = extractXmlTags(feedResult.body, "link").filter((link) =>
+    link.startsWith(`${SITE_URL}/blog/`),
+  );
+  const feedGuids = extractXmlTags(feedResult.body, "guid").filter((guid) =>
+    guid.startsWith(`${SITE_URL}/blog/`),
+  );
+
+  const duplicateSitemapUrls = listDuplicateValues(sitemapBlogUrls);
+  const duplicateRssLinks = listDuplicateValues(rssLinks);
+  const duplicateFeedLinks = listDuplicateValues(feedLinks);
+  if (duplicateSitemapUrls.length) {
+    fail(`sitemap.xml has duplicate blog URLs: ${[...new Set(duplicateSitemapUrls)].slice(0, 10).join(", ")}`);
+  }
+  if (duplicateRssLinks.length) {
+    fail(`rss.xml has duplicate item links: ${[...new Set(duplicateRssLinks)].slice(0, 10).join(", ")}`);
+  }
+  if (duplicateFeedLinks.length) {
+    fail(`feed.xml has duplicate item links: ${[...new Set(duplicateFeedLinks)].slice(0, 10).join(", ")}`);
+  }
+  if (rssLinks.length < 20 || rssLinks.length > 100) {
+    fail(`rss.xml must expose 20-100 recent blog item links; found ${rssLinks.length}.`);
+  }
+  if (JSON.stringify(feedLinks) !== JSON.stringify(rssLinks)) {
+    fail("feed.xml item links must exactly match rss.xml item links.");
+  }
+  if (JSON.stringify(feedGuids) !== JSON.stringify(rssGuids)) {
+    fail("feed.xml item guids must exactly match rss.xml item guids.");
+  }
+  for (const [index, url] of rssLinks.entries()) {
+    if (rssGuids[index] !== url) {
+      fail(`rss.xml guid ${index + 1} must match its canonical link ${url}; got ${rssGuids[index] || "missing"}.`);
+    }
+    if (!sitemapBlogUrls.includes(url)) {
+      fail(`RSS/feed item is missing from sitemap.xml: ${url}`);
+    }
+  }
+
+  let aiIndex = null;
+  try {
+    aiIndex = JSON.parse(aiIndexResult.body);
+  } catch (error) {
+    fail(`/ai-index.json is not valid JSON during discovery consistency validation: ${error instanceof Error ? error.message : error}`);
+  }
+
+  const aiLatestUrls = Array.isArray(aiIndex?.blog?.latest)
+    ? aiIndex.blog.latest.map((post) => post?.url)
+    : [];
+  const expectedAiLatestUrls = rssLinks.slice(0, 12);
+  if (aiIndex?.blog?.count !== sitemapBlogUrls.length) {
+    fail(`ai-index.json blog.count (${aiIndex?.blog?.count}) must match sitemap blog URL count (${sitemapBlogUrls.length}).`);
+  }
+  if (JSON.stringify(aiLatestUrls) !== JSON.stringify(expectedAiLatestUrls)) {
+    fail("ai-index.json blog.latest URLs must match the first 12 RSS item links.");
+  }
+
+  return {
+    path: "discovery-consistency",
+    sitemapBlogUrls: sitemapBlogUrls.length,
+    rssItems: rssLinks.length,
+    feedItems: feedLinks.length,
+    aiLatestItems: aiLatestUrls.length,
+    rssFeedMatch: JSON.stringify(feedLinks) === JSON.stringify(rssLinks),
+    aiLatestMatchesRss: JSON.stringify(aiLatestUrls) === JSON.stringify(expectedAiLatestUrls),
+  };
+}
+
 async function main() {
   const checks = [];
 
@@ -458,6 +554,7 @@ async function main() {
     ),
   );
   checks.push(await validateAiIndexEndpoint());
+  checks.push(await validateDiscoveryConsistency());
 
   for (const path of ROOT_HTML_PATHS) {
     const { response, body } = await get(path);
