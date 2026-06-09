@@ -311,7 +311,7 @@ export default function BlogPost() {
       </Helmet>
 
       <ReadingProgressBar />
-      <article className="container px-4 py-12 mx-auto max-w-4xl">
+      <article className="blog-reading-layout container px-4 py-12 mx-auto max-w-4xl">
         {/* Breadcrumb */}
         <nav
           aria-label="breadcrumb"

@@ -98,3 +98,28 @@ All colors MUST be HSL.
   content-visibility: auto;
   contain-intrinsic-size: auto 400px;
 }
+
+.blog-reading-layout {
+  overflow-wrap: anywhere;
+}
+
+.blog-reading-layout h1,
+.blog-reading-layout h2,
+.blog-reading-layout h3,
+.blog-reading-layout p,
+.blog-reading-layout li,
+.blog-reading-layout a {
+  min-width: 0;
+}
+
+.blog-reading-layout a,
+.overflow-wrap-anywhere {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.blog-reading-layout pre,
+.blog-reading-layout table {
+  max-width: 100%;
+  overflow-x: auto;
+}

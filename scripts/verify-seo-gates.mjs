@@ -358,6 +358,32 @@ function validateAnalyticsSetup(index) {
   }
 }
 
+function validateBlogReadingLayout() {
+  const blogPostSource = requireFile("src/pages/BlogPost.tsx");
+  const markdownSource = requireFile("src/lib/markdown.tsx");
+  const cssSource = requireFile("src/index.css");
+
+  for (const marker of [
+    "blog-reading-layout",
+    "overflow-wrap-anywhere",
+    "Inline code `text`",
+  ]) {
+    if (!blogPostSource.includes(marker) && !markdownSource.includes(marker) && !cssSource.includes(marker)) {
+      fail(`Blog reading layout must keep ${marker} coverage for mobile-safe article rendering.`);
+    }
+  }
+
+  if (!cssSource.includes(".blog-reading-layout") || !cssSource.includes("overflow-wrap: anywhere")) {
+    fail("src/index.css must define mobile-safe wrapping for the blog reading layout.");
+  }
+  if (!markdownSource.includes("<code") || !markdownSource.includes("text-[0.92em]")) {
+    fail("MarkdownContent must render inline code with a distinct, readable style.");
+  }
+  if (!blogPostSource.includes('className="blog-reading-layout container')) {
+    fail("BlogPost article must use the blog-reading-layout class.");
+  }
+}
+
 function parseRssItems(source) {
   return [...source.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((match) => {
     const item = match[1];
@@ -749,6 +775,7 @@ function validatePublicFiles() {
   validateSiteIdentitySchema("index.html", index);
   validateInlineImageAlt("index.html", index);
   validateAnalyticsSetup(index);
+  validateBlogReadingLayout();
   if (!index.includes(`href="${SITE_URL}/rss.xml"`)) {
     fail("index.html is missing the RSS alternate link.");
   }
@@ -1427,6 +1454,7 @@ function main() {
           feed: "ok",
           staticHtmlBasics: "ok",
           analytics: "ok",
+          blogReadingLayout: "ok",
           adsenseAutoAdsOnly: "ok",
           blogRelatedTools: "ok",
           indexingAutomation: "ok",

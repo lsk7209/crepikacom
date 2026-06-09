@@ -51,6 +51,20 @@ function processInline(text: string): React.ReactNode {
         }
       }
     }
+    // Inline code `text`
+    if (text[i] === '`') {
+      const end = text.indexOf('`', i + 1);
+      if (end !== -1) {
+        flush();
+        parts.push(
+          <code key={i} className="rounded bg-muted px-1.5 py-0.5 text-[0.92em] text-foreground">
+            {text.slice(i + 1, end)}
+          </code>
+        );
+        i = end + 1;
+        continue;
+      }
+    }
     buf += text[i];
     i++;
   }
@@ -92,11 +106,11 @@ export function MarkdownContent({ content, className = '' }: { content: string; 
       const items: React.ReactNode[] = [];
       while (i < lines.length && lines[i].trim().startsWith('- ')) {
         const txt = lines[i].trim().slice(2);
-        items.push(<li key={i} className="mb-2 pl-1 marker:text-cyan-300">{processInline(txt)}</li>);
+        items.push(<li key={i} className="mb-2 min-w-0 overflow-wrap-anywhere pl-1 marker:text-cyan-300">{processInline(txt)}</li>);
         i++;
       }
       elements.push(
-        <ul key={`ul-${i}`} className="mb-5 ml-5 list-disc space-y-1 text-base leading-8 text-foreground/90">
+        <ul key={`ul-${i}`} className="mb-5 ml-5 min-w-0 list-disc space-y-1 text-base leading-8 text-foreground/90">
           {items}
         </ul>
       );
@@ -108,11 +122,11 @@ export function MarkdownContent({ content, className = '' }: { content: string; 
       const items: React.ReactNode[] = [];
       while (i < lines.length && /^\d+\.\s/.test(lines[i].trim())) {
         const txt = lines[i].trim().replace(/^\d+\.\s/, '');
-        items.push(<li key={i} className="mb-2 pl-1 marker:text-amber-300">{processInline(txt)}</li>);
+        items.push(<li key={i} className="mb-2 min-w-0 overflow-wrap-anywhere pl-1 marker:text-amber-300">{processInline(txt)}</li>);
         i++;
       }
       elements.push(
-        <ol key={`ol-${i}`} className="mb-5 ml-5 list-decimal space-y-1 text-base leading-8 text-foreground/90">
+        <ol key={`ol-${i}`} className="mb-5 ml-5 min-w-0 list-decimal space-y-1 text-base leading-8 text-foreground/90">
           {items}
         </ol>
       );
@@ -120,12 +134,12 @@ export function MarkdownContent({ content, className = '' }: { content: string; 
     }
 
     elements.push(
-      <p key={i} className="mb-5 text-base leading-8 text-foreground/90">
+      <p key={i} className="mb-5 min-w-0 overflow-wrap-anywhere text-base leading-8 text-foreground/90">
         {processInline(trimmed)}
       </p>
     );
     i++;
   }
 
-  return <div className={`space-y-1 ${className}`}>{elements}</div>;
+  return <div className={`min-w-0 space-y-1 ${className}`}>{elements}</div>;
 }
