@@ -269,6 +269,7 @@ function validateCrawlerPage(path, canonicalUrl) {
     'name="google-adsense-account"',
     "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
     'type="application/ld+json"',
+    '"@type":"BreadcrumbList"',
   ]) {
     if (!body.includes(marker)) {
       fail(`${path} is missing crawler metadata marker: ${marker}`);
@@ -290,6 +291,9 @@ function validateStaticHtmlBasics() {
     }
     if (!/<link\s+rel="canonical"\s+href="https:\/\/crepika\.com\//i.test(body)) {
       fail(`${path} is missing a canonical crepika.com URL.`);
+    }
+    if (!body.includes('"@type":"BreadcrumbList"')) {
+      fail(`${path} is missing BreadcrumbList structured data.`);
     }
     if (h1Count !== 1) {
       fail(`${path} must have exactly one H1; found ${h1Count}.`);

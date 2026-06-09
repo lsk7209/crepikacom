@@ -287,6 +287,47 @@ function renderJsonLd(data) {
     .join("\n");
 }
 
+function makeBreadcrumb(canonical, label) {
+  const pathname = new URL(canonical).pathname;
+  const itemListElement = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Crepika",
+      item: `${siteUrl}/`,
+    },
+  ];
+
+  if (pathname.startsWith("/blog/")) {
+    itemListElement.push({
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: `${siteUrl}/blog`,
+    });
+  } else if (pathname.startsWith("/tools/")) {
+    itemListElement.push({
+      "@type": "ListItem",
+      position: 2,
+      name: "Tools",
+      item: `${siteUrl}/tools`,
+    });
+  }
+
+  itemListElement.push({
+    "@type": "ListItem",
+    position: itemListElement.length + 1,
+    name: label,
+    item: canonical,
+  });
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement,
+  };
+}
+
 function renderShell({
   title,
   description,
@@ -296,7 +337,8 @@ function renderShell({
   type = "website",
   structuredData = [],
 }) {
-  const jsonLd = renderJsonLd(structuredData);
+  const baseStructuredData = Array.isArray(structuredData) ? structuredData : [structuredData];
+  const jsonLd = renderJsonLd([...baseStructuredData, makeBreadcrumb(canonical, heading)]);
   return `<!doctype html>
 <html lang="ko">
   <head>

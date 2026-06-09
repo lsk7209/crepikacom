@@ -24,7 +24,7 @@ async function get(path) {
 }
 
 function hasMeaningfulMeta(body, options = {}) {
-  const { requireH1 = true } = options;
+  const { requireH1 = true, requireBreadcrumb = true } = options;
   return {
     title: /<title>[^<]{10,}<\/title>/i.test(body),
     description: /<meta\s+name="description"\s+content="[^"]{40,}"/i.test(body),
@@ -33,6 +33,7 @@ function hasMeaningfulMeta(body, options = {}) {
     ogImage: /<meta\s+property="og:image"\s+content="https:\/\/crepika\.com\/og-image\.png"/i.test(body),
     twitterCard: /<meta\s+name="twitter:card"\s+content="summary_large_image"/i.test(body),
     h1: !requireH1 || (body.match(/<h1\b/gi) || []).length === 1,
+    breadcrumb: !requireBreadcrumb || body.includes('"@type":"BreadcrumbList"'),
     adsense: body.includes("ca-pub-3050601904412736"),
   };
 }
@@ -135,7 +136,7 @@ async function main() {
   for (const path of ROOT_HTML_PATHS) {
     const { response, body } = await get(path);
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
-    const meta = hasMeaningfulMeta(body, { requireH1: false });
+    const meta = hasMeaningfulMeta(body, { requireH1: false, requireBreadcrumb: false });
     for (const [name, ok] of Object.entries(meta)) {
       if (!ok) fail(`${path} is missing live root HTML marker: ${name}.`);
     }
