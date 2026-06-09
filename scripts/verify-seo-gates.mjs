@@ -476,6 +476,7 @@ function validatePublicFiles() {
     }
   }
   validateSocialImageMeta("index.html", index);
+  validateSiteIdentitySchema("index.html", index);
   if (!index.includes(`href="${SITE_URL}/rss.xml"`)) {
     fail("index.html is missing the RSS alternate link.");
   }

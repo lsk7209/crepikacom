@@ -16,7 +16,7 @@ const EXPECTED_JSON_LD_TYPES = {
   "/terms": ["Organization", "WebSite", "WebPage", "BreadcrumbList"],
   [SAMPLE_ARTICLE_PATH]: ["Organization", "WebSite", "Article", "FAQPage", "BreadcrumbList"],
 };
-const SITE_IDENTITY_SAMPLE_PATHS = new Set([...SAMPLE_HTML_PATHS, SAMPLE_ARTICLE_PATH]);
+const SITE_IDENTITY_SAMPLE_PATHS = new Set([...ROOT_HTML_PATHS, ...SAMPLE_HTML_PATHS, SAMPLE_ARTICLE_PATH]);
 const BRAND_NAME_KO = "\uD06C\uB808\uD53C\uCE74";
 const READABLE_HOME_MARKERS = ["\uD06C\uB808\uD53C\uCE74", "\uB85C\uADF8\uC778", "\uBB34\uB8CC"];
 const REQUIRED_CRAWLER_SHELL_MARKERS = ["\uAE00 \uBAA9\uCC28", "\uB2E4\uC74C \uB2E8\uACC4", "\uC0AC\uC774\uD2B8 \uAC80\uD1A0 \uC815\uBCF4"];
@@ -860,6 +860,7 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
+      siteIdentitySchema: validateSiteIdentitySchema(path, body),
       socialImage: await validateSocialImage(path, body),
       internalLinks: await validateInternalLinks(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),

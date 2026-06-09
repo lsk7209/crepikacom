@@ -266,7 +266,33 @@ export default function Home() {
               email: "support@crepika.com",
               availableLanguage: "Korean",
             },
-            sameAs: ["https://crepika.com/rss.xml"],
+            sameAs: ["https://crepika.com/rss.xml", "https://crepika.com/llms.txt"],
+            member: [
+              {
+                "@type": "Person",
+                "@id": "https://crepika.com/about#leejisu",
+                name: "이지수",
+                url: "https://crepika.com/about",
+                image: "https://crepika.com/images/avatar-leejisu.svg",
+                worksFor: { "@id": "https://crepika.com/#organization" },
+              },
+              {
+                "@type": "Person",
+                "@id": "https://crepika.com/about#kimminhy",
+                name: "김민혁",
+                url: "https://crepika.com/about",
+                image: "https://crepika.com/images/avatar-kimminhy.svg",
+                worksFor: { "@id": "https://crepika.com/#organization" },
+              },
+              {
+                "@type": "Person",
+                "@id": "https://crepika.com/about#parkjy",
+                name: "박준영",
+                url: "https://crepika.com/about",
+                image: "https://crepika.com/images/avatar-parkjy.svg",
+                worksFor: { "@id": "https://crepika.com/#organization" },
+              },
+            ],
           })}
         </script>
         <script type="application/ld+json">
@@ -282,7 +308,7 @@ export default function Home() {
               "@type": "SearchAction",
               target: {
                 "@type": "EntryPoint",
-                urlTemplate: "https://crepika.com/?q={search_term_string}",
+                urlTemplate: "https://crepika.com/blog?search={search_term_string}",
               },
               "query-input": "required name=search_term_string",
             },
