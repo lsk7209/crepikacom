@@ -8,6 +8,7 @@ const BLOG_FILE = "src/data/blog-content.ts";
 const RECENT_META_FILE = "src/data/recent-blog-posts-meta.ts";
 const PUBLISHER_ID = "pub-3050601904412736";
 const ADSENSE_CLIENT = "ca-pub-3050601904412736";
+const GA4_MEASUREMENT_ID = "G-P8LJ76FVM4";
 const ADS_TXT_LINE = `google.com, ${PUBLISHER_ID}, DIRECT, f08c47fec0942fa0`;
 const BRAND_NAME_KO = "\uD06C\uB808\uD53C\uCE74";
 const READABLE_HOME_MARKERS = [BRAND_NAME_KO, "\uB85C\uADF8\uC778", "\uBB34\uB8CC"];
@@ -318,6 +319,42 @@ function validateDateNotFuture(value, context) {
   const today = new Date().toISOString().slice(0, 10);
   if (value > today) {
     fail(`${context} must not be in the future; got ${value}, today is ${today}.`);
+  }
+}
+
+function validateAnalyticsSetup(index) {
+  const appSource = requireFile("src/App.tsx");
+  const analyticsSource = requireFile("src/utils/analytics.ts");
+  const gtagLoaderCount = countMatches(index, new RegExp(`googletagmanager\\.com/gtag/js\\?id=${GA4_MEASUREMENT_ID}`, "g"));
+  if (gtagLoaderCount !== 1) {
+    fail(`index.html must load the GA4 gtag loader exactly once; found ${gtagLoaderCount}.`);
+  }
+  if (!index.includes('window.dataLayer = window.dataLayer || [];')) {
+    fail("index.html is missing the GA4 dataLayer bootstrap.");
+  }
+  if (!index.includes(`gtag('config', '${GA4_MEASUREMENT_ID}', { send_page_view: false });`)) {
+    fail("index.html must disable the initial GA4 page_view so SPA route tracking is not duplicated.");
+  }
+  if (!index.includes('href="https://www.googletagmanager.com"')) {
+    fail("index.html should preconnect or prefetch the Google Tag Manager host.");
+  }
+  if (!index.includes('href="https://www.google-analytics.com"')) {
+    fail("index.html should prefetch the Google Analytics collection host.");
+  }
+  if (!appSource.includes(`const GA4_MEASUREMENT_ID = "${GA4_MEASUREMENT_ID}";`)) {
+    fail("src/App.tsx must centralize the GA4 measurement id used for SPA route tracking.");
+  }
+  if (!appSource.includes('window.gtag("config", GA4_MEASUREMENT_ID')) {
+    fail("src/App.tsx must send GA4 config events on SPA route changes.");
+  }
+  if (!appSource.includes("`${location.pathname}${location.search}`")) {
+    fail("src/App.tsx must include query strings in GA4 page_path values.");
+  }
+  if (!appSource.includes("[location.pathname, location.search]")) {
+    fail("src/App.tsx GA4 route tracking must rerun when pathname or search changes.");
+  }
+  if (!analyticsSource.includes('window.gtag("event", event, params)')) {
+    fail("src/utils/analytics.ts must send custom events through GA4 gtag.");
   }
 }
 
@@ -711,6 +748,7 @@ function validatePublicFiles() {
   validateUrlSignalConsistency("index.html", index, `${SITE_URL}/`);
   validateSiteIdentitySchema("index.html", index);
   validateInlineImageAlt("index.html", index);
+  validateAnalyticsSetup(index);
   if (!index.includes(`href="${SITE_URL}/rss.xml"`)) {
     fail("index.html is missing the RSS alternate link.");
   }
@@ -1382,6 +1420,7 @@ function main() {
           rss: "ok",
           feed: "ok",
           staticHtmlBasics: "ok",
+          analytics: "ok",
           adsenseAutoAdsOnly: "ok",
           blogRelatedTools: "ok",
           indexingAutomation: "ok",

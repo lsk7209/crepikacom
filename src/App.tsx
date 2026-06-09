@@ -10,6 +10,8 @@ declare global {
   }
 }
 
+const GA4_MEASUREMENT_ID = "G-P8LJ76FVM4";
+
 const Home = lazy(() => import("./pages/Home"));
 const Toaster = lazy(() =>
   import("@/components/ui/toaster").then((m) => ({ default: m.Toaster })),
@@ -38,11 +40,11 @@ function AppContent() {
 
   useEffect(() => {
     if (typeof window.gtag !== "undefined") {
-      window.gtag("config", "G-P8LJ76FVM4", {
-        page_path: location.pathname,
+      window.gtag("config", GA4_MEASUREMENT_ID, {
+        page_path: `${location.pathname}${location.search}`,
       });
     }
-  }, [location.pathname]);
+  }, [location.pathname, location.search]);
 
   return (
     <>

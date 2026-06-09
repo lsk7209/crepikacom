@@ -2,6 +2,7 @@
 const SITE_URL = process.env.SITE_URL || "https://crepika.com";
 const WWW_SITE_URL = "https://www.crepika.com";
 const ADSENSE_CLIENT = "ca-pub-3050601904412736";
+const GA4_MEASUREMENT_ID = "G-P8LJ76FVM4";
 const ADS_TXT_LINE = "google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0";
 const ROOT_HTML_PATHS = ["/"];
 const SAMPLE_HTML_PATHS = ["/blog", "/tools/qr-generator", "/about", "/contact", "/privacy", "/terms"];
@@ -755,6 +756,42 @@ function validateAdSenseAutoAds(path, body) {
   };
 }
 
+function validateGa4Analytics(path, body) {
+  const loaderCount = countMatches(
+    body,
+    new RegExp(`googletagmanager\\.com/gtag/js\\?id=${GA4_MEASUREMENT_ID}`, "g"),
+  );
+  const hasDataLayer = body.includes("window.dataLayer = window.dataLayer || [];");
+  const initialPageViewDisabled = body.includes(`gtag('config', '${GA4_MEASUREMENT_ID}', { send_page_view: false });`);
+  const hasTagManagerHint = body.includes('href="https://www.googletagmanager.com"');
+  const hasAnalyticsHint = body.includes('href="https://www.google-analytics.com"');
+
+  if (loaderCount !== 1) {
+    fail(`${path} must load the GA4 gtag loader exactly once; found ${loaderCount}.`);
+  }
+  if (!hasDataLayer) {
+    fail(`${path} is missing the GA4 dataLayer bootstrap.`);
+  }
+  if (!initialPageViewDisabled) {
+    fail(`${path} must disable the initial GA4 page_view so SPA route tracking is not duplicated.`);
+  }
+  if (!hasTagManagerHint) {
+    fail(`${path} is missing a Google Tag Manager preconnect or prefetch hint.`);
+  }
+  if (!hasAnalyticsHint) {
+    fail(`${path} is missing a Google Analytics collection prefetch hint.`);
+  }
+
+  return {
+    measurementId: GA4_MEASUREMENT_ID,
+    gtagLoaderCount: loaderCount,
+    dataLayer: hasDataLayer,
+    initialPageViewDisabled,
+    tagManagerHint: hasTagManagerHint,
+    analyticsHint: hasAnalyticsHint,
+  };
+}
+
 function validatePublicEndpointHeaders(path, response) {
   const expected = PUBLIC_ENDPOINT_HEADER_EXPECTATIONS[path];
   if (!expected) return null;
@@ -1179,6 +1216,7 @@ async function main() {
       inlineImageAlt: validateInlineImageAlt(path, body),
       socialImage: await validateSocialImage(path, body),
       internalLinks: await validateInternalLinks(path, body),
+      analytics: validateGa4Analytics(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
       readableRootText: true,
     });
