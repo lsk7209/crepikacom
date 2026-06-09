@@ -131,6 +131,71 @@ function listDuplicateValues(values) {
   return values.filter((value, index) => values.indexOf(value) !== index);
 }
 
+function extractAnchorHrefs(body) {
+  return [...body.matchAll(/<a\b[^>]*\shref=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1]);
+}
+
+function publicRouteExists(routePath) {
+  if (routePath === "/") return existsSync("index.html");
+  const segments = routePath.split("/").filter(Boolean);
+  return existsSync(join("public", ...segments, "index.html"));
+}
+
+function validateInternalLinks(path, body) {
+  const ids = new Set([...body.matchAll(/\sid=["']([^"']+)["']/gi)].map((match) => match[1]));
+  const seen = new Set();
+  for (const rawHref of extractAnchorHrefs(body)) {
+    if (!rawHref || rawHref.startsWith("mailto:") || rawHref.startsWith("tel:")) continue;
+    if (/^https?:\/\/(?!crepika\.com\/)/i.test(rawHref)) continue;
+
+    let route = rawHref;
+    let hash = "";
+    if (rawHref.startsWith(`${SITE_URL}/`)) {
+      route = rawHref.slice(SITE_URL.length);
+    } else if (rawHref.startsWith("https://www.crepika.com/")) {
+      fail(`${path} contains a non-canonical www internal link: ${rawHref}`);
+      continue;
+    } else if (/^https?:\/\//i.test(rawHref)) {
+      fail(`${path} contains a non-canonical internal link host: ${rawHref}`);
+      continue;
+    }
+
+    if (route.startsWith("#")) {
+      hash = route.slice(1);
+      if (hash && !ids.has(hash)) {
+        fail(`${path} links to missing same-page fragment: ${rawHref}`);
+      }
+      continue;
+    }
+
+    const hashIndex = route.indexOf("#");
+    if (hashIndex !== -1) {
+      hash = route.slice(hashIndex + 1);
+      route = route.slice(0, hashIndex);
+    }
+    const queryIndex = route.indexOf("?");
+    if (queryIndex !== -1) {
+      fail(`${path} contains query-string internal link that should not be crawler navigation: ${rawHref}`);
+      route = route.slice(0, queryIndex);
+    }
+    route = route.replace(/\/+$/, "") || "/";
+    const key = `${route}#${hash}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    if (!route.startsWith("/")) {
+      fail(`${path} contains unsupported relative internal link: ${rawHref}`);
+      continue;
+    }
+    if (!publicRouteExists(route)) {
+      fail(`${path} links to a missing public internal route: ${rawHref}`);
+    }
+    if (hash && (route === "/" ? path === "index.html" : path.replace(/\\/g, "/").endsWith(`${route.slice(1)}/index.html`)) && !ids.has(hash)) {
+      fail(`${path} links to missing same-page fragment: ${rawHref}`);
+    }
+  }
+}
+
 function extractArrayLiteral(source, marker) {
   const markerIndex = source.indexOf(marker);
   if (markerIndex === -1) {
@@ -439,6 +504,7 @@ function validateCrawlerPage(path, canonicalUrl) {
     fail(`${path} is missing BreadcrumbList structured data.`);
   }
   validateSocialImageMeta(path, body);
+  validateInternalLinks(path, body);
 }
 
 function validateStaticHtmlBasics() {
@@ -460,6 +526,7 @@ function validateStaticHtmlBasics() {
       fail(`${path} is missing BreadcrumbList structured data.`);
     }
     validateSocialImageMeta(path, body);
+    validateInternalLinks(path, body);
     if (h1Count !== 1) {
       fail(`${path} must have exactly one H1; found ${h1Count}.`);
     }

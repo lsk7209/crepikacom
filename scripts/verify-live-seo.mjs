@@ -70,6 +70,10 @@ function listDuplicateValues(values) {
   return values.filter((value, index) => values.indexOf(value) !== index);
 }
 
+function extractAnchorHrefs(body) {
+  return [...body.matchAll(/<a\b[^>]*\shref=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1]);
+}
+
 async function get(path) {
   const url = path.startsWith("http") ? path : `${SITE_URL}${path}`;
   const response = await fetch(url, {
@@ -106,6 +110,13 @@ async function getHead(path) {
     redirect: "follow",
   });
   return { url, response };
+}
+
+async function getReachability(path) {
+  const head = await getHead(path);
+  if (head.response.status !== 405) return head;
+  const fetched = await get(path);
+  return { url: fetched.url, response: fetched.response };
 }
 
 function extractMetaContent(body, attribute, value) {
@@ -193,6 +204,76 @@ async function validateSocialImage(path, body) {
     imageStatus,
     imageContentType,
     imageCacheControl,
+  };
+}
+
+async function validateInternalLinks(path, body) {
+  const ids = new Set([...body.matchAll(/\sid=["']([^"']+)["']/gi)].map((match) => match[1]));
+  const links = [];
+  const seen = new Set();
+
+  for (const rawHref of extractAnchorHrefs(body)) {
+    if (!rawHref || rawHref.startsWith("mailto:") || rawHref.startsWith("tel:")) continue;
+    if (/^https?:\/\/(?!crepika\.com\/)/i.test(rawHref)) continue;
+
+    let route = rawHref;
+    let hash = "";
+    if (rawHref.startsWith(`${SITE_URL}/`)) {
+      route = rawHref.slice(SITE_URL.length);
+    } else if (rawHref.startsWith("https://www.crepika.com/")) {
+      fail(`${path} contains a non-canonical www internal link: ${rawHref}`);
+      continue;
+    } else if (/^https?:\/\//i.test(rawHref)) {
+      fail(`${path} contains a non-canonical internal link host: ${rawHref}`);
+      continue;
+    }
+
+    if (route.startsWith("#")) {
+      hash = route.slice(1);
+      if (hash && !ids.has(hash)) {
+        fail(`${path} links to missing same-page fragment: ${rawHref}`);
+      }
+      continue;
+    }
+
+    const hashIndex = route.indexOf("#");
+    if (hashIndex !== -1) {
+      hash = route.slice(hashIndex + 1);
+      route = route.slice(0, hashIndex);
+    }
+    const queryIndex = route.indexOf("?");
+    if (queryIndex !== -1) {
+      fail(`${path} contains query-string internal link that should not be crawler navigation: ${rawHref}`);
+      route = route.slice(0, queryIndex);
+    }
+    route = route.replace(/\/+$/, "") || "/";
+    if (!route.startsWith("/")) {
+      fail(`${path} contains unsupported relative internal link: ${rawHref}`);
+      continue;
+    }
+
+    const key = `${route}#${hash}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    if (hash && route === path && !ids.has(hash)) {
+      fail(`${path} links to missing same-page fragment: ${rawHref}`);
+    }
+
+    const result = await getReachability(route);
+    if (result.response.status >= 400) {
+      fail(`${path} links to ${route}, which returned HTTP ${result.response.status}.`);
+    }
+    links.push({
+      href: rawHref,
+      route,
+      status: result.response.status,
+    });
+  }
+
+  return {
+    checked: links.length,
+    links,
   };
 }
 
@@ -663,6 +744,7 @@ async function main() {
       htmlBasics: meta,
       structuredData,
       socialImage: await validateSocialImage(path, body),
+      internalLinks: await validateInternalLinks(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
       readableRootText: true,
     });
@@ -686,6 +768,7 @@ async function main() {
       htmlBasics: meta,
       structuredData,
       socialImage: await validateSocialImage(path, body),
+      internalLinks: await validateInternalLinks(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
     });
   }
@@ -710,6 +793,7 @@ async function main() {
       htmlBasics: meta,
       structuredData,
       socialImage: await validateSocialImage(path, body),
+      internalLinks: await validateInternalLinks(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
       shellLanguage,
     });
