@@ -55,6 +55,17 @@ const TOOL_ID_ALIASES = {
   "sns-analytics": "ctr-calculator",
   "sns-calendar": "utm-url-builder",
 };
+const REQUIRED_OG_IMAGE_PATHS = [
+  "public/og-image.png",
+  "public/images/og-guide.png",
+  "public/images/og-tips.png",
+  "public/images/og-insights.png",
+  "public/images/og-case-study.png",
+  "public/images/og-tool-plan.png",
+  "public/images/og-tool-create.png",
+  "public/images/og-tool-publish.png",
+  "public/images/og-tool-analyze.png",
+];
 
 const failures = [];
 const warnings = [];
@@ -210,7 +221,68 @@ function validateTextEncoding(path) {
   return body;
 }
 
+function readPngDimensions(path) {
+  if (!existsSync(path)) {
+    fail(`Missing required PNG image: ${path}`);
+    return null;
+  }
+  const buffer = readFileSync(path);
+  const pngSignature = "89504e470d0a1a0a";
+  if (buffer.subarray(0, 8).toString("hex") !== pngSignature) {
+    fail(`${path} must be a PNG image.`);
+    return null;
+  }
+  return {
+    width: buffer.readUInt32BE(16),
+    height: buffer.readUInt32BE(20),
+  };
+}
+
+function validateImageAssets() {
+  for (const path of REQUIRED_OG_IMAGE_PATHS) {
+    const dimensions = readPngDimensions(path);
+    if (!dimensions) continue;
+    if (dimensions.width !== 1200 || dimensions.height !== 630) {
+      fail(`${path} must be 1200x630 for social previews; got ${dimensions.width}x${dimensions.height}.`);
+    }
+  }
+}
+
+function validateSocialImageMeta(path, body) {
+  const ogImage = body.match(/<meta\s+property="og:image"\s+content="([^"]+)"/i)?.[1] ?? "";
+  const twitterImage = body.match(/<meta\s+name="twitter:image"\s+content="([^"]+)"/i)?.[1] ?? "";
+  const ogAlt = body.match(/<meta\s+property="og:image:alt"\s+content="([^"]{6,})"/i)?.[1] ?? "";
+  const twitterAlt = body.match(/<meta\s+name="twitter:image:alt"\s+content="([^"]{6,})"/i)?.[1] ?? "";
+
+  if (!ogImage.startsWith(`${SITE_URL}/`) || !ogImage.endsWith(".png")) {
+    fail(`${path} must use a canonical PNG og:image URL.`);
+  }
+  if (twitterImage !== ogImage) {
+    fail(`${path} twitter:image must match og:image.`);
+  }
+  if (!body.includes('<meta property="og:image:type" content="image/png"')) {
+    fail(`${path} must declare og:image:type image/png.`);
+  }
+  if (!body.includes('<meta property="og:image:width" content="1200"')) {
+    fail(`${path} must declare og:image:width 1200.`);
+  }
+  if (!body.includes('<meta property="og:image:height" content="630"')) {
+    fail(`${path} must declare og:image:height 630.`);
+  }
+  if (!ogAlt) {
+    fail(`${path} must declare meaningful og:image:alt text.`);
+  }
+  if (!twitterAlt) {
+    fail(`${path} must declare meaningful twitter:image:alt text.`);
+  }
+  if (ogAlt && twitterAlt && ogAlt !== twitterAlt) {
+    fail(`${path} twitter:image:alt must match og:image:alt.`);
+  }
+}
+
 function validatePublicFiles() {
+  validateImageAssets();
+
   const ads = requireFile("public/ads.txt").trim();
   if (ads !== ADS_TXT_LINE) {
     fail(`ads.txt must contain exactly: ${ADS_TXT_LINE}`);
@@ -245,6 +317,7 @@ function validatePublicFiles() {
       fail(`index.html is missing readable Korean home marker: ${marker}.`);
     }
   }
+  validateSocialImageMeta("index.html", index);
   if (!index.includes(`href="${SITE_URL}/rss.xml"`)) {
     fail("index.html is missing the RSS alternate link.");
   }
@@ -345,12 +418,15 @@ function validateCrawlerPage(path, canonicalUrl) {
     'property="og:url"',
     'property="og:locale"',
     'property="og:image"',
+    'property="og:image:type"',
     'property="og:image:width"',
     'property="og:image:height"',
+    'property="og:image:alt"',
     'name="twitter:card"',
     'name="twitter:title"',
     'name="twitter:description"',
     'name="twitter:image"',
+    'name="twitter:image:alt"',
     'name="google-adsense-account"',
     "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
     'type="application/ld+json"',
@@ -362,6 +438,7 @@ function validateCrawlerPage(path, canonicalUrl) {
   if (!hasJsonLdType(body, path, "BreadcrumbList")) {
     fail(`${path} is missing BreadcrumbList structured data.`);
   }
+  validateSocialImageMeta(path, body);
 }
 
 function validateStaticHtmlBasics() {
@@ -382,6 +459,7 @@ function validateStaticHtmlBasics() {
     if (!hasJsonLdType(body, path, "BreadcrumbList")) {
       fail(`${path} is missing BreadcrumbList structured data.`);
     }
+    validateSocialImageMeta(path, body);
     if (h1Count !== 1) {
       fail(`${path} must have exactly one H1; found ${h1Count}.`);
     }

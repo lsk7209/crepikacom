@@ -96,6 +96,31 @@ async function getRedirect(url) {
   };
 }
 
+async function getHead(path) {
+  const url = path.startsWith("http") ? path : `${SITE_URL}${path}`;
+  const response = await fetch(url, {
+    method: "HEAD",
+    headers: {
+      "user-agent": "CrepikaLiveSEOCheck/1.0",
+    },
+    redirect: "follow",
+  });
+  return { url, response };
+}
+
+function extractMetaContent(body, attribute, value) {
+  const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(
+    `<meta\\s+[^>]*${attribute}=["']${escapedValue}["'][^>]*content=["']([^"']+)["'][^>]*>`,
+    "i",
+  );
+  const reversePattern = new RegExp(
+    `<meta\\s+[^>]*content=["']([^"']+)["'][^>]*${attribute}=["']${escapedValue}["'][^>]*>`,
+    "i",
+  );
+  return body.match(pattern)?.[1] ?? body.match(reversePattern)?.[1] ?? "";
+}
+
 function hasMeaningfulMeta(body, options = {}) {
   const { requireH1 = true, requireBreadcrumb = true } = options;
   return {
@@ -108,6 +133,66 @@ function hasMeaningfulMeta(body, options = {}) {
     h1: !requireH1 || (body.match(/<h1\b/gi) || []).length === 1,
     breadcrumb: !requireBreadcrumb || hasJsonLdType(body, "BreadcrumbList"),
     adsense: body.includes("ca-pub-3050601904412736"),
+  };
+}
+
+async function validateSocialImage(path, body) {
+  const ogImage = extractMetaContent(body, "property", "og:image");
+  const twitterImage = extractMetaContent(body, "name", "twitter:image");
+  const ogImageType = extractMetaContent(body, "property", "og:image:type");
+  const ogImageWidth = extractMetaContent(body, "property", "og:image:width");
+  const ogImageHeight = extractMetaContent(body, "property", "og:image:height");
+  const ogImageAlt = extractMetaContent(body, "property", "og:image:alt");
+  const twitterImageAlt = extractMetaContent(body, "name", "twitter:image:alt");
+
+  if (!ogImage.startsWith(`${SITE_URL}/`) || !ogImage.endsWith(".png")) {
+    fail(`${path} must use a canonical PNG og:image URL.`);
+  }
+  if (twitterImage !== ogImage) {
+    fail(`${path} twitter:image must match og:image.`);
+  }
+  if (ogImageType !== "image/png") {
+    fail(`${path} must declare og:image:type image/png.`);
+  }
+  if (ogImageWidth !== "1200") {
+    fail(`${path} must declare og:image:width 1200.`);
+  }
+  if (ogImageHeight !== "630") {
+    fail(`${path} must declare og:image:height 630.`);
+  }
+  if (ogImageAlt.length < 6) {
+    fail(`${path} must declare meaningful og:image:alt text.`);
+  }
+  if (twitterImageAlt !== ogImageAlt) {
+    fail(`${path} twitter:image:alt must match og:image:alt.`);
+  }
+
+  let imageStatus = 0;
+  let imageContentType = "";
+  let imageCacheControl = "";
+  if (ogImage) {
+    const image = await getHead(ogImage);
+    imageStatus = image.response.status;
+    imageContentType = image.response.headers.get("content-type") ?? "";
+    imageCacheControl = image.response.headers.get("cache-control") ?? "";
+    if (!image.response.ok) {
+      fail(`${path} og:image returned HTTP ${image.response.status}: ${ogImage}`);
+    }
+    if (!imageContentType.toLowerCase().startsWith("image/png")) {
+      fail(`${path} og:image must return image/png; got ${imageContentType || "missing"}.`);
+    }
+  }
+
+  return {
+    ogImage,
+    twitterImage,
+    type: ogImageType,
+    width: ogImageWidth,
+    height: ogImageHeight,
+    alt: ogImageAlt,
+    imageStatus,
+    imageContentType,
+    imageCacheControl,
   };
 }
 
@@ -577,6 +662,7 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
+      socialImage: await validateSocialImage(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
       readableRootText: true,
     });
@@ -599,6 +685,7 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
+      socialImage: await validateSocialImage(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
     });
   }
@@ -622,6 +709,7 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
+      socialImage: await validateSocialImage(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
       shellLanguage,
     });
