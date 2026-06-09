@@ -1,0 +1,40 @@
+name: Auto Publish Utility Tool
+
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Publish the next ready tool even if five hours have not passed"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-publish-tools
+  cancel-in-progress: false
+
+jobs:
+  publish-tool:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Publish next ready utility tool
+        env:
+          FORCE_TOOL_PUBLISH: ${{ github.event.inputs.force == 'true' && '1' || '0' }}
+          TOOL_PUBLISH_MIN_HOURS: "5"
+        run: node scripts/publish-tool-once.mjs
