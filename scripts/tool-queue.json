@@ -969,7 +969,7 @@
     "type": "calculator",
     "intent": "구독자 증가율과 이탈률로 예상 구독자 수를 계산합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-25T00:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/newsletter-growth-calculator"
@@ -982,7 +982,7 @@
     "type": "calculator",
     "intent": "좋아요, 댓글, 저장, 공유 수로 참여율을 계산합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-25T05:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/engagement-rate-calculator"
@@ -995,7 +995,7 @@
     "type": "calculator",
     "intent": "콘텐츠 제작 비용과 매출로 투자수익률을 계산합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-25T10:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/content-roi-calculator"
@@ -1008,7 +1008,7 @@
     "type": "calculator",
     "intent": "비용과 객단가로 필요한 판매수나 전환수를 계산합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-25T15:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/break-even-calculator"
@@ -1021,7 +1021,7 @@
     "type": "calculator",
     "intent": "테스트 데이터가 충분한지 간단히 판단할 수 있게 돕습니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-25T20:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/ab-test-sample-notes"
@@ -1034,7 +1034,7 @@
     "type": "calculator",
     "intent": "콘텐츠 큐가 현재 발행 주기로 얼마나 지속되는지 계산합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-26T01:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/publishing-pace-calculator"
@@ -1047,7 +1047,7 @@
     "type": "score-checker",
     "intent": "검색 의도, 난이도, 비즈니스 적합도로 키워드 우선순위를 매깁니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-26T06:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/keyword-opportunity-scorer"
@@ -1073,7 +1073,7 @@
     "type": "calculator",
     "intent": "방문자, 신청률, 전환율로 예상 리드를 계산합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-26T16:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/lead-magnet-math-calculator"
@@ -1086,7 +1086,7 @@
     "type": "calculator",
     "intent": "도달, 참여율, 제작 난이도로 협찬 단가 범위를 추정합니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-26T21:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/creator-pricing-calculator"
@@ -1099,7 +1099,7 @@
     "type": "calculator",
     "intent": "퍼널 단계별 이탈률과 개선 우선순위를 계산합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-27T02:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/funnel-dropoff-calculator"

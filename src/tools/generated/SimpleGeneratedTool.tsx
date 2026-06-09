@@ -3013,6 +3013,369 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "newsletter-growth-calculator": {
+    id: "newsletter-growth-calculator",
+    buttonLabel: "Calculate newsletter growth",
+    fields: [
+      { key: "current", label: "Current subscribers", type: "number", placeholder: "1200" },
+      { key: "growth", label: "Monthly growth %", type: "number", placeholder: "8" },
+      { key: "churn", label: "Monthly churn %", type: "number", placeholder: "2" },
+      { key: "months", label: "Months", type: "number", placeholder: "6" },
+    ],
+    run: ({ current, growth, churn, months }) => {
+      const start = Math.max(0, Number(current) || 0);
+      const netRate = ((Number(growth) || 0) - (Number(churn) || 0)) / 100;
+      const period = Math.max(1, Math.round(Number(months) || 1));
+      const projected = Math.max(0, Math.round(start * Math.pow(1 + netRate, period)));
+
+      return {
+        summary: `Projected subscribers after ${period} months: ${projected.toLocaleString()}.`,
+        output: [
+          `Starting subscribers: ${start.toLocaleString()}`,
+          `Net monthly growth: ${(netRate * 100).toFixed(2)}%`,
+          `Projected subscribers: ${projected.toLocaleString()}`,
+          `Net change: ${(projected - start).toLocaleString()}`,
+        ].join("\n"),
+        metrics: [
+          { label: "Projected", value: projected.toLocaleString(), tone: "primary" },
+          { label: "Net rate", value: `${(netRate * 100).toFixed(2)}%`, tone: "accent" },
+          { label: "Months", value: String(period) },
+        ],
+        tips: [
+          "Separate organic growth, paid acquisition, and referral growth when you review the real dashboard.",
+          "If churn is rising, improve onboarding and send cadence before spending more on acquisition.",
+          "Use a conservative rate for planning because subscriber growth rarely stays linear for long periods.",
+        ],
+      };
+    },
+  },
+  "engagement-rate-calculator": {
+    id: "engagement-rate-calculator",
+    buttonLabel: "Calculate engagement rate",
+    fields: [
+      { key: "reach", label: "Reach or followers", type: "number", placeholder: "10000" },
+      { key: "likes", label: "Likes", type: "number", placeholder: "420" },
+      { key: "comments", label: "Comments", type: "number", placeholder: "38" },
+      { key: "saves", label: "Saves", type: "number", placeholder: "74" },
+      { key: "shares", label: "Shares", type: "number", placeholder: "31" },
+    ],
+    run: ({ reach, likes, comments, saves, shares }) => {
+      const base = Math.max(0, Number(reach) || 0);
+      const total =
+        Math.max(0, Number(likes) || 0) +
+        Math.max(0, Number(comments) || 0) +
+        Math.max(0, Number(saves) || 0) +
+        Math.max(0, Number(shares) || 0);
+      const rate = base ? (total / base) * 100 : 0;
+
+      return {
+        summary: `Engagement rate is ${rate.toFixed(2)}%.`,
+        output: [
+          `Total engagements: ${total.toLocaleString()}`,
+          `Base: ${base.toLocaleString()}`,
+          `Engagement rate: ${rate.toFixed(2)}%`,
+        ].join("\n"),
+        metrics: [
+          { label: "Rate", value: `${rate.toFixed(2)}%`, tone: "primary" },
+          { label: "Engagements", value: total.toLocaleString(), tone: "accent" },
+          { label: "Base", value: base.toLocaleString() },
+        ],
+        tips: [
+          "Use reach for post-level analysis and followers for account-level comparisons.",
+          "Saves and shares often signal deeper value than likes, so review them separately.",
+          "Compare posts from the same format and platform before deciding a topic is weak.",
+        ],
+      };
+    },
+  },
+  "content-roi-calculator": {
+    id: "content-roi-calculator",
+    buttonLabel: "Calculate content ROI",
+    fields: [
+      { key: "cost", label: "Production cost", type: "number", placeholder: "350" },
+      { key: "revenue", label: "Attributed revenue", type: "number", placeholder: "1200" },
+    ],
+    run: ({ cost, revenue }) => {
+      const spend = Math.max(0, Number(cost) || 0);
+      const income = Math.max(0, Number(revenue) || 0);
+      const profit = income - spend;
+      const roi = spend ? (profit / spend) * 100 : 0;
+
+      return {
+        summary: `Estimated content ROI is ${roi.toFixed(1)}%.`,
+        output: [
+          `Revenue: ${income.toLocaleString()}`,
+          `Cost: ${spend.toLocaleString()}`,
+          `Profit: ${profit.toLocaleString()}`,
+          `ROI: ${roi.toFixed(1)}%`,
+        ].join("\n"),
+        metrics: [
+          { label: "ROI", value: `${roi.toFixed(1)}%`, tone: "primary" },
+          { label: "Profit", value: profit.toLocaleString(), tone: profit >= 0 ? "accent" : "muted" },
+          { label: "Cost", value: spend.toLocaleString() },
+        ],
+        tips: [
+          "Include writing, design, editing, distribution, and tool costs for a realistic result.",
+          "Content ROI may continue improving after publication, so review first-touch and long-tail value separately.",
+          "For brand campaigns, track leads or qualified actions when direct revenue is not available.",
+        ],
+      };
+    },
+  },
+  "break-even-calculator": {
+    id: "break-even-calculator",
+    buttonLabel: "Calculate break-even point",
+    fields: [
+      { key: "cost", label: "Fixed or campaign cost", type: "number", placeholder: "1500" },
+      { key: "margin", label: "Profit per sale/conversion", type: "number", placeholder: "35" },
+    ],
+    run: ({ cost, margin }) => {
+      const fixedCost = Math.max(0, Number(cost) || 0);
+      const profitPerUnit = Math.max(0, Number(margin) || 0);
+      const units = profitPerUnit ? Math.ceil(fixedCost / profitPerUnit) : 0;
+
+      return {
+        summary: profitPerUnit ? `You need ${units.toLocaleString()} conversions to break even.` : "Enter profit per conversion to calculate break-even.",
+        output: [
+          `Cost: ${fixedCost.toLocaleString()}`,
+          `Profit per conversion: ${profitPerUnit.toLocaleString()}`,
+          `Break-even conversions: ${units ? units.toLocaleString() : "Not available"}`,
+        ].join("\n"),
+        metrics: [
+          { label: "Break-even", value: units ? units.toLocaleString() : "N/A", tone: "primary" },
+          { label: "Margin", value: profitPerUnit.toLocaleString(), tone: "accent" },
+          { label: "Cost", value: fixedCost.toLocaleString() },
+        ],
+        tips: [
+          "Use contribution margin, not sale price, for cleaner break-even planning.",
+          "If conversion volume looks unrealistic, reduce scope or increase average order value before launching.",
+          "Pair this with conversion-rate estimates to translate sales targets into traffic targets.",
+        ],
+      };
+    },
+  },
+  "ab-test-sample-notes": {
+    id: "ab-test-sample-notes",
+    buttonLabel: "Review A/B test sample",
+    fields: [
+      { key: "aViews", label: "Variant A visitors", type: "number", placeholder: "1000" },
+      { key: "aConv", label: "Variant A conversions", type: "number", placeholder: "80" },
+      { key: "bViews", label: "Variant B visitors", type: "number", placeholder: "1000" },
+      { key: "bConv", label: "Variant B conversions", type: "number", placeholder: "96" },
+    ],
+    run: ({ aViews, aConv, bViews, bConv }) => {
+      const av = Math.max(0, Number(aViews) || 0);
+      const ac = Math.max(0, Number(aConv) || 0);
+      const bv = Math.max(0, Number(bViews) || 0);
+      const bc = Math.max(0, Number(bConv) || 0);
+      const ar = av ? (ac / av) * 100 : 0;
+      const br = bv ? (bc / bv) * 100 : 0;
+      const lift = ar ? ((br - ar) / ar) * 100 : 0;
+      const sampleFlag = av >= 1000 && bv >= 1000 && ac >= 50 && bc >= 50 ? "directionally useful" : "too thin for a strong call";
+
+      return {
+        summary: `Variant B lift is ${lift.toFixed(1)}%; sample looks ${sampleFlag}.`,
+        output: [
+          `A conversion rate: ${ar.toFixed(2)}%`,
+          `B conversion rate: ${br.toFixed(2)}%`,
+          `Relative lift: ${lift.toFixed(1)}%`,
+          `Sample note: ${sampleFlag}`,
+        ].join("\n"),
+        metrics: [
+          { label: "B lift", value: `${lift.toFixed(1)}%`, tone: "primary" },
+          { label: "A CVR", value: `${ar.toFixed(2)}%` },
+          { label: "B CVR", value: `${br.toFixed(2)}%`, tone: "accent" },
+        ],
+        tips: [
+          "This is a planning note, not a statistical significance engine.",
+          "Avoid stopping tests early only because one variant is temporarily ahead.",
+          "Segment mobile and desktop when layout or page speed may affect the outcome.",
+        ],
+      };
+    },
+  },
+  "publishing-pace-calculator": {
+    id: "publishing-pace-calculator",
+    buttonLabel: "Calculate publishing runway",
+    fields: [
+      { key: "queued", label: "Queued items", type: "number", placeholder: "60" },
+      { key: "everyHours", label: "Publish every N hours", type: "number", placeholder: "5" },
+    ],
+    run: ({ queued, everyHours }) => {
+      const items = Math.max(0, Math.round(Number(queued) || 0));
+      const interval = Math.max(1, Number(everyHours) || 1);
+      const hours = items * interval;
+      const days = hours / 24;
+
+      return {
+        summary: `The queue lasts about ${days.toFixed(1)} days.`,
+        output: [
+          `Queued items: ${items.toLocaleString()}`,
+          `Interval: every ${interval} hours`,
+          `Total runway: ${hours.toFixed(1)} hours`,
+          `Runway in days: ${days.toFixed(1)}`,
+        ].join("\n"),
+        metrics: [
+          { label: "Runway", value: `${days.toFixed(1)} days`, tone: "primary" },
+          { label: "Hours", value: hours.toFixed(1), tone: "accent" },
+          { label: "Items", value: items.toLocaleString() },
+        ],
+        tips: [
+          "Keep a reserve so editorial quality does not drop when production slows.",
+          "For SEO, pair publishing pace with internal links and sitemap updates.",
+          "Use slower cadence for thin pages and faster cadence only when each item is genuinely useful.",
+        ],
+      };
+    },
+  },
+  "lead-magnet-math-calculator": {
+    id: "lead-magnet-math-calculator",
+    buttonLabel: "Estimate leads",
+    fields: [
+      { key: "visitors", label: "Visitors", type: "number", placeholder: "5000" },
+      { key: "signupRate", label: "Signup rate %", type: "number", placeholder: "3.5" },
+      { key: "salesRate", label: "Lead-to-sale %", type: "number", placeholder: "8" },
+    ],
+    run: ({ visitors, signupRate, salesRate }) => {
+      const traffic = Math.max(0, Number(visitors) || 0);
+      const leads = traffic * Math.max(0, Number(signupRate) || 0) / 100;
+      const sales = leads * Math.max(0, Number(salesRate) || 0) / 100;
+
+      return {
+        summary: `Estimated leads: ${Math.round(leads).toLocaleString()}, estimated sales: ${Math.round(sales).toLocaleString()}.`,
+        output: [
+          `Visitors: ${traffic.toLocaleString()}`,
+          `Estimated leads: ${Math.round(leads).toLocaleString()}`,
+          `Estimated sales: ${Math.round(sales).toLocaleString()}`,
+        ].join("\n"),
+        metrics: [
+          { label: "Leads", value: Math.round(leads).toLocaleString(), tone: "primary" },
+          { label: "Sales", value: Math.round(sales).toLocaleString(), tone: "accent" },
+          { label: "Visitors", value: traffic.toLocaleString() },
+        ],
+        tips: [
+          "A useful lead magnet solves one urgent problem, not every problem in the niche.",
+          "Track opt-in source so you can see which content produces qualified leads.",
+          "Improve the promise and preview before increasing pop-up pressure.",
+        ],
+      };
+    },
+  },
+  "creator-pricing-calculator": {
+    id: "creator-pricing-calculator",
+    buttonLabel: "Estimate creator fee",
+    fields: [
+      { key: "reach", label: "Expected reach", type: "number", placeholder: "25000" },
+      { key: "engagement", label: "Engagement rate %", type: "number", placeholder: "4" },
+      { key: "hours", label: "Production hours", type: "number", placeholder: "6" },
+    ],
+    run: ({ reach, engagement, hours }) => {
+      const expectedReach = Math.max(0, Number(reach) || 0);
+      const engagementScore = Math.max(0, Number(engagement) || 0);
+      const productionHours = Math.max(0, Number(hours) || 0);
+      const low = Math.round((expectedReach / 1000) * (8 + engagementScore) + productionHours * 25);
+      const high = Math.round(low * 1.8);
+
+      return {
+        summary: `Suggested fee range: ${low.toLocaleString()} to ${high.toLocaleString()}.`,
+        output: [
+          `Low estimate: ${low.toLocaleString()}`,
+          `High estimate: ${high.toLocaleString()}`,
+          `Inputs: reach ${expectedReach.toLocaleString()}, engagement ${engagementScore.toFixed(1)}%, production ${productionHours.toFixed(1)}h`,
+        ].join("\n"),
+        metrics: [
+          { label: "Low", value: low.toLocaleString(), tone: "primary" },
+          { label: "High", value: high.toLocaleString(), tone: "accent" },
+          { label: "Hours", value: productionHours.toFixed(1) },
+        ],
+        tips: [
+          "Treat this as a negotiation starting point, not a guaranteed market price.",
+          "Add usage rights, exclusivity, rush timing, and revision scope before sending a quote.",
+          "For performance campaigns, separate base production fee and bonus conditions.",
+        ],
+      };
+    },
+  },
+  "funnel-dropoff-calculator": {
+    id: "funnel-dropoff-calculator",
+    buttonLabel: "Calculate funnel dropoff",
+    fields: [
+      { key: "visits", label: "Visits", type: "number", placeholder: "10000" },
+      { key: "clicks", label: "CTA clicks", type: "number", placeholder: "1200" },
+      { key: "leads", label: "Leads", type: "number", placeholder: "260" },
+      { key: "sales", label: "Sales", type: "number", placeholder: "34" },
+    ],
+    run: ({ visits, clicks, leads, sales }) => {
+      const v = Math.max(0, Number(visits) || 0);
+      const c = Math.max(0, Number(clicks) || 0);
+      const l = Math.max(0, Number(leads) || 0);
+      const s = Math.max(0, Number(sales) || 0);
+      const clickRate = v ? (c / v) * 100 : 0;
+      const leadRate = c ? (l / c) * 100 : 0;
+      const saleRate = l ? (s / l) * 100 : 0;
+      const weakest = [
+        { label: "visit to click", value: clickRate },
+        { label: "click to lead", value: leadRate },
+        { label: "lead to sale", value: saleRate },
+      ].sort((a, b) => a.value - b.value)[0];
+
+      return {
+        summary: `Weakest funnel step: ${weakest.label} (${weakest.value.toFixed(1)}%).`,
+        output: [
+          `Visit to click: ${clickRate.toFixed(1)}%`,
+          `Click to lead: ${leadRate.toFixed(1)}%`,
+          `Lead to sale: ${saleRate.toFixed(1)}%`,
+          `Priority: improve ${weakest.label}`,
+        ].join("\n"),
+        metrics: [
+          { label: "Weakest", value: `${weakest.value.toFixed(1)}%`, tone: "primary" },
+          { label: "Sales", value: s.toLocaleString(), tone: "accent" },
+          { label: "Visits", value: v.toLocaleString() },
+        ],
+        tips: [
+          "Fix the largest dropoff before optimizing steps that already convert well.",
+          "A weak visit-to-click step often means message mismatch or unclear CTA placement.",
+          "A weak lead-to-sale step usually needs offer, trust, or follow-up improvements.",
+        ],
+      };
+    },
+  },
+  "keyword-opportunity-scorer": {
+    id: "keyword-opportunity-scorer",
+    buttonLabel: "Score keyword opportunity",
+    fields: [
+      { key: "intent", label: "Intent fit 1-10", type: "number", placeholder: "8" },
+      { key: "difficulty", label: "Difficulty 1-10", type: "number", placeholder: "4" },
+      { key: "business", label: "Business fit 1-10", type: "number", placeholder: "7" },
+    ],
+    run: ({ intent, difficulty, business }) => {
+      const clamp = (value: string) => Math.min(10, Math.max(0, Number(value) || 0));
+      const intentScore = clamp(intent);
+      const difficultyScore = clamp(difficulty);
+      const businessScore = clamp(business);
+      const score = Math.round(intentScore * 4 + businessScore * 4 + (10 - difficultyScore) * 2);
+
+      return {
+        summary: `Keyword opportunity score: ${score}/100.`,
+        output: [
+          `Intent fit: ${intentScore}/10`,
+          `Business fit: ${businessScore}/10`,
+          `Difficulty: ${difficultyScore}/10`,
+          `Opportunity score: ${score}/100`,
+        ].join("\n"),
+        metrics: [
+          { label: "Score", value: `${score}/100`, tone: "primary" },
+          { label: "Intent", value: `${intentScore}/10`, tone: "accent" },
+          { label: "Difficulty", value: `${difficultyScore}/10` },
+        ],
+        tips: [
+          "Prioritize keywords that match user intent and your monetization path, not only search volume.",
+          "High difficulty can still be worth targeting if the page can become a strong internal link hub.",
+          "Avoid multiple pages targeting the same intent unless each page has a distinct angle.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {
