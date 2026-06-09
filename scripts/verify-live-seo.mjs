@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const SITE_URL = process.env.SITE_URL || "https://crepika.com";
 const ADS_TXT_LINE = "google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0";
-const SAMPLE_HTML_PATHS = ["/blog", "/tools/qr-generator"];
+const SAMPLE_HTML_PATHS = ["/blog", "/tools/qr-generator", "/about", "/contact", "/privacy", "/terms"];
 
 const failures = [];
 
