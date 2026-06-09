@@ -10,6 +10,8 @@
     "lint": "eslint .",
     "verify:seo": "node scripts/verify-seo-gates.mjs",
     "verify:live": "node scripts/verify-live-seo.mjs",
+    "verify:gsc": "python scripts/gsc-sitemap-submit.py --status-only --json",
+    "verify:indexing": "npm run verify:live && npm run verify:gsc",
     "notify:indexing": "node scripts/notify-indexing.mjs",
     "preview": "vite preview",
     "og:convert": "node scripts/convert-og-images.mjs"
