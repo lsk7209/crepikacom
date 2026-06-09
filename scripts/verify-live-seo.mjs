@@ -173,6 +173,47 @@ async function validateTextEndpoint(path, predicate, message) {
   };
 }
 
+async function validateAiIndexEndpoint() {
+  const path = "/ai-index.json";
+  const { response, body } = await get(path);
+  if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
+
+  let aiIndex = null;
+  try {
+    aiIndex = JSON.parse(body);
+  } catch (error) {
+    fail(`${path} is not valid JSON: ${error instanceof Error ? error.message : error}`);
+  }
+
+  const siteOk =
+    aiIndex?.site?.url === SITE_URL &&
+    aiIndex?.site?.name_ko === "\uD06C\uB808\uD53C\uCE74" &&
+    aiIndex?.blog?.rss === `${SITE_URL}/rss.xml`;
+  const toolCount = Array.isArray(aiIndex?.tools) ? aiIndex.tools.length : 0;
+  const blogCount = Number(aiIndex?.blog?.count ?? 0);
+
+  if (!siteOk) {
+    fail(`${path} must expose the canonical site URL, Korean brand name, and canonical RSS URL.`);
+  }
+  if (toolCount < 10) {
+    fail(`${path} should expose a substantial published tool index; found ${toolCount}.`);
+  }
+  if (blogCount < 300) {
+    fail(`${path} should expose a substantial blog count; found ${blogCount}.`);
+  }
+
+  return {
+    path,
+    status: response.status,
+    bytes: body.length,
+    aiIndex: {
+      site: siteOk,
+      tools: toolCount,
+      blogCount,
+    },
+  };
+}
+
 async function main() {
   const checks = [];
 
@@ -277,6 +318,28 @@ async function main() {
       "security.txt must expose the canonical support contact and policy URL.",
     ),
   );
+  checks.push(
+    await validateTextEndpoint(
+      "/llms.txt",
+      (body) =>
+        body.includes(SITE_URL) &&
+        body.includes(`${SITE_URL}/rss.xml`) &&
+        body.includes(`${SITE_URL}/sitemap.xml`),
+      "llms.txt must expose the canonical site, RSS, and sitemap URLs.",
+    ),
+  );
+  checks.push(
+    await validateTextEndpoint(
+      "/llms-full.txt",
+      (body) =>
+        body.includes(SITE_URL) &&
+        body.includes(`${SITE_URL}/rss.xml`) &&
+        body.includes(`${SITE_URL}/sitemap.xml`) &&
+        body.includes(`${SITE_URL}/blog/`),
+      "llms-full.txt must expose canonical URLs for the site, feed, sitemap, and blog entries.",
+    ),
+  );
+  checks.push(await validateAiIndexEndpoint());
 
   for (const path of ROOT_HTML_PATHS) {
     const { response, body } = await get(path);
