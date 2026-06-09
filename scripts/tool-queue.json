@@ -540,7 +540,7 @@
     "type": "calculator",
     "intent": "유튜브, 블로그, OG, SNS 썸네일 권장 크기를 안내합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-18T03:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/thumbnail-size-planner"
@@ -553,7 +553,7 @@
     "type": "text-transform",
     "intent": "복잡한 이미지 파일명을 검색 친화적인 파일명으로 바꿉니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-18T08:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/filename-seo-cleaner"
@@ -566,7 +566,7 @@
     "type": "builder",
     "intent": "여러 이미지에 적용할 순번형 파일명 규칙을 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-18T13:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/batch-filename-planner"
@@ -579,7 +579,7 @@
     "type": "calculator",
     "intent": "압축 전후 용량 절감률과 예상 로딩 개선 효과를 계산합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-18T18:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/image-compression-savings-calculator"
@@ -592,7 +592,7 @@
     "type": "score-checker",
     "intent": "공유 이미지 안의 제목 문구가 너무 길지 않은지 점검합니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-18T23:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/og-image-text-checker"

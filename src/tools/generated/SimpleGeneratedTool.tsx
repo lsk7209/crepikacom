@@ -1834,6 +1834,205 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "thumbnail-size-planner": {
+    id: "thumbnail-size-planner",
+    buttonLabel: "썸네일 크기 설계하기",
+    fields: [
+      { key: "platform", label: "플랫폼", type: "text", placeholder: "예: YouTube, Instagram, Blog, OG" },
+      { key: "title", label: "썸네일 문구", type: "textarea", placeholder: "예: 블로그 SEO 체크리스트 7가지" },
+    ],
+    run: ({ platform, title }) => {
+      const platformText = platform.trim().toLowerCase();
+      const titleText = title.trim().replace(/\s+/g, " ");
+      const presets = [
+        { key: "youtube", name: "YouTube thumbnail", size: "1280 x 720", ratio: "16:9", safe: "중앙 80% 안에 얼굴과 핵심 문구 배치" },
+        { key: "instagram", name: "Instagram feed portrait", size: "1080 x 1350", ratio: "4:5", safe: "상하 여백 120px 이상 확보" },
+        { key: "reels", name: "Reels/Story cover", size: "1080 x 1920", ratio: "9:16", safe: "중앙 1080 x 1350 영역에 핵심 정보 배치" },
+        { key: "blog", name: "Blog hero image", size: "1200 x 675", ratio: "16:9", safe: "모바일 크롭을 고려해 중앙에 제목 배치" },
+        { key: "og", name: "Open Graph image", size: "1200 x 630", ratio: "1.91:1", safe: "좌우 80px 이상 여백 확보" },
+      ];
+      const selected = presets.find((item) => platformText.includes(item.key)) ?? presets[0];
+      const titleOk = titleText.length <= 34;
+
+      return {
+        summary: `${selected.name} 기준 썸네일 설계안입니다.`,
+        output: [
+          `권장 크기: ${selected.size}`,
+          `비율: ${selected.ratio}`,
+          `안전 영역: ${selected.safe}`,
+          `문구 길이: ${titleText.length}자 (${titleOk ? "적정" : "축약 권장"})`,
+          `권장 문구: ${titleOk ? titleText || "핵심 문구를 입력하세요" : `${titleText.slice(0, 30)}...`}`,
+        ].join("\n"),
+        metrics: [
+          { label: "크기", value: selected.size, tone: "primary" },
+          { label: "비율", value: selected.ratio, tone: "accent" },
+          { label: "문구", value: `${titleText.length}자` },
+        ],
+        tips: [
+          "썸네일 문구는 작은 화면에서도 읽히도록 2~6단어 안에서 정리하세요.",
+          "얼굴, 제품, 결과 화면 중 하나는 첫눈에 보이게 두는 편이 좋습니다.",
+          "플랫폼 크롭 영역 때문에 핵심 문구를 가장자리 가까이에 두지 마세요.",
+        ],
+      };
+    },
+  },
+  "filename-seo-cleaner": {
+    id: "filename-seo-cleaner",
+    buttonLabel: "파일명 정리하기",
+    fields: [
+      { key: "filename", label: "파일명", type: "textarea", placeholder: "예: 블로그 SEO 체크리스트 최종본 (1).png" },
+      { key: "keyword", label: "핵심 키워드", type: "text", placeholder: "예: blog-seo-checklist" },
+    ],
+    run: ({ filename, keyword }) => {
+      const raw = filename.trim() || keyword.trim() || "image file";
+      const extensionMatch = raw.match(/\.([a-z0-9]{2,5})$/i);
+      const extension = extensionMatch ? extensionMatch[1].toLowerCase() : "webp";
+      const base = raw.replace(/\.[a-z0-9]{2,5}$/i, "");
+      const seed = keyword.trim() || base;
+      const cleaned = seed
+        .normalize("NFKD")
+        .replace(/[^\w\s-가-힣]/g, " ")
+        .replace(/[가-힣]+/g, "")
+        .trim()
+        .toLowerCase()
+        .replace(/[_\s]+/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-|-$/g, "") || "optimized-image";
+      const output = `${cleaned}.${extension}`;
+
+      return {
+        summary: "읽기 쉬운 영문 소문자 파일명으로 정리했습니다.",
+        output,
+        metrics: [
+          { label: "길이", value: `${output.length}자`, tone: "primary" },
+          { label: "확장자", value: extension, tone: "accent" },
+          { label: "형식", value: "lowercase-kebab" },
+        ],
+        tips: [
+          "이미지 파일명은 의미 없는 숫자보다 주제를 알 수 있는 영문 단어가 좋습니다.",
+          "공백, 괄호, 특수문자는 업로드 환경에 따라 문제가 될 수 있어 피하세요.",
+          "Alt Text와 파일명은 같은 역할이 아니므로 둘 다 별도로 관리하세요.",
+        ],
+      };
+    },
+  },
+  "batch-filename-planner": {
+    id: "batch-filename-planner",
+    buttonLabel: "일괄 파일명 만들기",
+    fields: [
+      { key: "prefix", label: "접두어", type: "text", placeholder: "예: blog-seo-checklist" },
+      { key: "items", label: "파일 설명 목록", type: "textarea", placeholder: "hero image\nh tag example\nmeta description preview" },
+      { key: "extension", label: "확장자", type: "text", placeholder: "webp" },
+    ],
+    run: ({ prefix, items, extension }) => {
+      const cleanPart = (value: string) =>
+        value
+          .trim()
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, " ")
+          .replace(/[_\s]+/g, "-")
+          .replace(/-+/g, "-")
+          .replace(/^-|-$/g, "");
+      const prefixText = cleanPart(prefix) || "asset";
+      const ext = (extension.trim().replace(/^\./, "").toLowerCase() || "webp").replace(/[^a-z0-9]/g, "") || "webp";
+      const lines = items.split("\n").map((line) => line.trim()).filter(Boolean);
+      const names = (lines.length ? lines : ["hero", "thumbnail", "detail"]).map((line, index) => {
+        const suffix = cleanPart(line) || `image-${index + 1}`;
+        return `${prefixText}-${String(index + 1).padStart(2, "0")}-${suffix}.${ext}`;
+      });
+
+      return {
+        summary: `${names.length}개의 일괄 파일명을 생성했습니다.`,
+        output: names.join("\n"),
+        metrics: [
+          { label: "파일명", value: `${names.length}개`, tone: "primary" },
+          { label: "확장자", value: ext, tone: "accent" },
+          { label: "접두어", value: prefixText },
+        ],
+        tips: [
+          "일괄 파일명은 같은 접두어와 순번을 쓰면 관리가 쉽습니다.",
+          "파일 설명은 이미지 내용이 드러나게 짧은 영문 단어로 정리하세요.",
+          "업로드 후 Alt Text는 파일명과 별도로 페이지 맥락에 맞게 작성하세요.",
+        ],
+      };
+    },
+  },
+  "image-compression-savings-calculator": {
+    id: "image-compression-savings-calculator",
+    buttonLabel: "절감량 계산하기",
+    fields: [
+      { key: "before", label: "압축 전 용량(KB)", type: "number", placeholder: "850" },
+      { key: "after", label: "압축 후 용량(KB)", type: "number", placeholder: "240" },
+      { key: "count", label: "이미지 개수", type: "number", placeholder: "12" },
+    ],
+    run: ({ before, after, count }) => {
+      const beforeKb = Math.max(0, Number(before) || 0);
+      const afterKb = Math.max(0, Number(after) || 0);
+      const imageCount = Math.max(1, Number(count) || 1);
+      const savedPerImage = Math.max(0, beforeKb - afterKb);
+      const savedTotal = savedPerImage * imageCount;
+      const percent = beforeKb ? (savedPerImage / beforeKb) * 100 : 0;
+
+      return {
+        summary: `이미지당 약 ${percent.toFixed(1)}% 용량을 줄였습니다.`,
+        output: [
+          `이미지당 절감: ${savedPerImage.toLocaleString()}KB`,
+          `총 절감: ${savedTotal.toLocaleString()}KB (${(savedTotal / 1024).toFixed(2)}MB)`,
+          `절감률: ${percent.toFixed(1)}%`,
+          `페이지 이미지 ${imageCount}개 기준 예상 전송량 감소`,
+        ].join("\n"),
+        metrics: [
+          { label: "절감률", value: `${percent.toFixed(1)}%`, tone: "primary" },
+          { label: "총 절감", value: `${(savedTotal / 1024).toFixed(2)}MB`, tone: "accent" },
+          { label: "이미지", value: `${imageCount}개` },
+        ],
+        tips: [
+          "큰 이미지는 WebP/AVIF 변환과 실제 표시 크기 리사이즈를 함께 적용하세요.",
+          "본문 이미지는 품질 70~85 사이에서 먼저 테스트하면 무난합니다.",
+          "용량 절감은 Core Web Vitals와 모바일 체감 속도 개선에 직접 도움이 됩니다.",
+        ],
+      };
+    },
+  },
+  "og-image-text-checker": {
+    id: "og-image-text-checker",
+    buttonLabel: "OG 문구 검사하기",
+    fields: [
+      { key: "text", label: "OG 이미지 문구", type: "textarea", placeholder: "예: 블로그 SEO 체크리스트 7가지" },
+      { key: "brand", label: "브랜드명", type: "text", placeholder: "예: 크레피카" },
+    ],
+    run: ({ text, brand }) => {
+      const cleanText = text.trim().replace(/\s+/g, " ");
+      const brandText = brand.trim();
+      const hasBrand = brandText ? cleanText.includes(brandText) : false;
+      const lengthOk = cleanText.length >= 8 && cleanText.length <= 42;
+      const hasSpecific = /[0-9]|체크|가이드|비교|방법|전략|리스트/.test(cleanText);
+      const score = (lengthOk ? 40 : 18) + (hasSpecific ? 30 : 12) + (brandText ? (hasBrand ? 20 : 8) : 15) + (!/[!?]{2,}/.test(cleanText) ? 10 : 4);
+
+      return {
+        summary:
+          score >= 80
+            ? "공유 이미지에서 읽히기 좋은 OG 문구입니다."
+            : "문구 길이, 구체성, 브랜드 표시를 더 다듬으세요.",
+        output: [
+          `문구 길이: ${cleanText.length}자`,
+          `구체성: ${hasSpecific ? "있음" : "부족"}`,
+          `브랜드 표시: ${brandText ? (hasBrand ? "있음" : "부족") : "미입력"}`,
+          `권장: 핵심 결과를 1줄, 브랜드는 작게 보조 배치`,
+        ].join("\n"),
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "길이", value: `${cleanText.length}자`, tone: "accent" },
+          { label: "브랜드", value: brandText || "미입력" },
+        ],
+        tips: [
+          "OG 이미지는 작은 미리보기에서도 읽히므로 문구를 짧게 유지하세요.",
+          "제목 전체를 넣기보다 클릭 이유가 되는 핵심 결과만 남기세요.",
+          "브랜드명은 문구를 방해하지 않게 작게 보조 배치하는 편이 좋습니다.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {
