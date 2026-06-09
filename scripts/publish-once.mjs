@@ -18,12 +18,56 @@ const BLOG_CONTENT = join(ROOT, 'src', 'data', 'blog-content.ts');
 const SITEMAP_FILE = join(ROOT, 'public', 'sitemap.xml');
 const RSS_FILE     = join(ROOT, 'public', 'rss.xml');
 const SITE_URL     = 'https://crepika.com';
+const MIN_HOURS    = Number(process.env.BLOG_PUBLISH_MIN_HOURS || '5');
+const FORCE        = process.env.FORCE_BLOG_PUBLISH === '1';
 
 function getTodayDate() { return new Date().toISOString().split('T')[0]; }
 
-function getNextDraft() {
-  const queue = JSON.parse(readFileSync(QUEUE_FILE, 'utf-8'));
+function hoursSince(timestamp, now) {
+  if (!timestamp) return Number.POSITIVE_INFINITY;
+  return (now.getTime() - timestamp) / (60 * 60 * 1000);
+}
+
+function hoursUntil(timestamp, now) {
+  if (!timestamp) return 0;
+  return Math.max(0, (timestamp - now.getTime()) / (60 * 60 * 1000));
+}
+
+function isoOrNull(timestamp) {
+  return timestamp ? new Date(timestamp).toISOString() : null;
+}
+
+function publishedTimestamp(entry) {
+  if (entry.publishedAt) {
+    const parsed = Date.parse(entry.publishedAt);
+    if (Number.isFinite(parsed)) return parsed;
+  }
+  if (entry.publishedDate) {
+    const parsed = Date.parse(`${entry.publishedDate}T00:00:00.000Z`);
+    if (Number.isFinite(parsed)) return parsed;
+  }
+  return 0;
+}
+
+function latestPublishedAt(queue) {
+  const timestamps = queue
+    .filter((entry) => entry.published)
+    .map(publishedTimestamp)
+    .filter((timestamp) => Number.isFinite(timestamp) && timestamp > 0);
+  return timestamps.length ? Math.max(...timestamps) : 0;
+}
+
+function nextCandidate(queue) {
+  return queue.find((entry) => !entry.published) ?? null;
+}
+
+function logSkip(reason, details) {
+  console.log(JSON.stringify({ skipped: true, reason, ...details }, null, 2));
+}
+
+function getNextDraft(queue, now) {
   for (const entry of queue.filter(e => !e.published)) {
+    if (!FORCE && entry.scheduledDate && Date.parse(entry.scheduledDate) > now.getTime()) continue;
     const draftPath = join(DRAFTS_DIR, `${entry.slug}.json`);
     if (existsSync(draftPath)) {
       return { entry, post: JSON.parse(readFileSync(draftPath, 'utf-8')), draftPath };
@@ -76,7 +120,11 @@ function injectIntoRss(post) {
 function markPublished(entry) {
   const queue = JSON.parse(readFileSync(QUEUE_FILE, 'utf-8'));
   const e = queue.find(q => q.id === entry.id);
-  if (e) { e.published = true; e.publishedDate = getTodayDate(); }
+  if (e) {
+    e.published = true;
+    e.publishedDate = getTodayDate();
+    e.publishedAt = new Date().toISOString();
+  }
   writeFileSync(QUEUE_FILE, JSON.stringify(queue, null, 2), 'utf-8');
 }
 
@@ -95,12 +143,35 @@ async function pingSearchEngines(slugs) {
 async function main() {
   // BATCH_SIZE편을 한 번에 inject한 뒤 1 commit/push로 묶어 Vercel 빌드 횟수를 줄인다.
   // BATCH_SIZE=1 이면 기존 단발 발행과 동일(하위호환). DRY_RUN=1 이면 git push 생략.
-  const BATCH_SIZE = Math.max(1, parseInt(process.env.BATCH_SIZE || '5', 10));
+  const requestedBatchSize = Math.max(1, parseInt(process.env.BATCH_SIZE || '1', 10));
+  const BATCH_SIZE = FORCE ? requestedBatchSize : 1;
   const DRY_RUN = process.env.DRY_RUN === '1';
+  const now = new Date();
+  const queue = JSON.parse(readFileSync(QUEUE_FILE, 'utf-8'));
+  const lastPublished = latestPublishedAt(queue);
+  const elapsedHours = hoursSince(lastPublished, now);
+  const candidate = nextCandidate(queue);
+  const candidateScheduledAt = candidate?.scheduledDate ? Date.parse(candidate.scheduledDate) : 0;
+  const minIntervalEligibleAt = lastPublished ? lastPublished + MIN_HOURS * 60 * 60 * 1000 : 0;
+  const nextEligibleAt = Math.max(candidateScheduledAt || 0, minIntervalEligibleAt || 0);
+
+  if (!FORCE && elapsedHours < MIN_HOURS) {
+    logSkip('min_interval_not_elapsed', {
+      now: now.toISOString(),
+      minHours: MIN_HOURS,
+      elapsedHours: Number(elapsedHours.toFixed(2)),
+      hoursRemaining: Number((MIN_HOURS - elapsedHours).toFixed(2)),
+      latestPublishedAt: isoOrNull(lastPublished),
+      nextCandidate: candidate?.slug ?? null,
+      nextCandidateScheduledAt: isoOrNull(candidateScheduledAt),
+      nextEligibleAt: isoOrNull(nextEligibleAt),
+    });
+    return;
+  }
 
   const published = [];
   for (let i = 0; i < BATCH_SIZE; i++) {
-    const next = getNextDraft();
+    const next = getNextDraft(queue, now);
     if (!next) break;
     const { entry, post } = next;
     console.log(`📰 [${published.length + 1}/${BATCH_SIZE}] 발행: [${entry.id}] ${post.title}`);
@@ -113,11 +184,23 @@ async function main() {
     try { execSync(`node scripts/fix-new-post.mjs "${post.slug}"`, { cwd: ROOT, stdio: 'inherit' }); } catch {}
 
     markPublished(entry);
+    entry.published = true;
+    entry.publishedDate = getTodayDate();
+    entry.publishedAt = new Date().toISOString();
     published.push(post);
   }
 
   if (published.length === 0) {
-    console.log('✅ 모든 드래프트 발행 완료 — 큐 소진');
+    logSkip('no_due_post', {
+      now: now.toISOString(),
+      minHours: MIN_HOURS,
+      latestPublishedAt: isoOrNull(lastPublished),
+      nextCandidate: candidate?.slug ?? null,
+      nextCandidateScheduledAt: isoOrNull(candidateScheduledAt),
+      nextEligibleAt: isoOrNull(nextEligibleAt),
+      hoursUntilNextEligible: Number(hoursUntil(nextEligibleAt, now).toFixed(2)),
+      unpublishedCount: queue.filter((entry) => !entry.published).length,
+    });
     process.exit(0);
   }
 
@@ -177,8 +260,8 @@ async function main() {
   // 발행분 일괄 검색엔진 핑 (push 후 — 404 방지)
   await pingSearchEngines(published.map(p => p.slug));
 
-  const queue = JSON.parse(readFileSync(QUEUE_FILE, 'utf-8'));
-  const remaining = queue.filter(e => !e.published).length;
+  const remainingQueue = JSON.parse(readFileSync(QUEUE_FILE, 'utf-8'));
+  const remaining = remainingQueue.filter(e => !e.published).length;
   console.log(`✅ 배치 발행 완료: ${published.length}편 / 남은 글: ${remaining}개`);
 }
 

@@ -1273,14 +1273,33 @@ function validateToolPublicationAutomation() {
   }
 
   const blogWorkflow = requireFile(".github/workflows/auto-publish.yml");
-  for (const marker of ["npm ci", "cache: npm", "node scripts/publish-once.mjs"]) {
+  for (const marker of [
+    'cron: "*/15 * * * *"',
+    "publish-once.mjs enforces scheduledDate and the five-hour cadence",
+    'BATCH_SIZE: "1"',
+    'BLOG_PUBLISH_MIN_HOURS: "5"',
+    "npm ci",
+    "cache: npm",
+    "node scripts/publish-once.mjs",
+  ]) {
     if (!blogWorkflow.includes(marker)) {
       fail(`auto-publish.yml must include ${marker} so scheduled blog publication is dependency-backed.`);
     }
   }
 
   const blogPublisher = requireFile("scripts/publish-once.mjs");
-  for (const marker of ["npm run lint", "npm run build"]) {
+  for (const marker of [
+    "BLOG_PUBLISH_MIN_HOURS",
+    "FORCE_BLOG_PUBLISH",
+    "latestPublishedAt(queue)",
+    "getNextDraft(queue, now)",
+    "entry.scheduledDate && Date.parse(entry.scheduledDate) > now.getTime()",
+    "logSkip('min_interval_not_elapsed'",
+    "logSkip('no_due_post'",
+    "publishedAt",
+    "npm run lint",
+    "npm run build",
+  ]) {
     if (!blogPublisher.includes(marker)) {
       fail(`scripts/publish-once.mjs must run ${marker} before committing scheduled publication changes.`);
     }
