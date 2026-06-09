@@ -1,25 +1,56 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import type { ReactNode } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ToolLayout } from "@/components/layout/ToolLayout";
-import { getToolById } from "@/data/tools-config";
-import { TextCounterTool } from "@/tools/text/TextCounterTool";
-import { LoremGeneratorTool } from "@/tools/plan/LoremGeneratorTool";
-import { ByteCounterTool } from "@/tools/plan/ByteCounterTool";
-import { WebpConverterTool } from "@/tools/image/WebpConverterTool";
-import { InstaSpacerTool } from "@/tools/publish/InstaSpacerTool";
-import { HashtagMixerTool } from "@/tools/publish/HashtagMixerTool";
-import { QrGeneratorTool } from "@/tools/analyze/QrGeneratorTool";
-import { SimpleGeneratedTool } from "@/tools/generated/SimpleGeneratedTool";
+import { getToolById, type ToolConfig } from "@/data/tools-config";
 import { addRecentTool } from "@/utils/localStorage";
 import { toast } from "@/hooks/use-toast";
 
-import { TOOL_DETAILED_CONTENT, ToolDetailedContent } from "@/data/tool-content";
-import { GENERATED_TOOL_CONTENT } from "@/data/generated-tool-content";
+import type { ToolDetailedContent } from "@/data/tool-content";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2, Lightbulb, HelpCircle, Link as LinkIcon, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+
+type ToolSlots = {
+  inputSlot: ReactNode;
+  actionSlot: ReactNode;
+};
+
+type ToolRendererProps = {
+  toolId?: string;
+  onResult: (result: ReactNode | null) => void;
+  onError: (error: string | null) => void;
+  onProcessing?: (isProcessing: boolean) => void;
+};
+
+type ToolRenderer = (props: ToolRendererProps) => ToolSlots;
+
+const BUILTIN_TOOL_LOADERS: Record<string, () => Promise<ToolRenderer>> = {
+  "text-counter": () => import("@/tools/text/TextCounterTool").then((m) => m.TextCounterTool),
+  "lorem-generator": () => import("@/tools/plan/LoremGeneratorTool").then((m) => m.LoremGeneratorTool),
+  "byte-counter": () => import("@/tools/plan/ByteCounterTool").then((m) => m.ByteCounterTool),
+  "webp-converter": () => import("@/tools/image/WebpConverterTool").then((m) => m.WebpConverterTool),
+  "insta-spacer": () => import("@/tools/publish/InstaSpacerTool").then((m) => m.InstaSpacerTool),
+  "hashtag-mixer": () => import("@/tools/publish/HashtagMixerTool").then((m) => m.HashtagMixerTool),
+  "qr-generator": () => import("@/tools/analyze/QrGeneratorTool").then((m) => m.QrGeneratorTool),
+};
+
+function loadToolRenderer(id: string): Promise<ToolRenderer> {
+  const loadBuiltin = BUILTIN_TOOL_LOADERS[id];
+  if (loadBuiltin) return loadBuiltin();
+  return import("@/tools/generated/SimpleGeneratedTool").then((m) => m.SimpleGeneratedTool);
+}
+
+async function loadDetailedContent(id: string): Promise<ToolDetailedContent | undefined> {
+  if (BUILTIN_TOOL_LOADERS[id]) {
+    const module = await import("@/data/tool-content");
+    return module.TOOL_DETAILED_CONTENT[id];
+  }
+  const module = await import("@/data/generated-tool-content");
+  return module.GENERATED_TOOL_CONTENT[id];
+}
 
 const TOOL_INTRO_HEADING: Record<string, string> = {
   'text-counter': '텍스트 카운터가 필요한 이유',
@@ -135,9 +166,72 @@ const DetailedToolArticle = ({ content }: { content: ToolDetailedContent }) => (
 
 export default function ToolPage() {
   const { id } = useParams<{ id: string }>();
-  const config = getToolById(id || '');
+  const config = getToolById(id || "");
+  const [renderer, setRenderer] = useState<ToolRenderer | null>(null);
+  const [detailedContent, setDetailedContent] = useState<ToolDetailedContent | undefined>(undefined);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
-  const [resultSlot, setResultSlot] = useState<React.ReactNode>(null);
+  useEffect(() => {
+    if (!id || !config) return;
+    let cancelled = false;
+    setRenderer(null);
+    setDetailedContent(undefined);
+    setLoadError(null);
+
+    Promise.all([loadToolRenderer(id), loadDetailedContent(id)])
+      .then(([loadedRenderer, loadedContent]) => {
+        if (cancelled) return;
+        setRenderer(() => loadedRenderer);
+        setDetailedContent(loadedContent);
+      })
+      .catch(() => {
+        if (!cancelled) setLoadError("도구를 불러오지 못했습니다.");
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [id, config]);
+
+  if (!config) {
+    return <Navigate to="/404" replace />;
+  }
+
+  if (loadError) {
+    return <Navigate to="/404" replace />;
+  }
+
+  if (!id || !renderer) {
+    return (
+      <div className="flex min-h-[50vh] items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
+      </div>
+    );
+  }
+
+  return (
+    <ToolRuntime
+      key={id}
+      id={id}
+      config={config}
+      renderer={renderer}
+      detailedContent={detailedContent}
+    />
+  );
+}
+
+function ToolRuntime({
+  id,
+  config,
+  renderer,
+  detailedContent,
+}: {
+  id: string;
+  config: ToolConfig;
+  renderer: ToolRenderer;
+  detailedContent?: ToolDetailedContent;
+}) {
+  const [resultSlot, setResultSlot] = useState<ReactNode>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -147,11 +241,7 @@ export default function ToolPage() {
     }
   }, [resultSlot, id]);
 
-  if (!config) {
-    return <Navigate to="/404" replace />;
-  }
-
-  const handleResult = (result: React.ReactNode) => {
+  const handleResult = (result: ReactNode) => {
     setResultSlot(result);
     setErrorMessage(null);
   };
@@ -161,77 +251,19 @@ export default function ToolPage() {
     setResultSlot(null);
     if (error) {
       toast({
-        variant: 'destructive',
-        title: '오류',
+        variant: "destructive",
+        title: "오류",
         description: error,
       });
     }
   };
 
-  let toolComponent;
-  const detailedContent = id
-    ? TOOL_DETAILED_CONTENT[id] ?? GENERATED_TOOL_CONTENT[id]
-    : undefined;
-
-  switch (id) {
-    case 'text-counter':
-      toolComponent = TextCounterTool({
-        onResult: handleResult,
-        onError: handleError,
-      });
-      break;
-
-    case 'lorem-generator':
-      toolComponent = LoremGeneratorTool({
-        onResult: handleResult,
-        onError: handleError,
-      });
-      break;
-
-    case 'byte-counter':
-      toolComponent = ByteCounterTool({
-        onResult: handleResult,
-        onError: handleError,
-      });
-      break;
-
-    case 'webp-converter':
-      toolComponent = WebpConverterTool({
-        onResult: handleResult,
-        onError: handleError,
-        onProcessing: setIsProcessing,
-      });
-      break;
-
-    case 'insta-spacer':
-      toolComponent = InstaSpacerTool({
-        onResult: handleResult,
-        onError: handleError,
-      });
-      break;
-
-    case 'hashtag-mixer':
-      toolComponent = HashtagMixerTool({
-        onResult: handleResult,
-        onError: handleError,
-      });
-      break;
-
-    case 'qr-generator':
-      toolComponent = QrGeneratorTool({
-        onResult: handleResult,
-        onError: handleError,
-      });
-      break;
-
-    default:
-      toolComponent = SimpleGeneratedTool({
-        toolId: id ?? "",
-        onResult: handleResult,
-        onError: handleError,
-      });
-      break;
-  }
+  const toolComponent = renderer({
+    toolId: id,
+    onResult: handleResult,
+    onError: handleError,
+    onProcessing: setIsProcessing,
+  });
 
   const seoArticle = detailedContent ? (
     <DetailedToolArticle content={detailedContent} />
