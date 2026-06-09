@@ -302,14 +302,14 @@ function makeBreadcrumb(canonical, label) {
     itemListElement.push({
       "@type": "ListItem",
       position: 2,
-      name: "Blog",
+      name: "블로그",
       item: `${siteUrl}/blog`,
     });
   } else if (pathname.startsWith("/tools/")) {
     itemListElement.push({
       "@type": "ListItem",
       position: 2,
-      name: "Tools",
+      name: "도구",
       item: `${siteUrl}/tools`,
     });
   }
@@ -377,15 +377,15 @@ ${jsonLd ? `${jsonLd}\n` : ""}    <style>
   <body>
     <main>
       <nav>
-        <a href="/">Home</a><a href="/tools/text-counter">Tools</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a>
+        <a href="/">홈</a><a href="/tools/text-counter">도구</a><a href="/blog">블로그</a><a href="/about">소개</a><a href="/contact">문의</a><a href="/privacy">개인정보처리방침</a><a href="/terms">이용약관</a>
       </nav>
       <h1>${escapeHtml(heading)}</h1>
       ${bodyHtml}
       <section class="panel">
-        <h2>Site and review context</h2>
-        <p>Crepika is a free creator utility site. It provides practical tools, editorial guides, contact information, privacy terms, RSS, robots.txt, ads.txt, and a sitemap so users and crawlers can understand the site without relying only on JavaScript rendering.</p>
-        <p>Advertising may appear through Google AdSense Auto Ads. Manual ad units are not inserted in these generated crawler pages, and advertising does not change tool output or editorial recommendations.</p>
-        <p>Policy pages: <a href="/privacy">Privacy Policy</a>, <a href="/terms">Terms of Use</a>, <a href="/about">About Crepika</a>, and <a href="/contact">Contact</a>.</p>
+        <h2>사이트 검토 정보</h2>
+        <p>크레피카는 크리에이터와 마케터를 위한 무료 유틸리티 사이트입니다. 실무 도구, 편집 가이드, 문의 정보, 개인정보처리방침, 이용약관, RSS, robots.txt, ads.txt, 사이트맵을 제공해 사용자와 검색엔진이 자바스크립트 렌더링에만 의존하지 않고 사이트 구조를 이해할 수 있게 합니다.</p>
+        <p>광고는 Google AdSense 자동 광고로 노출될 수 있습니다. 이 정적 크롤러 페이지에는 수동 광고 슬롯을 삽입하지 않으며, 광고는 도구 결과나 편집 추천 내용에 영향을 주지 않습니다.</p>
+        <p>정책 페이지: <a href="/privacy">개인정보처리방침</a>, <a href="/terms">이용약관</a>, <a href="/about">크레피카 소개</a>, <a href="/contact">문의하기</a>.</p>
       </section>
     </main>
   </body>
@@ -469,14 +469,14 @@ function renderBlogIndex(posts) {
         })),
       },
     },
-    bodyHtml: `<p class="lede">Browse practical guides for SEO, SNS marketing, creator workflows, image optimization, and publishing checks.</p><section class="panel"><h2>Latest guides</h2><ol class="post-list">${links}</ol></section>`,
+    bodyHtml: `<p class="lede">SEO, SNS 마케팅, 크리에이터 워크플로우, 이미지 최적화, 발행 점검에 필요한 실전 가이드를 모았습니다.</p><section class="panel"><h2>최신 가이드</h2><ol class="post-list">${links}</ol></section>`,
   });
 }
 
 function renderBlogPost(post) {
   const sections = post.content.sections
     .map((section, index) => {
-      const title = section.heading || section.title || "Guide section";
+      const title = section.heading || section.title || "가이드 섹션";
       const subsections = (section.subsections ?? [])
         .map((subsection) => `<h3>${escapeHtml(subsection.subheading)}</h3><p>${escapeHtml(stripMarkdown(subsection.content))}</p>`)
         .join("\n");
@@ -485,7 +485,7 @@ function renderBlogPost(post) {
     .join("\n");
   const toc = post.content.sections
     .map((section, index) => {
-      const title = section.heading || section.title || `Section ${index + 1}`;
+      const title = section.heading || section.title || `섹션 ${index + 1}`;
       return `<li><a href="#section-${index}">${escapeHtml(title)}</a></li>`;
     })
     .join("\n");
@@ -493,7 +493,7 @@ function renderBlogPost(post) {
     .slice(0, 5)
     .map((item) => `<h3>${escapeHtml(item.question)}</h3><p>${escapeHtml(stripMarkdown(item.answer))}</p>`)
     .join("\n");
-  const faqHtml = faq ? `<section class="panel"><h2>FAQ</h2>${faq}</section>` : "";
+  const faqHtml = faq ? `<section class="panel"><h2>자주 묻는 질문</h2>${faq}</section>` : "";
   return renderShell({
     title: `${post.title} | Crepika`,
     description: post.description,
@@ -520,13 +520,13 @@ function renderBlogPost(post) {
       keywords: (post.keywords ?? []).join(", "),
     },
     bodyHtml: `<p class="lede">${escapeHtml(post.description)}</p>
-      <p class="muted">Published: ${escapeHtml(post.publishDate)} &middot; Category: ${escapeHtml(post.category)} &middot; Read time: ${escapeHtml(post.readTime)}</p>
-      <nav class="panel" aria-label="Article table of contents"><h2>Table of contents</h2><ol>${toc}</ol></nav>
-      <section class="panel"><h2>Overview</h2><p>${escapeHtml(stripMarkdown(post.content.introduction))}</p></section>
+      <p class="muted">발행일: ${escapeHtml(post.publishDate)} &middot; 분야: ${escapeHtml(post.category)} &middot; 읽는 시간: ${escapeHtml(post.readTime)}</p>
+      <nav class="panel" aria-label="글 목차"><h2>글 목차</h2><ol>${toc}</ol></nav>
+      <section class="panel"><h2>핵심 개요</h2><p>${escapeHtml(stripMarkdown(post.content.introduction))}</p></section>
       ${sections}
-      <section class="panel"><h2>Conclusion</h2><p>${escapeHtml(stripMarkdown(post.content.conclusion))}</p></section>
+      <section class="panel"><h2>마무리</h2><p>${escapeHtml(stripMarkdown(post.content.conclusion))}</p></section>
       ${faqHtml}
-      <section class="panel"><h2>Next step</h2><p>Use the related Crepika tools from the navigation, then return to this guide when reviewing your final draft.</p></section>`,
+      <section class="panel"><h2>다음 단계</h2><p>상단의 관련 크레피카 도구를 활용해 초안을 점검한 뒤, 이 가이드로 돌아와 최종 발행 전 구조와 표현을 다시 확인하세요.</p></section>`,
   });
 }
 

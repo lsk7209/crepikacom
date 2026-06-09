@@ -11,6 +11,12 @@ const ADSENSE_CLIENT = "ca-pub-3050601904412736";
 const ADS_TXT_LINE = `google.com, ${PUBLISHER_ID}, DIRECT, f08c47fec0942fa0`;
 const BRAND_NAME_KO = "\uD06C\uB808\uD53C\uCE74";
 const READABLE_HOME_MARKERS = [BRAND_NAME_KO, "\uB85C\uADF8\uC778", "\uBB34\uB8CC"];
+const FORBIDDEN_CRAWLER_SHELL_MARKERS = [
+  "Table of contents",
+  "Next step",
+  "Site and review context",
+  "Latest guides",
+];
 const MOJIBAKE_MARKERS = [
   "\uFFFD",
   "\uCA0C",
@@ -346,6 +352,11 @@ function validateStaticHtmlBasics() {
     }
     if (hLevels[0] !== 1) {
       fail(`${path} heading hierarchy must start with H1.`);
+    }
+    for (const marker of FORBIDDEN_CRAWLER_SHELL_MARKERS) {
+      if (body.includes(marker)) {
+        fail(`${path} contains untranslated crawler shell marker: ${marker}`);
+      }
     }
 
     for (let index = 1; index < hLevels.length; index++) {
