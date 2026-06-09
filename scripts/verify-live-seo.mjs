@@ -101,6 +101,18 @@ async function main() {
       "rss.xml is not a substantial ko-KR RSS feed.",
     ),
   );
+  checks.push(
+    await validateTextEndpoint(
+      "/feed.xml",
+      (body) =>
+        body.trimStart().startsWith('<?xml version="1.0" encoding="UTF-8"') &&
+        body.includes("<channel>") &&
+        body.includes("<language>ko-KR</language>") &&
+        body.includes(`href="${SITE_URL}/feed.xml"`) &&
+        (body.match(/<item>/g) || []).length >= 20,
+      "feed.xml is not a substantial ko-KR RSS feed alias.",
+    ),
+  );
 
   for (const path of SAMPLE_HTML_PATHS) {
     const { response, body } = await get(path);

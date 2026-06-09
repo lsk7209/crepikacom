@@ -10,6 +10,7 @@ const RECENT_META_FILE = "src/data/recent-blog-posts-meta.ts";
 const RUNTIME_POSTS_DIR = "src/data/blog-posts";
 const SITEMAP_FILE = "public/sitemap.xml";
 const RSS_FILE = "public/rss.xml";
+const FEED_FILE = "public/feed.xml";
 const AI_INDEX_FILE = "public/ai-index.json";
 const LLMS_FILE = "public/llms.txt";
 const LLMS_FULL_FILE = "public/llms-full.txt";
@@ -226,7 +227,7 @@ ${blog}
   );
 }
 
-function writeRss(posts) {
+function buildRss(posts, selfUrl) {
   const newestPost = posts[posts.length - 1];
   const lastBuildDate = new Date(newestPost?.publishDate || "2026-01-01").toUTCString();
   const items = posts
@@ -248,9 +249,7 @@ function writeRss(posts) {
     })
     .join("\n");
 
-  writeText(
-    RSS_FILE,
-    `<?xml version="1.0" encoding="UTF-8" ?>
+  return `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
   <title>Crepika Blog</title>
@@ -258,12 +257,16 @@ function writeRss(posts) {
   <description>SEO, SNS marketing, and creator workflow guides for Korean creators.</description>
   <language>ko-KR</language>
   <lastBuildDate>${lastBuildDate}</lastBuildDate>
-  <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />
+  <atom:link href="${selfUrl}" rel="self" type="application/rss+xml" />
 ${items}
 </channel>
 </rss>
-`,
-  );
+`;
+}
+
+function writeRss(posts) {
+  writeText(RSS_FILE, buildRss(posts, `${SITE_URL}/rss.xml`));
+  writeText(FEED_FILE, buildRss(posts, `${SITE_URL}/feed.xml`));
 }
 
 function writeAiFiles(posts) {

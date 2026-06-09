@@ -174,6 +174,9 @@ function validatePublicFiles() {
   if (!index.includes(`href="${SITE_URL}/rss.xml"`)) {
     fail("index.html is missing the RSS alternate link.");
   }
+  if (!existsSync("public/feed.xml")) {
+    fail("public/feed.xml is missing; keep a feed.xml alias for RSS client compatibility.");
+  }
 
   const manualAdSlotFiles = [];
   for (const root of ["src", "public"]) {
@@ -336,6 +339,27 @@ function validateSitemapAndRss(queue, posts) {
     const url = `${SITE_URL}/blog/${post.slug}`;
     if (!rss.includes(`<link>${url}</link>`)) {
       fail(`Recent blog post is missing from rss.xml: ${post.slug}`);
+    }
+  }
+
+  const feed = requireFile("public/feed.xml");
+  if (!feed.includes("<rss ") || !feed.includes("<channel>")) {
+    fail("feed.xml is missing rss/channel tags.");
+  }
+  if (!feed.includes(`href="${SITE_URL}/feed.xml"`)) {
+    fail("feed.xml is missing the atom self link.");
+  }
+  if (!feed.includes("<language>ko-KR</language>")) {
+    fail("feed.xml must declare ko-KR language.");
+  }
+  const feedItems = countMatches(feed, /<item>/g);
+  if (feedItems !== items) {
+    fail(`feed.xml item count (${feedItems}) must match rss.xml (${items}).`);
+  }
+  for (const post of posts.slice().reverse().slice(0, Math.min(20, posts.length))) {
+    const url = `${SITE_URL}/blog/${post.slug}`;
+    if (!feed.includes(`<link>${url}</link>`)) {
+      fail(`Recent blog post is missing from feed.xml: ${post.slug}`);
     }
   }
 }
@@ -566,6 +590,7 @@ function main() {
           robots: "ok",
           sitemap: "ok",
           rss: "ok",
+          feed: "ok",
           staticHtmlBasics: "ok",
           adsenseAutoAdsOnly: "ok",
           indexingAutomation: "ok",
