@@ -878,7 +878,7 @@
     "type": "builder",
     "intent": "제휴 링크나 광고성 안내에 쓸 간결한 고지 문구를 만듭니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-23T13:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/affiliate-disclosure-builder"
@@ -891,7 +891,7 @@
     "type": "builder",
     "intent": "source, medium, campaign, content 네이밍 규칙을 문서화합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-23T18:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/campaign-naming-convention-builder"
@@ -904,7 +904,7 @@
     "type": "builder",
     "intent": "CTA별 캠페인 라벨이 포함된 랜딩 URL을 만듭니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-23T23:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/landing-page-cta-url-builder"
@@ -930,7 +930,7 @@
     "type": "calculator",
     "intent": "방문수와 전환수로 전환율과 목표 전환수를 계산합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-24T09:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/conversion-rate-calculator"
@@ -956,7 +956,7 @@
     "type": "calculator",
     "intent": "수익과 클릭수로 평균 클릭 단가를 계산합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-24T19:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/adsense-cpc-calculator"

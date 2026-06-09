@@ -2828,6 +2828,191 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "affiliate-disclosure-builder": {
+    id: "affiliate-disclosure-builder",
+    buttonLabel: "제휴 고지 만들기",
+    fields: [
+      { key: "brand", label: "사이트/브랜드명", type: "text", placeholder: "예: 크레피카" },
+      { key: "relationship", label: "제휴 관계", type: "text", placeholder: "예: 일부 링크를 통해 수수료를 받을 수 있음" },
+      { key: "placement", label: "노출 위치", type: "text", placeholder: "예: 글 상단, 버튼 주변, 추천 목록 앞" },
+    ],
+    run: ({ brand, relationship, placement }) => {
+      const brandText = brand.trim() || "이 사이트";
+      const relationText = relationship.trim() || "일부 링크를 통해 수수료를 받을 수 있습니다";
+      const placementText = placement.trim() || "관련 링크 근처와 글 상단";
+      const output = [
+        `${brandText}는 콘텐츠 운영을 위해 일부 제휴 링크를 사용할 수 있습니다.`,
+        `사용자가 해당 링크를 통해 가입하거나 구매하면 ${relationText}.`,
+        "다만 추천 여부와 작성 내용은 독자에게 유용한지 여부를 기준으로 판단합니다.",
+        "",
+        `권장 노출 위치: ${placementText}`,
+      ].join("\n");
+
+      return {
+        summary: "투명한 제휴 고지 문구 초안을 생성했습니다.",
+        output,
+        metrics: [
+          { label: "문장", value: "3개", tone: "primary" },
+          { label: "노출 위치", value: placementText, tone: "accent" },
+          { label: "길이", value: `${output.length}자` },
+        ],
+        tips: [
+          "제휴 고지는 사용자가 링크를 클릭하기 전에 볼 수 있는 위치에 두는 편이 안전합니다.",
+          "수익 관계를 숨기지 말고 짧고 명확하게 설명하세요.",
+          "국가와 플랫폼 정책에 따라 요구 문구가 다를 수 있으니 최종 게시 전 정책을 확인하세요.",
+        ],
+      };
+    },
+  },
+  "campaign-naming-convention-builder": {
+    id: "campaign-naming-convention-builder",
+    buttonLabel: "네이밍 규칙 만들기",
+    fields: [
+      { key: "channel", label: "채널", type: "text", placeholder: "예: instagram, newsletter, google" },
+      { key: "goal", label: "캠페인 목표", type: "text", placeholder: "예: signup, tool-launch, ebook" },
+      { key: "period", label: "기간/시즌", type: "text", placeholder: "예: 2026-q2" },
+    ],
+    run: ({ channel, goal, period }) => {
+      const clean = (value: string, fallback: string) =>
+        (value.trim().toLowerCase().replace(/[^a-z0-9가-힣]+/g, "-").replace(/^-|-$/g, "") || fallback);
+      const channelText = clean(channel, "channel");
+      const goalText = clean(goal, "goal");
+      const periodText = clean(period, "period");
+      const campaign = `${periodText}-${channelText}-${goalText}`;
+      const output = [
+        `utm_campaign=${campaign}`,
+        `utm_source=${channelText}`,
+        "utm_medium=<social|email|cpc|referral>",
+        "utm_content=<creative-or-placement>",
+        "",
+        "규칙: period-channel-goal 형식, 소문자, 공백 대신 하이픈",
+      ].join("\n");
+
+      return {
+        summary: "GA4에서 쪼개지기 어려운 캠페인 네이밍 규칙을 만들었습니다.",
+        output,
+        metrics: [
+          { label: "campaign", value: campaign, tone: "primary" },
+          { label: "source", value: channelText, tone: "accent" },
+          { label: "형식", value: "period-channel-goal" },
+        ],
+        tips: [
+          "캠페인명은 사람이 보고 이해할 수 있으면서도 짧아야 합니다.",
+          "대문자, 공백, 한글/영문 혼용 규칙이 흔들리면 GA4 리포트가 나뉠 수 있습니다.",
+          "팀 문서에 source, medium, campaign 예시를 함께 남겨두세요.",
+        ],
+      };
+    },
+  },
+  "landing-page-cta-url-builder": {
+    id: "landing-page-cta-url-builder",
+    buttonLabel: "CTA URL 만들기",
+    fields: [
+      { key: "landing", label: "랜딩 URL", type: "text", placeholder: "https://crepika.com/tools/text-counter" },
+      { key: "cta", label: "CTA 위치/문구", type: "text", placeholder: "hero-start-free" },
+      { key: "campaign", label: "캠페인명", type: "text", placeholder: "tool-launch" },
+    ],
+    run: ({ landing, cta, campaign }) => {
+      const clean = (value: string, fallback: string) =>
+        (value.trim().toLowerCase().replace(/[^a-z0-9가-힣]+/g, "-").replace(/^-|-$/g, "") || fallback);
+      const ctaText = clean(cta, "cta");
+      const campaignText = clean(campaign, "landing");
+      const landingText = landing.trim() || "https://example.com";
+      let output = landingText;
+      try {
+        const parsed = new URL(landingText);
+        parsed.searchParams.set("utm_source", "site");
+        parsed.searchParams.set("utm_medium", "cta");
+        parsed.searchParams.set("utm_campaign", campaignText);
+        parsed.searchParams.set("utm_content", ctaText);
+        output = parsed.toString();
+      } catch {
+        output = `${landingText}?utm_source=site&utm_medium=cta&utm_campaign=${encodeURIComponent(campaignText)}&utm_content=${encodeURIComponent(ctaText)}`;
+      }
+
+      return {
+        summary: "랜딩 페이지 CTA 추적 URL을 생성했습니다.",
+        output,
+        metrics: [
+          { label: "medium", value: "cta", tone: "primary" },
+          { label: "content", value: ctaText, tone: "accent" },
+          { label: "campaign", value: campaignText },
+        ],
+        tips: [
+          "내부 CTA에 UTM을 과도하게 쓰면 원본 유입 분석이 흐려질 수 있으니 목적을 명확히 하세요.",
+          "같은 페이지의 CTA 위치를 비교할 때 utm_content를 사용하면 구분하기 쉽습니다.",
+          "중요 전환 버튼은 URL 추적보다 클릭 이벤트 측정도 함께 설정하는 편이 좋습니다.",
+        ],
+      };
+    },
+  },
+  "conversion-rate-calculator": {
+    id: "conversion-rate-calculator",
+    buttonLabel: "전환율 계산하기",
+    fields: [
+      { key: "visitors", label: "방문/클릭 수", type: "number", placeholder: "1200" },
+      { key: "conversions", label: "전환 수", type: "number", placeholder: "36" },
+    ],
+    run: ({ visitors, conversions }) => {
+      const visits = Math.max(0, Number(visitors) || 0);
+      const converted = Math.max(0, Number(conversions) || 0);
+      const rate = visits ? (converted / visits) * 100 : 0;
+      const neededForOne = rate ? 100 / rate : 0;
+
+      return {
+        summary: `전환율은 ${rate.toFixed(2)}%입니다.`,
+        output: [
+          `방문/클릭 수: ${visits.toLocaleString()}`,
+          `전환 수: ${converted.toLocaleString()}`,
+          `전환율: ${rate.toFixed(2)}%`,
+          `전환 1건당 필요 방문: ${neededForOne ? neededForOne.toFixed(1) : "계산 불가"}`,
+        ].join("\n"),
+        metrics: [
+          { label: "전환율", value: `${rate.toFixed(2)}%`, tone: "primary" },
+          { label: "전환", value: converted.toLocaleString(), tone: "accent" },
+          { label: "방문", value: visits.toLocaleString() },
+        ],
+        tips: [
+          "전환율은 채널, 의도, 랜딩 페이지 품질에 따라 크게 달라집니다.",
+          "표본이 작을 때는 하루 수치보다 주간 또는 월간 추세를 보세요.",
+          "CTA 문구, 페이지 속도, 신뢰 요소가 전환율에 함께 영향을 줍니다.",
+        ],
+      };
+    },
+  },
+  "adsense-cpc-calculator": {
+    id: "adsense-cpc-calculator",
+    buttonLabel: "CPC 계산하기",
+    fields: [
+      { key: "earnings", label: "예상 수익", type: "number", placeholder: "18.5" },
+      { key: "clicks", label: "광고 클릭 수", type: "number", placeholder: "42" },
+    ],
+    run: ({ earnings, clicks }) => {
+      const revenue = Math.max(0, Number(earnings) || 0);
+      const clickCount = Math.max(0, Number(clicks) || 0);
+      const cpc = clickCount ? revenue / clickCount : 0;
+
+      return {
+        summary: `예상 CPC는 ${cpc.toFixed(3)}입니다.`,
+        output: [
+          `수익: ${revenue.toFixed(2)}`,
+          `클릭 수: ${clickCount.toLocaleString()}`,
+          `CPC: ${cpc.toFixed(3)}`,
+          "참고: 실제 AdSense 수익은 국가, 주제, 광고 수요, 무효 트래픽 조정에 따라 달라집니다.",
+        ].join("\n"),
+        metrics: [
+          { label: "CPC", value: cpc.toFixed(3), tone: "primary" },
+          { label: "수익", value: revenue.toFixed(2), tone: "accent" },
+          { label: "클릭", value: clickCount.toLocaleString() },
+        ],
+        tips: [
+          "CPC 하나만 보지 말고 RPM, 페이지뷰, 클릭률을 함께 봐야 합니다.",
+          "광고 클릭을 유도하는 문구나 배치는 정책 위반 위험이 있으므로 피하세요.",
+          "콘텐츠 품질과 검색 의도 일치가 장기적인 수익 안정성에 더 중요합니다.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {
