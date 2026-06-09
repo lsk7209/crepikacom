@@ -441,6 +441,32 @@ function validateToolPublicationAutomation() {
   if (!workflow.includes("node scripts/publish-tool-once.mjs")) {
     fail("auto-publish-tools.yml must run scripts/publish-tool-once.mjs.");
   }
+  for (const marker of ["npm ci", "cache: npm"]) {
+    if (!workflow.includes(marker)) {
+      fail(`auto-publish-tools.yml must include ${marker} so pre-push lint/build can run in GitHub Actions.`);
+    }
+  }
+
+  const blogWorkflow = requireFile(".github/workflows/auto-publish.yml");
+  for (const marker of ["npm ci", "cache: npm", "node scripts/publish-once.mjs"]) {
+    if (!blogWorkflow.includes(marker)) {
+      fail(`auto-publish.yml must include ${marker} so scheduled blog publication is dependency-backed.`);
+    }
+  }
+
+  const blogPublisher = requireFile("scripts/publish-once.mjs");
+  for (const marker of ["npm run lint", "npm run build"]) {
+    if (!blogPublisher.includes(marker)) {
+      fail(`scripts/publish-once.mjs must run ${marker} before committing scheduled publication changes.`);
+    }
+  }
+
+  const toolPublisher = requireFile("scripts/publish-tool-once.mjs");
+  for (const marker of ['runNpmScript("lint")', 'runNpmScript("build")']) {
+    if (!toolPublisher.includes(marker)) {
+      fail(`scripts/publish-tool-once.mjs must include ${marker} before committing scheduled tool changes.`);
+    }
+  }
 
   const bat = requireFile("scripts/start-scheduler.bat").replace(/\r\n/g, "\n");
   if (!bat.includes("cd /d D:\\web\\crepikacom")) {

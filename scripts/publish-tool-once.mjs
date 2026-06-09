@@ -13,6 +13,7 @@ const SITE_URL = "https://crepika.com";
 const MIN_HOURS = Number(process.env.TOOL_PUBLISH_MIN_HOURS || "5");
 const FORCE = process.env.FORCE_TOOL_PUBLISH === "1";
 const DRY_RUN = process.env.DRY_RUN === "1";
+const NPM = process.platform === "win32" ? "npm.cmd" : "npm";
 
 function readJson(file) {
   return JSON.parse(readFileSync(file, "utf-8"));
@@ -24,6 +25,13 @@ function writeJson(file, data) {
 
 function run(command) {
   return execSync(command, { cwd: ROOT, encoding: "utf-8", stdio: "pipe" }).trim();
+}
+
+function runNpmScript(script) {
+  execFileSync(NPM, ["run", script], {
+    cwd: ROOT,
+    stdio: "inherit",
+  });
 }
 
 function latestPublishedAt(queue) {
@@ -135,7 +143,7 @@ function commitAndPush(tool) {
     "-m",
     JSON.stringify("Directive: Only mark tools ready after implementation, sitemap, and crawler-page coverage exist."),
     "-m",
-    JSON.stringify("Tested: publish-tool-once implementation guards passed; indexable content regenerated"),
+    JSON.stringify("Tested: publish-tool-once implementation guards passed; indexable content regenerated; verify:seo, lint, and build passed before commit"),
     "-m",
     JSON.stringify("Not-tested: Live Vercel deployment is handled by GitHub integration after push"),
   ].join(" ");
@@ -215,6 +223,8 @@ function main() {
   run("node scripts/sync-indexable-content.mjs");
   run("node scripts/generate-crawler-pages.mjs");
   run("node scripts/verify-seo-gates.mjs");
+  runNpmScript("lint");
+  runNpmScript("build");
 
   console.log(
     JSON.stringify(
