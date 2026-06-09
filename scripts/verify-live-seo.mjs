@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const SITE_URL = process.env.SITE_URL || "https://crepika.com";
+const WWW_SITE_URL = "https://www.crepika.com";
 const ADS_TXT_LINE = "google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0";
 const ROOT_HTML_PATHS = ["/"];
 const SAMPLE_HTML_PATHS = ["/blog", "/tools/qr-generator", "/about", "/contact", "/privacy", "/terms"];
@@ -21,6 +22,20 @@ async function get(path) {
   });
   const body = await response.text();
   return { url, response, body };
+}
+
+async function getRedirect(url) {
+  const response = await fetch(url, {
+    headers: {
+      "user-agent": "CrepikaLiveSEOCheck/1.0",
+    },
+    redirect: "manual",
+  });
+  return {
+    url,
+    status: response.status,
+    location: response.headers.get("location"),
+  };
 }
 
 function hasMeaningfulMeta(body, options = {}) {
@@ -95,6 +110,24 @@ async function validateTextEndpoint(path, predicate, message) {
 
 async function main() {
   const checks = [];
+
+  for (const [path, expectedLocation] of [
+    ["/", `${SITE_URL}/`],
+    ["/blog", `${SITE_URL}/blog`],
+  ]) {
+    const redirect = await getRedirect(`${WWW_SITE_URL}${path}`);
+    if (redirect.status !== 308 || redirect.location !== expectedLocation) {
+      fail(
+        `${redirect.url} must permanently redirect to ${expectedLocation}; got ${redirect.status} ${redirect.location}.`,
+      );
+    }
+    checks.push({
+      path: `${WWW_SITE_URL}${path}`,
+      status: redirect.status,
+      location: redirect.location,
+      canonicalHostRedirect: redirect.status === 308 && redirect.location === expectedLocation,
+    });
+  }
 
   checks.push(
     await validateTextEndpoint(

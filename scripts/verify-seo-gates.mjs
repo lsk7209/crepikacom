@@ -222,6 +222,22 @@ function validatePublicFiles() {
     fail("public/feed.xml is missing; keep a feed.xml alias for RSS client compatibility.");
   }
   const vercelConfig = requireFile("vercel.json");
+  let parsedVercelConfig = null;
+  try {
+    parsedVercelConfig = JSON.parse(vercelConfig);
+  } catch (error) {
+    fail(`vercel.json is not valid JSON: ${error instanceof Error ? error.message : error}`);
+  }
+  const hasWwwPermanentRedirect = parsedVercelConfig?.redirects?.some(
+    (redirect) =>
+      redirect?.source === "/:path*" &&
+      redirect?.destination === "https://crepika.com/:path*" &&
+      redirect?.permanent === true &&
+      redirect?.has?.some((condition) => condition?.type === "host" && condition?.value === "www.crepika.com"),
+  );
+  if (!hasWwwPermanentRedirect) {
+    fail("vercel.json must permanently redirect www.crepika.com paths to the canonical apex host.");
+  }
   if (/\"source\"\s*:\s*\"\/feed\.xml\"/i.test(vercelConfig)) {
     fail("vercel.json must not redirect /feed.xml now that public/feed.xml is generated.");
   }
