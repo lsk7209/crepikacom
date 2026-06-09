@@ -14,7 +14,7 @@ const EXPECTED_JSON_LD_TYPES = {
   "/contact": ["WebPage", "BreadcrumbList"],
   "/privacy": ["WebPage", "BreadcrumbList"],
   "/terms": ["WebPage", "BreadcrumbList"],
-  [SAMPLE_ARTICLE_PATH]: ["Article", "BreadcrumbList"],
+  [SAMPLE_ARTICLE_PATH]: ["Article", "FAQPage", "BreadcrumbList"],
 };
 const READABLE_HOME_MARKERS = ["\uD06C\uB808\uD53C\uCE74", "\uB85C\uADF8\uC778", "\uBB34\uB8CC"];
 const REQUIRED_CRAWLER_SHELL_MARKERS = ["\uAE00 \uBAA9\uCC28", "\uB2E4\uC74C \uB2E8\uACC4", "\uC0AC\uC774\uD2B8 \uAC80\uD1A0 \uC815\uBCF4"];
@@ -335,6 +335,68 @@ function validateJsonLdTypes(path, body) {
     types,
     expectedTypes,
   };
+}
+
+function validateArticleTrustSchema(path, body) {
+  const canonical = `${SITE_URL}${path}`;
+  const objects = extractJsonLdObjects(body);
+  const article = objects.find((entry) => entry?.["@type"] === "Article");
+  const faqPage = objects.find((entry) => entry?.["@type"] === "FAQPage");
+  const result = {
+    articleId: article?.["@id"] ?? "",
+    wordCount: Number(article?.wordCount ?? 0),
+    authorId: article?.author?.["@id"] ?? "",
+    publisherId: article?.publisher?.["@id"] ?? "",
+    hasImageObject: article?.image?.["@type"] === "ImageObject",
+    hasMainEntityOfPage: article?.mainEntityOfPage?.["@id"] === canonical,
+    hasSpeakable: article?.speakable?.["@type"] === "SpeakableSpecification",
+    faqCount: Array.isArray(faqPage?.mainEntity) ? faqPage.mainEntity.length : 0,
+  };
+
+  if (!article) {
+    fail(`${path} is missing Article structured data.`);
+    return result;
+  }
+  if (article["@id"] !== `${canonical}#article`) {
+    fail(`${path} Article @id must match the canonical article fragment.`);
+  }
+  if (article.url !== canonical) {
+    fail(`${path} Article url must match the canonical URL.`);
+  }
+  for (const field of ["headline", "description", "datePublished", "dateModified", "inLanguage", "articleSection", "keywords", "timeRequired"]) {
+    if (typeof article[field] !== "string" || article[field].trim().length < 2) {
+      fail(`${path} Article structured data is missing a meaningful ${field}.`);
+    }
+  }
+  if (article.inLanguage !== "ko-KR") {
+    fail(`${path} Article inLanguage must be ko-KR.`);
+  }
+  if (!Number.isFinite(result.wordCount) || result.wordCount < 200) {
+    fail(`${path} Article wordCount must be at least 200.`);
+  }
+  if (article.image?.["@type"] !== "ImageObject" || article.image?.url !== `${SITE_URL}/og-image.png` || article.image?.width !== 1200 || article.image?.height !== 630) {
+    fail(`${path} Article image must be a 1200x630 canonical ImageObject.`);
+  }
+  if (article.author?.["@type"] !== "Person" || !String(article.author?.["@id"] ?? "").startsWith(`${SITE_URL}/about#`) || article.author?.url !== `${SITE_URL}/about` || !String(article.author?.image ?? "").startsWith(`${SITE_URL}/`)) {
+    fail(`${path} Article author must expose Person @id, URL, and canonical image.`);
+  }
+  if (article.publisher?.["@type"] !== "Organization" || article.publisher?.["@id"] !== `${SITE_URL}/#organization` || article.publisher?.logo?.url !== `${SITE_URL}/og-image.png`) {
+    fail(`${path} Article publisher must expose the canonical Organization and logo.`);
+  }
+  if (article.mainEntityOfPage?.["@type"] !== "WebPage" || article.mainEntityOfPage?.["@id"] !== canonical) {
+    fail(`${path} Article mainEntityOfPage must be the canonical WebPage object.`);
+  }
+  if (article.isPartOf?.["@type"] !== "WebSite" || article.isPartOf?.["@id"] !== `${SITE_URL}/#website`) {
+    fail(`${path} Article must reference the canonical WebSite via isPartOf.`);
+  }
+  if (article.speakable?.["@type"] !== "SpeakableSpecification" || !Array.isArray(article.speakable?.cssSelector) || !article.speakable.cssSelector.includes("h1")) {
+    fail(`${path} Article must expose speakable selectors for AEO parsing.`);
+  }
+  if (!faqPage || !Array.isArray(faqPage.mainEntity) || faqPage.mainEntity.length < 2) {
+    fail(`${path} visible FAQ content must be mirrored as FAQPage JSON-LD.`);
+  }
+
+  return result;
 }
 
 function allowsGeneralCrawlers(body) {
@@ -755,6 +817,7 @@ async function main() {
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
     const headers = validateHtmlHeaders(path, response);
     const structuredData = validateJsonLdTypes(path, body);
+    const articleTrustSchema = validateArticleTrustSchema(path, body);
     const meta = hasMeaningfulMeta(body);
     for (const [name, ok] of Object.entries(meta)) {
       if (!ok) fail(`${path} is missing live HTML marker: ${name}.`);
@@ -767,6 +830,7 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
+      articleTrustSchema,
       socialImage: await validateSocialImage(path, body),
       internalLinks: await validateInternalLinks(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),

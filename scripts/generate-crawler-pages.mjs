@@ -9,6 +9,32 @@ const publicDir = join(root, "public");
 const siteUrl = "https://crepika.com";
 const ogImage = `${siteUrl}/og-image.png`;
 const toolQueueFile = join(root, "scripts", "tool-queue.json");
+const authorProfiles = {
+  "\uC774\uC9C0\uC218": {
+    id: "leejisu",
+    image: "/images/avatar-leejisu.svg",
+    description:
+      "\uC218\uBC31 \uBA85\uC758 \uD06C\uB9AC\uC5D0\uC774\uD130\u00B7\uBE0C\uB79C\uB4DC SNS \uC131\uC7A5\uC744 \uCEE8\uC124\uD305\uD55C \uC18C\uC15C \uBBF8\uB514\uC5B4 \uC2A4\uD398\uC15C\uB9AC\uC2A4\uD2B8.",
+  },
+  "\uAE40\uBBFC\uD601": {
+    id: "kimminhy",
+    image: "/images/avatar-kimminhy.svg",
+    description:
+      "10\uB144\uCC28 \uB514\uC9C0\uD138 \uB9C8\uCF00\uD130\uC774\uC790 SEO \uC804\uB7B5\uAC00. \uB370\uC774\uD130 \uAE30\uBC18 \uCF58\uD150\uCE20 \uCD5C\uC801\uD654 \uC804\uBB38\uAC00.",
+  },
+  "\uBC15\uC900\uC601": {
+    id: "parkjy",
+    image: "/images/avatar-parkjy.svg",
+    description:
+      "\uD06C\uB808\uD53C\uCE74 \uC218\uC11D \uAC1C\uBC1C\uC790. \uBE0C\uB77C\uC6B0\uC800 \uAE30\uBC18 \uB3C4\uAD6C \uC131\uB2A5\uACFC \uC0AC\uC6A9\uC790 \uB370\uC774\uD130 \uBCF4\uC548\uC744 \uC124\uACC4\uD569\uB2C8\uB2E4.",
+  },
+};
+const categoryLabels = {
+  guide: "\uAC00\uC774\uB4DC",
+  tips: "\uD301 & \uD2B8\uB9AD",
+  insights: "\uC778\uC0AC\uC774\uD2B8",
+  "case-study": "\uCF00\uC774\uC2A4 \uC2A4\uD130\uB514",
+};
 const securityTxt = `Contact: mailto:support@crepika.com
 Preferred-Languages: ko, en
 Canonical: ${siteUrl}/.well-known/security.txt
@@ -276,6 +302,111 @@ function stripMarkdown(value) {
     .trim();
 }
 
+function estimateWordCount(post) {
+  const raw = [
+    post.content?.introduction,
+    ...(post.content?.sections ?? []).flatMap((section) => [
+      section.heading ?? section.title ?? "",
+      section.content,
+      ...(section.subsections?.flatMap((subsection) => [subsection.subheading, subsection.content]) ?? []),
+    ]),
+    post.content?.conclusion,
+    ...(post.faq?.flatMap((item) => [item.question, item.answer]) ?? []),
+  ].join(" ");
+
+  return stripMarkdown(raw)
+    .split(/\s+/)
+    .filter(Boolean).length;
+}
+
+function makeAuthorSchema(authorName) {
+  const name = authorName || "Crepika";
+  const profile = authorProfiles[name] ?? {
+    id: "crepika-editorial",
+    image: "/og-image.png",
+    description: "\uD06C\uB808\uD53C\uCE74 \uCF58\uD150\uCE20 \uD300",
+  };
+
+  return {
+    "@type": "Person",
+    "@id": `${siteUrl}/about#${profile.id}`,
+    name,
+    url: `${siteUrl}/about`,
+    description: profile.description,
+    image: `${siteUrl}${profile.image}`,
+  };
+}
+
+function makePublisherSchema() {
+  return {
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    name: "\uD06C\uB808\uD53C\uCE74",
+    url: siteUrl,
+    logo: {
+      "@type": "ImageObject",
+      url: ogImage,
+      width: 1200,
+      height: 630,
+    },
+  };
+}
+
+function makeArticleStructuredData(post) {
+  const canonical = `${siteUrl}/blog/${post.slug}`;
+  const dateModified = post.dateModified || post.publishDate;
+  const readMinutes = Number(String(post.readTime ?? "").match(/\d+/)?.[0] ?? 1);
+  const faqItems = (post.faq ?? []).slice(0, 5);
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${canonical}#article`,
+    headline: post.title,
+    description: post.description,
+    url: canonical,
+    image: {
+      "@type": "ImageObject",
+      url: ogImage,
+      width: 1200,
+      height: 630,
+    },
+    wordCount: estimateWordCount(post),
+    datePublished: post.publishDate,
+    dateModified,
+    author: makeAuthorSchema(post.author),
+    publisher: makePublisherSchema(),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": canonical,
+    },
+    inLanguage: "ko-KR",
+    articleSection: categoryLabels[post.category] ?? post.category,
+    keywords: (post.keywords ?? []).join(", "),
+    timeRequired: `PT${readMinutes}M`,
+    isPartOf: { "@type": "WebSite", "@id": `${siteUrl}/#website` },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".lede"],
+    },
+  };
+  const faqSchema = faqItems.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: stripMarkdown(item.answer),
+          },
+        })),
+      }
+    : null;
+
+  return [articleSchema, faqSchema];
+}
+
 function renderJsonLd(data) {
   const items = Array.isArray(data) ? data : [data];
   return items
@@ -474,6 +605,8 @@ function renderBlogIndex(posts) {
 }
 
 function renderBlogPost(post) {
+  const canonical = `${siteUrl}/blog/${post.slug}`;
+  const faqItems = (post.faq ?? []).slice(0, 5);
   const sections = post.content.sections
     .map((section, index) => {
       const title = section.heading || section.title || "가이드 섹션";
@@ -489,36 +622,17 @@ function renderBlogPost(post) {
       return `<li><a href="#section-${index}">${escapeHtml(title)}</a></li>`;
     })
     .join("\n");
-  const faq = (post.faq ?? [])
-    .slice(0, 5)
+  const faq = faqItems
     .map((item) => `<h3>${escapeHtml(item.question)}</h3><p>${escapeHtml(stripMarkdown(item.answer))}</p>`)
     .join("\n");
   const faqHtml = faq ? `<section class="panel"><h2>자주 묻는 질문</h2>${faq}</section>` : "";
   return renderShell({
     title: `${post.title} | Crepika`,
     description: post.description,
-    canonical: `${siteUrl}/blog/${post.slug}`,
+    canonical,
     heading: post.title,
     type: "article",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "@id": `${siteUrl}/blog/${post.slug}#article`,
-      headline: post.title,
-      description: post.description,
-      url: `${siteUrl}/blog/${post.slug}`,
-      datePublished: post.publishDate,
-      dateModified: post.dateModified || post.publishDate,
-      author: {
-        "@type": "Person",
-        name: post.author || "Crepika",
-      },
-      publisher: { "@id": `${siteUrl}/#organization` },
-      mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
-      inLanguage: "ko-KR",
-      articleSection: post.category,
-      keywords: (post.keywords ?? []).join(", "),
-    },
+    structuredData: makeArticleStructuredData(post),
     bodyHtml: `<p class="lede">${escapeHtml(post.description)}</p>
       <p class="muted">발행일: ${escapeHtml(post.publishDate)} &middot; 분야: ${escapeHtml(post.category)} &middot; 읽는 시간: ${escapeHtml(post.readTime)}</p>
       <nav class="panel" aria-label="글 목차"><h2>글 목차</h2><ol>${toc}</ol></nav>

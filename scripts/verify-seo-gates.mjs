@@ -122,6 +122,59 @@ function hasJsonLdType(body, path, type) {
   return extractJsonLdObjects(body, path).some((entry) => entry?.["@type"] === type);
 }
 
+function validateArticleTrustSchema(path, body, canonicalUrl) {
+  const objects = extractJsonLdObjects(body, path);
+  const article = objects.find((entry) => entry?.["@type"] === "Article");
+  if (!article) {
+    fail(`${path} is missing Article structured data.`);
+    return;
+  }
+
+  const expectedId = `${canonicalUrl}#article`;
+  const requiredStringFields = ["headline", "description", "datePublished", "dateModified", "inLanguage", "articleSection", "keywords", "timeRequired"];
+  for (const field of requiredStringFields) {
+    if (typeof article[field] !== "string" || article[field].trim().length < 2) {
+      fail(`${path} Article structured data is missing a meaningful ${field}.`);
+    }
+  }
+  if (article["@id"] !== expectedId) {
+    fail(`${path} Article @id must be ${expectedId}.`);
+  }
+  if (article.url !== canonicalUrl) {
+    fail(`${path} Article url must match canonical URL.`);
+  }
+  if (article.inLanguage !== "ko-KR") {
+    fail(`${path} Article inLanguage must be ko-KR.`);
+  }
+  if (!Number.isFinite(Number(article.wordCount)) || Number(article.wordCount) < 200) {
+    fail(`${path} Article wordCount must be at least 200.`);
+  }
+  if (article.image?.["@type"] !== "ImageObject" || article.image?.url !== `${SITE_URL}/og-image.png` || article.image?.width !== 1200 || article.image?.height !== 630) {
+    fail(`${path} Article image must be a 1200x630 canonical ImageObject.`);
+  }
+  if (article.author?.["@type"] !== "Person" || !String(article.author?.["@id"] ?? "").startsWith(`${SITE_URL}/about#`) || article.author?.url !== `${SITE_URL}/about` || !String(article.author?.image ?? "").startsWith(`${SITE_URL}/`)) {
+    fail(`${path} Article author must expose Person @id, URL, and canonical image.`);
+  }
+  if (article.publisher?.["@type"] !== "Organization" || article.publisher?.["@id"] !== `${SITE_URL}/#organization` || article.publisher?.logo?.url !== `${SITE_URL}/og-image.png`) {
+    fail(`${path} Article publisher must expose the canonical Organization and logo.`);
+  }
+  if (article.mainEntityOfPage?.["@type"] !== "WebPage" || article.mainEntityOfPage?.["@id"] !== canonicalUrl) {
+    fail(`${path} Article mainEntityOfPage must be the canonical WebPage object.`);
+  }
+  if (article.isPartOf?.["@type"] !== "WebSite" || article.isPartOf?.["@id"] !== `${SITE_URL}/#website`) {
+    fail(`${path} Article must reference the canonical WebSite via isPartOf.`);
+  }
+  if (article.speakable?.["@type"] !== "SpeakableSpecification" || !Array.isArray(article.speakable?.cssSelector) || !article.speakable.cssSelector.includes("h1")) {
+    fail(`${path} Article must expose speakable selectors for AEO parsing.`);
+  }
+
+  const hasVisibleFaq = body.includes("<h2>?먯＜") || body.includes("<h2>자주");
+  const faqPage = objects.find((entry) => entry?.["@type"] === "FAQPage");
+  if (hasVisibleFaq && (!faqPage || !Array.isArray(faqPage.mainEntity) || faqPage.mainEntity.length < 2)) {
+    fail(`${path} visible FAQ content must be mirrored as FAQPage JSON-LD.`);
+  }
+}
+
 function extractXmlTags(source, tag) {
   const re = new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`, "g");
   return [...source.matchAll(re)].map((match) => match[1].trim());
@@ -502,6 +555,9 @@ function validateCrawlerPage(path, canonicalUrl) {
   }
   if (!hasJsonLdType(body, path, "BreadcrumbList")) {
     fail(`${path} is missing BreadcrumbList structured data.`);
+  }
+  if (path.replace(/\\/g, "/").startsWith("public/blog/") && path.replace(/\\/g, "/") !== "public/blog/index.html") {
+    validateArticleTrustSchema(path, body, canonicalUrl);
   }
   validateSocialImageMeta(path, body);
   validateInternalLinks(path, body);
