@@ -817,7 +817,6 @@ async function main() {
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
     const headers = validateHtmlHeaders(path, response);
     const structuredData = validateJsonLdTypes(path, body);
-    const articleTrustSchema = validateArticleTrustSchema(path, body);
     const meta = hasMeaningfulMeta(body);
     for (const [name, ok] of Object.entries(meta)) {
       if (!ok) fail(`${path} is missing live HTML marker: ${name}.`);
@@ -830,7 +829,6 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
-      articleTrustSchema,
       socialImage: await validateSocialImage(path, body),
       internalLinks: await validateInternalLinks(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
@@ -843,6 +841,7 @@ async function main() {
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
     const headers = validateHtmlHeaders(path, response);
     const structuredData = validateJsonLdTypes(path, body);
+    const articleTrustSchema = validateArticleTrustSchema(path, body);
     const meta = hasMeaningfulMeta(body);
     for (const [name, ok] of Object.entries(meta)) {
       if (!ok) fail(`${path} is missing live article HTML marker: ${name}.`);
@@ -856,6 +855,7 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
+      articleTrustSchema,
       socialImage: await validateSocialImage(path, body),
       internalLinks: await validateInternalLinks(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
