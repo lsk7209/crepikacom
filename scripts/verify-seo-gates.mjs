@@ -513,6 +513,70 @@ function validateSocialImageMeta(path, body) {
   }
 }
 
+function extractLinkHref(body, rel) {
+  const escapedRel = rel.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(
+    `<link\\s+[^>]*rel=["']${escapedRel}["'][^>]*href=["']([^"']+)["'][^>]*>`,
+    "i",
+  );
+  const reversePattern = new RegExp(
+    `<link\\s+[^>]*href=["']([^"']+)["'][^>]*rel=["']${escapedRel}["'][^>]*>`,
+    "i",
+  );
+  return body.match(pattern)?.[1] ?? body.match(reversePattern)?.[1] ?? "";
+}
+
+function extractMetaContent(body, attribute, value) {
+  const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(
+    `<meta\\s+[^>]*${attribute}=["']${escapedValue}["'][^>]*content=["']([^"']+)["'][^>]*>`,
+    "i",
+  );
+  const reversePattern = new RegExp(
+    `<meta\\s+[^>]*content=["']([^"']+)["'][^>]*${attribute}=["']${escapedValue}["'][^>]*>`,
+    "i",
+  );
+  return body.match(pattern)?.[1] ?? body.match(reversePattern)?.[1] ?? "";
+}
+
+function validateUrlSignalConsistency(path, body, expectedCanonical = "") {
+  const canonicalCount = countMatches(body, /<link\b[^>]*rel=["']canonical["'][^>]*>/gi);
+  const canonical = extractLinkHref(body, "canonical");
+  const ogUrl = extractMetaContent(body, "property", "og:url");
+  const objects = extractJsonLdObjects(body, path);
+
+  if (canonicalCount !== 1) {
+    fail(`${path} must expose exactly one canonical link; found ${canonicalCount}.`);
+  }
+  if (!canonical) {
+    fail(`${path} is missing a canonical href.`);
+    return;
+  }
+  if (expectedCanonical && canonical !== expectedCanonical) {
+    fail(`${path} canonical href must be ${expectedCanonical}; got ${canonical}.`);
+  }
+  validateReadableCanonicalUrl(canonical, `${path} canonical URL`);
+  if (ogUrl !== canonical) {
+    fail(`${path} og:url must match canonical href; got ${ogUrl || "missing"}.`);
+  }
+
+  for (const entry of objects) {
+    if (!entry || typeof entry !== "object") continue;
+    if (["Article", "CollectionPage", "SoftwareApplication", "WebPage"].includes(entry["@type"]) && entry.url && entry.url !== canonical) {
+      fail(`${path} ${entry["@type"]} JSON-LD url must match canonical href.`);
+    }
+    if (entry["@type"] === "Article" && entry.mainEntityOfPage?.["@id"] !== canonical) {
+      fail(`${path} Article mainEntityOfPage must match canonical href.`);
+    }
+    if (entry["@type"] === "BreadcrumbList" && Array.isArray(entry.itemListElement) && entry.itemListElement.length) {
+      const lastItem = entry.itemListElement.at(-1)?.item;
+      if (lastItem && lastItem !== canonical) {
+        fail(`${path} BreadcrumbList final item must match canonical href.`);
+      }
+    }
+  }
+}
+
 function extractImageTags(body) {
   return [...body.matchAll(/<img\b(?:"[^"]*"|'[^']*'|\{[^}]*\}|[^>])*>/gi)].map((match) => match[0]);
 }
@@ -600,6 +664,7 @@ function validatePublicFiles() {
     }
   }
   validateSocialImageMeta("index.html", index);
+  validateUrlSignalConsistency("index.html", index, `${SITE_URL}/`);
   validateSiteIdentitySchema("index.html", index);
   validateInlineImageAlt("index.html", index);
   if (!index.includes(`href="${SITE_URL}/rss.xml"`)) {
@@ -734,6 +799,7 @@ function validateCrawlerPage(path, canonicalUrl) {
     fail(`${path} is missing BreadcrumbList structured data.`);
   }
   validateSiteIdentitySchema(path, body);
+  validateUrlSignalConsistency(path, body, canonicalUrl);
   if (path.replace(/\\/g, "/").startsWith("public/blog/") && path.replace(/\\/g, "/") !== "public/blog/index.html") {
     validateArticleTrustSchema(path, body, canonicalUrl);
   }
@@ -761,6 +827,7 @@ function validateStaticHtmlBasics() {
       fail(`${path} is missing BreadcrumbList structured data.`);
     }
     validateSiteIdentitySchema(path, body);
+    validateUrlSignalConsistency(path, body);
     validateSocialImageMeta(path, body);
     validateInlineImageAlt(path, body);
     validateInternalLinks(path, body);

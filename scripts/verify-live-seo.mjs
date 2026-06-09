@@ -209,6 +209,71 @@ function extractMetaContent(body, attribute, value) {
   return body.match(pattern)?.[1] ?? body.match(reversePattern)?.[1] ?? "";
 }
 
+function extractLinkHref(body, rel) {
+  const escapedRel = rel.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(
+    `<link\\s+[^>]*rel=["']${escapedRel}["'][^>]*href=["']([^"']+)["'][^>]*>`,
+    "i",
+  );
+  const reversePattern = new RegExp(
+    `<link\\s+[^>]*href=["']([^"']+)["'][^>]*rel=["']${escapedRel}["'][^>]*>`,
+    "i",
+  );
+  return body.match(pattern)?.[1] ?? body.match(reversePattern)?.[1] ?? "";
+}
+
+function validateUrlSignalConsistency(path, body) {
+  const expectedCanonical = `${SITE_URL}${path}`;
+  const canonicalCount = countMatches(body, /<link\b[^>]*rel=["']canonical["'][^>]*>/gi);
+  const canonical = extractLinkHref(body, "canonical");
+  const ogUrl = extractMetaContent(body, "property", "og:url");
+  const objects = extractJsonLdObjects(body);
+  const matchedJsonLdTypes = [];
+
+  if (canonicalCount !== 1) {
+    fail(`${path} must expose exactly one canonical link; found ${canonicalCount}.`);
+  }
+  if (!canonical) {
+    fail(`${path} is missing a canonical href.`);
+  } else {
+    if (canonical !== expectedCanonical) {
+      fail(`${path} canonical href must be ${expectedCanonical}; got ${canonical}.`);
+    }
+    validateReadableCanonicalUrl(canonical, `${path} canonical URL`);
+  }
+  if (ogUrl !== canonical) {
+    fail(`${path} og:url must match canonical href; got ${ogUrl || "missing"}.`);
+  }
+
+  for (const entry of objects) {
+    if (!entry || typeof entry !== "object") continue;
+    if (["Article", "CollectionPage", "SoftwareApplication", "WebPage"].includes(entry["@type"]) && entry.url) {
+      matchedJsonLdTypes.push(entry["@type"]);
+      if (entry.url !== canonical) {
+        fail(`${path} ${entry["@type"]} JSON-LD url must match canonical href.`);
+      }
+    }
+    if (entry["@type"] === "Article" && entry.mainEntityOfPage?.["@id"] !== canonical) {
+      fail(`${path} Article mainEntityOfPage must match canonical href.`);
+    }
+    if (entry["@type"] === "BreadcrumbList" && Array.isArray(entry.itemListElement) && entry.itemListElement.length) {
+      const lastItem = entry.itemListElement.at(-1)?.item;
+      if (lastItem && lastItem !== canonical) {
+        fail(`${path} BreadcrumbList final item must match canonical href.`);
+      }
+    }
+  }
+
+  return {
+    canonical,
+    expectedCanonical,
+    canonicalCount,
+    ogUrl,
+    ogMatchesCanonical: ogUrl === canonical,
+    jsonLdUrlTypesChecked: [...new Set(matchedJsonLdTypes)],
+  };
+}
+
 function hasMeaningfulMeta(body, options = {}) {
   const { requireH1 = true, requireBreadcrumb = true } = options;
   return {
@@ -998,6 +1063,7 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
+      urlSignals: validateUrlSignalConsistency(path, body),
       siteIdentitySchema: validateSiteIdentitySchema(path, body),
       inlineImageAlt: validateInlineImageAlt(path, body),
       socialImage: await validateSocialImage(path, body),
@@ -1025,6 +1091,7 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
+      urlSignals: validateUrlSignalConsistency(path, body),
       ...(siteIdentitySchema ? { siteIdentitySchema } : {}),
       inlineImageAlt: validateInlineImageAlt(path, body),
       socialImage: await validateSocialImage(path, body),
@@ -1054,6 +1121,7 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
+      urlSignals: validateUrlSignalConsistency(path, body),
       siteIdentitySchema,
       articleTrustSchema,
       inlineImageAlt: validateInlineImageAlt(path, body),
