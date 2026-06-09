@@ -543,6 +543,17 @@ function validateQualityAutomation() {
       fail(`quality-gates.yml must include ${marker}.`);
     }
   }
+
+  for (const path of [
+    ".github/workflows/quality-gates.yml",
+    ".github/workflows/auto-publish.yml",
+    ".github/workflows/auto-publish-tools.yml",
+  ]) {
+    const body = requireFile(path);
+    if (!body.includes("FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true")) {
+      fail(`${path} must opt GitHub JavaScript actions into the Node 24 runtime.`);
+    }
+  }
 }
 
 function validateQueueCoverage(queue) {
