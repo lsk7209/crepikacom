@@ -231,14 +231,25 @@ function validateCrawlerPage(path, canonicalUrl) {
   if (!body.includes(`<link rel="canonical" href="${canonicalUrl}">`)) {
     fail(`${path} is missing the expected canonical URL.`);
   }
-  if (!/name="robots"\s+content="index,follow"/i.test(body)) {
+  if (!/name="robots"\s+content="[^"]*index,follow/i.test(body)) {
     fail(`${path} is missing an index,follow robots meta tag.`);
+  }
+  if (!/name="robots"\s+content="[^"]*max-image-preview:large/i.test(body)) {
+    fail(`${path} is missing max-image-preview:large for large image previews.`);
   }
   for (const marker of [
     'name="description"',
     'property="og:title"',
     'property="og:description"',
     'property="og:url"',
+    'property="og:locale"',
+    'property="og:image"',
+    'property="og:image:width"',
+    'property="og:image:height"',
+    'name="twitter:card"',
+    'name="twitter:title"',
+    'name="twitter:description"',
+    'name="twitter:image"',
     'name="google-adsense-account"',
     "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
     'type="application/ld+json"',

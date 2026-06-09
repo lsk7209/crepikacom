@@ -26,6 +26,9 @@ function hasMeaningfulMeta(body) {
     title: /<title>[^<]{10,}<\/title>/i.test(body),
     description: /<meta\s+name="description"\s+content="[^"]{40,}"/i.test(body),
     canonical: /<link\s+rel="canonical"\s+href="https:\/\/crepika\.com\//i.test(body),
+    largeImagePreview: /<meta\s+name="robots"\s+content="[^"]*max-image-preview:large/i.test(body),
+    ogImage: /<meta\s+property="og:image"\s+content="https:\/\/crepika\.com\/og-image\.png"/i.test(body),
+    twitterCard: /<meta\s+name="twitter:card"\s+content="summary_large_image"/i.test(body),
     h1: (body.match(/<h1\b/gi) || []).length === 1,
     adsense: body.includes("ca-pub-3050601904412736"),
   };

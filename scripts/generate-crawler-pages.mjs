@@ -7,6 +7,7 @@ import { readFileSync } from "node:fs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
 const siteUrl = "https://crepika.com";
+const ogImage = `${siteUrl}/og-image.png`;
 const toolQueueFile = join(root, "scripts", "tool-queue.json");
 const securityTxt = `Contact: mailto:support@crepika.com
 Preferred-Languages: ko, en
@@ -303,13 +304,24 @@ function renderShell({
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}">
-    <meta name="robots" content="index,follow">
+    <meta name="robots" content="index,follow,max-image-preview:large">
     <link rel="canonical" href="${escapeHtml(canonical)}">
     <meta property="og:title" content="${escapeHtml(title)}">
     <meta property="og:description" content="${escapeHtml(description)}">
     <meta property="og:url" content="${escapeHtml(canonical)}">
     <meta property="og:type" content="${type}">
+    <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="Crepika">
+    <meta property="og:image" content="${ogImage}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="${escapeHtml(title)}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${escapeHtml(title)}">
+    <meta name="twitter:description" content="${escapeHtml(description)}">
+    <meta name="twitter:image" content="${ogImage}">
+    <meta name="twitter:image:alt" content="${escapeHtml(title)}">
     <meta name="google-adsense-account" content="ca-pub-3050601904412736">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3050601904412736" crossorigin="anonymous"></script>
 ${jsonLd ? `${jsonLd}\n` : ""}    <style>
