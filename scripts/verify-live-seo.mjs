@@ -196,6 +196,20 @@ async function getReachability(path) {
   return { url: fetched.url, response: fetched.response };
 }
 
+async function mapWithConcurrency(values, limit, mapper) {
+  const results = new Array(values.length);
+  let nextIndex = 0;
+  const workers = Array.from({ length: Math.min(limit, values.length) }, async () => {
+    while (nextIndex < values.length) {
+      const currentIndex = nextIndex;
+      nextIndex += 1;
+      results[currentIndex] = await mapper(values[currentIndex], currentIndex);
+    }
+  });
+  await Promise.all(workers);
+  return results;
+}
+
 function extractMetaContent(body, attribute, value) {
   const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const pattern = new RegExp(
@@ -820,6 +834,33 @@ async function validateDiscoveryConsistency() {
   for (const url of sitemapUrls) {
     validateReadableCanonicalUrl(url, "Live sitemap URL");
   }
+  const sitemapReachability = await mapWithConcurrency(sitemapUrls, 12, async (url) => {
+    try {
+      const { response } = await getReachability(url);
+      return {
+        url,
+        status: response.status,
+        redirected: response.redirected,
+        finalUrl: response.url,
+      };
+    } catch (error) {
+      return {
+        url,
+        status: 0,
+        redirected: false,
+        finalUrl: "",
+        error: error instanceof Error ? error.message : String(error),
+      };
+    }
+  });
+  const unreachableSitemapUrls = sitemapReachability.filter((entry) => entry.status !== 200);
+  const redirectedSitemapUrls = sitemapReachability.filter((entry) => entry.redirected || entry.finalUrl !== entry.url);
+  if (unreachableSitemapUrls.length) {
+    fail(`sitemap.xml contains non-200 URLs: ${unreachableSitemapUrls.slice(0, 10).map((entry) => `${entry.url} -> ${entry.status}`).join(", ")}`);
+  }
+  if (redirectedSitemapUrls.length) {
+    fail(`sitemap.xml contains redirected URLs: ${redirectedSitemapUrls.slice(0, 10).map((entry) => `${entry.url} -> ${entry.finalUrl || "unknown"}`).join(", ")}`);
+  }
   const rssLinks = extractXmlTags(rssResult.body, "link").filter((link) =>
     link.startsWith(`${SITE_URL}/blog/`),
   );
@@ -884,6 +925,9 @@ async function validateDiscoveryConsistency() {
   return {
     path: "discovery-consistency",
     sitemapReadableUrls: sitemapUrls.length,
+    sitemapReachableUrls: sitemapReachability.filter((entry) => entry.status === 200 && !entry.redirected && entry.finalUrl === entry.url).length,
+    sitemapRedirectedUrls: redirectedSitemapUrls.length,
+    sitemapNon200Urls: unreachableSitemapUrls.length,
     sitemapBlogUrls: sitemapBlogUrls.length,
     rssItems: rssLinks.length,
     feedItems: feedLinks.length,
