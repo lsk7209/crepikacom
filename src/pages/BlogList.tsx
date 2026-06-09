@@ -264,15 +264,34 @@ export default function BlogList() {
             전체
           </Badge>
           {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
-            <Badge
-              key={key}
-              variant={selectedCategory === key ? "default" : "outline"}
-              className="cursor-pointer px-4 py-2"
-              onClick={() => handleCategoryChange(key)}
-            >
-              {label}
-            </Badge>
+            (() => {
+              const Icon = CATEGORY_ICONS[key];
+              return (
+                <Badge
+                  key={key}
+                  variant={selectedCategory === key ? "default" : "outline"}
+                  className="cursor-pointer gap-1.5 px-4 py-2"
+                  onClick={() => handleCategoryChange(key)}
+                >
+                  <Icon className="h-3.5 w-3.5" />
+                  {label}
+                </Badge>
+              );
+            })()
           ))}
+        </div>
+
+        <div className="mb-6 flex flex-col gap-2 rounded-lg border border-cyan-400/15 bg-cyan-400/[0.03] px-4 py-3 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <span>
+            {searchQuery
+              ? `"${searchQuery}" 검색 결과 ${filteredPosts.length}개`
+              : selectedCategory === "all"
+                ? `전체 글 ${filteredPosts.length}개`
+                : `${CATEGORY_LABELS[selectedCategory]} 글 ${filteredPosts.length}개`}
+          </span>
+          <span className="text-cyan-200">
+            최신순 · 카드형 목록 · RSS 제공
+          </span>
         </div>
 
         {/* Blog Posts Grid */}

@@ -13,6 +13,8 @@ import {
   Lightbulb,
   TrendingUp,
   Award,
+  CheckCircle2,
+  ListChecks,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -57,6 +59,11 @@ const CATEGORY_ICONS: Record<string, React.ElementType> = {
 const SECTION_ACCENTS = [
   "border-cyan-400/50 bg-cyan-400/10 text-cyan-200",
   "border-amber-400/50 bg-amber-400/10 text-amber-200",
+] as const;
+
+const READING_POINT_ACCENTS = [
+  "border-cyan-400/25 bg-cyan-400/[0.04] text-cyan-200",
+  "border-amber-400/25 bg-amber-400/[0.04] text-amber-200",
 ] as const;
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
@@ -357,6 +364,11 @@ export default function BlogPost() {
           <TableOfContents sections={post.content.sections} />
         )}
 
+        <ReadingPoints
+          sections={post.content.sections}
+          keywords={post.keywords}
+        />
+
         {/* Introduction */}
         <section className="mb-12 rounded-lg border border-cyan-400/20 bg-cyan-400/5 p-5 md:p-6">
           <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-cyan-200">
@@ -588,8 +600,11 @@ function TableOfContents({
     return () => window.removeEventListener("scroll", handler);
   }, [sections]);
   return (
-    <nav className="mb-10 p-5 bg-muted/40 rounded-xl border text-sm">
-      <p className="font-semibold mb-3 text-foreground">목차</p>
+    <nav className="mb-8 rounded-xl border border-cyan-400/15 bg-muted/30 p-5 text-sm">
+      <p className="mb-3 flex items-center gap-2 font-semibold text-foreground">
+        <ListChecks className="h-4 w-4 text-cyan-300" />
+        목차
+      </p>
       <ol className="space-y-1.5 list-none">
         {sections.map((s, i) => (
           <li key={i}>
@@ -603,6 +618,50 @@ function TableOfContents({
         ))}
       </ol>
     </nav>
+  );
+}
+
+function ReadingPoints({
+  sections,
+  keywords,
+}: {
+  sections: { heading?: string; title?: string }[];
+  keywords: string[];
+}) {
+  const points = sections.slice(0, 4);
+  if (points.length === 0) return null;
+
+  return (
+    <section className="mb-10 rounded-xl border bg-card/60 p-5">
+      <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-sm font-semibold text-primary">읽기 포인트</p>
+          <h2 className="text-xl font-bold">이 글에서 바로 확인할 내용</h2>
+        </div>
+        {keywords[0] && (
+          <Badge variant="secondary" className="w-fit">
+            {keywords[0]}
+          </Badge>
+        )}
+      </div>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {points.map((section, idx) => (
+          <a
+            key={idx}
+            href={`#section-${idx}`}
+            className={`group rounded-lg border p-4 transition-colors hover:border-primary/40 ${READING_POINT_ACCENTS[idx % READING_POINT_ACCENTS.length]}`}
+          >
+            <div className="mb-2 flex items-center gap-2 text-sm font-semibold">
+              <CheckCircle2 className="h-4 w-4" />
+              포인트 {idx + 1}
+            </div>
+            <p className="line-clamp-2 text-sm leading-relaxed text-foreground group-hover:text-primary">
+              {section.heading ?? section.title}
+            </p>
+          </a>
+        ))}
+      </div>
+    </section>
   );
 }
 
