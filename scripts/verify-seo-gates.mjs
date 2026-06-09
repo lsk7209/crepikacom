@@ -1254,8 +1254,11 @@ function validateIndexingAutomation() {
 
 function validateToolPublicationAutomation() {
   const workflow = requireFile(".github/workflows/auto-publish-tools.yml");
-  if (!workflow.includes('cron: "7 * * * *"')) {
-    fail("auto-publish-tools.yml must run hourly so the five-hour gate can publish the next due tool.");
+  if (!workflow.includes('cron: "*/15 * * * *"')) {
+    fail("auto-publish-tools.yml must check every 15 minutes so due five-hour tool releases are not delayed by an hourly cron window.");
+  }
+  if (!workflow.includes("publish-tool-once.mjs enforces the five-hour cadence")) {
+    fail("auto-publish-tools.yml must document that publish-tool-once.mjs enforces the five-hour cadence.");
   }
   if (!workflow.includes('TOOL_PUBLISH_MIN_HOURS: "5"')) {
     fail("auto-publish-tools.yml must enforce TOOL_PUBLISH_MIN_HOURS=5.");
@@ -1335,6 +1338,19 @@ function validateQualityAutomation() {
       if (!body.includes(marker)) {
         fail(`${path} must use ${marker} so GitHub JavaScript actions target Node 24.`);
       }
+    }
+  }
+
+  const toolWorkflow = requireFile(".github/workflows/auto-publish-tools.yml");
+  for (const marker of [
+    'cron: "*/15 * * * *"',
+    "publish-tool-once.mjs enforces the five-hour cadence",
+    'TOOL_PUBLISH_MIN_HOURS: "5"',
+    "node scripts/publish-tool-once.mjs",
+    "node scripts/verify-seo-gates.mjs",
+  ]) {
+    if (!toolWorkflow.includes(marker)) {
+      fail(`auto-publish-tools.yml must include ${marker}.`);
     }
   }
 }
@@ -1460,6 +1476,7 @@ function main() {
           indexingAutomation: "ok",
           toolPublicationAutomation: "ok",
           qualityAutomation: "ok",
+          utilityToolScheduleCadence: "ok",
           toolQueue: queue.reduce((acc, item) => {
             acc[item.status] = (acc[item.status] || 0) + 1;
             return acc;

@@ -2,7 +2,8 @@ name: Auto Publish Utility Tool
 
 on:
   schedule:
-    - cron: "7 * * * *"
+    # Check frequently; publish-tool-once.mjs enforces the five-hour cadence.
+    - cron: "*/15 * * * *"
   workflow_dispatch:
     inputs:
       force:
