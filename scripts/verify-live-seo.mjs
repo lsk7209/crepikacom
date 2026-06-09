@@ -8,6 +8,18 @@ const SAMPLE_ARTICLE_PATH = "/blog/review-psychology-marketing";
 const READABLE_HOME_MARKERS = ["\uD06C\uB808\uD53C\uCE74", "\uB85C\uADF8\uC778", "\uBB34\uB8CC"];
 const REQUIRED_CRAWLER_SHELL_MARKERS = ["\uAE00 \uBAA9\uCC28", "\uB2E4\uC74C \uB2E8\uACC4", "\uC0AC\uC774\uD2B8 \uAC80\uD1A0 \uC815\uBCF4"];
 const FORBIDDEN_CRAWLER_SHELL_MARKERS = ["Table of contents", "Next step", "Site and review context"];
+const LEGACY_TOOL_REDIRECTS = {
+  "email-analytics": "ctr-calculator",
+  "email-template": "text-counter",
+  "hash-generator": "hashtag-mixer",
+  "hashtag-generator": "hashtag-mixer",
+  "instagram-spacer": "insta-spacer",
+  "platform-compare": "utm-url-builder",
+  "pricing-calculator": "adsense-rpm-calculator",
+  "revenue-calculator": "adsense-rpm-calculator",
+  "sns-analytics": "ctr-calculator",
+  "sns-calendar": "utm-url-builder",
+};
 
 const failures = [];
 
@@ -149,6 +161,27 @@ async function main() {
       location: redirect.location,
       canonicalHostRedirect: pointsToCanonicalHost,
       permanent: isPermanent,
+    });
+  }
+
+  for (const [legacyToolId, canonicalToolId] of Object.entries(LEGACY_TOOL_REDIRECTS)) {
+    const legacyPath = `/tools/${legacyToolId}`;
+    const canonicalPath = `/tools/${canonicalToolId}`;
+    const redirect = await getRedirect(`${SITE_URL}${legacyPath}`);
+    const pointsToCanonicalTool =
+      redirect.status === 308 &&
+      [canonicalPath, `${SITE_URL}${canonicalPath}`].includes(redirect.location);
+    if (!pointsToCanonicalTool) {
+      fail(
+        `${redirect.url} must 308 redirect to ${canonicalPath}; got ${redirect.status} ${redirect.location}.`,
+      );
+    }
+    checks.push({
+      path: legacyPath,
+      status: redirect.status,
+      location: redirect.location,
+      canonicalToolRedirect: pointsToCanonicalTool,
+      permanent: redirect.status === 308,
     });
   }
 
