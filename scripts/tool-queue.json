@@ -202,7 +202,7 @@
     "type": "score-checker",
     "intent": "첫 문단이 문제, 독자, 약속된 결과를 분명히 보여주는지 점검합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-12T17:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/blog-intro-hook-checker"
@@ -228,7 +228,7 @@
     "type": "text-transform",
     "intent": "불릿 목록을 비교표 형식의 마크다운 테이블로 바꿉니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-13T03:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/list-to-table-converter"
@@ -241,7 +241,7 @@
     "type": "builder",
     "intent": "행과 열 입력으로 마크다운 테이블을 빠르게 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-13T08:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/markdown-table-builder"
@@ -254,7 +254,7 @@
     "type": "builder",
     "intent": "외부 출처를 제목, 발행처, 날짜, 사용 목적별로 정리합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-13T13:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/source-link-organizer"
@@ -267,7 +267,7 @@
     "type": "builder",
     "intent": "훅, 본문, 증거, CTA, 해시태그 섹션으로 캡션을 정리합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-13T18:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/instagram-caption-builder"

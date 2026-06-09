@@ -825,6 +825,205 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "blog-intro-hook-checker": {
+    id: "blog-intro-hook-checker",
+    buttonLabel: "도입부 훅 검사하기",
+    fields: [
+      { key: "intro", label: "도입부", type: "textarea", placeholder: "블로그 글의 첫 2~4문단을 붙여넣으세요." },
+      { key: "keyword", label: "핵심 키워드", type: "text", placeholder: "예: 애드센스 승인" },
+    ],
+    run: ({ intro, keyword }) => {
+      const text = intro.trim().replace(/\s+/g, " ");
+      const key = keyword.trim();
+      const hasProblem = /(문제|어렵|고민|실패|막히|궁금|왜|필요|주의)/.test(text);
+      const hasPromise = /(방법|체크|정리|해결|알려|확인|가이드|전략|단계)/.test(text);
+      const hasKeyword = key ? text.toLowerCase().includes(key.toLowerCase()) : false;
+      const lengthOk = text.length >= 120 && text.length <= 450;
+      const score = (lengthOk ? 25 : 12) + (hasProblem ? 25 : 8) + (hasPromise ? 25 : 8) + (key ? (hasKeyword ? 25 : 5) : 15);
+
+      return {
+        summary:
+          score >= 80
+            ? "독자가 계속 읽을 이유가 비교적 선명한 도입부입니다."
+            : "문제 제기, 기대 결과, 핵심 키워드를 더 앞쪽에 보강하세요.",
+        output: [
+          `문제 제기: ${hasProblem ? "있음" : "부족"}`,
+          `기대 결과: ${hasPromise ? "있음" : "부족"}`,
+          `키워드 반영: ${key ? (hasKeyword ? "있음" : "부족") : "미입력"}`,
+          "권장 구조: 공감 문장 -> 문제 정의 -> 글에서 얻을 결과 -> 본문 예고",
+        ].join("\n"),
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "길이", value: `${text.length}자`, tone: "accent" },
+          { label: "키워드", value: key || "미입력" },
+        ],
+        tips: [
+          "첫 문단은 독자의 상황이나 문제를 직접 짚어야 이탈이 줄어듭니다.",
+          "도입부 끝에는 이 글을 읽고 무엇을 해결할 수 있는지 분명히 적으세요.",
+          "핵심 키워드는 억지 반복보다 첫 150자 안에 자연스럽게 한 번 넣는 편이 좋습니다.",
+        ],
+      };
+    },
+  },
+  "list-to-table-converter": {
+    id: "list-to-table-converter",
+    buttonLabel: "표로 변환하기",
+    fields: [
+      {
+        key: "items",
+        label: "목록",
+        type: "textarea",
+        placeholder: "제목 | 장점 | 주의점\nSEO 제목 | 클릭률 개선 | 과장 금지\n메타 설명 | 요약 전달 | 중복 금지",
+      },
+    ],
+    run: ({ items }) => {
+      const rows = items
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean)
+        .map((line) => line.split(/[|\t,]/).map((cell) => cell.trim()).filter(Boolean));
+      const maxCols = Math.max(2, ...rows.map((row) => row.length));
+      const header = rows[0]?.length >= 2 ? rows[0] : Array.from({ length: maxCols }, (_, index) => `항목 ${index + 1}`);
+      const bodyRows = rows[0]?.length >= 2 ? rows.slice(1) : rows;
+      const normalize = (row: string[]) => Array.from({ length: maxCols }, (_, index) => row[index] ?? "");
+      const table = [
+        `| ${normalize(header).join(" | ")} |`,
+        `| ${Array.from({ length: maxCols }, () => "---").join(" | ")} |`,
+        ...bodyRows.map((row) => `| ${normalize(row).join(" | ")} |`),
+      ].join("\n");
+
+      return {
+        summary: `${bodyRows.length}개 행을 마크다운 표로 변환했습니다.`,
+        output: table,
+        metrics: [
+          { label: "행", value: `${bodyRows.length}개`, tone: "primary" },
+          { label: "열", value: `${maxCols}개`, tone: "accent" },
+          { label: "형식", value: "Markdown" },
+        ],
+        tips: [
+          "비교, 조건, 장단점처럼 스캔이 필요한 정보는 문단보다 표가 읽기 쉽습니다.",
+          "모바일에서는 열이 너무 많으면 읽기 어려우니 2~4열 안에서 정리하세요.",
+          "표 앞뒤에 짧은 해설 문단을 넣으면 검색엔진과 독자 모두 맥락을 이해하기 쉽습니다.",
+        ],
+      };
+    },
+  },
+  "markdown-table-builder": {
+    id: "markdown-table-builder",
+    buttonLabel: "마크다운 표 만들기",
+    fields: [
+      { key: "columns", label: "열 이름", type: "text", placeholder: "항목, 설명, 체크 기준" },
+      { key: "rows", label: "행 개수", type: "number", placeholder: "5" },
+      { key: "topic", label: "표 주제", type: "text", placeholder: "예: SEO 점검표" },
+    ],
+    run: ({ columns, rows, topic }) => {
+      const cols = (columns.trim() || "항목, 설명, 체크 기준")
+        .split(/[,\t|]/)
+        .map((col) => col.trim())
+        .filter(Boolean)
+        .slice(0, 6);
+      const rowCount = Math.min(12, Math.max(2, Number(rows) || 5));
+      const topicText = topic.trim() || "콘텐츠";
+      const tableRows = Array.from({ length: rowCount }, (_, index) =>
+        `| ${cols.map((col, colIndex) => (colIndex === 0 ? `${topicText} ${index + 1}` : `${col} 입력`)).join(" | ")} |`,
+      );
+      const table = [`| ${cols.join(" | ")} |`, `| ${cols.map(() => "---").join(" | ")} |`, ...tableRows].join("\n");
+
+      return {
+        summary: `${cols.length}열 ${rowCount}행 마크다운 표 템플릿을 만들었습니다.`,
+        output: table,
+        metrics: [
+          { label: "열", value: `${cols.length}개`, tone: "primary" },
+          { label: "행", value: `${rowCount}개`, tone: "accent" },
+          { label: "주제", value: topicText },
+        ],
+        tips: [
+          "표는 정보 비교에 강하지만, 표만 놓기보다 전후 설명을 함께 쓰세요.",
+          "첫 열은 사용자가 비교할 대상을 분명히 보여주는 이름으로 두세요.",
+          "너무 긴 문장은 표 안에서 줄바꿈이 생기므로 짧은 구문으로 정리하세요.",
+        ],
+      };
+    },
+  },
+  "source-link-organizer": {
+    id: "source-link-organizer",
+    buttonLabel: "출처 정리하기",
+    fields: [
+      { key: "sources", label: "출처 목록", type: "textarea", placeholder: "Google Search Central | https://developers.google.com/search\nschema.org | https://schema.org" },
+      { key: "topic", label: "본문 주제", type: "text", placeholder: "예: 구조화 데이터 적용" },
+    ],
+    run: ({ sources, topic }) => {
+      const topicText = topic.trim() || "본문";
+      const rows = sources
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean)
+        .map((line) => {
+          const parts = line.split("|").map((part) => part.trim());
+          const url = parts.find((part) => /^https?:\/\//.test(part)) ?? line.match(/https?:\/\/\S+/)?.[0] ?? "";
+          const label = (parts.find((part) => part && part !== url) ?? line.replace(url, "").trim() ?? "출처").trim();
+          return { label, url };
+        });
+      const output = rows
+        .map((source, index) => `${index + 1}. [${source.label}](${source.url || "https://example.com"}) - ${topicText} 근거 확인용`)
+        .join("\n");
+
+      return {
+        summary: rows.length ? `${rows.length}개 출처를 본문용 링크 목록으로 정리했습니다.` : "출처 이름과 URL을 입력해 주세요.",
+        output: output || "1. [공식 문서](https://example.com) - 본문 근거 확인용",
+        metrics: [
+          { label: "출처", value: `${rows.length}개`, tone: "primary" },
+          { label: "URL 포함", value: `${rows.filter((source) => source.url).length}개`, tone: "accent" },
+          { label: "주제", value: topicText },
+        ],
+        tips: [
+          "정책, 수치, 표준을 설명할 때는 공식 문서나 원자료 링크를 우선하세요.",
+          "외부 링크는 새 창 여부보다 사용자가 근거를 확인할 수 있는 명확성이 중요합니다.",
+          "출처 링크만 나열하지 말고 본문에서 왜 참고했는지 한 문장으로 설명하세요.",
+        ],
+      };
+    },
+  },
+  "instagram-caption-builder": {
+    id: "instagram-caption-builder",
+    buttonLabel: "캡션 구조화하기",
+    fields: [
+      { key: "topic", label: "게시물 주제", type: "text", placeholder: "예: 블로그 SEO 체크리스트" },
+      { key: "audience", label: "대상", type: "text", placeholder: "예: 애드센스 승인 준비 중인 블로거" },
+      { key: "cta", label: "CTA", type: "text", placeholder: "예: 저장하고 글 발행 전에 확인하기" },
+    ],
+    run: ({ topic, audience, cta }) => {
+      const topicText = topic.trim() || "오늘의 콘텐츠";
+      const audienceText = audience.trim() || "콘텐츠를 더 잘 만들고 싶은 분";
+      const ctaText = cta.trim() || "저장해두고 필요할 때 다시 확인하세요";
+      const caption = [
+        `${audienceText}이라면 ${topicText}에서 가장 먼저 봐야 할 포인트가 있습니다.`,
+        "",
+        `1. 지금 막히는 지점을 한 문장으로 정리하기`,
+        "2. 기준을 체크리스트로 나누기",
+        "3. 바로 적용할 수 있는 작은 행동부터 실행하기",
+        "",
+        `오늘은 ${topicText}를 복잡하게 설명하기보다, 바로 점검할 수 있는 흐름으로 정리했습니다.`,
+        "",
+        ctaText,
+      ].join("\n");
+
+      return {
+        summary: "훅, 본문, CTA가 분리된 인스타그램 캡션 초안입니다.",
+        output: caption,
+        metrics: [
+          { label: "길이", value: `${caption.length}자`, tone: "primary" },
+          { label: "구조", value: "훅/리스트/CTA", tone: "accent" },
+          { label: "대상", value: audienceText },
+        ],
+        tips: [
+          "첫 줄은 피드에서 잘리기 전에도 의미가 보여야 합니다.",
+          "정보형 캡션은 3~5개 포인트로 나누면 저장 행동을 유도하기 쉽습니다.",
+          "CTA는 댓글 유도보다 저장, 공유, 프로필 링크 확인처럼 게시물 목적에 맞춰 정하세요.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {
