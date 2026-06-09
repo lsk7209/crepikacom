@@ -567,6 +567,126 @@ export const GENERATED_TOOL_CONTENT: Record<string, ToolDetailedContent> = {
     ],
     relatedResources: relatedBasics,
   },
+  "content-decay-monitor-sheet-builder": {
+    id: "content-decay-monitor-sheet-builder",
+    introduction:
+      "콘텐츠 노후화 추적표 생성기는 오래된 글의 클릭, 노출, CTR, 매출 하락을 정리하는 표를 만듭니다. 발행 후 시간이 지난 블로그 글을 업데이트할 때 어떤 페이지부터 손볼지 판단할 수 있습니다.",
+    howToUse: {
+      steps: ["점검할 URL 또는 제목을 입력합니다.", "핵심 지표와 비교 기간을 입력합니다.", "생성된 표를 시트나 문서에 복사합니다."],
+      tips: ["노출 하락과 CTR 하락은 원인이 다르므로 따로 기록하세요.", "상위 트래픽 페이지부터 점검하면 회복 효과가 큽니다."],
+    },
+    keyBenefits: ["콘텐츠 업데이트 우선순위를 정합니다.", "성과 하락 원인을 기록하는 표를 빠르게 만듭니다.", "SEO 리프레시 작업을 반복 가능한 프로세스로 바꿉니다."],
+    faq: [
+      { question: "어떤 지표를 보면 좋나요?", answer: "GSC 클릭, 노출, CTR, 평균 순위와 GA4 전환 또는 수익 지표를 함께 보는 것이 좋습니다." },
+      { question: "성과가 떨어진 글은 모두 다시 써야 하나요?", answer: "아닙니다. 날짜, 예시, 내부 링크, 제목, FAQ 보강만으로 회복되는 경우도 많습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "html-meta-tag-builder": {
+    id: "html-meta-tag-builder",
+    introduction:
+      "HTML 메타 태그 생성기는 title, meta description, canonical, Open Graph, Twitter 카드 태그 초안을 만듭니다. 새 페이지를 만들 때 기본 SEO와 공유 미리보기를 빠르게 준비할 수 있습니다.",
+    howToUse: {
+      steps: ["페이지 제목을 입력합니다.", "검색 결과에 보여줄 설명을 입력합니다.", "canonical URL을 넣고 태그를 생성합니다."],
+      tips: ["핵심 키워드는 제목 앞쪽에 자연스럽게 배치하세요.", "canonical은 sitemap에 들어갈 실제 대표 URL과 맞추세요."],
+    },
+    keyBenefits: ["페이지별 기본 메타 태그 누락을 줄입니다.", "공유 미리보기용 OG 태그를 함께 만듭니다.", "SEO 점검 체크리스트에 바로 활용할 수 있습니다."],
+    faq: [
+      { question: "메타 설명은 순위에 직접 영향을 주나요?", answer: "직접 순위 요소라기보다 클릭률과 검색 결과 이해도에 영향을 줄 수 있습니다." },
+      { question: "canonical은 항상 필요한가요?", answer: "대표 URL을 명확히 알리는 데 도움이 되므로 대부분의 색인 페이지에 선언하는 것이 좋습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "jsonld-organization-builder": {
+    id: "jsonld-organization-builder",
+    introduction:
+      "Organization JSON-LD 생성기는 사이트명, URL, 공식 프로필을 바탕으로 schema.org Organization 구조화 데이터 초안을 만듭니다. 검색엔진이 사이트 운영 주체와 공식 채널을 이해하도록 돕습니다.",
+    howToUse: {
+      steps: ["조직 또는 사이트명을 입력합니다.", "공식 웹사이트 URL을 입력합니다.", "공식 SNS 또는 프로필 URL을 쉼표로 입력합니다."],
+      tips: ["실제로 운영하는 공식 프로필만 sameAs에 넣으세요.", "About, Contact, 정책 페이지 정보와 일관되게 유지하세요."],
+    },
+    keyBenefits: ["사이트 주체 정보를 구조화합니다.", "공식 채널을 검색엔진에 명확히 전달합니다.", "브랜드 신뢰도 점검 흐름에 활용할 수 있습니다."],
+    faq: [
+      { question: "개인 블로그도 Organization을 써도 되나요?", answer: "개인 중심 사이트라면 Person 스키마가 더 적절할 수 있습니다. 사이트 성격에 맞게 선택하세요." },
+      { question: "생성한 코드를 바로 넣으면 되나요?", answer: "삽입 전 구조화 데이터 테스트 도구로 유효성을 확인하는 것이 좋습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "checklist-builder": {
+    id: "checklist-builder",
+    introduction:
+      "체크리스트 생성기는 줄 단위 메모를 마크다운 체크박스 목록으로 변환합니다. SEO 점검, 발행 전 검수, 개발 작업, 회의 후 할 일을 빠르게 정리할 수 있습니다.",
+    howToUse: {
+      steps: ["메모나 할 일 목록을 줄 단위로 붙여넣습니다.", "생성 버튼을 누릅니다.", "마크다운 체크리스트를 복사합니다."],
+      tips: ["각 항목은 동사로 시작하면 실행성이 좋아집니다.", "검수 기준과 작업 항목은 분리해서 관리하세요."],
+    },
+    keyBenefits: ["메모를 실행 가능한 목록으로 바꿉니다.", "GitHub, Notion, 문서에서 쓰기 쉬운 형식을 만듭니다.", "반복 작업의 누락을 줄입니다."],
+    faq: [
+      { question: "기존 하이픈 목록도 변환되나요?", answer: "네. 앞의 하이픈이나 별표를 제거하고 체크박스 형식으로 바꿉니다." },
+      { question: "완료 상태도 유지되나요?", answer: "현재는 새 체크리스트 초안 생성에 초점을 둬 모든 항목을 미완료 상태로 만듭니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "meeting-notes-action-items": {
+    id: "meeting-notes-action-items",
+    introduction:
+      "회의록 액션아이템 정리기는 회의 메모에서 해야 할 일처럼 보이는 문장을 찾아 체크리스트로 정리합니다. 긴 회의록을 검토하기 전 1차 분류용으로 사용할 수 있습니다.",
+    howToUse: {
+      steps: ["회의 메모를 붙여넣습니다.", "정리 버튼을 누릅니다.", "추출된 액션아이템에 담당자와 기한을 보완합니다."],
+      tips: ["자동 추출 결과는 반드시 사람이 검토하세요.", "최종 항목은 담당자, 작업, 마감일, 완료 기준을 포함하면 좋습니다."],
+    },
+    keyBenefits: ["회의 후 할 일 누락을 줄입니다.", "메모를 실행 가능한 체크리스트로 전환합니다.", "결정사항과 작업 항목을 분리하는 데 도움이 됩니다."],
+    faq: [
+      { question: "모든 액션아이템을 정확히 찾나요?", answer: "아니요. 단어 힌트 기반의 간단한 추출이므로 최종 확인이 필요합니다." },
+      { question: "한국어 회의록도 쓸 수 있나요?", answer: "네. '필요', '해야' 같은 표현을 포함한 문장을 우선적으로 찾습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "prompt-brief-builder": {
+    id: "prompt-brief-builder",
+    introduction:
+      "프롬프트 브리프 생성기는 목표, 대상, 제약조건을 구조화해 AI 작업 요청이나 협업 요청서로 정리합니다. 글쓰기, 디자인, 개발, 리서치 요청을 더 명확하게 만들 수 있습니다.",
+    howToUse: {
+      steps: ["달성하려는 목표를 입력합니다.", "대상 독자나 사용자를 입력합니다.", "톤, 범위, 금지사항 같은 제약을 입력합니다."],
+      tips: ["결과물 형태와 제외할 내용을 같이 쓰면 작업 품질이 좋아집니다.", "좋은 예시와 나쁜 예시를 추가하면 스타일 편차가 줄어듭니다."],
+    },
+    keyBenefits: ["요청 의도를 명확히 정리합니다.", "작업 범위와 제약을 한 번에 전달합니다.", "AI와 사람 협업 모두에 쓸 수 있는 브리프를 만듭니다."],
+    faq: [
+      { question: "프롬프트 자체를 완성해 주나요?", answer: "기본 브리프 구조를 만들어 줍니다. 이후 도메인 예시와 세부 조건을 더하면 좋습니다." },
+      { question: "개발 요청에도 쓸 수 있나요?", answer: "네. 목표, 사용자, 제약, 기대 결과를 분리하면 개발 작업 지시에도 유용합니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "privacy-policy-input-checklist": {
+    id: "privacy-policy-input-checklist",
+    introduction:
+      "개인정보 처리 입력 체크리스트는 사이트나 도구가 다루는 데이터 유형을 정리하고 개인정보처리방침에 반영할 항목을 점검합니다. 애널리틱스, 쿠키, 문의 양식, 업로드 기능을 검토할 때 유용합니다.",
+    howToUse: {
+      steps: ["사이트가 다루는 데이터 유형을 줄 단위로 입력합니다.", "체크리스트를 생성합니다.", "수집, 이용, 보관, 삭제, 제3자 제공 여부를 보완합니다."],
+      tips: ["실제 사이트 동작과 정책 문구가 일치해야 합니다.", "법적 판단이 필요한 경우 전문가 검토를 받으세요."],
+    },
+    keyBenefits: ["정책 페이지 누락 가능성을 줄입니다.", "데이터 수집 항목을 체계적으로 점검합니다.", "애드센스와 사용자 신뢰 검토에 필요한 기본 정리를 돕습니다."],
+    faq: [
+      { question: "법률 문서를 자동 작성하나요?", answer: "아니요. 정책에 반영할 입력 항목을 정리하는 도구이며 법률 자문을 대체하지 않습니다." },
+      { question: "쿠키와 GA4도 포함해야 하나요?", answer: "사용 중이라면 포함하는 것이 좋습니다. 분석 도구와 광고 스크립트도 사용자 데이터 처리와 관련될 수 있습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "tool-idea-scorer": {
+    id: "tool-idea-scorer",
+    introduction:
+      "도구 아이디어 점수 계산기는 유용성, 검색 수요, 차별성, 구현 난이도로 새 유틸리티 아이디어의 우선순위를 계산합니다. 100개 도구처럼 대량 기획을 할 때 먼저 만들 항목을 고르는 데 적합합니다.",
+    howToUse: {
+      steps: ["유용성, 검색 수요, 차별성을 1~10점으로 입력합니다.", "구현 난이도를 입력합니다.", "우선순위 점수를 보고 제작 순서를 정합니다."],
+      tips: ["유용성이 낮은 쉬운 아이디어보다 반복 사용성이 높은 아이디어를 우선하세요.", "검색 의도와 사이트 주제가 맞는지 별도로 확인하세요."],
+    },
+    keyBenefits: ["도구 제작 우선순위를 숫자로 비교합니다.", "검색성과 실제 유용성을 함께 반영합니다.", "차별화가 약한 아이디어를 조기에 걸러냅니다."],
+    faq: [
+      { question: "점수가 높으면 바로 만들어도 되나요?", answer: "높은 점수는 후보 선정에 도움이 되지만, 실제 검색 결과와 기존 도구 품질도 함께 검토해야 합니다." },
+      { question: "구현 난이도는 높을수록 좋은가요?", answer: "아니요. 난이도가 높으면 점수에서 감점됩니다. 다만 전략적으로 중요한 도구는 별도 로드맵에 둘 수 있습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
   "faq-schema-builder": {
     id: "faq-schema-builder",
     introduction:

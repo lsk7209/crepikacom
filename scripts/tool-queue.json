@@ -1060,7 +1060,7 @@
     "type": "builder",
     "intent": "오래된 글의 성과 하락을 추적하는 표를 만듭니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-26T11:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/content-decay-monitor-sheet-builder"
@@ -1216,7 +1216,7 @@
     "type": "builder",
     "intent": "title, description, canonical, OG, Twitter 태그 초안을 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-28T23:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/html-meta-tag-builder"
@@ -1229,7 +1229,7 @@
     "type": "builder",
     "intent": "사이트 정보로 Organization JSON-LD 초안을 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-29T04:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/jsonld-organization-builder"
@@ -1242,7 +1242,7 @@
     "type": "text-transform",
     "intent": "메모를 체크박스형 마크다운 목록으로 변환합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-29T09:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/checklist-builder"
@@ -1255,7 +1255,7 @@
     "type": "text-transform",
     "intent": "회의 메모에서 실행 항목처럼 보이는 문장을 정리합니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-29T14:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/meeting-notes-action-items"
@@ -1268,7 +1268,7 @@
     "type": "builder",
     "intent": "글쓰기, 디자인, 개발 요청에 쓸 구조화 브리프를 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-29T19:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/prompt-brief-builder"
@@ -1281,7 +1281,7 @@
     "type": "builder",
     "intent": "도구나 사이트가 다루는 데이터 유형을 점검합니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-30T00:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/privacy-policy-input-checklist"
@@ -1294,7 +1294,7 @@
     "type": "score-checker",
     "intent": "새 유틸리티 아이디어를 유용성, 검색성, 차별성, 구현 난이도로 평가합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-30T05:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/tool-idea-scorer"

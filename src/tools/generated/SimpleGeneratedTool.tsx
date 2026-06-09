@@ -3619,6 +3619,278 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "content-decay-monitor-sheet-builder": {
+    id: "content-decay-monitor-sheet-builder",
+    buttonLabel: "Build decay sheet",
+    fields: [
+      { key: "url", label: "Content URL or title", type: "text", placeholder: "/blog/example-guide" },
+      { key: "metric", label: "Main metric", type: "text", placeholder: "Clicks, impressions, CTR, revenue" },
+      { key: "period", label: "Review period", type: "text", placeholder: "Last 28 days vs previous 28 days" },
+    ],
+    run: ({ url, metric, period }) => {
+      const name = url.trim() || "Content page";
+      const metricName = metric.trim() || "Clicks";
+      const reviewPeriod = period.trim() || "Last 28 days vs previous 28 days";
+      const output = [
+        "| Page | Metric | Current | Previous | Change % | Suspected cause | Action | Owner | Due |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+        `| ${name} | ${metricName} |  |  |  | SERP change / outdated info / weak CTA | Refresh intro, update facts, add internal links |  |  |`,
+        "",
+        `Review period: ${reviewPeriod}`,
+      ].join("\n");
+
+      return {
+        summary: "Created a content decay tracking table template.",
+        output,
+        metrics: [
+          { label: "Metric", value: metricName, tone: "primary" },
+          { label: "Rows", value: "1", tone: "accent" },
+          { label: "Period", value: reviewPeriod },
+        ],
+        tips: [
+          "Track impressions and CTR separately because rankings and snippets decay for different reasons.",
+          "Refresh facts, screenshots, schema, and internal links before rewriting the whole article.",
+          "Review high-traffic pages first because small percentage losses can mean large traffic loss.",
+        ],
+      };
+    },
+  },
+  "html-meta-tag-builder": {
+    id: "html-meta-tag-builder",
+    buttonLabel: "Build meta tags",
+    fields: [
+      { key: "title", label: "Meta title", type: "text", placeholder: "Creator Tools for SEO and Content Workflows" },
+      { key: "description", label: "Meta description", type: "textarea", placeholder: "Free creator tools for SEO checks, content planning, and publishing workflows." },
+      { key: "url", label: "Canonical URL", type: "text", placeholder: "https://crepika.com/tools/text-counter" },
+    ],
+    run: ({ title, description, url }) => {
+      const cleanTitle = title.trim() || "Page title";
+      const cleanDescription = description.trim() || "Page description";
+      const canonical = url.trim() || "https://example.com/page";
+      const tags = [
+        `<title>${cleanTitle}</title>`,
+        `<meta name="description" content="${cleanDescription}">`,
+        `<link rel="canonical" href="${canonical}">`,
+        `<meta property="og:title" content="${cleanTitle}">`,
+        `<meta property="og:description" content="${cleanDescription}">`,
+        `<meta property="og:url" content="${canonical}">`,
+        `<meta name="twitter:card" content="summary_large_image">`,
+      ].join("\n");
+
+      return {
+        summary: "Generated title, description, canonical, OG, and Twitter meta tags.",
+        output: tags,
+        metrics: [
+          { label: "Title", value: `${cleanTitle.length}/60`, tone: "primary" },
+          { label: "Description", value: `${cleanDescription.length}/160`, tone: "accent" },
+          { label: "Tags", value: "7" },
+        ],
+        tips: [
+          "Place the primary keyword near the front of the title when it reads naturally.",
+          "Use one canonical URL per page and keep it consistent with sitemap URLs.",
+          "Write descriptions for clicks and clarity; they are not a direct ranking field.",
+        ],
+      };
+    },
+  },
+  "jsonld-organization-builder": {
+    id: "jsonld-organization-builder",
+    buttonLabel: "Build Organization JSON-LD",
+    fields: [
+      { key: "name", label: "Organization name", type: "text", placeholder: "Crepika" },
+      { key: "url", label: "Website URL", type: "text", placeholder: "https://crepika.com" },
+      { key: "sameAs", label: "SameAs URLs, comma separated", type: "textarea", placeholder: "https://www.youtube.com/@example, https://www.instagram.com/example" },
+    ],
+    run: ({ name, url, sameAs }) => {
+      const sameAsList = sameAs.split(",").map((item) => item.trim()).filter(Boolean);
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: name.trim() || "Organization name",
+        url: url.trim() || "https://example.com",
+        sameAs: sameAsList,
+      };
+
+      return {
+        summary: "Generated Organization JSON-LD draft.",
+        output: `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>`,
+        metrics: [
+          { label: "sameAs", value: sameAsList.length.toLocaleString(), tone: "primary" },
+          { label: "Type", value: "Organization", tone: "accent" },
+          { label: "Fields", value: "4" },
+        ],
+        tips: [
+          "Use official profile URLs only; avoid adding inactive or unrelated accounts.",
+          "Validate the final JSON-LD with a structured data testing tool before publishing.",
+          "Keep organization schema consistent with About, Contact, and policy pages.",
+        ],
+      };
+    },
+  },
+  "checklist-builder": {
+    id: "checklist-builder",
+    buttonLabel: "Build checklist",
+    fields: [
+      { key: "notes", label: "Notes or tasks", type: "textarea", placeholder: "Write title\nCheck meta description\nSubmit sitemap" },
+    ],
+    run: ({ notes }) => {
+      const items = notes.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+      const checklist = items.map((item) => `- [ ] ${item.replace(/^[-*]\s*/, "")}`).join("\n");
+
+      return {
+        summary: `Created a checklist with ${items.length.toLocaleString()} items.`,
+        output: checklist,
+        metrics: [
+          { label: "Items", value: items.length.toLocaleString(), tone: "primary" },
+          { label: "Format", value: "Markdown", tone: "accent" },
+          { label: "Lines", value: checklist.split(/\r?\n/).length.toLocaleString() },
+        ],
+        tips: [
+          "Start each checklist item with a verb so the next action is clear.",
+          "Split broad tasks into smaller checks when someone else will review the work.",
+          "Keep acceptance checks separate from implementation tasks when planning releases.",
+        ],
+      };
+    },
+  },
+  "meeting-notes-action-items": {
+    id: "meeting-notes-action-items",
+    buttonLabel: "Extract action items",
+    fields: [
+      { key: "notes", label: "Meeting notes", type: "textarea", placeholder: "Need to update sitemap by Friday\nJohn will review content\nDecision: keep 5-hour cadence" },
+    ],
+    run: ({ notes }) => {
+      const actionLines = notes
+        .split(/\r?\n/)
+        .map((line) => line.trim())
+        .filter((line) => /해야|필요|will|need|todo|action|by\s+\w+/i.test(line));
+      const output = actionLines.length
+        ? actionLines.map((line) => `- [ ] ${line}`).join("\n")
+        : "- [ ] Review notes manually and assign owners";
+
+      return {
+        summary: `Found ${actionLines.length.toLocaleString()} likely action items.`,
+        output,
+        metrics: [
+          { label: "Actions", value: actionLines.length.toLocaleString(), tone: "primary" },
+          { label: "Lines", value: notes.split(/\r?\n/).length.toLocaleString(), tone: "accent" },
+          { label: "Mode", value: "Heuristic" },
+        ],
+        tips: [
+          "This uses simple wording hints, so confirm owners and deadlines manually.",
+          "Rewrite vague action items into owner, task, deadline, and evidence format.",
+          "Keep decisions separate from tasks so meeting records stay searchable.",
+        ],
+      };
+    },
+  },
+  "prompt-brief-builder": {
+    id: "prompt-brief-builder",
+    buttonLabel: "Build prompt brief",
+    fields: [
+      { key: "goal", label: "Goal", type: "textarea", placeholder: "Create a blog outline for AdSense approval optimization" },
+      { key: "audience", label: "Audience", type: "text", placeholder: "Beginner creators" },
+      { key: "constraints", label: "Constraints", type: "textarea", placeholder: "Korean, practical, no external API, include checklist" },
+    ],
+    run: ({ goal, audience, constraints }) => {
+      const output = [
+        "Objective:",
+        goal.trim() || "Describe the target outcome.",
+        "",
+        "Audience:",
+        audience.trim() || "Describe the intended reader or user.",
+        "",
+        "Constraints:",
+        constraints.trim() || "List style, scope, data, and output constraints.",
+        "",
+        "Expected output:",
+        "- Clear structure",
+        "- Actionable steps",
+        "- Assumptions and validation notes",
+      ].join("\n");
+
+      return {
+        summary: "Generated a structured prompt brief.",
+        output,
+        metrics: [
+          { label: "Sections", value: "4", tone: "primary" },
+          { label: "Length", value: output.length.toLocaleString(), tone: "accent" },
+          { label: "Audience", value: audience.trim() ? "Set" : "Missing" },
+        ],
+        tips: [
+          "A good brief states the target result before process details.",
+          "Add examples when tone, format, or domain-specific vocabulary matters.",
+          "Include non-goals to prevent unnecessary scope expansion.",
+        ],
+      };
+    },
+  },
+  "privacy-policy-input-checklist": {
+    id: "privacy-policy-input-checklist",
+    buttonLabel: "Check data inputs",
+    fields: [
+      { key: "inputs", label: "Data handled by the tool/site", type: "textarea", placeholder: "Email address\nAnalytics cookies\nUploaded image\nPayment info" },
+    ],
+    run: ({ inputs }) => {
+      const rows = inputs.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+      const checklist = rows.map((item) => `- [ ] Disclose collection/use/storage for: ${item}`).join("\n");
+      const sensitive = rows.filter((item) => /email|phone|payment|address|cookie|location|image|file|name/i.test(item)).length;
+
+      return {
+        summary: `Created privacy checklist for ${rows.length.toLocaleString()} data inputs.`,
+        output: checklist || "- [ ] List data types first, then describe collection, use, storage, and deletion.",
+        metrics: [
+          { label: "Inputs", value: rows.length.toLocaleString(), tone: "primary" },
+          { label: "Sensitive hints", value: sensitive.toLocaleString(), tone: "accent" },
+          { label: "Checklist", value: rows.length ? "Ready" : "Empty" },
+        ],
+        tips: [
+          "Include analytics, cookies, contact forms, uploads, and third-party processors.",
+          "Privacy pages should match actual site behavior, not a generic template.",
+          "For legal compliance, review jurisdiction-specific requirements with a qualified professional.",
+        ],
+      };
+    },
+  },
+  "tool-idea-scorer": {
+    id: "tool-idea-scorer",
+    buttonLabel: "Score tool idea",
+    fields: [
+      { key: "usefulness", label: "Usefulness 1-10", type: "number", placeholder: "8" },
+      { key: "search", label: "Search demand 1-10", type: "number", placeholder: "7" },
+      { key: "difference", label: "Differentiation 1-10", type: "number", placeholder: "6" },
+      { key: "difficulty", label: "Build difficulty 1-10", type: "number", placeholder: "4" },
+    ],
+    run: ({ usefulness, search, difference, difficulty }) => {
+      const clamp = (value: string) => Math.min(10, Math.max(0, Number(value) || 0));
+      const useful = clamp(usefulness);
+      const demand = clamp(search);
+      const unique = clamp(difference);
+      const hard = clamp(difficulty);
+      const score = Math.round(useful * 3.5 + demand * 3 + unique * 2 + (10 - hard) * 1.5);
+
+      return {
+        summary: `Tool idea score: ${score}/100.`,
+        output: [
+          `Usefulness: ${useful}/10`,
+          `Search demand: ${demand}/10`,
+          `Differentiation: ${unique}/10`,
+          `Build difficulty: ${hard}/10`,
+          `Priority score: ${score}/100`,
+        ].join("\n"),
+        metrics: [
+          { label: "Score", value: `${score}/100`, tone: "primary" },
+          { label: "Usefulness", value: `${useful}/10`, tone: "accent" },
+          { label: "Difficulty", value: `${hard}/10` },
+        ],
+        tips: [
+          "Prioritize tools that solve a repeatable task in under a minute.",
+          "A simple tool can still win if it has clear SEO intent and better explanation.",
+          "Avoid building low-usefulness ideas only because they are easy.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {
