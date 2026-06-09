@@ -47,6 +47,33 @@ function hoursSince(timestamp, now) {
   return (now.getTime() - timestamp) / (60 * 60 * 1000);
 }
 
+function hoursUntil(timestamp, now) {
+  if (!timestamp) return 0;
+  return Math.max(0, (timestamp - now.getTime()) / (60 * 60 * 1000));
+}
+
+function isoOrNull(timestamp) {
+  return timestamp ? new Date(timestamp).toISOString() : null;
+}
+
+function nextCandidate(queue) {
+  return queue.find((item) => ["ready", "scheduled"].includes(item.status)) ?? null;
+}
+
+function logSkip(reason, details) {
+  console.log(
+    JSON.stringify(
+      {
+        skipped: true,
+        reason,
+        ...details,
+      },
+      null,
+      2,
+    ),
+  );
+}
+
 function isImplemented(toolId) {
   const configSource = readFileSync(TOOLS_CONFIG_FILE, "utf-8");
   const componentSource = readFileSync(join(ROOT, "src", "tools", "generated", "SimpleGeneratedTool.tsx"), "utf-8");
@@ -177,17 +204,38 @@ function main() {
   const queue = readJson(QUEUE_FILE);
   const lastPublished = latestPublishedAt(queue);
   const elapsedHours = hoursSince(lastPublished, now);
+  const candidate = nextCandidate(queue);
+  const candidateScheduledAt = candidate?.scheduledAt ? Date.parse(candidate.scheduledAt) : 0;
+  const minIntervalEligibleAt = lastPublished ? lastPublished + MIN_HOURS * 60 * 60 * 1000 : 0;
+  const nextEligibleAt = Math.max(candidateScheduledAt || 0, minIntervalEligibleAt || 0);
 
   if (!FORCE && elapsedHours < MIN_HOURS) {
-    console.log(
-      `Skip: only ${elapsedHours.toFixed(2)}h since last tool publication. Required: ${MIN_HOURS}h.`,
-    );
+    logSkip("min_interval_not_elapsed", {
+      now: now.toISOString(),
+      minHours: MIN_HOURS,
+      elapsedHours: Number(elapsedHours.toFixed(2)),
+      hoursRemaining: Number((MIN_HOURS - elapsedHours).toFixed(2)),
+      latestPublishedAt: isoOrNull(lastPublished),
+      nextCandidate: candidate?.id ?? null,
+      nextCandidateScheduledAt: isoOrNull(candidateScheduledAt),
+      nextEligibleAt: isoOrNull(nextEligibleAt),
+    });
     return;
   }
 
   const next = findNextPublishable(queue, now);
   if (!next) {
-    console.log("Skip: no ready or scheduled tool is due for publication.");
+    logSkip("no_due_tool", {
+      now: now.toISOString(),
+      minHours: MIN_HOURS,
+      latestPublishedAt: isoOrNull(lastPublished),
+      nextCandidate: candidate?.id ?? null,
+      nextCandidateScheduledAt: isoOrNull(candidateScheduledAt),
+      nextEligibleAt: isoOrNull(nextEligibleAt),
+      hoursUntilNextEligible: Number(hoursUntil(nextEligibleAt, now).toFixed(2)),
+      readyCount: queue.filter((item) => item.status === "ready").length,
+      scheduledCount: queue.filter((item) => item.status === "scheduled").length,
+    });
     return;
   }
 

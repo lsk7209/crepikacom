@@ -1257,7 +1257,13 @@ function validateToolPublicationAutomation() {
   }
 
   const toolPublisher = requireFile("scripts/publish-tool-once.mjs");
-  for (const marker of ['runNpmScript("lint")', 'runNpmScript("build")']) {
+  for (const marker of [
+    'runNpmScript("lint")',
+    'runNpmScript("build")',
+    'logSkip("min_interval_not_elapsed"',
+    'logSkip("no_due_tool"',
+    "nextEligibleAt",
+  ]) {
     if (!toolPublisher.includes(marker)) {
       fail(`scripts/publish-tool-once.mjs must include ${marker} before committing scheduled tool changes.`);
     }
