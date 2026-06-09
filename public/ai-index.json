@@ -41,6 +41,30 @@
     {
       "id": "qr-generator",
       "url": "https://crepika.com/tools/qr-generator"
+    },
+    {
+      "id": "seo-title-length-checker",
+      "url": "https://crepika.com/tools/seo-title-length-checker"
+    },
+    {
+      "id": "meta-description-checker",
+      "url": "https://crepika.com/tools/meta-description-checker"
+    },
+    {
+      "id": "slug-generator",
+      "url": "https://crepika.com/tools/slug-generator"
+    },
+    {
+      "id": "utm-url-builder",
+      "url": "https://crepika.com/tools/utm-url-builder"
+    },
+    {
+      "id": "ctr-calculator",
+      "url": "https://crepika.com/tools/ctr-calculator"
+    },
+    {
+      "id": "adsense-rpm-calculator",
+      "url": "https://crepika.com/tools/adsense-rpm-calculator"
     }
   ],
   "blog": {

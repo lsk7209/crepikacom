@@ -20,6 +20,12 @@ const CORE_URLS = [
   ["/tools/insta-spacer", "monthly", "0.8"],
   ["/tools/hashtag-mixer", "monthly", "0.8"],
   ["/tools/qr-generator", "monthly", "0.8"],
+  ["/tools/seo-title-length-checker", "monthly", "0.8"],
+  ["/tools/meta-description-checker", "monthly", "0.8"],
+  ["/tools/slug-generator", "monthly", "0.8"],
+  ["/tools/utm-url-builder", "monthly", "0.8"],
+  ["/tools/ctr-calculator", "monthly", "0.8"],
+  ["/tools/adsense-rpm-calculator", "monthly", "0.8"],
   ["/about", "monthly", "0.6"],
   ["/contact", "monthly", "0.5"],
   ["/privacy", "yearly", "0.3"],
@@ -262,6 +268,12 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [Instagram Spacer](${SITE_URL}/tools/insta-spacer)
 - [Hashtag Mixer](${SITE_URL}/tools/hashtag-mixer)
 - [QR Code Generator](${SITE_URL}/tools/qr-generator)
+- [SEO Title Length Checker](${SITE_URL}/tools/seo-title-length-checker)
+- [Meta Description Checker](${SITE_URL}/tools/meta-description-checker)
+- [URL Slug Generator](${SITE_URL}/tools/slug-generator)
+- [UTM URL Builder](${SITE_URL}/tools/utm-url-builder)
+- [CTR Calculator](${SITE_URL}/tools/ctr-calculator)
+- [AdSense RPM Calculator](${SITE_URL}/tools/adsense-rpm-calculator)
 
 ## Blog
 

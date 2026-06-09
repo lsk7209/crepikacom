@@ -75,6 +75,12 @@ const toolPages = [
   ["tools/insta-spacer/index.html", "Instagram Spacer | Crepika", "Format Instagram captions with cleaner line breaks and readable paragraph spacing.", `${siteUrl}/tools/insta-spacer`, "Instagram Spacer"],
   ["tools/hashtag-mixer/index.html", "Hashtag Mixer | Crepika", "Mix hashtag groups, reduce repetition, and prepare SNS post tag sets faster.", `${siteUrl}/tools/hashtag-mixer`, "Hashtag Mixer"],
   ["tools/qr-generator/index.html", "QR Code Generator | Crepika", "Create QR codes for URLs and short text without a login step.", `${siteUrl}/tools/qr-generator`, "QR Code Generator"],
+  ["tools/seo-title-length-checker/index.html", "SEO Title Length Checker | Crepika", "Check title length, keyword position, and search snippet readability before publishing.", `${siteUrl}/tools/seo-title-length-checker`, "SEO Title Length Checker"],
+  ["tools/meta-description-checker/index.html", "Meta Description Checker | Crepika", "Check meta description length, keyword placement, CTA clarity, and snippet quality.", `${siteUrl}/tools/meta-description-checker`, "Meta Description Checker"],
+  ["tools/slug-generator/index.html", "URL Slug Generator | Crepika", "Convert article and tool titles into readable lowercase URL slugs.", `${siteUrl}/tools/slug-generator`, "URL Slug Generator"],
+  ["tools/utm-url-builder/index.html", "UTM URL Builder | Crepika", "Build clean campaign tracking URLs for GA4 without a login step.", `${siteUrl}/tools/utm-url-builder`, "UTM URL Builder"],
+  ["tools/ctr-calculator/index.html", "CTR Calculator | Crepika", "Calculate click-through rate from impressions and clicks for search, ads, email, and social links.", `${siteUrl}/tools/ctr-calculator`, "CTR Calculator"],
+  ["tools/adsense-rpm-calculator/index.html", "AdSense RPM Calculator | Crepika", "Calculate page RPM from estimated earnings and pageviews for blog revenue checks.", `${siteUrl}/tools/adsense-rpm-calculator`, "AdSense RPM Calculator"],
 ].map(([path, title, description, canonical, heading]) => ({
   path,
   title,

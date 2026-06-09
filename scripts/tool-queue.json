@@ -7,9 +7,9 @@
     "type": "score-checker",
     "intent": "검색 결과에서 제목이 잘리지 않도록 길이, 키워드 위치, 클릭 유도 요소를 점검합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "published",
     "scheduledAt": "2026-06-09T14:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-09T14:26:46.166Z",
     "path": "/tools/seo-title-length-checker"
   },
   {
@@ -20,9 +20,9 @@
     "type": "score-checker",
     "intent": "메타 설명의 길이, 핵심 키워드 위치, CTA, 중복 표현 위험을 점검합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "published",
     "scheduledAt": "2026-06-09T19:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-09T14:26:46.166Z",
     "path": "/tools/meta-description-checker"
   },
   {
@@ -150,9 +150,9 @@
     "type": "text-transform",
     "intent": "글 제목을 사람이 읽기 쉬운 영문 소문자 URL 슬러그로 변환합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "published",
     "scheduledAt": "2026-06-11T21:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-09T14:26:46.166Z",
     "path": "/tools/slug-generator"
   },
   {
@@ -722,9 +722,9 @@
     "type": "builder",
     "intent": "캠페인 추적용 UTM URL을 표준 규칙에 맞게 만듭니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "published",
     "scheduledAt": "2026-06-21T01:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-09T14:26:46.166Z",
     "path": "/tools/utm-url-builder"
   },
   {
@@ -917,9 +917,9 @@
     "type": "calculator",
     "intent": "노출수와 클릭수로 클릭률을 계산합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "published",
     "scheduledAt": "2026-06-24T04:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-09T14:26:46.166Z",
     "path": "/tools/ctr-calculator"
   },
   {
@@ -943,9 +943,9 @@
     "type": "calculator",
     "intent": "수익과 페이지뷰로 페이지 RPM을 계산합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "published",
     "scheduledAt": "2026-06-24T14:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-09T14:26:46.166Z",
     "path": "/tools/adsense-rpm-calculator"
   },
   {

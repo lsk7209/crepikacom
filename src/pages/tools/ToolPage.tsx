@@ -10,10 +10,12 @@ import { WebpConverterTool } from "@/tools/image/WebpConverterTool";
 import { InstaSpacerTool } from "@/tools/publish/InstaSpacerTool";
 import { HashtagMixerTool } from "@/tools/publish/HashtagMixerTool";
 import { QrGeneratorTool } from "@/tools/analyze/QrGeneratorTool";
+import { SimpleGeneratedTool } from "@/tools/generated/SimpleGeneratedTool";
 import { addRecentTool } from "@/utils/localStorage";
 import { toast } from "@/hooks/use-toast";
 
 import { TOOL_DETAILED_CONTENT, ToolDetailedContent } from "@/data/tool-content";
+import { GENERATED_TOOL_CONTENT } from "@/data/generated-tool-content";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2, Lightbulb, HelpCircle, Link as LinkIcon, ArrowRight } from "lucide-react";
@@ -167,7 +169,9 @@ export default function ToolPage() {
   };
 
   let toolComponent;
-  const detailedContent = id ? TOOL_DETAILED_CONTENT[id] : undefined;
+  const detailedContent = id
+    ? TOOL_DETAILED_CONTENT[id] ?? GENERATED_TOOL_CONTENT[id]
+    : undefined;
 
   switch (id) {
     case 'text-counter':
@@ -221,7 +225,12 @@ export default function ToolPage() {
       break;
 
     default:
-      return <Navigate to="/404" replace />;
+      toolComponent = SimpleGeneratedTool({
+        toolId: id ?? "",
+        onResult: handleResult,
+        onError: handleError,
+      });
+      break;
   }
 
   const seoArticle = detailedContent ? (

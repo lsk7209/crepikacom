@@ -15,6 +15,12 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [Instagram Spacer](https://crepika.com/tools/insta-spacer)
 - [Hashtag Mixer](https://crepika.com/tools/hashtag-mixer)
 - [QR Code Generator](https://crepika.com/tools/qr-generator)
+- [SEO Title Length Checker](https://crepika.com/tools/seo-title-length-checker)
+- [Meta Description Checker](https://crepika.com/tools/meta-description-checker)
+- [URL Slug Generator](https://crepika.com/tools/slug-generator)
+- [UTM URL Builder](https://crepika.com/tools/utm-url-builder)
+- [CTR Calculator](https://crepika.com/tools/ctr-calculator)
+- [AdSense RPM Calculator](https://crepika.com/tools/adsense-rpm-calculator)
 
 ## Blog
 
