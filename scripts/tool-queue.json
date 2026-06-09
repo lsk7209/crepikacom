@@ -813,7 +813,7 @@
     "type": "score-checker",
     "intent": "도메인, 슬래시, 쿼리, canonical 일관성을 점검합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-22T12:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/canonical-url-checklist"
@@ -826,7 +826,7 @@
     "type": "builder",
     "intent": "사이트맵 점검용 URL 목록을 빠르게 만듭니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-22T17:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/sitemap-url-batch-builder"
@@ -839,7 +839,7 @@
     "type": "builder",
     "intent": "간단한 allow/disallow 규칙 초안을 만듭니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-22T22:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/robots-rule-draft-builder"
@@ -852,7 +852,7 @@
     "type": "builder",
     "intent": "같은 URL에 쓸 자연스러운 앵커 텍스트 변형을 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-23T03:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/anchor-text-variation-builder"
@@ -865,7 +865,7 @@
     "type": "builder",
     "intent": "깨진 링크 교체를 제안하는 정중한 메일 구조를 만듭니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-23T08:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/broken-link-outreach-template"

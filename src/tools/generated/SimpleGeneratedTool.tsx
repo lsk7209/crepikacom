@@ -2639,6 +2639,195 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "canonical-url-checklist": {
+    id: "canonical-url-checklist",
+    buttonLabel: "Canonical 점검하기",
+    fields: [
+      { key: "pageUrl", label: "현재 페이지 URL", type: "text", placeholder: "https://crepika.com/blog/example" },
+      { key: "canonicalUrl", label: "Canonical URL", type: "text", placeholder: "https://crepika.com/blog/example" },
+    ],
+    run: ({ pageUrl, canonicalUrl }) => {
+      const page = pageUrl.trim();
+      const canonical = canonicalUrl.trim();
+      let sameOrigin = false;
+      let cleanCanonical = false;
+      let samePath = false;
+      try {
+        const pageParsed = new URL(page);
+        const canonicalParsed = new URL(canonical || page);
+        sameOrigin = pageParsed.origin === canonicalParsed.origin;
+        cleanCanonical = !canonicalParsed.search && !canonicalParsed.hash;
+        samePath = pageParsed.pathname.replace(/\/$/, "") === canonicalParsed.pathname.replace(/\/$/, "");
+      } catch {
+        sameOrigin = false;
+      }
+      const score = (canonical ? 25 : 0) + (sameOrigin ? 25 : 10) + (cleanCanonical ? 25 : 8) + (samePath ? 25 : 12);
+
+      return {
+        summary: score >= 80 ? "Canonical URL 선언이 안정적인 편입니다." : "Canonical URL 형식과 대표 URL 정책을 다시 확인하세요.",
+        output: [
+          `현재 URL: ${page || "미입력"}`,
+          `Canonical: ${canonical || "미입력"}`,
+          `같은 도메인: ${sameOrigin ? "예" : "아니오/확인 필요"}`,
+          `쿼리/해시 없음: ${cleanCanonical ? "예" : "아니오"}`,
+          `경로 일치: ${samePath ? "예" : "아니오/의도 확인"}`,
+        ].join("\n"),
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "도메인", value: sameOrigin ? "일치" : "확인", tone: sameOrigin ? "accent" : "muted" },
+          { label: "정리", value: cleanCanonical ? "깨끗함" : "쿼리 포함" },
+        ],
+        tips: [
+          "Canonical은 보통 쿼리와 해시가 없는 대표 URL로 선언합니다.",
+          "www/non-www, trailing slash 정책과 canonical 정책을 일치시키세요.",
+          "중복 페이지가 아니라면 자기 자신을 가리키는 self canonical이 안전합니다.",
+        ],
+      };
+    },
+  },
+  "sitemap-url-batch-builder": {
+    id: "sitemap-url-batch-builder",
+    buttonLabel: "사이트맵 URL 만들기",
+    fields: [
+      { key: "baseUrl", label: "사이트 주소", type: "text", placeholder: "https://crepika.com" },
+      { key: "paths", label: "경로 목록", type: "textarea", placeholder: "/\n/blog\n/tools/text-counter" },
+    ],
+    run: ({ baseUrl, paths }) => {
+      const base = (baseUrl.trim() || "https://example.com").replace(/\/$/, "");
+      const lines = paths.split("\n").map((line) => line.trim()).filter(Boolean);
+      const urls = (lines.length ? lines : ["/", "/blog", "/tools"]).map((path) => {
+        if (/^https?:\/\//.test(path)) return path.split("#")[0];
+        return `${base}/${path.replace(/^\/+/, "")}`.replace(/\/$/, path === "/" ? "/" : "");
+      });
+      const unique = Array.from(new Set(urls));
+
+      return {
+        summary: `${unique.length}개의 사이트맵 URL 후보를 생성했습니다.`,
+        output: unique.join("\n"),
+        metrics: [
+          { label: "URL", value: `${unique.length}개`, tone: "primary" },
+          { label: "중복 제거", value: `${urls.length - unique.length}개`, tone: "accent" },
+          { label: "기준", value: base },
+        ],
+        tips: [
+          "사이트맵에는 색인시키고 싶은 canonical URL만 넣는 것이 좋습니다.",
+          "검색 결과 페이지, 필터 URL, 중복 파라미터 URL은 보통 제외합니다.",
+          "URL을 추가한 뒤 robots.txt에서 막고 있지 않은지 함께 확인하세요.",
+        ],
+      };
+    },
+  },
+  "robots-rule-draft-builder": {
+    id: "robots-rule-draft-builder",
+    buttonLabel: "robots 규칙 만들기",
+    fields: [
+      { key: "allowPaths", label: "허용 경로", type: "textarea", placeholder: "/\n/blog/\n/tools/" },
+      { key: "disallowPaths", label: "차단 경로", type: "textarea", placeholder: "/admin/\n/api/\n?preview=" },
+      { key: "sitemap", label: "Sitemap URL", type: "text", placeholder: "https://crepika.com/sitemap.xml" },
+    ],
+    run: ({ allowPaths, disallowPaths, sitemap }) => {
+      const allow = allowPaths.split("\n").map((line) => line.trim()).filter(Boolean);
+      const disallow = disallowPaths.split("\n").map((line) => line.trim()).filter(Boolean);
+      const sitemapUrl = sitemap.trim();
+      const output = [
+        "User-agent: *",
+        ...(allow.length ? allow.map((path) => `Allow: ${path}`) : ["Allow: /"]),
+        ...disallow.map((path) => `Disallow: ${path}`),
+        sitemapUrl ? `Sitemap: ${sitemapUrl}` : "",
+      ].filter(Boolean).join("\n");
+
+      return {
+        summary: "robots.txt 규칙 초안을 생성했습니다.",
+        output,
+        metrics: [
+          { label: "Allow", value: `${allow.length || 1}개`, tone: "primary" },
+          { label: "Disallow", value: `${disallow.length}개`, tone: "accent" },
+          { label: "Sitemap", value: sitemapUrl ? "있음" : "없음" },
+        ],
+        tips: [
+          "robots.txt는 색인 제거 도구가 아니라 크롤링 제어 도구입니다.",
+          "중요 페이지를 Disallow하면 Google이 내용을 제대로 수집하지 못할 수 있습니다.",
+          "적용 전 Search Console robots.txt 테스트와 실제 URL 검사로 확인하세요.",
+        ],
+      };
+    },
+  },
+  "anchor-text-variation-builder": {
+    id: "anchor-text-variation-builder",
+    buttonLabel: "앵커 변형 만들기",
+    fields: [
+      { key: "keyword", label: "핵심 키워드", type: "text", placeholder: "블로그 SEO 체크리스트" },
+      { key: "target", label: "연결할 페이지", type: "text", placeholder: "/blog/seo-checklist" },
+    ],
+    run: ({ keyword, target }) => {
+      const key = keyword.trim() || "핵심 주제";
+      const page = target.trim() || "/target-page";
+      const anchors = [
+        key,
+        `${key} 자세히 보기`,
+        `${key} 체크리스트`,
+        `${key} 실전 가이드`,
+        `관련 도구로 ${key} 확인하기`,
+        `초보자를 위한 ${key}`,
+      ];
+
+      return {
+        summary: `${anchors.length}개의 자연스러운 앵커 텍스트 변형을 만들었습니다.`,
+        output: anchors.map((anchor) => `- [${anchor}](${page})`).join("\n"),
+        metrics: [
+          { label: "변형", value: `${anchors.length}개`, tone: "primary" },
+          { label: "대상", value: page, tone: "accent" },
+          { label: "키워드", value: key },
+        ],
+        tips: [
+          "모든 내부 링크에 같은 exact match 앵커를 반복하지 마세요.",
+          "앵커 문구는 클릭 후 사용자가 얻을 내용을 예측할 수 있어야 합니다.",
+          "본문 안 내부 링크는 문맥이 맞는 위치에 자연스럽게 배치하세요.",
+        ],
+      };
+    },
+  },
+  "broken-link-outreach-template": {
+    id: "broken-link-outreach-template",
+    buttonLabel: "제안 메일 만들기",
+    fields: [
+      { key: "site", label: "상대 사이트/담당자", type: "text", placeholder: "예: example blog 담당자" },
+      { key: "brokenUrl", label: "깨진 링크", type: "text", placeholder: "https://example.com/old-resource" },
+      { key: "replacement", label: "대체 제안 URL", type: "text", placeholder: "https://crepika.com/blog/resource" },
+    ],
+    run: ({ site, brokenUrl, replacement }) => {
+      const siteText = site.trim() || "담당자님";
+      const broken = brokenUrl.trim() || "깨진 링크 URL";
+      const replace = replacement.trim() || "대체로 참고할 수 있는 URL";
+      const output = [
+        `안녕하세요, ${siteText}.`,
+        "",
+        "자료를 확인하다가 아래 링크가 현재 정상적으로 열리지 않는 것을 발견했습니다.",
+        `- 깨진 링크: ${broken}`,
+        "",
+        "비슷한 주제를 다루는 최신 자료가 있어 함께 전달드립니다.",
+        `- 대체 제안: ${replace}`,
+        "",
+        "사이트 운영에 도움이 되길 바랍니다. 필요하지 않다면 편하게 무시해 주세요.",
+        "감사합니다.",
+      ].join("\n");
+
+      return {
+        summary: "정중한 깨진 링크 제안 메일 초안을 생성했습니다.",
+        output,
+        metrics: [
+          { label: "톤", value: "정중", tone: "primary" },
+          { label: "링크", value: "2개", tone: "accent" },
+          { label: "길이", value: `${output.length}자` },
+        ],
+        tips: [
+          "깨진 링크 제안은 대량 발송보다 실제로 도움이 되는 자료에만 보내는 편이 안전합니다.",
+          "상대 사이트의 주제와 대체 자료의 관련성이 낮으면 스팸처럼 보일 수 있습니다.",
+          "대체 자료의 최신성, 작성자, 근거 링크를 먼저 보강하세요.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {

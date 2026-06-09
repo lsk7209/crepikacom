@@ -1927,4 +1927,154 @@ export const GENERATED_TOOL_CONTENT: Record<string, ToolDetailedContent> = {
     ],
     relatedResources: relatedBasics,
   },
+  "canonical-url-checklist": {
+    id: "canonical-url-checklist",
+    introduction:
+      "Canonical URL 체크리스트는 현재 페이지 URL과 canonical URL이 같은 대표 정책을 따르는지 점검합니다. 중복 페이지, 쿼리 파라미터, www/non-www, trailing slash가 섞이면 검색엔진이 어떤 URL을 대표로 봐야 하는지 혼란스러울 수 있습니다.",
+    howToUse: {
+      steps: [
+        "현재 페이지 URL을 입력합니다.",
+        "페이지 head에 선언할 canonical URL을 입력합니다.",
+        "도메인, 경로, 쿼리/해시 포함 여부를 확인합니다.",
+        "대표 URL 정책과 실제 리다이렉트 정책을 맞춥니다.",
+      ],
+      tips: [
+        "일반 페이지는 자기 자신을 가리키는 self canonical이 안전합니다.",
+        "Canonical URL에는 보통 쿼리와 해시를 넣지 않습니다.",
+        "사이트맵 URL, canonical URL, 최종 리다이렉트 URL이 서로 맞는지 확인하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "중복 URL 정리", description: "대표 URL 선언이 흔들리는 문제를 줄입니다." },
+      { title: "기술 SEO 점검", description: "canonical, sitemap, 리다이렉트 정책의 일치 여부를 확인합니다." },
+      { title: "색인 혼선 예방", description: "검색엔진이 대표 페이지를 이해하기 쉽게 만듭니다." },
+    ],
+    faq: [
+      { question: "Canonical은 꼭 필요하나요?", answer: "중요 페이지에는 선언하는 편이 좋습니다. 특히 같은 콘텐츠가 여러 URL로 접근될 수 있다면 필요합니다." },
+      { question: "Canonical과 301 리다이렉트는 같은가요?", answer: "다릅니다. 리다이렉트는 사용자를 이동시키고, canonical은 검색엔진에 대표 URL 힌트를 줍니다." },
+      { question: "다른 도메인을 canonical로 넣어도 되나요?", answer: "가능하지만 의도한 syndication이 아니라면 같은 사이트의 대표 URL을 쓰는 편이 안전합니다." },
+      { question: "사이트맵에는 어떤 URL을 넣어야 하나요?", answer: "canonical로 선언한 색인 대상 URL만 넣는 것이 좋습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "sitemap-url-batch-builder": {
+    id: "sitemap-url-batch-builder",
+    introduction:
+      "사이트맵 URL 목록 생성기는 경로 목록을 기준 도메인과 결합해 sitemap.xml에 넣을 후보 URL을 정리합니다. 사이트맵에는 모든 URL이 아니라 검색엔진이 색인하길 원하는 canonical URL만 들어가는 것이 좋습니다.",
+    howToUse: {
+      steps: [
+        "기준 사이트 주소를 입력합니다.",
+        "사이트맵에 넣을 경로 목록을 줄바꿈으로 입력합니다.",
+        "생성된 절대 URL 목록을 확인합니다.",
+        "중복, 필터 URL, noindex 페이지를 제외한 뒤 sitemap.xml에 반영합니다.",
+      ],
+      tips: [
+        "검색 결과, 태그 필터, 임시 미리보기 URL은 사이트맵에서 제외하는 편이 좋습니다.",
+        "사이트맵 URL은 canonical URL과 같은 주소여야 합니다.",
+        "새 URL을 추가한 뒤 robots.txt에서 막고 있지 않은지 확인하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "URL 목록 정리", description: "상대 경로를 절대 URL 목록으로 빠르게 변환합니다." },
+      { title: "중복 제거", description: "반복 입력된 URL 후보를 줄여 사이트맵 품질을 높입니다." },
+      { title: "GSC 제출 준비", description: "Search Console 제출 전 URL 후보를 검토하기 쉽게 만듭니다." },
+    ],
+    faq: [
+      { question: "사이트맵에는 모든 페이지를 넣어야 하나요?", answer: "아닙니다. 색인시키고 싶은 canonical 페이지 중심으로 구성하는 것이 좋습니다." },
+      { question: "ready 상태의 예약 도구도 사이트맵에 넣어야 하나요?", answer: "아닙니다. 실제 공개된 뒤 사이트맵에 들어가야 합니다." },
+      { question: "lastmod도 필요하나요?", answer: "있으면 도움이 되지만 정확하지 않은 lastmod를 넣는 것보다 URL 품질을 먼저 맞추는 것이 중요합니다." },
+      { question: "사이트맵과 RSS는 같은가요?", answer: "다릅니다. 사이트맵은 검색엔진 URL 발견용이고 RSS는 콘텐츠 구독과 업데이트 전달에 가깝습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "robots-rule-draft-builder": {
+    id: "robots-rule-draft-builder",
+    introduction:
+      "robots.txt 규칙 초안 생성기는 허용 경로, 차단 경로, sitemap 선언을 바탕으로 검색엔진 크롤링 제어 규칙을 만듭니다. robots.txt는 색인을 제거하는 도구가 아니며, 중요한 페이지를 잘못 막으면 검색엔진이 콘텐츠를 수집하지 못할 수 있습니다.",
+    howToUse: {
+      steps: [
+        "크롤링을 허용할 경로를 입력합니다.",
+        "차단할 경로를 입력합니다.",
+        "sitemap.xml 주소를 입력합니다.",
+        "생성된 초안을 실제 적용 전 테스트합니다.",
+      ],
+      tips: [
+        "관리자, API, 검색 결과 페이지처럼 크롤링 가치가 낮은 영역만 신중히 차단하세요.",
+        "CSS, JS, 이미지 리소스를 막으면 Google이 페이지를 제대로 렌더링하지 못할 수 있습니다.",
+        "색인을 제거하려면 robots 차단보다 noindex나 URL 제거 절차가 더 적절할 수 있습니다.",
+      ],
+    },
+    keyBenefits: [
+      { title: "크롤링 정책 정리", description: "허용과 차단 경로를 문서화된 규칙으로 만듭니다." },
+      { title: "sitemap 연결", description: "robots.txt 안에 sitemap 위치를 함께 선언합니다." },
+      { title: "실수 예방", description: "중요 페이지를 막기 전 체크할 기준을 제공합니다." },
+    ],
+    faq: [
+      { question: "robots.txt로 색인을 막을 수 있나요?", answer: "완전한 색인 제거 수단은 아닙니다. 이미 알려진 URL은 내용 없이 색인될 수도 있습니다." },
+      { question: "Disallow: /를 쓰면 어떻게 되나요?", answer: "전체 사이트 크롤링을 막을 수 있으므로 점검 중이 아니라면 매우 위험합니다." },
+      { question: "sitemap 선언은 꼭 필요하나요?", answer: "필수는 아니지만 검색엔진이 사이트맵 위치를 찾는 데 도움이 됩니다." },
+      { question: "적용 후 무엇을 확인해야 하나요?", answer: "Search Console URL 검사, robots 테스트, 실제 sitemap 접근 상태를 확인하세요." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "anchor-text-variation-builder": {
+    id: "anchor-text-variation-builder",
+    introduction:
+      "앵커 텍스트 변형 생성기는 내부 링크에 사용할 자연스러운 링크 문구를 만듭니다. 같은 exact match 키워드를 모든 글에 반복하면 부자연스럽고, 사용자는 클릭 후 무엇을 얻게 되는지 예측하기 어렵습니다.",
+    howToUse: {
+      steps: [
+        "핵심 키워드를 입력합니다.",
+        "연결할 페이지 경로를 입력합니다.",
+        "생성된 앵커 텍스트 변형을 확인합니다.",
+        "본문 문맥에 가장 자연스러운 문구를 골라 사용합니다.",
+      ],
+      tips: [
+        "앵커 문구는 클릭 후 도착 페이지의 내용을 예측할 수 있어야 합니다.",
+        "내부 링크는 본문 흐름 안에서 실제로 도움이 되는 위치에 배치하세요.",
+        "SEO 글에는 관련 내부 링크를 2개 이상 자연스럽게 넣는 편이 좋습니다.",
+      ],
+    },
+    keyBenefits: [
+      { title: "내부 링크 품질 개선", description: "반복적인 링크 문구를 줄이고 문맥을 살립니다." },
+      { title: "사용자 탐색 보완", description: "클릭 전 도착 페이지 내용을 더 잘 예측하게 합니다." },
+      { title: "SEO 구조 강화", description: "관련 글과 도구를 자연스럽게 연결합니다." },
+    ],
+    faq: [
+      { question: "정확한 키워드 앵커가 가장 좋은가요?", answer: "항상 그렇지 않습니다. 문맥에 맞는 자연스러운 변형이 더 안전하고 읽기 좋습니다." },
+      { question: "내부 링크는 몇 개가 적당한가요?", answer: "글 길이와 주제에 따라 다르지만, 관련성이 높은 링크를 2개 이상 자연스럽게 배치하는 것이 좋습니다." },
+      { question: "앵커 텍스트에 CTA를 넣어도 되나요?", answer: "가능합니다. 다만 '여기 클릭'보다 얻을 결과가 보이는 문구가 좋습니다." },
+      { question: "외부 링크에도 사용할 수 있나요?", answer: "사용할 수 있지만 외부 링크는 출처 신뢰도와 링크 목적 설명을 함께 고려하세요." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "broken-link-outreach-template": {
+    id: "broken-link-outreach-template",
+    introduction:
+      "깨진 링크 제안 메일 생성기는 다른 사이트에서 발견한 깨진 링크를 정중히 알려주고 관련 대체 자료를 제안하는 메일 초안을 만듭니다. 링크 아웃리치는 대량 발송보다 실제 도움이 되는 제안을 보내는 것이 중요합니다.",
+    howToUse: {
+      steps: [
+        "상대 사이트나 담당자명을 입력합니다.",
+        "발견한 깨진 링크 URL을 입력합니다.",
+        "대체로 제안할 자료 URL을 입력합니다.",
+        "생성된 메일을 상대 사이트 맥락에 맞게 수정합니다.",
+      ],
+      tips: [
+        "깨진 링크가 실제로 404 또는 접근 불가인지 먼저 확인하세요.",
+        "대체 자료는 상대 페이지 주제와 충분히 관련이 있어야 합니다.",
+        "과장된 홍보 문구보다 도움이 되는 제안이라는 톤을 유지하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "정중한 아웃리치", description: "스팸처럼 보이지 않는 짧은 제안 메일을 만듭니다." },
+      { title: "링크 품질 개선", description: "깨진 링크를 알려주면서 관련 자료를 자연스럽게 제안합니다." },
+      { title: "콘텐츠 신뢰 보강", description: "대체 자료의 최신성과 유용성을 점검하게 만듭니다." },
+    ],
+    faq: [
+      { question: "깨진 링크 제안은 SEO에 도움이 되나요?", answer: "직접 보장되지는 않지만 관련성 높은 자료를 정중하게 제안하면 자연스러운 링크 기회가 생길 수 있습니다." },
+      { question: "대량 발송해도 되나요?", answer: "권장하지 않습니다. 관련성이 낮은 대량 발송은 스팸으로 보일 수 있습니다." },
+      { question: "어떤 자료를 대체로 제안해야 하나요?", answer: "상대 페이지의 기존 문맥과 가장 가까운 최신 자료, 가이드, 도구 페이지가 좋습니다." },
+      { question: "메일에 몇 개의 링크를 넣어야 하나요?", answer: "깨진 링크와 대체 제안 링크 정도로 최소화하는 편이 좋습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
 };
