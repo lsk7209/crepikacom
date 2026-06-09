@@ -32,6 +32,14 @@ const PUBLIC_ENDPOINT_HEADER_EXPECTATIONS = {
   "/llms-full.txt": { contentType: "text/plain", cacheControl: "public, max-age=3600, s-maxage=3600" },
   "/ai-index.json": { contentType: "application/json", cacheControl: "public, max-age=3600, s-maxage=3600" },
 };
+const HTML_HEADER_EXPECTATIONS = {
+  contentType: "text/html",
+  cacheControl: "public, max-age=0, must-revalidate",
+  xContentTypeOptions: "nosniff",
+  xFrameOptions: "SAMEORIGIN",
+  referrerPolicy: "strict-origin-when-cross-origin",
+  permissionsPolicy: "camera=(), microphone=(), geolocation=()",
+};
 
 const failures = [];
 
@@ -196,6 +204,29 @@ function validatePublicEndpointHeaders(path, response) {
     cacheControl,
     xContentTypeOptions,
   };
+}
+
+function validateHtmlHeaders(path, response) {
+  const headers = {
+    contentType: response.headers.get("content-type") ?? "",
+    cacheControl: response.headers.get("cache-control") ?? "",
+    xContentTypeOptions: response.headers.get("x-content-type-options") ?? "",
+    xFrameOptions: response.headers.get("x-frame-options") ?? "",
+    referrerPolicy: response.headers.get("referrer-policy") ?? "",
+    permissionsPolicy: response.headers.get("permissions-policy") ?? "",
+  };
+
+  if (!headers.contentType.toLowerCase().startsWith(HTML_HEADER_EXPECTATIONS.contentType)) {
+    fail(`${path} must use ${HTML_HEADER_EXPECTATIONS.contentType} content-type; got ${headers.contentType || "missing"}.`);
+  }
+  for (const [key, expected] of Object.entries(HTML_HEADER_EXPECTATIONS)) {
+    if (key === "contentType") continue;
+    if (headers[key] !== expected) {
+      fail(`${path} must send ${key}=${expected}; got ${headers[key] || "missing"}.`);
+    }
+  }
+
+  return headers;
 }
 
 async function validateTextEndpoint(path, predicate, message) {
@@ -384,6 +415,7 @@ async function main() {
   for (const path of ROOT_HTML_PATHS) {
     const { response, body } = await get(path);
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
+    const headers = validateHtmlHeaders(path, response);
     const meta = hasMeaningfulMeta(body, { requireH1: false, requireBreadcrumb: false });
     for (const [name, ok] of Object.entries(meta)) {
       if (!ok) fail(`${path} is missing live root HTML marker: ${name}.`);
@@ -397,6 +429,7 @@ async function main() {
       path,
       status: response.status,
       bytes: body.length,
+      headers,
       htmlBasics: meta,
       adsensePolicy: validateAdSenseAutoAds(path, body),
       readableRootText: true,
@@ -406,6 +439,7 @@ async function main() {
   for (const path of SAMPLE_HTML_PATHS) {
     const { response, body } = await get(path);
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
+    const headers = validateHtmlHeaders(path, response);
     const meta = hasMeaningfulMeta(body);
     for (const [name, ok] of Object.entries(meta)) {
       if (!ok) fail(`${path} is missing live HTML marker: ${name}.`);
@@ -415,6 +449,7 @@ async function main() {
       path,
       status: response.status,
       bytes: body.length,
+      headers,
       htmlBasics: meta,
       adsensePolicy: validateAdSenseAutoAds(path, body),
     });
@@ -424,6 +459,7 @@ async function main() {
     const path = SAMPLE_ARTICLE_PATH;
     const { response, body } = await get(path);
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
+    const headers = validateHtmlHeaders(path, response);
     const meta = hasMeaningfulMeta(body);
     for (const [name, ok] of Object.entries(meta)) {
       if (!ok) fail(`${path} is missing live article HTML marker: ${name}.`);
@@ -434,6 +470,7 @@ async function main() {
       path,
       status: response.status,
       bytes: body.length,
+      headers,
       htmlBasics: meta,
       adsensePolicy: validateAdSenseAutoAds(path, body),
       shellLanguage,
