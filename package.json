@@ -12,6 +12,7 @@
     "verify:live": "node scripts/verify-live-seo.mjs",
     "verify:adsense": "python scripts/adsense-site-status.py",
     "verify:gsc": "python scripts/gsc-sitemap-submit.py --status-only --json",
+    "verify:ops": "npm run verify:live && npm run verify:gsc && npm run verify:adsense",
     "verify:indexing": "npm run verify:live && npm run verify:gsc",
     "notify:indexing": "node scripts/notify-indexing.mjs",
     "preview": "vite preview",
