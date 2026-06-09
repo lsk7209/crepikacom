@@ -66,6 +66,70 @@ const READING_POINT_ACCENTS = [
   "border-cyan-400/25 bg-cyan-400/[0.04] text-cyan-200",
   "border-amber-400/25 bg-amber-400/[0.04] text-amber-200",
 ] as const;
+
+const TRUSTED_REFERENCE_RULES = [
+  {
+    test: /naver|네이버|smartstore|스마트스토어|searchadvisor/i,
+    label: "Naver Search Advisor",
+    url: "https://searchadvisor.naver.com/",
+  },
+  {
+    test: /kakao|카카오/i,
+    label: "Kakao Business",
+    url: "https://business.kakao.com/",
+  },
+  {
+    test: /instagram|facebook|meta|인스타그램|페이스북|메타/i,
+    label: "Meta Business Help",
+    url: "https://www.facebook.com/business/help",
+  },
+  {
+    test: /youtube|shorts|유튜브|쇼츠/i,
+    label: "YouTube Help",
+    url: "https://support.google.com/youtube/",
+  },
+  {
+    test: /ga4|analytics|분석|utm|ctr|roas/i,
+    label: "Google Analytics Help",
+    url: "https://support.google.com/analytics/",
+  },
+  {
+    test: /adsense|rpm|광고|수익|monetization/i,
+    label: "Google AdSense Help",
+    url: "https://support.google.com/adsense/",
+  },
+  {
+    test: /schema|json-ld|seo|search|google|검색|구조화|canonical|sitemap|robots/i,
+    label: "Google Search Central",
+    url: "https://developers.google.com/search/docs",
+  },
+] as const;
+
+const DEFAULT_TRUSTED_REFERENCE = {
+  label: "Google Search Central",
+  url: "https://developers.google.com/search/docs",
+};
+
+function getTrustedReferences(post: BlogPostData) {
+  const haystack = [
+    post.slug,
+    post.title,
+    post.description,
+    post.category,
+    ...(post.keywords ?? []),
+  ].join(" ");
+  const matched = TRUSTED_REFERENCE_RULES.filter((rule) =>
+    rule.test.test(haystack),
+  ).map(({ label, url }) => ({ label, url }));
+  const references = matched.length ? matched : [DEFAULT_TRUSTED_REFERENCE];
+  return references
+    .filter(
+      (reference, index, list) =>
+        list.findIndex((item) => item.url === reference.url) === index,
+    )
+    .slice(0, 3);
+}
+
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 const CATEGORY_OG_IMAGES: Record<string, string> = {
@@ -395,6 +459,10 @@ export default function BlogPost() {
           sections={post.content.sections}
           keywords={post.keywords}
         />
+        <ArticleSupportBlock
+          references={getTrustedReferences(post)}
+          relatedTools={relatedTools}
+        />
 
         {/* Introduction */}
         <section className="mb-12 rounded-lg border border-cyan-400/20 bg-cyan-400/5 p-5 md:p-6">
@@ -581,6 +649,74 @@ export default function BlogPost() {
         </div>
       </article>
     </>
+  );
+}
+
+function ArticleSupportBlock({
+  references,
+  relatedTools,
+}: {
+  references: { label: string; url: string }[];
+  relatedTools: NonNullable<ReturnType<typeof getToolById>>[];
+}) {
+  const actionLinks = relatedTools.length
+    ? relatedTools.slice(0, 3).map((tool) => ({
+        label: tool.titleKo,
+        path: tool.path,
+      }))
+    : [
+        { label: "텍스트 카운터로 초안 점검", path: "/tools/text-counter" },
+        { label: "메타 설명 길이 확인", path: "/tools/meta-description-checker" },
+      ];
+
+  return (
+    <section className="mb-10 rounded-xl border border-emerald-400/20 bg-emerald-400/[0.04] p-5">
+      <div className="grid gap-5 md:grid-cols-2">
+        <div>
+          <h2 className="mb-3 text-xl font-bold">공식 참고 자료</h2>
+          <ul className="space-y-2 text-sm">
+            {references.map((reference) => (
+              <li key={reference.url}>
+                <a
+                  href={reference.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-primary hover:underline"
+                >
+                  {reference.label}
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 className="mb-3 text-xl font-bold">다음 실행</h2>
+          <ul className="space-y-2 text-sm">
+            {actionLinks.map((link) => (
+              <li key={link.path}>
+                <Link
+                  to={link.path}
+                  className="inline-flex items-center gap-1 text-primary hover:underline"
+                >
+                  {link.label}
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-1 text-primary hover:underline"
+              >
+                관련 가이드 더 보기
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 }
 

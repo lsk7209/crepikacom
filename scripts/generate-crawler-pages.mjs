@@ -52,6 +52,19 @@ const alwaysPublishedToolPaths = new Set([
   "/tools/qr-generator",
 ]);
 
+const toolIdAliases = {
+  "email-analytics": "ctr-calculator",
+  "email-template": "text-counter",
+  "hash-generator": "hashtag-mixer",
+  "hashtag-generator": "hashtag-mixer",
+  "instagram-spacer": "insta-spacer",
+  "platform-compare": "utm-url-builder",
+  "pricing-calculator": "adsense-rpm-calculator",
+  "revenue-calculator": "adsense-rpm-calculator",
+  "sns-analytics": "ctr-calculator",
+  "sns-calendar": "utm-url-builder",
+};
+
 function loadPublishedQueuedToolPaths() {
   try {
     const queue = JSON.parse(readFileSync(toolQueueFile, "utf8"));
@@ -300,6 +313,83 @@ function stripMarkdown(value) {
     .replace(/[*_`>#-]/g, "")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+const trustedReferenceRules = [
+  {
+    test: /naver|네이버|smartstore|스마트스토어|searchadvisor/i,
+    label: "Naver Search Advisor",
+    url: "https://searchadvisor.naver.com/",
+  },
+  {
+    test: /kakao|카카오/i,
+    label: "Kakao Business",
+    url: "https://business.kakao.com/",
+  },
+  {
+    test: /instagram|facebook|meta|인스타그램|페이스북|메타/i,
+    label: "Meta Business Help",
+    url: "https://www.facebook.com/business/help",
+  },
+  {
+    test: /youtube|shorts|유튜브|쇼츠/i,
+    label: "YouTube Help",
+    url: "https://support.google.com/youtube/",
+  },
+  {
+    test: /ga4|analytics|분석|utm|ctr|roas/i,
+    label: "Google Analytics Help",
+    url: "https://support.google.com/analytics/",
+  },
+  {
+    test: /adsense|rpm|광고|수익|monetization/i,
+    label: "Google AdSense Help",
+    url: "https://support.google.com/adsense/",
+  },
+  {
+    test: /schema|json-ld|seo|search|google|검색|구조화|canonical|sitemap|robots/i,
+    label: "Google Search Central",
+    url: "https://developers.google.com/search/docs",
+  },
+];
+
+function getTrustedReferences(post) {
+  const haystack = [
+    post.slug,
+    post.title,
+    post.description,
+    post.category,
+    ...(post.keywords ?? []),
+  ].join(" ");
+  const matched = trustedReferenceRules
+    .filter((rule) => rule.test.test(haystack))
+    .map(({ label, url }) => ({ label, url }));
+  const references = matched.length
+    ? matched
+    : [{ label: "Google Search Central", url: "https://developers.google.com/search/docs" }];
+  return references
+    .filter((reference, index, list) => list.findIndex((item) => item.url === reference.url) === index)
+    .slice(0, 3);
+}
+
+function renderArticleSupportLinks(post) {
+  const references = getTrustedReferences(post)
+    .map(
+      (reference) =>
+        `<li><a href="${escapeHtml(reference.url)}" rel="noopener noreferrer">${escapeHtml(reference.label)}</a></li>`,
+    )
+    .join("\n");
+  const toolLinks = (post.relatedTools ?? [])
+    .map((id) => `/tools/${toolIdAliases[id] ?? id}`)
+    .filter((path) => alwaysPublishedToolPaths.has(path) || publishedQueuedToolPaths.has(path))
+    .slice(0, 3)
+    .map((path) => `<li><a href="${escapeHtml(path)}">${escapeHtml(path.replace("/tools/", ""))}</a></li>`)
+    .join("\n");
+  const actions =
+    toolLinks ||
+    '<li><a href="/tools/text-counter">Text Counter</a></li>\n<li><a href="/tools/meta-description-checker">Meta Description Checker</a></li>';
+
+  return `<section class="panel"><h2>공식 참고 자료</h2><ul>${references}</ul><h2>다음 실행</h2><ul>${actions}<li><a href="/blog">관련 가이드 더 보기</a></li></ul></section>`;
 }
 
 function estimateWordCount(post) {
@@ -691,6 +781,7 @@ function renderBlogPost(post) {
     type: "article",
     structuredData: makeArticleStructuredData(post),
     bodyHtml: `<p class="lede">${escapeHtml(post.description)}</p>
+      ${renderArticleSupportLinks(post)}
       <p class="muted">발행일: ${escapeHtml(post.publishDate)} &middot; 분야: ${escapeHtml(post.category)} &middot; 읽는 시간: ${escapeHtml(post.readTime)}</p>
       <nav class="panel" aria-label="글 목차"><h2>글 목차</h2><ol>${toc}</ol></nav>
       <section class="panel"><h2>핵심 개요</h2><p>${escapeHtml(stripMarkdown(post.content.introduction))}</p></section>

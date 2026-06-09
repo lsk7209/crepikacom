@@ -471,6 +471,40 @@ function validateInternalLinks(path, body) {
   }
 }
 
+function validateBlogArticleSupportSignals(path, body) {
+  const normalizedPath = path.replace(/\\/g, "/");
+  if (!normalizedPath.startsWith("public/blog/") || normalizedPath === "public/blog/index.html") return;
+
+  if (!body.includes("<h2>공식 참고 자료</h2>")) {
+    fail(`${path} is missing the official reference block required for E-E-A-T and AEO support.`);
+  }
+  if (!body.includes("<h2>다음 실행</h2>")) {
+    fail(`${path} is missing the action CTA block required for reader follow-through.`);
+  }
+
+  const trustedReferenceLinks = extractAnchorHrefs(body).filter((href) =>
+    [
+      "https://searchadvisor.naver.com/",
+      "https://business.kakao.com/",
+      "https://www.facebook.com/business/help",
+      "https://support.google.com/youtube/",
+      "https://support.google.com/analytics/",
+      "https://support.google.com/adsense/",
+      "https://developers.google.com/search/docs",
+    ].includes(href),
+  );
+  const internalActionLinks = extractAnchorHrefs(body).filter(
+    (href) => href.startsWith("/tools/") || href === "/blog",
+  );
+
+  if (trustedReferenceLinks.length < 1) {
+    fail(`${path} must include at least one trusted external reference link.`);
+  }
+  if (internalActionLinks.length < 2) {
+    fail(`${path} must include at least two internal CTA/action links.`);
+  }
+}
+
 function extractArrayLiteral(source, marker) {
   const markerIndex = source.indexOf(marker);
   if (markerIndex === -1) {
@@ -915,6 +949,7 @@ function validateCrawlerPage(path, canonicalUrl) {
   validateSocialImageMeta(path, body);
   validateInlineImageAlt(path, body);
   validateInternalLinks(path, body);
+  validateBlogArticleSupportSignals(path, body);
 }
 
 function validateStaticHtmlBasics() {
@@ -940,6 +975,7 @@ function validateStaticHtmlBasics() {
     validateSocialImageMeta(path, body);
     validateInlineImageAlt(path, body);
     validateInternalLinks(path, body);
+    validateBlogArticleSupportSignals(path, body);
     if (h1Count !== 1) {
       fail(`${path} must have exactly one H1; found ${h1Count}.`);
     }
