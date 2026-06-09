@@ -342,14 +342,67 @@ function makePublisherSchema() {
     "@type": "Organization",
     "@id": `${siteUrl}/#organization`,
     name: "\uD06C\uB808\uD53C\uCE74",
+    alternateName: "Crepika",
     url: siteUrl,
+    email: "support@crepika.com",
+    areaServed: "KR",
+    knowsLanguage: ["ko-KR", "en"],
+    description:
+      "\uAD6D\uB0B4 \uD06C\uB9AC\uC5D0\uC774\uD130\uB97C \uC704\uD55C \uBB34\uB8CC \uC628\uB77C\uC778 \uB3C4\uAD6C \uC11C\uBE44\uC2A4.",
     logo: {
       "@type": "ImageObject",
       url: ogImage,
       width: 1200,
       height: 630,
     },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "support@crepika.com",
+      availableLanguage: ["Korean", "English"],
+    },
+    sameAs: [`${siteUrl}/rss.xml`, `${siteUrl}/llms.txt`],
   };
+}
+
+function makeWebsiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+    name: "\uD06C\uB808\uD53C\uCE74",
+    alternateName: "Crepika",
+    url: siteUrl,
+    inLanguage: "ko-KR",
+    publisher: { "@id": `${siteUrl}/#organization` },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteUrl}/blog?search={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
+function makeSiteIdentityStructuredData() {
+  return [
+    {
+      "@context": "https://schema.org",
+      ...makePublisherSchema(),
+      member: Object.entries(authorProfiles).map(([name, profile]) => ({
+        "@type": "Person",
+        "@id": `${siteUrl}/about#${profile.id}`,
+        name,
+        url: `${siteUrl}/about`,
+        description: profile.description,
+        image: `${siteUrl}${profile.image}`,
+        worksFor: { "@id": `${siteUrl}/#organization` },
+      })),
+    },
+    makeWebsiteSchema(),
+  ];
 }
 
 function makeArticleStructuredData(post) {
@@ -469,7 +522,11 @@ function renderShell({
   structuredData = [],
 }) {
   const baseStructuredData = Array.isArray(structuredData) ? structuredData : [structuredData];
-  const jsonLd = renderJsonLd([...baseStructuredData, makeBreadcrumb(canonical, heading)]);
+  const jsonLd = renderJsonLd([
+    ...makeSiteIdentityStructuredData(),
+    ...baseStructuredData,
+    makeBreadcrumb(canonical, heading),
+  ]);
   return `<!doctype html>
 <html lang="ko">
   <head>

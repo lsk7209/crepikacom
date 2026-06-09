@@ -8,14 +8,16 @@ const SAMPLE_HTML_PATHS = ["/blog", "/tools/qr-generator", "/about", "/contact",
 const SAMPLE_ARTICLE_PATH = "/blog/review-psychology-marketing";
 const EXPECTED_JSON_LD_TYPES = {
   "/": ["WebSite", "Organization"],
-  "/blog": ["CollectionPage", "BreadcrumbList"],
-  "/tools/qr-generator": ["WebPage", "SoftwareApplication", "BreadcrumbList"],
-  "/about": ["WebPage", "BreadcrumbList"],
-  "/contact": ["WebPage", "BreadcrumbList"],
-  "/privacy": ["WebPage", "BreadcrumbList"],
-  "/terms": ["WebPage", "BreadcrumbList"],
-  [SAMPLE_ARTICLE_PATH]: ["Article", "FAQPage", "BreadcrumbList"],
+  "/blog": ["Organization", "WebSite", "CollectionPage", "BreadcrumbList"],
+  "/tools/qr-generator": ["Organization", "WebSite", "WebPage", "SoftwareApplication", "BreadcrumbList"],
+  "/about": ["Organization", "WebSite", "WebPage", "BreadcrumbList"],
+  "/contact": ["Organization", "WebSite", "WebPage", "BreadcrumbList"],
+  "/privacy": ["Organization", "WebSite", "WebPage", "BreadcrumbList"],
+  "/terms": ["Organization", "WebSite", "WebPage", "BreadcrumbList"],
+  [SAMPLE_ARTICLE_PATH]: ["Organization", "WebSite", "Article", "FAQPage", "BreadcrumbList"],
 };
+const SITE_IDENTITY_SAMPLE_PATHS = new Set([...SAMPLE_HTML_PATHS, SAMPLE_ARTICLE_PATH]);
+const BRAND_NAME_KO = "\uD06C\uB808\uD53C\uCE74";
 const READABLE_HOME_MARKERS = ["\uD06C\uB808\uD53C\uCE74", "\uB85C\uADF8\uC778", "\uBB34\uB8CC"];
 const REQUIRED_CRAWLER_SHELL_MARKERS = ["\uAE00 \uBAA9\uCC28", "\uB2E4\uC74C \uB2E8\uACC4", "\uC0AC\uC774\uD2B8 \uAC80\uD1A0 \uC815\uBCF4"];
 const FORBIDDEN_CRAWLER_SHELL_MARKERS = ["Table of contents", "Next step", "Site and review context"];
@@ -335,6 +337,59 @@ function validateJsonLdTypes(path, body) {
     types,
     expectedTypes,
   };
+}
+
+function validateSiteIdentitySchema(path, body) {
+  const objects = extractJsonLdObjects(body);
+  const organization = objects.find((entry) => entry?.["@type"] === "Organization" && entry?.["@id"] === `${SITE_URL}/#organization`);
+  const website = objects.find((entry) => entry?.["@type"] === "WebSite" && entry?.["@id"] === `${SITE_URL}/#website`);
+  const result = {
+    organizationId: organization?.["@id"] ?? "",
+    websiteId: website?.["@id"] ?? "",
+    organizationMembers: Array.isArray(organization?.member) ? organization.member.length : 0,
+    hasContactPoint: organization?.contactPoint?.["@type"] === "ContactPoint",
+    hasDiscoverySameAs:
+      Array.isArray(organization?.sameAs) &&
+      organization.sameAs.includes(`${SITE_URL}/rss.xml`) &&
+      organization.sameAs.includes(`${SITE_URL}/llms.txt`),
+    hasSearchAction: website?.potentialAction?.["@type"] === "SearchAction",
+  };
+
+  if (!organization) {
+    fail(`${path} is missing the canonical Organization JSON-LD identity.`);
+    return result;
+  }
+  if (organization.name !== BRAND_NAME_KO || organization.alternateName !== "Crepika" || organization.url !== SITE_URL) {
+    fail(`${path} Organization identity must expose canonical name, alternateName, and URL.`);
+  }
+  if (organization.logo?.["@type"] !== "ImageObject" || organization.logo?.url !== `${SITE_URL}/og-image.png` || organization.logo?.width !== 1200 || organization.logo?.height !== 630) {
+    fail(`${path} Organization identity must expose the canonical 1200x630 logo ImageObject.`);
+  }
+  if (!result.hasContactPoint) {
+    fail(`${path} Organization identity must expose a support contactPoint.`);
+  }
+  if (!result.hasDiscoverySameAs) {
+    fail(`${path} Organization sameAs must expose RSS and llms.txt discovery URLs.`);
+  }
+  if (result.organizationMembers < 3) {
+    fail(`${path} Organization identity must expose editorial team members for E-E-A-T.`);
+  }
+
+  if (!website) {
+    fail(`${path} is missing the canonical WebSite JSON-LD identity.`);
+    return result;
+  }
+  if (website.name !== BRAND_NAME_KO || website.url !== SITE_URL || website.inLanguage !== "ko-KR") {
+    fail(`${path} WebSite identity must expose canonical name, URL, and ko-KR language.`);
+  }
+  if (website.publisher?.["@id"] !== `${SITE_URL}/#organization`) {
+    fail(`${path} WebSite identity must reference the canonical Organization publisher.`);
+  }
+  if (!result.hasSearchAction || !String(website.potentialAction?.target?.urlTemplate ?? "").startsWith(`${SITE_URL}/blog?search=`)) {
+    fail(`${path} WebSite identity must expose the blog SearchAction URL template.`);
+  }
+
+  return result;
 }
 
 function validateArticleTrustSchema(path, body) {
@@ -817,6 +872,7 @@ async function main() {
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
     const headers = validateHtmlHeaders(path, response);
     const structuredData = validateJsonLdTypes(path, body);
+    const siteIdentitySchema = SITE_IDENTITY_SAMPLE_PATHS.has(path) ? validateSiteIdentitySchema(path, body) : undefined;
     const meta = hasMeaningfulMeta(body);
     for (const [name, ok] of Object.entries(meta)) {
       if (!ok) fail(`${path} is missing live HTML marker: ${name}.`);
@@ -829,6 +885,7 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
+      ...(siteIdentitySchema ? { siteIdentitySchema } : {}),
       socialImage: await validateSocialImage(path, body),
       internalLinks: await validateInternalLinks(path, body),
       adsensePolicy: validateAdSenseAutoAds(path, body),
@@ -841,6 +898,7 @@ async function main() {
     if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
     const headers = validateHtmlHeaders(path, response);
     const structuredData = validateJsonLdTypes(path, body);
+    const siteIdentitySchema = validateSiteIdentitySchema(path, body);
     const articleTrustSchema = validateArticleTrustSchema(path, body);
     const meta = hasMeaningfulMeta(body);
     for (const [name, ok] of Object.entries(meta)) {
@@ -855,6 +913,7 @@ async function main() {
       headers,
       htmlBasics: meta,
       structuredData,
+      siteIdentitySchema,
       articleTrustSchema,
       socialImage: await validateSocialImage(path, body),
       internalLinks: await validateInternalLinks(path, body),

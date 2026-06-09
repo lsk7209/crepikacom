@@ -122,6 +122,46 @@ function hasJsonLdType(body, path, type) {
   return extractJsonLdObjects(body, path).some((entry) => entry?.["@type"] === type);
 }
 
+function validateSiteIdentitySchema(path, body) {
+  const objects = extractJsonLdObjects(body, path);
+  const organization = objects.find((entry) => entry?.["@type"] === "Organization" && entry?.["@id"] === `${SITE_URL}/#organization`);
+  const website = objects.find((entry) => entry?.["@type"] === "WebSite" && entry?.["@id"] === `${SITE_URL}/#website`);
+
+  if (!organization) {
+    fail(`${path} is missing the canonical Organization JSON-LD identity.`);
+    return;
+  }
+  if (organization.name !== BRAND_NAME_KO || organization.alternateName !== "Crepika" || organization.url !== SITE_URL) {
+    fail(`${path} Organization identity must expose canonical name, alternateName, and URL.`);
+  }
+  if (organization.logo?.["@type"] !== "ImageObject" || organization.logo?.url !== `${SITE_URL}/og-image.png` || organization.logo?.width !== 1200 || organization.logo?.height !== 630) {
+    fail(`${path} Organization identity must expose the canonical 1200x630 logo ImageObject.`);
+  }
+  if (organization.contactPoint?.["@type"] !== "ContactPoint" || organization.contactPoint?.email !== "support@crepika.com") {
+    fail(`${path} Organization identity must expose a support contactPoint.`);
+  }
+  if (!Array.isArray(organization.sameAs) || !organization.sameAs.includes(`${SITE_URL}/rss.xml`) || !organization.sameAs.includes(`${SITE_URL}/llms.txt`)) {
+    fail(`${path} Organization sameAs must expose RSS and llms.txt discovery URLs.`);
+  }
+  if (!Array.isArray(organization.member) || organization.member.length < 3) {
+    fail(`${path} Organization identity must expose editorial team members for E-E-A-T.`);
+  }
+
+  if (!website) {
+    fail(`${path} is missing the canonical WebSite JSON-LD identity.`);
+    return;
+  }
+  if (website.name !== BRAND_NAME_KO || website.url !== SITE_URL || website.inLanguage !== "ko-KR") {
+    fail(`${path} WebSite identity must expose canonical name, URL, and ko-KR language.`);
+  }
+  if (website.publisher?.["@id"] !== `${SITE_URL}/#organization`) {
+    fail(`${path} WebSite identity must reference the canonical Organization publisher.`);
+  }
+  if (website.potentialAction?.["@type"] !== "SearchAction" || !String(website.potentialAction?.target?.urlTemplate ?? "").startsWith(`${SITE_URL}/blog?search=`)) {
+    fail(`${path} WebSite identity must expose the blog SearchAction URL template.`);
+  }
+}
+
 function validateArticleTrustSchema(path, body, canonicalUrl) {
   const objects = extractJsonLdObjects(body, path);
   const article = objects.find((entry) => entry?.["@type"] === "Article");
@@ -556,6 +596,7 @@ function validateCrawlerPage(path, canonicalUrl) {
   if (!hasJsonLdType(body, path, "BreadcrumbList")) {
     fail(`${path} is missing BreadcrumbList structured data.`);
   }
+  validateSiteIdentitySchema(path, body);
   if (path.replace(/\\/g, "/").startsWith("public/blog/") && path.replace(/\\/g, "/") !== "public/blog/index.html") {
     validateArticleTrustSchema(path, body, canonicalUrl);
   }
@@ -581,6 +622,7 @@ function validateStaticHtmlBasics() {
     if (!hasJsonLdType(body, path, "BreadcrumbList")) {
       fail(`${path} is missing BreadcrumbList structured data.`);
     }
+    validateSiteIdentitySchema(path, body);
     validateSocialImageMeta(path, body);
     validateInternalLinks(path, body);
     if (h1Count !== 1) {
