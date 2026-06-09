@@ -43,8 +43,6 @@ def choose_site(available_sites: list[str], requested_site: str) -> str:
         requested_site.rstrip("/"),
         "https://crepika.com/",
         "https://crepika.com",
-        "https://crepika.com/",
-        "https://crepika.com",
         "sc-domain:crepika.com",
     ]
     for candidate in candidates:
@@ -72,6 +70,8 @@ def main() -> int:
     parser.add_argument("--credentials", default=str(DEFAULT_CREDENTIALS))
     parser.add_argument("--site", default=DEFAULT_SITE)
     parser.add_argument("--sitemap", default=DEFAULT_SITEMAP)
+    parser.add_argument("--status-only", action="store_true", help="Read current sitemap status without submitting it again")
+    parser.add_argument("--allow-pending", action="store_true", help="Return exit code 0 when the sitemap has no errors or warnings but is still pending")
     parser.add_argument("--json", action="store_true", help="Print machine-readable JSON")
     args = parser.parse_args()
 
@@ -83,14 +83,21 @@ def main() -> int:
     available_sites = list_sites(service)
     site_url = choose_site(available_sites, args.site)
 
-    service.sitemaps().submit(siteUrl=site_url, feedpath=args.sitemap).execute()
+    submitted = False
+    if not args.status_only:
+        service.sitemaps().submit(siteUrl=site_url, feedpath=args.sitemap).execute()
+        submitted = True
+
     status = get_sitemap_status(service, site_url, args.sitemap)
+    errors = int(status.get("errors", 0) or 0)
+    warnings = int(status.get("warnings", 0) or 0)
+    pending_without_issues = errors == 0 and warnings == 0 and bool(status.get("isPending", False))
 
     result = {
         "stack": "vite-react-static-spa",
         "site_property": site_url,
         "sitemap": args.sitemap,
-        "submitted": True,
+        "submitted": submitted,
         "status": {
             "path": status.get("path"),
             "lastSubmitted": status.get("lastSubmitted"),
@@ -98,10 +105,11 @@ def main() -> int:
             "isPending": status.get("isPending", False),
             "isSitemapsIndex": status.get("isSitemapsIndex", False),
             "type": status.get("type"),
-            "errors": int(status.get("errors", 0) or 0),
-            "warnings": int(status.get("warnings", 0) or 0),
+            "errors": errors,
+            "warnings": warnings,
         },
         "success_like": success_like(status),
+        "pending_without_issues": pending_without_issues,
     }
 
     if args.json:
@@ -109,7 +117,8 @@ def main() -> int:
     else:
         print(f"Stack: {result['stack']}")
         print(f"Search Console property: {site_url}")
-        print(f"Submitted sitemap: {args.sitemap}")
+        print(f"Sitemap: {args.sitemap}")
+        print(f"Submitted this run: {submitted}")
         print(f"Last submitted: {result['status']['lastSubmitted']}")
         print(f"Last downloaded: {result['status']['lastDownloaded']}")
         print(f"Pending: {result['status']['isPending']}")
@@ -117,7 +126,9 @@ def main() -> int:
         print(f"Warnings: {result['status']['warnings']}")
         print(f"Success-like status: {result['success_like']}")
 
-    return 0 if result["success_like"] else 2
+    if result["success_like"] or (args.allow_pending and pending_without_issues):
+        return 0
+    return 2
 
 
 if __name__ == "__main__":
