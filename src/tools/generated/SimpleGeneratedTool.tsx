@@ -2033,6 +2033,212 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "color-contrast-checker": {
+    id: "color-contrast-checker",
+    buttonLabel: "대비 검사하기",
+    fields: [
+      { key: "foreground", label: "글자색 HEX", type: "text", placeholder: "#ffffff" },
+      { key: "background", label: "배경색 HEX", type: "text", placeholder: "#0f172a" },
+    ],
+    run: ({ foreground, background }) => {
+      const normalizeHex = (value: string) => {
+        const raw = value.trim().replace(/^#/, "");
+        if (/^[0-9a-f]{3}$/i.test(raw)) return raw.split("").map((char) => char + char).join("");
+        if (/^[0-9a-f]{6}$/i.test(raw)) return raw;
+        return "000000";
+      };
+      const toRgb = (hex: string) => {
+        const value = normalizeHex(hex);
+        return [0, 2, 4].map((index) => parseInt(value.slice(index, index + 2), 16));
+      };
+      const luminance = ([r, g, b]: number[]) => {
+        const values = [r, g, b].map((channel) => {
+          const normalized = channel / 255;
+          return normalized <= 0.03928 ? normalized / 12.92 : ((normalized + 0.055) / 1.055) ** 2.4;
+        });
+        return values[0] * 0.2126 + values[1] * 0.7152 + values[2] * 0.0722;
+      };
+      const fg = toRgb(foreground || "#ffffff");
+      const bg = toRgb(background || "#0f172a");
+      const lighter = Math.max(luminance(fg), luminance(bg));
+      const darker = Math.min(luminance(fg), luminance(bg));
+      const ratio = (lighter + 0.05) / (darker + 0.05);
+      const aaNormal = ratio >= 4.5;
+      const aaLarge = ratio >= 3;
+
+      return {
+        summary: aaNormal ? "본문 텍스트에도 사용할 수 있는 색상 대비입니다." : "본문 텍스트에는 대비가 부족합니다.",
+        output: [
+          `대비율: ${ratio.toFixed(2)}:1`,
+          `일반 텍스트 WCAG AA: ${aaNormal ? "통과" : "미달"}`,
+          `큰 텍스트 WCAG AA: ${aaLarge ? "통과" : "미달"}`,
+          `입력 색상: #${normalizeHex(foreground || "#ffffff")} / #${normalizeHex(background || "#0f172a")}`,
+        ].join("\n"),
+        metrics: [
+          { label: "대비율", value: `${ratio.toFixed(2)}:1`, tone: "primary" },
+          { label: "일반 텍스트", value: aaNormal ? "통과" : "미달", tone: aaNormal ? "accent" : "muted" },
+          { label: "큰 텍스트", value: aaLarge ? "통과" : "미달" },
+        ],
+        tips: [
+          "본문과 버튼 텍스트는 4.5:1 이상을 목표로 잡으세요.",
+          "작은 보조 텍스트는 색이 예뻐도 모바일에서 읽기 어려울 수 있습니다.",
+          "CTA 버튼은 브랜드 컬러보다 가독성과 클릭 가능성이 먼저입니다.",
+        ],
+      };
+    },
+  },
+  "brand-color-palette-notes": {
+    id: "brand-color-palette-notes",
+    buttonLabel: "컬러 메모 만들기",
+    fields: [
+      { key: "brand", label: "브랜드/사이트명", type: "text", placeholder: "예: 크레피카" },
+      { key: "colors", label: "컬러 HEX 목록", type: "textarea", placeholder: "#0ea5e9\n#f97316\n#111827" },
+      { key: "tone", label: "원하는 인상", type: "text", placeholder: "예: 실용적, 신뢰감, 빠른 제작" },
+    ],
+    run: ({ brand, colors, tone }) => {
+      const palette = colors
+        .split(/\s|,|\n/)
+        .map((color) => color.trim())
+        .filter(Boolean)
+        .map((color) => (color.startsWith("#") ? color : `#${color}`))
+        .filter((color) => /^#[0-9a-f]{3,6}$/i.test(color));
+      const selected = palette.length ? palette.slice(0, 5) : ["#0ea5e9", "#f97316", "#111827"];
+      const roles = ["Primary", "Accent", "Text", "Surface", "Border"];
+      const notes = selected.map((color, index) => `${roles[index] ?? `Color ${index + 1}`}: ${color}`);
+
+      return {
+        summary: `${brand.trim() || "브랜드"} 팔레트 운영 메모를 생성했습니다.`,
+        output: [
+          `브랜드: ${brand.trim() || "미입력"}`,
+          `인상: ${tone.trim() || "명확하고 실용적인 톤"}`,
+          "",
+          ...notes,
+          "",
+          "운영 메모:",
+          "- Primary는 CTA와 핵심 상태에만 제한적으로 사용",
+          "- Accent는 강조 배지, 링크 보조, 데이터 하이라이트에 사용",
+          "- Text/Surface는 대비 검사를 통과하는 조합으로 고정",
+        ].join("\n"),
+        metrics: [
+          { label: "컬러", value: `${selected.length}개`, tone: "primary" },
+          { label: "주요색", value: selected[0], tone: "accent" },
+          { label: "브랜드", value: brand.trim() || "미입력" },
+        ],
+        tips: [
+          "팔레트는 색을 많이 쓰는 것보다 역할을 고정하는 것이 중요합니다.",
+          "브랜드 컬러와 CTA 컬러가 같다면 보조색으로 상태 정보를 분리하세요.",
+          "본문 영역은 팔레트보다 대비와 여백이 더 큰 영향을 줍니다.",
+        ],
+      };
+    },
+  },
+  "svg-data-uri-encoder": {
+    id: "svg-data-uri-encoder",
+    buttonLabel: "Data URI 만들기",
+    fields: [
+      { key: "svg", label: "SVG 코드", type: "textarea", placeholder: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"></svg>" },
+    ],
+    run: ({ svg }) => {
+      const source = svg.trim();
+      const compact = source
+        .replace(/\s+/g, " ")
+        .replace(/>\s+</g, "><")
+        .trim();
+      const encoded = `data:image/svg+xml,${encodeURIComponent(compact)
+        .replace(/'/g, "%27")
+        .replace(/"/g, "%22")}`;
+      const savings = source.length ? Math.max(0, source.length - encoded.length) : 0;
+
+      return {
+        summary: "CSS와 HTML에서 사용할 수 있는 SVG Data URI를 만들었습니다.",
+        output: encoded,
+        metrics: [
+          { label: "원본", value: `${source.length}자`, tone: "primary" },
+          { label: "URI", value: `${encoded.length}자`, tone: "accent" },
+          { label: "압축차", value: `${savings}자` },
+        ],
+        tips: [
+          "Data URI는 작은 아이콘이나 패턴에 적합하고 큰 SVG에는 비효율적일 수 있습니다.",
+          "외부 SVG를 붙여 넣기 전에 불필요한 script, event handler, metadata를 제거하세요.",
+          "반복 사용되는 큰 아이콘은 파일로 분리하는 편이 캐시에 유리합니다.",
+        ],
+      };
+    },
+  },
+  "base64-image-size-estimator": {
+    id: "base64-image-size-estimator",
+    buttonLabel: "Base64 용량 계산하기",
+    fields: [
+      { key: "sizeKb", label: "원본 이미지 용량(KB)", type: "number", placeholder: "120" },
+      { key: "count", label: "삽입 개수", type: "number", placeholder: "3" },
+    ],
+    run: ({ sizeKb, count }) => {
+      const originalKb = Math.max(0, Number(sizeKb) || 0);
+      const itemCount = Math.max(1, Number(count) || 1);
+      const base64Kb = originalKb * 1.37;
+      const overheadKb = Math.max(0, base64Kb - originalKb);
+      const totalKb = base64Kb * itemCount;
+
+      return {
+        summary: `Base64 인라인 변환 시 약 ${(overheadKb * itemCount).toFixed(1)}KB가 추가될 수 있습니다.`,
+        output: [
+          `이미지당 원본: ${originalKb.toFixed(1)}KB`,
+          `이미지당 Base64 예상: ${base64Kb.toFixed(1)}KB`,
+          `이미지당 증가분: ${overheadKb.toFixed(1)}KB`,
+          `총 예상 용량: ${totalKb.toFixed(1)}KB (${(totalKb / 1024).toFixed(2)}MB)`,
+        ].join("\n"),
+        metrics: [
+          { label: "증가율", value: "약 37%", tone: "primary" },
+          { label: "총 용량", value: `${(totalKb / 1024).toFixed(2)}MB`, tone: "accent" },
+          { label: "개수", value: `${itemCount}개` },
+        ],
+        tips: [
+          "Base64는 네트워크 요청을 줄이지만 파일 크기와 캐시 효율을 악화시킬 수 있습니다.",
+          "작은 아이콘은 인라인이 유리할 수 있지만 본문 이미지는 파일로 두는 편이 안전합니다.",
+          "반복 노출되는 이미지는 별도 파일로 캐시되게 구성하세요.",
+        ],
+      };
+    },
+  },
+  "exif-privacy-checklist": {
+    id: "exif-privacy-checklist",
+    buttonLabel: "EXIF 위험 점검하기",
+    fields: [
+      { key: "source", label: "이미지 출처/촬영 상황", type: "textarea", placeholder: "예: 스마트폰으로 사무실에서 촬영한 제품 사진" },
+      { key: "useCase", label: "공개 위치", type: "text", placeholder: "예: 블로그 본문, SNS, 포트폴리오" },
+    ],
+    run: ({ source, useCase }) => {
+      const text = `${source} ${useCase}`.toLowerCase();
+      const riskWords = ["집", "자택", "사무실", "아이", "위치", "gps", "학교", "차량", "주소", "스마트폰"];
+      const hits = riskWords.filter((word) => text.includes(word));
+      const score = Math.max(20, 100 - hits.length * 12);
+      const risk = score >= 80 ? "낮음" : score >= 55 ? "보통" : "높음";
+
+      return {
+        summary: `EXIF 개인정보 노출 위험은 ${risk} 수준입니다.`,
+        output: [
+          `위험 키워드: ${hits.length ? hits.join(", ") : "없음"}`,
+          `공개 위치: ${useCase.trim() || "미입력"}`,
+          "",
+          "게시 전 체크:",
+          "- GPS 위치 정보 제거",
+          "- 촬영 기기/시간 정보 제거",
+          "- 얼굴, 주소, 차량번호, 문서 내용 흐림 처리",
+          "- 압축/변환 후 메타데이터가 다시 남았는지 확인",
+        ].join("\n"),
+        metrics: [
+          { label: "위험도", value: risk, tone: "primary" },
+          { label: "점수", value: `${score}점`, tone: "accent" },
+          { label: "키워드", value: `${hits.length}개` },
+        ],
+        tips: [
+          "스마트폰 원본 사진은 GPS와 촬영 기기 정보가 남을 수 있습니다.",
+          "업로드 전 이미지 압축 도구나 편집 도구에서 메타데이터 제거 옵션을 확인하세요.",
+          "개인 장소, 아이, 고객 정보가 보이는 이미지는 공개 전 한 번 더 확대해서 보세요.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {

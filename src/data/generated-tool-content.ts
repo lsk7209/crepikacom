@@ -1477,4 +1477,154 @@ export const GENERATED_TOOL_CONTENT: Record<string, ToolDetailedContent> = {
     ],
     relatedResources: relatedBasics,
   },
+  "color-contrast-checker": {
+    id: "color-contrast-checker",
+    introduction:
+      "색상 대비 검사기는 글자색과 배경색의 대비율을 계산해 본문, 버튼, 배지, 링크가 모바일 화면에서도 충분히 읽히는지 확인하는 도구입니다. 브랜드 컬러를 예쁘게 쓰는 것보다 중요한 것은 사용자가 내용을 놓치지 않는 것이며, 특히 CTA 버튼과 안내 문구는 접근성 기준을 먼저 통과해야 합니다.",
+    howToUse: {
+      steps: [
+        "글자색 HEX 값을 입력합니다.",
+        "배경색 HEX 값을 입력합니다.",
+        "대비율과 일반 텍스트, 큰 텍스트 통과 여부를 확인합니다.",
+        "미달이면 더 어두운 텍스트나 더 밝은 배경으로 조정합니다.",
+      ],
+      tips: [
+        "본문 텍스트는 4.5:1 이상을 목표로 잡는 것이 안전합니다.",
+        "큰 제목보다 작은 설명 문구와 버튼 안 텍스트가 먼저 읽히는지 확인하세요.",
+        "브랜드 컬러가 약하면 CTA에는 대비가 더 높은 보조색을 쓰는 편이 좋습니다.",
+      ],
+    },
+    keyBenefits: [
+      { title: "가독성 개선", description: "작은 화면에서도 텍스트가 흐려 보이지 않도록 색 조합을 점검합니다." },
+      { title: "접근성 보완", description: "WCAG 기준을 참고해 콘텐츠와 UI의 기본 접근성을 높입니다." },
+      { title: "전환 요소 안정화", description: "CTA 버튼과 링크가 배경에 묻히지 않게 합니다." },
+    ],
+    faq: [
+      { question: "대비율이 높으면 무조건 좋은가요?", answer: "높은 대비는 읽기 좋지만 너무 강하면 피로감을 줄 수 있습니다. 본문, 보조 텍스트, CTA 역할에 맞게 조정하세요." },
+      { question: "브랜드 컬러가 기준을 통과하지 못하면 어떻게 하나요?", answer: "텍스트에는 더 어둡거나 밝은 변형색을 쓰고, 원래 브랜드 컬러는 배경이나 장식 강조로 제한하는 방법이 있습니다." },
+      { question: "이미지 위 텍스트도 검사할 수 있나요?", answer: "이미지의 평균 배경색을 직접 넣어 참고할 수 있지만, 실제 이미지는 영역별 밝기가 달라 별도 미리보기가 필요합니다." },
+      { question: "SEO와도 관련이 있나요?", answer: "직접 순위 요소라기보다 사용성, 체류, CTA 이해도를 개선하는 품질 요소로 보는 것이 적절합니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "brand-color-palette-notes": {
+    id: "brand-color-palette-notes",
+    introduction:
+      "브랜드 컬러 메모 생성기는 여러 HEX 색상을 Primary, Accent, Text, Surface 같은 역할로 나눠 운영 메모를 만드는 도구입니다. 색을 많이 쓰는 것보다 어디에 어떤 역할로 쓸지 고정하는 것이 더 중요하며, 사이트의 신뢰감과 반복 사용성을 높이는 데 도움이 됩니다.",
+    howToUse: {
+      steps: [
+        "브랜드명이나 사이트명을 입력합니다.",
+        "사용하려는 HEX 컬러 목록을 줄바꿈으로 입력합니다.",
+        "원하는 인상이나 톤을 입력합니다.",
+        "생성된 역할 메모를 디자인 시스템, 블로그 카드, CTA 스타일 기준으로 활용합니다.",
+      ],
+      tips: [
+        "Primary는 핵심 버튼과 활성 상태에 제한적으로 쓰는 편이 좋습니다.",
+        "Accent는 강조 표시와 데이터 하이라이트용으로 분리하세요.",
+        "본문 배경과 텍스트 색상은 반드시 대비 검사를 함께 진행하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "컬러 역할 정리", description: "무작위 색 사용을 줄이고 UI 전반의 일관성을 높입니다." },
+      { title: "브랜드 톤 유지", description: "글 목록, 도구, CTA에서 같은 인상을 유지할 수 있습니다." },
+      { title: "디자인 의사결정 단축", description: "새 컴포넌트를 만들 때 색상 선택 기준을 빠르게 잡습니다." },
+    ],
+    faq: [
+      { question: "컬러는 몇 개가 적당한가요?", answer: "초기에는 Primary, Accent, Text, Surface, Border 정도의 4~5개 역할이면 충분합니다." },
+      { question: "색상이 많으면 더 풍부해 보이나요?", answer: "대부분은 반대입니다. 역할이 없는 색이 많으면 산만해지고 콘텐츠 집중도가 떨어질 수 있습니다." },
+      { question: "블로그 글 영역에도 적용해야 하나요?", answer: "네. 링크, 강조 박스, 목차, CTA 색상을 통일하면 글 읽기 경험이 안정됩니다." },
+      { question: "팔레트 메모만으로 접근성이 보장되나요?", answer: "아닙니다. 실제 텍스트와 배경 조합은 별도 대비 검사를 해야 합니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "svg-data-uri-encoder": {
+    id: "svg-data-uri-encoder",
+    introduction:
+      "SVG Data URI 인코더는 작은 SVG 코드를 CSS background-image나 HTML 속성에서 사용할 수 있는 data:image/svg+xml 형식으로 변환합니다. 아이콘이나 단순 패턴을 파일 요청 없이 넣고 싶을 때 유용하지만, 큰 SVG는 캐시와 유지보수 측면에서 별도 파일이 더 적합할 수 있습니다.",
+    howToUse: {
+      steps: [
+        "SVG 코드를 입력합니다.",
+        "Data URI 만들기 버튼을 누릅니다.",
+        "생성된 data:image/svg+xml 값을 복사합니다.",
+        "CSS나 HTML에 적용한 뒤 실제 렌더링과 번들 크기를 확인합니다.",
+      ],
+      tips: [
+        "외부에서 가져온 SVG에는 script나 event handler가 없는지 먼저 확인하세요.",
+        "반복해서 쓰는 큰 아이콘은 Data URI보다 파일 분리가 캐시에 유리합니다.",
+        "CSS 안에 넣을 때 따옴표와 괄호가 깨지지 않는지 확인하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "작은 아이콘 삽입", description: "간단한 SVG를 별도 파일 없이 CSS에 넣을 수 있습니다." },
+      { title: "요청 수 감소", description: "작은 장식 요소의 네트워크 요청을 줄이는 데 도움을 줍니다." },
+      { title: "실험 속도 향상", description: "디자인 프로토타입에서 빠르게 아이콘과 패턴을 테스트할 수 있습니다." },
+    ],
+    faq: [
+      { question: "모든 SVG를 Data URI로 넣어도 되나요?", answer: "아닙니다. 크고 반복 사용되는 SVG는 파일로 분리하는 편이 유지보수와 캐시에 좋습니다." },
+      { question: "보안상 주의할 점이 있나요?", answer: "신뢰할 수 없는 SVG는 script, foreignObject, 이벤트 속성 등을 제거한 뒤 사용해야 합니다." },
+      { question: "SEO에 도움이 되나요?", answer: "직접적인 SEO 효과보다 성능과 UI 구현 편의성 측면에서 쓰는 도구입니다." },
+      { question: "SVG 원본도 보관해야 하나요?", answer: "네. Data URI만 남기면 수정이 어려우므로 원본 SVG 파일이나 코드도 함께 관리하세요." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "base64-image-size-estimator": {
+    id: "base64-image-size-estimator",
+    introduction:
+      "Base64 이미지 용량 계산기는 이미지를 인라인 문자열로 넣을 때 파일 크기가 얼마나 늘어날지 추정합니다. Base64는 요청 수를 줄일 수 있지만 보통 원본보다 용량이 커지고 캐시 효율이 나빠질 수 있어, 본문 이미지나 썸네일에는 신중하게 사용해야 합니다.",
+    howToUse: {
+      steps: [
+        "원본 이미지 한 장의 용량을 KB로 입력합니다.",
+        "같은 방식으로 넣을 이미지 개수를 입력합니다.",
+        "Base64 예상 용량과 증가분을 확인합니다.",
+        "작은 아이콘은 인라인, 큰 이미지는 파일 분리 기준으로 판단합니다.",
+      ],
+      tips: [
+        "본문 대표 이미지와 카드 썸네일은 Base64보다 별도 파일 캐시가 유리한 경우가 많습니다.",
+        "작은 아이콘도 너무 많이 인라인 처리하면 HTML과 JS 번들이 무거워집니다.",
+        "LCP에 영향을 주는 이미지는 크기, 포맷, preload, lazy loading을 함께 점검하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "용량 증가 예측", description: "Base64 처리 전 페이지 무게 증가분을 대략 계산합니다." },
+      { title: "성능 판단 보조", description: "요청 수 감소와 파일 크기 증가 사이의 균형을 판단합니다." },
+      { title: "이미지 정책 정리", description: "아이콘, 썸네일, 본문 이미지별 처리 기준을 세우기 쉽습니다." },
+    ],
+    faq: [
+      { question: "Base64는 왜 용량이 늘어나나요?", answer: "바이너리 데이터를 텍스트로 표현하기 때문에 보통 원본보다 약 33% 이상 커질 수 있습니다." },
+      { question: "언제 Base64가 유리한가요?", answer: "매우 작은 아이콘처럼 요청 하나를 줄이는 이점이 크고 재사용성이 낮은 경우에 검토할 수 있습니다." },
+      { question: "블로그 본문 이미지도 Base64로 넣어도 되나요?", answer: "대부분 권장하지 않습니다. 별도 이미지 파일로 두고 압축, 리사이즈, lazy loading을 적용하는 편이 좋습니다." },
+      { question: "애드센스 검수와 관련이 있나요?", answer: "간접적으로 관련이 있습니다. 과도하게 무거운 페이지는 사용자 경험과 로딩 품질을 떨어뜨릴 수 있습니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
+  "exif-privacy-checklist": {
+    id: "exif-privacy-checklist",
+    introduction:
+      "EXIF 개인정보 체크리스트는 블로그와 SNS에 이미지를 공개하기 전 GPS 위치, 촬영 기기, 얼굴, 주소, 차량번호 같은 노출 위험을 점검하는 도구입니다. 콘텐츠 품질은 정보의 유용성뿐 아니라 개인 정보와 신뢰성 관리까지 포함합니다.",
+    howToUse: {
+      steps: [
+        "이미지 출처와 촬영 상황을 입력합니다.",
+        "이미지를 공개할 위치를 입력합니다.",
+        "위험 키워드와 체크리스트를 확인합니다.",
+        "게시 전 메타데이터 제거, 모자이크, 재압축 여부를 점검합니다.",
+      ],
+      tips: [
+        "스마트폰 원본 사진에는 GPS와 촬영 기기 정보가 남아 있을 수 있습니다.",
+        "집, 학교, 사무실, 고객 자료가 보이는 사진은 확대해서 한 번 더 확인하세요.",
+        "이미지 압축 후에도 메타데이터가 남는 도구가 있으니 결과 파일을 다시 확인하세요.",
+      ],
+    },
+    keyBenefits: [
+      { title: "개인정보 노출 예방", description: "공개 이미지에 남을 수 있는 민감 정보를 사전에 점검합니다." },
+      { title: "콘텐츠 신뢰도 보강", description: "안전하게 편집된 이미지는 사이트 운영 신뢰를 높입니다." },
+      { title: "게시 전 체크 루틴", description: "블로그와 SNS 업로드 전 반복 가능한 확인 절차를 만듭니다." },
+    ],
+    faq: [
+      { question: "EXIF는 무엇인가요?", answer: "사진 파일에 저장될 수 있는 촬영 기기, 시간, 위치 같은 메타데이터 정보입니다." },
+      { question: "모든 사이트가 EXIF를 자동으로 지우나요?", answer: "아닙니다. 플랫폼마다 다르고 원본 파일을 직접 제공하는 경우 정보가 남을 수 있어 게시 전 확인이 필요합니다." },
+      { question: "위치 정보만 지우면 충분한가요?", answer: "위치뿐 아니라 얼굴, 주소, 차량번호, 문서 내용처럼 이미지 안에 보이는 정보도 함께 확인해야 합니다." },
+      { question: "SEO 이미지 최적화와 충돌하나요?", answer: "충돌하지 않습니다. 개인정보 메타데이터는 제거하고, 필요한 설명은 alt text와 본문 문맥으로 제공하면 됩니다." },
+    ],
+    relatedResources: relatedBasics,
+  },
 };

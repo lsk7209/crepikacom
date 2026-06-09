@@ -605,7 +605,7 @@
     "type": "score-checker",
     "intent": "전경색과 배경색의 대비 비율을 계산합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-19T04:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/color-contrast-checker"
@@ -618,7 +618,7 @@
     "type": "builder",
     "intent": "주색, 보조색, 경고색, 중립색 사용 메모를 만듭니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-19T09:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/brand-color-palette-notes"
@@ -631,7 +631,7 @@
     "type": "text-transform",
     "intent": "SVG 코드를 CSS에서 쓸 수 있는 Data URI로 변환합니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-19T14:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/svg-data-uri-encoder"
@@ -644,7 +644,7 @@
     "type": "calculator",
     "intent": "이미지를 Base64로 넣을 때 증가하는 용량을 추정합니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-19T19:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/base64-image-size-estimator"
@@ -657,7 +657,7 @@
     "type": "score-checker",
     "intent": "이미지 업로드 전 제거해야 할 위치, 기기, 촬영 정보 항목을 안내합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-20T00:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/exif-privacy-checklist"
