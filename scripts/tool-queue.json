@@ -59,7 +59,7 @@
     "type": "builder",
     "intent": "질문과 답변을 FAQPage JSON-LD 초안으로 변환합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-10T10:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/faq-schema-builder"
@@ -72,7 +72,7 @@
     "type": "builder",
     "intent": "단계별 안내문을 HowTo JSON-LD 초안으로 변환합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-10T15:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/howto-schema-builder"
@@ -124,7 +124,7 @@
     "type": "score-checker",
     "intent": "글 안의 CTA가 구체적이고 행동을 유도하는지 점검합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-11T11:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/blog-cta-checker"
@@ -215,7 +215,7 @@
     "type": "score-checker",
     "intent": "너무 긴 문단과 분리 후보를 찾아 읽기 쉽게 만듭니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-12T22:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/paragraph-readability-checker"

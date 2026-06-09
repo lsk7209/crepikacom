@@ -40,19 +40,49 @@ function hoursSince(timestamp, now) {
 
 function isImplemented(toolId) {
   const configSource = readFileSync(TOOLS_CONFIG_FILE, "utf-8");
-  const syncSource = readFileSync(SYNC_SCRIPT, "utf-8");
-  const crawlerSource = readFileSync(CRAWLER_SCRIPT, "utf-8");
+  const componentSource = readFileSync(join(ROOT, "src", "tools", "generated", "SimpleGeneratedTool.tsx"), "utf-8");
+  const contentSource = readFileSync(join(ROOT, "src", "data", "generated-tool-content.ts"), "utf-8");
 
   return {
     config: configSource.includes(`id: '${toolId}'`) || configSource.includes(`id: "${toolId}"`),
-    sitemap: syncSource.includes(`/tools/${toolId}`),
-    crawler: crawlerSource.includes(`tools/${toolId}/index.html`),
+    component: componentSource.includes(`"${toolId}"`) || componentSource.includes(`'${toolId}'`),
+    content: contentSource.includes(`"${toolId}"`) || contentSource.includes(`'${toolId}'`),
   };
+}
+
+function markToolConfigPublished(toolId) {
+  const source = readFileSync(TOOLS_CONFIG_FILE, "utf-8");
+  const marker = `id: '${toolId}'`;
+  const markerIndex = source.indexOf(marker);
+  if (markerIndex === -1) throw new Error(`Tool config entry not found: ${toolId}`);
+
+  const entryStart = source.lastIndexOf("\n  {", markerIndex);
+  const nextEntry = source.indexOf("\n  {", markerIndex + marker.length);
+  const entryEnd = nextEntry === -1 ? source.indexOf("\n];", markerIndex) : nextEntry;
+  if (entryStart === -1 || entryEnd === -1) {
+    throw new Error(`Could not isolate tool config entry: ${toolId}`);
+  }
+
+  const before = source.slice(0, entryStart);
+  let entry = source.slice(entryStart, entryEnd);
+  const after = source.slice(entryEnd);
+
+  if (entry.includes("publicationStatus: 'published'")) return;
+  if (entry.includes("publicationStatus: 'ready'")) {
+    entry = entry.replace("publicationStatus: 'ready'", "publicationStatus: 'published'");
+  } else if (entry.includes("publicationStatus: 'draft'")) {
+    entry = entry.replace("publicationStatus: 'draft'", "publicationStatus: 'published'");
+  } else {
+    entry = entry.replace(/(path:\s*['\"][^'\"]+['\"],)/, "$1\n    publicationStatus: 'published',");
+  }
+
+  writeFileSync(TOOLS_CONFIG_FILE, `${before}${entry}${after}`, "utf-8");
 }
 
 function findNextPublishable(queue, now) {
   return queue.find((item) => {
     if (!["ready", "scheduled"].includes(item.status)) return false;
+    if (FORCE) return true;
     if (!item.scheduledAt) return true;
     return new Date(item.scheduledAt).getTime() <= now.getTime();
   });
@@ -74,6 +104,7 @@ function commitAndPush(tool) {
     [
       "git add",
       "scripts/tool-queue.json",
+      "src/data/tools-config.ts",
       "public/sitemap.xml",
       "public/ai-index.json",
       "public/llms.txt",
@@ -143,9 +174,27 @@ function main() {
     throw new Error(`Tool ${next.id} is marked ${next.status} but missing coverage: ${missing.join(", ")}`);
   }
 
+  if (DRY_RUN) {
+    console.log(
+      JSON.stringify(
+        {
+          wouldPublish: next.id,
+          titleKo: next.titleKo,
+          path: next.path,
+          coverage,
+          dryRun: true,
+        },
+        null,
+        2,
+      ),
+    );
+    return;
+  }
+
   next.status = "published";
   next.publishedAt = now.toISOString();
   writeJson(QUEUE_FILE, queue);
+  markToolConfigPublished(next.id);
 
   run("node scripts/sync-indexable-content.mjs");
   run("node scripts/generate-crawler-pages.mjs");
@@ -157,16 +206,14 @@ function main() {
         titleKo: next.titleKo,
         path: next.path,
         publishedAt: next.publishedAt,
-        dryRun: DRY_RUN,
+        dryRun: false,
       },
       null,
       2,
     ),
   );
 
-  if (!DRY_RUN) {
-    commitAndPush(next);
-  }
+  commitAndPush(next);
 }
 
 try {

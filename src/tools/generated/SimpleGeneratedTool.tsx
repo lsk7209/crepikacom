@@ -251,6 +251,219 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "faq-schema-builder": {
+    id: "faq-schema-builder",
+    buttonLabel: "FAQ 스키마 만들기",
+    fields: [
+      {
+        key: "faq",
+        label: "질문과 답변",
+        type: "textarea",
+        placeholder:
+          "질문: SEO 제목은 몇 자가 적당한가요?\n답변: 보통 50~60자 안에서 핵심 의미가 보이게 작성합니다.\n\n질문: 메타 설명은 꼭 필요한가요?\n답변: 중요한 페이지에는 고유한 설명을 넣는 것이 좋습니다.",
+      },
+    ],
+    run: ({ faq }) => {
+      const blocks = faq
+        .split(/\n\s*\n/)
+        .map((block) => block.trim())
+        .filter(Boolean);
+      const items = blocks
+        .map((block) => {
+          const question = block.match(/(?:질문|Q)[:：]\s*(.+)/i)?.[1]?.trim();
+          const answer = block.match(/(?:답변|A)[:：]\s*([\s\S]+)/i)?.[1]?.trim();
+          return question && answer ? { question, answer } : null;
+        })
+        .filter(Boolean) as { question: string; answer: string }[];
+
+      if (!items.length) {
+        throw new Error("질문:/답변: 형식으로 최소 1개 FAQ를 입력해 주세요.");
+      }
+
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: items.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      };
+
+      return {
+        summary: `${items.length}개 FAQ를 JSON-LD 스키마 초안으로 변환했습니다.`,
+        output: `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>`,
+        metrics: [
+          { label: "FAQ 수", value: `${items.length}개`, tone: "primary" },
+          { label: "형식", value: "FAQPage", tone: "accent" },
+        ],
+        tips: [
+          "페이지 본문에 실제로 보이는 질문과 답변만 FAQ 스키마에 넣으세요.",
+          "광고성 문구보다 사용자가 바로 이해할 수 있는 짧은 답변이 좋습니다.",
+          "스키마 적용 후 Google Rich Results Test에서 오류가 없는지 확인하세요.",
+        ],
+      };
+    },
+  },
+  "howto-schema-builder": {
+    id: "howto-schema-builder",
+    buttonLabel: "HowTo 스키마 만들기",
+    fields: [
+      { key: "name", label: "HowTo 제목", type: "text", placeholder: "예: SEO 제목 검사하는 방법" },
+      {
+        key: "description",
+        label: "간단한 설명",
+        type: "textarea",
+        placeholder: "이 절차로 제목 길이와 키워드 위치를 점검할 수 있습니다.",
+      },
+      {
+        key: "steps",
+        label: "단계 목록",
+        type: "textarea",
+        placeholder: "1. 제목을 입력합니다.\n2. 핵심 키워드를 입력합니다.\n3. 검사 결과를 확인합니다.",
+      },
+    ],
+    run: ({ name, description, steps }) => {
+      const stepItems = steps
+        .split("\n")
+        .map((line) => line.replace(/^\s*\d+[.)]\s*/, "").trim())
+        .filter(Boolean);
+      if (!name.trim() || stepItems.length < 2) {
+        throw new Error("HowTo 제목과 최소 2개 이상의 단계를 입력해 주세요.");
+      }
+
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: name.trim(),
+        description: description.trim(),
+        inLanguage: "ko-KR",
+        step: stepItems.map((step, index) => ({
+          "@type": "HowToStep",
+          position: index + 1,
+          name: `${index + 1}단계`,
+          text: step,
+        })),
+      };
+
+      return {
+        summary: `${stepItems.length}단계 HowTo JSON-LD 초안을 생성했습니다.`,
+        output: `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>`,
+        metrics: [
+          { label: "단계 수", value: `${stepItems.length}개`, tone: "primary" },
+          { label: "형식", value: "HowTo", tone: "accent" },
+        ],
+        tips: [
+          "HowTo 스키마는 실제 절차형 콘텐츠에만 사용하세요.",
+          "각 단계는 한 가지 행동만 설명하면 검색엔진과 사용자 모두 이해하기 쉽습니다.",
+          "도구 사용법, 설정법, 체크 절차처럼 순서가 중요한 페이지에 적합합니다.",
+        ],
+      };
+    },
+  },
+  "blog-cta-checker": {
+    id: "blog-cta-checker",
+    buttonLabel: "CTA 검사하기",
+    fields: [
+      {
+        key: "cta",
+        label: "CTA 문구",
+        type: "textarea",
+        placeholder: "예: 지금 SEO 제목 길이 검사기로 내 글 제목을 확인해 보세요.",
+      },
+    ],
+    run: ({ cta }) => {
+      const text = cta.trim();
+      const hasVerb = /(확인|시작|다운로드|계산|생성|비교|신청|문의|복사|사용|점검)/.test(text);
+      const hasSpecificTarget = /(제목|설명|URL|도구|검사기|계산기|가이드|체크리스트|템플릿)/.test(text);
+      const hasUrgency = /(지금|바로|오늘|먼저|무료|간단히|3초|1분)/.test(text);
+      const length = text.length;
+      const score =
+        (length >= 18 && length <= 80 ? 30 : length <= 120 ? 18 : 8) +
+        (hasVerb ? 30 : 8) +
+        (hasSpecificTarget ? 25 : 10) +
+        (hasUrgency ? 15 : 6);
+
+      return {
+        summary:
+          score >= 80
+            ? "행동이 분명한 CTA입니다."
+            : score >= 60
+              ? "사용 가능하지만 행동 동사나 대상 표현을 더 구체화하면 좋습니다."
+              : "무엇을 해야 하는지와 왜 해야 하는지가 약합니다.",
+        metrics: [
+          { label: "점수", value: `${Math.min(score, 100)}점`, tone: "primary" },
+          { label: "길이", value: `${length}자`, tone: "accent" },
+          { label: "행동 동사", value: hasVerb ? "있음" : "약함" },
+        ],
+        tips: [
+          "CTA는 '좋습니다' 같은 평가보다 '확인하세요', '계산하세요' 같은 행동으로 끝내세요.",
+          "사용자가 이동할 대상이 도구인지 글인지 문의인지 분명해야 합니다.",
+          "본문 중간에는 부드러운 CTA, 결론에는 직접적인 CTA를 배치하면 자연스럽습니다.",
+        ],
+      };
+    },
+  },
+  "paragraph-readability-checker": {
+    id: "paragraph-readability-checker",
+    buttonLabel: "문단 가독성 검사하기",
+    fields: [
+      {
+        key: "text",
+        label: "본문 텍스트",
+        type: "textarea",
+        placeholder: "검사할 블로그 본문이나 문단을 붙여넣으세요.",
+      },
+    ],
+    run: ({ text }) => {
+      const paragraphs = text
+        .split(/\n\s*\n/)
+        .map((p) => p.trim())
+        .filter(Boolean);
+      const sentences = text.split(/[.!?。！？]\s*|다\.\s*/).filter((s) => s.trim().length > 0);
+      const longParagraphs = paragraphs.filter((p) => p.length > 320);
+      const averageParagraphLength = paragraphs.length
+        ? Math.round(paragraphs.reduce((sum, p) => sum + p.length, 0) / paragraphs.length)
+        : 0;
+      const score = Math.max(
+        20,
+        100 -
+          longParagraphs.length * 18 -
+          Math.max(0, averageParagraphLength - 180) * 0.12 -
+          Math.max(0, sentences.length / Math.max(paragraphs.length, 1) - 5) * 8,
+      );
+
+      const output = longParagraphs.length
+        ? longParagraphs
+            .slice(0, 5)
+            .map((p, index) => `긴 문단 ${index + 1} (${p.length}자): ${p.slice(0, 120)}...`)
+            .join("\n\n")
+        : "과도하게 긴 문단은 발견되지 않았습니다.";
+
+      return {
+        summary:
+          score >= 80
+            ? "모바일에서도 읽기 좋은 문단 구조입니다."
+            : score >= 60
+              ? "대체로 읽을 수 있지만 긴 문단 일부를 나누면 더 좋아집니다."
+              : "문단이 길어 모바일 가독성이 떨어질 가능성이 큽니다.",
+        output,
+        metrics: [
+          { label: "점수", value: `${Math.round(score)}점`, tone: "primary" },
+          { label: "문단 수", value: `${paragraphs.length}개`, tone: "accent" },
+          { label: "긴 문단", value: `${longParagraphs.length}개` },
+        ],
+        tips: [
+          "모바일 본문은 한 문단을 2~4문장 안으로 유지하면 읽기 쉽습니다.",
+          "숫자, 단계, 조건이 많으면 불릿 목록이나 표로 분리하세요.",
+          "결론 문단은 짧게 유지하고 다음 행동을 한 문장으로 제시하세요.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {

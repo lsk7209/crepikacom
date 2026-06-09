@@ -10,8 +10,9 @@ const RSS_FILE = "public/rss.xml";
 const AI_INDEX_FILE = "public/ai-index.json";
 const LLMS_FILE = "public/llms.txt";
 const LLMS_FULL_FILE = "public/llms-full.txt";
+const TOOL_QUEUE_FILE = "scripts/tool-queue.json";
 
-const CORE_URLS = [
+const STATIC_CORE_URLS = [
   ["/", "weekly", "1.0"],
   ["/tools/text-counter", "monthly", "0.8"],
   ["/tools/byte-counter", "monthly", "0.8"],
@@ -32,6 +33,21 @@ const CORE_URLS = [
   ["/terms", "yearly", "0.3"],
   ["/blog", "daily", "0.9"],
 ];
+
+function loadPublishedToolUrls() {
+  try {
+    const queue = JSON.parse(readFileSync(TOOL_QUEUE_FILE, "utf8"));
+    return queue
+      .filter((item) => item.status === "published" && item.path)
+      .map((item) => [item.path, "monthly", "0.8"]);
+  } catch {
+    return [];
+  }
+}
+
+const CORE_URLS = Array.from(
+  new Map([...STATIC_CORE_URLS, ...loadPublishedToolUrls()].map((row) => [row[0], row])).values(),
+);
 
 function extractArrayLiteral(source, marker) {
   const markerIndex = source.indexOf(marker);
@@ -251,6 +267,12 @@ function writeAiFiles(posts) {
   const latestLines = latest
     .map((post) => `- [${post.title}](${SITE_URL}/blog/${post.slug}): ${stripMarkdown(post.description).slice(0, 140)}`)
     .join("\n");
+  const queuedToolLines = CORE_URLS.filter(
+    ([path]) => path.startsWith("/tools/") && !STATIC_CORE_URLS.some(([staticPath]) => staticPath === path),
+  )
+    .map(([path]) => `- [${path.split("/").pop()}](${SITE_URL}${path})`)
+    .join("\n");
+  const queuedToolSection = queuedToolLines ? `\n${queuedToolLines}` : "";
   const llms = `# Crepika
 
 > Free browser-based creator tools plus SEO and SNS content guides for Korean creators.
@@ -273,7 +295,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [URL Slug Generator](${SITE_URL}/tools/slug-generator)
 - [UTM URL Builder](${SITE_URL}/tools/utm-url-builder)
 - [CTR Calculator](${SITE_URL}/tools/ctr-calculator)
-- [AdSense RPM Calculator](${SITE_URL}/tools/adsense-rpm-calculator)
+- [AdSense RPM Calculator](${SITE_URL}/tools/adsense-rpm-calculator)${queuedToolSection}
 
 ## Blog
 

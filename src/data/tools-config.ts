@@ -5,6 +5,7 @@ export interface ToolConfig {
   id: string;
   category: Category;
   path: string;
+  publicationStatus?: 'published' | 'ready' | 'draft';
   
   // 한국어 필드 (메인)
   titleKo: string;
@@ -219,6 +220,70 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     seoDescription: '애드센스 예상 수익과 페이지뷰로 Page RPM을 무료 계산하세요. 블로그 수익성을 빠르게 점검하는 도구.',
     schemaType: 'SoftwareApplication',
   },
+  {
+    id: 'faq-schema-builder',
+    category: 'plan',
+    titleKo: 'FAQ 스키마 초안 생성기',
+    descriptionKo: '질문과 답변을 FAQPage JSON-LD 초안으로 변환합니다.',
+    oneLineProblemKo: '블로그 FAQ를 검색엔진이 이해할 수 있는 구조화 데이터로 바꾸고 싶나요?',
+    titleEn: 'FAQ Schema Builder',
+    descriptionEn: 'Convert questions and answers into FAQPage JSON-LD.',
+    path: '/tools/faq-schema-builder',
+    publicationStatus: 'ready',
+    keywords: ['FAQ 스키마', 'FAQPage', 'JSON-LD', '구조화 데이터', 'AEO'],
+    adStrategy: 'instant',
+    seoTitle: 'FAQ 스키마 초안 생성기 - FAQPage JSON-LD 도구 | 크레피카',
+    seoDescription: '질문과 답변을 FAQPage JSON-LD 구조화 데이터 초안으로 변환하세요. AEO와 검색 이해도를 높이는 무료 도구.',
+    schemaType: 'SoftwareApplication',
+  },
+  {
+    id: 'howto-schema-builder',
+    category: 'plan',
+    titleKo: 'HowTo 스키마 초안 생성기',
+    descriptionKo: '단계별 안내문을 HowTo JSON-LD 초안으로 변환합니다.',
+    oneLineProblemKo: '사용법이나 절차형 글을 HowTo 구조화 데이터로 정리하고 싶나요?',
+    titleEn: 'HowTo Schema Builder',
+    descriptionEn: 'Convert step-by-step instructions into HowTo JSON-LD.',
+    path: '/tools/howto-schema-builder',
+    publicationStatus: 'ready',
+    keywords: ['HowTo 스키마', 'HowTo JSON-LD', '구조화 데이터', '사용법 스키마', 'SEO'],
+    adStrategy: 'instant',
+    seoTitle: 'HowTo 스키마 초안 생성기 - 단계형 JSON-LD 도구 | 크레피카',
+    seoDescription: '단계별 사용법을 HowTo JSON-LD 구조화 데이터 초안으로 변환하세요. 절차형 콘텐츠 SEO에 유용한 무료 도구.',
+    schemaType: 'SoftwareApplication',
+  },
+  {
+    id: 'blog-cta-checker',
+    category: 'analyze',
+    titleKo: '블로그 CTA 검사기',
+    descriptionKo: '글 안의 CTA가 구체적이고 행동을 유도하는지 점검합니다.',
+    oneLineProblemKo: '블로그 글 마지막 문구가 사용자의 다음 행동을 제대로 이끌고 있나요?',
+    titleEn: 'Blog CTA Checker',
+    descriptionEn: 'Check whether a blog call-to-action is specific and action-oriented.',
+    path: '/tools/blog-cta-checker',
+    publicationStatus: 'ready',
+    keywords: ['CTA 검사', '블로그 CTA', 'Call To Action', '전환 문구', '내부링크'],
+    adStrategy: 'instant',
+    seoTitle: '블로그 CTA 검사기 - 행동 유도 문구 점검 도구 | 크레피카',
+    seoDescription: '블로그 CTA 문구의 행동 동사, 명확성, 길이를 점검하세요. 내부 링크와 전환 흐름 개선에 유용한 무료 도구.',
+    schemaType: 'SoftwareApplication',
+  },
+  {
+    id: 'paragraph-readability-checker',
+    category: 'analyze',
+    titleKo: '문단 가독성 검사기',
+    descriptionKo: '너무 긴 문단과 분리 후보를 찾아 모바일 본문 가독성을 점검합니다.',
+    oneLineProblemKo: '블로그 본문이 모바일에서 답답하게 보이는지 빠르게 확인하고 싶나요?',
+    titleEn: 'Paragraph Readability Checker',
+    descriptionEn: 'Find overly long paragraphs and readability risks in article drafts.',
+    path: '/tools/paragraph-readability-checker',
+    publicationStatus: 'ready',
+    keywords: ['문단 가독성', '블로그 가독성', '모바일 본문', '콘텐츠 최적화', '읽기 쉬운 글'],
+    adStrategy: 'instant',
+    seoTitle: '문단 가독성 검사기 - 모바일 본문 읽기 쉬움 점검 | 크레피카',
+    seoDescription: '긴 문단과 모바일 가독성 위험을 무료로 검사하세요. 블로그 본문 구조와 체류시간 개선에 유용한 도구.',
+    schemaType: 'SoftwareApplication',
+  },
 ];
 
 export const CATEGORY_LABELS: Record<Category, string> = {
@@ -229,10 +294,11 @@ export const CATEGORY_LABELS: Record<Category, string> = {
 };
 
 export function searchTools(query: string): ToolConfig[] {
-  if (!query.trim()) return TOOLS_CONFIG;
+  const publishedTools = TOOLS_CONFIG.filter(tool => tool.publicationStatus !== 'ready' && tool.publicationStatus !== 'draft');
+  if (!query.trim()) return publishedTools;
   
   const searchTerm = query.toLowerCase();
-  return TOOLS_CONFIG.filter(tool => {
+  return publishedTools.filter(tool => {
     const searchableText = [
       tool.titleKo,
       tool.titleEn,
@@ -247,9 +313,9 @@ export function searchTools(query: string): ToolConfig[] {
 }
 
 export function getToolById(id: string): ToolConfig | undefined {
-  return TOOLS_CONFIG.find(tool => tool.id === id);
+  return TOOLS_CONFIG.find(tool => tool.id === id && tool.publicationStatus !== 'ready' && tool.publicationStatus !== 'draft');
 }
 
 export function getToolsByCategory(category: Category): ToolConfig[] {
-  return TOOLS_CONFIG.filter(tool => tool.category === category);
+  return TOOLS_CONFIG.filter(tool => tool.category === category && tool.publicationStatus !== 'ready' && tool.publicationStatus !== 'draft');
 }

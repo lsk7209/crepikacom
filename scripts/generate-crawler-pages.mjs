@@ -7,6 +7,37 @@ import { readFileSync } from "node:fs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
 const siteUrl = "https://crepika.com";
+const toolQueueFile = join(root, "scripts", "tool-queue.json");
+
+const alwaysPublishedToolPaths = new Set([
+  "/tools/text-counter",
+  "/tools/byte-counter",
+  "/tools/lorem-generator",
+  "/tools/webp-converter",
+  "/tools/insta-spacer",
+  "/tools/hashtag-mixer",
+  "/tools/qr-generator",
+]);
+
+function loadPublishedQueuedToolPaths() {
+  try {
+    const queue = JSON.parse(readFileSync(toolQueueFile, "utf8"));
+    return new Set(
+      queue
+        .filter((item) => item.status === "published" && item.path)
+        .map((item) => item.path),
+    );
+  } catch {
+    return new Set();
+  }
+}
+
+const publishedQueuedToolPaths = loadPublishedQueuedToolPaths();
+
+function shouldRenderToolPage(canonical) {
+  const path = new URL(canonical).pathname;
+  return alwaysPublishedToolPaths.has(path) || publishedQueuedToolPaths.has(path);
+}
 
 const staticPages = [
   {
@@ -81,6 +112,10 @@ const toolPages = [
   ["tools/utm-url-builder/index.html", "UTM URL Builder | Crepika", "Build clean campaign tracking URLs for GA4 without a login step.", `${siteUrl}/tools/utm-url-builder`, "UTM URL Builder"],
   ["tools/ctr-calculator/index.html", "CTR Calculator | Crepika", "Calculate click-through rate from impressions and clicks for search, ads, email, and social links.", `${siteUrl}/tools/ctr-calculator`, "CTR Calculator"],
   ["tools/adsense-rpm-calculator/index.html", "AdSense RPM Calculator | Crepika", "Calculate page RPM from estimated earnings and pageviews for blog revenue checks.", `${siteUrl}/tools/adsense-rpm-calculator`, "AdSense RPM Calculator"],
+  ["tools/faq-schema-builder/index.html", "FAQ Schema Builder | Crepika", "Convert visible questions and answers into FAQPage JSON-LD drafts for structured data review.", `${siteUrl}/tools/faq-schema-builder`, "FAQ Schema Builder"],
+  ["tools/howto-schema-builder/index.html", "HowTo Schema Builder | Crepika", "Convert step-by-step instructions into HowTo JSON-LD drafts for procedural content.", `${siteUrl}/tools/howto-schema-builder`, "HowTo Schema Builder"],
+  ["tools/blog-cta-checker/index.html", "Blog CTA Checker | Crepika", "Check whether a blog call-to-action is specific, action-oriented, and useful for readers.", `${siteUrl}/tools/blog-cta-checker`, "Blog CTA Checker"],
+  ["tools/paragraph-readability-checker/index.html", "Paragraph Readability Checker | Crepika", "Find overly long paragraphs and mobile readability risks in article drafts.", `${siteUrl}/tools/paragraph-readability-checker`, "Paragraph Readability Checker"],
 ].map(([path, title, description, canonical, heading]) => ({
   path,
   title,
@@ -92,7 +127,7 @@ const toolPages = [
     "Use this page as a practical browser tool, then review the output before publishing it to a live platform.",
     "Related pages, privacy information, and contact details are linked in the navigation for crawler and user clarity.",
   ],
-}));
+})).filter((page) => shouldRenderToolPage(page.canonical));
 
 function extractArrayLiteral(source, marker) {
   const markerIndex = source.indexOf(marker);
