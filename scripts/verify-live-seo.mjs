@@ -4,7 +4,10 @@ const WWW_SITE_URL = "https://www.crepika.com";
 const ADS_TXT_LINE = "google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0";
 const ROOT_HTML_PATHS = ["/"];
 const SAMPLE_HTML_PATHS = ["/blog", "/tools/qr-generator", "/about", "/contact", "/privacy", "/terms"];
+const SAMPLE_ARTICLE_PATH = "/blog/review-psychology-marketing";
 const READABLE_HOME_MARKERS = ["\uD06C\uB808\uD53C\uCE74", "\uB85C\uADF8\uC778", "\uBB34\uB8CC"];
+const REQUIRED_CRAWLER_SHELL_MARKERS = ["\uAE00 \uBAA9\uCC28", "\uB2E4\uC74C \uB2E8\uACC4", "\uC0AC\uC774\uD2B8 \uAC80\uD1A0 \uC815\uBCF4"];
+const FORBIDDEN_CRAWLER_SHELL_MARKERS = ["Table of contents", "Next step", "Site and review context"];
 
 const failures = [];
 
@@ -95,6 +98,23 @@ function validateHeadingOrder(path, body) {
       return;
     }
   }
+}
+
+function validateCrawlerShellLanguage(path, body) {
+  for (const marker of REQUIRED_CRAWLER_SHELL_MARKERS) {
+    if (!body.includes(marker)) {
+      fail(`${path} is missing required Korean crawler shell marker: ${marker}`);
+    }
+  }
+  for (const marker of FORBIDDEN_CRAWLER_SHELL_MARKERS) {
+    if (body.includes(marker)) {
+      fail(`${path} contains untranslated crawler shell marker: ${marker}`);
+    }
+  }
+  return {
+    koreanShell: REQUIRED_CRAWLER_SHELL_MARKERS.every((marker) => body.includes(marker)),
+    untranslatedShell: FORBIDDEN_CRAWLER_SHELL_MARKERS.filter((marker) => body.includes(marker)),
+  };
 }
 
 async function validateTextEndpoint(path, predicate, message) {
@@ -226,6 +246,25 @@ async function main() {
       status: response.status,
       bytes: body.length,
       htmlBasics: meta,
+    });
+  }
+
+  {
+    const path = SAMPLE_ARTICLE_PATH;
+    const { response, body } = await get(path);
+    if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
+    const meta = hasMeaningfulMeta(body);
+    for (const [name, ok] of Object.entries(meta)) {
+      if (!ok) fail(`${path} is missing live article HTML marker: ${name}.`);
+    }
+    validateHeadingOrder(path, body);
+    const shellLanguage = validateCrawlerShellLanguage(path, body);
+    checks.push({
+      path,
+      status: response.status,
+      bytes: body.length,
+      htmlBasics: meta,
+      shellLanguage,
     });
   }
 

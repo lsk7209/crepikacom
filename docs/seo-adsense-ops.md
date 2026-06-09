@@ -24,7 +24,7 @@ npm run verify:adsense
 ## What Each Check Proves
 
 - `verify:seo`: local generated crawler pages, metadata, sitemap, RSS/feed, robots, ads.txt, structured data, and release cadence gates.
-- `verify:live`: production HTTP checks for canonical host redirect, robots, ads.txt, sitemap, RSS/feed, security.txt, and sample page metadata.
+- `verify:live`: production HTTP checks for canonical host redirect, robots, ads.txt, sitemap, RSS/feed, security.txt, sample page metadata, and Korean crawler-shell labels on a sample article page.
 - `verify:gsc`: Google Search Console sitemap status for `https://crepika.com/sitemap.xml`.
 - `verify:adsense`: read-only AdSense readiness for `crepika.com` only. It must not print OAuth tokens, client secrets, revenue metrics, or unrelated sites.
 
