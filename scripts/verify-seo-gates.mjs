@@ -596,6 +596,24 @@ function validateQueueCoverage(queue) {
     fail(`tool-queue.json has duplicate IDs: ${[...new Set(duplicateIds)].join(", ")}`);
   }
 
+  const scheduleTimes = queue.map((item) => Date.parse(item.scheduledAt));
+  for (const [index, time] of scheduleTimes.entries()) {
+    if (!Number.isFinite(time)) {
+      fail(`Tool ${queue[index]?.id ?? index} has an invalid scheduledAt value.`);
+    }
+  }
+  for (let index = 1; index < scheduleTimes.length; index++) {
+    const previous = scheduleTimes[index - 1];
+    const current = scheduleTimes[index];
+    if (!Number.isFinite(previous) || !Number.isFinite(current)) continue;
+    const gapHours = (current - previous) / (60 * 60 * 1000);
+    if (gapHours !== 5) {
+      fail(
+        `tool-queue.json must schedule tools exactly five hours apart; ${queue[index - 1].id} to ${queue[index].id} is ${gapHours}h.`,
+      );
+    }
+  }
+
   const config = requireFile("src/data/tools-config.ts");
   const component = requireFile("src/tools/generated/SimpleGeneratedTool.tsx");
   const generatedContent = requireFile("src/data/generated-tool-content.ts");
