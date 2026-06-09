@@ -33,6 +33,9 @@ const LEGACY_TOOL_REDIRECTS = {
   "sns-analytics": "ctr-calculator",
   "sns-calendar": "utm-url-builder",
 };
+const LEGACY_BLOG_REDIRECTS = {
+  "threads-marketing-complete-guide-meta-threads-follower-2026-": "threads-marketing-complete-guide-meta-threads-follower-2026",
+};
 const PUBLIC_ENDPOINT_HEADER_EXPECTATIONS = {
   "/robots.txt": { contentType: "text/plain", cacheControl: "public, max-age=3600, s-maxage=3600" },
   "/ads.txt": { contentType: "text/plain", cacheControl: "public, max-age=3600, s-maxage=3600" },
@@ -52,6 +55,24 @@ const HTML_HEADER_EXPECTATIONS = {
   referrerPolicy: "strict-origin-when-cross-origin",
   permissionsPolicy: "camera=(), microphone=(), geolocation=()",
 };
+const ROOT_ROUTE_SEGMENTS = new Set(["blog", "tools"]);
+const ALLOWED_STATIC_ROUTES = new Set([
+  "/",
+  "/about",
+  "/contact",
+  "/privacy",
+  "/terms",
+  "/rss.xml",
+  "/feed.xml",
+  "/sitemap.xml",
+  "/robots.txt",
+  "/ads.txt",
+  "/llms.txt",
+  "/llms-full.txt",
+  "/ai-index.json",
+  "/.well-known/security.txt",
+]);
+const GENERIC_ROUTE_SEGMENTS = new Set(["article", "content", "draft", "index", "new", "page", "post", "temp", "test"]);
 
 const failures = [];
 
@@ -66,6 +87,60 @@ function countMatches(value, pattern) {
 function extractXmlTags(source, tag) {
   const re = new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`, "g");
   return [...source.matchAll(re)].map((match) => match[1].trim());
+}
+
+function validateReadableUrlPath(path, context) {
+  if (!path.startsWith("/")) {
+    fail(`${context} must start with a slash: ${path}`);
+    return;
+  }
+  if (path !== "/" && path.endsWith("/")) {
+    fail(`${context} must not include a trailing slash: ${path}`);
+  }
+  if (/[?#]/.test(path)) {
+    fail(`${context} must not include query strings or fragments: ${path}`);
+  }
+  if (/%[0-9a-f]{2}/i.test(path)) {
+    fail(`${context} must use readable path text instead of percent encoding: ${path}`);
+  }
+
+  const normalized = path.replace(/\/+$/, "") || "/";
+  if (ALLOWED_STATIC_ROUTES.has(normalized)) return;
+
+  const segments = normalized.split("/").filter(Boolean);
+  if (!segments.length) return;
+  const root = segments[0];
+  if (!ROOT_ROUTE_SEGMENTS.has(root)) {
+    fail(`${context} must use an approved top-level route segment: ${path}`);
+  }
+  if (segments.length < 2) return;
+
+  for (const segment of segments.slice(1)) {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(segment)) {
+      fail(`${context} contains a non-readable URL segment "${segment}": ${path}`);
+    }
+    if (/^\d+$/.test(segment)) {
+      fail(`${context} contains a numeric-only URL segment "${segment}": ${path}`);
+    }
+    if (GENERIC_ROUTE_SEGMENTS.has(segment)) {
+      fail(`${context} contains a generic URL segment "${segment}"; use descriptive words: ${path}`);
+    }
+  }
+}
+
+function validateReadableCanonicalUrl(url, context) {
+  let parsed = null;
+  try {
+    parsed = new URL(url);
+  } catch {
+    fail(`${context} is not a valid absolute URL: ${url}`);
+    return false;
+  }
+  if (parsed.origin !== SITE_URL) {
+    fail(`${context} must use the canonical apex host: ${url}`);
+  }
+  validateReadableUrlPath(`${parsed.pathname}${parsed.search}${parsed.hash}`, context);
+  return parsed.origin === SITE_URL;
 }
 
 function listDuplicateValues(values) {
@@ -676,6 +751,10 @@ async function validateDiscoveryConsistency() {
   const sitemapBlogUrls = extractXmlTags(sitemapResult.body, "loc").filter((loc) =>
     loc.startsWith(`${SITE_URL}/blog/`),
   );
+  const sitemapUrls = extractXmlTags(sitemapResult.body, "loc");
+  for (const url of sitemapUrls) {
+    validateReadableCanonicalUrl(url, "Live sitemap URL");
+  }
   const rssLinks = extractXmlTags(rssResult.body, "link").filter((link) =>
     link.startsWith(`${SITE_URL}/blog/`),
   );
@@ -739,6 +818,7 @@ async function validateDiscoveryConsistency() {
 
   return {
     path: "discovery-consistency",
+    sitemapReadableUrls: sitemapUrls.length,
     sitemapBlogUrls: sitemapBlogUrls.length,
     rssItems: rssLinks.length,
     feedItems: feedLinks.length,
@@ -789,6 +869,27 @@ async function main() {
       status: redirect.status,
       location: redirect.location,
       canonicalToolRedirect: pointsToCanonicalTool,
+      permanent: redirect.status === 308,
+    });
+  }
+
+  for (const [legacySlug, canonicalSlug] of Object.entries(LEGACY_BLOG_REDIRECTS)) {
+    const legacyPath = `/blog/${legacySlug}`;
+    const canonicalPath = `/blog/${canonicalSlug}`;
+    const redirect = await getRedirect(`${SITE_URL}${legacyPath}`);
+    const pointsToCanonicalBlog =
+      redirect.status === 308 &&
+      [canonicalPath, `${SITE_URL}${canonicalPath}`].includes(redirect.location);
+    if (!pointsToCanonicalBlog) {
+      fail(
+        `${redirect.url} must 308 redirect to ${canonicalPath}; got ${redirect.status} ${redirect.location}.`,
+      );
+    }
+    checks.push({
+      path: legacyPath,
+      status: redirect.status,
+      location: redirect.location,
+      canonicalBlogRedirect: pointsToCanonicalBlog,
       permanent: redirect.status === 308,
     });
   }

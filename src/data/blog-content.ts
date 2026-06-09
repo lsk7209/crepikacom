@@ -16407,7 +16407,7 @@ SNS 피드에서는 첫 번째 카드만 보입니다. 첫 번째 카드에서 �
   }
 ,
   {
-    slug: 'threads-marketing-complete-guide-meta-threads-follower-2026-',
+    slug: 'threads-marketing-complete-guide-meta-threads-follower-2026',
     title: 'Threads 마케팅 완전 가이드: Meta Threads로 팔로워 모으는 2026 전략',
     description: 'Meta Threads에서 팔로워를 빠르게 늘리는 2026년 최신 전략을 단계별로 정리했습니다. 알고리즘 원리부터 콘텐츠 공식까지 실전 가이드.',
     category: 'guide',

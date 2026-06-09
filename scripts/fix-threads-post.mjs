@@ -6,7 +6,7 @@ copyFileSync(BLOG_FILE, BLOG_FILE + '.backup-threads');
 
 let content = readFileSync(BLOG_FILE, 'utf-8');
 
-const slugKey = "slug: 'threads-marketing-complete-guide-meta-threads-follower-2026-'";
+const slugKey = "slug: 'threads-marketing-complete-guide-meta-threads-follower-2026'";
 const slugPos = content.indexOf(slugKey);
 if (slugPos === -1) {
   console.log('ERROR: Threads slug not found');

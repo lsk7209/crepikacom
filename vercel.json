@@ -57,6 +57,11 @@
       "source": "/tools/sns-calendar",
       "destination": "/tools/utm-url-builder",
       "permanent": true
+    },
+    {
+      "source": "/blog/threads-marketing-complete-guide-meta-threads-follower-2026-",
+      "destination": "/blog/threads-marketing-complete-guide-meta-threads-follower-2026",
+      "permanent": true
     }
   ],
   "rewrites": [

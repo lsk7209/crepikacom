@@ -55,6 +55,9 @@ const TOOL_ID_ALIASES = {
   "sns-analytics": "ctr-calculator",
   "sns-calendar": "utm-url-builder",
 };
+const LEGACY_BLOG_REDIRECTS = {
+  "threads-marketing-complete-guide-meta-threads-follower-2026-": "threads-marketing-complete-guide-meta-threads-follower-2026",
+};
 const REQUIRED_OG_IMAGE_PATHS = [
   "public/og-image.png",
   "public/images/og-guide.png",
@@ -66,6 +69,24 @@ const REQUIRED_OG_IMAGE_PATHS = [
   "public/images/og-tool-publish.png",
   "public/images/og-tool-analyze.png",
 ];
+const ROOT_ROUTE_SEGMENTS = new Set(["blog", "tools"]);
+const ALLOWED_STATIC_ROUTES = new Set([
+  "/",
+  "/about",
+  "/contact",
+  "/privacy",
+  "/terms",
+  "/rss.xml",
+  "/feed.xml",
+  "/sitemap.xml",
+  "/robots.txt",
+  "/ads.txt",
+  "/llms.txt",
+  "/llms-full.txt",
+  "/ai-index.json",
+  "/.well-known/security.txt",
+]);
+const GENERIC_ROUTE_SEGMENTS = new Set(["article", "content", "draft", "index", "new", "page", "post", "temp", "test"]);
 
 const failures = [];
 const warnings = [];
@@ -218,6 +239,60 @@ function validateArticleTrustSchema(path, body, canonicalUrl) {
 function extractXmlTags(source, tag) {
   const re = new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`, "g");
   return [...source.matchAll(re)].map((match) => match[1].trim());
+}
+
+function validateReadableUrlPath(path, context) {
+  if (!path.startsWith("/")) {
+    fail(`${context} must start with a slash: ${path}`);
+    return;
+  }
+  if (path !== "/" && path.endsWith("/")) {
+    fail(`${context} must not include a trailing slash: ${path}`);
+  }
+  if (/[?#]/.test(path)) {
+    fail(`${context} must not include query strings or fragments: ${path}`);
+  }
+  if (/%[0-9a-f]{2}/i.test(path)) {
+    fail(`${context} must use readable path text instead of percent encoding: ${path}`);
+  }
+
+  const normalized = path.replace(/\/+$/, "") || "/";
+  if (ALLOWED_STATIC_ROUTES.has(normalized)) return;
+
+  const segments = normalized.split("/").filter(Boolean);
+  if (!segments.length) return;
+  const root = segments[0];
+  if (!ROOT_ROUTE_SEGMENTS.has(root)) {
+    fail(`${context} must use an approved top-level route segment: ${path}`);
+  }
+  if (segments.length < 2) return;
+
+  const contentSegments = segments.slice(1);
+  for (const segment of contentSegments) {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(segment)) {
+      fail(`${context} contains a non-readable URL segment "${segment}": ${path}`);
+    }
+    if (/^\d+$/.test(segment)) {
+      fail(`${context} contains a numeric-only URL segment "${segment}": ${path}`);
+    }
+    if (GENERIC_ROUTE_SEGMENTS.has(segment)) {
+      fail(`${context} contains a generic URL segment "${segment}"; use descriptive words: ${path}`);
+    }
+  }
+}
+
+function validateReadableCanonicalUrl(url, context) {
+  let parsed = null;
+  try {
+    parsed = new URL(url);
+  } catch {
+    fail(`${context} is not a valid absolute URL: ${url}`);
+    return;
+  }
+  if (parsed.origin !== SITE_URL) {
+    fail(`${context} must use the canonical apex host: ${url}`);
+  }
+  validateReadableUrlPath(`${parsed.pathname}${parsed.search}${parsed.hash}`, context);
 }
 
 function listDuplicateValues(values) {
@@ -561,6 +636,17 @@ function validatePublicFiles() {
       fail(`vercel.json must permanently redirect /tools/${legacyToolId} to /tools/${canonicalToolId}.`);
     }
   }
+  for (const [legacySlug, canonicalSlug] of Object.entries(LEGACY_BLOG_REDIRECTS)) {
+    const hasLegacyBlogRedirect = parsedVercelConfig?.redirects?.some(
+      (redirect) =>
+        redirect?.source === `/blog/${legacySlug}` &&
+        redirect?.destination === `/blog/${canonicalSlug}` &&
+        redirect?.permanent === true,
+    );
+    if (!hasLegacyBlogRedirect) {
+      fail(`vercel.json must permanently redirect /blog/${legacySlug} to /blog/${canonicalSlug}.`);
+    }
+  }
   if (/\"source\"\s*:\s*\"\/feed\.xml\"/i.test(vercelConfig)) {
     fail("vercel.json must not redirect /feed.xml now that public/feed.xml is generated.");
   }
@@ -726,6 +812,7 @@ function validateSitemapAndRss(queue, posts) {
     if (/[?#]/.test(loc)) {
       fail(`sitemap.xml contains query or hash URL: ${loc}`);
     }
+    validateReadableCanonicalUrl(loc, "sitemap.xml URL");
   }
 
   const readyOrDraft = queue.filter((item) => item.status !== "published");
@@ -760,6 +847,7 @@ function validateSitemapAndRss(queue, posts) {
   }
   for (const post of posts) {
     const url = `${SITE_URL}/blog/${post.slug}`;
+    validateReadableUrlPath(`/blog/${post.slug}`, `Blog post slug ${post.slug}`);
     if (!sitemap.includes(`<loc>${url}</loc>`)) {
       fail(`Renderable blog post is missing from sitemap.xml: ${post.slug}`);
     }
@@ -1074,6 +1162,7 @@ function validateQueueCoverage(queue) {
       fail(`Tool queue item has missing id/path/status: ${JSON.stringify(item)}`);
       continue;
     }
+    validateReadableUrlPath(item.path, `Tool ${item.id} path`);
     if (!["published", "ready", "draft", "scheduled"].includes(item.status)) {
       fail(`Tool ${item.id} has an invalid status: ${item.status}`);
     }
