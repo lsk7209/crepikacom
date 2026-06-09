@@ -280,7 +280,7 @@
     "type": "builder",
     "intent": "주제와 독자에 맞는 짧은 릴스 훅 패턴을 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-13T23:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/reels-hook-bank-builder"
@@ -293,7 +293,7 @@
     "type": "score-checker",
     "intent": "유튜브 제목의 길이, 핵심어 전면 배치, 명확성을 점검합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-14T04:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/youtube-title-length-checker"
@@ -306,7 +306,7 @@
     "type": "text-transform",
     "intent": "설명, 챕터, 링크, CTA를 보기 좋게 정리합니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-14T09:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/youtube-description-formatter"
@@ -319,7 +319,7 @@
     "type": "calculator",
     "intent": "대본 길이로 예상 말하기 시간을 계산합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-14T14:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/shorts-script-timer"
@@ -332,7 +332,7 @@
     "type": "text-transform",
     "intent": "긴 글을 번호가 붙은 스레드 게시물로 나눕니다.",
     "priority": "p1",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-14T19:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/thread-post-splitter"

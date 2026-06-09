@@ -1024,6 +1024,219 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "reels-hook-bank-builder": {
+    id: "reels-hook-bank-builder",
+    buttonLabel: "릴스 훅 만들기",
+    fields: [
+      { key: "topic", label: "릴스 주제", type: "text", placeholder: "예: 블로그 SEO 체크리스트" },
+      { key: "audience", label: "대상", type: "text", placeholder: "예: 애드센스 승인 준비 중인 블로거" },
+      { key: "benefit", label: "얻는 결과", type: "text", placeholder: "예: 발행 전 빠르게 점검할 수 있음" },
+    ],
+    run: ({ topic, audience, benefit }) => {
+      const topicText = topic.trim() || "오늘 주제";
+      const audienceText = audience.trim() || "콘텐츠를 만드는 사람";
+      const benefitText = benefit.trim() || "바로 적용할 수 있는 기준";
+      const hooks = [
+        `${audienceText}이 ${topicText}에서 자주 놓치는 3가지`,
+        `${topicText}, 이 순서로 보면 훨씬 쉬워집니다`,
+        `${benefitText}이 필요하다면 이 체크리스트부터 보세요`,
+        `${topicText} 전에 이것만 확인해도 실수가 줄어듭니다`,
+        `처음 시작하는 ${audienceText}을 위한 ${topicText} 빠른 정리`,
+        `${topicText} 때문에 막혔다면 이 10초 요약부터 보세요`,
+        `저장해두면 좋은 ${topicText} 기준`,
+        `${audienceText}에게 지금 필요한 ${topicText} 핵심만 정리했습니다`,
+      ];
+
+      return {
+        summary: `${hooks.length}개의 릴스 첫 문장 후보를 만들었습니다.`,
+        output: hooks.map((hook, index) => `${index + 1}. ${hook}`).join("\n"),
+        metrics: [
+          { label: "훅 후보", value: `${hooks.length}개`, tone: "primary" },
+          { label: "구조", value: "문제/기준/저장", tone: "accent" },
+          { label: "대상", value: audienceText },
+        ],
+        tips: [
+          "릴스 첫 1~2초에는 주제보다 시청자 상황이 먼저 보여야 멈춥니다.",
+          "숫자, 실수, 체크리스트, 저장 가치가 보이는 문장이 정보형 릴스에 잘 맞습니다.",
+          "훅은 과장보다 영상 안에서 바로 증명할 수 있는 약속이어야 합니다.",
+        ],
+      };
+    },
+  },
+  "youtube-title-length-checker": {
+    id: "youtube-title-length-checker",
+    buttonLabel: "유튜브 제목 검사하기",
+    fields: [
+      { key: "title", label: "제목", type: "textarea", placeholder: "예: 블로그 SEO 체크리스트 7가지: 애드센스 승인 전 꼭 확인하세요" },
+      { key: "keyword", label: "핵심 키워드", type: "text", placeholder: "예: 블로그 SEO" },
+    ],
+    run: ({ title, keyword }) => {
+      const cleanTitle = title.trim().replace(/\s+/g, " ");
+      const key = keyword.trim();
+      const keywordIndex = key ? cleanTitle.toLowerCase().indexOf(key.toLowerCase()) : -1;
+      const lengthOk = cleanTitle.length >= 25 && cleanTitle.length <= 70;
+      const hasCuriosity = /(왜|방법|가지|전|후|실수|체크|비밀|정리|가이드|초보)/.test(cleanTitle);
+      const score =
+        (lengthOk ? 35 : cleanTitle.length <= 85 ? 22 : 10) +
+        (key ? (keywordIndex >= 0 && keywordIndex <= 25 ? 30 : keywordIndex >= 0 ? 18 : 3) : 15) +
+        (hasCuriosity ? 25 : 10) +
+        (/[0-9]/.test(cleanTitle) ? 10 : 5);
+
+      return {
+        summary:
+          score >= 80
+            ? "검색과 클릭을 함께 고려한 유튜브 제목입니다."
+            : "길이, 키워드 위치, 클릭 이유를 더 선명하게 조정하세요.",
+        metrics: [
+          { label: "점수", value: `${Math.min(score, 100)}점`, tone: "primary" },
+          { label: "길이", value: `${cleanTitle.length}자`, tone: "accent" },
+          { label: "키워드 위치", value: keywordIndex >= 0 ? `${keywordIndex + 1}번째` : "없음" },
+        ],
+        output: [
+          `현재 제목: ${cleanTitle || "제목을 입력하세요"}`,
+          `권장: 핵심 키워드 앞쪽 + 구체적 결과 + 숫자 또는 상황 단서`,
+          `예시: ${key || "핵심 키워드"} 체크리스트 7가지: 초보자가 놓치기 쉬운 기준`,
+        ].join("\n"),
+        tips: [
+          "유튜브 제목은 검색 키워드와 클릭 동기가 함께 보여야 합니다.",
+          "너무 긴 제목은 모바일에서 핵심이 잘리므로 앞부분에 의미를 몰아두세요.",
+          "과장된 제목은 클릭 후 이탈을 만들 수 있으니 영상 내용으로 증명 가능한 약속만 쓰세요.",
+        ],
+      };
+    },
+  },
+  "youtube-description-formatter": {
+    id: "youtube-description-formatter",
+    buttonLabel: "설명란 정리하기",
+    fields: [
+      { key: "summary", label: "영상 요약", type: "textarea", placeholder: "영상에서 다루는 핵심 내용을 입력하세요." },
+      { key: "links", label: "링크", type: "textarea", placeholder: "블로그 글: https://crepika.com/blog\n도구: https://crepika.com/tools" },
+      { key: "chapters", label: "챕터", type: "textarea", placeholder: "00:00 인트로\n00:35 핵심 기준\n02:10 체크리스트" },
+    ],
+    run: ({ summary, links, chapters }) => {
+      const cleanSummary = summary.trim() || "이번 영상에서는 핵심 기준과 바로 적용할 수 있는 체크 포인트를 정리합니다.";
+      const linkLines = links
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean);
+      const chapterLines = chapters
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean);
+      const output = [
+        cleanSummary,
+        "",
+        "핵심 내용",
+        "- 문제 상황과 기준 정리",
+        "- 바로 적용할 수 있는 체크 포인트",
+        "- 다음 행동 안내",
+        "",
+        linkLines.length ? "관련 링크" : "",
+        ...linkLines.map((line) => `- ${line}`),
+        linkLines.length ? "" : "",
+        chapterLines.length ? "타임라인" : "",
+        ...chapterLines,
+        "",
+        "#크리에이터 #콘텐츠마케팅 #블로그SEO",
+      ]
+        .filter((line, index, array) => line || array[index - 1])
+        .join("\n");
+
+      return {
+        summary: "요약, 관련 링크, 타임라인이 있는 유튜브 설명란 초안입니다.",
+        output,
+        metrics: [
+          { label: "길이", value: `${output.length}자`, tone: "primary" },
+          { label: "링크", value: `${linkLines.length}개`, tone: "accent" },
+          { label: "챕터", value: `${chapterLines.length}개` },
+        ],
+        tips: [
+          "설명 첫 2줄에는 영상에서 얻는 결과를 먼저 적으세요.",
+          "관련 링크는 사용자가 다음 행동을 할 수 있는 순서로 정리하세요.",
+          "챕터는 긴 영상에서 탐색성을 높여 시청자 만족도를 높입니다.",
+        ],
+      };
+    },
+  },
+  "shorts-script-timer": {
+    id: "shorts-script-timer",
+    buttonLabel: "쇼츠 시간 계산하기",
+    fields: [
+      { key: "script", label: "대본", type: "textarea", placeholder: "쇼츠 또는 릴스에서 말할 대본을 붙여넣으세요." },
+      { key: "speed", label: "말 속도(분당 글자수)", type: "number", placeholder: "330" },
+    ],
+    run: ({ script, speed }) => {
+      const text = script.trim().replace(/\s+/g, " ");
+      const chars = text.length;
+      const charsPerMinute = Math.max(180, Number(speed) || 330);
+      const seconds = Math.ceil((chars / charsPerMinute) * 60);
+      const target = seconds <= 30 ? "30초 쇼츠 가능" : seconds <= 60 ? "60초 안에 가능" : "축약 필요";
+      const cutChars = Math.max(0, chars - charsPerMinute);
+
+      return {
+        summary: `예상 말하기 시간은 약 ${seconds}초입니다.`,
+        output: [
+          `예상 시간: ${seconds}초`,
+          `판정: ${target}`,
+          `60초 목표 초과분: ${cutChars > 0 ? `${cutChars}자 내외 축약` : "없음"}`,
+          "권장 구조: 2초 훅 -> 3개 포인트 -> 1문장 CTA",
+        ].join("\n"),
+        metrics: [
+          { label: "예상 시간", value: `${seconds}초`, tone: "primary" },
+          { label: "글자수", value: `${chars}자`, tone: "accent" },
+          { label: "속도", value: `${charsPerMinute}자/분` },
+        ],
+        tips: [
+          "쇼츠는 첫 문장과 마지막 CTA를 남기고 중복 설명부터 줄이세요.",
+          "숫자 목록은 3개 안팎이 짧은 영상에서 기억되기 쉽습니다.",
+          "자막까지 고려하면 실제 말 속도보다 조금 여유 있게 계산하는 편이 안전합니다.",
+        ],
+      };
+    },
+  },
+  "thread-post-splitter": {
+    id: "thread-post-splitter",
+    buttonLabel: "스레드로 나누기",
+    fields: [
+      { key: "text", label: "긴 글", type: "textarea", placeholder: "스레드나 X에 나눠 올릴 긴 글을 붙여넣으세요." },
+      { key: "limit", label: "글자 제한", type: "number", placeholder: "240" },
+    ],
+    run: ({ text, limit }) => {
+      const max = Math.min(500, Math.max(80, Number(limit) || 240));
+      const sentences = text
+        .replace(/\s+/g, " ")
+        .split(/(?<=[.!?。！？]|다\.|요\.)\s+/)
+        .map((sentence) => sentence.trim())
+        .filter(Boolean);
+      const posts: string[] = [];
+      let current = "";
+      for (const sentence of sentences.length ? sentences : [text.trim()]) {
+        if ((current ? `${current} ${sentence}` : sentence).length <= max) {
+          current = current ? `${current} ${sentence}` : sentence;
+        } else {
+          if (current) posts.push(current);
+          current = sentence.length <= max ? sentence : sentence.slice(0, max - 3) + "...";
+        }
+      }
+      if (current) posts.push(current);
+      const numbered = posts.map((post, index) => `${index + 1}/${posts.length} ${post}`);
+
+      return {
+        summary: `${numbered.length}개의 스레드 포스트로 나눴습니다.`,
+        output: numbered.join("\n\n"),
+        metrics: [
+          { label: "포스트", value: `${numbered.length}개`, tone: "primary" },
+          { label: "제한", value: `${max}자`, tone: "accent" },
+          { label: "평균", value: `${Math.round(numbered.join("").length / Math.max(numbered.length, 1))}자` },
+        ],
+        tips: [
+          "첫 포스트는 문제와 얻는 결과를 함께 보여줘야 이어 읽힙니다.",
+          "각 포스트는 한 가지 생각만 담고, 다음 포스트로 넘어갈 이유를 남기세요.",
+          "마지막에는 저장, 공유, 관련 글 확인 같은 하나의 행동만 요청하세요.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {
