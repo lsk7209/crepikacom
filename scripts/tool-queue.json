@@ -345,7 +345,7 @@
     "type": "text-transform",
     "intent": "긴 전문 글을 짧은 문단과 CTA 중심으로 정리합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-15T00:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/linkedin-post-formatter"
@@ -358,7 +358,7 @@
     "type": "builder",
     "intent": "브랜드, 니치, 확장 해시태그를 그룹별로 구성합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-15T05:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/hashtag-group-planner"
@@ -371,7 +371,7 @@
     "type": "builder",
     "intent": "반복 사용을 줄이도록 해시태그 세트를 회차별로 관리합니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-15T10:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/hashtag-rotation-tracker"
@@ -384,7 +384,7 @@
     "type": "score-checker",
     "intent": "프로필 소개 문구의 길이, CTA, 핵심 가치 전달을 점검합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-15T15:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/social-bio-length-checker"
@@ -397,7 +397,7 @@
     "type": "builder",
     "intent": "협업 제안을 위한 미디어킷 구성 요소를 정리합니다.",
     "priority": "p3",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-15T20:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/creator-media-kit-checklist"

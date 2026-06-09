@@ -1237,6 +1237,215 @@ const toolDefs: Record<string, SimpleToolDef> = {
       };
     },
   },
+  "linkedin-post-formatter": {
+    id: "linkedin-post-formatter",
+    buttonLabel: "링크드인 글 정리하기",
+    fields: [
+      { key: "idea", label: "핵심 아이디어", type: "textarea", placeholder: "공유하려는 경험, 인사이트, 사례를 입력하세요." },
+      { key: "audience", label: "대상 독자", type: "text", placeholder: "예: 1인 크리에이터, 마케터, 블로거" },
+      { key: "cta", label: "마지막 행동", type: "text", placeholder: "예: 댓글로 체크리스트 요청하기" },
+    ],
+    run: ({ idea, audience, cta }) => {
+      const ideaText = idea.trim() || "오늘 배운 핵심 인사이트";
+      const audienceText = audience.trim() || "이 주제에 관심 있는 분";
+      const ctaText = cta.trim() || "여러분은 어떻게 생각하시나요?";
+      const post = [
+        `${audienceText}에게 꼭 필요한 기준이 하나 있습니다.`,
+        "",
+        ideaText,
+        "",
+        "제가 정리한 핵심은 이렇습니다.",
+        "1. 문제를 먼저 한 문장으로 좁힙니다.",
+        "2. 실제 사례나 숫자로 근거를 붙입니다.",
+        "3. 다음 행동을 하나만 제안합니다.",
+        "",
+        ctaText,
+      ].join("\n");
+
+      return {
+        summary: "도입, 인사이트, 번호 목록, CTA가 있는 링크드인 글 초안입니다.",
+        output: post,
+        metrics: [
+          { label: "길이", value: `${post.length}자`, tone: "primary" },
+          { label: "구조", value: "Hook/List/CTA", tone: "accent" },
+          { label: "대상", value: audienceText },
+        ],
+        tips: [
+          "링크드인은 과한 홍보보다 경험에서 나온 기준과 배운 점이 잘 맞습니다.",
+          "첫 두 줄에 독자와 문제를 분명히 보여줘야 더 읽힙니다.",
+          "마지막 CTA는 댓글, 저장, 대화 요청 중 하나만 선택하세요.",
+        ],
+      };
+    },
+  },
+  "hashtag-group-planner": {
+    id: "hashtag-group-planner",
+    buttonLabel: "해시태그 그룹 만들기",
+    fields: [
+      { key: "topic", label: "콘텐츠 주제", type: "text", placeholder: "예: 블로그 SEO" },
+      { key: "niche", label: "세부 분야", type: "text", placeholder: "예: 애드센스, 콘텐츠 마케팅" },
+      { key: "brand", label: "브랜드/계정 키워드", type: "text", placeholder: "예: 크레피카" },
+    ],
+    run: ({ topic, niche, brand }) => {
+      const topicText = topic.trim() || "콘텐츠";
+      const nicheWords = niche
+        .split(/[,،\s]+/)
+        .map((word) => word.trim())
+        .filter(Boolean)
+        .slice(0, 4);
+      const brandText = brand.trim();
+      const clean = (value: string) => `#${value.replace(/[^0-9A-Za-z가-힣_]/g, "")}`;
+      const core = [topicText, `${topicText}팁`, `${topicText}가이드`].map(clean);
+      const nicheTags = nicheWords.map(clean);
+      const discovery = ["크리에이터", "콘텐츠마케팅", "SNS마케팅", "블로그운영"].map(clean);
+      const brandTags = brandText ? [clean(brandText), clean(`${brandText}도구`)] : [];
+      const output = [
+        "핵심 태그",
+        core.join(" "),
+        "",
+        "세부 태그",
+        nicheTags.join(" ") || "#세부분야 #타겟키워드",
+        "",
+        "발견 태그",
+        discovery.join(" "),
+        "",
+        "브랜드 태그",
+        brandTags.join(" ") || "#브랜드명",
+      ].join("\n");
+
+      return {
+        summary: "핵심, 세부, 발견, 브랜드 그룹으로 해시태그를 나눴습니다.",
+        output,
+        metrics: [
+          { label: "총 태그", value: `${core.length + nicheTags.length + discovery.length + brandTags.length}개`, tone: "primary" },
+          { label: "그룹", value: "4개", tone: "accent" },
+          { label: "주제", value: topicText },
+        ],
+        tips: [
+          "큰 태그만 반복하지 말고 세부 태그와 브랜드 태그를 섞어 테스트하세요.",
+          "게시물마다 같은 태그 묶음을 그대로 반복하면 학습 데이터가 좁아질 수 있습니다.",
+          "해시태그보다 첫 줄, 저장 가치, 이미지 품질이 먼저입니다.",
+        ],
+      };
+    },
+  },
+  "hashtag-rotation-tracker": {
+    id: "hashtag-rotation-tracker",
+    buttonLabel: "로테이션 만들기",
+    fields: [
+      { key: "tags", label: "해시태그 목록", type: "textarea", placeholder: "#블로그SEO #콘텐츠마케팅 #크리에이터 #애드센스 #SNS마케팅" },
+      { key: "groups", label: "그룹 수", type: "number", placeholder: "3" },
+    ],
+    run: ({ tags, groups }) => {
+      const tagList = tags
+        .split(/[\s,]+/)
+        .map((tag) => tag.trim())
+        .filter(Boolean)
+        .map((tag) => (tag.startsWith("#") ? tag : `#${tag}`));
+      const groupCount = Math.min(6, Math.max(2, Number(groups) || 3));
+      const buckets = Array.from({ length: groupCount }, () => [] as string[]);
+      tagList.forEach((tag, index) => buckets[index % groupCount].push(tag));
+      const output = buckets
+        .map((bucket, index) => `세트 ${index + 1}\n${bucket.join(" ") || "#태그를추가하세요"}`)
+        .join("\n\n");
+
+      return {
+        summary: `${groupCount}개 해시태그 세트로 나눴습니다.`,
+        output,
+        metrics: [
+          { label: "태그", value: `${tagList.length}개`, tone: "primary" },
+          { label: "세트", value: `${groupCount}개`, tone: "accent" },
+          { label: "평균", value: `${Math.ceil(tagList.length / groupCount)}개/세트` },
+        ],
+        tips: [
+          "성과를 비교하려면 한 번에 너무 많은 변수를 바꾸지 마세요.",
+          "각 세트에는 핵심 태그, 세부 태그, 브랜드 태그가 섞이도록 조정하세요.",
+          "노출보다 저장, 공유, 프로필 방문 같은 실제 행동 지표를 함께 보세요.",
+        ],
+      };
+    },
+  },
+  "social-bio-length-checker": {
+    id: "social-bio-length-checker",
+    buttonLabel: "프로필 소개 검사하기",
+    fields: [
+      { key: "bio", label: "프로필 소개", type: "textarea", placeholder: "무엇을 누구에게 제공하는지 적은 SNS 프로필 소개를 입력하세요." },
+      { key: "limit", label: "글자 제한", type: "number", placeholder: "150" },
+    ],
+    run: ({ bio, limit }) => {
+      const text = bio.trim().replace(/\s+/g, " ");
+      const max = Math.min(300, Math.max(60, Number(limit) || 150));
+      const hasAudience = /(위한|에게|대상|초보|마케터|크리에이터|블로거|사업자)/.test(text);
+      const hasValue = /(도움|제공|정리|성장|수익|전환|자동화|가이드|체크)/.test(text);
+      const hasCta = /(링크|문의|받기|확인|다운|구독|DM|프로필)/i.test(text);
+      const lengthOk = text.length <= max;
+      const score = (lengthOk ? 30 : 12) + (hasAudience ? 25 : 8) + (hasValue ? 25 : 8) + (hasCta ? 20 : 8);
+
+      return {
+        summary:
+          score >= 80
+            ? "대상, 제공 가치, 다음 행동이 비교적 선명한 프로필입니다."
+            : "누구를 위한 계정인지와 다음 행동을 더 분명히 보강하세요.",
+        output: [
+          `길이: ${text.length}/${max}자`,
+          `대상: ${hasAudience ? "있음" : "부족"}`,
+          `제공 가치: ${hasValue ? "있음" : "부족"}`,
+          `CTA: ${hasCta ? "있음" : "부족"}`,
+        ].join("\n"),
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "길이", value: `${text.length}자`, tone: "accent" },
+          { label: "제한", value: `${max}자` },
+        ],
+        tips: [
+          "프로필 첫 줄에는 누구를 위한 계정인지 바로 보여주세요.",
+          "제공 가치는 '팁 공유'보다 구체적인 결과로 적는 편이 좋습니다.",
+          "마지막에는 링크 확인, DM, 무료 자료처럼 하나의 행동을 제안하세요.",
+        ],
+      };
+    },
+  },
+  "creator-media-kit-checklist": {
+    id: "creator-media-kit-checklist",
+    buttonLabel: "미디어킷 체크하기",
+    fields: [
+      { key: "channels", label: "채널과 수치", type: "textarea", placeholder: "인스타그램 12,000 팔로워\n블로그 월 30,000 PV\n뉴스레터 2,000 구독자" },
+      { key: "offer", label: "협업 제안", type: "textarea", placeholder: "브랜드 리뷰, 콘텐츠 제작, 공동 캠페인 등 가능한 협업 유형" },
+    ],
+    run: ({ channels, offer }) => {
+      const channelLines = channels.split("\n").map((line) => line.trim()).filter(Boolean);
+      const offerText = offer.trim();
+      const hasNumbers = /[0-9]/.test(channels);
+      const hasOffer = offerText.length >= 20;
+      const hasChannels = channelLines.length >= 2;
+      const score = (hasChannels ? 35 : 15) + (hasNumbers ? 30 : 8) + (hasOffer ? 35 : 12);
+      const checklist = [
+        `채널 요약: ${hasChannels ? "있음" : "보강 필요"}`,
+        `성과 수치: ${hasNumbers ? "있음" : "보강 필요"}`,
+        `협업 상품: ${hasOffer ? "있음" : "보강 필요"}`,
+        "필수 구성: 소개, 타겟 독자, 채널 수치, 대표 콘텐츠, 협업 유형, 연락처",
+        "권장 추가: 과거 협업 사례, 평균 조회수, 저장률, 클릭률, 제작 가능 포맷",
+      ].join("\n");
+
+      return {
+        summary:
+          score >= 80
+            ? "협업 제안에 필요한 기본 미디어킷 정보가 갖춰져 있습니다."
+            : "채널 수치, 타겟 독자, 협업 상품 설명을 더 구체화하세요.",
+        output: checklist,
+        metrics: [
+          { label: "점수", value: `${score}점`, tone: "primary" },
+          { label: "채널", value: `${channelLines.length}개`, tone: "accent" },
+          { label: "수치", value: hasNumbers ? "있음" : "부족" },
+        ],
+        tips: [
+          "브랜드 담당자는 팔로워 수보다 타겟 적합성과 평균 성과를 함께 봅니다.",
+          "협업 유형은 가능한 산출물과 일정까지 구체적으로 적으면 좋습니다.",
+          "연락처와 응답 가능 시간을 명확히 두면 협업 문의 전환이 좋아집니다.",
+        ],
+      };
+    },
+  },
 };
 
 const missingToolDef: SimpleToolDef = {
