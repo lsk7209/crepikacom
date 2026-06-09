@@ -49,58 +49,58 @@ function shouldRenderToolPage(canonical) {
 const staticPages = [
   {
     path: "about/index.html",
-    title: "About Crepika | Free Creator Tools",
-    description: "Crepika provides free browser-based tools and practical publishing guides for Korean creators, marketers, bloggers, and small teams.",
+    title: "크레피카 소개 | 무료 크리에이터 도구",
+    description: "크레피카는 한국 크리에이터, 마케터, 블로거, 소규모 팀을 위한 브라우저 기반 무료 도구와 실전 발행 가이드를 제공합니다.",
     canonical: `${siteUrl}/about`,
-    heading: "About Crepika",
+    heading: "크레피카 소개",
     body: [
-      "Crepika is a utility site for creators who need quick production checks without a login step.",
-      "The site focuses on text counting, Korean byte checks, WebP conversion, QR code generation, Instagram line-break formatting, hashtag mixing, and practical publishing guides.",
+      "크레피카는 로그인 없이 빠르게 발행 전 점검을 끝내고 싶은 크리에이터를 위한 유틸리티 사이트입니다.",
+      "글자수 세기, 한글 바이트 확인, WebP 변환, QR 코드 생성, 인스타그램 줄바꿈, 해시태그 조합, 실전 발행 가이드를 중심으로 구성되어 있습니다.",
     ],
   },
   {
     path: "contact/index.html",
-    title: "Contact Crepika",
-    description: "Contact Crepika for service questions, correction requests, bug reports, and creator tool suggestions.",
+    title: "크레피카 문의 | 정정 요청과 도구 제안",
+    description: "서비스 질문, 정정 요청, 오류 제보, 크리에이터 도구 제안이 있다면 크레피카에 문의하세요.",
     canonical: `${siteUrl}/contact`,
-    heading: "Contact",
+    heading: "문의",
     body: [
-      "For corrections, service questions, and tool suggestions, contact support@crepika.com.",
-      "When reporting a bug, include the page URL, browser, device, and a short description of the expected result.",
+      "정정 요청, 서비스 질문, 도구 제안은 support@crepika.com으로 보내주세요.",
+      "오류를 제보할 때는 페이지 URL, 브라우저, 기기, 기대한 결과와 실제 결과를 함께 적어주면 더 빠르게 확인할 수 있습니다.",
     ],
   },
   {
     path: "privacy/index.html",
-    title: "Privacy Policy | Crepika",
-    description: "Crepika privacy policy covering browser-side tool processing, analytics, cookies, and Google AdSense.",
+    title: "개인정보처리방침 | 크레피카",
+    description: "크레피카 개인정보처리방침은 브라우저 내 도구 처리, 분석, 쿠키, Google AdSense 이용 방식을 설명합니다.",
     canonical: `${siteUrl}/privacy`,
-    heading: "Privacy Policy",
+    heading: "개인정보처리방침",
     body: [
-      "Crepika is designed so core tool inputs are processed in the browser whenever possible.",
-      "The site may use analytics and Google AdSense cookies to understand usage and support free access to the tools.",
-      "Users should avoid entering sensitive personal information into online tools unless it is necessary and they understand the privacy implications.",
+      "크레피카의 핵심 도구 입력값은 가능한 한 사용자의 브라우저 안에서 처리되도록 설계되어 있습니다.",
+      "사이트 이용 현황을 이해하고 무료 도구 운영을 지원하기 위해 분석 도구와 Google AdSense 쿠키가 사용될 수 있습니다.",
+      "사용자는 온라인 도구에 민감한 개인정보를 입력하기 전 필요성과 개인정보 영향을 직접 확인해야 합니다.",
     ],
   },
   {
     path: "terms/index.html",
-    title: "Terms of Use | Crepika",
-    description: "Crepika terms of use for free online creator tools, acceptable use, limitations, and advertising disclosure.",
+    title: "이용약관 | 크레피카",
+    description: "크레피카 이용약관은 무료 온라인 크리에이터 도구의 사용 범위, 제한, 책임, 광고 고지를 안내합니다.",
     canonical: `${siteUrl}/terms`,
-    heading: "Terms of Use",
+    heading: "이용약관",
     body: [
-      "Crepika tools are provided as free productivity aids. Users are responsible for reviewing outputs before publishing.",
-      "Do not use the site to infringe rights, process unlawful material, attack the service, or bypass platform rules.",
+      "크레피카 도구는 무료 생산성 보조 수단으로 제공됩니다. 사용자는 결과물을 실제로 발행하기 전에 직접 검토해야 합니다.",
+      "권리 침해, 불법 자료 처리, 서비스 공격, 플랫폼 규칙 우회 목적으로 사이트를 사용해서는 안 됩니다.",
     ],
   },
   {
     path: "blog/index.html",
-    title: "Crepika Blog | SEO and Creator Workflow Guides",
-    description: "Browse Crepika guides about SEO, SNS marketing, image optimization, content workflows, and free creator tools.",
+    title: "크레피카 블로그 | SEO와 크리에이터 워크플로우 가이드",
+    description: "SEO, SNS 마케팅, 이미지 최적화, 콘텐츠 워크플로우, 무료 크리에이터 도구 활용법을 다루는 크레피카 가이드입니다.",
     canonical: `${siteUrl}/blog`,
-    heading: "Crepika Blog",
+    heading: "크레피카 블로그",
     body: [
-      "The Crepika blog covers practical SEO, SNS marketing, creator workflow, image optimization, and publishing topics.",
-      "Each article is linked from the sitemap and RSS feed so crawlers can discover the full content archive.",
+      "크레피카 블로그는 실전 SEO, SNS 마케팅, 크리에이터 워크플로우, 이미지 최적화, 발행 점검 주제를 다룹니다.",
+      "각 글은 사이트맵과 RSS 피드에 연결되어 검색엔진이 전체 콘텐츠 아카이브를 발견할 수 있게 구성되어 있습니다.",
     ],
   },
 ];
@@ -437,7 +437,7 @@ function renderStaticPage(page) {
     ...page,
     structuredData,
     bodyHtml: `${paragraphs}
-      <section class="panel"><h2>Useful links</h2><ul><li><a href="/blog">Browse blog guides</a></li><li><a href="/tools/text-counter">Open creator tools</a></li><li><a href="/contact">Report corrections</a></li></ul></section>`,
+      <section class="panel"><h2>유용한 링크</h2><ul><li><a href="/blog">블로그 가이드 보기</a></li><li><a href="/tools/text-counter">크리에이터 도구 열기</a></li><li><a href="/contact">정정 요청하기</a></li></ul></section>`,
   });
 }
 
@@ -445,17 +445,17 @@ function renderBlogIndex(posts) {
   const latest = posts.slice().reverse().slice(0, 80);
   const links = latest.map((post) => `<li><a href="/blog/${escapeHtml(post.slug)}">${escapeHtml(post.title)}</a><br><span class="muted">${escapeHtml(post.description)}</span></li>`).join("\n");
   return renderShell({
-    title: "Crepika Blog | SEO and Creator Workflow Guides",
-    description: "Browse Crepika guides about SEO, SNS marketing, image optimization, content workflows, and free creator tools.",
+    title: "크레피카 블로그 | SEO와 크리에이터 워크플로우 가이드",
+    description: "SEO, SNS 마케팅, 이미지 최적화, 콘텐츠 워크플로우, 무료 크리에이터 도구 활용법을 다루는 크레피카 가이드입니다.",
     canonical: `${siteUrl}/blog`,
-    heading: "Crepika Blog",
+    heading: "크레피카 블로그",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "@id": `${siteUrl}/blog#collection`,
       url: `${siteUrl}/blog`,
-      name: "Crepika Blog",
-      description: "Browse practical SEO, SNS marketing, creator workflow, image optimization, and publishing checks.",
+      name: "크레피카 블로그",
+      description: "실전 SEO, SNS 마케팅, 크리에이터 워크플로우, 이미지 최적화, 발행 점검 가이드를 모은 페이지입니다.",
       inLanguage: "ko-KR",
       isPartOf: { "@id": `${siteUrl}/#website` },
       mainEntity: {

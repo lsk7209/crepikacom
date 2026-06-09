@@ -16,7 +16,15 @@ const FORBIDDEN_CRAWLER_SHELL_MARKERS = [
   "Next step",
   "Site and review context",
   "Latest guides",
+  "Useful links",
 ];
+const STATIC_TRUST_PAGE_MARKERS = {
+  "public/about/index.html": ["크레피카 소개", "무료 크리에이터 도구"],
+  "public/contact/index.html": ["크레피카 문의", "정정 요청"],
+  "public/privacy/index.html": ["개인정보처리방침", "Google AdSense"],
+  "public/terms/index.html": ["이용약관", "광고 고지"],
+  "public/blog/index.html": ["크레피카 블로그", "최신 가이드"],
+};
 const MOJIBAKE_MARKERS = [
   "\uFFFD",
   "\uCA0C",
@@ -356,6 +364,12 @@ function validateStaticHtmlBasics() {
     for (const marker of FORBIDDEN_CRAWLER_SHELL_MARKERS) {
       if (body.includes(marker)) {
         fail(`${path} contains untranslated crawler shell marker: ${marker}`);
+      }
+    }
+
+    for (const marker of STATIC_TRUST_PAGE_MARKERS[path] ?? []) {
+      if (!body.includes(marker)) {
+        fail(`${path} is missing required Korean trust-page marker: ${marker}`);
       }
     }
 
