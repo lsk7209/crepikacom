@@ -33,7 +33,7 @@
     "type": "score-checker",
     "intent": "붙여넣은 목차가 H1, H2, H3 위계에 맞게 구성됐는지 확인합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-10T00:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/h-tag-structure-checker"
@@ -46,7 +46,7 @@
     "type": "builder",
     "intent": "주제, 독자, 검색 의도에 맞춰 H2/H3 목차 템플릿을 만듭니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-10T05:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/blog-outline-builder"
@@ -85,7 +85,7 @@
     "type": "calculator",
     "intent": "글 유형과 섹션 수에 따라 권장 분량과 섹션별 배분을 계산합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-10T20:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/article-word-count-planner"
@@ -98,7 +98,7 @@
     "type": "score-checker",
     "intent": "키워드 반복률과 과최적화 위험을 확인합니다.",
     "priority": "p2",
-    "status": "draft",
+    "status": "ready",
     "scheduledAt": "2026-06-11T01:16:30.555Z",
     "publishedAt": null,
     "path": "/tools/keyword-density-checker"
