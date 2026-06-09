@@ -9,6 +9,17 @@ const RECENT_META_FILE = "src/data/recent-blog-posts-meta.ts";
 const PUBLISHER_ID = "pub-3050601904412736";
 const ADSENSE_CLIENT = "ca-pub-3050601904412736";
 const ADS_TXT_LINE = `google.com, ${PUBLISHER_ID}, DIRECT, f08c47fec0942fa0`;
+const BRAND_NAME_KO = "\uD06C\uB808\uD53C\uCE74";
+const READABLE_HOME_MARKERS = [BRAND_NAME_KO, "\uB85C\uADF8\uC778", "\uBB34\uB8CC"];
+const MOJIBAKE_MARKERS = [
+  "\uFFFD",
+  "\uCA0C",
+  "?\u0449",
+  "?\uB300",
+  "?\uB301",
+  "?\u044A",
+  "?\uAFA7",
+];
 const STATIC_PUBLIC_TOOL_IDS = new Set([
   "text-counter",
   "byte-counter",
@@ -130,7 +141,7 @@ function listFilesByName(root, fileName) {
 }
 
 function hasMojibakeMarker(body) {
-  return /[\uFFFD]|쨌|\?щ|\?대|\?댁|\?ъ|\?꾧/.test(body);
+  return MOJIBAKE_MARKERS.some((marker) => body.includes(marker));
 }
 
 function validateTextEncoding(path) {
@@ -170,6 +181,11 @@ function validatePublicFiles() {
   }
   if (!index.includes(`<link rel="canonical" href="${SITE_URL}/"`)) {
     fail("index.html is missing the home canonical URL.");
+  }
+  for (const marker of READABLE_HOME_MARKERS) {
+    if (!index.includes(marker)) {
+      fail(`index.html is missing readable Korean home marker: ${marker}.`);
+    }
   }
   if (!index.includes(`href="${SITE_URL}/rss.xml"`)) {
     fail("index.html is missing the RSS alternate link.");
@@ -403,7 +419,7 @@ function validateGeneratedIndexes(queue, posts) {
   if (aiIndex?.site?.url !== SITE_URL) {
     fail("ai-index.json site.url does not match the canonical site URL.");
   }
-  if (aiIndex?.site?.name_ko !== "크레피카") {
+  if (aiIndex?.site?.name_ko !== BRAND_NAME_KO) {
     fail("ai-index.json site.name_ko must be the readable Korean brand name.");
   }
   if (aiIndex?.blog?.rss !== `${SITE_URL}/rss.xml`) {

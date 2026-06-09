@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 const SITE_URL = process.env.SITE_URL || "https://crepika.com";
 const ADS_TXT_LINE = "google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0";
+const ROOT_HTML_PATHS = ["/"];
 const SAMPLE_HTML_PATHS = ["/blog", "/tools/qr-generator", "/about", "/contact", "/privacy", "/terms"];
+const READABLE_HOME_MARKERS = ["\uD06C\uB808\uD53C\uCE74", "\uB85C\uADF8\uC778", "\uBB34\uB8CC"];
 
 const failures = [];
 
@@ -21,7 +23,8 @@ async function get(path) {
   return { url, response, body };
 }
 
-function hasMeaningfulMeta(body) {
+function hasMeaningfulMeta(body, options = {}) {
+  const { requireH1 = true } = options;
   return {
     title: /<title>[^<]{10,}<\/title>/i.test(body),
     description: /<meta\s+name="description"\s+content="[^"]{40,}"/i.test(body),
@@ -29,7 +32,7 @@ function hasMeaningfulMeta(body) {
     largeImagePreview: /<meta\s+name="robots"\s+content="[^"]*max-image-preview:large/i.test(body),
     ogImage: /<meta\s+property="og:image"\s+content="https:\/\/crepika\.com\/og-image\.png"/i.test(body),
     twitterCard: /<meta\s+name="twitter:card"\s+content="summary_large_image"/i.test(body),
-    h1: (body.match(/<h1\b/gi) || []).length === 1,
+    h1: !requireH1 || (body.match(/<h1\b/gi) || []).length === 1,
     adsense: body.includes("ca-pub-3050601904412736"),
   };
 }
@@ -128,6 +131,27 @@ async function main() {
       "security.txt must expose the canonical support contact and policy URL.",
     ),
   );
+
+  for (const path of ROOT_HTML_PATHS) {
+    const { response, body } = await get(path);
+    if (!response.ok) fail(`${path} returned HTTP ${response.status}.`);
+    const meta = hasMeaningfulMeta(body, { requireH1: false });
+    for (const [name, ok] of Object.entries(meta)) {
+      if (!ok) fail(`${path} is missing live root HTML marker: ${name}.`);
+    }
+    for (const marker of READABLE_HOME_MARKERS) {
+      if (!body.includes(marker)) {
+        fail(`${path} is missing readable Korean root marker: ${marker}.`);
+      }
+    }
+    checks.push({
+      path,
+      status: response.status,
+      bytes: body.length,
+      htmlBasics: meta,
+      readableRootText: true,
+    });
+  }
 
   for (const path of SAMPLE_HTML_PATHS) {
     const { response, body } = await get(path);
