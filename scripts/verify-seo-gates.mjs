@@ -299,6 +299,28 @@ function listDuplicateValues(values) {
   return values.filter((value, index) => values.indexOf(value) !== index);
 }
 
+function parseDateOnly(value, context) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    fail(`${context} must use YYYY-MM-DD format; got ${value || "missing"}.`);
+    return null;
+  }
+  const parsed = new Date(`${value}T00:00:00.000Z`);
+  if (Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== value) {
+    fail(`${context} is not a valid calendar date: ${value}.`);
+    return null;
+  }
+  return parsed;
+}
+
+function validateDateNotFuture(value, context) {
+  const parsed = parseDateOnly(value, context);
+  if (!parsed) return;
+  const today = new Date().toISOString().slice(0, 10);
+  if (value > today) {
+    fail(`${context} must not be in the future; got ${value}, today is ${today}.`);
+  }
+}
+
 function extractAnchorHrefs(body) {
   return [...body.matchAll(/<a\b[^>]*\shref=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1]);
 }
@@ -872,6 +894,14 @@ function validateSitemapAndRss(queue, posts) {
   if (duplicateLocs.length) {
     fail(`sitemap.xml has duplicate URLs: ${[...new Set(duplicateLocs)].slice(0, 10).join(", ")}`);
   }
+  const sitemapEntries = new Map(
+    [...sitemap.matchAll(/<url>\s*<loc>([\s\S]*?)<\/loc>\s*<lastmod>([\s\S]*?)<\/lastmod>[\s\S]*?<\/url>/g)].map(
+      (match) => [match[1].trim(), { lastmod: match[2].trim() }],
+    ),
+  );
+  if (sitemapEntries.size !== locs.length) {
+    fail(`sitemap.xml must expose one lastmod for every URL; found ${sitemapEntries.size} lastmod blocks for ${locs.length} URLs.`);
+  }
   for (const loc of locs) {
     if (!loc.startsWith(`${SITE_URL}/`)) {
       fail(`sitemap.xml contains a non-canonical host URL: ${loc}`);
@@ -880,6 +910,7 @@ function validateSitemapAndRss(queue, posts) {
       fail(`sitemap.xml contains query or hash URL: ${loc}`);
     }
     validateReadableCanonicalUrl(loc, "sitemap.xml URL");
+    validateDateNotFuture(sitemapEntries.get(loc)?.lastmod ?? "", `sitemap.xml lastmod for ${loc}`);
   }
 
   const readyOrDraft = queue.filter((item) => item.status !== "published");
@@ -914,9 +945,17 @@ function validateSitemapAndRss(queue, posts) {
   }
   for (const post of posts) {
     const url = `${SITE_URL}/blog/${post.slug}`;
+    const expectedLastmod = post.dateModified || post.publishDate;
     validateReadableUrlPath(`/blog/${post.slug}`, `Blog post slug ${post.slug}`);
     if (!sitemap.includes(`<loc>${url}</loc>`)) {
       fail(`Renderable blog post is missing from sitemap.xml: ${post.slug}`);
+    }
+    if (expectedLastmod) {
+      validateDateNotFuture(expectedLastmod, `Post metadata date for ${post.slug}`);
+      const actualLastmod = sitemapEntries.get(url)?.lastmod;
+      if (actualLastmod !== expectedLastmod) {
+        fail(`sitemap.xml lastmod for ${post.slug} must match post metadata (${expectedLastmod}); got ${actualLastmod || "missing"}.`);
+      }
     }
     validateCrawlerPage(join("public", "blog", post.slug, "index.html"), url);
   }
