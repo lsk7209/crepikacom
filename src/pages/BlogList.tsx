@@ -23,7 +23,6 @@ import { Badge } from "@/components/ui/badge";
 import { getAllBlogMeta, BlogPostMeta } from "@/data/blog-posts-meta";
 import { Input } from "@/components/ui/input";
 import React, { useMemo } from "react";
-import { AdSlot } from "@/components/ad/AdSlot";
 
 const CATEGORY_LABELS: Record<string, string> = {
   guide: "가이드",
@@ -74,13 +73,13 @@ export default function BlogList() {
         "@type": "ListItem",
         position: 1,
         name: "홈",
-        item: "https://crepika.com",
+        item: "https://www.crepika.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "크리에이터 블로그",
-        item: "https://crepika.com/blog",
+        item: "https://www.crepika.com/blog",
       },
     ],
   };
@@ -92,11 +91,11 @@ export default function BlogList() {
       name: "크리에이터 블로그",
       description:
         "인스타그램 마케팅, 네이버 SEO, 소셜미디어 전략 등 크리에이터를 위한 실전 가이드",
-      url: "https://crepika.com/blog",
+      url: "https://www.crepika.com/blog",
       publisher: {
         "@type": "Organization",
         name: "크레피카",
-        url: "https://crepika.com",
+        url: "https://www.crepika.com",
       },
       mainEntity: {
         "@type": "ItemList",
@@ -104,7 +103,7 @@ export default function BlogList() {
         itemListElement: allPosts.slice(0, 20).map((post, idx) => ({
           "@type": "ListItem",
           position: idx + 1,
-          url: `https://crepika.com/blog/${post.slug}`,
+          url: `https://www.crepika.com/blog/${post.slug}`,
           name: post.title,
           description: post.description,
         })),
@@ -135,6 +134,8 @@ export default function BlogList() {
     (currentPage - 1) * POSTS_PER_PAGE,
     currentPage * POSTS_PER_PAGE,
   );
+  const hasListParams =
+    selectedCategory !== "all" || Boolean(searchQuery) || currentPage > 1;
 
   const buildParams = (overrides: Record<string, string>) => {
     const base: Record<string, string> = {};
@@ -177,12 +178,13 @@ export default function BlogList() {
           name="keywords"
           content="크리에이터 블로그, 마케팅 가이드, 인스타그램 팁, 네이버 SEO, 소셜미디어 전략"
         />
-        <link rel="canonical" href="https://crepika.com/blog" />
+        <link rel="canonical" href="https://www.crepika.com/blog" />
+        {hasListParams && <meta name="robots" content="noindex, follow" />}
         <link
           rel="alternate"
           type="application/rss+xml"
           title="크레피카 블로그 RSS"
-          href="https://crepika.com/rss.xml"
+          href="https://www.crepika.com/rss.xml"
         />
         <meta
           property="og:title"
@@ -194,9 +196,9 @@ export default function BlogList() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="크레피카" />
-        <meta property="og:url" content="https://crepika.com/blog" />
+        <meta property="og:url" content="https://www.crepika.com/blog" />
         <meta property="og:locale" content="ko_KR" />
-        <meta property="og:image" content="https://crepika.com/og-image.png" />
+        <meta property="og:image" content="https://www.crepika.com/og-image.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -210,7 +212,7 @@ export default function BlogList() {
           name="twitter:description"
           content="인스타그램, 네이버, 유튜브 크리에이터를 위한 실전 마케팅 전략과 SEO 팁"
         />
-        <meta name="twitter:image" content="https://crepika.com/og-image.png" />
+        <meta name="twitter:image" content="https://www.crepika.com/og-image.png" />
         <meta name="twitter:image:alt" content="크레피카 크리에이터 블로그" />
         <script type="application/ld+json">
           {JSON.stringify(collectionSchema)}
@@ -397,8 +399,6 @@ export default function BlogList() {
             </span>
           </div>
         )}
-
-        <AdSlot type="bottom" strategy="instant" className="mt-10 mb-4" />
 
         {/* CTA Section */}
         <section className="mt-20 text-center bg-muted/30 rounded-lg p-8">

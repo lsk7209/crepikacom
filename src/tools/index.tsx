@@ -1,4 +1,11 @@
 import React from 'react';
+import { QrGeneratorTool } from './analyze/QrGeneratorTool';
+import { WebpConverterTool } from './image/WebpConverterTool';
+import { ByteCounterTool } from './plan/ByteCounterTool';
+import { LoremGeneratorTool } from './plan/LoremGeneratorTool';
+import { InstaSpacerTool } from './publish/InstaSpacerTool';
+import { HashtagMixerTool } from './publish/HashtagMixerTool';
+import { TextCounterTool } from './text/TextCounterTool';
 
 // Import tool components
 export { TextCounterTool } from './text/TextCounterTool';
@@ -10,12 +17,12 @@ export { HashtagMixerTool } from './publish/HashtagMixerTool';
 export { QrGeneratorTool } from './analyze/QrGeneratorTool';
 
 // Component mapping
-export const toolComponentMap: Record<string, React.ComponentType<any>> = {
-  'text-counter': require('./text/TextCounterTool').TextCounterTool,
-  'lorem-generator': require('./plan/LoremGeneratorTool').LoremGeneratorTool,
-  'byte-counter': require('./plan/ByteCounterTool').ByteCounterTool,
-  'webp-converter': require('./image/WebpConverterTool').WebpConverterTool,
-  'insta-spacer': require('./publish/InstaSpacerTool').InstaSpacerTool,
-  'hashtag-mixer': require('./publish/HashtagMixerTool').HashtagMixerTool,
-  'qr-generator': require('./analyze/QrGeneratorTool').QrGeneratorTool,
+export const toolComponentMap: Record<string, React.ComponentType<unknown>> = {
+  'text-counter': TextCounterTool,
+  'lorem-generator': LoremGeneratorTool,
+  'byte-counter': ByteCounterTool,
+  'webp-converter': WebpConverterTool,
+  'insta-spacer': InstaSpacerTool,
+  'hashtag-mixer': HashtagMixerTool,
+  'qr-generator': QrGeneratorTool,
 };

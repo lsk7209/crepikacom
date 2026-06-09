@@ -1,4 +1,4 @@
-User-agent: Googlebot
+﻿User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
@@ -22,7 +22,7 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# AI crawlers — allow for GEO (Generative Engine Optimization)
+# AI crawlers allowed for GEO (Generative Engine Optimization)
 User-agent: GPTBot
 Allow: /
 
@@ -51,4 +51,4 @@ Disallow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://crepika.com/sitemap.xml
+Sitemap: https://www.crepika.com/sitemap.xml

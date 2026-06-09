@@ -1,68 +1,131 @@
 {
   "site": {
-    "name": "크레피카",
-    "name_en": "Crepika",
-    "url": "https://crepika.com",
-    "description": "국내 크리에이터를 위한 무료 온라인 도구함. 로그인 없이 즉시 사용 가능.",
+    "name": "Crepika",
+    "name_ko": "?щ젅?쇱뭅",
+    "url": "https://www.crepika.com",
+    "description": "Free browser-based creator tools plus SEO and SNS content guides for Korean creators.",
     "locale": "ko_KR",
-    "topics": ["크리에이터 도구", "마케팅", "SEO", "소셜미디어", "콘텐츠 제작"],
-    "updated": "2026-05-16"
+    "topics": [
+      "creator tools",
+      "SEO",
+      "SNS marketing",
+      "content creation"
+    ],
+    "updated": "2026-06-09"
   },
   "tools": [
     {
       "id": "text-counter",
-      "title": "텍스트 카운터",
-      "description": "글자 수, 단어 수, 줄 수를 실시간으로 계산하는 무료 도구",
-      "url": "https://crepika.com/tools/text-counter",
-      "keywords": ["글자수 세기", "텍스트 카운터", "문자수 계산"]
+      "url": "https://www.crepika.com/tools/text-counter"
     },
     {
       "id": "byte-counter",
-      "title": "한글 바이트 카운터",
-      "description": "한글·영문 바이트 수 정확 계산. SMS, DB 글자수 제한 확인용.",
-      "url": "https://crepika.com/tools/byte-counter",
-      "keywords": ["바이트 계산기", "한글 바이트", "SMS 글자수"]
+      "url": "https://www.crepika.com/tools/byte-counter"
     },
     {
       "id": "lorem-generator",
-      "title": "로렘 입숨 생성기",
-      "description": "디자인 시안용 한국어·영어 더미 텍스트 즉시 생성",
-      "url": "https://crepika.com/tools/lorem-generator",
-      "keywords": ["로렘 입숨", "더미 텍스트", "샘플 텍스트"]
+      "url": "https://www.crepika.com/tools/lorem-generator"
     },
     {
       "id": "webp-converter",
-      "title": "WebP 변환기",
-      "description": "JPG/PNG를 WebP로 변환해 이미지 용량을 최대 80% 줄이는 무료 도구",
-      "url": "https://crepika.com/tools/webp-converter",
-      "keywords": ["WebP 변환", "이미지 최적화", "JPG to WebP"]
+      "url": "https://www.crepika.com/tools/webp-converter"
     },
     {
       "id": "insta-spacer",
-      "title": "인스타 줄바꿈 포매터",
-      "description": "인스타그램 캡션 줄바꿈이 깨지지 않도록 포맷팅하는 도구",
-      "url": "https://crepika.com/tools/insta-spacer",
-      "keywords": ["인스타그램 줄바꿈", "인스타 캡션", "줄바꿈 포매터"]
+      "url": "https://www.crepika.com/tools/insta-spacer"
     },
     {
       "id": "hashtag-mixer",
-      "title": "해시태그 믹서",
-      "description": "해시태그 그룹을 무작위 조합해 알고리즘 페널티를 방지하는 도구",
-      "url": "https://crepika.com/tools/hashtag-mixer",
-      "keywords": ["해시태그 생성기", "해시태그 믹서", "인스타 해시태그"]
+      "url": "https://www.crepika.com/tools/hashtag-mixer"
     },
     {
       "id": "qr-generator",
-      "title": "QR 코드 생성기",
-      "description": "URL·텍스트를 QR 코드로 즉시 변환·다운로드하는 무료 도구",
-      "url": "https://crepika.com/tools/qr-generator",
-      "keywords": ["QR 코드 생성기", "QR 코드 만들기", "무료 QR"]
+      "url": "https://www.crepika.com/tools/qr-generator"
     }
   ],
   "blog": {
-    "url": "https://crepika.com/blog",
-    "rss": "https://crepika.com/rss.xml",
-    "categories": ["guide", "tips", "insights", "case-study"],
-    "count": 254
+    "url": "https://www.crepika.com/blog",
+    "rss": "https://www.crepika.com/rss.xml",
+    "categories": [
+      "guide",
+      "tips",
+      "insights",
+      "case-study"
+    ],
+    "count": 357,
+    "latest": [
+      {
+        "title": "인스타그램 Close Friends 마케팅 가이드: VIP 고객을 위한 프리미엄 콘텐츠 전략",
+        "url": "https://www.crepika.com/blog/instagram-close-friends-marketing-guide-vip-content-strategy",
+        "description": "인스타그램 Close Friends 기능을 활용해 VIP 고객에게 독점 콘텐츠를 제공하는 마케팅 전략을 소개합니다. 멤버십 구축, 콘텐츠 기획, 전환율 향상까지 실전 노하우를 공유합니다.",
+        "date": "2026-05-18"
+      },
+      {
+        "title": "소셜 증명 마케팅 완전 가이드: 리뷰·후기·추천사로 신뢰를 만드는 전략",
+        "url": "https://www.crepika.com/blog/marketing-complete-guide-strategy-1",
+        "description": "소셜 증명(Social Proof)이 왜 마케팅의 가장 강력한 도구인지, 리뷰와 후기를 체계적으로 수집하고 활용하는 방법을 단계별로 안내합니다. 전환율을 높이는 소셜 증명 전략의 모든 것.",
+        "date": "2026-05-18"
+      },
+      {
+        "title": "Substack 시작 완전 가이드: 처음 뉴스레터를 만드는 사람을 위한 A to Z",
+        "url": "https://www.crepika.com/blog/substack-complete-guide-a-to-z",
+        "description": "Substack으로 뉴스레터를 시작하는 모든 과정을 처음부터 끝까지 안내합니다. 계정 설정부터 첫 구독자 확보, 유료 전환 전략까지 실전 노하우를 담은 완전 가이드입니다.",
+        "date": "2026-05-18"
+      },
+      {
+        "title": "경쟁사 분석 프레임워크 완전 가이드: 체계적으로 경쟁자를 분석하는 6단계",
+        "url": "https://www.crepika.com/blog/analytics-complete-guide-analytics-6",
+        "description": "경쟁사 분석을 막연히 하고 있다면 이 가이드를 보세요. 6단계 프레임워크로 경쟁자의 전략, 강점, 약점을 체계적으로 파악하고 내 사업의 차별화 전략을 수립하는 방법을 알려드립니다.",
+        "date": "2026-05-18"
+      },
+      {
+        "title": "브랜드 감사(Brand Audit) 완전 가이드: 내 브랜드의 현재 상태를 진단하는 방법",
+        "url": "https://www.crepika.com/blog/brand-brand-audit-complete-guide-brand-method",
+        "description": "브랜드 감사의 개념부터 실전 진단 체크리스트까지 총망라한 완전 가이드. 내 브랜드의 강점과 약점을 데이터로 파악하고 전략적 개선 방향을 수립하는 방법을 단계별로 알아봅니다.",
+        "date": "2026-05-18"
+      },
+      {
+        "title": "Apple Podcast 최적화 완전 가이드: 팟캐스트 앱 상위 노출 전략",
+        "url": "https://www.crepika.com/blog/apple-podcast-optimization-complete-guide-strategy",
+        "description": "Apple Podcasts에서 상위 노출을 달성하는 완전한 최적화 전략을 담았습니다. 메타데이터 최적화부터 리뷰 전략, 에피소드 기획, 카테고리 선택까지 실전 가이드를 공개합니다.",
+        "date": "2026-05-18"
+      },
+      {
+        "title": "네이버 검색광고 완전 가이드: 브랜드 검색·파워링크 넘어 통합 운영 전략",
+        "url": "https://www.crepika.com/blog/naver-searchads-complete-guide-brand-search-strategy",
+        "description": "네이버 검색광고의 모든 상품을 통합해 운영하는 전략을 완전히 정리했습니다. 파워링크부터 브랜드 검색, 쇼핑 광고, 파워컨텐츠, 전환 추적까지 실전 운용 가이드를 담았습니다.",
+        "date": "2026-05-18"
+      },
+      {
+        "title": "카카오 비즈니스 광고 완전 가이드: 카카오 전 채널 통합 광고 운영 전략",
+        "url": "https://www.crepika.com/blog/kakao-ads-complete-guide-kakao-ads-strategy",
+        "description": "카카오 비즈니스 광고의 모든 채널을 통합해 운영하는 전략을 완전히 정리했습니다. 카카오톡 채널 광고, 카카오 모먼트, 비즈니스 계정 운영, 전환 추적까지 실전 가이드입니다.",
+        "date": "2026-05-18"
+      },
+      {
+        "title": "구글 Performance Max 캠페인 완전 가이드: AI 광고 자동화로 ROAS 높이기",
+        "url": "https://www.crepika.com/blog/google-performance-max-complete-guide-ai-ads-automation-roas",
+        "description": "구글 Performance Max(PMax) 캠페인을 처음부터 끝까지 완전히 설명합니다. 에셋 그룹 구성, 신호 전략, 제외 키워드, ROAS 목표 설정까지 실전 운용 방법을 담은 완전 가이드입니다.",
+        "date": "2026-05-18"
+      },
+      {
+        "title": "Stable Diffusion 로컬 설치 완전 가이드: 무료로 AI 이미지를 무제한 생성하는 법",
+        "url": "https://www.crepika.com/blog/stable-diffusion-complete-guide-ai",
+        "description": "Stable Diffusion을 PC에 로컬 설치해 무료로 무제한 AI 이미지를 생성하는 방법을 처음부터 끝까지 설명합니다. AUTOMATIC1111 WebUI 설치부터 모델 다운로드, 프롬프트 작성, LoRA 활용까지 완전 가이드입니다.",
+        "date": "2026-05-18"
+      },
+      {
+        "title": "Instagram Threads 한국어 콘텐츠 전략: 텍스트 기반 SNS에서 팬 모으기",
+        "url": "https://www.crepika.com/blog/instagram-threads-content-strategy-sns",
+        "description": "Instagram Threads에서 한국어 콘텐츠로 팬 베이스를 만드는 실전 전략을 담았습니다. 알고리즘 이해부터 콘텐츠 포맷, 게시 전략, 팔로워를 고객으로 전환하는 방법까지 완전 가이드입니다.",
+        "date": "2026-05-18"
+      },
+      {
+        "title": "구글 Search Ads 360 입문 가이드: 대규모 PPC 캠페인 관리 전략",
+        "url": "https://www.crepika.com/blog/google-search-ads-360-beginner-guide-ppc-strategy",
+        "description": "구글 Search Ads 360(SA360)의 핵심 기능과 대규모 PPC 캠페인 관리 전략을 입문자 관점에서 완전히 설명합니다. 통합 입찰, 예산 관리, 크로스 채널 최적화까지 실전 가이드입니다.",
+        "date": "2026-05-18"
+      }
+    ]
   }
 }

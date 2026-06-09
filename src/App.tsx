@@ -4,6 +4,12 @@ import { AppShell } from "@/components/layout/AppShell";
 import { Suspense, lazy, useEffect } from "react";
 import { useGlobalShortcuts } from "@/hooks/useGlobalShortcuts";
 
+declare global {
+  interface Window {
+    gtag?: (command: "config", targetId: string, config?: { page_path: string }) => void;
+  }
+}
+
 const Home = lazy(() => import("./pages/Home"));
 const Toaster = lazy(() =>
   import("@/components/ui/toaster").then((m) => ({ default: m.Toaster })),
@@ -31,8 +37,8 @@ function AppContent() {
   const location = useLocation();
 
   useEffect(() => {
-    if (typeof (window as any).gtag !== "undefined") {
-      (window as any).gtag("config", "G-P8LJ76FVM4", {
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("config", "G-P8LJ76FVM4", {
         page_path: location.pathname,
       });
     }

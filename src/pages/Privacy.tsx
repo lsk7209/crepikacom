@@ -11,7 +11,7 @@ export default function Privacy() {
           name="description"
           content="크레피카 개인정보처리방침. 모든 도구는 브라우저 내에서 처리되며 서버에 데이터를 전송하지 않습니다. Google AdSense 광고 및 쿠키 정책을 포함합니다."
         />
-        <link rel="canonical" href="https://crepika.com/privacy" />
+        <link rel="canonical" href="https://www.crepika.com/privacy" />
         <meta name="robots" content="index,follow" />
       </Helmet>
 
@@ -68,7 +68,10 @@ export default function Privacy() {
             </p>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
               <li>광고 관련 쿠키는 Google의 개인정보처리방침을 따릅니다.</li>
+              <li>Google을 포함한 제3자 광고 사업자는 쿠키 또는 유사 기술을 사용해 이 사이트와 다른 사이트 방문 정보를 바탕으로 광고를 표시할 수 있습니다.</li>
+              <li>광고는 Google AdSense 자동 광고 방식으로 게재될 수 있으며, 크레피카는 본문을 가리거나 클릭을 유도하는 수동 광고 슬롯을 배치하지 않습니다.</li>
               <li>맞춤형 광고 수신 거부: <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google 광고 설정</a>에서 변경 가능합니다.</li>
+              <li>Google의 광고 데이터 사용 방식은 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google 광고 기술 안내</a>에서 확인할 수 있습니다.</li>
               <li>EU 이용자의 경우 GDPR에 따른 동의 절차가 적용됩니다.</li>
             </ul>
             <h3 className="text-xl font-semibold mb-3 mt-6">3-2. 분석 쿠키</h3>
@@ -81,8 +84,8 @@ export default function Privacy() {
           <section>
             <h2 className="text-2xl font-bold mb-4">4. 제3자 서비스</h2>
             <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
-              <li><strong>Google AdSense:</strong> 광고 게재. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google 개인정보처리방침</a></li>
-              <li><strong>Google Analytics:</strong> 사이트 이용 통계 분석</li>
+              <li><strong>Google AdSense:</strong> 광고 게재 및 광고 성과 측정. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google 개인정보처리방침</a></li>
+              <li><strong>Google Analytics:</strong> 사이트 이용 통계 분석. 방문 페이지, 기기 유형, 브라우저 정보 등 집계 데이터를 분석합니다.</li>
               <li><strong>Vercel:</strong> 웹 호스팅. <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Vercel 개인정보처리방침</a></li>
             </ul>
           </section>

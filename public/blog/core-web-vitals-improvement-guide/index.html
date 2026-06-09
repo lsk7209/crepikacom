@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>코어 웹 바이탈(CWV) 개선 완전 가이드: LCP·INP·CLS를 모두 잡는 법 | Crepika</title>
+    <meta name="description" content="구글 랭킹 신호인 코어 웹 바이탈(LCP, INP, CLS)을 측정하고 개선하는 실전 방법을 상세히 안내합니다. 초보부터 중급까지 단계별로 따라 할 수 있도록 구성했습니다.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://www.crepika.com/blog/core-web-vitals-improvement-guide">
+    <meta property="og:title" content="코어 웹 바이탈(CWV) 개선 완전 가이드: LCP·INP·CLS를 모두 잡는 법 | Crepika">
+    <meta property="og:description" content="구글 랭킹 신호인 코어 웹 바이탈(LCP, INP, CLS)을 측정하고 개선하는 실전 방법을 상세히 안내합니다. 초보부터 중급까지 단계별로 따라 할 수 있도록 구성했습니다.">
+    <meta property="og:url" content="https://www.crepika.com/blog/core-web-vitals-improvement-guide">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Crepika">
+    <meta name="google-adsense-account" content="ca-pub-3050601904412736">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3050601904412736" crossorigin="anonymous"></script>
+    <style>
+      :root{color-scheme:light}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.7;color:#172033;margin:0;background:#f8fafc}
+      main{max-width:860px;margin:0 auto;padding:44px 20px 72px}nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px}
+      a{color:#0f766e}h1{font-size:2.2rem;line-height:1.2;margin:0 0 18px}h2{margin-top:34px;font-size:1.35rem}h3{margin-top:24px;font-size:1.08rem}
+      .lede{font-size:1.08rem;color:#475569}.panel{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:22px;margin-top:18px}
+      li{margin:8px 0}.muted{color:#64748b;font-size:.95rem}.post-list{padding-left:20px}
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <a href="/">Home</a><a href="/tools/text-counter">Tools</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a>
+      </nav>
+      <h1>코어 웹 바이탈(CWV) 개선 완전 가이드: LCP·INP·CLS를 모두 잡는 법</h1>
+      <p class="lede">구글 랭킹 신호인 코어 웹 바이탈(LCP, INP, CLS)을 측정하고 개선하는 실전 방법을 상세히 안내합니다. 초보부터 중급까지 단계별로 따라 할 수 있도록 구성했습니다.</p>
+      <p class="muted">Published: 2026-05-07 쨌 Category: guide 쨌 Read time: 11분</p>
+      <section class="panel"><h2>Overview</h2><p>2021년부터 구글은 코어 웹 바이탈(Core Web Vitals, CWV)을 검색 랭킹 신호로 사용하고 있습니다. CWV 점수가 낮은 사이트는 검색 순위에서 불이익을 받을 수 있습니다. LCP, INP, CLS — 세 가지 지표를 모두 &quot;양호&quot; 이상으로 유지하는 것이 2026년 SEO의 기술적 기반입니다. 각 지표가 무엇인지, 어떻게 측정하고 개선하는지 단계적으로 안내합니다. 이 글에서 소개하는 전략과 팁들은 실제 운영 경험을 바탕으로 엄선했습니다. 단계별로 적용하면 가시적인 변화를 확인할 수 있습니다. 실전에 바로 쓸 수 있는 글자수 세기과 해시태그 믹서을 활용하면 이 가이드의 내용을 더욱 빠르게 적용할 수 있습니다.</p></section>
+      <section class="panel"><h2>CWV 측정 방법: PageSpeed Insights 활용</h2><p>PageSpeed Insights: pagespeed.web.dev에서 URL을 입력하면 CWV 측정 결과를 무료로 확인할 수 있습니다. 두 가지 측정 방식: Field Data (실제 데이터): 실제 사용자 Chrome 데이터 기반. 사이트 트래픽이 충분해야 표시됨 Lab Data (실험실 데이터): 구글 서버에서 시뮬레이션. 즉시 확인 가능 기준값: | 지표 | 양호 | 개선 필요 | 나쁨 | ||||| | LCP | ≤2.5s | 2.5~4.0s | 4.0s | | INP | ≤200ms | 200~500ms | 500ms | | CLS | ≤0.1 | 0.1~0.25 | 0.25 | GSC에서 대규모 확인: GSC → 경험 → 코어 웹 바이탈에서 사이트 전체 페이지의 CWV 상태를 확인할 수 있습니다.</p></section>
+<section class="panel"><h2>LCP 개선: 가장 큰 콘텐츠 빠르게 로드</h2><p>LCP(Largest Contentful Paint)는 페이지에서 가장 큰 이미지나 텍스트 블록이 화면에 렌더링되는 시간입니다. LCP 느린 주요 원인: 1. 이미지 미최적화: 대용량 PNG/JPG를 WebP/AVIF로 변환하지 않은 경우 2. 이미지 Lazy Loading: LCP 요소에 loading=&quot;lazy&quot; 적용 시 역효과 3. 서버 응답 시간(TTFB): 서버가 느린 경우 4. CSS/JS 렌더링 블로킹: 과도한 CSS/JS가 렌더링을 늦추는 경우 LCP 개선 방법: 이미지 최적화: WebP/AVIF 포맷 전환. 크레피카 WebP 변환 도구로 간단히 처리 가능 LCP 이미지 preload: link rel=&quot;preload&quot; as=&quot;image&quot; href=&quot;hero.webp&quot; 태그로 우선 로딩 이미지 크기 명시: width·height 속성 반드시 지정 CDN 사용: 정적 자산을 CDN에 배포해 서버 응답 시간 단축</p></section>
+<section class="panel"><h2>INP 개선: 사용자 입력 반응 속도</h2><p>INP(Interaction to Next Paint)는 사용자가 클릭·탭·키보드 입력 시 화면이 업데이트되는 속도입니다. 2024년 FID를 대체한 새로운 지표입니다. INP 느린 주요 원인: 1. 무거운 JavaScript: 메인 스레드를 장시간 차지하는 JS 2. 과도한 이벤트 리스너: 스크롤, 클릭 이벤트에 무거운 함수 연결 3. 써드파티 스크립트: 광고, 분석 도구 등이 메인 스레드 점유 INP 개선 방법: 코드 스플리팅: 필요한 JS만 필요한 시점에 로드 Web Worker: 무거운 계산을 별도 스레드로 분리 써드파티 스크립트 지연 로딩: async/defer 속성 사용 React 앱: React.lazy + Suspense로 컴포넌트 지연 로딩 적용</p></section>
+<section class="panel"><h2>CLS 개선: 레이아웃 안정성 확보</h2><p>CLS(Cumulative Layout Shift)는 페이지 로드 중 레이아웃이 예상치 않게 이동하는 정도입니다. 광고가 갑자기 삽입되거나 이미지가 늦게 로드되면 CLS가 높아집니다. CLS 발생 주요 원인: 1. 이미지 크기 미지정: width·height 없으면 로드 후 레이아웃 변경 2. 동적으로 삽입된 광고: 광고가 콘텐츠를 밀어내는 현상 3. 늦게 로드되는 폰트: FOIT(보이지 않는 텍스트)로 인한 레이아웃 변경 4. 애니메이션: transform 대신 top/left 속성 변경 시 발생 CLS 개선 방법: 이미지 크기 명시: img width=&quot;800&quot; height=&quot;600&quot; 속성 반드시 지정 광고 공간 예약: 광고 영역에 minheight 사전 확보 fontdisplay: swap: 웹폰트 로딩 전 시스템 폰트를 먼저 표시 광고 지연 삽입 방지: 페이지 최상단 광고는 가능하면 서버에서 미리 높이 지정</p></section>
+<section class="panel"><h2>실전 CWV 최적화 체크리스트</h2><p>빠른 CWV 개선을 위한 우선순위 체크리스트: 즉각적인 효과 (하루 이내): [ ] 모든 이미지에 width·height 속성 추가 (CLS) [ ] Hero 이미지를 WebP로 변환 (LCP) [ ] Hero 이미지에 link rel=&quot;preload&quot; 태그 추가 (LCP) [ ] Hero 이미지에서 loading=&quot;lazy&quot; 제거 (LCP) 단기 개선 (1~2주): [ ] 전체 이미지 WebP 전환 [ ] 불필요한 써드파티 스크립트 제거 또는 지연 로딩 [ ] CSS와 JS를 가능한 한 작게 압축 [ ] Gzip/Brotli 압축 서버 설정 확인 중장기 개선 (1~3개월): [ ] CDN 도입으로 서버 응답 시간 단축 [ ] 코드 스플리팅으로 초기 번들 크기 감소 [ ] 캐싱 정책 강화 (정적 자산 1년 이상 캐시) 개선 후 반드시 PageSpeed Insights로 재측정해 효과를 확인하세요.</p></section>
+      <section class="panel"><h2>Conclusion</h2><p>CWV 개선은 기술 투자이지만, SEO 트래픽에 직결됩니다. 특히 이미지 최적화와 LCP 이미지 preload는 하루 만에 큰 효과를 볼 수 있는 빠른 승리입니다. 오늘 PageSpeed Insights에서 사이트 점수를 확인하고 가장 점수가 낮은 페이지부터 시작하세요. 작은 실행부터 꾸준히 쌓아가면 6개월 후 명확한 차이가 생깁니다.</p></section>
+      <section class="panel"><h2>FAQ</h2><h3>CWV를 개선하면 구글 순위가 바로 오르나요?</h3><p>CWV 개선 후 구글이 재크롤링하고 데이터를 업데이트하는 데 1~4주가 걸립니다. 또한 CWV는 여러 랭킹 신호 중 하나이므로 콘텐츠 품질, 백링크 등 다른 SEO 요소와 함께 작용합니다. 즉각적인 드라마틱한 순위 변화보다 점진적인 개선을 기대하세요.</p>
+<h3>PageSpeed Insights 점수 100점이 되어야 하나요?</h3><p>반드시 100점일 필요는 없습니다. 모바일/데스크톱 모두 90점 이상(초록색)이면 충분합니다. 100점 달성을 위해 기능을 제거하는 것은 오히려 역효과입니다. CWV 필드 데이터(실제 사용자 데이터)가 양호 수준이면 SEO에는 문제없습니다.</p>
+<h3>WordPress 사이트에서 CWV를 쉽게 개선하려면?</h3><p>WP Rocket, LiteSpeed Cache, W3 Total Cache 같은 캐싱/최적화 플러그인이 CWV 개선에 효과적입니다. Imagify, ShortPixel로 이미지를 자동 WebP 변환하고, CDN은 Cloudflare 무료 플랜으로 시작할 수 있습니다.</p>
+<h3>CLS가 0이어야 하나요?</h3><p>CLS 0.1 이하면 &quot;양호&quot; 기준을 통과합니다. 완전한 0은 현실적으로 달성하기 어렵습니다. 특히 광고를 삽입하는 사이트는 0.05~0.1을 목표로 하는 것이 현실적입니다.</p>
+<h3>INP와 기존 FID의 차이는 무엇인가요?</h3><p>FID는 첫 번째 클릭의 지연만 측정했습니다. INP는 페이지 체류 중 모든 클릭·탭·키보드 입력의 지연을 누적 측정합니다. 따라서 INP는 더 포괄적인 상호작용 반응성 지표로, 달성 기준도 FID(100ms)보다 더 엄격합니다(200ms).</p></section>
+      <section class="panel"><h2>Next step</h2><p>Use the related Crepika tools from the navigation, then return to this guide when reviewing your final draft.</p></section>
+      <section class="panel">
+        <h2>Site and review context</h2>
+        <p>Crepika is a free creator utility site. It provides practical tools, editorial guides, contact information, privacy terms, RSS, robots.txt, ads.txt, and a sitemap so users and crawlers can understand the site without relying only on JavaScript rendering.</p>
+        <p>Advertising may appear through Google AdSense Auto Ads. Manual ad units are not inserted in these generated crawler pages, and advertising does not change tool output or editorial recommendations.</p>
+        <p>Policy pages: <a href="/privacy">Privacy Policy</a>, <a href="/terms">Terms of Use</a>, <a href="/about">About Crepika</a>, and <a href="/contact">Contact</a>.</p>
+      </section>
+    </main>
+  </body>
+</html>

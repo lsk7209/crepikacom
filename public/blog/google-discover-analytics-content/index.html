@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>구글 Discover 인사이트 분석: 어떤 콘텐츠가 피드에 추천되는가 | Crepika</title>
+    <meta name="description" content="구글 Discover 피드에 추천되는 콘텐츠의 공통 패턴을 데이터와 사례로 분석합니다. 트래픽 급증을 만드는 Discover 최적화 전략을 다룹니다.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://www.crepika.com/blog/google-discover-analytics-content">
+    <meta property="og:title" content="구글 Discover 인사이트 분석: 어떤 콘텐츠가 피드에 추천되는가 | Crepika">
+    <meta property="og:description" content="구글 Discover 피드에 추천되는 콘텐츠의 공통 패턴을 데이터와 사례로 분석합니다. 트래픽 급증을 만드는 Discover 최적화 전략을 다룹니다.">
+    <meta property="og:url" content="https://www.crepika.com/blog/google-discover-analytics-content">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Crepika">
+    <meta name="google-adsense-account" content="ca-pub-3050601904412736">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3050601904412736" crossorigin="anonymous"></script>
+    <style>
+      :root{color-scheme:light}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.7;color:#172033;margin:0;background:#f8fafc}
+      main{max-width:860px;margin:0 auto;padding:44px 20px 72px}nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px}
+      a{color:#0f766e}h1{font-size:2.2rem;line-height:1.2;margin:0 0 18px}h2{margin-top:34px;font-size:1.35rem}h3{margin-top:24px;font-size:1.08rem}
+      .lede{font-size:1.08rem;color:#475569}.panel{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:22px;margin-top:18px}
+      li{margin:8px 0}.muted{color:#64748b;font-size:.95rem}.post-list{padding-left:20px}
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <a href="/">Home</a><a href="/tools/text-counter">Tools</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a>
+      </nav>
+      <h1>구글 Discover 인사이트 분석: 어떤 콘텐츠가 피드에 추천되는가</h1>
+      <p class="lede">구글 Discover 피드에 추천되는 콘텐츠의 공통 패턴을 데이터와 사례로 분석합니다. 트래픽 급증을 만드는 Discover 최적화 전략을 다룹니다.</p>
+      <p class="muted">Published: 2026-05-18 쨌 Category: insights 쨌 Read time: 13분</p>
+      <section class="panel"><h2>Overview</h2><p>구글 Discover는 사용자가 아무것도 검색하지 않아도 관심사에 맞는 콘텐츠를 자동으로 보여주는 피드 서비스입니다. 스마트폰 Chrome 브라우저나 Google 앱을 열면 보이는 이 피드는 전 세계 8억 명 이상의 사용자에게 도달하며, 잘 활용하면 검색 트래픽과는 별개로 대규모 방문자를 유입시킬 수 있는 채널입니다. 문제는 Discover가 어떤 콘텐츠를 선택하는지의 기준이 명확하게 공개되지 않았다는 것입니다. 구글은 사용자의 검색 기록, 위치, 관심사, 앱 사용 패턴 등을 분석해 개인화된 피드를 구성한다고만 밝히고 있습니다. 이 불투명성이 많은 콘텐츠 제작자들을 좌절시키는 요인입니다. 열심히 글을 써도 왜 Discover에 채택되지 않는지 이유를 알 수 없기 때문입니다. 그러나 Search Console의 Discover 성과 보고서를 분석하고, Discover 트래픽이 높은 콘텐츠들의 공통 특성을 연구한 결과, 패턴은 분명히 존재합니다. 채택된 콘텐츠와 채택되지 않은 콘텐츠 사이에는 이미지 크기, 제목 형식, EEAT 신호, 발행 주기 등에서 반복적인 차이가 나타납니다. 이 글에서는 Discover 알고리즘이 선호하는 콘텐츠 유형, 작성 방식, 기술적 요소들을 데이터에 근거해 분석합니다. Discover 트래픽은 예측하기 어렵지만, 지속적으로 Discover에 선택받는 콘텐츠를 만드는 원칙은 있습니다. 이 원칙을 이해하고 꾸준히 적용하면 검색 트래픽에만 의존하던 사이트에 강력한 두 번째 트래픽 채널을 추가할 수 있습니다.</p></section>
+      <section class="panel"><h2>Discover와 일반 검색 트래픽의 근본적 차이</h2><p>Discover 트래픽을 이해하려면 먼저 검색 트래픽과의 근본적 차이를 알아야 합니다. 검색 트래픽은 사용자가 특정 키워드를 입력했을 때 발생하는 '풀(Pull) 트래픽'입니다. 반면 Discover 트래픽은 사용자가 아무것도 요청하지 않아도 구글이 먼저 콘텐츠를 추천하는 '푸시(Push) 트래픽'입니다. 이 차이는 콘텐츠 전략에 큰 영향을 미칩니다. 검색 SEO는 특정 쿼리에 최적화된 콘텐츠를 만드는 것이 목적이지만, Discover 최적화는 사용자가 관심을 가질 만한 주제를 선제적으로 다루는 것입니다. 검색 SEO에서는 '사람들이 무엇을 검색하는가'가 핵심 질문이라면, Discover 최적화에서는 '사람들이 지금 무엇에 관심을 가지는가'가 핵심 질문입니다. Discover에서 특히 강한 성과를 보이는 트래픽 패턴은 '급상승(surge)'입니다. 특정 시기에 관심이 집중되는 주제나 트렌딩 토픽이 Discover에서 폭발적인 노출을 받습니다. 하지만 이 트래픽은 지속 기간이 짧아 검색 트래픽처럼 장기적이지 않습니다. Discover 트래픽을 지속적으로 받는 사이트들은 단발성 트렌딩 글보다 깊이 있는 에버그린 콘텐츠를 꾸준히 발행하는 경향이 있습니다. 에버그린 콘텐츠를 주기적으로 업데이트하면 Discover에서 재노출될 기회를 만들 수 있습니다.</p></section>
+<section class="panel"><h2>Discover가 선호하는 콘텐츠 유형 5가지</h2><p>Search Console의 Discover 보고서 데이터와 복수의 SEO 연구를 종합하면, Discover에서 높은 노출을 받는 콘텐츠는 5가지 유형으로 구분됩니다. 첫 번째는 강력한 감정을 유발하는 콘텐츠입니다. 놀라움, 감동, 공감 등 감정 반응이 클릭율을 높이고 알고리즘 신호로 작동합니다. 감정적 공명을 이끌어내는 스토리텔링이 담긴 글이 단순 정보 나열보다 Discover에서 강합니다. 특히 '나도 이런 경험이 있다'는 공감을 유발하는 일상적 이야기가 예상 외로 높은 Discover 트래픽을 받는 사례가 많습니다. 두 번째는 실생활에 직접 관련된 실용적 정보입니다. '지금 당장 써먹을 수 있는' 정보는 Discover 사용자의 클릭 패턴과 일치합니다. 요리법, 재테크 팁, 건강 관리 방법처럼 즉시 실행 가능한 내용이 특히 강합니다. 세 번째는 트렌딩 토픽과 연결된 심층 분석입니다. 이슈가 터진 직후 가장 상세한 분석 글을 발행하는 것이 효과적입니다. 단순 뉴스 요약이 아닌 배경, 원인, 전망을 포함한 심층적 내용이 Discover에서 오래 유통됩니다. 네 번째는 시각적으로 매력적인 고품질 이미지를 포함한 콘텐츠입니다. Discover는 카드 형식으로 표시되며, 이미지 품질이 클릭율에 직접 영향을 미칩니다. 1200픽셀 이상의 고해상도 대표 이미지가 필수입니다. 다섯 번째는 EEAT(경험, 전문성, 권위, 신뢰)가 명확한 콘텐츠입니다. 저자 정보, 출처 인용, 실제 경험이 담긴 글이 Discover에서 선호됩니다. 의료, 금융, 법률 등 YMYL 주제는 전문 자격 보유자의 기여가 명시된 콘텐츠만 안정적으로 노출됩니다.</p></section>
+<section class="panel"><h2>Discover 최적화를 위한 이미지 전략</h2><p>Discover에서 콘텐츠는 제목과 이미지로 표시됩니다. 이 두 가지가 클릭 여부를 결정합니다. 이미지 최적화는 Discover에서 특히 중요한데, 구글은 Discover에 최적화된 콘텐츠로 1200px 이상 너비의 고품질 이미지를 사용할 것을 명시적으로 권고합니다. 구체적인 이미지 최적화 원칙은 다음과 같습니다. 게시물 상단에 1200×630px 이상의 고해상도 이미지를 배치하고, og:image 메타태그로 지정합니다. 이미지는 텍스트 오버레이가 없는 클린한 사진이나 인포그래픽이 가장 효과적입니다. 스톡 이미지보다 실제 상황을 담은 사진이 클릭율이 높습니다. 이미지 파일명과 alt 텍스트도 콘텐츠 주제와 일치해야 합니다. 파일명은 'IMG1234.jpg' 대신 'discovercontentstrategy.jpg'처럼 의미 있는 이름을 사용하세요. 라지 이미지(Large Image) 모드를 활성화하려면 maximagepreview:large 메타 태그를 robots 메타 태그에 추가해야 합니다. 코드는 다음과 같습니다. meta name='robots' content='maximagepreview:large'. 이 설정이 없으면 Discover에서 이미지가 작게 표시되어 클릭률이 크게 낮아집니다. 연구에 따르면 라지 이미지 모드에서 클릭률이 일반 모드보다 최대 5~10배 높을 수 있습니다. 잘못 설정된 og:image로 인해 Discover에서 작고 흐릿한 이미지가 표시되는 경우가 많습니다. Search Console의 Discover 보고서에서 '인상'은 많은데 클릭율이 낮다면 이미지 최적화를 먼저 점검하세요.</p></section>
+<section class="panel"><h2>Discover 트래픽을 분석하는 Search Console 활용법</h2><p>Google Search Console에는 'Discover' 전용 성과 보고서가 있습니다. 이 보고서에서 어떤 URL이 Discover에 노출되었는지, 클릭수와 클릭율(CTR)은 어떤지를 확인할 수 있습니다. 단, Discover 데이터는 노출이 일정 기준 이상인 URL만 표시되므로, 초기에는 데이터가 부족할 수 있습니다. Discover 성과 분석에서 주목해야 할 지표는 세 가지입니다. 첫째, 어떤 주제나 포맷의 콘텐츠가 Discover 노출을 받는지 패턴을 파악합니다. 내 사이트에서 Discover 친화적인 콘텐츠 유형을 발견하면 해당 패턴을 반복적으로 적용할 수 있습니다. 둘째, Discover 트래픽의 CTR을 확인해 클릭율이 낮은 URL의 제목과 이미지를 개선합니다. 동일한 노출 수에서 CTR을 2%에서 4%로 높이면 방문자 수가 두 배가 됩니다. 셋째, Discover 노출이 급증한 시점을 Google Trends와 대조해 어떤 사회적 관심사와 연관됐는지 분석합니다. 이 패턴을 파악하면 다음에 유사한 트렌드가 나타날 때 선제적으로 콘텐츠를 발행할 수 있습니다. GA4와 연동하면 Discover로 유입된 사용자의 행동(이탈률, 세션 시간, 전환율)을 더 자세히 분석할 수 있습니다. GA4에서 '소스/매체'를 google/discover로 필터링하면 Discover 전용 사용자 행동 데이터를 볼 수 있습니다. Discover 방문자의 평균 세션 시간이 검색 방문자보다 짧다면 콘텐츠가 Discover 사용자의 기대와 맞지 않는다는 신호일 수 있습니다.</p></section>
+<section class="panel"><h2>Discover 친화적 콘텐츠 작성 체크리스트</h2><p>Discover에 추천받을 가능성을 높이는 콘텐츠를 작성하기 위한 실용적 체크리스트입니다. 각 항목을 글 발행 전 확인하는 루틴을 만들면 Discover 채택률을 높일 수 있습니다. 제목 작성 기준: 클릭베이트 없이도 호기심을 유발하는 제목, 45~65자 이내, 숫자나 감정 단어 포함. '5가지', '2026년', '연구 결과' 같은 신뢰성 요소를 포함하면 Discover에서 클릭률이 높아집니다. Open Graph 제목은 HTML 제목과 별도로 설정해 Discover용으로 최적화하는 방법도 효과적입니다. 이미지 기준: 1200px 이상 가로 이미지, og:image 메타태그 설정, maximagepreview:large 설정, 텍스트 오버레이 최소화. 직접 촬영한 사진이나 제작한 인포그래픽이 스톡 이미지보다 효과적입니다. 이미지 파일 크기는 WebP 형식으로 압축해 로딩 속도를 최적화하세요. 콘텐츠 품질 기준: 1500자 이상의 충분한 정보량, 실제 경험이나 데이터 기반, 출처 명시, 최신 업데이트 날짜 표시. 에버그린 콘텐츠는 정기적으로 업데이트해 최신성을 유지하면 장기적으로 Discover에서 유통됩니다. EEAT 강화 항목: 저자 소개란에 전문성 명시, 발행일과 최종 수정일 표시, 외부 권위 있는 출처 인용. 저자 아카이브 페이지를 만들고 LinkedIn 등 외부 프로필과 연결하면 권위성 신호가 강화됩니다. 모바일 최적화 항목: Core Web Vitals 점수 양호, 페이지 로딩 속도 3초 이내, 모바일에서 이미지와 레이아웃 정상 표시. Discover 트래픽의 90% 이상은 모바일에서 발생하므로 모바일 경험이 결정적입니다.</p></section>
+      <section class="panel"><h2>Conclusion</h2><p>구글 Discover는 SEO와 다른 규칙으로 작동하지만, 결국 사용자에게 진짜 가치 있는 콘텐츠를 만드는 것이라는 핵심 원칙은 같습니다. Discover 트래픽은 예측 불가능하고 변동성이 크지만, 양질의 콘텐츠를 꾸준히 발행하면서 이미지 최적화와 EEAT 강화를 병행하면 시간이 지날수록 Discover 노출 빈도가 높아집니다. Search Console의 Discover 보고서를 정기적으로 모니터링하고, 성과가 좋은 콘텐츠의 패턴을 분석해 다음 콘텐츠에 반영하는 데이터 기반 접근이 가장 중요합니다. 오늘 발행하는 글 하나에 이 체크리스트를 적용하는 것이 Discover 채널을 여는 첫 걸음입니다.</p></section>
+      <section class="panel"><h2>FAQ</h2><h3>Discover에 노출되려면 어떤 조건을 갖춰야 하나요?</h3><p>구글은 Discover 노출 조건으로 모바일 친화적 페이지, Google 인덱싱, Core Web Vitals 기준 통과를 명시합니다. 그 외에 콘텐츠 품질, EEAT, 1200픽셀 이상 고품질 이미지가 실질적 영향을 미칩니다. maximagepreview:large 메타 태그 설정도 필수입니다. 모든 조건을 갖춰도 Discover 노출은 보장되지 않으며, 사이트 권위와 주제 일관성이 장기적으로 중요한 요소입니다.</p>
+<h3>Discover 트래픽은 왜 갑자기 사라지나요?</h3><p>Discover는 개인화된 피드이므로 특정 콘텐츠에 대한 사용자 관심도가 낮아지면 노출이 줄어듭니다. 또한 구글 알고리즘 업데이트로 인해 Discover 트래픽이 갑자기 변동하는 경우도 있습니다. 일반적으로 발행 후 72시간이 지나면 트래픽이 급감하는 것이 정상입니다. 검색 트래픽과 달리 Discover 트래픽에 전적으로 의존하는 전략은 위험하므로, 두 채널을 균형 있게 운영하는 것이 안전합니다.</p>
+<h3>뉴스 사이트가 아니어도 Discover에 노출될 수 있나요?</h3><p>네, Discover는 뉴스 사이트뿐 아니라 블로그, 정보 사이트, 상업 사이트도 포함합니다. 특정 주제에 집중해 꾸준히 양질의 콘텐츠를 발행하는 버티컬 블로그나 전문 정보 사이트도 Discover에서 안정적인 트래픽을 받는 사례가 많습니다. 단, 뉴스성 콘텐츠가 에버그린 콘텐츠보다 Discover 노출 빈도가 높은 경향이 있습니다.</p>
+<h3>Discover 노출이 SEO 검색 순위에도 영향을 주나요?</h3><p>직접적인 인과관계는 확인되지 않았습니다. 그러나 Discover를 통해 유입된 사용자들의 체류 시간, 재방문율 등 행동 신호가 Google에 긍정적 신호로 작용해 간접적으로 검색 순위에 영향을 줄 수 있다는 분석이 있습니다. 반대로 Discover 트래픽이 높은 콘텐츠는 소셜 공유와 자연 백링크 획득 가능성도 높아 검색 순위에 복합적으로 긍정적인 영향을 줄 수 있습니다.</p>
+<h3>Discover 최적화를 위해 가장 먼저 해야 할 작업은 무엇인가요?</h3><p>Search Console에서 Discover 탭을 확인하고 현재 어떤 콘텐츠가 Discover에 노출되고 있는지 파악하는 것이 첫 번째입니다. 데이터가 없다면 og:image 설정 확인, maximagepreview:large 메타 태그 추가, Core Web Vitals 점수 개선, 최근 3개월 내 발행한 콘텐츠의 대표 이미지 최적화부터 시작하세요. 동시에 구글 트렌드에서 상승 중인 주제를 파악하고 해당 주제로 심층 콘텐츠를 발행하면 Discover 노출 가능성이 높아집니다.</p></section>
+      <section class="panel"><h2>Next step</h2><p>Use the related Crepika tools from the navigation, then return to this guide when reviewing your final draft.</p></section>
+      <section class="panel">
+        <h2>Site and review context</h2>
+        <p>Crepika is a free creator utility site. It provides practical tools, editorial guides, contact information, privacy terms, RSS, robots.txt, ads.txt, and a sitemap so users and crawlers can understand the site without relying only on JavaScript rendering.</p>
+        <p>Advertising may appear through Google AdSense Auto Ads. Manual ad units are not inserted in these generated crawler pages, and advertising does not change tool output or editorial recommendations.</p>
+        <p>Policy pages: <a href="/privacy">Privacy Policy</a>, <a href="/terms">Terms of Use</a>, <a href="/about">About Crepika</a>, and <a href="/contact">Contact</a>.</p>
+      </section>
+    </main>
+  </body>
+</html>

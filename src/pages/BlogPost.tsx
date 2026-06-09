@@ -28,11 +28,10 @@ import {
 } from "@/components/ui/accordion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { MarkdownContent } from "@/lib/markdown";
-import { AdSlot } from "@/components/ad/AdSlot";
 import { trackBlogRead } from "@/utils/analytics";
 import React, { useState, useEffect, useRef } from "react";
 
-const SITE_URL = "https://crepika.com";
+const SITE_URL = "https://www.crepika.com";
 
 const CATEGORY_GRADIENTS: Record<string, string> = {
   guide: "from-blue-600/20 to-cyan-500/10",
@@ -78,22 +77,39 @@ const AUTHOR_AVATARS: Record<string, string> = {
   박준영: "/images/avatar-parkjy.svg",
 };
 
+function estimateWordCount(post: NonNullable<ReturnType<typeof getBlogPostBySlug>>) {
+  const raw = [
+    post.content.introduction,
+    ...post.content.sections.flatMap((section) => [
+      section.heading ?? section.title ?? "",
+      section.content,
+      ...(section.subsections?.flatMap((sub) => [sub.subheading, sub.content]) ?? []),
+    ]),
+    post.content.conclusion,
+    ...(post.faq?.flatMap((item) => [item.question, item.answer]) ?? []),
+  ].join(" ");
+
+  return raw
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[*_`>#-]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean).length;
+}
+
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
+  const conclusionRef = useRef<HTMLElement>(null);
 
-  if (!slug) return <Navigate to="/blog" replace />;
-
-  const post = getBlogPostBySlug(slug);
-  if (!post) return <Navigate to="/blog" replace />;
+  const post = slug ? getBlogPostBySlug(slug) : undefined;
 
   const relatedPosts = getRelatedPosts(slug, 3);
-  const relatedTools = post.relatedTools
+  const relatedTools = post?.relatedTools
     .map((id) => getToolById(id))
-    .filter(Boolean);
+    .filter(Boolean) ?? [];
 
-  const canonicalUrl = `${SITE_URL}/blog/${post.slug}`;
-  const ogImage = CATEGORY_OG_IMAGES[post.category] || DEFAULT_OG_IMAGE;
-  const dateModified = post.dateModified || post.publishDate;
+  const canonicalUrl = post ? `${SITE_URL}/blog/${post.slug}` : `${SITE_URL}/blog`;
+  const ogImage = post ? CATEGORY_OG_IMAGES[post.category] || DEFAULT_OG_IMAGE : DEFAULT_OG_IMAGE;
+  const dateModified = post ? post.dateModified || post.publishDate : undefined;
 
   const CATEGORY_LABELS_KO: Record<string, string> = {
     guide: "가이드",
@@ -102,16 +118,9 @@ export default function BlogPost() {
     "case-study": "케이스 스터디",
   };
 
-  // Compute wordCount from content for AEO/GEO ranking signal
-  const wordCount =
-    (post.content.introduction?.length ?? 0) +
-    post.content.sections.reduce(
-      (s, sec) => s + (sec.content?.length ?? 0),
-      0,
-    ) +
-    (post.content.conclusion?.length ?? 0);
+  const wordCount = post ? estimateWordCount(post) : 0;
 
-  const articleSchema = {
+  const articleSchema = post ? {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
@@ -157,9 +166,9 @@ export default function BlogPost() {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".prose p:first-of-type"],
     },
-  };
+  } : null;
 
-  const faqSchema = post.faq?.length
+  const faqSchema = post?.faq?.length
     ? {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -171,7 +180,7 @@ export default function BlogPost() {
       }
     : null;
 
-  const breadcrumbSchema = {
+  const breadcrumbSchema = post ? {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -189,11 +198,10 @@ export default function BlogPost() {
         item: canonicalUrl,
       },
     ],
-  };
-
-  const conclusionRef = useRef<HTMLElement>(null);
+  } : null;
 
   useEffect(() => {
+    if (!post) return;
     const el = conclusionRef.current;
     if (!el) return;
     const observer = new IntersectionObserver(
@@ -207,7 +215,9 @@ export default function BlogPost() {
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [post.slug, post.category]);
+  }, [post]);
+
+  if (!post) return <Navigate to="/blog" replace />;
 
   return (
     <>
@@ -350,9 +360,6 @@ export default function BlogPost() {
           />
         </section>
 
-        {/* Ad: after introduction */}
-        <AdSlot type="top" strategy="instant" className="mb-10" />
-
         {/* Main Sections */}
         {post.content.sections.map((section, idx) => (
           <React.Fragment key={idx}>
@@ -374,10 +381,6 @@ export default function BlogPost() {
                 </div>
               ))}
             </section>
-            {/* Ad: after 2nd section */}
-            {idx === 1 && (
-              <AdSlot type="bottom" strategy="instant" className="mb-10" />
-            )}
           </React.Fragment>
         ))}
 
@@ -389,9 +392,6 @@ export default function BlogPost() {
           <h2 className="text-2xl font-bold mb-4">결론</h2>
           <MarkdownContent content={post.content.conclusion} />
         </section>
-
-        {/* Ad: after conclusion */}
-        <AdSlot type="bottom" strategy="instant" className="mb-10" />
 
         {/* Author / E-E-A-T */}
         <section className="mb-16 bg-card border rounded-3xl p-8 shadow-sm">

@@ -1,10 +1,9 @@
 ﻿import { ToolConfig, Category } from "@/data/tools-config";
-import { AdSlot } from "@/components/ad/AdSlot";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ChevronRight, Home as HomeIcon } from "lucide-react";
 
-const SITE_URL = "https://crepika.com";
+const SITE_URL = "https://www.crepika.com";
 const TOOL_OG_IMAGES: Record<Category, string> = {
   plan:    `${SITE_URL}/images/og-tool-plan.png`,
   create:  `${SITE_URL}/images/og-tool-create.png`,
@@ -49,7 +48,7 @@ export function ToolLayout({
     "url": canonicalUrl,
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
     "operatingSystem": "Web Browser",
-    "publisher": { "@type": "Organization", "name": "크레피카", "url": "https://crepika.com" }
+    "publisher": { "@type": "Organization", "name": "크레피카", "url": "https://www.crepika.com" }
   } : null;
 
   // BreadcrumbList schema
@@ -57,7 +56,7 @@ export function ToolLayout({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://crepika.com" },
+      { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.crepika.com" },
       { "@type": "ListItem", "position": 2, "name": config.titleKo, "item": canonicalUrl }
     ]
   };
@@ -115,9 +114,6 @@ export function ToolLayout({
           </p>
         </header>
 
-        {/* Top Ad */}
-        <AdSlot type="top" strategy={config.adStrategy} className="mb-6" />
-
         {/* Main Tool Interface - 3-Second Rule: Input + Action visible without scroll */}
         <main className="bg-card rounded-lg border shadow-sm p-4 md:p-6 mb-6">
           {/* Input Section */}
@@ -146,7 +142,6 @@ export function ToolLayout({
                   <p className="text-lg font-semibold mb-2">파일을 변환하는 중...</p>
                   <p className="text-sm text-muted-foreground">잠시만 기다려 주세요</p>
                 </div>
-                <AdSlot type="loading" strategy={config.adStrategy} isProcessing={isProcessing} />
               </div>
             </div>
           )}
@@ -155,12 +150,6 @@ export function ToolLayout({
           {resultSlot && (
             <div className="mt-6 pt-6 border-t">
               {resultSlot}
-              <div className="mt-4">
-                <AdSlot
-                  type={config.adStrategy === 'download_focused' ? 'download' : 'bottom'}
-                  strategy={config.adStrategy}
-                />
-              </div>
             </div>
           )}
         </main>

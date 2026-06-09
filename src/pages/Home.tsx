@@ -37,7 +37,6 @@ import {
   toggleFavoriteTool,
   isFavoriteTool,
 } from "@/utils/localStorage";
-import { AdSlot } from "@/components/ad/AdSlot";
 import { Suspense, lazy } from "react";
 
 const RecentBlogPosts = lazy(() => import("./home/RecentBlogPosts"));
@@ -99,6 +98,8 @@ const HOW_IT_WORKS = [
   },
 ];
 
+type ToolCardItem = NonNullable<ReturnType<typeof getToolById>>;
+
 export default function Home() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get("q") ?? "");
@@ -136,7 +137,7 @@ export default function Home() {
     .filter(Boolean);
   const top3Tools = TOP3_IDS.map((id) => getToolById(id)).filter(Boolean);
 
-  const renderToolCard = (tool: any, showFavorite = true) => {
+  const renderToolCard = (tool: ToolCardItem, showFavorite = true) => {
     const colors = CATEGORY_COLORS[tool.category as Category];
     return (
       <Link key={tool.id} to={tool.path} className="group relative">
@@ -198,7 +199,7 @@ export default function Home() {
           name="keywords"
           content="크리에이터 도구, 무료 온라인 도구, 글자수 세기, qr 생성기, webp 변환, 해시태그 믹서, 인스타그램 도구, 네이버 seo"
         />
-        <link rel="canonical" href="https://crepika.com/" />
+        <link rel="canonical" href="https://www.crepika.com/" />
         <meta
           property="og:title"
           content="크레피카 | 로그인 없이 3초 만에 끝나는 크리에이터 도구"
@@ -208,7 +209,7 @@ export default function Home() {
           content="국내 크리에이터를 위한 초간편 작업 도구함. 네이버·인스타·유튜브용 글자수, 바이트, 이미지, QR 작업을 3초 안에 끝내세요. 로그인 불필요."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://crepika.com/" />
+        <meta property="og:url" content="https://www.crepika.com/" />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:site_name" content="크레피카" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -220,7 +221,7 @@ export default function Home() {
           name="twitter:description"
           content="국내 크리에이터를 위한 초간편 작업 도구함. 글자수, 바이트, 이미지, QR 작업을 3초 안에 끝내세요."
         />
-        <meta name="twitter:image" content="https://crepika.com/og-image.png" />
+        <meta name="twitter:image" content="https://www.crepika.com/og-image.png" />
         <meta
           name="twitter:image:alt"
           content="크레피카 — 크리에이터 필수 도구함"
@@ -229,10 +230,10 @@ export default function Home() {
           rel="alternate"
           type="application/rss+xml"
           title="크레피카 블로그"
-          href="https://crepika.com/rss.xml"
+          href="https://www.crepika.com/rss.xml"
         />
-        <link rel="alternate" type="text/plain" title="크레피카 LLMs.txt" href="https://crepika.com/llms.txt" />
-        <meta property="og:image" content="https://crepika.com/og-image.png" />
+        <link rel="alternate" type="text/plain" title="크레피카 LLMs.txt" href="https://www.crepika.com/llms.txt" />
+        <meta property="og:image" content="https://www.crepika.com/og-image.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -244,13 +245,13 @@ export default function Home() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "https://crepika.com/#organization",
+            "@id": "https://www.crepika.com/#organization",
             name: "크레피카",
             alternateName: "Crepika",
-            url: "https://crepika.com",
+            url: "https://www.crepika.com",
             logo: {
               "@type": "ImageObject",
-              url: "https://crepika.com/og-image.png",
+              url: "https://www.crepika.com/og-image.png",
               width: 1200,
               height: 630,
             },
@@ -265,23 +266,23 @@ export default function Home() {
               email: "support@crepika.com",
               availableLanguage: "Korean",
             },
-            sameAs: ["https://crepika.com/rss.xml"],
+            sameAs: ["https://www.crepika.com/rss.xml"],
           })}
         </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "@id": "https://crepika.com/#website",
+            "@id": "https://www.crepika.com/#website",
             name: "크레피카",
-            url: "https://crepika.com",
+            url: "https://www.crepika.com",
             inLanguage: "ko-KR",
-            publisher: { "@id": "https://crepika.com/#organization" },
+            publisher: { "@id": "https://www.crepika.com/#organization" },
             potentialAction: {
               "@type": "SearchAction",
               target: {
                 "@type": "EntryPoint",
-                urlTemplate: "https://crepika.com/?q={search_term_string}",
+                urlTemplate: "https://www.crepika.com/?q={search_term_string}",
               },
               "query-input": "required name=search_term_string",
             },
@@ -293,13 +294,13 @@ export default function Home() {
             "@type": "ItemList",
             name: "크레피카 무료 크리에이터 도구 목록",
             description: "로그인 없이 즉시 사용 가능한 크리에이터 도구들",
-            url: "https://crepika.com",
+            url: "https://www.crepika.com",
             numberOfItems: TOOLS_CONFIG.length,
             itemListElement: TOOLS_CONFIG.map((t, i) => ({
               "@type": "ListItem",
               position: i + 1,
               name: `${t.titleKo} - ${t.titleEn}`,
-              url: `https://crepika.com${t.path}`,
+              url: `https://www.crepika.com${t.path}`,
               description: t.seoDescription || t.descriptionKo,
             })),
           })}
@@ -419,9 +420,6 @@ export default function Home() {
             </div>
           )}
         </div>
-
-        {/* ── 광고 ──────────────────────────────────────────── */}
-        <AdSlot type="top" strategy="instant" className="mb-6" />
 
         {/* ── 즐겨찾기 ─────────────────────────────────────── */}
         {favoriteToolConfigs.length > 0 && (
@@ -559,9 +557,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* ── 광고 ──────────────────────────────────────────── */}
-        <AdSlot type="bottom" strategy="instant" className="my-8" />
-
         {/* ── How it Works ─────────────────────────────────── */}
         <section className="mb-16 content-lazy">
           <div className="text-center mb-10">
@@ -675,9 +670,6 @@ export default function Home() {
             ))}
           </div>
         </section>
-
-        {/* ── 광고 ──────────────────────────────────────────── */}
-        <AdSlot type="bottom" strategy="instant" className="mb-8" />
 
         {/* ── 최신 블로그 포스트 ────────────────────────────── */}
         <Suspense

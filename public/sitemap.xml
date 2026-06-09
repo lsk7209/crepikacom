@@ -1,2529 +1,2222 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Core pages -->
   <url>
-    <loc>https://crepika.com/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Tools -->
   <url>
-    <loc>https://crepika.com/tools/text-counter</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/tools/text-counter</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://crepika.com/tools/byte-counter</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/tools/byte-counter</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://crepika.com/tools/lorem-generator</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/tools/lorem-generator</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://crepika.com/tools/webp-converter</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/tools/webp-converter</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://crepika.com/tools/insta-spacer</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/tools/insta-spacer</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://crepika.com/tools/hashtag-mixer</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/tools/hashtag-mixer</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://crepika.com/tools/qr-generator</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/tools/qr-generator</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Brand / Legal pages -->
   <url>
-    <loc>https://crepika.com/about</loc>
-    <lastmod>2026-05-08</lastmod>
+    <loc>https://www.crepika.com/about</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://crepika.com/contact</loc>
-    <lastmod>2026-05-08</lastmod>
+    <loc>https://www.crepika.com/contact</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://crepika.com/privacy</loc>
-    <lastmod>2026-05-08</lastmod>
+    <loc>https://www.crepika.com/privacy</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://crepika.com/terms</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://www.crepika.com/terms</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
-  <!-- Blog index -->
   <url>
-    <loc>https://crepika.com/blog</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Blog posts (lastmod = dateModified or publishDate) -->
   <url>
-    <loc>https://crepika.com/blog/instagram-marketing-complete-guide</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/instagram-close-friends-marketing-guide-vip-content-strategy</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/naver-blog-seo-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/aeo-search-future-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/geo-optimization-strategy</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/qr-marketing-strategy-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/webp-seo-image-optimization</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/ai-tools-for-creators</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/social-media-text-optimization</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/platform-text-length-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/content-readability-secrets</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/meta-data-byte-optimization</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/naver-cafe-marketing-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/naver-shopping-seo-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/naver-blog-monetization-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/naver-powerlink-advertising-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/naver-local-seo-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/smartstore-product-description-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/naver-post-vs-blog-strategy</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/naver-datalab-keyword-research</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/instagram-reels-algorithm-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/instagram-stories-marketing-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/instagram-shopping-feature-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/instagram-brand-collaboration-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/instagram-growth-roadmap</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/instagram-insights-analytics-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/instagram-dm-marketing-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/youtube-seo-complete-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/youtube-thumbnail-design-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/youtube-shorts-viral-strategy</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/youtube-keyword-research-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/youtube-monetization-guide-2026</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/youtube-analytics-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/youtube-live-streaming-marketing</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/email-marketing-automation-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/newsletter-1000-subscribers-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/kakao-channel-marketing-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/linkedin-b2b-content-marketing-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/tiktok-marketing-korea-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/google-business-profile-optimization</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/content-calendar-annual-planning-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/creator-monetization-complete-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/google-search-console-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/ga4-google-analytics-beginner-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/core-web-vitals-improvement-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/local-seo-complete-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/longtail-keyword-research-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/blog-writing-complete-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/card-news-creation-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/personal-branding-complete-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/chatgpt-marketing-prompt-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/canva-design-complete-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/notion-content-system-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/social-media-content-repurpose-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/influencer-marketing-beginner-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/ugc-marketing-strategy-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/podcast-marketing-beginner-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/ebook-lead-generation-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/brand-storytelling-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/google-shopping-seo-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/mobile-seo-optimization-guide-2026</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://crepika.com/blog/ai-overview-blog-strategy-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/figma-marketer-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/ai-image-generation-marketing-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/youtube-playlist-seo-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/youtube-subtitle-seo-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/kakao-shopping-live-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/backlink-building-korea-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/site-speed-optimization-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/naver-clip-shorts-strategy</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/digital-nomad-creator-tools-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/video-editing-free-tools-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/notion-ai-content-planning</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/social-media-scheduling-tools-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/creator-free-tools-50-guide-2026</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/naver-knowledge-in-marketing</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/naver-clova-ai-content-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/google-search-ad-beginner-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/content-marketing-roi-measurement-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/chatbot-customer-service-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/facebook-page-marketing-guide-2026</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/instagram-community-feature-guide</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/instagram-square-image-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/sns-image-size-cheatsheet-2026</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/free-stock-photos-copyright-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/card-news-design-readability-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/png-jpg-webp-when-to-use</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/social-media-thumbnail-ctr-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/instagram-feed-color-palette-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/video-screenshot-sns-content-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/blog-title-click-formula</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/social-media-cta-50-examples</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/email-subject-open-rate-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/korean-copywriting-short-sentence-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/naver-blog-subheading-scan-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/hashtag-research-niche-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/youtube-description-seo-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/instagram-first-line-hook-patterns</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/product-description-conversion-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/b2b-content-expertise-writing-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/internal-link-seo-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/google-snippet-position-zero-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/old-post-refresh-traffic-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/image-alt-text-seo-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/schema-markup-manual-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/search-console-ctr-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/naver-blog-neighbor-increase-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/tistory-blog-seo-setup-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/instagram-posting-optimal-time-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/x-twitter-thread-viral-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/youtube-comment-engagement-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/instagram-story-link-10-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/tiktok-first-video-checklist</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/linkedin-profile-views-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/kakao-channel-first-message-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/instagram-collaboration-dm-profile-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/blog-paragraph-readability-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/jargon-easy-explanation-writing-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/statistics-credibility-content-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/faq-section-search-exposure-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/comparison-table-content-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/screenshot-content-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/multi-format-content-video-text-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/reader-persona-reaction-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/zapier-free-sns-automation-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/chatgpt-blog-draft-10min-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/google-alerts-competitor-monitoring-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/free-seo-chrome-extension-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/google-trends-viral-topic-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/youtube-tag-chapter-marker-seo-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/bruhnch-seo-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/ab-test-content-performance-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/interview-content-eeat-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/facebook-page-reach-tips-2026</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/youtube-intro-5sec-retention-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/rss-trend-tracking-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/free-social-media-analytics-tools-tips</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/social-media-trends-2026</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/creator-economy-2026-revenue-structure</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/youtube-tiktok-reels-algorithm-war</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/ai-changes-seo-future-2027</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/google-core-update-2026-survival</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/zero-click-search-blogger-survival</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/creator-burnout-data-analysis</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/influencer-marketing-roi-data</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/short-form-content-evolution</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://crepika.com/blog/korea-sns-usage-2026</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-sge-blog-traffic-impact</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/marketing-complete-guide-strategy-1</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/naver-ai-search-cue-strategy</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/substack-complete-guide-a-to-z</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-vs-naver-korea-seo-strategy</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/analytics-complete-guide-analytics-6</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/eeat-traffic-change-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/brand-brand-audit-complete-guide-brand-method</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/keyword-clustering-topic-authority</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/apple-podcast-optimization-complete-guide-strategy</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/image-seo-google-image-traffic</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/naver-searchads-complete-guide-brand-search-strategy</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/people-also-ask-optimization</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/kakao-ads-complete-guide-kakao-ads-strategy</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/semantic-seo-topic-authority</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/google-performance-max-complete-guide-ai-ads-automation-roas</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ctr-data-korean-title-truth</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/stable-diffusion-complete-guide-ai</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/search-intent-practical-application</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/instagram-threads-content-strategy-sns</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/small-creator-niche-strategy</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/google-search-ads-360-beginner-guide-ppc-strategy</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/viral-content-pattern-analysis</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/runway-ai-editing-tools-complete-guide-ai-beginner</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/korea-consumer-sns-purchase-2026</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/search-optimization-3</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/content-saturation-differentiation</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/kling-ai-shortform-100</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/social-proof-purchase-decision</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/google-discover-3000-content-strategy</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/one-person-creator-income-interview</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/substack-500-creator-strategy</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/digital-product-subscription-revenue</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/discord-2-creator</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/email-list-vs-followers-value</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/ads-roas-5-shopping</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/paid-newsletter-success-cases</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/beehiiv-6-2000</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/membership-subscription-model-creator</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/naver-optimization-2</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ai-writing-tools-review-5</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/ab-3</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/free-vs-paid-seo-tools-comparison</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/pinterest-seo-blog-5000-6-strategy</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/chatgpt-claude-gemini-marketing-comparison</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/threads-follower-0-1000-3-growth</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/automation-tool-work-efficiency</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/revenue-2026-blog-rpm-analytics</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/naver-blog-vs-tistory-vs-brunch</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/e-e-a-t-analytics</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/kakao-ecosystem-marketing-analysis</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/content-niche-strategy-blog-growth</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/danggeun-market-business-marketing</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/wordpress-seo</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/coupang-partners-revenue-analysis</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/community-comparison</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/korea-z-generation-sns-2026</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/linkedin-algorithm-2026-content</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/naver-clip-youtube-shorts-korea</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/substack-creator-revenue-revenue-analytics</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/naver-shopping-live-seller-data</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/search-2026-search</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/creator-platform-ecosystem-map-2026</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/kakao-ads-analytics</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/platform-dependency-algorithm-risk</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/pod-revenue-analytics-creator</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/creator-business-registration-tax-insight</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/ads-analytics-roas</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ai-content-regulation-platform-policy</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/hcu-6</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/storytelling-marketing-conversion-impact</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/2026-udemy101-revenue-analytics</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/free-marketing-revenue-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/marketing-revenue-2026-revenue-analytics</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/brand-ambassador-vs-influencer-comparison</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/creator-community-analytics-case</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/review-psychology-marketing</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/comparison-stibee-vs-mailchimp-vs-beehiiv</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/global-creator-korean-content-demand</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/threads-analytics-instagram</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/creator-2026-top10-apps</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/makecom-vs-zapier-2026-automation-tools-analytics</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/korea-ecommerce-product-seo-analysis</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/pinterest-marketing-roi-analytics</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/instagram-korea-user-behavior</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/threads-vs-xtwitter-vs-bluesky-sns-analytics-2026</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/global-creator-local-market-strategy</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/google-discover-analytics-content</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/nft-digital-goods-creator-2026</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/beehiiv-50-tips-content-optimization</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/instagram-500-to-sponsorship-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/pinterest-seo-optimization-tips-search</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/blog-3months-1000-daily-visitors</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/threads-5</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/qr-code-cafe-revisit-rate-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/7-tips-strategy</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/webp-speed-seo-improvement-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/7-tips-optimization-strategy</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/aeo-ai-overview-5x-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/substack-tips-strategy</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/naver-blog-comeback-content-refresh</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/google-sge-5-tips-ai-content-method</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/hashtag-strategy-reels-3x-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/content-optimization-tips-pillar-page-cluster-page</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/youtube-thumbnail-ab-test-ctr-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/7-tips</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/newsletter-55-open-rate-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/facebook-pixel-tips-meta-ads</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/linkedin-b2b-lead-30-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/perplexity-blog-7-tips</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/geo-chatgpt-citation-10x-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/elevenlabs-tips-ai</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/instagram-story-quiz-engagement-200-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/notion-7-tips</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/kakao-channel-ab-test-ctr-3x-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/creator-5-tips-method</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/card-news-save-rate-5x-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/5-json-ld-tips</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-business-local-rank-1-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/ahrefs-5-tips-keyword</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/tiktok-0-to-5000-challenge-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/seo-10</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/email-automation-conversion-25-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/discord-30-growth-tips-0-100-practical-method</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/internal-link-pageview-2x-blog-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/ads-roas-7-tips-ads</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/smartstore-product-name-seo-3x-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/tips-5-automation</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/one-person-3-channels-ai-tools-case</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.crepika.com/blog/5-practical-tips-ux</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-
   <url>
-    <loc>https://crepika.com/blog/threads-marketing-complete-guide-meta-threads-follower-2026-</loc>
+    <loc>https://www.crepika.com/blog/complete-guide</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/pinterest-seo-complete-guide-pinterest-search</loc>
+    <loc>https://www.crepika.com/blog/spotify-growth-guide-spotify-for-podcasters</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/discord-community-complete-guide-creator</loc>
+    <loc>https://www.crepika.com/blog/kling-ai-guide-complete-mastery</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/makecom-automation-complete-guide-snsgoogle</loc>
+    <loc>https://www.crepika.com/blog/facebook-pixel-ads-40</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/midjourney-advanced-usage-guide-brand-marketing-complete-mas</loc>
+    <loc>https://www.crepika.com/blog/notion-100-marketing-strategy</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/sora-ai-guide-openai-sora-marketing-practical-method</loc>
+    <loc>https://www.crepika.com/blog/content-6-30</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/capcut-editing-complete-guide-shortform-creator-editing</loc>
+    <loc>https://www.crepika.com/blog/seo-3-60</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/optimizationcro-complete-guide-7</loc>
+    <loc>https://www.crepika.com/blog/500-strategy</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/optimization-complete-guide</loc>
+    <loc>https://www.crepika.com/blog/marketing-300-revenue-strategy</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-ads-beginner-guide-gdn-brand</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://www.crepika.com/blog/kakao-optimization-40</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/facebookinstagram-ads-beginner-guide-meta-ads-manager-comple</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://www.crepika.com/blog/makecom-sns-70</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/naver-complete-guide-search-1-strategy</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://www.crepika.com/blog/ai-tools-analytics-2026-claudechatgptgemini-content-marketin</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/naver-marketing-complete-guide-4050-community-strategy</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://www.crepika.com/blog/vs-naver-revenue-comparison-monetization</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/kakao-complete-guide-kakao-strategy</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://www.crepika.com/blog/brand</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/beehiiv-complete-guide-substack-growth-complete-mastery</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://www.crepika.com/blog/seo-robotstxt-case-analytics</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/marketing-complete-guide-blogyoutube-revenue</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://www.crepika.com/blog/ai-tools-2026-soraklingrunway-comparison</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/complete-guide-a-to-z</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://www.crepika.com/blog/cro-12</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/marketing-complete-guide-strategy</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://www.crepika.com/blog/linkedin-algorithm-7-tips-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/notion-complete-guide-monetization-method</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://www.crepika.com/blog/google-discover-7-tips-content</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/complete-guide-pdf-strategy</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://www.crepika.com/blog/utm-5-tips</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/seo-complete-guide-robotstxtcanonicalsitemap-method</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://www.crepika.com/blog/kakao-7-tips-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/seo-complete-guide-hreflang-search-optimization</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://www.crepika.com/blog/naver-optimization-5-tips-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/utm-complete-guide-marketing-method</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://www.crepika.com/blog/5-tips</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-discover-optimization-complete-guide-algorithm-conten</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://www.crepika.com/blog/cta-7-tips</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/hotjar-analytics-complete-guide-ux</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://www.crepika.com/blog/capcut-shortform-editing-2-10-tips</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/customer-journey-map-complete-guide-marketing-2</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://www.crepika.com/blog/makecom-sns-automation-5-tips</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/complete-guide-automation-revenue</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://www.crepika.com/blog/discord-usage-10-tips-creator-community-automation</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ads-complete-guide-strategy</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://www.crepika.com/blog/pinterest-optimization-7-tips-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/community-complete-guide-brand-community-6-strategy</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://www.crepika.com/blog/threads-algorithm-complete-analytics-follower-2026-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/1-creator-complete-guide-sns-revenue</loc>
-    <lastmod>2026-05-13</lastmod>
+    <loc>https://www.crepika.com/blog/hcu-content-guide-google-algorithm-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/velog-blog-seo-complete-guide-blog</loc>
-    <lastmod>2026-05-13</lastmod>
+    <loc>https://www.crepika.com/blog/seo-complete-guide-url</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/blog-seo-complete-guide-google-strategy</loc>
-    <lastmod>2026-05-13</lastmod>
+    <loc>https://www.crepika.com/blog/google-sge-brand-strategy-guide-ai-search-brand</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/wordpress-blog-complete-guide-a-to-z</loc>
-    <lastmod>2026-05-13</lastmod>
+    <loc>https://www.crepika.com/blog/search-optimization-complete-guide-google</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/elevenlabs-ai-complete-guide-automation</loc>
-    <lastmod>2026-05-13</lastmod>
+    <loc>https://www.crepika.com/blog/complete-guide-json-ld-search</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/perplexity-ai-complete-guide-content-analytics-10</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.crepika.com/blog/keyword-analytics-complete-guide-keyword</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ahrefs-beginner-complete-guide-seo-keyword-analytics</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.crepika.com/blog/content-strategy-complete-guide</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/semrush-complete-usage-guide-keyword-analytics</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.crepika.com/blog/kakao-ads-complete-guide-kakao-ads</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/tools-complete-guide-brand</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.crepika.com/blog/ads-complete-guide-ads-optimization-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/instagram-broadcast-channel-complete-guide-strategy</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.crepika.com/blog/pod-complete-guide</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/youtube-monetization-complete-guide-strategy</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/blog/linkedin-complete-guide-content-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/linkedin-complete-guide-content-strategy</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/blog/youtube-monetization-complete-guide-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/pod-complete-guide</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/blog/instagram-broadcast-channel-complete-guide-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ads-complete-guide-ads-optimization-strategy</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/blog/tools-complete-guide-brand</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/kakao-ads-complete-guide-kakao-ads</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/blog/semrush-complete-usage-guide-keyword-analytics</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/content-strategy-complete-guide</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/blog/ahrefs-beginner-complete-guide-seo-keyword-analytics</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/keyword-analytics-complete-guide-keyword</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/blog/perplexity-ai-complete-guide-content-analytics-10</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/complete-guide-json-ld-search</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.crepika.com/blog/elevenlabs-ai-complete-guide-automation</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/search-optimization-complete-guide-google</loc>
-    <lastmod>2026-05-16</lastmod>
+    <loc>https://www.crepika.com/blog/wordpress-blog-complete-guide-a-to-z</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-sge-brand-strategy-guide-ai-search-brand</loc>
-    <lastmod>2026-05-16</lastmod>
+    <loc>https://www.crepika.com/blog/blog-seo-complete-guide-google-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/seo-complete-guide-url</loc>
-    <lastmod>2026-05-16</lastmod>
+    <loc>https://www.crepika.com/blog/velog-blog-seo-complete-guide-blog</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/hcu-content-guide-google-algorithm-strategy</loc>
-    <lastmod>2026-05-16</lastmod>
+    <loc>https://www.crepika.com/blog/1-creator-complete-guide-sns-revenue</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/threads-algorithm-complete-analytics-follower-2026-strategy</loc>
-    <lastmod>2026-05-16</lastmod>
+    <loc>https://www.crepika.com/blog/community-complete-guide-brand-community-6-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/pinterest-optimization-7-tips-strategy</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/ads-complete-guide-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/discord-usage-10-tips-creator-community-automation</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/complete-guide-automation-revenue</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/makecom-sns-automation-5-tips</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/customer-journey-map-complete-guide-marketing-2</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/capcut-shortform-editing-2-10-tips</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/hotjar-analytics-complete-guide-ux</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/cta-7-tips</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/google-discover-optimization-complete-guide-algorithm-conten</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/5-tips</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/utm-complete-guide-marketing-method</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/naver-optimization-5-tips-strategy</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/seo-complete-guide-hreflang-search-optimization</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/kakao-7-tips-strategy</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/seo-complete-guide-robotstxtcanonicalsitemap-method</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/utm-5-tips</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/complete-guide-pdf-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-discover-7-tips-content</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/notion-complete-guide-monetization-method</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/5-practical-tips-ux</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/marketing-complete-guide-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/tips-5-automation</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/complete-guide-a-to-z</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ads-roas-7-tips-ads</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/marketing-complete-guide-blogyoutube-revenue</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/discord-30-growth-tips-0-100-practical-method</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/beehiiv-complete-guide-substack-growth-complete-mastery</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/seo-10</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/kakao-complete-guide-kakao-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ahrefs-5-tips-keyword</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/naver-marketing-complete-guide-4050-community-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/5-json-ld-tips</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/naver-complete-guide-search-1-strategy</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/creator-5-tips-method</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/facebookinstagram-ads-beginner-guide-meta-ads-manager-comple</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/notion-7-tips</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/google-ads-beginner-guide-gdn-brand</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/elevenlabs-tips-ai</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.crepika.com/blog/optimization-complete-guide</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/perplexity-blog-7-tips</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/optimizationcro-complete-guide-7</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/linkedin-algorithm-7-tips-strategy</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/capcut-editing-complete-guide-shortform-creator-editing</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/facebook-pixel-tips-meta-ads</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/sora-ai-guide-openai-sora-marketing-practical-method</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/7-tips</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/midjourney-advanced-usage-guide-brand-marketing-complete-mas</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/content-optimization-tips-pillar-page-cluster-page</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/makecom-automation-complete-guide-snsgoogle</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-sge-5-tips-ai-content-method</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/discord-community-complete-guide-creator</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/substack-tips-strategy</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/pinterest-seo-complete-guide-pinterest-search</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/7-tips-optimization-strategy</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/threads-marketing-complete-guide-meta-threads-follower-2026-</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/7-tips-strategy</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/one-person-3-channels-ai-tools-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/threads-5</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/smartstore-product-name-seo-3x-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/pinterest-seo-optimization-tips-search</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/internal-link-pageview-2x-blog-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/beehiiv-50-tips-content-optimization</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/email-automation-conversion-25-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-discover-analytics-content</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/tiktok-0-to-5000-challenge-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/threads-vs-xtwitter-vs-bluesky-sns-analytics-2026</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/google-business-local-rank-1-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/pinterest-marketing-roi-analytics</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.crepika.com/blog/card-news-save-rate-5x-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/cro-12</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://www.crepika.com/blog/kakao-channel-ab-test-ctr-3x-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/makecom-vs-zapier-2026-automation-tools-analytics</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://www.crepika.com/blog/instagram-story-quiz-engagement-200-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ai-tools-2026-soraklingrunway-comparison</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://www.crepika.com/blog/geo-chatgpt-citation-10x-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/threads-analytics-instagram</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://www.crepika.com/blog/linkedin-b2b-lead-30-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/comparison-stibee-vs-mailchimp-vs-beehiiv</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://www.crepika.com/blog/newsletter-55-open-rate-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/creator-community-analytics-case</loc>
-    <lastmod>2026-05-20</lastmod>
+    <loc>https://www.crepika.com/blog/youtube-thumbnail-ab-test-ctr-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/marketing-revenue-2026-revenue-analytics</loc>
-    <lastmod>2026-05-20</lastmod>
+    <loc>https://www.crepika.com/blog/hashtag-strategy-reels-3x-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/2026-udemy101-revenue-analytics</loc>
-    <lastmod>2026-05-20</lastmod>
+    <loc>https://www.crepika.com/blog/naver-blog-comeback-content-refresh</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/hcu-6</loc>
-    <lastmod>2026-05-20</lastmod>
+    <loc>https://www.crepika.com/blog/aeo-ai-overview-5x-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/seo-robotstxt-case-analytics</loc>
-    <lastmod>2026-05-20</lastmod>
+    <loc>https://www.crepika.com/blog/webp-speed-seo-improvement-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ads-analytics-roas</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://www.crepika.com/blog/qr-code-cafe-revisit-rate-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/pod-revenue-analytics-creator</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://www.crepika.com/blog/blog-3months-1000-daily-visitors</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/kakao-ads-analytics</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://www.crepika.com/blog/instagram-500-to-sponsorship-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/search-2026-search</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://www.crepika.com/blog/nft-digital-goods-creator-2026</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/substack-creator-revenue-revenue-analytics</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://www.crepika.com/blog/global-creator-local-market-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/brand</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://www.crepika.com/blog/instagram-korea-user-behavior</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/linkedin-algorithm-2026-content</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://www.crepika.com/blog/korea-ecommerce-product-seo-analysis</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/community-comparison</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://www.crepika.com/blog/creator-2026-top10-apps</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/vs-naver-revenue-comparison-monetization</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://www.crepika.com/blog/global-creator-korean-content-demand</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ai-tools-analytics-2026-claudechatgptgemini-content-marketin</loc>
-    <lastmod>2026-06-02</lastmod>
+    <loc>https://www.crepika.com/blog/review-psychology-marketing</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/wordpress-seo</loc>
-    <lastmod>2026-06-02</lastmod>
+    <loc>https://www.crepika.com/blog/brand-ambassador-vs-influencer-comparison</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/content-niche-strategy-blog-growth</loc>
-    <lastmod>2026-06-02</lastmod>
+    <loc>https://www.crepika.com/blog/ai-content-regulation-platform-policy</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/e-e-a-t-analytics</loc>
-    <lastmod>2026-06-02</lastmod>
+    <loc>https://www.crepika.com/blog/free-marketing-revenue-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/revenue-2026-blog-rpm-analytics</loc>
-    <lastmod>2026-06-02</lastmod>
+    <loc>https://www.crepika.com/blog/storytelling-marketing-conversion-impact</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/threads-follower-0-1000-3-growth</loc>
-    <lastmod>2026-06-03</lastmod>
+    <loc>https://www.crepika.com/blog/creator-business-registration-tax-insight</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/pinterest-seo-blog-5000-6-strategy</loc>
-    <lastmod>2026-06-03</lastmod>
+    <loc>https://www.crepika.com/blog/platform-dependency-algorithm-risk</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/makecom-sns-70</loc>
-    <lastmod>2026-06-03</lastmod>
+    <loc>https://www.crepika.com/blog/creator-platform-ecosystem-map-2026</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ab-3</loc>
-    <lastmod>2026-06-03</lastmod>
+    <loc>https://www.crepika.com/blog/naver-shopping-live-seller-data</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/naver-optimization-2</loc>
-    <lastmod>2026-06-03</lastmod>
+    <loc>https://www.crepika.com/blog/naver-clip-youtube-shorts-korea</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/kakao-optimization-40</loc>
-    <lastmod>2026-06-04</lastmod>
+    <loc>https://www.crepika.com/blog/korea-z-generation-sns-2026</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/beehiiv-6-2000</loc>
-    <lastmod>2026-06-04</lastmod>
+    <loc>https://www.crepika.com/blog/coupang-partners-revenue-analysis</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/marketing-300-revenue-strategy</loc>
-    <lastmod>2026-06-04</lastmod>
+    <loc>https://www.crepika.com/blog/danggeun-market-business-marketing</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/500-strategy</loc>
-    <lastmod>2026-06-04</lastmod>
+    <loc>https://www.crepika.com/blog/kakao-ecosystem-marketing-analysis</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/ads-roas-5-shopping</loc>
-    <lastmod>2026-06-04</lastmod>
+    <loc>https://www.crepika.com/blog/naver-blog-vs-tistory-vs-brunch</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/seo-3-60</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.crepika.com/blog/automation-tool-work-efficiency</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/discord-2-creator</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.crepika.com/blog/chatgpt-claude-gemini-marketing-comparison</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/content-6-30</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.crepika.com/blog/free-vs-paid-seo-tools-comparison</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/substack-500-creator-strategy</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.crepika.com/blog/ai-writing-tools-review-5</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-discover-3000-content-strategy</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.crepika.com/blog/membership-subscription-model-creator</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/notion-100-marketing-strategy</loc>
-    <lastmod>2026-06-06</lastmod>
+    <loc>https://www.crepika.com/blog/paid-newsletter-success-cases</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/kling-ai-shortform-100</loc>
-    <lastmod>2026-06-06</lastmod>
+    <loc>https://www.crepika.com/blog/email-list-vs-followers-value</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/search-optimization-3</loc>
-    <lastmod>2026-06-06</lastmod>
+    <loc>https://www.crepika.com/blog/digital-product-subscription-revenue</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/facebook-pixel-ads-40</loc>
-    <lastmod>2026-06-06</lastmod>
+    <loc>https://www.crepika.com/blog/one-person-creator-income-interview</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/runway-ai-editing-tools-complete-guide-ai-beginner</loc>
-    <lastmod>2026-06-06</lastmod>
+    <loc>https://www.crepika.com/blog/social-proof-purchase-decision</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/kling-ai-guide-complete-mastery</loc>
-    <lastmod>2026-06-07</lastmod>
+    <loc>https://www.crepika.com/blog/content-saturation-differentiation</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-search-ads-360-beginner-guide-ppc-strategy</loc>
-    <lastmod>2026-06-07</lastmod>
+    <loc>https://www.crepika.com/blog/korea-consumer-sns-purchase-2026</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/instagram-threads-content-strategy-sns</loc>
-    <lastmod>2026-06-07</lastmod>
+    <loc>https://www.crepika.com/blog/viral-content-pattern-analysis</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/stable-diffusion-complete-guide-ai</loc>
-    <lastmod>2026-06-07</lastmod>
+    <loc>https://www.crepika.com/blog/small-creator-niche-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/google-performance-max-complete-guide-ai-ads-automation-roas</loc>
-    <lastmod>2026-06-07</lastmod>
+    <loc>https://www.crepika.com/blog/search-intent-practical-application</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/kakao-ads-complete-guide-kakao-ads-strategy</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://www.crepika.com/blog/ctr-data-korean-title-truth</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/naver-searchads-complete-guide-brand-search-strategy</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://www.crepika.com/blog/semantic-seo-topic-authority</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/apple-podcast-optimization-complete-guide-strategy</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://www.crepika.com/blog/people-also-ask-optimization</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/spotify-growth-guide-spotify-for-podcasters</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://www.crepika.com/blog/image-seo-google-image-traffic</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/brand-brand-audit-complete-guide-brand-method</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://www.crepika.com/blog/keyword-clustering-topic-authority</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/analytics-complete-guide-analytics-6</loc>
-    <lastmod>2026-06-09</lastmod>
+    <loc>https://www.crepika.com/blog/eeat-traffic-change-case</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/substack-complete-guide-a-to-z</loc>
-    <lastmod>2026-06-09</lastmod>
+    <loc>https://www.crepika.com/blog/google-vs-naver-korea-seo-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/complete-guide</loc>
-    <lastmod>2026-06-09</lastmod>
+    <loc>https://www.crepika.com/blog/naver-ai-search-cue-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/marketing-complete-guide-strategy-1</loc>
-    <lastmod>2026-06-09</lastmod>
+    <loc>https://www.crepika.com/blog/google-sge-blog-traffic-impact</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://crepika.com/blog/instagram-close-friends-marketing-guide-vip-content-strategy</loc>
-    <lastmod>2026-06-09</lastmod>
+    <loc>https://www.crepika.com/blog/korea-sns-usage-2026</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/short-form-content-evolution</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/influencer-marketing-roi-data</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/creator-burnout-data-analysis</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/zero-click-search-blogger-survival</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/google-core-update-2026-survival</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/ai-changes-seo-future-2027</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-tiktok-reels-algorithm-war</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/creator-economy-2026-revenue-structure</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/social-media-trends-2026</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/free-social-media-analytics-tools-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/rss-trend-tracking-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-intro-5sec-retention-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/facebook-page-reach-tips-2026</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/interview-content-eeat-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/ab-test-content-performance-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/bruhnch-seo-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-tag-chapter-marker-seo-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/google-trends-viral-topic-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/free-seo-chrome-extension-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/google-alerts-competitor-monitoring-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/chatgpt-blog-draft-10min-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/zapier-free-sns-automation-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/reader-persona-reaction-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/multi-format-content-video-text-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/screenshot-content-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/comparison-table-content-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/faq-section-search-exposure-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/statistics-credibility-content-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/jargon-easy-explanation-writing-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/blog-paragraph-readability-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-collaboration-dm-profile-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/kakao-channel-first-message-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/linkedin-profile-views-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/tiktok-first-video-checklist</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-story-link-10-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-comment-engagement-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/x-twitter-thread-viral-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-posting-optimal-time-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/tistory-blog-seo-setup-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-blog-neighbor-increase-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/search-console-ctr-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/schema-markup-manual-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/image-alt-text-seo-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/old-post-refresh-traffic-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/google-snippet-position-zero-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/internal-link-seo-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/b2b-content-expertise-writing-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/product-description-conversion-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-first-line-hook-patterns</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-description-seo-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/hashtag-research-niche-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-blog-subheading-scan-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/korean-copywriting-short-sentence-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/email-subject-open-rate-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/social-media-cta-50-examples</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/blog-title-click-formula</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/video-screenshot-sns-content-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-feed-color-palette-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/social-media-thumbnail-ctr-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/png-jpg-webp-when-to-use</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/card-news-design-readability-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/free-stock-photos-copyright-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/sns-image-size-cheatsheet-2026</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-square-image-tips</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-community-feature-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/facebook-page-marketing-guide-2026</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/chatbot-customer-service-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/content-marketing-roi-measurement-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/google-search-ad-beginner-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-clova-ai-content-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-knowledge-in-marketing</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/creator-free-tools-50-guide-2026</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/social-media-scheduling-tools-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/notion-ai-content-planning</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/video-editing-free-tools-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/digital-nomad-creator-tools-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-clip-shorts-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/site-speed-optimization-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/backlink-building-korea-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/kakao-shopping-live-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-subtitle-seo-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-playlist-seo-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/ai-image-generation-marketing-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/figma-marketer-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/ai-overview-blog-strategy-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/mobile-seo-optimization-guide-2026</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/google-shopping-seo-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/brand-storytelling-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/ebook-lead-generation-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/podcast-marketing-beginner-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/ugc-marketing-strategy-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/influencer-marketing-beginner-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/social-media-content-repurpose-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/notion-content-system-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/canva-design-complete-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/chatgpt-marketing-prompt-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/personal-branding-complete-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/card-news-creation-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/blog-writing-complete-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/longtail-keyword-research-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/local-seo-complete-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/core-web-vitals-improvement-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/ga4-google-analytics-beginner-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/google-search-console-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/creator-monetization-complete-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/content-calendar-annual-planning-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/google-business-profile-optimization</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/tiktok-marketing-korea-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/linkedin-b2b-content-marketing-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/kakao-channel-marketing-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/newsletter-1000-subscribers-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-live-streaming-marketing</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/email-marketing-automation-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-analytics-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-monetization-guide-2026</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-keyword-research-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-shorts-viral-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-thumbnail-design-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/youtube-seo-complete-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-dm-marketing-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-insights-analytics-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-growth-roadmap</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-brand-collaboration-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-shopping-feature-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-stories-marketing-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-reels-algorithm-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-datalab-keyword-research</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-post-vs-blog-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/smartstore-product-description-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-local-seo-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-powerlink-advertising-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-blog-monetization-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-shopping-seo-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-cafe-marketing-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/social-media-text-optimization</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/meta-data-byte-optimization</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/content-readability-secrets</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/platform-text-length-guide</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/ai-tools-for-creators</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/geo-optimization-strategy</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/aeo-search-future-guide</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/webp-seo-image-optimization</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/qr-marketing-strategy-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/naver-blog-seo-guide</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crepika.com/blog/instagram-marketing-complete-guide</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
