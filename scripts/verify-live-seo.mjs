@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const SITE_URL = process.env.SITE_URL || "https://crepika.com";
 const WWW_SITE_URL = "https://www.crepika.com";
+const ADSENSE_CLIENT = "ca-pub-3050601904412736";
 const ADS_TXT_LINE = "google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0";
 const ROOT_HTML_PATHS = ["/"];
 const SAMPLE_HTML_PATHS = ["/blog", "/tools/qr-generator", "/about", "/contact", "/privacy", "/terms"];
@@ -25,6 +26,10 @@ const failures = [];
 
 function fail(message) {
   failures.push(message);
+}
+
+function countMatches(value, pattern) {
+  return (value.match(pattern) ?? []).length;
 }
 
 async function get(path) {
@@ -126,6 +131,34 @@ function validateCrawlerShellLanguage(path, body) {
   return {
     koreanShell: REQUIRED_CRAWLER_SHELL_MARKERS.every((marker) => body.includes(marker)),
     untranslatedShell: FORBIDDEN_CRAWLER_SHELL_MARKERS.filter((marker) => body.includes(marker)),
+  };
+}
+
+function validateAdSenseAutoAds(path, body) {
+  const hasAccountMeta = body.includes(`name="google-adsense-account" content="${ADSENSE_CLIENT}"`);
+  const loaderCount = countMatches(
+    body,
+    new RegExp(`pagead2\\.googlesyndication\\.com/pagead/js/adsbygoogle\\.js\\?client=${ADSENSE_CLIENT}`, "g"),
+  );
+  const manualSlotCount =
+    countMatches(body, /<ins[^>]+class=["'][^"']*adsbygoogle/gi) +
+    countMatches(body, /adsbygoogle\.push\s*\(/g);
+
+  if (!hasAccountMeta) {
+    fail(`${path} is missing the google-adsense-account meta tag.`);
+  }
+  if (loaderCount !== 1) {
+    fail(`${path} must load the AdSense Auto Ads script exactly once; found ${loaderCount}.`);
+  }
+  if (manualSlotCount > 0) {
+    fail(`${path} contains manual AdSense slot code despite the Auto Ads-only policy.`);
+  }
+
+  return {
+    accountMeta: hasAccountMeta,
+    autoAdsLoaderCount: loaderCount,
+    manualSlotCount,
+    autoAdsOnly: hasAccountMeta && loaderCount === 1 && manualSlotCount === 0,
   };
 }
 
@@ -262,6 +295,7 @@ async function main() {
       status: response.status,
       bytes: body.length,
       htmlBasics: meta,
+      adsensePolicy: validateAdSenseAutoAds(path, body),
       readableRootText: true,
     });
   }
@@ -279,6 +313,7 @@ async function main() {
       status: response.status,
       bytes: body.length,
       htmlBasics: meta,
+      adsensePolicy: validateAdSenseAutoAds(path, body),
     });
   }
 
@@ -297,6 +332,7 @@ async function main() {
       status: response.status,
       bytes: body.length,
       htmlBasics: meta,
+      adsensePolicy: validateAdSenseAutoAds(path, body),
       shellLanguage,
     });
   }
