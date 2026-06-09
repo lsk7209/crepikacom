@@ -456,6 +456,22 @@ function validateToolPublicationAutomation() {
   }
 }
 
+function validateQualityAutomation() {
+  const workflow = requireFile(".github/workflows/quality-gates.yml");
+  for (const marker of [
+    "push:",
+    "pull_request:",
+    "npm ci",
+    "npm run lint",
+    "npm run verify:seo",
+    "npm run build",
+  ]) {
+    if (!workflow.includes(marker)) {
+      fail(`quality-gates.yml must include ${marker}.`);
+    }
+  }
+}
+
 function validateQueueCoverage(queue) {
   if (queue.length !== 100) {
     fail(`tool-queue.json should contain 100 planned tools; found ${queue.length}.`);
@@ -501,6 +517,7 @@ function main() {
   validateGeneratedIndexes(queue, posts);
   validateIndexingAutomation();
   validateToolPublicationAutomation();
+  validateQualityAutomation();
 
   for (const message of warnings) {
     console.warn(`WARN ${message}`);
@@ -527,6 +544,7 @@ function main() {
           adsenseAutoAdsOnly: "ok",
           indexingAutomation: "ok",
           toolPublicationAutomation: "ok",
+          qualityAutomation: "ok",
           toolQueue: queue.reduce((acc, item) => {
             acc[item.status] = (acc[item.status] || 0) + 1;
             return acc;
