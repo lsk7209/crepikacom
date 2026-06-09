@@ -35,6 +35,12 @@ const STATIC_CORE_URLS = [
   ["/contact", "monthly", "0.5"],
   ["/privacy", "yearly", "0.3"],
   ["/terms", "yearly", "0.3"],
+  ["/editorial-policy", "yearly", "0.5"],
+  ["/tool-data-policy", "yearly", "0.5"],
+  ["/topics/seo", "weekly", "0.8"],
+  ["/topics/instagram", "weekly", "0.8"],
+  ["/topics/adsense", "weekly", "0.8"],
+  ["/topics/creator-tools", "weekly", "0.8"],
   ["/blog", "daily", "0.9"],
 ];
 
@@ -289,6 +295,12 @@ function writeAiFiles(posts) {
     blog: {
       url: `${SITE_URL}/blog`,
       rss: `${SITE_URL}/rss.xml`,
+      hubs: [
+        `${SITE_URL}/topics/seo`,
+        `${SITE_URL}/topics/instagram`,
+        `${SITE_URL}/topics/adsense`,
+        `${SITE_URL}/topics/creator-tools`,
+      ],
       categories: ["guide", "tips", "insights", "case-study"],
       count: posts.length,
       latest: latest.map((post) => ({
@@ -345,6 +357,10 @@ ${latestLines}
 
 - Home: ${SITE_URL}
 - Blog: ${SITE_URL}/blog
+- SEO Hub: ${SITE_URL}/topics/seo
+- Instagram Hub: ${SITE_URL}/topics/instagram
+- AdSense Hub: ${SITE_URL}/topics/adsense
+- Creator Tools Hub: ${SITE_URL}/topics/creator-tools
 - RSS: ${SITE_URL}/rss.xml
 - Sitemap: ${SITE_URL}/sitemap.xml
 - Contact: ${SITE_URL}/contact

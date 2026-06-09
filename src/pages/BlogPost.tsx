@@ -15,6 +15,7 @@ import {
   Award,
   CheckCircle2,
   ListChecks,
+  Table2,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -23,6 +24,7 @@ import { Separator } from "@/components/ui/separator";
 import type { BlogPost as BlogPostData } from "@/data/blog-content";
 import { getRelatedPostMeta, loadBlogPostBySlug } from "@/data/blog-post-loader";
 import { getToolById } from "@/data/tools-config";
+import { BLOG_HUBS } from "@/data/blog-hubs";
 import {
   Accordion,
   AccordionContent,
@@ -128,6 +130,26 @@ function getTrustedReferences(post: BlogPostData) {
         list.findIndex((item) => item.url === reference.url) === index,
     )
     .slice(0, 3);
+}
+
+function getMatchingHub(post: BlogPostData) {
+  const haystack = [
+    post.slug,
+    post.title,
+    post.description,
+    post.category,
+    ...(post.keywords ?? []),
+  ].join(" ");
+  return BLOG_HUBS.find((hub) => hub.match.test(haystack)) ?? BLOG_HUBS[0];
+}
+
+function getArticleChecklist(post: BlogPostData) {
+  const primaryKeyword = post.keywords[0] ?? post.title;
+  return [
+    `${primaryKeyword}를 적용할 페이지나 채널을 하나만 정한다.`,
+    "본문의 핵심 주장과 예시가 실제 실행 순서로 이어지는지 확인한다.",
+    "관련 도구로 제목, 설명, 링크, CTA를 발행 전에 한 번 더 점검한다.",
+  ];
 }
 
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
@@ -463,6 +485,10 @@ export default function BlogPost() {
           references={getTrustedReferences(post)}
           relatedTools={relatedTools}
         />
+        <ArticleDecisionBlock
+          post={post}
+          hub={getMatchingHub(post)}
+        />
 
         {/* Introduction */}
         <section className="mb-12 rounded-lg border border-cyan-400/20 bg-cyan-400/5 p-5 md:p-6">
@@ -785,6 +811,64 @@ function TableOfContents({
         ))}
       </ol>
     </nav>
+  );
+}
+
+function ArticleDecisionBlock({
+  post,
+  hub,
+}: {
+  post: BlogPostData;
+  hub: (typeof BLOG_HUBS)[number];
+}) {
+  const checklist = getArticleChecklist(post);
+  const rows = [
+    ["먼저 볼 것", post.description],
+    ["발행 전 점검", post.keywords.slice(0, 3).join(", ")],
+    ["다음 학습", hub.title],
+  ];
+
+  return (
+    <section className="mb-10 rounded-xl border border-sky-400/20 bg-sky-400/[0.04] p-5">
+      <div className="mb-4 flex items-center gap-2">
+        <Table2 className="h-5 w-5 text-sky-300" />
+        <h2 className="text-xl font-bold">실행 기준 요약</h2>
+      </div>
+      <div className="grid gap-4 md:grid-cols-[1.05fr_0.95fr]">
+        <div className="overflow-hidden rounded-lg border">
+          {rows.map(([label, value]) => (
+            <div
+              key={label}
+              className="grid grid-cols-[7.5rem_1fr] border-b last:border-b-0"
+            >
+              <div className="bg-muted/40 px-3 py-3 text-sm font-semibold">
+                {label}
+              </div>
+              <div className="px-3 py-3 text-sm text-muted-foreground">
+                {value}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div>
+          <h3 className="mb-3 text-base font-semibold">발행 전 체크리스트</h3>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            {checklist.map((item) => (
+              <li key={item} className="flex gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-300" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <Link
+            to={`/topics/${hub.slug}`}
+            className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+          >
+            {hub.title} 더 보기 <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }
 

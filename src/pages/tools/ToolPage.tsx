@@ -10,7 +10,7 @@ import { toast } from "@/hooks/use-toast";
 import type { ToolDetailedContent } from "@/data/tool-content";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle2, Lightbulb, HelpCircle, Link as LinkIcon, ArrowRight } from "lucide-react";
+import { CheckCircle2, Lightbulb, HelpCircle, Link as LinkIcon, ArrowRight, ClipboardCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 
 type ToolSlots = {
@@ -62,6 +62,39 @@ const TOOL_INTRO_HEADING: Record<string, string> = {
   'hashtag-mixer': '해시태그 믹서로 알고리즘 페널티 방지하기',
 };
 
+const TOOL_USE_CASES: Record<string, string[]> = {
+  "text-counter": [
+    "메타 타이틀과 디스크립션을 발행 전에 길이 기준으로 점검할 때",
+    "인스타그램, 유튜브, 블로그 초안의 앞부분 핵심 문장을 다듬을 때",
+    "외주 원고나 팀 문서의 분량 기준을 빠르게 맞출 때",
+  ],
+  "byte-counter": [
+    "네이버 검색 결과에서 제목과 설명이 잘리지 않도록 확인할 때",
+    "한글, 영문, 숫자가 섞인 문구의 실제 바이트 길이를 점검할 때",
+    "문자 발송이나 플랫폼 입력 제한을 넘기지 않도록 검수할 때",
+  ],
+  "webp-converter": [
+    "블로그 대표 이미지와 본문 이미지를 WebP로 줄여 LCP 부담을 낮출 때",
+    "여러 플랫폼에 올릴 이미지를 발행 전 가볍게 만들 때",
+    "사이트 속도 개선 전후의 이미지 용량 차이를 확인할 때",
+  ],
+  "qr-generator": [
+    "오프라인 홍보물에서 블로그, 랜딩 페이지, 쿠폰 페이지로 연결할 때",
+    "행사 안내문, 명함, 매장 메뉴판에 빠른 접속 경로를 넣을 때",
+    "UTM 캠페인 URL을 QR로 바꿔 유입 경로를 구분할 때",
+  ],
+};
+
+function getToolUseCases(content: ToolDetailedContent) {
+  return (
+    TOOL_USE_CASES[content.id] ?? [
+      "초안 작성 후 발행 전에 오류와 누락을 빠르게 점검할 때",
+      "반복 작업을 줄이고 같은 기준으로 여러 콘텐츠를 검수할 때",
+      "블로그, SNS, 뉴스레터 등 채널별 입력 제한을 맞출 때",
+    ]
+  );
+}
+
 // Dynamic detailed article component for better SEO/AEO/GEO
 const DetailedToolArticle = ({ content }: { content: ToolDetailedContent }) => (
   <div className="space-y-12 mt-8 border-t pt-12">
@@ -84,6 +117,20 @@ const DetailedToolArticle = ({ content }: { content: ToolDetailedContent }) => (
           <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
         </div>
       ))}
+    </section>
+
+    <section className="rounded-2xl border bg-sky-500/[0.04] p-6">
+      <h2 className="mb-5 flex items-center gap-2 text-2xl font-bold">
+        <ClipboardCheck className="h-6 w-6 text-sky-400" />
+        이런 상황에서 쓰면 좋습니다
+      </h2>
+      <div className="grid gap-3 md:grid-cols-3">
+        {getToolUseCases(content).map((useCase) => (
+          <div key={useCase} className="rounded-lg border bg-background/70 p-4 text-sm text-muted-foreground">
+            {useCase}
+          </div>
+        ))}
+      </div>
     </section>
 
     {/* How to Use */}

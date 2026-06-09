@@ -33,6 +33,9 @@ const Terms = lazy(() => import("./pages/Terms"));
 const Contact = lazy(() => import("./pages/Contact"));
 const BlogList = lazy(() => import("./pages/BlogList"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const BlogHub = lazy(() => import("./pages/BlogHub"));
+const EditorialPolicy = lazy(() => import("./pages/EditorialPolicy"));
+const ToolDataPolicy = lazy(() => import("./pages/ToolDataPolicy"));
 
 function AppContent() {
   const { showHelp, setShowHelp } = useGlobalShortcuts();
@@ -72,7 +75,10 @@ function AppContent() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/editorial-policy" element={<EditorialPolicy />} />
+            <Route path="/tool-data-policy" element={<ToolDataPolicy />} />
             <Route path="/blog" element={<BlogList />} />
+            <Route path="/topics/:hubSlug" element={<BlogHub />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

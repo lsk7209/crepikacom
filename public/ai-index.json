@@ -70,6 +70,12 @@
   "blog": {
     "url": "https://crepika.com/blog",
     "rss": "https://crepika.com/rss.xml",
+    "hubs": [
+      "https://crepika.com/topics/seo",
+      "https://crepika.com/topics/instagram",
+      "https://crepika.com/topics/adsense",
+      "https://crepika.com/topics/creator-tools"
+    ],
     "categories": [
       "guide",
       "tips",

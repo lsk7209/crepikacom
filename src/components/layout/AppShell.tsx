@@ -230,6 +230,22 @@ export function AppShell({ children }: AppShellProps) {
                   </Link>
                 </li>
                 <li>
+                  <Link
+                    to="/topics/seo"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    SEO 허브
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/topics/adsense"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    AdSense 허브
+                  </Link>
+                </li>
+                <li>
                   <a
                     href="/rss.xml"
                     target="_blank"
@@ -276,6 +292,22 @@ export function AppShell({ children }: AppShellProps) {
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     이용약관
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/editorial-policy"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    콘텐츠 작성 기준
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/tool-data-policy"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    도구 데이터 처리
                   </Link>
                 </li>
               </ul>

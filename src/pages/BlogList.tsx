@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/card";
 import { Badge, badgeVariants } from "@/components/ui/badge";
 import { getAllBlogMeta, BlogPostMeta } from "@/data/blog-posts-meta";
+import { BLOG_HUBS, getPostsForHub } from "@/data/blog-hubs";
 import { Input } from "@/components/ui/input";
 import React, { useMemo } from "react";
 import { cn } from "@/lib/utils";
@@ -254,6 +255,32 @@ export default function BlogList() {
             />
           </div>
         </div>
+
+        <section className="mb-12 rounded-lg border bg-card p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold">주제별 빠른 탐색</h2>
+          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+            {BLOG_HUBS.map((hub) => (
+              <Link
+                key={hub.slug}
+                to={`/topics/${hub.slug}`}
+                className="group rounded-md border bg-background p-4 transition hover:border-primary/50"
+              >
+                <div className="mb-2 flex items-center justify-between gap-3">
+                  <h3 className="text-base font-semibold group-hover:text-primary">
+                    {hub.title}
+                  </h3>
+                  <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary" />
+                </div>
+                <p className="line-clamp-2 text-sm text-muted-foreground">
+                  {hub.description}
+                </p>
+                <p className="mt-3 text-xs text-primary">
+                  관련 글 {getPostsForHub(allPosts, hub).length}개
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         {/* Category Filter */}
         <div className="flex flex-wrap gap-2 justify-center mb-12">

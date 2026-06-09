@@ -70,13 +70,19 @@ const REQUIRED_OG_IMAGE_PATHS = [
   "public/images/og-tool-publish.png",
   "public/images/og-tool-analyze.png",
 ];
-const ROOT_ROUTE_SEGMENTS = new Set(["blog", "tools"]);
+const ROOT_ROUTE_SEGMENTS = new Set(["blog", "tools", "topics"]);
 const ALLOWED_STATIC_ROUTES = new Set([
   "/",
   "/about",
   "/contact",
   "/privacy",
   "/terms",
+  "/editorial-policy",
+  "/tool-data-policy",
+  "/topics/seo",
+  "/topics/instagram",
+  "/topics/adsense",
+  "/topics/creator-tools",
   "/rss.xml",
   "/feed.xml",
   "/sitemap.xml",
@@ -480,6 +486,12 @@ function validateBlogArticleSupportSignals(path, body) {
   }
   if (!body.includes("<h2>다음 실행</h2>")) {
     fail(`${path} is missing the action CTA block required for reader follow-through.`);
+  }
+  if (!body.includes("<h2>실행 기준 요약</h2>")) {
+    fail(`${path} is missing the execution summary block required for content usefulness.`);
+  }
+  if (!body.includes("발행 전 체크리스트")) {
+    fail(`${path} is missing the publication checklist required for reader actionability.`);
   }
 
   const trustedReferenceLinks = extractAnchorHrefs(body).filter((href) =>

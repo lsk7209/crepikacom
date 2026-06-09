@@ -132,6 +132,30 @@ const staticPages = [
     ],
   },
   {
+    path: "editorial-policy/index.html",
+    title: "콘텐츠 작성 기준 | 크레피카",
+    description: "크레피카가 SEO, SNS, 크리에이터 도구 콘텐츠를 작성하고 검수하는 기준입니다.",
+    canonical: `${siteUrl}/editorial-policy`,
+    heading: "콘텐츠 작성 기준",
+    body: [
+      "크레피카는 검색 의도, 실행 순서, 확인 가능한 참고 자료, 관련 도구 링크를 기준으로 콘텐츠를 작성합니다.",
+      "오래된 정보, 잘못된 링크, 정책 변경 가능성이 있는 내용은 주기적으로 검토하며 정정 요청은 문의 페이지에서 받습니다.",
+      "Google AdSense 자동광고가 노출될 수 있지만 광고 노출 여부는 도구 결과나 편집 추천 내용에 영향을 주지 않습니다.",
+    ],
+  },
+  {
+    path: "tool-data-policy/index.html",
+    title: "도구 데이터 처리 방식 | 크레피카",
+    description: "크레피카 무료 도구가 입력값을 어떻게 처리하고 사용자 데이터를 보호하는지 안내합니다.",
+    canonical: `${siteUrl}/tool-data-policy`,
+    heading: "도구 데이터 처리 방식",
+    body: [
+      "크레피카 주요 도구는 가능한 한 브라우저 안에서 처리되도록 설계되어 빠른 사용성과 개인정보 노출 최소화를 목표로 합니다.",
+      "사용자는 민감정보 입력을 피해야 하며 도구 결과는 발행 전 직접 검토해야 하는 보조 자료입니다.",
+      "사이트 개선을 위해 GA4와 Google AdSense 자동광고 스크립트가 로드될 수 있습니다.",
+    ],
+  },
+  {
     path: "blog/index.html",
     title: "크레피카 블로그 | SEO와 크리에이터 워크플로우 가이드",
     description: "SEO, SNS 마케팅, 이미지 최적화, 콘텐츠 워크플로우, 무료 크리에이터 도구 활용법을 다루는 크레피카 가이드입니다.",
@@ -141,6 +165,37 @@ const staticPages = [
       "크레피카 블로그는 실전 SEO, SNS 마케팅, 크리에이터 워크플로우, 이미지 최적화, 발행 점검 주제를 다룹니다.",
       "각 글은 사이트맵과 RSS 피드에 연결되어 검색엔진이 전체 콘텐츠 아카이브를 발견할 수 있게 구성되어 있습니다.",
     ],
+  },
+];
+
+const blogHubs = [
+  {
+    slug: "seo",
+    title: "SEO 콘텐츠 최적화 허브",
+    description: "검색 노출, 구조화 데이터, 사이트맵, 메타 태그, 내부 링크를 한 번에 점검하는 SEO 가이드 모음입니다.",
+    match: /seo|search|google|naver|sitemap|robots|schema|canonical|meta|검색|네이버|구글/i,
+    tools: ["/tools/seo-title-length-checker", "/tools/meta-description-checker", "/tools/h-tag-structure-checker"],
+  },
+  {
+    slug: "instagram",
+    title: "인스타그램 콘텐츠 운영 허브",
+    description: "인스타그램 캡션, 해시태그, 릴스, 스토리, 프로필 최적화를 실행 중심으로 정리한 가이드 모음입니다.",
+    match: /instagram|insta|reels|hashtag|caption|인스타|인스타그램|릴스|해시태그|캡션/i,
+    tools: ["/tools/insta-spacer", "/tools/hashtag-mixer", "/tools/instagram-caption-builder"],
+  },
+  {
+    slug: "adsense",
+    title: "애드센스 수익화 준비 허브",
+    description: "애드센스 검수, RPM 계산, 콘텐츠 품질, 정책 페이지, 자동광고 운영을 점검하는 수익화 가이드 모음입니다.",
+    match: /adsense|rpm|ad|revenue|monetization|광고|수익|애드센스|정책/i,
+    tools: ["/tools/adsense-rpm-calculator", "/tools/adsense-cpc-calculator", "/tools/eeat-signal-checker"],
+  },
+  {
+    slug: "creator-tools",
+    title: "크리에이터 무료 도구 허브",
+    description: "글자수, 바이트, WebP, QR, UTM, CTR처럼 발행 전후에 바로 쓰는 무료 브라우저 도구 모음입니다.",
+    match: /tool|tools|creator|webp|qr|utm|ctr|counter|도구|크리에이터|글자수|바이트/i,
+    tools: ["/tools/text-counter", "/tools/byte-counter", "/tools/webp-converter", "/tools/qr-generator"],
   },
 ];
 
@@ -390,6 +445,35 @@ function renderArticleSupportLinks(post) {
     '<li><a href="/tools/text-counter">Text Counter</a></li>\n<li><a href="/tools/meta-description-checker">Meta Description Checker</a></li>';
 
   return `<section class="panel"><h2>공식 참고 자료</h2><ul>${references}</ul><h2>다음 실행</h2><ul>${actions}<li><a href="/blog">관련 가이드 더 보기</a></li></ul></section>`;
+}
+
+function getHubForPost(post) {
+  const haystack = [
+    post.slug,
+    post.title,
+    post.description,
+    post.category,
+    ...(post.keywords ?? []),
+  ].join(" ");
+  return blogHubs.find((hub) => hub.match.test(haystack)) ?? blogHubs[0];
+}
+
+function renderArticleDecisionBlock(post) {
+  const hub = getHubForPost(post);
+  const keyword = post.keywords?.[0] || post.title;
+  return `<section class="panel"><h2>실행 기준 요약</h2>
+    <table><tbody>
+      <tr><th>먼저 볼 것</th><td>${escapeHtml(post.description)}</td></tr>
+      <tr><th>발행 전 점검</th><td>${escapeHtml((post.keywords ?? []).slice(0, 3).join(", "))}</td></tr>
+      <tr><th>다음 학습</th><td><a href="/topics/${escapeHtml(hub.slug)}">${escapeHtml(hub.title)}</a></td></tr>
+    </tbody></table>
+    <h3>발행 전 체크리스트</h3>
+    <ul>
+      <li>${escapeHtml(keyword)}를 적용할 페이지나 채널을 하나만 정합니다.</li>
+      <li>본문의 핵심 주장과 예시가 실제 실행 순서로 이어지는지 확인합니다.</li>
+      <li>관련 도구로 제목, 설명, 링크, CTA를 발행 전에 한 번 더 점검합니다.</li>
+    </ul>
+  </section>`;
 }
 
 function estimateWordCount(post) {
@@ -649,6 +733,7 @@ ${jsonLd ? `${jsonLd}\n` : ""}    <style>
       main{max-width:860px;margin:0 auto;padding:44px 20px 72px}nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px}
       a{color:#0f766e}h1{font-size:2.2rem;line-height:1.2;margin:0 0 18px}h2{margin-top:34px;font-size:1.35rem}h3{margin-top:24px;font-size:1.08rem}
       .lede{font-size:1.08rem;color:#475569}.panel{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:22px;margin-top:18px}
+      table{width:100%;border-collapse:collapse;margin:12px 0}th,td{border:1px solid #e2e8f0;padding:10px;text-align:left;vertical-align:top}th{width:8rem;background:#f1f5f9}
       li{margin:8px 0}.muted{color:#64748b;font-size:.95rem}.post-list{padding-left:20px}
     </style>
   </head>
@@ -722,6 +807,9 @@ function renderStaticPage(page) {
 function renderBlogIndex(posts) {
   const latest = posts.slice().reverse().slice(0, 80);
   const links = latest.map((post) => `<li><a href="/blog/${escapeHtml(post.slug)}">${escapeHtml(post.title)}</a><br><span class="muted">${escapeHtml(post.description)}</span></li>`).join("\n");
+  const hubLinks = blogHubs
+    .map((hub) => `<li><a href="/topics/${escapeHtml(hub.slug)}">${escapeHtml(hub.title)}</a><br><span class="muted">${escapeHtml(hub.description)}</span></li>`)
+    .join("\n");
   return renderShell({
     title: "크레피카 블로그 | SEO와 크리에이터 워크플로우 가이드",
     description: "SEO, SNS 마케팅, 이미지 최적화, 콘텐츠 워크플로우, 무료 크리에이터 도구 활용법을 다루는 크레피카 가이드입니다.",
@@ -747,7 +835,51 @@ function renderBlogIndex(posts) {
         })),
       },
     },
-    bodyHtml: `<p class="lede">SEO, SNS 마케팅, 크리에이터 워크플로우, 이미지 최적화, 발행 점검에 필요한 실전 가이드를 모았습니다.</p><section class="panel"><h2>최신 가이드</h2><ol class="post-list">${links}</ol></section>`,
+    bodyHtml: `<p class="lede">SEO, SNS 마케팅, 크리에이터 워크플로우, 이미지 최적화, 발행 점검에 필요한 실전 가이드를 모았습니다.</p><section class="panel"><h2>주제별 허브</h2><ul>${hubLinks}</ul></section><section class="panel"><h2>최신 가이드</h2><ol class="post-list">${links}</ol></section>`,
+  });
+}
+
+function renderBlogHub(hub, posts) {
+  const matched = posts
+    .filter((post) =>
+      hub.match.test([post.slug, post.title, post.description, post.category, ...(post.keywords ?? [])].join(" ")),
+    )
+    .slice()
+    .reverse()
+    .slice(0, 36);
+  const postLinks = matched
+    .map((post) => `<li><a href="/blog/${escapeHtml(post.slug)}">${escapeHtml(post.title)}</a><br><span class="muted">${escapeHtml(post.description)}</span></li>`)
+    .join("\n");
+  const toolLinks = hub.tools
+    .filter((path) => alwaysPublishedToolPaths.has(path) || publishedQueuedToolPaths.has(path))
+    .map((path) => `<li><a href="${escapeHtml(path)}">${escapeHtml(path.replace("/tools/", ""))}</a></li>`)
+    .join("\n");
+  return renderShell({
+    title: `${hub.title} | Crepika`,
+    description: hub.description,
+    canonical: `${siteUrl}/topics/${hub.slug}`,
+    heading: hub.title,
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${siteUrl}/topics/${hub.slug}#collection`,
+      url: `${siteUrl}/topics/${hub.slug}`,
+      name: hub.title,
+      description: hub.description,
+      inLanguage: "ko-KR",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: matched.length,
+        itemListElement: matched.slice(0, 20).map((post, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${siteUrl}/blog/${post.slug}`,
+          name: post.title,
+        })),
+      },
+    },
+    bodyHtml: `<p class="lede">${escapeHtml(hub.description)}</p><section class="panel"><h2>함께 쓰면 좋은 도구</h2><ul>${toolLinks}</ul></section><section class="panel"><h2>추천 가이드</h2><ol class="post-list">${postLinks}</ol></section>`,
   });
 }
 
@@ -782,6 +914,7 @@ function renderBlogPost(post) {
     structuredData: makeArticleStructuredData(post),
     bodyHtml: `<p class="lede">${escapeHtml(post.description)}</p>
       ${renderArticleSupportLinks(post)}
+      ${renderArticleDecisionBlock(post)}
       <p class="muted">발행일: ${escapeHtml(post.publishDate)} &middot; 분야: ${escapeHtml(post.category)} &middot; 읽는 시간: ${escapeHtml(post.readTime)}</p>
       <nav class="panel" aria-label="글 목차"><h2>글 목차</h2><ol>${toc}</ol></nav>
       <section class="panel"><h2>핵심 개요</h2><p>${escapeHtml(stripMarkdown(post.content.introduction))}</p></section>
@@ -799,10 +932,13 @@ for (const page of [...staticPages, ...toolPages]) {
 }
 
 writePage("blog/index.html", renderBlogIndex(posts));
+for (const hub of blogHubs) {
+  writePage(`topics/${hub.slug}/index.html`, renderBlogHub(hub, posts));
+}
 for (const post of posts) {
   writePage(`blog/${post.slug}/index.html`, renderBlogPost(post));
 }
 
 writePage(".well-known/security.txt", securityTxt);
 
-console.log(`Generated ${staticPages.length + toolPages.length + 1 + posts.length} crawler-visible pages.`);
+console.log(`Generated ${staticPages.length + toolPages.length + 1 + blogHubs.length + posts.length} crawler-visible pages.`);

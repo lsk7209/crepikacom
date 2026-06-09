@@ -44,6 +44,10 @@ Latest posts:
 
 - Home: https://crepika.com
 - Blog: https://crepika.com/blog
+- SEO Hub: https://crepika.com/topics/seo
+- Instagram Hub: https://crepika.com/topics/instagram
+- AdSense Hub: https://crepika.com/topics/adsense
+- Creator Tools Hub: https://crepika.com/topics/creator-tools
 - RSS: https://crepika.com/rss.xml
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
