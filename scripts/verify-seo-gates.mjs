@@ -57,6 +57,34 @@ function countMatches(value, pattern) {
   return (value.match(pattern) ?? []).length;
 }
 
+function extractJsonLdObjects(body, path) {
+  const blocks = [
+    ...body.matchAll(
+      /<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
+    ),
+  ].map((match) => match[1].trim());
+
+  if (!blocks.length) {
+    fail(`${path} is missing JSON-LD structured data.`);
+    return [];
+  }
+
+  const objects = [];
+  for (const [index, block] of blocks.entries()) {
+    try {
+      const parsed = JSON.parse(block);
+      objects.push(...(Array.isArray(parsed) ? parsed : [parsed]));
+    } catch (error) {
+      fail(`${path} has invalid JSON-LD block ${index + 1}: ${error instanceof Error ? error.message : error}`);
+    }
+  }
+  return objects;
+}
+
+function hasJsonLdType(body, path, type) {
+  return extractJsonLdObjects(body, path).some((entry) => entry?.["@type"] === type);
+}
+
 function extractXmlTags(source, tag) {
   const re = new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`, "g");
   return [...source.matchAll(re)].map((match) => match[1].trim());
@@ -269,11 +297,13 @@ function validateCrawlerPage(path, canonicalUrl) {
     'name="google-adsense-account"',
     "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
     'type="application/ld+json"',
-    '"@type":"BreadcrumbList"',
   ]) {
     if (!body.includes(marker)) {
       fail(`${path} is missing crawler metadata marker: ${marker}`);
     }
+  }
+  if (!hasJsonLdType(body, path, "BreadcrumbList")) {
+    fail(`${path} is missing BreadcrumbList structured data.`);
   }
 }
 
@@ -292,7 +322,7 @@ function validateStaticHtmlBasics() {
     if (!/<link\s+rel="canonical"\s+href="https:\/\/crepika\.com\//i.test(body)) {
       fail(`${path} is missing a canonical crepika.com URL.`);
     }
-    if (!body.includes('"@type":"BreadcrumbList"')) {
+    if (!hasJsonLdType(body, path, "BreadcrumbList")) {
       fail(`${path} is missing BreadcrumbList structured data.`);
     }
     if (h1Count !== 1) {

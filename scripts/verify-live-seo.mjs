@@ -33,9 +33,32 @@ function hasMeaningfulMeta(body, options = {}) {
     ogImage: /<meta\s+property="og:image"\s+content="https:\/\/crepika\.com\/og-image\.png"/i.test(body),
     twitterCard: /<meta\s+name="twitter:card"\s+content="summary_large_image"/i.test(body),
     h1: !requireH1 || (body.match(/<h1\b/gi) || []).length === 1,
-    breadcrumb: !requireBreadcrumb || body.includes('"@type":"BreadcrumbList"'),
+    breadcrumb: !requireBreadcrumb || hasJsonLdType(body, "BreadcrumbList"),
     adsense: body.includes("ca-pub-3050601904412736"),
   };
+}
+
+function extractJsonLdObjects(body) {
+  const blocks = [
+    ...body.matchAll(
+      /<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
+    ),
+  ].map((match) => match[1].trim());
+
+  const objects = [];
+  for (const block of blocks) {
+    try {
+      const parsed = JSON.parse(block);
+      objects.push(...(Array.isArray(parsed) ? parsed : [parsed]));
+    } catch {
+      return [];
+    }
+  }
+  return objects;
+}
+
+function hasJsonLdType(body, type) {
+  return extractJsonLdObjects(body).some((entry) => entry?.["@type"] === type);
 }
 
 function allowsGeneralCrawlers(body) {
