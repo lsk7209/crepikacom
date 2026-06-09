@@ -15,16 +15,16 @@ let m;
 while ((m = slugRe.exec(content)) !== null) positions.push({ slug: m[1], pos: m.index });
 
 function extractLen(seg, field) {
-  // Backtick string (don't use ' or " as closing, only `)
-  const btRe = new RegExp(`${field}:\\s*\`([\\s\\S]{10,700}?)\``);
+  // Backtick string. Do not cap the upper bound; long introductions are valid.
+  const btRe = new RegExp(`${field}:\\s*\`([\\s\\S]*?)\``);
   const btM = btRe.exec(seg);
   if (btM) return btM[1].length;
   // Single-quote string
-  const sqRe = new RegExp(`${field}:\\s*'([\\s\\S]{5,700}?)'`);
+  const sqRe = new RegExp(`${field}:\\s*'([\\s\\S]*?)'`);
   const sqM = sqRe.exec(seg);
   if (sqM) return sqM[1].length;
   // Double-quote string
-  const dqRe = new RegExp(`${field}:\\s*"([\\s\\S]{5,700}?)"`);
+  const dqRe = new RegExp(`${field}:\\s*"([\\s\\S]*?)"`);
   const dqM = dqRe.exec(seg);
   if (dqM) return dqM[1].length;
   return 0;

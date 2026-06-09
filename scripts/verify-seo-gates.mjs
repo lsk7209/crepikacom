@@ -1446,6 +1446,58 @@ function validateBlogRelatedTools(posts) {
   }
 }
 
+function normalizeText(value) {
+  return String(value ?? "")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[*_`>#-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function estimatePostWordCount(post) {
+  return [
+    post.content?.introduction,
+    ...(post.content?.sections ?? []).flatMap((section) => [
+      section.heading,
+      section.title,
+      section.content,
+      ...(section.subsections ?? []).flatMap((subsection) => [subsection.subheading, subsection.content]),
+    ]),
+    post.content?.conclusion,
+    ...(post.faq ?? []).flatMap((item) => [item.question, item.answer]),
+  ]
+    .map(normalizeText)
+    .join(" ")
+    .split(/\s+/)
+    .filter(Boolean).length;
+}
+
+function validateBlogContentQuality(posts) {
+  for (const post of posts) {
+    const introLength = normalizeText(post.content?.introduction).length;
+    const descriptionLength = normalizeText(post.description).length;
+    const sectionCount = post.content?.sections?.length ?? 0;
+    const faqCount = post.faq?.length ?? 0;
+    const wordCount = estimatePostWordCount(post);
+
+    if (introLength < 120) {
+      fail(`Blog post ${post.slug} must have a substantial introduction; found ${introLength} characters.`);
+    }
+    if (descriptionLength < 80 || descriptionLength > 180) {
+      fail(`Blog post ${post.slug} must have an SEO-safe description length; found ${descriptionLength} characters.`);
+    }
+    if (sectionCount < 3) {
+      fail(`Blog post ${post.slug} must have at least 3 content sections; found ${sectionCount}.`);
+    }
+    if (faqCount < 4) {
+      fail(`Blog post ${post.slug} must have at least 4 FAQ entries; found ${faqCount}.`);
+    }
+    if (wordCount < 500) {
+      fail(`Blog post ${post.slug} must have at least 500 estimated words for AdSense/content quality; found ${wordCount}.`);
+    }
+  }
+}
+
 function queuePublishedIds() {
   const queue = JSON.parse(requireFile("scripts/tool-queue.json"));
   return queue.filter((item) => item.status === "published").map((item) => item.id);
@@ -1458,6 +1510,7 @@ function main() {
   validateSourceInlineImageAlt();
   validateStaticHtmlBasics();
   validateQueueCoverage(queue);
+  validateBlogContentQuality(posts);
   validateBlogRelatedTools(posts);
   validateSitemapAndRss(queue, posts);
   validateGeneratedIndexes(queue, posts);
@@ -1490,6 +1543,7 @@ function main() {
           staticHtmlBasics: "ok",
           analytics: "ok",
           blogReadingLayout: "ok",
+          blogContentQuality: "ok",
           adsenseAutoAdsOnly: "ok",
           blogRelatedTools: "ok",
           indexingAutomation: "ok",

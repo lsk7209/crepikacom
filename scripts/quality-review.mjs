@@ -29,10 +29,18 @@ function extractPosts() {
     const pos = m.index;
     const seg = content.slice(pos, pos + 8000);
     const get = (re) => re.exec(seg)?.[1] || '';
+    const getField = (field) => {
+      for (const quote of ['`', "'", '"']) {
+        const escapedQuote = quote === '`' ? '\\`' : quote;
+        const match = new RegExp(`${field}:\\s*${escapedQuote}([\\s\\S]*?)${escapedQuote}`).exec(seg);
+        if (match) return match[1];
+      }
+      return '';
+    };
     const getAll = (re) => { const arr = []; let x; while ((x = re.exec(seg)) !== null) arr.push(x[1]); return arr; };
 
-    const intro     = get(/introduction:\s*['"]([^'"]{20,})/);
-    const conclusion = get(/conclusion:\s*['"]([^'"]{20,})/);
+    const intro     = getField('introduction');
+    const conclusion = getField('conclusion');
     const sections  = getAll(/heading:\s*['"]([^'"]+)['"]/);
     const faqs      = getAll(/question:\s*['"]([^'"]+)['"]/);
     const keywords  = getAll(/['"]([^'"]{3,20})['"]/);
