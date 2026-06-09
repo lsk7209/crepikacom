@@ -56,13 +56,19 @@ const HTML_HEADER_EXPECTATIONS = {
   referrerPolicy: "strict-origin-when-cross-origin",
   permissionsPolicy: "camera=(), microphone=(), geolocation=()",
 };
-const ROOT_ROUTE_SEGMENTS = new Set(["blog", "tools"]);
+const ROOT_ROUTE_SEGMENTS = new Set(["blog", "tools", "topics"]);
 const ALLOWED_STATIC_ROUTES = new Set([
   "/",
   "/about",
   "/contact",
+  "/editorial-policy",
   "/privacy",
   "/terms",
+  "/tool-data-policy",
+  "/topics/seo",
+  "/topics/instagram",
+  "/topics/adsense",
+  "/topics/creator-tools",
   "/rss.xml",
   "/feed.xml",
   "/sitemap.xml",
