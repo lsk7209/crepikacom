@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-09"
+    "updated": "2026-06-10"
   },
   "tools": [
     {
@@ -65,6 +65,10 @@
     {
       "id": "adsense-rpm-calculator",
       "url": "https://crepika.com/tools/adsense-rpm-calculator"
+    },
+    {
+      "id": "h-tag-structure-checker",
+      "url": "https://crepika.com/tools/h-tag-structure-checker"
     }
   ],
   "blog": {

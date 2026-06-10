@@ -21,6 +21,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [UTM URL Builder](https://crepika.com/tools/utm-url-builder)
 - [CTR Calculator](https://crepika.com/tools/ctr-calculator)
 - [AdSense RPM Calculator](https://crepika.com/tools/adsense-rpm-calculator)
+- [h-tag-structure-checker](https://crepika.com/tools/h-tag-structure-checker)
 
 ## Blog
 
@@ -52,7 +53,7 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-06-09
+Updated: 2026-06-10
 
 ## All Renderable Blog URLs
 

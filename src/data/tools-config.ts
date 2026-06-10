@@ -229,7 +229,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'H Tag Structure Checker',
     descriptionEn: 'Check H1, H2, and H3 hierarchy for SEO-friendly article structure.',
     path: '/tools/h-tag-structure-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['H태그', 'H1 H2 H3', '제목 구조', 'SEO 구조', '블로그 목차'],
     adStrategy: 'instant',
     seoTitle: 'H태그 구조 검사기 - H1 H2 H3 위계 점검 | 크레피카',
