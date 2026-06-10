@@ -86,8 +86,14 @@
       "insights",
       "case-study"
     ],
-    "count": 358,
+    "count": 359,
     "latest": [
+      {
+        "title": "Google Ads 스마트 캠페인 완전 가이드: 소상공인을 위한 자동화 광고 시작법",
+        "url": "https://crepika.com/blog/google-ads-complete-guide-automation-ads",
+        "description": "Google Ads 경험이 없는 소상공인도 스마트 캠페인으로 효과적인 광고를 시작할 수 있습니다. 계정 설정부터 예산 관리, 성과 분석까지 소상공인 맞춤 완전 가이드를 제공합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "유튜브 Community 게시물 완전 가이드: 영상 없이 구독자와 소통하는 전략",
         "url": "https://crepika.com/blog/youtube-community-complete-guide-strategy",
@@ -152,12 +158,6 @@
         "title": "Stable Diffusion 로컬 설치 완전 가이드: 무료로 AI 이미지를 무제한 생성하는 법",
         "url": "https://crepika.com/blog/stable-diffusion-complete-guide-ai",
         "description": "Stable Diffusion을 PC에 로컬 설치해 무료로 무제한 AI 이미지를 생성하는 방법을 처음부터 끝까지 설명합니다. AUTOMATIC1111 WebUI 설치부터 모델 다운로드, 프롬프트 작성, LoRA 활용까지 완전 가이드입니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "Instagram Threads 한국어 콘텐츠 전략: 텍스트 기반 SNS에서 팬 모으기",
-        "url": "https://crepika.com/blog/instagram-threads-content-strategy-sns",
-        "description": "Instagram Threads에서 한국어 콘텐츠로 팬 베이스를 만드는 실전 전략을 담았습니다. 알고리즘 이해부터 콘텐츠 포맷, 게시 전략, 팔로워를 고객으로 전환하는 방법까지 완전 가이드입니다.",
         "date": "2026-05-18"
       }
     ]

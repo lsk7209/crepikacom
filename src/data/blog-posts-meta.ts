@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "google-ads-complete-guide-automation-ads",
+    title: "Google Ads 스마트 캠페인 완전 가이드: 소상공인을 위한 자동화 광고 시작법",
+    description: "Google Ads 경험이 없는 소상공인도 스마트 캠페인으로 효과적인 광고를 시작할 수 있습니다. 계정 설정부터 예산 관리, 성과 분석까지 소상공인 맞춤 완전 가이드를 제공합니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "14분",
+    author: "박준영",
+    keywords: ["구글 광고", "Google Ads 스마트 캠페인", "소상공인 광고", "자동화 광고", "온라인 광고 시작"],
+  },
+  {
     slug: "youtube-community-complete-guide-strategy",
     title: "유튜브 Community 게시물 완전 가이드: 영상 없이 구독자와 소통하는 전략",
     description: "유튜브 Community 탭 기능을 활용해 영상을 올리지 않는 날에도 구독자와 소통하고 채널 성장을 유지하는 전략을 알아봅니다. 게시물 유형별 활용법부터 알고리즘 이해까지 완전 가이드입니다.",

@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Google Ads 스마트 캠페인 완전 가이드: 소상공인을 위한 자동화 광고 시작법</title>
+    <link>https://crepika.com/blog/google-ads-complete-guide-automation-ads</link>
+    <guid>https://crepika.com/blog/google-ads-complete-guide-automation-ads</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>guide</category>
+    <description>Google Ads 경험이 없는 소상공인도 스마트 캠페인으로 효과적인 광고를 시작할 수 있습니다. 계정 설정부터 예산 관리, 성과 분석까지 소상공인 맞춤 완전 가이드를 제공합니다.</description>
+  </item>
+  <item>
     <title>유튜브 Community 게시물 완전 가이드: 영상 없이 구독자와 소통하는 전략</title>
     <link>https://crepika.com/blog/youtube-community-complete-guide-strategy</link>
     <guid>https://crepika.com/blog/youtube-community-complete-guide-strategy</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>guide</category>
     <description>Google SGE(AI 개요)와 AI 검색에서 브랜드가 인용·언급되도록 만드는 실전 전략을 안내합니다. EEAT 강화, 브랜드 언급 최적화, AI 친화적 콘텐츠 구조로 AEO(Answer Engine Optimization)를 구현하는 방법입니다.</description>
-  </item>
-  <item>
-    <title>음성 검색 최적화 완전 가이드: 시리·구글 어시스턴트가 내 사이트를 읽게 만드는 법</title>
-    <link>https://crepika.com/blog/search-optimization-complete-guide-google</link>
-    <guid>https://crepika.com/blog/search-optimization-complete-guide-google</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>김민혁</dc:creator>
-    <category>guide</category>
-    <description>음성 검색 최적화(VSO) 완전 가이드입니다. 시리·구글 어시스턴트·빅스비가 내 사이트를 검색 결과로 읽는 Featured Snippet 전략, 자연어 키워드, 로컬 SEO까지 실전 방법을 안내합니다.</description>
   </item>
 </channel>
 </rss>

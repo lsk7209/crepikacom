@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "google-ads-complete-guide-automation-ads",
+    title: "Google Ads 스마트 캠페인 완전 가이드: 소상공인을 위한 자동화 광고 시작법",
+    description: "Google Ads 경험이 없는 소상공인도 스마트 캠페인으로 효과적인 광고를 시작할 수 있습니다. 계정 설정부터 예산 관리, 성과 분석까지 소상공인 맞춤 완전 가이드를 제공합니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "14분",
+    author: "박준영",
+    keywords: ["구글 광고", "Google Ads 스마트 캠페인", "소상공인 광고", "자동화 광고", "온라인 광고 시작"],
+  },
+  {
     slug: "youtube-community-complete-guide-strategy",
     title: "유튜브 Community 게시물 완전 가이드: 영상 없이 구독자와 소통하는 전략",
     description: "유튜브 Community 탭 기능을 활용해 영상을 올리지 않는 날에도 구독자와 소통하고 채널 성장을 유지하는 전략을 알아봅니다. 게시물 유형별 활용법부터 알고리즘 이해까지 완전 가이드입니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "13분",
     author: "이지수",
     keywords: ["인스타그램 Close Friends", "VIP 마케팅", "인스타그램 마케팅", "멤버십 콘텐츠", "독점 콘텐츠"],
-  },
-  {
-    slug: "marketing-complete-guide-strategy-1",
-    title: "소셜 증명 마케팅 완전 가이드: 리뷰·후기·추천사로 신뢰를 만드는 전략",
-    description: "소셜 증명(Social Proof)이 왜 마케팅의 가장 강력한 도구인지, 리뷰와 후기를 체계적으로 수집하고 활용하는 방법을 단계별로 안내합니다. 전환율을 높이는 소셜 증명 전략의 모든 것.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "14분",
-    author: "박준영",
-    keywords: ["소셜 증명", "Social Proof", "고객 리뷰", "전환율 최적화", "신뢰 마케팅"],
   },
 ];
