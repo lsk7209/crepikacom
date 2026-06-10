@@ -90,8 +90,14 @@
       "insights",
       "case-study"
     ],
-    "count": 359,
+    "count": 360,
     "latest": [
+      {
+        "title": "Canva Pro vs 무료: 크리에이터에게 Pro가 필요한 시점과 대안",
+        "url": "https://crepika.com/blog/canva-pro-vs-creator-pro",
+        "description": "Canva 무료와 Pro의 실질적인 차이를 크리에이터 관점에서 비교합니다. 어떤 기능이 실제 업무에 도움이 되는지, Pro 결제 전 고려할 대안은 무엇인지 솔직하게 알려드립니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "Google Ads 스마트 캠페인 완전 가이드: 소상공인을 위한 자동화 광고 시작법",
         "url": "https://crepika.com/blog/google-ads-complete-guide-automation-ads",
@@ -156,12 +162,6 @@
         "title": "구글 Performance Max 캠페인 완전 가이드: AI 광고 자동화로 ROAS 높이기",
         "url": "https://crepika.com/blog/google-performance-max-complete-guide-ai-ads-automation-roas",
         "description": "구글 Performance Max(PMax) 캠페인을 처음부터 끝까지 완전히 설명합니다. 에셋 그룹 구성, 신호 전략, 제외 키워드, ROAS 목표 설정까지 실전 운용 방법을 담은 완전 가이드입니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "Stable Diffusion 로컬 설치 완전 가이드: 무료로 AI 이미지를 무제한 생성하는 법",
-        "url": "https://crepika.com/blog/stable-diffusion-complete-guide-ai",
-        "description": "Stable Diffusion을 PC에 로컬 설치해 무료로 무제한 AI 이미지를 생성하는 방법을 처음부터 끝까지 설명합니다. AUTOMATIC1111 WebUI 설치부터 모델 다운로드, 프롬프트 작성, LoRA 활용까지 완전 가이드입니다.",
         "date": "2026-05-18"
       }
     ]

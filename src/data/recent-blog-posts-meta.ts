@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "canva-pro-vs-creator-pro",
+    title: "Canva Pro vs 무료: 크리에이터에게 Pro가 필요한 시점과 대안",
+    description: "Canva 무료와 Pro의 실질적인 차이를 크리에이터 관점에서 비교합니다. 어떤 기능이 실제 업무에 도움이 되는지, Pro 결제 전 고려할 대안은 무엇인지 솔직하게 알려드립니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "10분",
+    author: "이지수",
+    keywords: ["Canva Pro", "Canva 무료", "캔바 프로", "디자인 툴", "크리에이터 도구"],
+  },
+  {
     slug: "google-ads-complete-guide-automation-ads",
     title: "Google Ads 스마트 캠페인 완전 가이드: 소상공인을 위한 자동화 광고 시작법",
     description: "Google Ads 경험이 없는 소상공인도 스마트 캠페인으로 효과적인 광고를 시작할 수 있습니다. 계정 설정부터 예산 관리, 성과 분석까지 소상공인 맞춤 완전 가이드를 제공합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "12분",
     author: "김민혁",
     keywords: ["유튜브 Community", "유튜브 커뮤니티", "유튜브 게시물", "구독자 소통", "유튜브 성장 전략"],
-  },
-  {
-    slug: "instagram-close-friends-marketing-guide-vip-content-strategy",
-    title: "인스타그램 Close Friends 마케팅 가이드: VIP 고객을 위한 프리미엄 콘텐츠 전략",
-    description: "인스타그램 Close Friends 기능을 활용해 VIP 고객에게 독점 콘텐츠를 제공하는 마케팅 전략을 소개합니다. 멤버십 구축, 콘텐츠 기획, 전환율 향상까지 실전 노하우를 공유합니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "13분",
-    author: "이지수",
-    keywords: ["인스타그램 Close Friends", "VIP 마케팅", "인스타그램 마케팅", "멤버십 콘텐츠", "독점 콘텐츠"],
   },
 ];

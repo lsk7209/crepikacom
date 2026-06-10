@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Canva Pro vs 무료: 크리에이터에게 Pro가 필요한 시점과 대안</title>
+    <link>https://crepika.com/blog/canva-pro-vs-creator-pro</link>
+    <guid>https://crepika.com/blog/canva-pro-vs-creator-pro</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>tips</category>
+    <description>Canva 무료와 Pro의 실질적인 차이를 크리에이터 관점에서 비교합니다. 어떤 기능이 실제 업무에 도움이 되는지, Pro 결제 전 고려할 대안은 무엇인지 솔직하게 알려드립니다.</description>
+  </item>
+  <item>
     <title>Google Ads 스마트 캠페인 완전 가이드: 소상공인을 위한 자동화 광고 시작법</title>
     <link>https://crepika.com/blog/google-ads-complete-guide-automation-ads</link>
     <guid>https://crepika.com/blog/google-ads-complete-guide-automation-ads</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>guide</category>
     <description>사이트 구조 SEO 완전 가이드입니다. 크롤링 효율을 높이는 URL 체계 설계, XML 사이트맵 최적화, 크롤 버짓 관리, 내부 링크 구조까지 실전 방법을 단계별로 안내합니다.</description>
-  </item>
-  <item>
-    <title>Google SGE 브랜드 인용 전략 가이드: AI 검색에서 내 브랜드가 언급되게 만드는 법</title>
-    <link>https://crepika.com/blog/google-sge-brand-strategy-guide-ai-search-brand</link>
-    <guid>https://crepika.com/blog/google-sge-brand-strategy-guide-ai-search-brand</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>guide</category>
-    <description>Google SGE(AI 개요)와 AI 검색에서 브랜드가 인용·언급되도록 만드는 실전 전략을 안내합니다. EEAT 강화, 브랜드 언급 최적화, AI 친화적 콘텐츠 구조로 AEO(Answer Engine Optimization)를 구현하는 방법입니다.</description>
   </item>
 </channel>
 </rss>
