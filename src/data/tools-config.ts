@@ -1685,7 +1685,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'HowTo Schema Builder',
     descriptionEn: 'Convert step-by-step instructions into HowTo JSON-LD.',
     path: '/tools/howto-schema-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['HowTo 스키마', 'HowTo JSON-LD', '구조화 데이터', '사용법 스키마', 'SEO'],
     adStrategy: 'instant',
     seoTitle: 'HowTo 스키마 초안 생성기 - 단계형 JSON-LD 도구 | 크레피카',

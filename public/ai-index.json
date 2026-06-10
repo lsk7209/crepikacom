@@ -77,6 +77,10 @@
     {
       "id": "faq-schema-builder",
       "url": "https://crepika.com/tools/faq-schema-builder"
+    },
+    {
+      "id": "howto-schema-builder",
+      "url": "https://crepika.com/tools/howto-schema-builder"
     }
   ],
   "blog": {
