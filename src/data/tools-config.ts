@@ -1669,7 +1669,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'FAQ Schema Builder',
     descriptionEn: 'Convert questions and answers into FAQPage JSON-LD.',
     path: '/tools/faq-schema-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['FAQ 스키마', 'FAQPage', 'JSON-LD', '구조화 데이터', 'AEO'],
     adStrategy: 'instant',
     seoTitle: 'FAQ 스키마 초안 생성기 - FAQPage JSON-LD 도구 | 크레피카',

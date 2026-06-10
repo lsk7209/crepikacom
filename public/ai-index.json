@@ -73,6 +73,10 @@
     {
       "id": "blog-outline-builder",
       "url": "https://crepika.com/tools/blog-outline-builder"
+    },
+    {
+      "id": "faq-schema-builder",
+      "url": "https://crepika.com/tools/faq-schema-builder"
     }
   ],
   "blog": {
