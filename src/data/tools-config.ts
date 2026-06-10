@@ -245,7 +245,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Blog Outline Builder',
     descriptionEn: 'Build a structured H2/H3 outline for SEO-friendly blog posts.',
     path: '/tools/blog-outline-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['블로그 목차', '글 구조', 'H2 H3', 'SEO 글쓰기', '콘텐츠 기획'],
     adStrategy: 'instant',
     seoTitle: '블로그 목차 설계기 - SEO 글 구조 생성 도구 | 크레피카',

@@ -46,9 +46,9 @@
     "type": "builder",
     "intent": "주제, 독자, 검색 의도에 맞춰 H2/H3 목차 템플릿을 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-10T05:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-10T10:33:16.293Z",
     "path": "/tools/blog-outline-builder"
   },
   {
