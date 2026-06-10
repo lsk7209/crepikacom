@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "midjourney-v6-tips-brand",
+    title: "Midjourney v6 프롬프트 팁: 일관된 브랜드 이미지 만드는 고급 설정",
+    description: "Midjourney v6에서 브랜드 아이덴티티에 맞는 일관된 이미지를 생성하는 고급 프롬프트 기법을 소개합니다. --sref, --cref 파라미터 활용부터 스타일 고정 방법까지 실전 팁을 알려드립니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["Midjourney v6", "미드저니 프롬프트", "AI 이미지 생성", "브랜드 이미지", "미드저니 고급 설정"],
+  },
+  {
     slug: "canva-pro-vs-creator-pro",
     title: "Canva Pro vs 무료: 크리에이터에게 Pro가 필요한 시점과 대안",
     description: "Canva 무료와 Pro의 실질적인 차이를 크리에이터 관점에서 비교합니다. 어떤 기능이 실제 업무에 도움이 되는지, Pro 결제 전 고려할 대안은 무엇인지 솔직하게 알려드립니다.",

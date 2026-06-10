@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "midjourney-v6-tips-brand",
+    title: "Midjourney v6 프롬프트 팁: 일관된 브랜드 이미지 만드는 고급 설정",
+    description: "Midjourney v6에서 브랜드 아이덴티티에 맞는 일관된 이미지를 생성하는 고급 프롬프트 기법을 소개합니다. --sref, --cref 파라미터 활용부터 스타일 고정 방법까지 실전 팁을 알려드립니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["Midjourney v6", "미드저니 프롬프트", "AI 이미지 생성", "브랜드 이미지", "미드저니 고급 설정"],
+  },
+  {
     slug: "canva-pro-vs-creator-pro",
     title: "Canva Pro vs 무료: 크리에이터에게 Pro가 필요한 시점과 대안",
     description: "Canva 무료와 Pro의 실질적인 차이를 크리에이터 관점에서 비교합니다. 어떤 기능이 실제 업무에 도움이 되는지, Pro 결제 전 고려할 대안은 무엇인지 솔직하게 알려드립니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "14분",
     author: "박준영",
     keywords: ["구글 광고", "Google Ads 스마트 캠페인", "소상공인 광고", "자동화 광고", "온라인 광고 시작"],
-  },
-  {
-    slug: "youtube-community-complete-guide-strategy",
-    title: "유튜브 Community 게시물 완전 가이드: 영상 없이 구독자와 소통하는 전략",
-    description: "유튜브 Community 탭 기능을 활용해 영상을 올리지 않는 날에도 구독자와 소통하고 채널 성장을 유지하는 전략을 알아봅니다. 게시물 유형별 활용법부터 알고리즘 이해까지 완전 가이드입니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "김민혁",
-    keywords: ["유튜브 Community", "유튜브 커뮤니티", "유튜브 게시물", "구독자 소통", "유튜브 성장 전략"],
   },
 ];
