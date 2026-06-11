@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "semrush-keyword-usage-tips-keyword-500",
+    title: "SEMrush 키워드 매직 툴 활용 팁: 롱테일 키워드 500개 빠르게 추출하기",
+    description: "SEMrush 키워드 매직 툴을 활용해 콘텐츠 전략에 쓸 롱테일 키워드를 체계적으로 대량 추출하는 방법을 알려드립니다. 필터 설정, 그룹화, 우선순위 선정까지 실전 팁을 공유합니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "10분",
+    author: "이지수",
+    keywords: ["SEMrush", "키워드 매직 툴", "롱테일 키워드", "SEO 키워드", "키워드 리서치"],
+  },
+  {
     slug: "midjourney-v6-tips-brand",
     title: "Midjourney v6 프롬프트 팁: 일관된 브랜드 이미지 만드는 고급 설정",
     description: "Midjourney v6에서 브랜드 아이덴티티에 맞는 일관된 이미지를 생성하는 고급 프롬프트 기법을 소개합니다. --sref, --cref 파라미터 활용부터 스타일 고정 방법까지 실전 팁을 알려드립니다.",
