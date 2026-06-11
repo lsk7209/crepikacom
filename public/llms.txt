@@ -25,6 +25,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [blog-outline-builder](https://crepika.com/tools/blog-outline-builder)
 - [faq-schema-builder](https://crepika.com/tools/faq-schema-builder)
 - [howto-schema-builder](https://crepika.com/tools/howto-schema-builder)
+- [article-word-count-planner](https://crepika.com/tools/article-word-count-planner)
 
 ## Blog
 

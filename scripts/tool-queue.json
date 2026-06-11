@@ -85,9 +85,9 @@
     "type": "calculator",
     "intent": "글 유형과 섹션 수에 따라 권장 분량과 섹션별 배분을 계산합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-10T20:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-11T08:52:01.256Z",
     "path": "/tools/article-word-count-planner"
   },
   {

@@ -261,7 +261,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Article Word Count Planner',
     descriptionEn: 'Estimate a useful article length from section count and content depth.',
     path: '/tools/article-word-count-planner',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['글 분량', '본문 길이', '블로그 글자수', '콘텐츠 계획', 'SEO 글쓰기'],
     adStrategy: 'instant',
     seoTitle: '글 분량 설계 계산기 - 블로그 본문 길이 계획 | 크레피카',
