@@ -293,7 +293,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Internal Link Anchor Planner',
     descriptionEn: 'Plan natural internal link anchor text for blog articles.',
     path: '/tools/internal-link-anchor-planner',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['내부링크', '앵커 텍스트', 'SEO 링크', '블로그 구조', 'CTA'],
     adStrategy: 'instant',
     seoTitle: '내부링크 앵커 설계기 - SEO 앵커 문구 생성 | 크레피카',
