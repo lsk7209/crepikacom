@@ -713,6 +713,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "google-qa-usage-tips",
+    title: "구글 비즈니스 프로필 Q&A 활용 팁: 자주 묻는 질문으로 클릭률 높이기",
+    description: "구글 비즈니스 프로필의 Q&A 기능을 전략적으로 활용해 검색 결과 클릭률을 높이고 고객 신뢰를 얻는 방법을 소개합니다. 직접 질문을 추가하고 답변을 최적화하는 실전 팁을 알려드립니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["구글 비즈니스 프로필", "Google Business Q&A", "로컬 SEO", "클릭률 향상", "구글 마이비즈니스"],
+  },
+  {
     slug: "complete-guide",
     title: "고객 페르소나 만들기 완전 가이드: 데이터 기반으로 이상적인 고객을 정의하는 법",
     description: "직감이 아닌 데이터로 고객 페르소나를 만드는 체계적인 방법을 소개합니다. 인터뷰, 설문, 행동 데이터를 결합해 살아있는 페르소나를 구축하고 마케팅과 제품 전략에 적용하는 실전 가이드입니다.",
