@@ -106,8 +106,14 @@
       "insights",
       "case-study"
     ],
-    "count": 363,
+    "count": 364,
     "latest": [
+      {
+        "title": "Instagram Reels 자막 자동 생성 팁: 접근성과 시청 완료율을 동시에 높이는 법",
+        "url": "https://crepika.com/blog/instagram-reels-tips",
+        "description": "Instagram Reels의 자동 자막 기능을 최대한 활용하는 방법을 소개합니다. 자막이 시청 완료율과 도달에 미치는 영향, 자막 스타일 최적화, 다국어 콘텐츠 확장까지 실전 팁을 담았습니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "SEMrush 키워드 매직 툴 활용 팁: 롱테일 키워드 500개 빠르게 추출하기",
         "url": "https://crepika.com/blog/semrush-keyword-usage-tips-keyword-500",
@@ -172,12 +178,6 @@
         "title": "Apple Podcast 최적화 완전 가이드: 팟캐스트 앱 상위 노출 전략",
         "url": "https://crepika.com/blog/apple-podcast-optimization-complete-guide-strategy",
         "description": "Apple Podcasts에서 상위 노출을 달성하는 완전한 최적화 전략을 담았습니다. 메타데이터 최적화부터 리뷰 전략, 에피소드 기획, 카테고리 선택까지 실전 가이드를 공개합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "네이버 검색광고 완전 가이드: 브랜드 검색·파워링크 넘어 통합 운영 전략",
-        "url": "https://crepika.com/blog/naver-searchads-complete-guide-brand-search-strategy",
-        "description": "네이버 검색광고의 모든 상품을 통합해 운영하는 전략을 완전히 정리했습니다. 파워링크부터 브랜드 검색, 쇼핑 광고, 파워컨텐츠, 전환 추적까지 실전 운용 가이드를 담았습니다.",
         "date": "2026-05-18"
       }
     ]

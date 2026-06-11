@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "instagram-reels-tips",
+    title: "Instagram Reels 자막 자동 생성 팁: 접근성과 시청 완료율을 동시에 높이는 법",
+    description: "Instagram Reels의 자동 자막 기능을 최대한 활용하는 방법을 소개합니다. 자막이 시청 완료율과 도달에 미치는 영향, 자막 스타일 최적화, 다국어 콘텐츠 확장까지 실전 팁을 담았습니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["인스타그램 릴스 자막", "Reels 자막", "자동 자막", "릴스 시청 완료율", "접근성 콘텐츠"],
+  },
+  {
     slug: "semrush-keyword-usage-tips-keyword-500",
     title: "SEMrush 키워드 매직 툴 활용 팁: 롱테일 키워드 500개 빠르게 추출하기",
     description: "SEMrush 키워드 매직 툴을 활용해 콘텐츠 전략에 쓸 롱테일 키워드를 체계적으로 대량 추출하는 방법을 알려드립니다. 필터 설정, 그룹화, 우선순위 선정까지 실전 팁을 공유합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "11분",
     author: "김민혁",
     keywords: ["Midjourney v6", "미드저니 프롬프트", "AI 이미지 생성", "브랜드 이미지", "미드저니 고급 설정"],
-  },
-  {
-    slug: "canva-pro-vs-creator-pro",
-    title: "Canva Pro vs 무료: 크리에이터에게 Pro가 필요한 시점과 대안",
-    description: "Canva 무료와 Pro의 실질적인 차이를 크리에이터 관점에서 비교합니다. 어떤 기능이 실제 업무에 도움이 되는지, Pro 결제 전 고려할 대안은 무엇인지 솔직하게 알려드립니다.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "10분",
-    author: "이지수",
-    keywords: ["Canva Pro", "Canva 무료", "캔바 프로", "디자인 툴", "크리에이터 도구"],
   },
 ];

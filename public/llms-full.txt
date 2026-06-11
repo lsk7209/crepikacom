@@ -30,9 +30,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 363
+Renderable blog posts: 364
 
 Latest posts:
+- [Instagram Reels 자막 자동 생성 팁: 접근성과 시청 완료율을 동시에 높이는 법](https://crepika.com/blog/instagram-reels-tips): Instagram Reels의 자동 자막 기능을 최대한 활용하는 방법을 소개합니다. 자막이 시청 완료율과 도달에 미치는 영향, 자막 스타일 최적화, 다국어 콘텐츠 확장까지 실전 팁을 담았습니다.
 - [SEMrush 키워드 매직 툴 활용 팁: 롱테일 키워드 500개 빠르게 추출하기](https://crepika.com/blog/semrush-keyword-usage-tips-keyword-500): SEMrush 키워드 매직 툴을 활용해 콘텐츠 전략에 쓸 롱테일 키워드를 체계적으로 대량 추출하는 방법을 알려드립니다. 필터 설정, 그룹화, 우선순위 선정까지 실전 팁을 공유합니다.
 - [Midjourney v6 프롬프트 팁: 일관된 브랜드 이미지 만드는 고급 설정](https://crepika.com/blog/midjourney-v6-tips-brand): Midjourney v6에서 브랜드 아이덴티티에 맞는 일관된 이미지를 생성하는 고급 프롬프트 기법을 소개합니다. sref, cref 파라미터 활용부터 스타일 고정 방법까지 실전 팁을 알려드립니다.
 - [Canva Pro vs 무료: 크리에이터에게 Pro가 필요한 시점과 대안](https://crepika.com/blog/canva-pro-vs-creator-pro): Canva 무료와 Pro의 실질적인 차이를 크리에이터 관점에서 비교합니다. 어떤 기능이 실제 업무에 도움이 되는지, Pro 결제 전 고려할 대안은 무엇인지 솔직하게 알려드립니다.
@@ -44,7 +45,6 @@ Latest posts:
 - [경쟁사 분석 프레임워크 완전 가이드: 체계적으로 경쟁자를 분석하는 6단계](https://crepika.com/blog/analytics-complete-guide-analytics-6): 경쟁사 분석을 막연히 하고 있다면 이 가이드를 보세요. 6단계 프레임워크로 경쟁자의 전략, 강점, 약점을 체계적으로 파악하고 내 사업의 차별화 전략을 수립하는 방법을 알려드립니다.
 - [브랜드 감사(Brand Audit) 완전 가이드: 내 브랜드의 현재 상태를 진단하는 방법](https://crepika.com/blog/brand-brand-audit-complete-guide-brand-method): 브랜드 감사의 개념부터 실전 진단 체크리스트까지 총망라한 완전 가이드. 내 브랜드의 강점과 약점을 데이터로 파악하고 전략적 개선 방향을 수립하는 방법을 단계별로 알아봅니다.
 - [Apple Podcast 최적화 완전 가이드: 팟캐스트 앱 상위 노출 전략](https://crepika.com/blog/apple-podcast-optimization-complete-guide-strategy): Apple Podcasts에서 상위 노출을 달성하는 완전한 최적화 전략을 담았습니다. 메타데이터 최적화부터 리뷰 전략, 에피소드 기획, 카테고리 선택까지 실전 가이드를 공개합니다.
-- [네이버 검색광고 완전 가이드: 브랜드 검색·파워링크 넘어 통합 운영 전략](https://crepika.com/blog/naver-searchads-complete-guide-brand-search-strategy): 네이버 검색광고의 모든 상품을 통합해 운영하는 전략을 완전히 정리했습니다. 파워링크부터 브랜드 검색, 쇼핑 광고, 파워컨텐츠, 전환 추적까지 실전 운용 가이드를 담았습니다.
 
 ## Index Resources
 
@@ -425,3 +425,4 @@ Updated: 2026-06-11
 - https://crepika.com/blog/canva-pro-vs-creator-pro - Canva Pro vs 무료: 크리에이터에게 Pro가 필요한 시점과 대안
 - https://crepika.com/blog/midjourney-v6-tips-brand - Midjourney v6 프롬프트 팁: 일관된 브랜드 이미지 만드는 고급 설정
 - https://crepika.com/blog/semrush-keyword-usage-tips-keyword-500 - SEMrush 키워드 매직 툴 활용 팁: 롱테일 키워드 500개 빠르게 추출하기
+- https://crepika.com/blog/instagram-reels-tips - Instagram Reels 자막 자동 생성 팁: 접근성과 시청 완료율을 동시에 높이는 법
