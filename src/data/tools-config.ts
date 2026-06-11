@@ -277,7 +277,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Keyword Density Checker',
     descriptionEn: 'Check keyword frequency and density in article drafts.',
     path: '/tools/keyword-density-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['키워드 밀도', '키워드 반복', 'SEO 검사', '본문 최적화', 'GEO 최적화'],
     adStrategy: 'instant',
     seoTitle: '키워드 밀도 검사기 - 본문 키워드 반복 점검 | 크레피카',

@@ -98,9 +98,9 @@
     "type": "score-checker",
     "intent": "키워드 반복률과 과최적화 위험을 확인합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-11T01:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-11T16:55:14.773Z",
     "path": "/tools/keyword-density-checker"
   },
   {
