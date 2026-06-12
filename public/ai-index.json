@@ -122,8 +122,14 @@
       "insights",
       "case-study"
     ],
-    "count": 367,
+    "count": 368,
     "latest": [
+      {
+        "title": "네이버 밴드 게시글 알림 팁: 멤버 참여도를 높이는 발행 전략",
+        "url": "https://crepika.com/blog/naver-tips-strategy",
+        "description": "네이버 밴드에서 게시글 알림 기능을 전략적으로 활용해 멤버 참여도를 높이는 방법을 알려드립니다. 알림 발송 시간, 빈도, 콘텐츠 유형별 최적화 전략을 실전 팁으로 정리했습니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "구글 Analytics 4 맞춤 이벤트 설정 팁: 내 비즈니스에 맞는 데이터 수집하기",
         "url": "https://crepika.com/blog/google-analytics-4-tips",
@@ -188,12 +194,6 @@
         "title": "Substack 시작 완전 가이드: 처음 뉴스레터를 만드는 사람을 위한 A to Z",
         "url": "https://crepika.com/blog/substack-complete-guide-a-to-z",
         "description": "Substack으로 뉴스레터를 시작하는 모든 과정을 처음부터 끝까지 안내합니다. 계정 설정부터 첫 구독자 확보, 유료 전환 전략까지 실전 노하우를 담은 완전 가이드입니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "경쟁사 분석 프레임워크 완전 가이드: 체계적으로 경쟁자를 분석하는 6단계",
-        "url": "https://crepika.com/blog/analytics-complete-guide-analytics-6",
-        "description": "경쟁사 분석을 막연히 하고 있다면 이 가이드를 보세요. 6단계 프레임워크로 경쟁자의 전략, 강점, 약점을 체계적으로 파악하고 내 사업의 차별화 전략을 수립하는 방법을 알려드립니다.",
         "date": "2026-05-18"
       }
     ]

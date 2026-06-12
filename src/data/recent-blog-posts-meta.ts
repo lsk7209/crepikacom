@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-tips-strategy",
+    title: "네이버 밴드 게시글 알림 팁: 멤버 참여도를 높이는 발행 전략",
+    description: "네이버 밴드에서 게시글 알림 기능을 전략적으로 활용해 멤버 참여도를 높이는 방법을 알려드립니다. 알림 발송 시간, 빈도, 콘텐츠 유형별 최적화 전략을 실전 팁으로 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["네이버 밴드", "밴드 알림", "밴드 마케팅", "커뮤니티 운영", "멤버 참여도"],
+  },
+  {
     slug: "google-analytics-4-tips",
     title: "구글 Analytics 4 맞춤 이벤트 설정 팁: 내 비즈니스에 맞는 데이터 수집하기",
     description: "Google Analytics 4(GA4)에서 기본 이벤트를 넘어 비즈니스 목표에 맞는 맞춤 이벤트를 설정하는 방법을 알려드립니다. 코딩 없이 구성하는 방법부터 GTM 연동까지 실전 팁을 제공합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "10분",
     author: "박준영",
     keywords: ["티스토리 SEO", "티스토리 카테고리", "블로그 구조 최적화", "사일로 구조", "내부 링크"],
-  },
-  {
-    slug: "instagram-reels-tips",
-    title: "Instagram Reels 자막 자동 생성 팁: 접근성과 시청 완료율을 동시에 높이는 법",
-    description: "Instagram Reels의 자동 자막 기능을 최대한 활용하는 방법을 소개합니다. 자막이 시청 완료율과 도달에 미치는 영향, 자막 스타일 최적화, 다국어 콘텐츠 확장까지 실전 팁을 담았습니다.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "9분",
-    author: "김민혁",
-    keywords: ["인스타그램 릴스 자막", "Reels 자막", "자동 자막", "릴스 시청 완료율", "접근성 콘텐츠"],
   },
 ];
