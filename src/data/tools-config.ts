@@ -325,7 +325,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Alt Text Helper',
     descriptionEn: 'Draft useful image alt text from context and keyword.',
     path: '/tools/alt-text-helper',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['Alt Text', '이미지 대체 텍스트', '이미지 SEO', '접근성', '블로그 이미지'],
     adStrategy: 'instant',
     seoTitle: '이미지 Alt Text 도우미 - 대체 텍스트 작성 도구 | 크레피카',
