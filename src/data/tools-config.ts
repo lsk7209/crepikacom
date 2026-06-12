@@ -309,7 +309,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'SERP Snippet Preview',
     descriptionEn: 'Preview title, description, and URL as a search result snippet.',
     path: '/tools/serp-snippet-preview',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['SERP 미리보기', '메타 제목', '메타 설명', '검색결과', 'CTR'],
     adStrategy: 'instant',
     seoTitle: '검색결과 미리보기 - SERP 제목 설명 점검 도구 | 크레피카',

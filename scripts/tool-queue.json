@@ -137,9 +137,9 @@
     "type": "builder",
     "intent": "제목, URL, 설명이 검색 결과에서 어떻게 보일지 미리 확인합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-11T16:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-12T14:16:04.056Z",
     "path": "/tools/serp-snippet-preview"
   },
   {
