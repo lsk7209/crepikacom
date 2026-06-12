@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "optimization-tips-google-blog",
+    title: "티스토리 카테고리 구조 최적화 팁: 구글이 좋아하는 블로그 구조 만들기",
+    description: "티스토리 블로그의 카테고리 구조를 SEO에 최적화하는 방법을 알려드립니다. 사일로 구조 적용부터 URL 설정, 내부 링크 전략까지 구글 검색 순위를 높이는 블로그 구조 최적화 팁입니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "10분",
+    author: "박준영",
+    keywords: ["티스토리 SEO", "티스토리 카테고리", "블로그 구조 최적화", "사일로 구조", "내부 링크"],
+  },
+  {
     slug: "instagram-reels-tips",
     title: "Instagram Reels 자막 자동 생성 팁: 접근성과 시청 완료율을 동시에 높이는 법",
     description: "Instagram Reels의 자동 자막 기능을 최대한 활용하는 방법을 소개합니다. 자막이 시청 완료율과 도달에 미치는 영향, 자막 스타일 최적화, 다국어 콘텐츠 확장까지 실전 팁을 담았습니다.",

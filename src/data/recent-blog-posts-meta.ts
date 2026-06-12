@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "optimization-tips-google-blog",
+    title: "티스토리 카테고리 구조 최적화 팁: 구글이 좋아하는 블로그 구조 만들기",
+    description: "티스토리 블로그의 카테고리 구조를 SEO에 최적화하는 방법을 알려드립니다. 사일로 구조 적용부터 URL 설정, 내부 링크 전략까지 구글 검색 순위를 높이는 블로그 구조 최적화 팁입니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "10분",
+    author: "박준영",
+    keywords: ["티스토리 SEO", "티스토리 카테고리", "블로그 구조 최적화", "사일로 구조", "내부 링크"],
+  },
+  {
     slug: "instagram-reels-tips",
     title: "Instagram Reels 자막 자동 생성 팁: 접근성과 시청 완료율을 동시에 높이는 법",
     description: "Instagram Reels의 자동 자막 기능을 최대한 활용하는 방법을 소개합니다. 자막이 시청 완료율과 도달에 미치는 영향, 자막 스타일 최적화, 다국어 콘텐츠 확장까지 실전 팁을 담았습니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "10분",
     author: "이지수",
     keywords: ["SEMrush", "키워드 매직 툴", "롱테일 키워드", "SEO 키워드", "키워드 리서치"],
-  },
-  {
-    slug: "midjourney-v6-tips-brand",
-    title: "Midjourney v6 프롬프트 팁: 일관된 브랜드 이미지 만드는 고급 설정",
-    description: "Midjourney v6에서 브랜드 아이덴티티에 맞는 일관된 이미지를 생성하는 고급 프롬프트 기법을 소개합니다. --sref, --cref 파라미터 활용부터 스타일 고정 방법까지 실전 팁을 알려드립니다.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "김민혁",
-    keywords: ["Midjourney v6", "미드저니 프롬프트", "AI 이미지 생성", "브랜드 이미지", "미드저니 고급 설정"],
   },
 ];
