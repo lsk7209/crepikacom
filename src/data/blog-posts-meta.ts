@@ -743,6 +743,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "notion-ai-tips-10",
+    title: "Notion AI 글 초안 작성 팁: 아이디어에서 완성 글까지 10분에 끝내기",
+    description: "Notion AI를 활용해 블로그 포스트, 보고서, 이메일 초안을 빠르게 작성하는 실전 팁을 소개합니다. 프롬프트 전략부터 편집 자동화, 글쓰기 워크플로우 최적화까지 10분 완성 방법을 알려드립니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "이지수",
+    keywords: ["Notion AI", "노션 AI", "AI 글쓰기", "초안 작성", "콘텐츠 제작 자동화"],
+  },
+  {
     slug: "google-qa-usage-tips",
     title: "구글 비즈니스 프로필 Q&A 활용 팁: 자주 묻는 질문으로 클릭률 높이기",
     description: "구글 비즈니스 프로필의 Q&A 기능을 전략적으로 활용해 검색 결과 클릭률을 높이고 고객 신뢰를 얻는 방법을 소개합니다. 직접 질문을 추가하고 답변을 최적화하는 실전 팁을 알려드립니다.",
