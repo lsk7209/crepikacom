@@ -118,8 +118,14 @@
       "insights",
       "case-study"
     ],
-    "count": 366,
+    "count": 367,
     "latest": [
+      {
+        "title": "구글 Analytics 4 맞춤 이벤트 설정 팁: 내 비즈니스에 맞는 데이터 수집하기",
+        "url": "https://crepika.com/blog/google-analytics-4-tips",
+        "description": "Google Analytics 4(GA4)에서 기본 이벤트를 넘어 비즈니스 목표에 맞는 맞춤 이벤트를 설정하는 방법을 알려드립니다. 코딩 없이 구성하는 방법부터 GTM 연동까지 실전 팁을 제공합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "티스토리 카테고리 구조 최적화 팁: 구글이 좋아하는 블로그 구조 만들기",
         "url": "https://crepika.com/blog/optimization-tips-google-blog",
@@ -184,12 +190,6 @@
         "title": "경쟁사 분석 프레임워크 완전 가이드: 체계적으로 경쟁자를 분석하는 6단계",
         "url": "https://crepika.com/blog/analytics-complete-guide-analytics-6",
         "description": "경쟁사 분석을 막연히 하고 있다면 이 가이드를 보세요. 6단계 프레임워크로 경쟁자의 전략, 강점, 약점을 체계적으로 파악하고 내 사업의 차별화 전략을 수립하는 방법을 알려드립니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "브랜드 감사(Brand Audit) 완전 가이드: 내 브랜드의 현재 상태를 진단하는 방법",
-        "url": "https://crepika.com/blog/brand-brand-audit-complete-guide-brand-method",
-        "description": "브랜드 감사의 개념부터 실전 진단 체크리스트까지 총망라한 완전 가이드. 내 브랜드의 강점과 약점을 데이터로 파악하고 전략적 개선 방향을 수립하는 방법을 단계별로 알아봅니다.",
         "date": "2026-05-18"
       }
     ]

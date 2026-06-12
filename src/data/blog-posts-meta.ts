@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "google-analytics-4-tips",
+    title: "구글 Analytics 4 맞춤 이벤트 설정 팁: 내 비즈니스에 맞는 데이터 수집하기",
+    description: "Google Analytics 4(GA4)에서 기본 이벤트를 넘어 비즈니스 목표에 맞는 맞춤 이벤트를 설정하는 방법을 알려드립니다. 코딩 없이 구성하는 방법부터 GTM 연동까지 실전 팁을 제공합니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["Google Analytics 4", "GA4 맞춤 이벤트", "GA4 설정", "맞춤 이벤트 추적", "데이터 분석"],
+  },
+  {
     slug: "optimization-tips-google-blog",
     title: "티스토리 카테고리 구조 최적화 팁: 구글이 좋아하는 블로그 구조 만들기",
     description: "티스토리 블로그의 카테고리 구조를 SEO에 최적화하는 방법을 알려드립니다. 사일로 구조 적용부터 URL 설정, 내부 링크 전략까지 구글 검색 순위를 높이는 블로그 구조 최적화 팁입니다.",

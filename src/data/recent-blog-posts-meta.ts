@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "google-analytics-4-tips",
+    title: "구글 Analytics 4 맞춤 이벤트 설정 팁: 내 비즈니스에 맞는 데이터 수집하기",
+    description: "Google Analytics 4(GA4)에서 기본 이벤트를 넘어 비즈니스 목표에 맞는 맞춤 이벤트를 설정하는 방법을 알려드립니다. 코딩 없이 구성하는 방법부터 GTM 연동까지 실전 팁을 제공합니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["Google Analytics 4", "GA4 맞춤 이벤트", "GA4 설정", "맞춤 이벤트 추적", "데이터 분석"],
+  },
+  {
     slug: "optimization-tips-google-blog",
     title: "티스토리 카테고리 구조 최적화 팁: 구글이 좋아하는 블로그 구조 만들기",
     description: "티스토리 블로그의 카테고리 구조를 SEO에 최적화하는 방법을 알려드립니다. 사일로 구조 적용부터 URL 설정, 내부 링크 전략까지 구글 검색 순위를 높이는 블로그 구조 최적화 팁입니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "9분",
     author: "김민혁",
     keywords: ["인스타그램 릴스 자막", "Reels 자막", "자동 자막", "릴스 시청 완료율", "접근성 콘텐츠"],
-  },
-  {
-    slug: "semrush-keyword-usage-tips-keyword-500",
-    title: "SEMrush 키워드 매직 툴 활용 팁: 롱테일 키워드 500개 빠르게 추출하기",
-    description: "SEMrush 키워드 매직 툴을 활용해 콘텐츠 전략에 쓸 롱테일 키워드를 체계적으로 대량 추출하는 방법을 알려드립니다. 필터 설정, 그룹화, 우선순위 선정까지 실전 팁을 공유합니다.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "10분",
-    author: "이지수",
-    keywords: ["SEMrush", "키워드 매직 툴", "롱테일 키워드", "SEO 키워드", "키워드 리서치"],
   },
 ];
