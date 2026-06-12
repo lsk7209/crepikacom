@@ -124,9 +124,9 @@
     "type": "score-checker",
     "intent": "글 안의 CTA가 구체적이고 행동을 유도하는지 점검합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-11T11:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-12T06:47:16.670Z",
     "path": "/tools/blog-cta-checker"
   },
   {

@@ -1701,7 +1701,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Blog CTA Checker',
     descriptionEn: 'Check whether a blog call-to-action is specific and action-oriented.',
     path: '/tools/blog-cta-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['CTA 검사', '블로그 CTA', 'Call To Action', '전환 문구', '내부링크'],
     adStrategy: 'instant',
     seoTitle: '블로그 CTA 검사기 - 행동 유도 문구 점검 도구 | 크레피카',
