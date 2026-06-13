@@ -176,9 +176,9 @@
     "type": "score-checker",
     "intent": "날짜, 통계, 출처, 스크린샷, 업데이트 노트 점검 항목을 제공합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-12T07:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-13T08:32:17.788Z",
     "path": "/tools/content-freshness-checklist"
   },
   {

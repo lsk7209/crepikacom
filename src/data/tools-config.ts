@@ -341,7 +341,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Content Freshness Checklist',
     descriptionEn: 'Check whether a blog post needs freshness updates.',
     path: '/tools/content-freshness-checklist',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['콘텐츠 최신성', '글 업데이트', 'SEO 점검', '오래된 글', '콘텐츠 리프레시'],
     adStrategy: 'instant',
     seoTitle: '콘텐츠 최신성 체크리스트 - 블로그 업데이트 점검 | 크레피카',
