@@ -35,7 +35,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 369
+Renderable blog posts: 370
 
 Latest posts:
 - [네이버 밴드 게시글 알림 팁: 멤버 참여도를 높이는 발행 전략](https://crepika.com/blog/naver-tips-strategy): 네이버 밴드에서 게시글 알림 기능을 전략적으로 활용해 멤버 참여도를 높이는 방법을 알려드립니다. 알림 발송 시간, 빈도, 콘텐츠 유형별 최적화 전략을 실전 팁으로 정리했습니다.
@@ -361,6 +361,7 @@ Updated: 2026-06-13
 - https://crepika.com/blog/google-qa-usage-tips - 구글 비즈니스 프로필 Q&A 활용 팁: 자주 묻는 질문으로 클릭률 높이기
 - https://crepika.com/blog/notion-ai-tips-10 - Notion AI 글 초안 작성 팁: 아이디어에서 완성 글까지 10분에 끝내기
 - https://crepika.com/blog/kakao-tips - 카카오채널 세그먼트 메시지 팁: 고객 분류별 맞춤 메시지로 전환율 올리기
+- https://crepika.com/blog/google-search-usage-tips-content-strategy - 구글 검색어 보고서 활용 팁: 서치콘솔 데이터로 콘텐츠 전략 개선하기
 - https://crepika.com/blog/5-practical-tips-ux - 히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트
 - https://crepika.com/blog/tips-5-automation - 세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일
 - https://crepika.com/blog/ads-roas-7-tips-ads - 리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정

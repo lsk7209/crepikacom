@@ -763,6 +763,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "google-search-usage-tips-content-strategy",
+    title: "구글 검색어 보고서 활용 팁: 서치콘솔 데이터로 콘텐츠 전략 개선하기",
+    description: "Google Search Console의 검색어 보고서를 분석해 콘텐츠 전략을 개선하는 방법을 알려드립니다. 노출 vs 클릭 갭 분석, 포지션별 전략, 계절성 파악까지 실전 활용 팁을 공유합니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "김민혁",
+    keywords: ["구글 서치콘솔", "검색어 보고서", "SEO 분석", "콘텐츠 전략", "Search Console 활용"],
+  },
+  {
     slug: "kakao-tips",
     title: "카카오채널 세그먼트 메시지 팁: 고객 분류별 맞춤 메시지로 전환율 올리기",
     description: "카카오채널(카카오톡 비즈니스 채널)에서 고객 세그먼트를 나눠 맞춤 메시지를 발송하는 방법을 소개합니다. 세그먼트 설정부터 메시지 개인화, 전환율 측정까지 실전 팁을 알려드립니다.",
