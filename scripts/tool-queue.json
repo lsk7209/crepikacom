@@ -202,9 +202,9 @@
     "type": "score-checker",
     "intent": "첫 문단이 문제, 독자, 약속된 결과를 분명히 보여주는지 점검합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-12T17:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-13T21:16:19.550Z",
     "path": "/tools/blog-intro-hook-checker"
   },
   {

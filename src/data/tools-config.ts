@@ -373,7 +373,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Blog Intro Hook Checker',
     descriptionEn: 'Check whether a blog introduction gives readers a clear reason to continue.',
     path: '/tools/blog-intro-hook-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['블로그 도입부', '훅 문장', 'SEO 글쓰기', '체류시간', '콘텐츠 최적화'],
     adStrategy: 'instant',
     seoTitle: '블로그 도입부 훅 검사기 - 첫 문단 점검 도구 | 크레피카',

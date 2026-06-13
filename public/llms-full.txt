@@ -33,6 +33,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [alt-text-helper](https://crepika.com/tools/alt-text-helper)
 - [content-freshness-checklist](https://crepika.com/tools/content-freshness-checklist)
 - [eeat-signal-checker](https://crepika.com/tools/eeat-signal-checker)
+- [blog-intro-hook-checker](https://crepika.com/tools/blog-intro-hook-checker)
 
 ## Blog
 
