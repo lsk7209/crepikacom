@@ -109,6 +109,10 @@
     {
       "id": "content-freshness-checklist",
       "url": "https://crepika.com/tools/content-freshness-checklist"
+    },
+    {
+      "id": "eeat-signal-checker",
+      "url": "https://crepika.com/tools/eeat-signal-checker"
     }
   ],
   "blog": {

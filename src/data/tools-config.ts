@@ -357,7 +357,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'E-E-A-T Signal Checker',
     descriptionEn: 'Check experience, evidence, specificity, and author context signals.',
     path: '/tools/eeat-signal-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['E-E-A-T', '콘텐츠 신뢰도', '경험 신호', '전문성', '애드센스 품질'],
     adStrategy: 'instant',
     seoTitle: 'E-E-A-T 신뢰 신호 검사기 - 콘텐츠 품질 점검 | 크레피카',

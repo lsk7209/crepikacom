@@ -189,9 +189,9 @@
     "type": "score-checker",
     "intent": "저자, 경험, 출처, 사례, 업데이트 표시 여부를 점검합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-12T12:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-13T15:04:56.299Z",
     "path": "/tools/eeat-signal-checker"
   },
   {
