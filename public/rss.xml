@@ -683,6 +683,15 @@
     <description>히트맵 데이터를 그냥 보는 것과 제대로 읽는 것은 다릅니다. 클릭·스크롤·무브 데이터를 실제 UX 개선으로 연결하는 5가지 분석 방법을 정리했습니다.</description>
   </item>
   <item>
+    <title>카카오채널 세그먼트 메시지 팁: 고객 분류별 맞춤 메시지로 전환율 올리기</title>
+    <link>https://crepika.com/blog/kakao-tips</link>
+    <guid>https://crepika.com/blog/kakao-tips</guid>
+    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>tips</category>
+    <description>카카오채널(카카오톡 비즈니스 채널)에서 고객 세그먼트를 나눠 맞춤 메시지를 발송하는 방법을 소개합니다. 세그먼트 설정부터 메시지 개인화, 전환율 측정까지 실전 팁을 알려드립니다.</description>
+  </item>
+  <item>
     <title>Notion AI 글 초안 작성 팁: 아이디어에서 완성 글까지 10분에 끝내기</title>
     <link>https://crepika.com/blog/notion-ai-tips-10</link>
     <guid>https://crepika.com/blog/notion-ai-tips-10</guid>
@@ -897,15 +906,6 @@
     <dc:creator>이지수</dc:creator>
     <category>tips</category>
     <description>네이버 스마트플레이스 사진 최적화 5가지 팁을 정리했습니다. 클릭률을 높이는 메인 사진 선택, 카테고리별 사진 구성, 촬영 팁, 업데이트 주기까지 가게 노출을 높이는 스마트플레이스 전략을 안내합니다.</description>
-  </item>
-  <item>
-    <title>랜딩페이지 이탈률 줄이는 5가지 팁: 방문자가 머무르게 만드는 첫 화면 설계</title>
-    <link>https://crepika.com/blog/5-tips</link>
-    <guid>https://crepika.com/blog/5-tips</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>tips</category>
-    <description>랜딩페이지 이탈률을 낮추는 5가지 실전 팁을 정리했습니다. 첫 화면 설계, 로딩 속도, 명확한 가치 제안, 신뢰 신호 배치, 모바일 최적화까지 방문자가 머무르게 만드는 랜딩페이지 전략을 안내합니다.</description>
   </item>
 </channel>
 </rss>

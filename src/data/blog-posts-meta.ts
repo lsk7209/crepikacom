@@ -763,6 +763,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "kakao-tips",
+    title: "카카오채널 세그먼트 메시지 팁: 고객 분류별 맞춤 메시지로 전환율 올리기",
+    description: "카카오채널(카카오톡 비즈니스 채널)에서 고객 세그먼트를 나눠 맞춤 메시지를 발송하는 방법을 소개합니다. 세그먼트 설정부터 메시지 개인화, 전환율 측정까지 실전 팁을 알려드립니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "이지수",
+    keywords: ["카카오채널", "카카오 비즈니스", "카카오 메시지 세그먼트", "개인화 마케팅", "전환율 최적화"],
+  },
+  {
     slug: "notion-ai-tips-10",
     title: "Notion AI 글 초안 작성 팁: 아이디어에서 완성 글까지 10분에 끝내기",
     description: "Notion AI를 활용해 블로그 포스트, 보고서, 이메일 초안을 빠르게 작성하는 실전 팁을 소개합니다. 프롬프트 전략부터 편집 자동화, 글쓰기 워크플로우 최적화까지 10분 완성 방법을 알려드립니다.",
