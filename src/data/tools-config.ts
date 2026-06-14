@@ -421,7 +421,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Source Link Organizer',
     descriptionEn: 'Organize source names and URLs into a clean reference list.',
     path: '/tools/source-link-organizer',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['출처 링크', '외부 링크', 'E-E-A-T', '콘텐츠 신뢰도', '참고자료 정리'],
     adStrategy: 'instant',
     seoTitle: '출처 링크 정리기 - 외부 참고자료 정리 도구 | 크레피카',
