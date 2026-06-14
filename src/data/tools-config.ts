@@ -1717,7 +1717,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Paragraph Readability Checker',
     descriptionEn: 'Find overly long paragraphs and readability risks in article drafts.',
     path: '/tools/paragraph-readability-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['문단 가독성', '블로그 가독성', '모바일 본문', '콘텐츠 최적화', '읽기 쉬운 글'],
     adStrategy: 'instant',
     seoTitle: '문단 가독성 검사기 - 모바일 본문 읽기 쉬움 점검 | 크레피카',

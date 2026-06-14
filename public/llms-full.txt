@@ -34,6 +34,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [content-freshness-checklist](https://crepika.com/tools/content-freshness-checklist)
 - [eeat-signal-checker](https://crepika.com/tools/eeat-signal-checker)
 - [blog-intro-hook-checker](https://crepika.com/tools/blog-intro-hook-checker)
+- [paragraph-readability-checker](https://crepika.com/tools/paragraph-readability-checker)
 
 ## Blog
 
@@ -65,7 +66,7 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-06-13
+Updated: 2026-06-14
 
 ## All Renderable Blog URLs
 

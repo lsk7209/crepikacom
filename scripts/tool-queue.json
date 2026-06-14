@@ -215,9 +215,9 @@
     "type": "score-checker",
     "intent": "너무 긴 문단과 분리 후보를 찾아 읽기 쉽게 만듭니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-12T22:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-14T04:05:01.589Z",
     "path": "/tools/paragraph-readability-checker"
   },
   {
