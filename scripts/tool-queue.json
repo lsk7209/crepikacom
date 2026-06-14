@@ -241,9 +241,9 @@
     "type": "builder",
     "intent": "행과 열 입력으로 마크다운 테이블을 빠르게 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-13T08:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-14T16:56:07.178Z",
     "path": "/tools/markdown-table-builder"
   },
   {

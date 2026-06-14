@@ -405,7 +405,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Markdown Table Builder',
     descriptionEn: 'Build a Markdown table template from columns and row count.',
     path: '/tools/markdown-table-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['마크다운 표', '표 생성기', '블로그 표', '콘텐츠 구조', '체크리스트 표'],
     adStrategy: 'instant',
     seoTitle: '마크다운 표 생성기 - 블로그 표 템플릿 만들기 | 크레피카',

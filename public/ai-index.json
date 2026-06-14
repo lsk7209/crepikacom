@@ -125,6 +125,10 @@
     {
       "id": "list-to-table-converter",
       "url": "https://crepika.com/tools/list-to-table-converter"
+    },
+    {
+      "id": "markdown-table-builder",
+      "url": "https://crepika.com/tools/markdown-table-builder"
     }
   ],
   "blog": {
