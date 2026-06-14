@@ -228,9 +228,9 @@
     "type": "text-transform",
     "intent": "불릿 목록을 비교표 형식의 마크다운 테이블로 바꿉니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-13T03:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-14T11:13:54.768Z",
     "path": "/tools/list-to-table-converter"
   },
   {

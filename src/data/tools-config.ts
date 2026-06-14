@@ -389,7 +389,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'List to Table Converter',
     descriptionEn: 'Convert delimited text lists into Markdown tables.',
     path: '/tools/list-to-table-converter',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['목록 표 변환', '마크다운 표', '블로그 표', '콘텐츠 가독성', '비교표'],
     adStrategy: 'instant',
     seoTitle: '목록 표 변환기 - 마크다운 비교표 생성 | 크레피카',
