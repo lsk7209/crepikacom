@@ -453,7 +453,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Reels Hook Bank Builder',
     descriptionEn: 'Generate short hook lines for Instagram Reels and short videos.',
     path: '/tools/reels-hook-bank-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['릴스 훅', '숏폼 훅', '인스타그램 릴스', '첫 문장', '크리에이터 도구'],
     adStrategy: 'instant',
     seoTitle: '릴스 훅 문장 뱅크 - 숏폼 첫 문장 생성 도구 | 크레피카',

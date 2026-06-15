@@ -280,9 +280,9 @@
     "type": "builder",
     "intent": "주제와 독자에 맞는 짧은 릴스 훅 패턴을 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-13T23:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-15T11:31:56.219Z",
     "path": "/tools/reels-hook-bank-builder"
   },
   {
