@@ -145,6 +145,10 @@
     {
       "id": "youtube-title-length-checker",
       "url": "https://crepika.com/tools/youtube-title-length-checker"
+    },
+    {
+      "id": "youtube-description-formatter",
+      "url": "https://crepika.com/tools/youtube-description-formatter"
     }
   ],
   "blog": {

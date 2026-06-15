@@ -306,9 +306,9 @@
     "type": "text-transform",
     "intent": "설명, 챕터, 링크, CTA를 보기 좋게 정리합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-14T09:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-15T22:34:01.587Z",
     "path": "/tools/youtube-description-formatter"
   },
   {

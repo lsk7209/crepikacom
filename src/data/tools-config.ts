@@ -485,7 +485,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'YouTube Description Formatter',
     descriptionEn: 'Format a YouTube description with summary, links, and chapters.',
     path: '/tools/youtube-description-formatter',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['유튜브 설명란', 'YouTube SEO', '영상 설명', '타임라인', '관련 링크'],
     adStrategy: 'instant',
     seoTitle: '유튜브 설명란 정리기 - 영상 설명 템플릿 생성 | 크레피카',
