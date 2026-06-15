@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-14"
+    "updated": "2026-06-15"
   },
   "tools": [
     {
@@ -133,6 +133,10 @@
     {
       "id": "source-link-organizer",
       "url": "https://crepika.com/tools/source-link-organizer"
+    },
+    {
+      "id": "instagram-caption-builder",
+      "url": "https://crepika.com/tools/instagram-caption-builder"
     }
   ],
   "blog": {

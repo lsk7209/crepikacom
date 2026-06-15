@@ -267,9 +267,9 @@
     "type": "builder",
     "intent": "훅, 본문, 증거, CTA, 해시태그 섹션으로 캡션을 정리합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-13T18:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-15T05:28:33.055Z",
     "path": "/tools/instagram-caption-builder"
   },
   {

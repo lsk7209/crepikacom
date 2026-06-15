@@ -437,7 +437,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Instagram Caption Builder',
     descriptionEn: 'Build a structured Instagram caption with hook, body, and CTA.',
     path: '/tools/instagram-caption-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['인스타그램 캡션', '릴스 캡션', 'SNS 글쓰기', 'CTA', '크리에이터 마케팅'],
     adStrategy: 'instant',
     seoTitle: '인스타그램 캡션 구조화 도구 - 훅과 CTA 초안 생성 | 크레피카',
