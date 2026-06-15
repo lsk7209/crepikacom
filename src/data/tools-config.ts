@@ -469,7 +469,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'YouTube Title Length Checker',
     descriptionEn: 'Check YouTube title length, keyword position, and click signal.',
     path: '/tools/youtube-title-length-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['유튜브 제목', 'YouTube SEO', '제목 길이', '영상 SEO', '클릭률'],
     adStrategy: 'instant',
     seoTitle: '유튜브 제목 길이 검사기 - 영상 SEO 제목 점검 | 크레피카',

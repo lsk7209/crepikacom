@@ -293,9 +293,9 @@
     "type": "score-checker",
     "intent": "유튜브 제목의 길이, 핵심어 전면 배치, 명확성을 점검합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-14T04:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-15T16:33:13.102Z",
     "path": "/tools/youtube-title-length-checker"
   },
   {
