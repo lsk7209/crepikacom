@@ -319,9 +319,9 @@
     "type": "calculator",
     "intent": "대본 길이로 예상 말하기 시간을 계산합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-14T14:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-16T06:05:50.152Z",
     "path": "/tools/shorts-script-timer"
   },
   {

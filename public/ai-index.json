@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-15"
+    "updated": "2026-06-16"
   },
   "tools": [
     {
@@ -149,6 +149,10 @@
     {
       "id": "youtube-description-formatter",
       "url": "https://crepika.com/tools/youtube-description-formatter"
+    },
+    {
+      "id": "shorts-script-timer",
+      "url": "https://crepika.com/tools/shorts-script-timer"
     }
   ],
   "blog": {

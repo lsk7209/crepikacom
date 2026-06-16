@@ -501,7 +501,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Shorts Script Timer',
     descriptionEn: 'Estimate speaking time for Shorts, Reels, and short-form scripts.',
     path: '/tools/shorts-script-timer',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['쇼츠 대본', '릴스 대본', '말하기 시간', '숏폼 영상', '영상 기획'],
     adStrategy: 'instant',
     seoTitle: '쇼츠 대본 시간 계산기 - 숏폼 말하기 시간 점검 | 크레피카',

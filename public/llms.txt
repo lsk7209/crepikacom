@@ -42,6 +42,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [reels-hook-bank-builder](https://crepika.com/tools/reels-hook-bank-builder)
 - [youtube-title-length-checker](https://crepika.com/tools/youtube-title-length-checker)
 - [youtube-description-formatter](https://crepika.com/tools/youtube-description-formatter)
+- [shorts-script-timer](https://crepika.com/tools/shorts-script-timer)
 
 ## Blog
 
@@ -73,4 +74,4 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-06-15
+Updated: 2026-06-16
