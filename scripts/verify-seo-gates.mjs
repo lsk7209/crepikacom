@@ -773,7 +773,11 @@ function validateSourceInlineImageAlt() {
         stack.push(path);
         continue;
       }
-      if (!/\.(tsx?|jsx?|html)$/.test(name)) continue;
+      // Generated crawler pages validate rendered blog content. Source-level
+      // image checks should stay on files that can contain real JSX/HTML,
+      // otherwise code examples in data strings such as '<img ' look like
+      // production image tags and block scheduled publishing.
+      if (!/\.(tsx|jsx|html)$/.test(name)) continue;
       validateInlineImageAlt(path, read(path));
     }
   }
