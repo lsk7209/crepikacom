@@ -533,7 +533,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'LinkedIn Post Formatter',
     descriptionEn: 'Format an idea into a LinkedIn post with hook, insight, and CTA.',
     path: '/tools/linkedin-post-formatter',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['링크드인 글쓰기', 'LinkedIn post', 'B2B 콘텐츠', 'SNS 글 포맷', '크리에이터 브랜딩'],
     adStrategy: 'instant',
     seoTitle: '링크드인 글 포매터 - 인사이트형 글 구조화 도구 | 크레피카',

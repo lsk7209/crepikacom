@@ -44,6 +44,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [youtube-description-formatter](https://crepika.com/tools/youtube-description-formatter)
 - [shorts-script-timer](https://crepika.com/tools/shorts-script-timer)
 - [thread-post-splitter](https://crepika.com/tools/thread-post-splitter)
+- [linkedin-post-formatter](https://crepika.com/tools/linkedin-post-formatter)
 
 ## Blog
 

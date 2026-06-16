@@ -157,6 +157,10 @@
     {
       "id": "thread-post-splitter",
       "url": "https://crepika.com/tools/thread-post-splitter"
+    },
+    {
+      "id": "linkedin-post-formatter",
+      "url": "https://crepika.com/tools/linkedin-post-formatter"
     }
   ],
   "blog": {

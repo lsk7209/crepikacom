@@ -345,9 +345,9 @@
     "type": "text-transform",
     "intent": "긴 전문 글을 짧은 문단과 CTA 중심으로 정리합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-15T00:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-16T22:12:09.031Z",
     "path": "/tools/linkedin-post-formatter"
   },
   {
