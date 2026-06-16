@@ -517,7 +517,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Thread Post Splitter',
     descriptionEn: 'Split long text into numbered thread posts within a character limit.',
     path: '/tools/thread-post-splitter',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['스레드 글', 'X 포스트', '긴 글 분할', 'SNS 재활용', '콘텐츠 repurpose'],
     adStrategy: 'instant',
     seoTitle: '스레드 글 분할기 - 긴 글 SNS 포스트로 나누기 | 크레피카',

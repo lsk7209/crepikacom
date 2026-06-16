@@ -332,9 +332,9 @@
     "type": "text-transform",
     "intent": "긴 글을 번호가 붙은 스레드 게시물로 나눕니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-14T19:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-16T11:34:33.735Z",
     "path": "/tools/thread-post-splitter"
   },
   {
