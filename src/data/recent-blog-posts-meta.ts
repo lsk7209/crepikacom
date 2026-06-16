@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "linkedin-vs",
+    title: "LinkedIn 아티클 vs 게시물: 언제 어떤 형식을 써야 성과가 높은가",
+    description: "LinkedIn 아티클과 일반 게시물의 알고리즘 작동 방식, 독자 행동 패턴, 성과 차이를 데이터로 비교 분석. 목표별 최적 형식 선택 가이드.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["링크드인 아티클", "링크드인 게시물", "LinkedIn 콘텐츠 형식", "아티클 vs 게시물", "링크드인 팁", "링크드인 전략"],
+  },
+  {
     slug: "wordpress-5-tips",
     title: "WordPress 플러그인 없이 사이트 속도 올리는 5가지 팁",
     description: "WordPress 플러그인 없이도 사이트 로딩 속도를 크게 개선할 수 있는 5가지 실전 방법. 이미지 최적화, 서버 설정, 데이터베이스 정리, 렌더 블로킹 해소까지 코드와 설정으로 해결하는 속도 개선 가이드입니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "9분",
     author: "박준영",
     keywords: ["네이버 밴드", "밴드 알림", "밴드 마케팅", "커뮤니티 운영", "멤버 참여도"],
-  },
-  {
-    slug: "google-analytics-4-tips",
-    title: "구글 Analytics 4 맞춤 이벤트 설정 팁: 내 비즈니스에 맞는 데이터 수집하기",
-    description: "Google Analytics 4(GA4)에서 기본 이벤트를 넘어 비즈니스 목표에 맞는 맞춤 이벤트를 설정하는 방법을 알려드립니다. 코딩 없이 구성하는 방법부터 GTM 연동까지 실전 팁을 제공합니다.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "김민혁",
-    keywords: ["Google Analytics 4", "GA4 맞춤 이벤트", "GA4 설정", "맞춤 이벤트 추적", "데이터 분석"],
   },
 ];

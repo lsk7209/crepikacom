@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "linkedin-vs",
+    title: "LinkedIn 아티클 vs 게시물: 언제 어떤 형식을 써야 성과가 높은가",
+    description: "LinkedIn 아티클과 일반 게시물의 알고리즘 작동 방식, 독자 행동 패턴, 성과 차이를 데이터로 비교 분석. 목표별 최적 형식 선택 가이드.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["링크드인 아티클", "링크드인 게시물", "LinkedIn 콘텐츠 형식", "아티클 vs 게시물", "링크드인 팁", "링크드인 전략"],
+  },
+  {
     slug: "wordpress-5-tips",
     title: "WordPress 플러그인 없이 사이트 속도 올리는 5가지 팁",
     description: "WordPress 플러그인 없이도 사이트 로딩 속도를 크게 개선할 수 있는 5가지 실전 방법. 이미지 최적화, 서버 설정, 데이터베이스 정리, 렌더 블로킹 해소까지 코드와 설정으로 해결하는 속도 개선 가이드입니다.",
