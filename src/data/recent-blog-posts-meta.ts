@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "wordpress-5-tips",
+    title: "WordPress 플러그인 없이 사이트 속도 올리는 5가지 팁",
+    description: "WordPress 플러그인 없이도 사이트 로딩 속도를 크게 개선할 수 있는 5가지 실전 방법. 이미지 최적화, 서버 설정, 데이터베이스 정리, 렌더 블로킹 해소까지 코드와 설정으로 해결하는 속도 개선 가이드입니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "10분",
+    author: "박준영",
+    keywords: ["WordPress 속도 최적화", "워드프레스 속도", "사이트 로딩 속도", "Core Web Vitals", "플러그인 없는 최적화"],
+  },
+  {
     slug: "naver-tips-strategy",
     title: "네이버 밴드 게시글 알림 팁: 멤버 참여도를 높이는 발행 전략",
     description: "네이버 밴드에서 게시글 알림 기능을 전략적으로 활용해 멤버 참여도를 높이는 방법을 알려드립니다. 알림 발송 시간, 빈도, 콘텐츠 유형별 최적화 전략을 실전 팁으로 정리했습니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "11분",
     author: "김민혁",
     keywords: ["Google Analytics 4", "GA4 맞춤 이벤트", "GA4 설정", "맞춤 이벤트 추적", "데이터 분석"],
-  },
-  {
-    slug: "optimization-tips-google-blog",
-    title: "티스토리 카테고리 구조 최적화 팁: 구글이 좋아하는 블로그 구조 만들기",
-    description: "티스토리 블로그의 카테고리 구조를 SEO에 최적화하는 방법을 알려드립니다. 사일로 구조 적용부터 URL 설정, 내부 링크 전략까지 구글 검색 순위를 높이는 블로그 구조 최적화 팁입니다.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "10분",
-    author: "박준영",
-    keywords: ["티스토리 SEO", "티스토리 카테고리", "블로그 구조 최적화", "사일로 구조", "내부 링크"],
   },
 ];

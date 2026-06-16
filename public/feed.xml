@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>WordPress 플러그인 없이 사이트 속도 올리는 5가지 팁</title>
+    <link>https://crepika.com/blog/wordpress-5-tips</link>
+    <guid>https://crepika.com/blog/wordpress-5-tips</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>tips</category>
+    <description>WordPress 플러그인 없이도 사이트 로딩 속도를 크게 개선할 수 있는 5가지 실전 방법. 이미지 최적화, 서버 설정, 데이터베이스 정리, 렌더 블로킹 해소까지 코드와 설정으로 해결하는 속도 개선 가이드입니다.</description>
+  </item>
+  <item>
     <title>네이버 밴드 게시글 알림 팁: 멤버 참여도를 높이는 발행 전략</title>
     <link>https://crepika.com/blog/naver-tips-strategy</link>
     <guid>https://crepika.com/blog/naver-tips-strategy</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>tips</category>
     <description>UTM 파라미터를 잘못 세팅하면 GA4 데이터 전체가 오염됩니다. 현업에서 자주 발생하는 실수 패턴 5가지와 올바른 추적 규칙을 단계별로 정리했습니다.</description>
-  </item>
-  <item>
-    <title>카카오맵 리뷰 관리 7가지 팁: 악성 리뷰 대응과 긍정 리뷰 유도 전략</title>
-    <link>https://crepika.com/blog/kakao-7-tips-strategy</link>
-    <guid>https://crepika.com/blog/kakao-7-tips-strategy</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>김민혁</dc:creator>
-    <category>tips</category>
-    <description>카카오맵 리뷰 관리 7가지 핵심 팁을 정리했습니다. 악성 리뷰 신고·대응법, 긍정 리뷰 유도 전략, 오너 댓글 작성법, 리뷰 모니터링까지 카카오맵 평점을 높이는 실전 가이드입니다.</description>
   </item>
 </channel>
 </rss>
