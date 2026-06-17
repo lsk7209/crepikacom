@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "apple-podcast-keyword-optimization-tips",
+    title: "Apple Podcast 키워드 최적화 팁: 팟캐스트 앱에서 발견되는 에피소드 만들기",
+    description: "Apple Podcast 검색 알고리즘의 작동 방식을 이해하고 에피소드 제목·설명·태그를 최적화하는 실전 전략을 소개합니다. 팟캐스트 앱에서 새 청중을 자연 유입시키는 방법을 알아보세요.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "10분",
+    author: "이지수",
+    keywords: ["Apple Podcast SEO", "팟캐스트 최적화", "팟캐스트 키워드", "팟캐스트 발견성", "팟캐스트 성장"],
+  },
+  {
     slug: "blogshortform-usage-tips",
     title: "웨비나 영상을 블로그·숏폼·뉴스레터로 재활용하는 팁",
     description: "한 번 제작한 웨비나 영상을 블로그 포스트, 숏폼 영상, 뉴스레터로 전환하는 실전 콘텐츠 재활용 전략을 단계별로 설명합니다. 제작 시간을 줄이고 채널별 성과를 동시에 높이세요.",

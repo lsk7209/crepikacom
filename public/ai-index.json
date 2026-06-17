@@ -186,8 +186,14 @@
       "insights",
       "case-study"
     ],
-    "count": 374,
+    "count": 375,
     "latest": [
+      {
+        "title": "Apple Podcast 키워드 최적화 팁: 팟캐스트 앱에서 발견되는 에피소드 만들기",
+        "url": "https://crepika.com/blog/apple-podcast-keyword-optimization-tips",
+        "description": "Apple Podcast 검색 알고리즘의 작동 방식을 이해하고 에피소드 제목·설명·태그를 최적화하는 실전 전략을 소개합니다. 팟캐스트 앱에서 새 청중을 자연 유입시키는 방법을 알아보세요.",
+        "date": "2026-05-18"
+      },
       {
         "title": "웨비나 영상을 블로그·숏폼·뉴스레터로 재활용하는 팁",
         "url": "https://crepika.com/blog/blogshortform-usage-tips",
@@ -252,12 +258,6 @@
         "title": "Google Ads 스마트 캠페인 완전 가이드: 소상공인을 위한 자동화 광고 시작법",
         "url": "https://crepika.com/blog/google-ads-complete-guide-automation-ads",
         "description": "Google Ads 경험이 없는 소상공인도 스마트 캠페인으로 효과적인 광고를 시작할 수 있습니다. 계정 설정부터 예산 관리, 성과 분석까지 소상공인 맞춤 완전 가이드를 제공합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "유튜브 Community 게시물 완전 가이드: 영상 없이 구독자와 소통하는 전략",
-        "url": "https://crepika.com/blog/youtube-community-complete-guide-strategy",
-        "description": "유튜브 Community 탭 기능을 활용해 영상을 올리지 않는 날에도 구독자와 소통하고 채널 성장을 유지하는 전략을 알아봅니다. 게시물 유형별 활용법부터 알고리즘 이해까지 완전 가이드입니다.",
         "date": "2026-05-18"
       }
     ]

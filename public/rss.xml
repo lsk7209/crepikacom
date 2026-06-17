@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Apple Podcast 키워드 최적화 팁: 팟캐스트 앱에서 발견되는 에피소드 만들기</title>
+    <link>https://crepika.com/blog/apple-podcast-keyword-optimization-tips</link>
+    <guid>https://crepika.com/blog/apple-podcast-keyword-optimization-tips</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>tips</category>
+    <description>Apple Podcast 검색 알고리즘의 작동 방식을 이해하고 에피소드 제목·설명·태그를 최적화하는 실전 전략을 소개합니다. 팟캐스트 앱에서 새 청중을 자연 유입시키는 방법을 알아보세요.</description>
+  </item>
+  <item>
     <title>웨비나 영상을 블로그·숏폼·뉴스레터로 재활용하는 팁</title>
     <link>https://crepika.com/blog/blogshortform-usage-tips</link>
     <guid>https://crepika.com/blog/blogshortform-usage-tips</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>insights</category>
     <description>2026년 AI 영상 생성 도구 3강인 Sora, Kling, Runway를 실제 사용 관점에서 비교합니다. 화질, 생성 속도, 가격, 활용 사례별 최적 도구를 분석합니다.</description>
-  </item>
-  <item>
-    <title>CRO 도입 후 전환율 변화: 국내 중소 비즈니스 12곳의 실제 데이터</title>
-    <link>https://crepika.com/blog/cro-12</link>
-    <guid>https://crepika.com/blog/cro-12</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>insights</category>
-    <description>국내 중소 비즈니스 12곳의 CRO(전환율 최적화) 도입 전후 실제 데이터를 분석합니다. 업종별 성과 차이와 가장 효과적인 CRO 기법을 공개합니다.</description>
   </item>
 </channel>
 </rss>
