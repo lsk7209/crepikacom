@@ -358,9 +358,9 @@
     "type": "builder",
     "intent": "브랜드, 니치, 확장 해시태그를 그룹별로 구성합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-15T05:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-17T04:07:56.905Z",
     "path": "/tools/hashtag-group-planner"
   },
   {

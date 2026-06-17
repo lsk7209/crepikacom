@@ -549,7 +549,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Hashtag Group Planner',
     descriptionEn: 'Build hashtag groups by core topic, niche, discovery, and brand.',
     path: '/tools/hashtag-group-planner',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['해시태그', '인스타그램 해시태그', 'SNS 태그', '해시태그 전략', '콘텐츠 노출'],
     adStrategy: 'instant',
     seoTitle: '해시태그 그룹 설계기 - SNS 태그 묶음 생성 | 크레피카',
