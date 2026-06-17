@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>웨비나 영상을 블로그·숏폼·뉴스레터로 재활용하는 팁</title>
+    <link>https://crepika.com/blog/blogshortform-usage-tips</link>
+    <guid>https://crepika.com/blog/blogshortform-usage-tips</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>김민혁</dc:creator>
+    <category>tips</category>
+    <description>한 번 제작한 웨비나 영상을 블로그 포스트, 숏폼 영상, 뉴스레터로 전환하는 실전 콘텐츠 재활용 전략을 단계별로 설명합니다. 제작 시간을 줄이고 채널별 성과를 동시에 높이세요.</description>
+  </item>
+  <item>
     <title>LinkedIn 아티클 vs 게시물: 언제 어떤 형식을 써야 성과가 높은가</title>
     <link>https://crepika.com/blog/linkedin-vs</link>
     <guid>https://crepika.com/blog/linkedin-vs</guid>
@@ -897,15 +906,6 @@
     <dc:creator>이지수</dc:creator>
     <category>tips</category>
     <description>LinkedIn 알고리즘이 어떤 게시글을 더 많이 노출하는지 분석하고, 도달률을 극대화하는 7가지 게시 전략을 정리했습니다. 팔로워 수보다 전략이 중요합니다.</description>
-  </item>
-  <item>
-    <title>구글 Discover 노출되는 글 쓰는 7가지 팁: 추천 피드에 올라타는 콘텐츠 공식</title>
-    <link>https://crepika.com/blog/google-discover-7-tips-content</link>
-    <guid>https://crepika.com/blog/google-discover-7-tips-content</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>tips</category>
-    <description>구글 Discover는 검색 없이도 독자를 데려오는 채널입니다. 피드에 노출되는 콘텐츠의 패턴 7가지를 분석해 실제 적용 가능한 작성 공식으로 정리했습니다.</description>
   </item>
 </channel>
 </rss>

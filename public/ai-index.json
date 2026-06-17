@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-17"
   },
   "tools": [
     {
@@ -178,8 +178,14 @@
       "insights",
       "case-study"
     ],
-    "count": 372,
+    "count": 373,
     "latest": [
+      {
+        "title": "웨비나 영상을 블로그·숏폼·뉴스레터로 재활용하는 팁",
+        "url": "https://crepika.com/blog/blogshortform-usage-tips",
+        "description": "한 번 제작한 웨비나 영상을 블로그 포스트, 숏폼 영상, 뉴스레터로 전환하는 실전 콘텐츠 재활용 전략을 단계별로 설명합니다. 제작 시간을 줄이고 채널별 성과를 동시에 높이세요.",
+        "date": "2026-05-18"
+      },
       {
         "title": "LinkedIn 아티클 vs 게시물: 언제 어떤 형식을 써야 성과가 높은가",
         "url": "https://crepika.com/blog/linkedin-vs",
@@ -244,12 +250,6 @@
         "title": "유튜브 Community 게시물 완전 가이드: 영상 없이 구독자와 소통하는 전략",
         "url": "https://crepika.com/blog/youtube-community-complete-guide-strategy",
         "description": "유튜브 Community 탭 기능을 활용해 영상을 올리지 않는 날에도 구독자와 소통하고 채널 성장을 유지하는 전략을 알아봅니다. 게시물 유형별 활용법부터 알고리즘 이해까지 완전 가이드입니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "인스타그램 Close Friends 마케팅 가이드: VIP 고객을 위한 프리미엄 콘텐츠 전략",
-        "url": "https://crepika.com/blog/instagram-close-friends-marketing-guide-vip-content-strategy",
-        "description": "인스타그램 Close Friends 기능을 활용해 VIP 고객에게 독점 콘텐츠를 제공하는 마케팅 전략을 소개합니다. 멤버십 구축, 콘텐츠 기획, 전환율 향상까지 실전 노하우를 공유합니다.",
         "date": "2026-05-18"
       }
     ]

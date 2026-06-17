@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "blogshortform-usage-tips",
+    title: "웨비나 영상을 블로그·숏폼·뉴스레터로 재활용하는 팁",
+    description: "한 번 제작한 웨비나 영상을 블로그 포스트, 숏폼 영상, 뉴스레터로 전환하는 실전 콘텐츠 재활용 전략을 단계별로 설명합니다. 제작 시간을 줄이고 채널별 성과를 동시에 높이세요.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["콘텐츠 재활용", "웨비나 활용", "숏폼 영상", "블로그 콘텐츠", "뉴스레터 전략"],
+  },
+  {
     slug: "linkedin-vs",
     title: "LinkedIn 아티클 vs 게시물: 언제 어떤 형식을 써야 성과가 높은가",
     description: "LinkedIn 아티클과 일반 게시물의 알고리즘 작동 방식, 독자 행동 패턴, 성과 차이를 데이터로 비교 분석. 목표별 최적 형식 선택 가이드.",
