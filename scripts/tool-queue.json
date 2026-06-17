@@ -371,9 +371,9 @@
     "type": "builder",
     "intent": "반복 사용을 줄이도록 해시태그 세트를 회차별로 관리합니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-15T10:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-17T12:58:28.623Z",
     "path": "/tools/hashtag-rotation-tracker"
   },
   {

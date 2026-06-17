@@ -565,7 +565,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Hashtag Rotation Tracker',
     descriptionEn: 'Split hashtags into rotation sets for cleaner content testing.',
     path: '/tools/hashtag-rotation-tracker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['해시태그 로테이션', '해시태그 세트', 'SNS 테스트', '인스타그램 운영', '콘텐츠 실험'],
     adStrategy: 'instant',
     seoTitle: '해시태그 로테이션 추적기 - SNS 태그 세트 나누기 | 크레피카',
