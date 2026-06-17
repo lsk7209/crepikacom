@@ -793,6 +793,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "brand-tips-tools-brand",
+    title: "브랜드 컬러 팔레트 만드는 팁: 무료 도구로 전문가급 브랜드 색상 설정하기",
+    description: "색상 심리학과 디자인 원칙을 기반으로 브랜드 컬러 팔레트를 무료 도구만으로 설계하는 방법을 안내합니다. 일관된 브랜드 아이덴티티를 직접 구축하는 단계별 가이드입니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "8분",
+    author: "박준영",
+    keywords: ["브랜드 컬러", "색상 팔레트", "브랜드 아이덴티티", "무료 디자인 도구", "컬러 심리학"],
+  },
+  {
     slug: "google-search-usage-tips-content-strategy",
     title: "구글 검색어 보고서 활용 팁: 서치콘솔 데이터로 콘텐츠 전략 개선하기",
     description: "Google Search Console의 검색어 보고서를 분석해 콘텐츠 전략을 개선하는 방법을 알려드립니다. 노출 vs 클릭 갭 분석, 포지션별 전략, 계절성 파악까지 실전 활용 팁을 공유합니다.",

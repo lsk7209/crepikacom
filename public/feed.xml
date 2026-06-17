@@ -710,6 +710,15 @@
     <description>히트맵 데이터를 그냥 보는 것과 제대로 읽는 것은 다릅니다. 클릭·스크롤·무브 데이터를 실제 UX 개선으로 연결하는 5가지 분석 방법을 정리했습니다.</description>
   </item>
   <item>
+    <title>브랜드 컬러 팔레트 만드는 팁: 무료 도구로 전문가급 브랜드 색상 설정하기</title>
+    <link>https://crepika.com/blog/brand-tips-tools-brand</link>
+    <guid>https://crepika.com/blog/brand-tips-tools-brand</guid>
+    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>tips</category>
+    <description>색상 심리학과 디자인 원칙을 기반으로 브랜드 컬러 팔레트를 무료 도구만으로 설계하는 방법을 안내합니다. 일관된 브랜드 아이덴티티를 직접 구축하는 단계별 가이드입니다.</description>
+  </item>
+  <item>
     <title>구글 검색어 보고서 활용 팁: 서치콘솔 데이터로 콘텐츠 전략 개선하기</title>
     <link>https://crepika.com/blog/google-search-usage-tips-content-strategy</link>
     <guid>https://crepika.com/blog/google-search-usage-tips-content-strategy</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>insights</category>
     <description>국내 중소 비즈니스 12곳의 CRO(전환율 최적화) 도입 전후 실제 데이터를 분석합니다. 업종별 성과 차이와 가장 효과적인 CRO 기법을 공개합니다.</description>
-  </item>
-  <item>
-    <title>LinkedIn 알고리즘 공략 7가지 팁: 게시글 노출을 극대화하는 게시 전략</title>
-    <link>https://crepika.com/blog/linkedin-algorithm-7-tips-strategy</link>
-    <guid>https://crepika.com/blog/linkedin-algorithm-7-tips-strategy</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>tips</category>
-    <description>LinkedIn 알고리즘이 어떤 게시글을 더 많이 노출하는지 분석하고, 도달률을 극대화하는 7가지 게시 전략을 정리했습니다. 팔로워 수보다 전략이 중요합니다.</description>
   </item>
 </channel>
 </rss>
