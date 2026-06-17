@@ -581,7 +581,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Social Bio Length Checker',
     descriptionEn: 'Check social profile bio length, audience, value, and CTA.',
     path: '/tools/social-bio-length-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['SNS 프로필', '인스타그램 소개', '프로필 문구', '바이오 최적화', '크리에이터 브랜딩'],
     adStrategy: 'instant',
     seoTitle: 'SNS 프로필 소개 검사기 - 바이오 문구 점검 | 크레피카',

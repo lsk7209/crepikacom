@@ -384,9 +384,9 @@
     "type": "score-checker",
     "intent": "프로필 소개 문구의 길이, CTA, 핵심 가치 전달을 점검합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-15T15:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-17T19:13:04.232Z",
     "path": "/tools/social-bio-length-checker"
   },
   {
