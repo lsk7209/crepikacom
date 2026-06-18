@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Runway vs CapCut: AI 영상 편집 도구 어느 것이 더 실용적인가</title>
+    <link>https://crepika.com/blog/runway-vs-capcut-ai-editing-tools</link>
+    <guid>https://crepika.com/blog/runway-vs-capcut-ai-editing-tools</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>insights</category>
+    <description>AI 영상 편집 도구의 양대 산맥인 Runway와 CapCut을 기능·가격·학습 곡선·실제 활용도 측면에서 비교 분석합니다. 목적에 맞는 도구 선택 기준을 제시합니다.</description>
+  </item>
+  <item>
     <title>Apple Podcast 키워드 최적화 팁: 팟캐스트 앱에서 발견되는 에피소드 만들기</title>
     <link>https://crepika.com/blog/apple-podcast-keyword-optimization-tips</link>
     <guid>https://crepika.com/blog/apple-podcast-keyword-optimization-tips</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>insights</category>
     <description>쿠팡파트너스와 네이버 애드포스트의 수익 구조, 클릭당 단가, 전환율을 블로그 카테고리별로 비교합니다. 어떤 수익화 채널이 내 블로그에 더 적합한지 판단 기준을 제시합니다.</description>
-  </item>
-  <item>
-    <title>소셜 리스닝 데이터로 본 브랜드 위기 대응: 빠른 모니터링이 위기를 막는다</title>
-    <link>https://crepika.com/blog/brand</link>
-    <guid>https://crepika.com/blog/brand</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>insights</category>
-    <description>소셜 리스닝 도구를 활용한 브랜드 위기 조기 감지와 대응 전략을 실제 데이터와 사례로 분석합니다. 국내외 기업의 위기 대응 패턴과 모니터링 시스템 구축법을 소개합니다.</description>
   </item>
 </channel>
 </rss>

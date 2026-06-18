@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "runway-vs-capcut-ai-editing-tools",
+    title: "Runway vs CapCut: AI 영상 편집 도구 어느 것이 더 실용적인가",
+    description: "AI 영상 편집 도구의 양대 산맥인 Runway와 CapCut을 기능·가격·학습 곡선·실제 활용도 측면에서 비교 분석합니다. 목적에 맞는 도구 선택 기준을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["Runway AI", "CapCut", "AI 영상 편집", "영상 편집 도구 비교", "AI 크리에이터 도구"],
+  },
+  {
     slug: "apple-podcast-keyword-optimization-tips",
     title: "Apple Podcast 키워드 최적화 팁: 팟캐스트 앱에서 발견되는 에피소드 만들기",
     description: "Apple Podcast 검색 알고리즘의 작동 방식을 이해하고 에피소드 제목·설명·태그를 최적화하는 실전 전략을 소개합니다. 팟캐스트 앱에서 새 청중을 자연 유입시키는 방법을 알아보세요.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "9분",
     author: "김민혁",
     keywords: ["콘텐츠 재활용", "웨비나 활용", "숏폼 영상", "블로그 콘텐츠", "뉴스레터 전략"],
-  },
-  {
-    slug: "linkedin-vs",
-    title: "LinkedIn 아티클 vs 게시물: 언제 어떤 형식을 써야 성과가 높은가",
-    description: "LinkedIn 아티클과 일반 게시물의 알고리즘 작동 방식, 독자 행동 패턴, 성과 차이를 데이터로 비교 분석. 목표별 최적 형식 선택 가이드.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "박준영",
-    keywords: ["링크드인 아티클", "링크드인 게시물", "LinkedIn 콘텐츠 형식", "아티클 vs 게시물", "링크드인 팁", "링크드인 전략"],
   },
 ];

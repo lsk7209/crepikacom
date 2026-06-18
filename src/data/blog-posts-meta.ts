@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "runway-vs-capcut-ai-editing-tools",
+    title: "Runway vs CapCut: AI 영상 편집 도구 어느 것이 더 실용적인가",
+    description: "AI 영상 편집 도구의 양대 산맥인 Runway와 CapCut을 기능·가격·학습 곡선·실제 활용도 측면에서 비교 분석합니다. 목적에 맞는 도구 선택 기준을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["Runway AI", "CapCut", "AI 영상 편집", "영상 편집 도구 비교", "AI 크리에이터 도구"],
+  },
+  {
     slug: "apple-podcast-keyword-optimization-tips",
     title: "Apple Podcast 키워드 최적화 팁: 팟캐스트 앱에서 발견되는 에피소드 만들기",
     description: "Apple Podcast 검색 알고리즘의 작동 방식을 이해하고 에피소드 제목·설명·태그를 최적화하는 실전 전략을 소개합니다. 팟캐스트 앱에서 새 청중을 자연 유입시키는 방법을 알아보세요.",

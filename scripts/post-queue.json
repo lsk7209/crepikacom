@@ -5970,8 +5970,10 @@
     ],
     "author": "이지수",
     "estimatedReadTime": "8분",
-    "published": false,
-    "scheduledDate": "2026-06-04T19:00"
+    "published": true,
+    "scheduledDate": "2026-06-04T19:00",
+    "publishedDate": "2026-06-18",
+    "publishedAt": "2026-06-18T12:52:40.687Z"
   },
   {
     "id": 368,
