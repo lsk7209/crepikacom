@@ -803,6 +803,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "marketing-tools-20-0-marketing",
+    title: "소상공인을 위한 무료 마케팅 도구 20선: 예산 0원으로 시작하는 디지털 마케팅",
+    description: "광고비 없이 시작할 수 있는 무료 디지털 마케팅 도구 20가지를 카테고리별로 정리했습니다. 소상공인과 1인 사업자가 실무에 바로 적용 가능한 도구와 활용 팁을 소개합니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "박준영",
+    keywords: ["무료 마케팅 도구", "소상공인 마케팅", "디지털 마케팅 도구", "마케팅 자동화", "무료 SEO 도구"],
+  },
+  {
     slug: "tips-ahrefs-strategy-analytics",
     title: "경쟁사 백링크 훔쳐보기 팁: Ahrefs로 경쟁자 링크 전략 분석하는 법",
     description: "Ahrefs를 활용해 경쟁사의 백링크 프로파일을 분석하고 링크 빌딩 기회를 발굴하는 방법을 단계별로 설명합니다. 경쟁자의 전략을 역으로 학습해 SEO 성과를 빠르게 높이세요.",
