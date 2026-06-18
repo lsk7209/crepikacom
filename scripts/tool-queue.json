@@ -410,9 +410,9 @@
     "type": "builder",
     "intent": "브랜드나 크리에이터에게 보낼 협업 제안 메일 구조를 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-16T01:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-18T09:54:13.444Z",
     "path": "/tools/collaboration-email-builder"
   },
   {

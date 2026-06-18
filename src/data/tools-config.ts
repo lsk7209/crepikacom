@@ -613,7 +613,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Collaboration Email Builder',
     descriptionEn: 'Draft a creator collaboration email for brand outreach.',
     path: '/tools/collaboration-email-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['협업 제안 메일', '브랜드 협업', '크리에이터 제안서', '인플루언서 메일', '미디어킷'],
     adStrategy: 'instant',
     seoTitle: '협업 제안 메일 작성기 - 브랜드 협업 메일 초안 | 크레피카',
