@@ -423,9 +423,9 @@
     "type": "builder",
     "intent": "자주 받는 댓글에 쓸 자연스러운 답변 템플릿을 만듭니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-16T06:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-18T16:32:33.721Z",
     "path": "/tools/comment-reply-template-builder"
   },
   {

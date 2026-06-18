@@ -629,7 +629,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Comment Reply Template Builder',
     descriptionEn: 'Generate reusable reply templates for comments and questions.',
     path: '/tools/comment-reply-template-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['댓글 답변', 'SNS 댓글', '커뮤니티 운영', '댓글 템플릿', '크리에이터 운영'],
     adStrategy: 'instant',
     seoTitle: '댓글 답변 템플릿 생성기 - SNS 댓글 응답 초안 | 크레피카',
