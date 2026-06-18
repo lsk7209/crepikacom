@@ -185,6 +185,10 @@
     {
       "id": "comment-reply-template-builder",
       "url": "https://crepika.com/tools/comment-reply-template-builder"
+    },
+    {
+      "id": "pinned-comment-cta-builder",
+      "url": "https://crepika.com/tools/pinned-comment-cta-builder"
     }
   ],
   "blog": {

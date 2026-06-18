@@ -645,7 +645,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Pinned Comment CTA Builder',
     descriptionEn: 'Create pinned comment CTA options for posts and videos.',
     path: '/tools/pinned-comment-cta-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['고정댓글', 'CTA 문구', 'SNS 전환', '유튜브 댓글', '인스타그램 댓글'],
     adStrategy: 'instant',
     seoTitle: '고정댓글 CTA 생성기 - SNS 다음 행동 문구 만들기 | 크레피카',

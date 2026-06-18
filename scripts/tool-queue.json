@@ -436,9 +436,9 @@
     "type": "builder",
     "intent": "SNS 고정댓글에 쓸 행동 유도 문구를 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-16T11:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-18T23:20:24.963Z",
     "path": "/tools/pinned-comment-cta-builder"
   },
   {
