@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "pinterest-analytics-content",
+    title: "한국 Pinterest 사용자 데이터 분석: 어떤 콘텐츠가 저장되고 클릭되나",
+    description: "한국 Pinterest 사용자의 행동 데이터를 분석합니다. 저장률·클릭률이 높은 카테고리, 콘텐츠 유형, 검색 패턴, 인기 주제를 구체적 수치와 함께 정리한 국내 Pinterest 마케팅 인사이트입니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["한국Pinterest사용자", "Pinterest데이터분석", "한국Pinterest트렌드", "Pinterest저장률", "Pinterest인기콘텐츠", "Pinterest마케팅인사이트", "국내Pinterest분석"],
+  },
+  {
     slug: "runway-vs-capcut-ai-editing-tools",
     title: "Runway vs CapCut: AI 영상 편집 도구 어느 것이 더 실용적인가",
     description: "AI 영상 편집 도구의 양대 산맥인 Runway와 CapCut을 기능·가격·학습 곡선·실제 활용도 측면에서 비교 분석합니다. 목적에 맞는 도구 선택 기준을 제시합니다.",

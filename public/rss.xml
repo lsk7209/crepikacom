@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>한국 Pinterest 사용자 데이터 분석: 어떤 콘텐츠가 저장되고 클릭되나</title>
+    <link>https://crepika.com/blog/pinterest-analytics-content</link>
+    <guid>https://crepika.com/blog/pinterest-analytics-content</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>insights</category>
+    <description>한국 Pinterest 사용자의 행동 데이터를 분석합니다. 저장률·클릭률이 높은 카테고리, 콘텐츠 유형, 검색 패턴, 인기 주제를 구체적 수치와 함께 정리한 국내 Pinterest 마케팅 인사이트입니다.</description>
+  </item>
+  <item>
     <title>Runway vs CapCut: AI 영상 편집 도구 어느 것이 더 실용적인가</title>
     <link>https://crepika.com/blog/runway-vs-capcut-ai-editing-tools</link>
     <guid>https://crepika.com/blog/runway-vs-capcut-ai-editing-tools</guid>
@@ -897,15 +906,6 @@
     <dc:creator>이지수</dc:creator>
     <category>insights</category>
     <description>Claude, ChatGPT, Gemini를 콘텐츠 마케팅 실무에서 비교합니다. 블로그 포스트, 카피라이팅, SEO 콘텐츠 생성 품질과 속도를 2026년 최신 기준으로 분석합니다.</description>
-  </item>
-  <item>
-    <title>쿠팡파트너스 vs 네이버 애드포스트 수익 비교: 블로거를 위한 최적 수익화 채널</title>
-    <link>https://crepika.com/blog/vs-naver-revenue-comparison-monetization</link>
-    <guid>https://crepika.com/blog/vs-naver-revenue-comparison-monetization</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>insights</category>
-    <description>쿠팡파트너스와 네이버 애드포스트의 수익 구조, 클릭당 단가, 전환율을 블로그 카테고리별로 비교합니다. 어떤 수익화 채널이 내 블로그에 더 적합한지 판단 기준을 제시합니다.</description>
   </item>
 </channel>
 </rss>

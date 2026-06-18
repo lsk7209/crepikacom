@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "pinterest-analytics-content",
+    title: "한국 Pinterest 사용자 데이터 분석: 어떤 콘텐츠가 저장되고 클릭되나",
+    description: "한국 Pinterest 사용자의 행동 데이터를 분석합니다. 저장률·클릭률이 높은 카테고리, 콘텐츠 유형, 검색 패턴, 인기 주제를 구체적 수치와 함께 정리한 국내 Pinterest 마케팅 인사이트입니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["한국Pinterest사용자", "Pinterest데이터분석", "한국Pinterest트렌드", "Pinterest저장률", "Pinterest인기콘텐츠", "Pinterest마케팅인사이트", "국내Pinterest분석"],
+  },
+  {
     slug: "runway-vs-capcut-ai-editing-tools",
     title: "Runway vs CapCut: AI 영상 편집 도구 어느 것이 더 실용적인가",
     description: "AI 영상 편집 도구의 양대 산맥인 Runway와 CapCut을 기능·가격·학습 곡선·실제 활용도 측면에서 비교 분석합니다. 목적에 맞는 도구 선택 기준을 제시합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "10분",
     author: "이지수",
     keywords: ["Apple Podcast SEO", "팟캐스트 최적화", "팟캐스트 키워드", "팟캐스트 발견성", "팟캐스트 성장"],
-  },
-  {
-    slug: "blogshortform-usage-tips",
-    title: "웨비나 영상을 블로그·숏폼·뉴스레터로 재활용하는 팁",
-    description: "한 번 제작한 웨비나 영상을 블로그 포스트, 숏폼 영상, 뉴스레터로 전환하는 실전 콘텐츠 재활용 전략을 단계별로 설명합니다. 제작 시간을 줄이고 채널별 성과를 동시에 높이세요.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "9분",
-    author: "김민혁",
-    keywords: ["콘텐츠 재활용", "웨비나 활용", "숏폼 영상", "블로그 콘텐츠", "뉴스레터 전략"],
   },
 ];
