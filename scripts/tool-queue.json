@@ -397,9 +397,9 @@
     "type": "builder",
     "intent": "협업 제안을 위한 미디어킷 구성 요소를 정리합니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-15T20:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-18T00:21:04.897Z",
     "path": "/tools/creator-media-kit-checklist"
   },
   {

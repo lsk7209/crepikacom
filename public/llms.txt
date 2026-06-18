@@ -48,6 +48,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [hashtag-group-planner](https://crepika.com/tools/hashtag-group-planner)
 - [hashtag-rotation-tracker](https://crepika.com/tools/hashtag-rotation-tracker)
 - [social-bio-length-checker](https://crepika.com/tools/social-bio-length-checker)
+- [creator-media-kit-checklist](https://crepika.com/tools/creator-media-kit-checklist)
 
 ## Blog
 
@@ -79,4 +80,4 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-06-17
+Updated: 2026-06-18

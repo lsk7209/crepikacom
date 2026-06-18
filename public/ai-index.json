@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-18"
   },
   "tools": [
     {
@@ -173,6 +173,10 @@
     {
       "id": "social-bio-length-checker",
       "url": "https://crepika.com/tools/social-bio-length-checker"
+    },
+    {
+      "id": "creator-media-kit-checklist",
+      "url": "https://crepika.com/tools/creator-media-kit-checklist"
     }
   ],
   "blog": {

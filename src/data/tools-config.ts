@@ -597,7 +597,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Creator Media Kit Checklist',
     descriptionEn: 'Check creator media kit essentials for brand collaboration.',
     path: '/tools/creator-media-kit-checklist',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['미디어킷', '크리에이터 협업', '브랜드 제안서', '인플루언서 마케팅', '협업 문의'],
     adStrategy: 'instant',
     seoTitle: '크리에이터 미디어킷 체크리스트 - 협업 제안 준비 도구 | 크레피카',
