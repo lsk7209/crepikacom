@@ -199,6 +199,122 @@ const blogHubs = [
   },
 ];
 
+const sharedToolReferences = [
+  ["Google Search Central", "https://developers.google.com/search/docs"],
+  ["schema.org", "https://schema.org"],
+  ["MDN Web Docs", "https://developer.mozilla.org"],
+];
+
+const toolPageGuidance = {
+  "text-counter": {
+    body: [
+      "텍스트 카운터는 제목, 메타 설명, SNS 캡션, 블로그 초안을 발행하기 전에 실제 길이를 확인하는 도구입니다. 단순히 글자 수만 보는 것이 아니라 공백 포함 여부, 줄 수, 단어 수, 한글이 섞인 문장의 바이트 감각까지 함께 점검하면 플랫폼별 잘림 위험을 줄일 수 있습니다.",
+      "블로그 제목은 핵심 키워드가 앞부분에 있고 독자가 얻는 결과가 분명해야 합니다. 인스타그램이나 유튜브 설명문은 첫 줄에서 맥락을 잡아야 하므로, 전체 분량보다 앞부분의 밀도와 가독성이 더 중요합니다. 이 페이지는 그런 발행 전 판단을 빠르게 반복할 수 있게 만든 작업용 기준점입니다.",
+      "계산 결과가 권장 범위 안에 들어와도 그대로 발행하지 말고, 중복 표현, 의미 없는 수식어, 과도한 키워드 반복을 한 번 더 줄이세요. 특히 애드센스 검수 관점에서는 도구 결과보다 사용자가 실제로 얻는 설명, 예시, 정책 페이지, 문의 경로가 함께 보여야 얇은 콘텐츠로 보일 가능성이 낮아집니다.",
+      "개인 메모, 고객 정보, 미공개 원고처럼 민감한 텍스트는 온라인 도구에 넣기 전 필요성을 먼저 판단하세요. 크레피카는 브라우저 기반 처리 원칙을 안내하지만, 최종 발행 책임은 사용자에게 있으므로 공개 가능한 문장만 넣고 결과를 직접 검토하는 흐름을 권장합니다.",
+    ],
+    links: [
+      ["Google helpful content", "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"],
+      ["MDN Text formatting", "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"],
+    ],
+  },
+  "byte-counter": {
+    body: [
+      "한글 바이트 카운터는 한글, 영문, 숫자, 공백, 이모지가 섞인 문장의 실제 데이터 길이를 확인하는 도구입니다. 글자 수가 같아도 UTF-8 기준 바이트 수는 달라질 수 있기 때문에 검색 스니펫, 문자 발송, 플랫폼 입력 제한을 맞출 때 별도 점검이 필요합니다.",
+      "네이버 블로그 제목이나 상품 설명처럼 한글 비중이 높은 문장은 눈으로 보기에는 짧아 보여도 바이트 기준으로는 빠르게 길어집니다. 발행 전에는 제목, 요약, 버튼 문구, 이미지 대체 텍스트를 각각 나누어 계산하고, 중요한 단어가 잘리지 않는지 실제 미리보기 화면에서 확인하는 것이 좋습니다.",
+      "바이트 수만 맞추는 방식은 좋은 콘텐츠를 보장하지 않습니다. 사용자가 왜 이 문장을 읽어야 하는지, 어떤 행동을 해야 하는지, 어떤 근거를 참고했는지가 함께 있어야 페이지 품질이 올라갑니다. 크레피카는 길이 확인을 보조하고, 최종 표현은 사용자가 맥락에 맞게 다듬는 흐름을 전제로 합니다.",
+      "이모지와 특수문자는 플랫폼마다 렌더링 폭과 의미가 다릅니다. 모바일 검색 결과나 SNS 카드에서 과도하게 쓰면 신뢰도가 떨어질 수 있으므로 핵심 키워드, 브랜드명, 구체적 혜택을 우선 배치한 뒤 장식 요소는 마지막에 줄이는 방식을 권장합니다.",
+    ],
+    links: [
+      ["MDN Character encoding", "https://developer.mozilla.org/en-US/docs/Glossary/Character_encoding"],
+      ["Google title links", "https://developers.google.com/search/docs/appearance/title-link"],
+    ],
+  },
+  "lorem-generator": {
+    body: [
+      "로렘 입숨 생성기는 실제 원고가 준비되기 전에도 레이아웃, 카드 높이, 문단 간격, 버튼 주변 여백을 검토할 수 있게 해주는 시안용 텍스트 도구입니다. 디자인 단계에서 임시 문장을 넣으면 제목 길이와 본문 밀도가 화면에 어떤 영향을 주는지 빠르게 확인할 수 있습니다.",
+      "더미 텍스트는 최종 콘텐츠가 아닙니다. 공개 페이지에 그대로 남아 있으면 사용자에게 도움이 되지 않고, 검색엔진에도 완성도가 낮은 페이지로 해석될 수 있습니다. 따라서 시안 검토 후에는 실제 독자 질문, 사용 예시, 참고 링크, 문의 경로가 포함된 원문으로 교체해야 합니다.",
+      "한글 UI에서는 영문 로렘보다 조사, 띄어쓰기, 행간 차이가 크게 보입니다. 버튼, 카드, 목록, 모바일 문단을 테스트할 때는 한글 더미 텍스트도 함께 넣어 긴 단어 줄바꿈과 좁은 화면 overflow를 확인하세요. 특히 광고 심사 전에는 빈 섹션이나 반복 문구가 남지 않았는지 점검해야 합니다.",
+      "크레피카의 생성 결과는 문장 밀도 테스트용 보조 자료입니다. 법률, 의료, 금융, 정책 안내처럼 정확성이 필요한 문서에는 더미 텍스트를 사용하지 말고, 담당자가 검증한 원문과 최신 공식 자료를 넣어야 합니다.",
+    ],
+    links: [
+      ["Google thin content guidance", "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"],
+      ["MDN Responsive design", "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"],
+    ],
+  },
+  "webp-converter": {
+    body: [
+      "WebP 변환기는 JPG나 PNG 이미지를 더 가벼운 웹용 포맷으로 바꾸어 페이지 로딩 부담을 줄이는 도구입니다. 이미지가 큰 블로그, 랜딩 페이지, 포트폴리오에서는 대표 이미지 하나만 최적화해도 첫 화면 표시 속도와 모바일 데이터 사용량이 달라질 수 있습니다.",
+      "이미지 최적화는 파일 형식만 바꾸는 작업이 아닙니다. 실제 표시 크기에 맞는 해상도, 의미 있는 파일명, 이미지 대체 텍스트, 압축 품질, 원본 보관 정책을 함께 정해야 합니다. 크레피카는 변환을 빠르게 처리하지만, 어떤 이미지를 어떤 위치에 쓸지는 발행자가 직접 판단해야 합니다.",
+      "애드센스 승인 관점에서는 이미지가 많아도 설명이 부족하면 얇은 페이지로 보일 수 있습니다. 변환한 이미지 주변에는 촬영 맥락, 비교 기준, 사용 방법, 저작권 상태, 관련 참고 링크를 충분히 적어 사용자가 이미지를 이해할 수 있게 해야 합니다.",
+      "브라우저나 CMS 환경에 따라 WebP 지원 방식이 다를 수 있으므로, 중요한 페이지는 변환 후 실제 기기에서 표시 여부를 확인하세요. 썸네일, OG 이미지, 본문 이미지가 각각 다른 크기로 쓰인다면 용도별 파일을 나누는 편이 운영에 유리합니다.",
+    ],
+    links: [
+      ["MDN WebP", "https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#webp"],
+      ["Google image SEO", "https://developers.google.com/search/docs/appearance/google-images"],
+      ["web.dev images", "https://web.dev/learn/images"],
+    ],
+  },
+  "insta-spacer": {
+    body: [
+      "인스타 줄바꿈 포매터는 캡션 문단을 읽기 좋게 정리해 모바일 화면에서 핵심 문장이 묻히지 않도록 돕는 도구입니다. 긴 문장을 한 덩어리로 올리면 저장, 댓글, 프로필 클릭을 유도하기 어렵기 때문에 첫 줄, 본문, CTA, 해시태그 영역을 분리해 보는 것이 좋습니다.",
+      "줄바꿈은 장식이 아니라 정보 구조입니다. 첫 문장은 독자의 문제를 직접 말하고, 다음 문단은 경험이나 근거를 제시하며, 마지막 문단은 저장, 댓글, 링크 클릭 같은 다음 행동을 명확하게 안내해야 합니다. 크레피카는 그 구조를 깨지지 않게 복사하기 쉬운 형태로 정리합니다.",
+      "플랫폼 표시 방식은 앱 버전과 기기마다 달라질 수 있습니다. 변환한 캡션은 게시 직전에 미리보기로 확인하고, 과도한 공백이나 특수문자가 브랜드 톤을 해치지 않는지 점검하세요. 민감한 개인 정보나 비공개 캠페인 문구는 공개 전 내부 검토를 거치는 편이 안전합니다.",
+      "애드센스 사이트의 SNS 안내 페이지에 이 도구를 연결할 때는 단순 사용법만 두지 말고, 실제 캡션 예시, 수정 전후 비교, 플랫폼 정책 참고 링크, 문의 경로를 함께 제공하세요. 그래야 도구 페이지가 계산 기능만 있는 빈 화면처럼 보이지 않습니다.",
+    ],
+    links: [
+      ["Instagram help", "https://help.instagram.com/"],
+      ["Meta Business Help", "https://www.facebook.com/business/help"],
+      ["Google helpful content", "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"],
+    ],
+  },
+  "hashtag-mixer": {
+    body: [
+      "해시태그 믹서는 반복 사용하던 태그 묶음을 정리하고 순서를 바꾸어 SNS 게시 전 검토 시간을 줄이는 도구입니다. 같은 태그를 그대로 붙여넣기보다 주제 태그, 세부 태그, 브랜드 태그, 캠페인 태그를 나누어 관리하면 콘텐츠별 검색 의도에 더 잘 맞출 수 있습니다.",
+      "태그 수가 많다고 항상 도달이 좋아지는 것은 아닙니다. 게시물 본문과 관련 없는 대형 태그를 과하게 넣으면 독자의 신뢰가 떨어지고, 플랫폼이 스팸성 신호로 판단할 수 있습니다. 믹서 결과를 받은 뒤에는 실제 게시물 주제와 맞지 않는 태그를 직접 제거하세요.",
+      "좋은 해시태그 운영은 실험 기록이 필요합니다. 날짜, 게시물 유형, 사용한 태그 묶음, 노출, 저장, 댓글, 프로필 클릭을 함께 기록하면 다음 게시물에서 어떤 조합을 유지할지 판단하기 쉽습니다. 크레피카는 태그 정리를 돕고, 성과 해석은 실제 플랫폼 인사이트를 기준으로 해야 합니다.",
+      "도구 결과를 상업 캠페인에 사용할 때는 브랜드 가이드, 광고 표기, 협찬 고지, 플랫폼 커뮤니티 규정을 함께 확인하세요. 특히 의료, 금융, 투자, 법률처럼 민감한 주제는 인기 태그보다 정확한 고지와 근거가 우선입니다.",
+    ],
+    links: [
+      ["Instagram help", "https://help.instagram.com/"],
+      ["Meta Business Help", "https://www.facebook.com/business/help"],
+      ["Google Search Central", "https://developers.google.com/search/docs"],
+    ],
+  },
+  "qr-generator": {
+    body: [
+      "QR 코드 생성기는 오프라인 안내문, 명함, 포스터, 매장 메뉴, 이벤트 배너를 온라인 페이지와 연결할 때 쓰는 도구입니다. 긴 URL을 직접 입력하게 하는 대신 스마트폰 카메라로 빠르게 이동하게 만들 수 있어 현장 전환 흐름을 단순하게 만듭니다.",
+      "QR을 만들기 전에는 연결할 URL이 정확한지, 모바일에서 열리는지, 개인정보 입력 화면이 있다면 고지가 충분한지 먼저 확인해야 합니다. 인쇄 후에는 코드를 바꾸기 어렵기 때문에 최종 파일을 내려받기 전에 실제 기기로 테스트 스캔을 반복하는 것이 중요합니다.",
+      "마케팅용 QR은 단순 이미지가 아니라 약속입니다. 사용자가 스캔했을 때 무엇을 얻는지 포스터 주변 문구에 분명히 적고, 연결 페이지에는 행사명, 기간, 문의처, 개인정보 처리 안내, 오류 시 대체 경로를 제공해야 신뢰를 얻을 수 있습니다.",
+      "짧은 URL이나 UTM을 붙인 캠페인 URL을 사용할 때는 추적 목적과 분석 도구 설정을 내부 기준에 맞춰 관리하세요. 크레피카는 QR 이미지를 생성하지만, 링크 소유권과 연결 페이지의 법적 고지는 발행자가 책임지고 확인해야 합니다.",
+    ],
+    links: [
+      ["MDN URL", "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL"],
+      ["Google Analytics campaign URLs", "https://support.google.com/analytics/answer/10917952"],
+      ["Google Search Central", "https://developers.google.com/search/docs"],
+    ],
+  },
+};
+
+function getToolIdFromCanonical(canonical) {
+  return new URL(canonical).pathname.split("/").filter(Boolean).at(-1) ?? "";
+}
+
+function buildToolPageBody({ canonical, description, heading }) {
+  const id = getToolIdFromCanonical(canonical);
+  return toolPageGuidance[id]?.body ?? [
+    `${heading} 도구는 크리에이터와 마케터가 발행 전 반복 작업을 줄이기 위해 사용하는 브라우저 기반 유틸리티입니다. 결과를 바로 복사할 수 있지만, 최종 게시 전에는 실제 플랫폼 화면과 독자 맥락을 함께 확인해야 합니다.`,
+    description,
+    "도구 결과만 있는 페이지는 사용자에게 충분한 설명을 주기 어렵습니다. 사용 목적, 입력 전 주의사항, 결과 해석 방법, 관련 정책 페이지, 문의 경로를 함께 제공하면 검색엔진과 방문자가 페이지의 역할을 더 명확하게 이해할 수 있습니다.",
+    "크레피카는 무료 도구, 편집 가이드, 개인정보처리방침, 이용약관, RSS, 사이트맵을 함께 제공해 자바스크립트 렌더링 없이도 기본 정보를 확인할 수 있게 구성합니다. 광고가 노출되더라도 도구 결과나 편집 판단에는 영향을 주지 않습니다.",
+  ];
+}
+
+function buildToolReferenceLinks(canonical) {
+  const id = getToolIdFromCanonical(canonical);
+  return [...(toolPageGuidance[id]?.links ?? []), ...sharedToolReferences];
+}
+
 const toolPages = [
   ["tools/text-counter/index.html", "Text Counter | Crepika", "Count characters, words, lines, and spacing for titles, captions, blog drafts, and meta descriptions.", `${siteUrl}/tools/text-counter`, "Text Counter"],
   ["tools/byte-counter/index.html", "Korean Byte Counter | Crepika", "Check UTF-8 byte length for Korean and English text used in platform fields, SMS, and metadata.", `${siteUrl}/tools/byte-counter`, "Korean Byte Counter"],
@@ -313,11 +429,8 @@ const toolPages = [
   description,
   canonical,
   heading,
-  body: [
-    description,
-    "Use this page as a practical browser tool, then review the output before publishing it to a live platform.",
-    "Related pages, privacy information, and contact details are linked in the navigation for crawler and user clarity.",
-  ],
+  body: buildToolPageBody({ canonical, description, heading }),
+  references: buildToolReferenceLinks(canonical),
 })).filter((page) => shouldRenderToolPage(page.canonical));
 
 function extractArrayLiteral(source, marker) {
@@ -765,6 +878,12 @@ function renderStaticPage(page) {
   const paragraphs = page.body.map((text, index) => `<p${index === 0 ? ' class="lede"' : ""}>${escapeHtml(text)}</p>`).join("\n");
   const path = new URL(page.canonical).pathname;
   const isTool = path.startsWith("/tools/");
+  const referenceLinks = (page.references ?? [])
+    .map(([label, href]) => `<li><a href="${escapeHtml(href)}" rel="noopener noreferrer">${escapeHtml(label)}</a></li>`)
+    .join("\n");
+  const referenceSection = isTool && referenceLinks
+    ? `<section class="panel"><h2>공식 참고 자료</h2><ul>${referenceLinks}</ul></section>`
+    : "";
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -800,6 +919,7 @@ function renderStaticPage(page) {
     ...page,
     structuredData,
     bodyHtml: `${paragraphs}
+      ${referenceSection}
       <section class="panel"><h2>유용한 링크</h2><ul><li><a href="/blog">블로그 가이드 보기</a></li><li><a href="/tools/text-counter">크리에이터 도구 열기</a></li><li><a href="/contact">정정 요청하기</a></li></ul></section>`,
   });
 }

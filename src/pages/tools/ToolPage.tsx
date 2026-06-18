@@ -133,6 +133,28 @@ const DetailedToolArticle = ({ content }: { content: ToolDetailedContent }) => (
       </div>
     </section>
 
+    <section className="rounded-2xl border bg-background p-6">
+      <h2 className="mb-4 text-2xl font-bold">공식 기준과 함께 확인하세요</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        크레피카 도구의 계산 결과는 발행 전 점검을 돕는 참고값입니다. 검색 노출, 구조화 데이터, 접근성,
+        이미지 최적화처럼 플랫폼 정책이 영향을 주는 항목은 공개 문서와 실제 발행 화면을 함께 확인해야 합니다.
+      </p>
+      <div className="mt-5 grid gap-3 md:grid-cols-3">
+        <a href="https://developers.google.com/search/docs" target="_blank" rel="noopener noreferrer" className="rounded-lg border p-4 text-sm text-muted-foreground hover:border-primary">
+          <strong className="block text-foreground">Google Search Central</strong>
+          검색 친화적인 콘텐츠와 기술 SEO 기준을 확인합니다.
+        </a>
+        <a href="https://schema.org" target="_blank" rel="noopener noreferrer" className="rounded-lg border p-4 text-sm text-muted-foreground hover:border-primary">
+          <strong className="block text-foreground">schema.org</strong>
+          FAQ, HowTo, Article 구조화 데이터 기준을 확인합니다.
+        </a>
+        <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer" className="rounded-lg border p-4 text-sm text-muted-foreground hover:border-primary">
+          <strong className="block text-foreground">MDN Web Docs</strong>
+          웹 표준, 이미지 형식, 접근성 기본 원칙을 확인합니다.
+        </a>
+      </div>
+    </section>
+
     {/* How to Use */}
     <section className="bg-card rounded-2xl border p-8 shadow-sm">
       <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-2">

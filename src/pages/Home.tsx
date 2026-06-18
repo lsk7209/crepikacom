@@ -98,6 +98,24 @@ const HOW_IT_WORKS = [
   },
 ];
 
+const TRUST_SOURCES = [
+  {
+    title: "검색 노출 전 점검",
+    desc: "제목 길이, 설명문, 구조화 데이터처럼 검색 결과에서 먼저 보이는 항목을 도구별 체크리스트로 분리했습니다.",
+    href: "/tools/serp-snippet-preview",
+  },
+  {
+    title: "콘텐츠 품질 점검",
+    desc: "본문 길이, 문단 가독성, CTA, 내부 링크를 발행 전에 확인해 얇은 페이지가 누적되지 않도록 돕습니다.",
+    href: "/tools/paragraph-readability-checker",
+  },
+  {
+    title: "공식 가이드 기준",
+    desc: "검색 친화적인 페이지 구성은 Google Search Central과 schema.org의 공개 문서를 기준으로 설명합니다.",
+    href: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+  },
+];
+
 type ToolCardItem = NonNullable<ReturnType<typeof getToolById>>;
 
 export default function Home() {
@@ -582,6 +600,41 @@ export default function Home() {
             </button>
           </div>
         )}
+
+        <section className="mb-16 content-lazy">
+          <div className="mb-6">
+            <h2 className="text-3xl font-bold mb-3">발행 전에 확인해야 할 기준</h2>
+            <p className="text-muted-foreground max-w-3xl leading-7">
+              크레피카는 단순 계산기만 모아둔 페이지가 아니라, 블로그와 SNS 발행자가 실제로 놓치기 쉬운
+              길이 제한, 가독성, 이미지 최적화, 구조화 데이터 점검을 한 화면에서 처리하도록 구성한 작업 도구함입니다.
+              각 도구는 입력값을 서버에 저장하지 않으며, 결과를 바로 복사하거나 다음 점검 도구로 이어갈 수 있게 설계했습니다.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {TRUST_SOURCES.map((item) => {
+              const external = item.href.startsWith("http");
+              const className = "rounded-xl border border-border bg-card p-5 text-left transition-colors hover:border-primary/50";
+              const body = (
+                <>
+                  <h3 className="font-bold text-foreground">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.desc}</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                    확인하기 <ArrowRight className="h-4 w-4" />
+                  </span>
+                </>
+              );
+              return external ? (
+                <a key={item.title} href={item.href} className={className} target="_blank" rel="noopener noreferrer">
+                  {body}
+                </a>
+              ) : (
+                <Link key={item.title} to={item.href} className={className}>
+                  {body}
+                </Link>
+              );
+            })}
+          </div>
+        </section>
 
         {/* ── How it Works ─────────────────────────────────── */}
         <section className="mb-16 content-lazy">
