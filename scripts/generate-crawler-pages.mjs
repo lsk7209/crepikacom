@@ -212,6 +212,11 @@ const toolPageGuidance = {
       "블로그 제목은 핵심 키워드가 앞부분에 있고 독자가 얻는 결과가 분명해야 합니다. 인스타그램이나 유튜브 설명문은 첫 줄에서 맥락을 잡아야 하므로, 전체 분량보다 앞부분의 밀도와 가독성이 더 중요합니다. 이 페이지는 그런 발행 전 판단을 빠르게 반복할 수 있게 만든 작업용 기준점입니다.",
       "계산 결과가 권장 범위 안에 들어와도 그대로 발행하지 말고, 중복 표현, 의미 없는 수식어, 과도한 키워드 반복을 한 번 더 줄이세요. 특히 애드센스 검수 관점에서는 도구 결과보다 사용자가 실제로 얻는 설명, 예시, 정책 페이지, 문의 경로가 함께 보여야 얇은 콘텐츠로 보일 가능성이 낮아집니다.",
       "개인 메모, 고객 정보, 미공개 원고처럼 민감한 텍스트는 온라인 도구에 넣기 전 필요성을 먼저 판단하세요. 크레피카는 브라우저 기반 처리 원칙을 안내하지만, 최종 발행 책임은 사용자에게 있으므로 공개 가능한 문장만 넣고 결과를 직접 검토하는 흐름을 권장합니다.",
+      "Use this text counter as a publishing checklist, not as an automatic quality judgment. A short title can still fail if it does not match the reader's intent, and a long article can still feel thin if it repeats the same point without examples, sources, or a clear next step.",
+      "Before publishing a blog post, caption, newsletter, or meta description, check the visible length, the first sentence, repeated words, paragraph breaks, and the platform where the text will appear. Search snippets, social captions, and mobile previews often cut text at different points, so the final screen should be reviewed after copying the result.",
+      "For AdSense and search quality reviews, the goal is not to inflate word count. The goal is to make sure the page explains who it helps, what problem it solves, what data or source should be checked, and where the reader can ask for corrections. A tool page should include usage guidance, limitations, privacy context, and links to related resources.",
+      "Do not paste passwords, customer lists, unpublished contracts, private campaign plans, or sensitive personal information into any online tool unless that use is necessary and allowed by your own policy. Crepika is designed for quick browser-based checks, but users remain responsible for deciding what text is safe to process.",
+      "The result from this tool should be compared with the rules of the final platform. Naver Blog, Instagram, YouTube, email clients, and search results may display text differently. Use the count as an early warning, then verify the actual published preview before sending traffic to the page.",
     ],
     links: [
       ["Google helpful content", "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"],

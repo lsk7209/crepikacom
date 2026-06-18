@@ -116,6 +116,12 @@ const TRUST_SOURCES = [
   },
 ];
 
+const EDITORIAL_NOTES = [
+  "크레피카의 도구는 결과를 대신 판단해 주는 자동 발행기가 아니라, 사용자가 발행 전에 길이와 형식, 파일 크기, 링크 구조를 확인하도록 돕는 점검 도구입니다.",
+  "글자수, 바이트, 제목 길이, 설명문, QR, 이미지 변환 결과는 플랫폼 정책과 실제 화면에서 다시 확인해야 합니다. 도구 결과는 입력값에 기반한 참고값입니다.",
+  "로그인 없이 처리되는 도구는 가능한 한 브라우저 안에서 계산하도록 설계합니다. 민감한 원고, 공개 전 캠페인 URL, 고객 식별 정보는 필요한 범위에서만 입력하는 것이 안전합니다.",
+];
+
 type ToolCardItem = NonNullable<ReturnType<typeof getToolById>>;
 
 export default function Home() {
@@ -633,6 +639,17 @@ export default function Home() {
                 </Link>
               );
             })}
+          </div>
+        </section>
+
+        <section className="mb-16 content-lazy">
+          <div className="rounded-xl border bg-card p-6">
+            <h2 className="mb-4 text-2xl font-bold">크레피카 편집 기준</h2>
+            <div className="grid gap-4 text-sm leading-7 text-muted-foreground md:grid-cols-3">
+              {EDITORIAL_NOTES.map((note) => (
+                <p key={note}>{note}</p>
+              ))}
+            </div>
           </div>
         </section>
 

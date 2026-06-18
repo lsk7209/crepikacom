@@ -139,6 +139,18 @@ const DetailedToolArticle = ({ content }: { content: ToolDetailedContent }) => (
         크레피카 도구의 계산 결과는 발행 전 점검을 돕는 참고값입니다. 검색 노출, 구조화 데이터, 접근성,
         이미지 최적화처럼 플랫폼 정책이 영향을 주는 항목은 공개 문서와 실제 발행 화면을 함께 확인해야 합니다.
       </p>
+      <p className="mt-4 text-muted-foreground leading-relaxed">
+        특히 텍스트 카운터와 바이트 계산기는 문장을 대신 평가하지 않습니다. 제목이 짧아도 검색 의도와 맞지
+        않으면 성과가 낮을 수 있고, 본문이 길어도 중복 문장이 많으면 품질 신호가 약해질 수 있습니다.
+        도구 결과는 초안의 형식 오류를 줄이는 기준으로 사용하고, 최종 발행 전에는 독자가 얻는 정보와
+        출처, 내부 링크, 모바일 화면 가독성을 함께 점검해야 합니다.
+      </p>
+      <p className="mt-4 text-muted-foreground leading-relaxed">
+        크레피카는 로그인 없이 빠르게 쓰는 작업 도구를 지향합니다. 파일이나 텍스트를 입력할 때는 공개 전
+        원고, 고객 정보, 비밀번호, 계약 조건처럼 민감한 내용을 불필요하게 넣지 않는 것이 좋습니다.
+        결과가 복사 가능한 형태로 제공되더라도 실제 플랫폼 제한은 네이버, 인스타그램, 유튜브, 블로그
+        편집기의 최신 정책을 기준으로 다시 확인해야 합니다.
+      </p>
       <div className="mt-5 grid gap-3 md:grid-cols-3">
         <a href="https://developers.google.com/search/docs" target="_blank" rel="noopener noreferrer" className="rounded-lg border p-4 text-sm text-muted-foreground hover:border-primary">
           <strong className="block text-foreground">Google Search Central</strong>
