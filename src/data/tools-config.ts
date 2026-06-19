@@ -693,7 +693,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Hook Strength Checker',
     descriptionEn: 'Check hook strength for social posts and short-form content.',
     path: '/tools/hook-strength-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['훅 문장', '숏폼 훅', 'SNS 첫 문장', '릴스 훅', '콘텐츠 도입부'],
     adStrategy: 'instant',
     seoTitle: '훅 문장 강도 검사기 - SNS 첫 문장 점검 | 크레피카',
