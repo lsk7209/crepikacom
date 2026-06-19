@@ -677,7 +677,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Publishing Calendar Planner',
     descriptionEn: 'Build a simple content publishing calendar from topics and duration.',
     path: '/tools/publishing-calendar-planner',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['발행 캘린더', '콘텐츠 캘린더', 'SNS 운영', '블로그 발행 계획', '콘텐츠 기획'],
     adStrategy: 'instant',
     seoTitle: '발행 캘린더 설계기 - 콘텐츠 일정표 생성 도구 | 크레피카',

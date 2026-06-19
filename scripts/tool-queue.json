@@ -462,9 +462,9 @@
     "type": "builder",
     "intent": "플랫폼별 목표에 맞춰 주간 발행 계획을 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-16T21:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-19T15:17:20.975Z",
     "path": "/tools/publishing-calendar-planner"
   },
   {
