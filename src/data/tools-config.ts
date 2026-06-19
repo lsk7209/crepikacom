@@ -661,7 +661,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Content Repurpose Planner',
     descriptionEn: 'Plan how to repurpose one source content across multiple platforms.',
     path: '/tools/content-repurpose-planner',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['콘텐츠 재활용', '콘텐츠 repurpose', 'SNS 재활용', '블로그 재활용', '콘텐츠 캘린더'],
     adStrategy: 'instant',
     seoTitle: '콘텐츠 재활용 플래너 - 블로그를 SNS 콘텐츠로 확장 | 크레피카',

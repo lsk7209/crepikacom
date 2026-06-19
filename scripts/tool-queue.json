@@ -449,9 +449,9 @@
     "type": "builder",
     "intent": "하나의 아이디어를 블로그, 릴스, 스레드, 뉴스레터로 확장합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-16T16:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-19T07:38:58.490Z",
     "path": "/tools/content-repurpose-planner"
   },
   {
