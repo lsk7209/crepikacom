@@ -833,6 +833,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "marketing-revenue",
+    title: "국내 제휴 마케팅 생태계 현황: 어떤 플랫폼이 가장 수익이 높은가",
+    description: "국내 주요 제휴 마케팅 플랫폼의 수익 구조와 커미션율을 비교 분석합니다. 쿠팡파트너스, 네이버 파트너스퀘어, 텐핑 등 플랫폼별 특성과 수익 극대화 전략을 정리했습니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["제휴 마케팅", "쿠팡파트너스", "네이버 파트너스퀘어", "국내 제휴 플랫폼", "제휴 마케팅 수익"],
+  },
+  {
     slug: "makecom-automation-roi-analytics",
     title: "Make.com 자동화 ROI 분석: 월 구독료 대비 실제 절감 시간 계산법",
     description: "Make.com 구독 비용 대비 업무 자동화로 절감되는 실제 시간과 비용을 계산하는 방법을 설명합니다. 자동화 투자 타당성을 객관적으로 평가하고 최적 플랜을 선택하는 기준을 제시합니다.",
