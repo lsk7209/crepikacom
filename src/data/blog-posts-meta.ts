@@ -833,6 +833,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "makecom-automation-roi-analytics",
+    title: "Make.com 자동화 ROI 분석: 월 구독료 대비 실제 절감 시간 계산법",
+    description: "Make.com 구독 비용 대비 업무 자동화로 절감되는 실제 시간과 비용을 계산하는 방법을 설명합니다. 자동화 투자 타당성을 객관적으로 평가하고 최적 플랜을 선택하는 기준을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["Make.com ROI", "업무 자동화", "Make.com 비용", "자동화 시간 절감", "마케팅 자동화 ROI"],
+  },
+  {
     slug: "marketing-tools-20-0-marketing",
     title: "소상공인을 위한 무료 마케팅 도구 20선: 예산 0원으로 시작하는 디지털 마케팅",
     description: "광고비 없이 시작할 수 있는 무료 디지털 마케팅 도구 20가지를 카테고리별로 정리했습니다. 소상공인과 1인 사업자가 실무에 바로 적용 가능한 도구와 활용 팁을 소개합니다.",
