@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>커뮤니티 플랫폼이 크리에이터 수익에 미치는 영향: Discord·Patreon 사례 분석</title>
+    <link>https://crepika.com/blog/community-creator-revenue-discordpatreon-case-analytics</link>
+    <guid>https://crepika.com/blog/community-creator-revenue-discordpatreon-case-analytics</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>insights</category>
+    <description>Discord와 Patreon이 크리에이터 수익 구조에 미치는 실질적인 영향을 사례 중심으로 분석합니다. 플랫폼별 수익화 메커니즘과 국내 크리에이터에게 적합한 커뮤니티 전략을 제시합니다.</description>
+  </item>
+  <item>
     <title>Z세대 마케팅 채널 우선순위 변화: TikTok에서 BeReal로, 다음은 어디인가</title>
     <link>https://crepika.com/blog/z-marketing-tiktok-bereal</link>
     <guid>https://crepika.com/blog/z-marketing-tiktok-bereal</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>case-study</category>
     <description>온라인 강의를 처음 론칭하고 첫 달 500만 원 매출을 달성한 블로거의 사전 판매 전략을 공개합니다. 대기자 명단 구축, 사전 판매 혜택 설계, 론칭 이메일 시퀀스를 단계별로 분석합니다.</description>
-  </item>
-  <item>
-    <title>제휴 마케팅으로 월 300만 원 수익 달성한 블로거의 전략 케이스</title>
-    <link>https://crepika.com/blog/marketing-300-revenue-strategy</link>
-    <guid>https://crepika.com/blog/marketing-300-revenue-strategy</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>case-study</category>
-    <description>제휴 마케팅으로 월 300만 원 수익을 달성한 블로거의 콘텐츠 전략, 채널 구성, 전환 최적화 방법을 공개합니다. 쿠팡파트너스부터 해외 제휴까지 수익 구조를 단계별로 분석합니다.</description>
   </item>
 </channel>
 </rss>

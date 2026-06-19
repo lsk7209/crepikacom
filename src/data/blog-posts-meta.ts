@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "community-creator-revenue-discordpatreon-case-analytics",
+    title: "커뮤니티 플랫폼이 크리에이터 수익에 미치는 영향: Discord·Patreon 사례 분석",
+    description: "Discord와 Patreon이 크리에이터 수익 구조에 미치는 실질적인 영향을 사례 중심으로 분석합니다. 플랫폼별 수익화 메커니즘과 국내 크리에이터에게 적합한 커뮤니티 전략을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["Discord 수익화", "Patreon 수익", "크리에이터 커뮤니티", "멤버십 수익", "크리에이터 이코노미"],
+  },
+  {
     slug: "z-marketing-tiktok-bereal",
     title: "Z세대 마케팅 채널 우선순위 변화: TikTok에서 BeReal로, 다음은 어디인가",
     description: "Z세대가 이동하는 소셜미디어 채널의 변화 흐름을 분석하고, 브랜드가 Z세대와 진정성 있게 연결하기 위한 차세대 마케팅 채널 전략을 제시합니다. Z세대 마케팅, BeReal에 대한 실전 가이드.",
