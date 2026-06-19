@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "z-marketing-tiktok-bereal",
+    title: "Z세대 마케팅 채널 우선순위 변화: TikTok에서 BeReal로, 다음은 어디인가",
+    description: "Z세대가 이동하는 소셜미디어 채널의 변화 흐름을 분석하고, 브랜드가 Z세대와 진정성 있게 연결하기 위한 차세대 마케팅 채널 전략을 제시합니다. Z세대 마케팅, BeReal에 대한 실전 가이드.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["Z세대 마케팅", "BeReal", "TikTok 마케팅", "소셜미디어 트렌드", "Z세대 채널 전략"],
+  },
+  {
     slug: "pinterest-analytics-content",
     title: "한국 Pinterest 사용자 데이터 분석: 어떤 콘텐츠가 저장되고 클릭되나",
     description: "한국 Pinterest 사용자의 행동 데이터를 분석합니다. 저장률·클릭률이 높은 카테고리, 콘텐츠 유형, 검색 패턴, 인기 주제를 구체적 수치와 함께 정리한 국내 Pinterest 마케팅 인사이트입니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "9분",
     author: "이지수",
     keywords: ["Runway AI", "CapCut", "AI 영상 편집", "영상 편집 도구 비교", "AI 크리에이터 도구"],
-  },
-  {
-    slug: "apple-podcast-keyword-optimization-tips",
-    title: "Apple Podcast 키워드 최적화 팁: 팟캐스트 앱에서 발견되는 에피소드 만들기",
-    description: "Apple Podcast 검색 알고리즘의 작동 방식을 이해하고 에피소드 제목·설명·태그를 최적화하는 실전 전략을 소개합니다. 팟캐스트 앱에서 새 청중을 자연 유입시키는 방법을 알아보세요.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "10분",
-    author: "이지수",
-    keywords: ["Apple Podcast SEO", "팟캐스트 최적화", "팟캐스트 키워드", "팟캐스트 발견성", "팟캐스트 성장"],
   },
 ];

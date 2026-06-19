@@ -55,9 +55,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 379
+Renderable blog posts: 380
 
 Latest posts:
+- [Z세대 마케팅 채널 우선순위 변화: TikTok에서 BeReal로, 다음은 어디인가](https://crepika.com/blog/z-marketing-tiktok-bereal): Z세대가 이동하는 소셜미디어 채널의 변화 흐름을 분석하고, 브랜드가 Z세대와 진정성 있게 연결하기 위한 차세대 마케팅 채널 전략을 제시합니다. Z세대 마케팅, BeReal에 대한 실전 가이드.
 - [한국 Pinterest 사용자 데이터 분석: 어떤 콘텐츠가 저장되고 클릭되나](https://crepika.com/blog/pinterest-analytics-content): 한국 Pinterest 사용자의 행동 데이터를 분석합니다. 저장률·클릭률이 높은 카테고리, 콘텐츠 유형, 검색 패턴, 인기 주제를 구체적 수치와 함께 정리한 국내 Pinterest 마케팅 인사이트입니다.
 - [Runway vs CapCut: AI 영상 편집 도구 어느 것이 더 실용적인가](https://crepika.com/blog/runway-vs-capcut-ai-editing-tools): AI 영상 편집 도구의 양대 산맥인 Runway와 CapCut을 기능·가격·학습 곡선·실제 활용도 측면에서 비교 분석합니다. 목적에 맞는 도구 선택 기준을 제시합니다.
 - [Apple Podcast 키워드 최적화 팁: 팟캐스트 앱에서 발견되는 에피소드 만들기](https://crepika.com/blog/apple-podcast-keyword-optimization-tips): Apple Podcast 검색 알고리즘의 작동 방식을 이해하고 에피소드 제목·설명·태그를 최적화하는 실전 전략을 소개합니다. 팟캐스트 앱에서 새 청중을 자연 유입시키는 방법을 알아보세요.
@@ -69,7 +70,6 @@ Latest posts:
 - [티스토리 카테고리 구조 최적화 팁: 구글이 좋아하는 블로그 구조 만들기](https://crepika.com/blog/optimization-tips-google-blog): 티스토리 블로그의 카테고리 구조를 SEO에 최적화하는 방법을 알려드립니다. 사일로 구조 적용부터 URL 설정, 내부 링크 전략까지 구글 검색 순위를 높이는 블로그 구조 최적화 팁입니다.
 - [Instagram Reels 자막 자동 생성 팁: 접근성과 시청 완료율을 동시에 높이는 법](https://crepika.com/blog/instagram-reels-tips): Instagram Reels의 자동 자막 기능을 최대한 활용하는 방법을 소개합니다. 자막이 시청 완료율과 도달에 미치는 영향, 자막 스타일 최적화, 다국어 콘텐츠 확장까지 실전 팁을 담았습니다.
 - [SEMrush 키워드 매직 툴 활용 팁: 롱테일 키워드 500개 빠르게 추출하기](https://crepika.com/blog/semrush-keyword-usage-tips-keyword-500): SEMrush 키워드 매직 툴을 활용해 콘텐츠 전략에 쓸 롱테일 키워드를 체계적으로 대량 추출하는 방법을 알려드립니다. 필터 설정, 그룹화, 우선순위 선정까지 실전 팁을 공유합니다.
-- [Midjourney v6 프롬프트 팁: 일관된 브랜드 이미지 만드는 고급 설정](https://crepika.com/blog/midjourney-v6-tips-brand): Midjourney v6에서 브랜드 아이덴티티에 맞는 일관된 이미지를 생성하는 고급 프롬프트 기법을 소개합니다. sref, cref 파라미터 활용부터 스타일 고정 방법까지 실전 팁을 알려드립니다.
 
 ## Index Resources
 
@@ -83,4 +83,4 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-06-18
+Updated: 2026-06-19

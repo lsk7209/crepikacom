@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "z-marketing-tiktok-bereal",
+    title: "Z세대 마케팅 채널 우선순위 변화: TikTok에서 BeReal로, 다음은 어디인가",
+    description: "Z세대가 이동하는 소셜미디어 채널의 변화 흐름을 분석하고, 브랜드가 Z세대와 진정성 있게 연결하기 위한 차세대 마케팅 채널 전략을 제시합니다. Z세대 마케팅, BeReal에 대한 실전 가이드.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["Z세대 마케팅", "BeReal", "TikTok 마케팅", "소셜미디어 트렌드", "Z세대 채널 전략"],
+  },
+  {
     slug: "pinterest-analytics-content",
     title: "한국 Pinterest 사용자 데이터 분석: 어떤 콘텐츠가 저장되고 클릭되나",
     description: "한국 Pinterest 사용자의 행동 데이터를 분석합니다. 저장률·클릭률이 높은 카테고리, 콘텐츠 유형, 검색 패턴, 인기 주제를 구체적 수치와 함께 정리한 국내 Pinterest 마케팅 인사이트입니다.",

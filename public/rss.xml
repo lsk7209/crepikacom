@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Z세대 마케팅 채널 우선순위 변화: TikTok에서 BeReal로, 다음은 어디인가</title>
+    <link>https://crepika.com/blog/z-marketing-tiktok-bereal</link>
+    <guid>https://crepika.com/blog/z-marketing-tiktok-bereal</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>insights</category>
+    <description>Z세대가 이동하는 소셜미디어 채널의 변화 흐름을 분석하고, 브랜드가 Z세대와 진정성 있게 연결하기 위한 차세대 마케팅 채널 전략을 제시합니다. Z세대 마케팅, BeReal에 대한 실전 가이드.</description>
+  </item>
+  <item>
     <title>한국 Pinterest 사용자 데이터 분석: 어떤 콘텐츠가 저장되고 클릭되나</title>
     <link>https://crepika.com/blog/pinterest-analytics-content</link>
     <guid>https://crepika.com/blog/pinterest-analytics-content</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>case-study</category>
     <description>Make.com 자동화로 SNS 운영에 쓰던 하루 3시간을 1시간 미만으로 줄인 실제 워크플로우를 공개합니다. 콘텐츠 배포, 모니터링, 리포팅 자동화 시나리오를 단계별로 설명합니다.</description>
-  </item>
-  <item>
-    <title>AI 글쓰기 도구 품질 분석 2026: Claude·ChatGPT·Gemini 콘텐츠 마케팅 실전 비교</title>
-    <link>https://crepika.com/blog/ai-tools-analytics-2026-claudechatgptgemini-content-marketin</link>
-    <guid>https://crepika.com/blog/ai-tools-analytics-2026-claudechatgptgemini-content-marketin</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>insights</category>
-    <description>Claude, ChatGPT, Gemini를 콘텐츠 마케팅 실무에서 비교합니다. 블로그 포스트, 카피라이팅, SEO 콘텐츠 생성 품질과 속도를 2026년 최신 기준으로 분석합니다.</description>
   </item>
 </channel>
 </rss>
