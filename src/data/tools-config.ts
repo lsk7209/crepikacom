@@ -725,7 +725,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Emoji Density Checker',
     descriptionEn: 'Check emoji count and density in social copy.',
     path: '/tools/emoji-density-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['이모지 밀도', 'SNS 문구', '캡션 검사', '브랜드 톤', '가독성'],
     adStrategy: 'instant',
     seoTitle: '이모지 사용량 검사기 - SNS 문구 밀도 점검 | 크레피카',

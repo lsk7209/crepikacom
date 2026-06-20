@@ -501,9 +501,9 @@
     "type": "score-checker",
     "intent": "이모지 사용량이 과도한지, 문장 가독성을 해치는지 점검합니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-17T12:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-20T11:35:14.742Z",
     "path": "/tools/emoji-density-checker"
   },
   {
