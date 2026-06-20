@@ -757,7 +757,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Image Aspect Ratio Checker',
     descriptionEn: 'Calculate image aspect ratio and match common platform presets.',
     path: '/tools/image-aspect-ratio-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['이미지 비율', '가로세로 비율', '인스타그램 이미지', 'OG 이미지', '썸네일 크기'],
     adStrategy: 'instant',
     seoTitle: '이미지 비율 계산기 - SNS OG 썸네일 비율 확인 | 크레피카',

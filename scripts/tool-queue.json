@@ -527,9 +527,9 @@
     "type": "calculator",
     "intent": "이미지 크기와 비율이 플랫폼 요구사항에 맞는지 계산합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-17T22:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-20T22:50:58.964Z",
     "path": "/tools/image-aspect-ratio-checker"
   },
   {

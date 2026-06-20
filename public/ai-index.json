@@ -213,6 +213,10 @@
     {
       "id": "sns-cta-library-builder",
       "url": "https://crepika.com/tools/sns-cta-library-builder"
+    },
+    {
+      "id": "image-aspect-ratio-checker",
+      "url": "https://crepika.com/tools/image-aspect-ratio-checker"
     }
   ],
   "blog": {
