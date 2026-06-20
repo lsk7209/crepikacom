@@ -843,6 +843,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "2026-revenue",
+    title: "국내 온라인 강의 시장 현황 2026: 어느 카테고리가 수익이 높은가",
+    description: "2026년 국내 온라인 강의 시장 규모와 카테고리별 수익 현황을 분석합니다. 클래스101, 탈잉, 유데미 등 주요 플랫폼 데이터를 바탕으로 고수익 강의 카테고리와 성공 전략을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["온라인 강의 시장", "클래스101", "탈잉", "온라인 강의 수익", "2026 이러닝 트렌드"],
+  },
+  {
     slug: "ai-tools-method-2026-analytics",
     title: "AI 영상 도구가 유튜버 작업 방식을 바꾸는 방법: 2026년 제작 트렌드 분석",
     description: "2026년 AI 영상 제작 도구가 유튜브 크리에이터의 기획·촬영·편집·배포 워크플로우를 어떻게 변화시키고 있는지 분석합니다. 효율적인 제작 체계를 만들기 위한 AI 도구 활용 전략을 제시합니다.",

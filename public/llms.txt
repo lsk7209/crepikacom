@@ -60,7 +60,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 384
+Renderable blog posts: 385
 
 Latest posts:
 - [커뮤니티 플랫폼이 크리에이터 수익에 미치는 영향: Discord·Patreon 사례 분석](https://crepika.com/blog/community-creator-revenue-discordpatreon-case-analytics): Discord와 Patreon이 크리에이터 수익 구조에 미치는 실질적인 영향을 사례 중심으로 분석합니다. 플랫폼별 수익화 메커니즘과 국내 크리에이터에게 적합한 커뮤니티 전략을 제시합니다.
