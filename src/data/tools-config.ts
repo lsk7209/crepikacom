@@ -741,7 +741,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'SNS CTA Library Builder',
     descriptionEn: 'Generate CTA lines for saves, comments, clicks, and follows.',
     path: '/tools/sns-cta-library-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['SNS CTA', 'CTA 문구', '저장 유도', '댓글 유도', '전환 문구'],
     adStrategy: 'instant',
     seoTitle: 'SNS CTA 문구 라이브러리 - 저장 댓글 링크 클릭 문구 | 크레피카',

@@ -514,9 +514,9 @@
     "type": "builder",
     "intent": "플랫폼과 퍼널 단계별 CTA 문구 후보를 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-17T17:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-20T17:01:16.687Z",
     "path": "/tools/sns-cta-library-builder"
   },
   {
