@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-vs-google",
+    title: "네이버 스마트플레이스 vs 구글 비즈니스 프로필: 로컬 비즈니스 어디에 더 집중해야 하나",
+    description: "로컬 비즈니스 오너를 위해 네이버 스마트플레이스와 구글 비즈니스 프로필의 검색 노출, 리뷰 영향력, 예약 전환 차이를 비교합니다. 국내 환경에 맞는 최적 운영 전략을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["네이버 스마트플레이스", "구글 비즈니스 프로필", "로컬 SEO", "로컬 비즈니스 마케팅", "네이버 vs 구글"],
+  },
+  {
     slug: "community-creator-revenue-discordpatreon-case-analytics",
     title: "커뮤니티 플랫폼이 크리에이터 수익에 미치는 영향: Discord·Patreon 사례 분석",
     description: "Discord와 Patreon이 크리에이터 수익 구조에 미치는 실질적인 영향을 사례 중심으로 분석합니다. 플랫폼별 수익화 메커니즘과 국내 크리에이터에게 적합한 커뮤니티 전략을 제시합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "9분",
     author: "박준영",
     keywords: ["Z세대 마케팅", "BeReal", "TikTok 마케팅", "소셜미디어 트렌드", "Z세대 채널 전략"],
-  },
-  {
-    slug: "pinterest-analytics-content",
-    title: "한국 Pinterest 사용자 데이터 분석: 어떤 콘텐츠가 저장되고 클릭되나",
-    description: "한국 Pinterest 사용자의 행동 데이터를 분석합니다. 저장률·클릭률이 높은 카테고리, 콘텐츠 유형, 검색 패턴, 인기 주제를 구체적 수치와 함께 정리한 국내 Pinterest 마케팅 인사이트입니다.",
-    category: "insights",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "박준영",
-    keywords: ["한국Pinterest사용자", "Pinterest데이터분석", "한국Pinterest트렌드", "Pinterest저장률", "Pinterest인기콘텐츠", "Pinterest마케팅인사이트", "국내Pinterest분석"],
   },
 ];

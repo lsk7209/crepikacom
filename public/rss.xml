@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>네이버 스마트플레이스 vs 구글 비즈니스 프로필: 로컬 비즈니스 어디에 더 집중해야 하나</title>
+    <link>https://crepika.com/blog/naver-vs-google</link>
+    <guid>https://crepika.com/blog/naver-vs-google</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>insights</category>
+    <description>로컬 비즈니스 오너를 위해 네이버 스마트플레이스와 구글 비즈니스 프로필의 검색 노출, 리뷰 영향력, 예약 전환 차이를 비교합니다. 국내 환경에 맞는 최적 운영 전략을 제시합니다.</description>
+  </item>
+  <item>
     <title>커뮤니티 플랫폼이 크리에이터 수익에 미치는 영향: Discord·Patreon 사례 분석</title>
     <link>https://crepika.com/blog/community-creator-revenue-discordpatreon-case-analytics</link>
     <guid>https://crepika.com/blog/community-creator-revenue-discordpatreon-case-analytics</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>case-study</category>
     <description>Notion 템플릿을 출시 첫 달에 100개 판매한 크리에이터의 마케팅 채널 선정과 가격 전략을 공개합니다. 제품 기획부터 판매 페이지 최적화, 커뮤니티 마케팅까지 실전 사례입니다.</description>
-  </item>
-  <item>
-    <title>콘텐츠 클러스터 구축 6개월 만에 도메인 권위 점수 30 올린 케이스</title>
-    <link>https://crepika.com/blog/content-6-30</link>
-    <guid>https://crepika.com/blog/content-6-30</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>case-study</category>
-    <description>체계적인 콘텐츠 클러스터 전략으로 도메인 권위 점수(DA)를 6개월 만에 30포인트 올린 실제 사례입니다. 필러 페이지 설계부터 내부 링크 구조까지 전략을 상세히 공개합니다.</description>
   </item>
 </channel>
 </rss>
