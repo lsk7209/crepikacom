@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-19"
+    "updated": "2026-06-20"
   },
   "tools": [
     {
@@ -201,6 +201,10 @@
     {
       "id": "hook-strength-checker",
       "url": "https://crepika.com/tools/hook-strength-checker"
+    },
+    {
+      "id": "caption-line-break-cleaner",
+      "url": "https://crepika.com/tools/caption-line-break-cleaner"
     }
   ],
   "blog": {

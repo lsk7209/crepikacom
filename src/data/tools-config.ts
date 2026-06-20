@@ -709,7 +709,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Caption Line Break Cleaner',
     descriptionEn: 'Clean social caption line breaks for mobile readability.',
     path: '/tools/caption-line-break-cleaner',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['캡션 줄바꿈', '인스타그램 캡션', 'SNS 가독성', '줄바꿈 정리', '모바일 캡션'],
     adStrategy: 'instant',
     seoTitle: '캡션 줄바꿈 정리기 - SNS 문구 가독성 개선 | 크레피카',

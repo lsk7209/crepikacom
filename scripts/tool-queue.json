@@ -488,9 +488,9 @@
     "type": "text-transform",
     "intent": "캡션의 불필요한 공백과 줄바꿈을 정리합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-17T07:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-20T06:03:36.302Z",
     "path": "/tools/caption-line-break-cleaner"
   },
   {
