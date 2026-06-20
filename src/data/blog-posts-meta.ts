@@ -843,6 +843,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "ai-tools-method-2026-analytics",
+    title: "AI 영상 도구가 유튜버 작업 방식을 바꾸는 방법: 2026년 제작 트렌드 분석",
+    description: "2026년 AI 영상 제작 도구가 유튜브 크리에이터의 기획·촬영·편집·배포 워크플로우를 어떻게 변화시키고 있는지 분석합니다. 효율적인 제작 체계를 만들기 위한 AI 도구 활용 전략을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "이지수",
+    keywords: ["AI 영상 제작", "유튜버 AI 도구", "유튜브 자동화", "AI 콘텐츠 제작", "영상 제작 트렌드 2026"],
+  },
+  {
     slug: "marketing-revenue",
     title: "국내 제휴 마케팅 생태계 현황: 어떤 플랫폼이 가장 수익이 높은가",
     description: "국내 주요 제휴 마케팅 플랫폼의 수익 구조와 커미션율을 비교 분석합니다. 쿠팡파트너스, 네이버 파트너스퀘어, 텐핑 등 플랫폼별 특성과 수익 극대화 전략을 정리했습니다.",
