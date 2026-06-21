@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "kakao-ads-vs-google-ads-comparison",
+    title: "카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교",
+    description: "카카오모먼트 광고와 구글 광고(GDN·검색광고)의 타겟팅 방식, CPC·CPM 비교, 전환율 차이를 분석합니다. 국내 소비자를 대상으로 한 디지털 광고 예산 배분 전략을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["카카오 광고", "구글 광고", "카카오모먼트", "디지털 광고 비교", "국내 광고 타겟팅"],
+  },
+  {
     slug: "stable-diffusion-vs-midjourney-2026",
     title: "Stable Diffusion vs Midjourney: 2026년 상업적 사용 현황과 선택 기준",
     description: "2026년 기준 Stable Diffusion과 Midjourney의 이미지 품질, 라이선스, 상업적 활용도를 비교 분석합니다. 마케터와 크리에이터가 목적에 맞는 AI 이미지 도구를 선택하는 기준을 제시합니다.",

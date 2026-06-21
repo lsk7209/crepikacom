@@ -242,8 +242,14 @@
       "insights",
       "case-study"
     ],
-    "count": 387,
+    "count": 388,
     "latest": [
+      {
+        "title": "카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교",
+        "url": "https://crepika.com/blog/kakao-ads-vs-google-ads-comparison",
+        "description": "카카오모먼트 광고와 구글 광고(GDN·검색광고)의 타겟팅 방식, CPC·CPM 비교, 전환율 차이를 분석합니다. 국내 소비자를 대상으로 한 디지털 광고 예산 배분 전략을 제시합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "Stable Diffusion vs Midjourney: 2026년 상업적 사용 현황과 선택 기준",
         "url": "https://crepika.com/blog/stable-diffusion-vs-midjourney-2026",
@@ -308,12 +314,6 @@
         "title": "네이버 밴드 게시글 알림 팁: 멤버 참여도를 높이는 발행 전략",
         "url": "https://crepika.com/blog/naver-tips-strategy",
         "description": "네이버 밴드에서 게시글 알림 기능을 전략적으로 활용해 멤버 참여도를 높이는 방법을 알려드립니다. 알림 발송 시간, 빈도, 콘텐츠 유형별 최적화 전략을 실전 팁으로 정리했습니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "구글 Analytics 4 맞춤 이벤트 설정 팁: 내 비즈니스에 맞는 데이터 수집하기",
-        "url": "https://crepika.com/blog/google-analytics-4-tips",
-        "description": "Google Analytics 4(GA4)에서 기본 이벤트를 넘어 비즈니스 목표에 맞는 맞춤 이벤트를 설정하는 방법을 알려드립니다. 코딩 없이 구성하는 방법부터 GTM 연동까지 실전 팁을 제공합니다.",
         "date": "2026-05-18"
       }
     ]
