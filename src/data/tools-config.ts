@@ -805,7 +805,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Batch Filename Planner',
     descriptionEn: 'Generate consistent batch filenames from image descriptions.',
     path: '/tools/batch-filename-planner',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['일괄 파일명', '이미지 파일명 생성', '파일명 규칙', '이미지 SEO', '콘텐츠 에셋'],
     adStrategy: 'instant',
     seoTitle: '일괄 파일명 생성기 - 이미지 파일명 규칙 만들기 | 크레피카',

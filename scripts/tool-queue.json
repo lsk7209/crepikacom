@@ -566,9 +566,9 @@
     "type": "builder",
     "intent": "여러 이미지에 적용할 순번형 파일명 규칙을 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-18T13:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-21T18:05:36.996Z",
     "path": "/tools/batch-filename-planner"
   },
   {
