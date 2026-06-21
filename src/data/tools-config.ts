@@ -789,7 +789,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Filename SEO Cleaner',
     descriptionEn: 'Clean image filenames into readable lowercase SEO-friendly names.',
     path: '/tools/filename-seo-cleaner',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['파일명 SEO', '이미지 파일명', 'SEO 파일명', '이미지 최적화', 'slug 파일명'],
     adStrategy: 'instant',
     seoTitle: '파일명 SEO 정리기 - 이미지 파일명 최적화 | 크레피카',

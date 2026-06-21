@@ -60,6 +60,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [sns-cta-library-builder](https://crepika.com/tools/sns-cta-library-builder)
 - [image-aspect-ratio-checker](https://crepika.com/tools/image-aspect-ratio-checker)
 - [thumbnail-size-planner](https://crepika.com/tools/thumbnail-size-planner)
+- [filename-seo-cleaner](https://crepika.com/tools/filename-seo-cleaner)
 
 ## Blog
 

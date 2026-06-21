@@ -553,9 +553,9 @@
     "type": "text-transform",
     "intent": "복잡한 이미지 파일명을 검색 친화적인 파일명으로 바꿉니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-18T08:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-21T11:56:41.980Z",
     "path": "/tools/filename-seo-cleaner"
   },
   {
