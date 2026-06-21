@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Stable Diffusion vs Midjourney: 2026년 상업적 사용 현황과 선택 기준</title>
+    <link>https://crepika.com/blog/stable-diffusion-vs-midjourney-2026</link>
+    <guid>https://crepika.com/blog/stable-diffusion-vs-midjourney-2026</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>insights</category>
+    <description>2026년 기준 Stable Diffusion과 Midjourney의 이미지 품질, 라이선스, 상업적 활용도를 비교 분석합니다. 마케터와 크리에이터가 목적에 맞는 AI 이미지 도구를 선택하는 기준을 제시합니다.</description>
+  </item>
+  <item>
     <title>네이버 스마트플레이스 vs 구글 비즈니스 프로필: 로컬 비즈니스 어디에 더 집중해야 하나</title>
     <link>https://crepika.com/blog/naver-vs-google</link>
     <guid>https://crepika.com/blog/naver-vs-google</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>case-study</category>
     <description>Facebook Pixel 전환 추적을 제대로 세팅해 광고비를 40% 절감하고 ROAS를 높인 실제 사례입니다. 이벤트 설정부터 전환 API, 맞춤 전환까지 실전 세팅 과정을 공개합니다.</description>
-  </item>
-  <item>
-    <title>Notion 템플릿 첫 달 100개 판매한 케이스: 마케팅 채널과 가격 전략</title>
-    <link>https://crepika.com/blog/notion-100-marketing-strategy</link>
-    <guid>https://crepika.com/blog/notion-100-marketing-strategy</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>case-study</category>
-    <description>Notion 템플릿을 출시 첫 달에 100개 판매한 크리에이터의 마케팅 채널 선정과 가격 전략을 공개합니다. 제품 기획부터 판매 페이지 최적화, 커뮤니티 마케팅까지 실전 사례입니다.</description>
   </item>
 </channel>
 </rss>
