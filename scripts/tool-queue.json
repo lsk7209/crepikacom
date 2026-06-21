@@ -540,9 +540,9 @@
     "type": "calculator",
     "intent": "유튜브, 블로그, OG, SNS 썸네일 권장 크기를 안내합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-18T03:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-21T05:18:36.506Z",
     "path": "/tools/thumbnail-size-planner"
   },
   {

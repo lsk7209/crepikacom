@@ -773,7 +773,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Thumbnail Size Planner',
     descriptionEn: 'Plan thumbnail size, ratio, safe area, and text length by platform.',
     path: '/tools/thumbnail-size-planner',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['썸네일 사이즈', '유튜브 썸네일', '인스타그램 이미지', 'OG 이미지', '안전 영역'],
     adStrategy: 'instant',
     seoTitle: '썸네일 사이즈 설계기 - 플랫폼별 이미지 크기 계획 | 크레피카',

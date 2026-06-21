@@ -59,6 +59,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [emoji-density-checker](https://crepika.com/tools/emoji-density-checker)
 - [sns-cta-library-builder](https://crepika.com/tools/sns-cta-library-builder)
 - [image-aspect-ratio-checker](https://crepika.com/tools/image-aspect-ratio-checker)
+- [thumbnail-size-planner](https://crepika.com/tools/thumbnail-size-planner)
 
 ## Blog
 
@@ -90,7 +91,7 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-06-20
+Updated: 2026-06-21
 
 ## All Renderable Blog URLs
 

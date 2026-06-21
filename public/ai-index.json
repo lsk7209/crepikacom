@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-20"
+    "updated": "2026-06-21"
   },
   "tools": [
     {
@@ -217,6 +217,10 @@
     {
       "id": "image-aspect-ratio-checker",
       "url": "https://crepika.com/tools/image-aspect-ratio-checker"
+    },
+    {
+      "id": "thumbnail-size-planner",
+      "url": "https://crepika.com/tools/thumbnail-size-planner"
     }
   ],
   "blog": {
