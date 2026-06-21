@@ -65,7 +65,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 388
+Renderable blog posts: 389
 
 Latest posts:
 - [카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교](https://crepika.com/blog/kakao-ads-vs-google-ads-comparison): 카카오모먼트 광고와 구글 광고(GDN·검색광고)의 타겟팅 방식, CPC·CPM 비교, 전환율 차이를 분석합니다. 국내 소비자를 대상으로 한 디지털 광고 예산 배분 전략을 제시합니다.
@@ -399,6 +399,7 @@ Updated: 2026-06-21
 - https://crepika.com/blog/marketing-revenue - 국내 제휴 마케팅 생태계 현황: 어떤 플랫폼이 가장 수익이 높은가
 - https://crepika.com/blog/ai-tools-method-2026-analytics - AI 영상 도구가 유튜버 작업 방식을 바꾸는 방법: 2026년 제작 트렌드 분석
 - https://crepika.com/blog/2026-revenue - 국내 온라인 강의 시장 현황 2026: 어느 카테고리가 수익이 높은가
+- https://crepika.com/blog/marketing-2026 - 국내 이메일 마케팅 현황 2026: 오픈율·클릭률 업종별 벤치마크 데이터
 - https://crepika.com/blog/5-practical-tips-ux - 히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트
 - https://crepika.com/blog/tips-5-automation - 세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일
 - https://crepika.com/blog/ads-roas-7-tips-ads - 리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정
