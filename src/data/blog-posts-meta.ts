@@ -873,6 +873,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "social-ads-analytics-ads-strategy",
+    title: "소셜미디어 광고 효율 하락의 원인 분석: 광고 피로도와 대안 전략",
+    description: "소셜미디어 광고의 CPC 상승과 CTR 하락 원인을 분석하고, 광고 피로도를 극복하는 크리에이티브 전략과 대안 채널 다각화 방법을 제시합니다. 소셜미디어 광고 효율, 광고 피로도에 대한 실전 가이드.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["소셜미디어 광고 효율", "광고 피로도", "소셜 광고 CPC", "디지털 광고 대안", "광고 채널 다각화"],
+  },
+  {
     slug: "marketing-2026",
     title: "국내 이메일 마케팅 현황 2026: 오픈율·클릭률 업종별 벤치마크 데이터",
     description: "2026년 국내 이메일 마케팅 오픈율과 클릭률의 업종별 벤치마크 데이터를 분석합니다. 평균 지표 대비 자신의 성과를 진단하고 이메일 마케팅 효율을 높이는 전략을 제시합니다.",

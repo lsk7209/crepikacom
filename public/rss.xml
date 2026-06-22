@@ -782,6 +782,15 @@
     <description>히트맵 데이터를 그냥 보는 것과 제대로 읽는 것은 다릅니다. 클릭·스크롤·무브 데이터를 실제 UX 개선으로 연결하는 5가지 분석 방법을 정리했습니다.</description>
   </item>
   <item>
+    <title>소셜미디어 광고 효율 하락의 원인 분석: 광고 피로도와 대안 전략</title>
+    <link>https://crepika.com/blog/social-ads-analytics-ads-strategy</link>
+    <guid>https://crepika.com/blog/social-ads-analytics-ads-strategy</guid>
+    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>insights</category>
+    <description>소셜미디어 광고의 CPC 상승과 CTR 하락 원인을 분석하고, 광고 피로도를 극복하는 크리에이티브 전략과 대안 채널 다각화 방법을 제시합니다. 소셜미디어 광고 효율, 광고 피로도에 대한 실전 가이드.</description>
+  </item>
+  <item>
     <title>국내 이메일 마케팅 현황 2026: 오픈율·클릭률 업종별 벤치마크 데이터</title>
     <link>https://crepika.com/blog/marketing-2026</link>
     <guid>https://crepika.com/blog/marketing-2026</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>guide</category>
     <description>직감이 아닌 데이터로 고객 페르소나를 만드는 체계적인 방법을 소개합니다. 인터뷰, 설문, 행동 데이터를 결합해 살아있는 페르소나를 구축하고 마케팅과 제품 전략에 적용하는 실전 가이드입니다.</description>
-  </item>
-  <item>
-    <title>Spotify 팟캐스트 성장 가이드: Spotify for Podcasters로 청취자 늘리기</title>
-    <link>https://crepika.com/blog/spotify-growth-guide-spotify-for-podcasters</link>
-    <guid>https://crepika.com/blog/spotify-growth-guide-spotify-for-podcasters</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>guide</category>
-    <description>Spotify for Podcasters(구 Anchor)를 활용해 팟캐스트 청취자를 체계적으로 늘리는 전략을 완전히 정리했습니다. 알고리즘 최적화, 에피소드 전략, Spotify 전용 기능 활용까지 실전 가이드입니다.</description>
   </item>
 </channel>
 </rss>
