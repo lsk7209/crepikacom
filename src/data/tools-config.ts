@@ -869,7 +869,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Brand Color Palette Notes',
     descriptionEn: 'Turn brand colors into practical palette role notes for UI and content.',
     path: '/tools/brand-color-palette-notes',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['브랜드 컬러', '컬러 팔레트', '디자인 시스템', 'CTA 색상', '사이트 톤'],
     adStrategy: 'instant',
     seoTitle: '브랜드 컬러 메모 생성기 - 팔레트 역할 정리 | 크레피카',

@@ -618,9 +618,9 @@
     "type": "builder",
     "intent": "주색, 보조색, 경고색, 중립색 사용 메모를 만듭니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-19T09:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-22T19:47:19.319Z",
     "path": "/tools/brand-color-palette-notes"
   },
   {
