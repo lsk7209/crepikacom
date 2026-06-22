@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "stable-diffusion-sns-content-90-brand",
+    title: "Stable Diffusion으로 SNS 콘텐츠 제작비 90% 절감한 브랜드 케이스",
+    description: "AI 이미지 생성 도구 Stable Diffusion을 도입해 SNS 콘텐츠 제작 비용을 90% 절감한 국내 브랜드의 실전 케이스를 상세히 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["Stable Diffusion", "AI 이미지 생성", "SNS 콘텐츠 제작", "콘텐츠 비용 절감", "AI 마케팅"],
+  },
+  {
     slug: "capcut-reels-10-editing",
     title: "CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스",
     description: "CapCut 편집 기술만으로 인스타그램 릴스 조회수를 10배 이상 끌어올린 실제 크리에이터 케이스를 분석합니다. 적용 가능한 편집 전략을 상세히 소개합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "10분",
     author: "김민혁",
     keywords: ["Perplexity AI", "ChatGPT 리서치", "AI 콘텐츠 리서치", "Perplexity vs ChatGPT", "AI 검색 도구"],
-  },
-  {
-    slug: "kakao-ads-vs-google-ads-comparison",
-    title: "카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교",
-    description: "카카오모먼트 광고와 구글 광고(GDN·검색광고)의 타겟팅 방식, CPC·CPM 비교, 전환율 차이를 분석합니다. 국내 소비자를 대상으로 한 디지털 광고 예산 배분 전략을 제시합니다.",
-    category: "insights",
-    publishDate: "2026-05-18",
-    readTime: "9분",
-    author: "김민혁",
-    keywords: ["카카오 광고", "구글 광고", "카카오모먼트", "디지털 광고 비교", "국내 광고 타겟팅"],
   },
 ];

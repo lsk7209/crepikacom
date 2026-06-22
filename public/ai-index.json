@@ -262,8 +262,14 @@
       "insights",
       "case-study"
     ],
-    "count": 392,
+    "count": 393,
     "latest": [
+      {
+        "title": "Stable Diffusion으로 SNS 콘텐츠 제작비 90% 절감한 브랜드 케이스",
+        "url": "https://crepika.com/blog/stable-diffusion-sns-content-90-brand",
+        "description": "AI 이미지 생성 도구 Stable Diffusion을 도입해 SNS 콘텐츠 제작 비용을 90% 절감한 국내 브랜드의 실전 케이스를 상세히 분석합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스",
         "url": "https://crepika.com/blog/capcut-reels-10-editing",
@@ -328,12 +334,6 @@
         "title": "웨비나 영상을 블로그·숏폼·뉴스레터로 재활용하는 팁",
         "url": "https://crepika.com/blog/blogshortform-usage-tips",
         "description": "한 번 제작한 웨비나 영상을 블로그 포스트, 숏폼 영상, 뉴스레터로 전환하는 실전 콘텐츠 재활용 전략을 단계별로 설명합니다. 제작 시간을 줄이고 채널별 성과를 동시에 높이세요.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "LinkedIn 아티클 vs 게시물: 언제 어떤 형식을 써야 성과가 높은가",
-        "url": "https://crepika.com/blog/linkedin-vs",
-        "description": "LinkedIn 아티클과 일반 게시물의 알고리즘 작동 방식, 독자 행동 패턴, 성과 차이를 데이터로 비교 분석. 목표별 최적 형식 선택 가이드.",
         "date": "2026-05-18"
       }
     ]

@@ -69,9 +69,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 392
+Renderable blog posts: 393
 
 Latest posts:
+- [Stable Diffusion으로 SNS 콘텐츠 제작비 90% 절감한 브랜드 케이스](https://crepika.com/blog/stable-diffusion-sns-content-90-brand): AI 이미지 생성 도구 Stable Diffusion을 도입해 SNS 콘텐츠 제작 비용을 90% 절감한 국내 브랜드의 실전 케이스를 상세히 분석합니다.
 - [CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스](https://crepika.com/blog/capcut-reels-10-editing): CapCut 편집 기술만으로 인스타그램 릴스 조회수를 10배 이상 끌어올린 실제 크리에이터 케이스를 분석합니다. 적용 가능한 편집 전략을 상세히 소개합니다.
 - [Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석](https://crepika.com/blog/perplexity-vs-chatgpt-content-tools-comparison-analytics): 콘텐츠 마케터와 블로거를 위한 Perplexity AI와 ChatGPT의 리서치 기능 비교 분석입니다. 정보 정확성, 출처 제공, 최신성, 실용성 측면에서 두 도구의 차이를 구체적으로 검토합니다.
 - [카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교](https://crepika.com/blog/kakao-ads-vs-google-ads-comparison): 카카오모먼트 광고와 구글 광고(GDN·검색광고)의 타겟팅 방식, CPC·CPM 비교, 전환율 차이를 분석합니다. 국내 소비자를 대상으로 한 디지털 광고 예산 배분 전략을 제시합니다.
@@ -83,7 +84,6 @@ Latest posts:
 - [Runway vs CapCut: AI 영상 편집 도구 어느 것이 더 실용적인가](https://crepika.com/blog/runway-vs-capcut-ai-editing-tools): AI 영상 편집 도구의 양대 산맥인 Runway와 CapCut을 기능·가격·학습 곡선·실제 활용도 측면에서 비교 분석합니다. 목적에 맞는 도구 선택 기준을 제시합니다.
 - [Apple Podcast 키워드 최적화 팁: 팟캐스트 앱에서 발견되는 에피소드 만들기](https://crepika.com/blog/apple-podcast-keyword-optimization-tips): Apple Podcast 검색 알고리즘의 작동 방식을 이해하고 에피소드 제목·설명·태그를 최적화하는 실전 전략을 소개합니다. 팟캐스트 앱에서 새 청중을 자연 유입시키는 방법을 알아보세요.
 - [웨비나 영상을 블로그·숏폼·뉴스레터로 재활용하는 팁](https://crepika.com/blog/blogshortform-usage-tips): 한 번 제작한 웨비나 영상을 블로그 포스트, 숏폼 영상, 뉴스레터로 전환하는 실전 콘텐츠 재활용 전략을 단계별로 설명합니다. 제작 시간을 줄이고 채널별 성과를 동시에 높이세요.
-- [LinkedIn 아티클 vs 게시물: 언제 어떤 형식을 써야 성과가 높은가](https://crepika.com/blog/linkedin-vs): LinkedIn 아티클과 일반 게시물의 알고리즘 작동 방식, 독자 행동 패턴, 성과 차이를 데이터로 비교 분석. 목표별 최적 형식 선택 가이드.
 
 ## Index Resources
 
@@ -493,3 +493,4 @@ Updated: 2026-06-22
 - https://crepika.com/blog/kakao-ads-vs-google-ads-comparison - 카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교
 - https://crepika.com/blog/perplexity-vs-chatgpt-content-tools-comparison-analytics - Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석
 - https://crepika.com/blog/capcut-reels-10-editing - CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스
+- https://crepika.com/blog/stable-diffusion-sns-content-90-brand - Stable Diffusion으로 SNS 콘텐츠 제작비 90% 절감한 브랜드 케이스
