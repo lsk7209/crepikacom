@@ -837,7 +837,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'OG Image Text Checker',
     descriptionEn: 'Check Open Graph image text length, specificity, and brand signal.',
     path: '/tools/og-image-text-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['OG 이미지', '오픈그래프 이미지', '공유 이미지', '썸네일 문구', 'SNS 미리보기'],
     adStrategy: 'instant',
     seoTitle: 'OG 이미지 문구 검사기 - 공유 썸네일 텍스트 점검 | 크레피카',

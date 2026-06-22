@@ -63,6 +63,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [filename-seo-cleaner](https://crepika.com/tools/filename-seo-cleaner)
 - [batch-filename-planner](https://crepika.com/tools/batch-filename-planner)
 - [image-compression-savings-calculator](https://crepika.com/tools/image-compression-savings-calculator)
+- [og-image-text-checker](https://crepika.com/tools/og-image-text-checker)
 
 ## Blog
 

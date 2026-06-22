@@ -592,9 +592,9 @@
     "type": "score-checker",
     "intent": "공유 이미지 안의 제목 문구가 너무 길지 않은지 점검합니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-18T23:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-22T05:32:20.244Z",
     "path": "/tools/og-image-text-checker"
   },
   {
