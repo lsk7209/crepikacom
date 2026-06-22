@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "capcut-reels-10-editing",
+    title: "CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스",
+    description: "CapCut 편집 기술만으로 인스타그램 릴스 조회수를 10배 이상 끌어올린 실제 크리에이터 케이스를 분석합니다. 적용 가능한 편집 전략을 상세히 소개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["CapCut", "릴스 편집", "인스타그램 릴스", "숏폼 편집", "조회수 올리기"],
+  },
+  {
     slug: "perplexity-vs-chatgpt-content-tools-comparison-analytics",
     title: "Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석",
     description: "콘텐츠 마케터와 블로거를 위한 Perplexity AI와 ChatGPT의 리서치 기능 비교 분석입니다. 정보 정확성, 출처 제공, 최신성, 실용성 측면에서 두 도구의 차이를 구체적으로 검토합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "9분",
     author: "김민혁",
     keywords: ["카카오 광고", "구글 광고", "카카오모먼트", "디지털 광고 비교", "국내 광고 타겟팅"],
-  },
-  {
-    slug: "stable-diffusion-vs-midjourney-2026",
-    title: "Stable Diffusion vs Midjourney: 2026년 상업적 사용 현황과 선택 기준",
-    description: "2026년 기준 Stable Diffusion과 Midjourney의 이미지 품질, 라이선스, 상업적 활용도를 비교 분석합니다. 마케터와 크리에이터가 목적에 맞는 AI 이미지 도구를 선택하는 기준을 제시합니다.",
-    category: "insights",
-    publishDate: "2026-05-18",
-    readTime: "9분",
-    author: "이지수",
-    keywords: ["Stable Diffusion", "Midjourney", "AI 이미지 생성", "AI 이미지 상업적 사용", "2026 AI 도구 비교"],
   },
 ];

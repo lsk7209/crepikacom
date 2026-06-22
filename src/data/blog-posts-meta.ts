@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "capcut-reels-10-editing",
+    title: "CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스",
+    description: "CapCut 편집 기술만으로 인스타그램 릴스 조회수를 10배 이상 끌어올린 실제 크리에이터 케이스를 분석합니다. 적용 가능한 편집 전략을 상세히 소개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["CapCut", "릴스 편집", "인스타그램 릴스", "숏폼 편집", "조회수 올리기"],
+  },
+  {
     slug: "perplexity-vs-chatgpt-content-tools-comparison-analytics",
     title: "Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석",
     description: "콘텐츠 마케터와 블로거를 위한 Perplexity AI와 ChatGPT의 리서치 기능 비교 분석입니다. 정보 정확성, 출처 제공, 최신성, 실용성 측면에서 두 도구의 차이를 구체적으로 검토합니다.",
