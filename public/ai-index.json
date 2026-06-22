@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-21"
+    "updated": "2026-06-22"
   },
   "tools": [
     {
@@ -229,6 +229,10 @@
     {
       "id": "batch-filename-planner",
       "url": "https://crepika.com/tools/batch-filename-planner"
+    },
+    {
+      "id": "image-compression-savings-calculator",
+      "url": "https://crepika.com/tools/image-compression-savings-calculator"
     }
   ],
   "blog": {

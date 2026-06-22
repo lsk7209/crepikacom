@@ -821,7 +821,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Image Compression Savings Calculator',
     descriptionEn: 'Calculate per-image and total file size savings after compression.',
     path: '/tools/image-compression-savings-calculator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['이미지 압축', '용량 절감', 'WebP 최적화', '페이지 속도', 'Core Web Vitals'],
     adStrategy: 'instant',
     seoTitle: '이미지 압축 절감 계산기 - 페이지 용량 감소 계산 | 크레피카',

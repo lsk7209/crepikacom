@@ -579,9 +579,9 @@
     "type": "calculator",
     "intent": "압축 전후 용량 절감률과 예상 로딩 개선 효과를 계산합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-18T18:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-22T00:11:58.407Z",
     "path": "/tools/image-compression-savings-calculator"
   },
   {
