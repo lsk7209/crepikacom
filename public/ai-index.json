@@ -254,8 +254,14 @@
       "insights",
       "case-study"
     ],
-    "count": 390,
+    "count": 391,
     "latest": [
+      {
+        "title": "Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석",
+        "url": "https://crepika.com/blog/perplexity-vs-chatgpt-content-tools-comparison-analytics",
+        "description": "콘텐츠 마케터와 블로거를 위한 Perplexity AI와 ChatGPT의 리서치 기능 비교 분석입니다. 정보 정확성, 출처 제공, 최신성, 실용성 측면에서 두 도구의 차이를 구체적으로 검토합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교",
         "url": "https://crepika.com/blog/kakao-ads-vs-google-ads-comparison",
@@ -320,12 +326,6 @@
         "title": "WordPress 플러그인 없이 사이트 속도 올리는 5가지 팁",
         "url": "https://crepika.com/blog/wordpress-5-tips",
         "description": "WordPress 플러그인 없이도 사이트 로딩 속도를 크게 개선할 수 있는 5가지 실전 방법. 이미지 최적화, 서버 설정, 데이터베이스 정리, 렌더 블로킹 해소까지 코드와 설정으로 해결하는 속도 개선 가이드입니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "네이버 밴드 게시글 알림 팁: 멤버 참여도를 높이는 발행 전략",
-        "url": "https://crepika.com/blog/naver-tips-strategy",
-        "description": "네이버 밴드에서 게시글 알림 기능을 전략적으로 활용해 멤버 참여도를 높이는 방법을 알려드립니다. 알림 발송 시간, 빈도, 콘텐츠 유형별 최적화 전략을 실전 팁으로 정리했습니다.",
         "date": "2026-05-18"
       }
     ]

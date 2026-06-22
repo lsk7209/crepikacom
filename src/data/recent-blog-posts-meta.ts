@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "perplexity-vs-chatgpt-content-tools-comparison-analytics",
+    title: "Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석",
+    description: "콘텐츠 마케터와 블로거를 위한 Perplexity AI와 ChatGPT의 리서치 기능 비교 분석입니다. 정보 정확성, 출처 제공, 최신성, 실용성 측면에서 두 도구의 차이를 구체적으로 검토합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "10분",
+    author: "김민혁",
+    keywords: ["Perplexity AI", "ChatGPT 리서치", "AI 콘텐츠 리서치", "Perplexity vs ChatGPT", "AI 검색 도구"],
+  },
+  {
     slug: "kakao-ads-vs-google-ads-comparison",
     title: "카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교",
     description: "카카오모먼트 광고와 구글 광고(GDN·검색광고)의 타겟팅 방식, CPC·CPM 비교, 전환율 차이를 분석합니다. 국내 소비자를 대상으로 한 디지털 광고 예산 배분 전략을 제시합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "9분",
     author: "이지수",
     keywords: ["Stable Diffusion", "Midjourney", "AI 이미지 생성", "AI 이미지 상업적 사용", "2026 AI 도구 비교"],
-  },
-  {
-    slug: "naver-vs-google",
-    title: "네이버 스마트플레이스 vs 구글 비즈니스 프로필: 로컬 비즈니스 어디에 더 집중해야 하나",
-    description: "로컬 비즈니스 오너를 위해 네이버 스마트플레이스와 구글 비즈니스 프로필의 검색 노출, 리뷰 영향력, 예약 전환 차이를 비교합니다. 국내 환경에 맞는 최적 운영 전략을 제시합니다.",
-    category: "insights",
-    publishDate: "2026-05-18",
-    readTime: "9분",
-    author: "박준영",
-    keywords: ["네이버 스마트플레이스", "구글 비즈니스 프로필", "로컬 SEO", "로컬 비즈니스 마케팅", "네이버 vs 구글"],
   },
 ];
