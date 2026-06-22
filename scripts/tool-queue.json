@@ -605,9 +605,9 @@
     "type": "score-checker",
     "intent": "전경색과 배경색의 대비 비율을 계산합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-19T04:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-22T11:22:22.562Z",
     "path": "/tools/color-contrast-checker"
   },
   {

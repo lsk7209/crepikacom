@@ -853,7 +853,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Color Contrast Checker',
     descriptionEn: 'Check text and background color contrast ratio for readable UI and content.',
     path: '/tools/color-contrast-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['색상 대비', 'WCAG 대비율', '접근성 검사', '버튼 가독성', '브랜드 컬러'],
     adStrategy: 'instant',
     seoTitle: '색상 대비 검사기 - WCAG 텍스트 대비율 확인 | 크레피카',

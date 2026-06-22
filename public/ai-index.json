@@ -237,6 +237,10 @@
     {
       "id": "og-image-text-checker",
       "url": "https://crepika.com/tools/og-image-text-checker"
+    },
+    {
+      "id": "color-contrast-checker",
+      "url": "https://crepika.com/tools/color-contrast-checker"
     }
   ],
   "blog": {
