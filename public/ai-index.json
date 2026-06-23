@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-23"
   },
   "tools": [
     {
@@ -245,6 +245,10 @@
     {
       "id": "brand-color-palette-notes",
       "url": "https://crepika.com/tools/brand-color-palette-notes"
+    },
+    {
+      "id": "svg-data-uri-encoder",
+      "url": "https://crepika.com/tools/svg-data-uri-encoder"
     }
   ],
   "blog": {

@@ -885,7 +885,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'SVG Data URI Encoder',
     descriptionEn: 'Encode small SVG markup into a CSS-friendly data URI.',
     path: '/tools/svg-data-uri-encoder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['SVG Data URI', 'SVG 인코더', 'CSS SVG', '이미지 최적화', '아이콘 최적화'],
     adStrategy: 'instant',
     seoTitle: 'SVG Data URI 인코더 - CSS용 SVG 인코딩 | 크레피카',

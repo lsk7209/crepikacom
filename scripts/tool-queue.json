@@ -631,9 +631,9 @@
     "type": "text-transform",
     "intent": "SVG 코드를 CSS에서 쓸 수 있는 Data URI로 변환합니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-19T14:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-23T01:48:39.001Z",
     "path": "/tools/svg-data-uri-encoder"
   },
   {
