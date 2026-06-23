@@ -903,6 +903,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "optimization-ads-2-shopping",
+    title: "전환율 최적화로 광고비 절반에 매출 2배 달성한 쇼핑몰 케이스",
+    description: "CRO(전환율 최적화) 전략을 체계적으로 적용해 광고비를 절반으로 줄이면서 매출을 2배로 늘린 국내 쇼핑몰의 실전 케이스를 분석합니다. 전환율 최적화, CRO에 대한 실전 가이드.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["전환율 최적화", "CRO", "쇼핑몰 광고", "매출 증대", "랜딩페이지 최적화"],
+  },
+  {
     slug: "social-ads-analytics-ads-strategy",
     title: "소셜미디어 광고 효율 하락의 원인 분석: 광고 피로도와 대안 전략",
     description: "소셜미디어 광고의 CPC 상승과 CTR 하락 원인을 분석하고, 광고 피로도를 극복하는 크리에이티브 전략과 대안 채널 다각화 방법을 제시합니다. 소셜미디어 광고 효율, 광고 피로도에 대한 실전 가이드.",

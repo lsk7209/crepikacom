@@ -809,6 +809,15 @@
     <description>히트맵 데이터를 그냥 보는 것과 제대로 읽는 것은 다릅니다. 클릭·스크롤·무브 데이터를 실제 UX 개선으로 연결하는 5가지 분석 방법을 정리했습니다.</description>
   </item>
   <item>
+    <title>전환율 최적화로 광고비 절반에 매출 2배 달성한 쇼핑몰 케이스</title>
+    <link>https://crepika.com/blog/optimization-ads-2-shopping</link>
+    <guid>https://crepika.com/blog/optimization-ads-2-shopping</guid>
+    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>김민혁</dc:creator>
+    <category>case-study</category>
+    <description>CRO(전환율 최적화) 전략을 체계적으로 적용해 광고비를 절반으로 줄이면서 매출을 2배로 늘린 국내 쇼핑몰의 실전 케이스를 분석합니다. 전환율 최적화, CRO에 대한 실전 가이드.</description>
+  </item>
+  <item>
     <title>소셜미디어 광고 효율 하락의 원인 분석: 광고 피로도와 대안 전략</title>
     <link>https://crepika.com/blog/social-ads-analytics-ads-strategy</link>
     <guid>https://crepika.com/blog/social-ads-analytics-ads-strategy</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>tips</category>
     <description>Google Search Console의 검색어 보고서를 분석해 콘텐츠 전략을 개선하는 방법을 알려드립니다. 노출 vs 클릭 갭 분석, 포지션별 전략, 계절성 파악까지 실전 활용 팁을 공유합니다.</description>
-  </item>
-  <item>
-    <title>카카오채널 세그먼트 메시지 팁: 고객 분류별 맞춤 메시지로 전환율 올리기</title>
-    <link>https://crepika.com/blog/kakao-tips</link>
-    <guid>https://crepika.com/blog/kakao-tips</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>tips</category>
-    <description>카카오채널(카카오톡 비즈니스 채널)에서 고객 세그먼트를 나눠 맞춤 메시지를 발송하는 방법을 소개합니다. 세그먼트 설정부터 메시지 개인화, 전환율 측정까지 실전 팁을 알려드립니다.</description>
   </item>
 </channel>
 </rss>
