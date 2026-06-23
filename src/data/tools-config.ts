@@ -933,7 +933,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Image Alt Batch Planner',
     descriptionEn: 'Draft page-aware alt text for multiple images at once.',
     path: '/tools/image-alt-batch-planner',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['이미지 Alt', 'Alt Text', '이미지 대체텍스트', '이미지 SEO', '접근성'],
     adStrategy: 'instant',
     seoTitle: '이미지 Alt 일괄 설계기 - 대체 텍스트 초안 생성 | 크레피카',

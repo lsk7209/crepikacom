@@ -670,9 +670,9 @@
     "type": "builder",
     "intent": "여러 이미지의 alt text 작업표를 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-20T05:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-23T21:51:22.733Z",
     "path": "/tools/image-alt-batch-planner"
   },
   {

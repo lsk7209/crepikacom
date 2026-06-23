@@ -69,6 +69,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [svg-data-uri-encoder](https://crepika.com/tools/svg-data-uri-encoder)
 - [base64-image-size-estimator](https://crepika.com/tools/base64-image-size-estimator)
 - [exif-privacy-checklist](https://crepika.com/tools/exif-privacy-checklist)
+- [image-alt-batch-planner](https://crepika.com/tools/image-alt-batch-planner)
 
 ## Blog
 
