@@ -901,7 +901,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Base64 Image Size Estimator',
     descriptionEn: 'Estimate image size overhead when embedding images as Base64.',
     path: '/tools/base64-image-size-estimator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['Base64 이미지', '이미지 용량', '인라인 이미지', '페이지 속도', '웹 성능'],
     adStrategy: 'instant',
     seoTitle: 'Base64 이미지 용량 계산기 - 인라인 이미지 증가분 추정 | 크레피카',

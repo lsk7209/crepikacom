@@ -644,9 +644,9 @@
     "type": "calculator",
     "intent": "이미지를 Base64로 넣을 때 증가하는 용량을 추정합니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-19T19:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-23T10:02:58.199Z",
     "path": "/tools/base64-image-size-estimator"
   },
   {

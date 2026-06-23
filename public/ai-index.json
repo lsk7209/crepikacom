@@ -249,6 +249,10 @@
     {
       "id": "svg-data-uri-encoder",
       "url": "https://crepika.com/tools/svg-data-uri-encoder"
+    },
+    {
+      "id": "base64-image-size-estimator",
+      "url": "https://crepika.com/tools/base64-image-size-estimator"
     }
   ],
   "blog": {
