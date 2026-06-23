@@ -253,6 +253,10 @@
     {
       "id": "base64-image-size-estimator",
       "url": "https://crepika.com/tools/base64-image-size-estimator"
+    },
+    {
+      "id": "exif-privacy-checklist",
+      "url": "https://crepika.com/tools/exif-privacy-checklist"
     }
   ],
   "blog": {

@@ -917,7 +917,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'EXIF Privacy Checklist',
     descriptionEn: 'Check image publishing privacy risks from EXIF, GPS, faces, and visible details.',
     path: '/tools/exif-privacy-checklist',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['EXIF 제거', '이미지 개인정보', 'GPS 메타데이터', '사진 개인정보', '블로그 이미지 보안'],
     adStrategy: 'instant',
     seoTitle: 'EXIF 개인정보 체크리스트 - 이미지 메타데이터 점검 | 크레피카',

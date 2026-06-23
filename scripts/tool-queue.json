@@ -657,9 +657,9 @@
     "type": "score-checker",
     "intent": "이미지 업로드 전 제거해야 할 위치, 기기, 촬영 정보 항목을 안내합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-20T00:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-23T15:48:15.361Z",
     "path": "/tools/exif-privacy-checklist"
   },
   {
