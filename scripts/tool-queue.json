@@ -696,9 +696,9 @@
     "type": "score-checker",
     "intent": "OG 이미지 크기, 문구 길이, 안전 영역을 점검합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-20T15:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-24T11:17:32.264Z",
     "path": "/tools/open-graph-image-checklist"
   },
   {

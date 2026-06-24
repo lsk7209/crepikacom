@@ -71,6 +71,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [exif-privacy-checklist](https://crepika.com/tools/exif-privacy-checklist)
 - [image-alt-batch-planner](https://crepika.com/tools/image-alt-batch-planner)
 - [favicon-checklist-builder](https://crepika.com/tools/favicon-checklist-builder)
+- [open-graph-image-checklist](https://crepika.com/tools/open-graph-image-checklist)
 
 ## Blog
 

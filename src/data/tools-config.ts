@@ -965,7 +965,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Open Graph Image Checklist',
     descriptionEn: 'Check OG image size, ratio, text length, and share-card readability.',
     path: '/tools/open-graph-image-checklist',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['오픈그래프 이미지', 'OG 이미지', '공유 이미지', '링크 미리보기', 'SNS 썸네일'],
     adStrategy: 'instant',
     seoTitle: '오픈그래프 이미지 체크리스트 - OG 이미지 크기 점검 | 크레피카',
