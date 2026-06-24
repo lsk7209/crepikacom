@@ -981,7 +981,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'File Size Unit Converter',
     descriptionEn: 'Convert file size values between bytes, KB, MB, and GB.',
     path: '/tools/file-size-unit-converter',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['파일 용량 변환', 'KB MB 변환', '이미지 용량', '페이지 용량', '웹 성능'],
     adStrategy: 'instant',
     seoTitle: '파일 용량 단위 변환기 - Bytes KB MB GB 계산 | 크레피카',

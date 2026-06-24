@@ -709,9 +709,9 @@
     "type": "calculator",
     "intent": "bytes, KB, MB, GB, MiB 단위를 변환합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-20T20:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-24T18:07:20.999Z",
     "path": "/tools/file-size-unit-converter"
   },
   {
