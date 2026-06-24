@@ -683,9 +683,9 @@
     "type": "builder",
     "intent": "사이트에 필요한 파비콘과 앱 아이콘 크기 목록을 정리합니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-20T10:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-24T04:37:23.975Z",
     "path": "/tools/favicon-checklist-builder"
   },
   {

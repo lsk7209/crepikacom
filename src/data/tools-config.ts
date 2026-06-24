@@ -949,7 +949,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Favicon Checklist Builder',
     descriptionEn: 'Build a favicon and app icon preparation checklist.',
     path: '/tools/favicon-checklist-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['파비콘', 'favicon', 'app icon', '사이트 아이콘', '브랜드 아이콘'],
     adStrategy: 'instant',
     seoTitle: '파비콘 체크리스트 생성기 - 사이트 아이콘 준비 항목 | 크레피카',
