@@ -1013,7 +1013,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'URL Encoder Decoder',
     descriptionEn: 'Encode and decode URLs with Korean, spaces, and special characters.',
     path: '/tools/url-encoder-decoder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['URL 인코딩', 'URL 디코딩', 'encodeURIComponent', '한글 URL', '캠페인 링크'],
     adStrategy: 'instant',
     seoTitle: 'URL 인코더 디코더 - 한글 URL 인코딩 변환 | 크레피카',
