@@ -1045,7 +1045,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Link Cleanup Tool',
     descriptionEn: 'Clean share URLs by keeping selected UTM parameters and removing extra tracking values.',
     path: '/tools/link-cleanup-tool',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['링크 정리', 'URL 정리', '추적 파라미터 제거', 'UTM 유지', '공유 링크'],
     adStrategy: 'instant',
     seoTitle: '링크 정리 도구 - 추적 파라미터 제거와 UTM 유지 | 크레피카',

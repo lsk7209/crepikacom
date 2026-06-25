@@ -285,6 +285,10 @@
     {
       "id": "query-string-parser",
       "url": "https://crepika.com/tools/query-string-parser"
+    },
+    {
+      "id": "link-cleanup-tool",
+      "url": "https://crepika.com/tools/link-cleanup-tool"
     }
   ],
   "blog": {

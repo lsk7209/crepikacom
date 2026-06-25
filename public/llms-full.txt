@@ -76,6 +76,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [utm-consistency-checker](https://crepika.com/tools/utm-consistency-checker)
 - [url-encoder-decoder](https://crepika.com/tools/url-encoder-decoder)
 - [query-string-parser](https://crepika.com/tools/query-string-parser)
+- [link-cleanup-tool](https://crepika.com/tools/link-cleanup-tool)
 
 ## Blog
 
