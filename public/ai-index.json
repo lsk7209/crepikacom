@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-24"
+    "updated": "2026-06-25"
   },
   "tools": [
     {
@@ -273,6 +273,10 @@
     {
       "id": "file-size-unit-converter",
       "url": "https://crepika.com/tools/file-size-unit-converter"
+    },
+    {
+      "id": "utm-consistency-checker",
+      "url": "https://crepika.com/tools/utm-consistency-checker"
     }
   ],
   "blog": {

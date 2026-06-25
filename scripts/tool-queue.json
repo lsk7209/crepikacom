@@ -735,9 +735,9 @@
     "type": "score-checker",
     "intent": "대소문자, 공백, 소스명 혼용 등 UTM 오류를 점검합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-21T06:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-25T01:26:51.070Z",
     "path": "/tools/utm-consistency-checker"
   },
   {

@@ -997,7 +997,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'UTM Consistency Checker',
     descriptionEn: 'Check campaign URLs for missing UTM fields and naming inconsistencies.',
     path: '/tools/utm-consistency-checker',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['UTM 검사', 'UTM 일관성', 'GA4 캠페인', '캠페인 URL', '마케팅 링크'],
     adStrategy: 'instant',
     seoTitle: 'UTM 일관성 검사기 - 캠페인 URL 네이밍 점검 | 크레피카',
