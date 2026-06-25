@@ -1029,7 +1029,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Query String Parser',
     descriptionEn: 'Parse URL query parameters and check UTM fields, empty values, and duplicates.',
     path: '/tools/query-string-parser',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['쿼리스트링', 'URL 파라미터', 'UTM 분석', 'query parser', '캠페인 URL'],
     adStrategy: 'instant',
     seoTitle: '쿼리스트링 분석기 - URL 파라미터 분해 | 크레피카',
