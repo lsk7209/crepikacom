@@ -826,9 +826,9 @@
     "type": "builder",
     "intent": "사이트맵 점검용 URL 목록을 빠르게 만듭니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-22T17:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-26T22:36:28.636Z",
     "path": "/tools/sitemap-url-batch-builder"
   },
   {

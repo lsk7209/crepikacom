@@ -1109,7 +1109,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Sitemap URL Batch Builder',
     descriptionEn: 'Convert path lists into canonical sitemap URL candidates.',
     path: '/tools/sitemap-url-batch-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['사이트맵 URL', 'sitemap.xml', 'URL 목록', '색인 URL', 'GSC 사이트맵'],
     adStrategy: 'instant',
     seoTitle: '사이트맵 URL 목록 생성기 - sitemap.xml URL 후보 정리 | 크레피카',
