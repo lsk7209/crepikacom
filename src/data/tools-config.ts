@@ -1061,7 +1061,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'QR Campaign URL Builder',
     descriptionEn: 'Build UTM campaign URLs for offline QR code placements.',
     path: '/tools/qr-campaign-url-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['QR 캠페인', 'QR UTM', '오프라인 캠페인', 'GA4 QR 추적', '캠페인 URL'],
     adStrategy: 'instant',
     seoTitle: 'QR 캠페인 URL 빌더 - 오프라인 UTM 링크 생성 | 크레피카',

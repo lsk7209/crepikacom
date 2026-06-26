@@ -787,9 +787,9 @@
     "type": "builder",
     "intent": "QR 코드용 캠페인 URL과 UTM 규칙을 함께 설계합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-22T02:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-26T03:40:52.208Z",
     "path": "/tools/qr-campaign-url-builder"
   },
   {

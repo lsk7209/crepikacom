@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-25"
+    "updated": "2026-06-26"
   },
   "tools": [
     {
@@ -289,6 +289,10 @@
     {
       "id": "link-cleanup-tool",
       "url": "https://crepika.com/tools/link-cleanup-tool"
+    },
+    {
+      "id": "qr-campaign-url-builder",
+      "url": "https://crepika.com/tools/qr-campaign-url-builder"
     }
   ],
   "blog": {
