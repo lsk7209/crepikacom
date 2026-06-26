@@ -1093,7 +1093,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Canonical URL Checklist',
     descriptionEn: 'Check canonical URL domain, path, query, and self-reference consistency.',
     path: '/tools/canonical-url-checklist',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['canonical URL', '대표 URL', '중복 페이지', 'SEO 체크리스트', '기술 SEO'],
     adStrategy: 'instant',
     seoTitle: 'Canonical URL 체크리스트 - 대표 URL 선언 점검 | 크레피카',

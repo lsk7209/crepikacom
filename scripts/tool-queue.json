@@ -813,9 +813,9 @@
     "type": "score-checker",
     "intent": "도메인, 슬래시, 쿼리, canonical 일관성을 점검합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-22T12:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-26T17:15:55.281Z",
     "path": "/tools/canonical-url-checklist"
   },
   {
