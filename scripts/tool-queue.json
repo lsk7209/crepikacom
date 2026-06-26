@@ -800,9 +800,9 @@
     "type": "builder",
     "intent": "확인한 리다이렉트 경로를 문서화하는 표를 만듭니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-22T07:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-26T10:39:02.276Z",
     "path": "/tools/redirect-chain-notes-builder"
   },
   {

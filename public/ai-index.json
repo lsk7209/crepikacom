@@ -293,6 +293,10 @@
     {
       "id": "qr-campaign-url-builder",
       "url": "https://crepika.com/tools/qr-campaign-url-builder"
+    },
+    {
+      "id": "redirect-chain-notes-builder",
+      "url": "https://crepika.com/tools/redirect-chain-notes-builder"
     }
   ],
   "blog": {

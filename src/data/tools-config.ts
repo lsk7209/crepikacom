@@ -1077,7 +1077,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Redirect Chain Notes Builder',
     descriptionEn: 'Document redirect flows and summarize redirect chain risk.',
     path: '/tools/redirect-chain-notes-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['리다이렉트 체인', '301 리다이렉트', 'URL 점검', '캠페인 링크', '크롤링 최적화'],
     adStrategy: 'instant',
     seoTitle: '리다이렉트 체인 기록표 - URL 이동 흐름 점검 | 크레피카',
