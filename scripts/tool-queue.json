@@ -852,9 +852,9 @@
     "type": "builder",
     "intent": "같은 URL에 쓸 자연스러운 앵커 텍스트 변형을 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-23T03:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-27T12:19:39.320Z",
     "path": "/tools/anchor-text-variation-builder"
   },
   {

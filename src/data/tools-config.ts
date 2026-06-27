@@ -1141,7 +1141,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Anchor Text Variation Builder',
     descriptionEn: 'Generate natural anchor text variations for internal links.',
     path: '/tools/anchor-text-variation-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['앵커 텍스트', '내부 링크', 'SEO 링크', '링크 문구', 'internal link'],
     adStrategy: 'instant',
     seoTitle: '앵커 텍스트 변형 생성기 - 내부 링크 문구 만들기 | 크레피카',
