@@ -865,9 +865,9 @@
     "type": "builder",
     "intent": "깨진 링크 교체를 제안하는 정중한 메일 구조를 만듭니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-23T08:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-27T18:03:19.982Z",
     "path": "/tools/broken-link-outreach-template"
   },
   {

@@ -1157,7 +1157,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Broken Link Outreach Template',
     descriptionEn: 'Draft a polite email for broken link replacement outreach.',
     path: '/tools/broken-link-outreach-template',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['깨진 링크', 'broken link', '아웃리치 메일', '백링크 제안', '링크 빌딩'],
     adStrategy: 'instant',
     seoTitle: '깨진 링크 제안 메일 생성기 - Broken Link Outreach | 크레피카',
