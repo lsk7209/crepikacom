@@ -839,9 +839,9 @@
     "type": "builder",
     "intent": "간단한 allow/disallow 규칙 초안을 만듭니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-22T22:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-27T06:42:20.316Z",
     "path": "/tools/robots-rule-draft-builder"
   },
   {

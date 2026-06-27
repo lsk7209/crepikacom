@@ -1125,7 +1125,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Robots Rule Draft Builder',
     descriptionEn: 'Draft robots.txt Allow, Disallow, and Sitemap rules.',
     path: '/tools/robots-rule-draft-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['robots.txt', 'robots 규칙', '크롤링 제어', 'Disallow', 'Sitemap 선언'],
     adStrategy: 'instant',
     seoTitle: 'robots.txt 규칙 초안 생성기 - 크롤링 제어 문법 작성 | 크레피카',

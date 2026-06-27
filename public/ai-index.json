@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-26"
+    "updated": "2026-06-27"
   },
   "tools": [
     {
@@ -305,6 +305,10 @@
     {
       "id": "sitemap-url-batch-builder",
       "url": "https://crepika.com/tools/sitemap-url-batch-builder"
+    },
+    {
+      "id": "robots-rule-draft-builder",
+      "url": "https://crepika.com/tools/robots-rule-draft-builder"
     }
   ],
   "blog": {
