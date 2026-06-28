@@ -1221,7 +1221,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Conversion Rate Calculator',
     descriptionEn: 'Calculate conversion rate from visits and conversions.',
     path: '/tools/conversion-rate-calculator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['전환율 계산기', 'conversion rate', 'CVR 계산', '랜딩 페이지 전환', '마케팅 분석'],
     adStrategy: 'instant',
     seoTitle: '전환율 계산기 - CVR과 전환 1건당 방문 수 계산 | 크레피카',

@@ -930,9 +930,9 @@
     "type": "calculator",
     "intent": "방문수와 전환수로 전환율과 목표 전환수를 계산합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-24T09:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-28T19:54:04.851Z",
     "path": "/tools/conversion-rate-calculator"
   },
   {
