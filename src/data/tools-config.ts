@@ -1189,7 +1189,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Campaign Naming Convention Builder',
     descriptionEn: 'Create consistent UTM campaign naming rules for GA4 reports.',
     path: '/tools/campaign-naming-convention-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['캠페인 네이밍', 'UTM 규칙', 'GA4 캠페인', '마케팅 네이밍', 'campaign naming'],
     adStrategy: 'instant',
     seoTitle: '캠페인 네이밍 규칙 생성기 - GA4 UTM 이름 정리 | 크레피카',

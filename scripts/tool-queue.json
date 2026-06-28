@@ -891,9 +891,9 @@
     "type": "builder",
     "intent": "source, medium, campaign, content 네이밍 규칙을 문서화합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-23T18:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-28T08:21:23.111Z",
     "path": "/tools/campaign-naming-convention-builder"
   },
   {
