@@ -1205,7 +1205,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Landing Page CTA URL Builder',
     descriptionEn: 'Build UTM URLs for landing page CTA placement tracking.',
     path: '/tools/landing-page-cta-url-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['CTA URL', '랜딩 페이지 추적', 'UTM CTA', '전환 추적', '버튼 클릭 추적'],
     adStrategy: 'instant',
     seoTitle: '랜딩 CTA URL 빌더 - 버튼 위치별 UTM 링크 생성 | 크레피카',

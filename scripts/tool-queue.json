@@ -904,9 +904,9 @@
     "type": "builder",
     "intent": "CTA별 캠페인 라벨이 포함된 랜딩 URL을 만듭니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-23T23:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-28T14:16:10.082Z",
     "path": "/tools/landing-page-cta-url-builder"
   },
   {

@@ -86,6 +86,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [broken-link-outreach-template](https://crepika.com/tools/broken-link-outreach-template)
 - [affiliate-disclosure-builder](https://crepika.com/tools/affiliate-disclosure-builder)
 - [campaign-naming-convention-builder](https://crepika.com/tools/campaign-naming-convention-builder)
+- [landing-page-cta-url-builder](https://crepika.com/tools/landing-page-cta-url-builder)
 
 ## Blog
 
