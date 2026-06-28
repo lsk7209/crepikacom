@@ -1173,7 +1173,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Affiliate Disclosure Builder',
     descriptionEn: 'Draft transparent affiliate disclosure copy for content pages.',
     path: '/tools/affiliate-disclosure-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['제휴 고지', 'affiliate disclosure', '수익 고지', '광고 고지', '콘텐츠 신뢰'],
     adStrategy: 'instant',
     seoTitle: '제휴 고지 문구 생성기 - Affiliate Disclosure 초안 | 크레피카',

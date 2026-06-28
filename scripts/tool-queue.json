@@ -878,9 +878,9 @@
     "type": "builder",
     "intent": "제휴 링크나 광고성 안내에 쓸 간결한 고지 문구를 만듭니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-23T13:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-28T00:14:34.270Z",
     "path": "/tools/affiliate-disclosure-builder"
   },
   {
