@@ -982,9 +982,9 @@
     "type": "calculator",
     "intent": "좋아요, 댓글, 저장, 공유 수로 참여율을 계산합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-25T05:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-29T18:22:46.200Z",
     "path": "/tools/engagement-rate-calculator"
   },
   {

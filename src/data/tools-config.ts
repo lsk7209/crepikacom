@@ -1269,7 +1269,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Engagement Rate Calculator',
     descriptionEn: 'Calculate engagement rate from likes, comments, saves, and shares.',
     path: '/tools/engagement-rate-calculator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['참여율 계산기', 'engagement rate', 'SNS 성과', '좋아요 댓글 저장 공유', '콘텐츠 분석'],
     adStrategy: 'instant',
     seoTitle: '참여율 계산기 - SNS 좋아요 댓글 저장 공유 성과 분석 | 크레피카',
