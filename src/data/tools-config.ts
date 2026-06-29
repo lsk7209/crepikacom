@@ -1237,7 +1237,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'AdSense CPC Calculator',
     descriptionEn: 'Calculate estimated AdSense cost per click from earnings and ad clicks.',
     path: '/tools/adsense-cpc-calculator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['애드센스 CPC', 'AdSense CPC', '클릭당 수익', '애드센스 수익', 'CPC 계산기'],
     adStrategy: 'instant',
     seoTitle: '애드센스 CPC 계산기 - 클릭당 수익 계산 | 크레피카',

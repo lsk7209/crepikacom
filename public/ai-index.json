@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-28"
+    "updated": "2026-06-29"
   },
   "tools": [
     {
@@ -333,6 +333,10 @@
     {
       "id": "conversion-rate-calculator",
       "url": "https://crepika.com/tools/conversion-rate-calculator"
+    },
+    {
+      "id": "adsense-cpc-calculator",
+      "url": "https://crepika.com/tools/adsense-cpc-calculator"
     }
   ],
   "blog": {

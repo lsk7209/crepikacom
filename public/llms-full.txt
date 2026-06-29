@@ -88,6 +88,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [campaign-naming-convention-builder](https://crepika.com/tools/campaign-naming-convention-builder)
 - [landing-page-cta-url-builder](https://crepika.com/tools/landing-page-cta-url-builder)
 - [conversion-rate-calculator](https://crepika.com/tools/conversion-rate-calculator)
+- [adsense-cpc-calculator](https://crepika.com/tools/adsense-cpc-calculator)
 
 ## Blog
 
@@ -119,7 +120,7 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-06-28
+Updated: 2026-06-29
 
 ## All Renderable Blog URLs
 
