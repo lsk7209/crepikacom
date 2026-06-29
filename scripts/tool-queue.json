@@ -969,9 +969,9 @@
     "type": "calculator",
     "intent": "구독자 증가율과 이탈률로 예상 구독자 수를 계산합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-25T00:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-29T11:59:24.707Z",
     "path": "/tools/newsletter-growth-calculator"
   },
   {

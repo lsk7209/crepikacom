@@ -1253,7 +1253,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Newsletter Growth Calculator',
     descriptionEn: 'Forecast subscriber growth from current count, growth rate, and churn.',
     path: '/tools/newsletter-growth-calculator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['뉴스레터 성장', '구독자 증가율', 'newsletter growth', 'churn', '구독자 예측'],
     adStrategy: 'instant',
     seoTitle: '뉴스레터 성장 계산기 - 구독자 증가율과 이탈률 예측 | 크레피카',
