@@ -1317,7 +1317,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'A/B Test Sample Notes',
     descriptionEn: 'Compare two variants and produce a practical sample-size note.',
     path: '/tools/ab-test-sample-notes',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['A/B 테스트', 'AB test', '표본 수', '전환율 비교', '실험 분석'],
     adStrategy: 'instant',
     seoTitle: 'A/B 테스트 표본 메모 - 전환율 차이와 표본 점검 | 크레피카',

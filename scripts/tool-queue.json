@@ -1021,9 +1021,9 @@
     "type": "calculator",
     "intent": "테스트 데이터가 충분한지 간단히 판단할 수 있게 돕습니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-25T20:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-30T13:23:44.119Z",
     "path": "/tools/ab-test-sample-notes"
   },
   {
