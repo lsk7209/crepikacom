@@ -1333,7 +1333,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Publishing Pace Calculator',
     descriptionEn: 'Calculate how long a queued publishing backlog will last.',
     path: '/tools/publishing-pace-calculator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['발행 주기', '콘텐츠 큐', '예약 발행', 'publishing pace', '콘텐츠 캘린더'],
     adStrategy: 'instant',
     seoTitle: '발행 주기 계산기 - 예약 콘텐츠 큐 지속 기간 계산 | 크레피카',

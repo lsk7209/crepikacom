@@ -94,6 +94,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [content-roi-calculator](https://crepika.com/tools/content-roi-calculator)
 - [break-even-calculator](https://crepika.com/tools/break-even-calculator)
 - [ab-test-sample-notes](https://crepika.com/tools/ab-test-sample-notes)
+- [publishing-pace-calculator](https://crepika.com/tools/publishing-pace-calculator)
 
 ## Blog
 
