@@ -995,9 +995,9 @@
     "type": "calculator",
     "intent": "콘텐츠 제작 비용과 매출로 투자수익률을 계산합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-25T10:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-06-30T00:11:46.258Z",
     "path": "/tools/content-roi-calculator"
   },
   {

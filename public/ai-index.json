@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-29"
+    "updated": "2026-06-30"
   },
   "tools": [
     {
@@ -345,6 +345,10 @@
     {
       "id": "engagement-rate-calculator",
       "url": "https://crepika.com/tools/engagement-rate-calculator"
+    },
+    {
+      "id": "content-roi-calculator",
+      "url": "https://crepika.com/tools/content-roi-calculator"
     }
   ],
   "blog": {

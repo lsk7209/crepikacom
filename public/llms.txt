@@ -91,6 +91,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [adsense-cpc-calculator](https://crepika.com/tools/adsense-cpc-calculator)
 - [newsletter-growth-calculator](https://crepika.com/tools/newsletter-growth-calculator)
 - [engagement-rate-calculator](https://crepika.com/tools/engagement-rate-calculator)
+- [content-roi-calculator](https://crepika.com/tools/content-roi-calculator)
 
 ## Blog
 
@@ -122,4 +123,4 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-06-29
+Updated: 2026-06-30

@@ -1285,7 +1285,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Content ROI Calculator',
     descriptionEn: 'Calculate content return on investment from cost and attributed revenue.',
     path: '/tools/content-roi-calculator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['콘텐츠 ROI', '투자수익률', 'content marketing ROI', '콘텐츠 비용', '마케팅 성과'],
     adStrategy: 'instant',
     seoTitle: '콘텐츠 ROI 계산기 - 제작비 대비 수익률 계산 | 크레피카',
