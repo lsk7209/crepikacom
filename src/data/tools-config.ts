@@ -1301,7 +1301,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Break-even Calculator',
     descriptionEn: 'Estimate required conversions from cost and profit per conversion.',
     path: '/tools/break-even-calculator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['손익분기점', 'break even', '전환수 계산', '판매 목표', '수익성 계산'],
     adStrategy: 'instant',
     seoTitle: '손익분기점 계산기 - 필요한 판매수와 전환수 계산 | 크레피카',

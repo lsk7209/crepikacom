@@ -92,6 +92,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [newsletter-growth-calculator](https://crepika.com/tools/newsletter-growth-calculator)
 - [engagement-rate-calculator](https://crepika.com/tools/engagement-rate-calculator)
 - [content-roi-calculator](https://crepika.com/tools/content-roi-calculator)
+- [break-even-calculator](https://crepika.com/tools/break-even-calculator)
 
 ## Blog
 
