@@ -98,6 +98,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [keyword-opportunity-scorer](https://crepika.com/tools/keyword-opportunity-scorer)
 - [content-decay-monitor-sheet-builder](https://crepika.com/tools/content-decay-monitor-sheet-builder)
 - [lead-magnet-math-calculator](https://crepika.com/tools/lead-magnet-math-calculator)
+- [creator-pricing-calculator](https://crepika.com/tools/creator-pricing-calculator)
 
 ## Blog
 

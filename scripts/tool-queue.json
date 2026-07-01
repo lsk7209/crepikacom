@@ -1086,9 +1086,9 @@
     "type": "calculator",
     "intent": "도달, 참여율, 제작 난이도로 협찬 단가 범위를 추정합니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-26T21:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-01T21:39:49.982Z",
     "path": "/tools/creator-pricing-calculator"
   },
   {

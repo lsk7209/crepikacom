@@ -1365,7 +1365,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Creator Pricing Calculator',
     descriptionEn: 'Estimate a creator sponsorship fee range from reach and production effort.',
     path: '/tools/creator-pricing-calculator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['크리에이터 단가', '협찬 단가', 'creator pricing', '인플루언서 견적', '브랜드 협업'],
     adStrategy: 'instant',
     seoTitle: '크리에이터 협찬 단가 계산기 - 도달과 제작 난이도 기반 견적 | 크레피카',
