@@ -1349,7 +1349,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Lead Magnet Math Calculator',
     descriptionEn: 'Estimate leads and sales from visitor, signup, and lead-to-sale rates.',
     path: '/tools/lead-magnet-math-calculator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['리드 마그넷', 'lead magnet', '신청률', '리드 전환', '마케팅 퍼널'],
     adStrategy: 'instant',
     seoTitle: '리드 마그넷 계산기 - 방문자 대비 예상 리드와 판매 계산 | 크레피카',
