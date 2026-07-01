@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-06-30"
+    "updated": "2026-07-01"
   },
   "tools": [
     {
@@ -361,6 +361,10 @@
     {
       "id": "publishing-pace-calculator",
       "url": "https://crepika.com/tools/publishing-pace-calculator"
+    },
+    {
+      "id": "keyword-opportunity-scorer",
+      "url": "https://crepika.com/tools/keyword-opportunity-scorer"
     }
   ],
   "blog": {

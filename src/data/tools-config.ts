@@ -1397,7 +1397,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Keyword Opportunity Scorer',
     descriptionEn: 'Score keyword opportunities from intent fit, difficulty, and business fit.',
     path: '/tools/keyword-opportunity-scorer',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['키워드 기회', 'keyword opportunity', 'SEO 우선순위', '검색 의도', '키워드 난이도'],
     adStrategy: 'instant',
     seoTitle: '키워드 기회 점수 계산기 - SEO 콘텐츠 우선순위 선정 | 크레피카',
