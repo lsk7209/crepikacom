@@ -1541,7 +1541,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Content Decay Monitor Sheet Builder',
     descriptionEn: 'Build a content decay tracking table for stale page performance review.',
     path: '/tools/content-decay-monitor-sheet-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['콘텐츠 노후화', 'content decay', 'SEO 리프레시', 'CTR 하락', '콘텐츠 업데이트'],
     adStrategy: 'instant',
     seoTitle: '콘텐츠 노후화 추적표 생성기 - SEO 리프레시 점검표 | 크레피카',
