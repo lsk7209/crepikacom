@@ -1413,7 +1413,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Markdown Cleaner',
     descriptionEn: 'Clean markdown spacing, trailing spaces, and heading formatting.',
     path: '/tools/markdown-cleaner',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['마크다운 정리', 'markdown cleaner', '줄바꿈 정리', '문서 정리', '콘텐츠 편집'],
     adStrategy: 'instant',
     seoTitle: '마크다운 정리기 - 공백 줄바꿈 제목 구조 정리 | 크레피카',

@@ -1112,9 +1112,9 @@
     "type": "text-transform",
     "intent": "어수선한 마크다운 간격과 제목 구조를 정리합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-27T07:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-02T10:44:19.643Z",
     "path": "/tools/markdown-cleaner"
   },
   {
