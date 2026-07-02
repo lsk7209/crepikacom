@@ -1099,9 +1099,9 @@
     "type": "calculator",
     "intent": "퍼널 단계별 이탈률과 개선 우선순위를 계산합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-27T02:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-02T04:31:05.628Z",
     "path": "/tools/funnel-dropoff-calculator"
   },
   {

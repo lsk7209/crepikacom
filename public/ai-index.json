@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-07-01"
+    "updated": "2026-07-02"
   },
   "tools": [
     {
@@ -377,6 +377,10 @@
     {
       "id": "creator-pricing-calculator",
       "url": "https://crepika.com/tools/creator-pricing-calculator"
+    },
+    {
+      "id": "funnel-dropoff-calculator",
+      "url": "https://crepika.com/tools/funnel-dropoff-calculator"
     }
   ],
   "blog": {

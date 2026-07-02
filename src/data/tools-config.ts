@@ -1381,7 +1381,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Funnel Dropoff Calculator',
     descriptionEn: 'Calculate funnel step conversion rates and identify the weakest step.',
     path: '/tools/funnel-dropoff-calculator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['퍼널 이탈률', 'funnel dropoff', '전환 퍼널', 'CTA 클릭률', '리드 전환'],
     adStrategy: 'instant',
     seoTitle: '퍼널 이탈률 계산기 - 방문 클릭 리드 구매 전환 분석 | 크레피카',
