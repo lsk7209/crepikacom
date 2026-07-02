@@ -1138,9 +1138,9 @@
     "type": "text-transform",
     "intent": "JSON을 검증, 정렬, 압축합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-27T17:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-02T22:46:59.763Z",
     "path": "/tools/json-formatter"
   },
   {

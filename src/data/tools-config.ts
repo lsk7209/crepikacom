@@ -1445,7 +1445,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'JSON Formatter',
     descriptionEn: 'Validate, pretty-print, and minify JSON.',
     path: '/tools/json-formatter',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['JSON 포매터', 'json formatter', 'JSON 검증', 'JSON 압축', 'JSON-LD'],
     adStrategy: 'instant',
     seoTitle: 'JSON 포매터 - JSON 검증 정렬 압축 도구 | 크레피카',
