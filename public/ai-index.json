@@ -385,6 +385,10 @@
     {
       "id": "markdown-cleaner",
       "url": "https://crepika.com/tools/markdown-cleaner"
+    },
+    {
+      "id": "html-entity-converter",
+      "url": "https://crepika.com/tools/html-entity-converter"
     }
   ],
   "blog": {

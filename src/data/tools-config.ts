@@ -1429,7 +1429,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'HTML Entity Converter',
     descriptionEn: 'Encode or decode common HTML entities.',
     path: '/tools/html-entity-converter',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['HTML 엔티티', 'html entity', 'escape html', 'decode html', '텍스트 변환'],
     adStrategy: 'instant',
     seoTitle: 'HTML 엔티티 변환기 - 텍스트 인코딩 디코딩 | 크레피카',

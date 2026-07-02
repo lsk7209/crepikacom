@@ -1125,9 +1125,9 @@
     "type": "text-transform",
     "intent": "HTML 엔티티와 일반 텍스트를 서로 변환합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-27T12:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-02T16:57:42.734Z",
     "path": "/tools/html-entity-converter"
   },
   {
