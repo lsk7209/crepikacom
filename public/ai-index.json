@@ -397,6 +397,10 @@
     {
       "id": "csv-to-markdown-table",
       "url": "https://crepika.com/tools/csv-to-markdown-table"
+    },
+    {
+      "id": "markdown-to-plain-text",
+      "url": "https://crepika.com/tools/markdown-to-plain-text"
     }
   ],
   "blog": {

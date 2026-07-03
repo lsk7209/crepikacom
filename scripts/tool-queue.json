@@ -1164,9 +1164,9 @@
     "type": "text-transform",
     "intent": "마크다운 문법을 제거해 복사하기 좋은 텍스트로 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-28T03:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-03T10:18:22.045Z",
     "path": "/tools/markdown-to-plain-text"
   },
   {

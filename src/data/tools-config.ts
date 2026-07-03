@@ -1477,7 +1477,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Markdown to Plain Text',
     descriptionEn: 'Strip markdown syntax and keep readable plain text.',
     path: '/tools/markdown-to-plain-text',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['마크다운 텍스트 변환', 'markdown to text', 'plain text', '문법 제거', '복사 텍스트'],
     adStrategy: 'instant',
     seoTitle: '마크다운 일반 텍스트 변환기 - Markdown 문법 제거 | 크레피카',
