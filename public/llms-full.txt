@@ -105,6 +105,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [json-formatter](https://crepika.com/tools/json-formatter)
 - [csv-to-markdown-table](https://crepika.com/tools/csv-to-markdown-table)
 - [markdown-to-plain-text](https://crepika.com/tools/markdown-to-plain-text)
+- [text-deduplicator](https://crepika.com/tools/text-deduplicator)
 
 ## Blog
 

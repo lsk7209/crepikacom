@@ -1177,9 +1177,9 @@
     "type": "text-transform",
     "intent": "중복된 줄을 제거하면서 기존 순서를 유지합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-28T08:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-03T16:14:49.122Z",
     "path": "/tools/text-deduplicator"
   },
   {

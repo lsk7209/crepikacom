@@ -1493,7 +1493,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Text Deduplicator',
     descriptionEn: 'Remove duplicate lines while preserving original order.',
     path: '/tools/text-deduplicator',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['텍스트 중복 제거', 'duplicate lines', '키워드 정리', '중복 줄 제거', '목록 정리'],
     adStrategy: 'instant',
     seoTitle: '텍스트 중복 제거기 - 중복 줄 제거와 목록 정리 | 크레피카',
