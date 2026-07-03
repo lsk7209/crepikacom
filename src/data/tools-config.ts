@@ -1509,7 +1509,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Case Converter',
     descriptionEn: 'Convert text into lower, upper, title, kebab, snake, and camel case.',
     path: '/tools/case-converter',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['케이스 변환', 'case converter', 'kebab case', 'snake case', 'camel case'],
     adStrategy: 'instant',
     seoTitle: '케이스 변환기 - kebab snake camel title case 변환 | 크레피카',

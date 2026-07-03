@@ -405,6 +405,10 @@
     {
       "id": "text-deduplicator",
       "url": "https://crepika.com/tools/text-deduplicator"
+    },
+    {
+      "id": "case-converter",
+      "url": "https://crepika.com/tools/case-converter"
     }
   ],
   "blog": {

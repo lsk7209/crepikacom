@@ -1190,9 +1190,9 @@
     "type": "text-transform",
     "intent": "lower, upper, title, kebab, snake, camel case로 변환합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-28T13:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-03T21:45:45.510Z",
     "path": "/tools/case-converter"
   },
   {
