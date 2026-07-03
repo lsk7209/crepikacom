@@ -1461,7 +1461,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'CSV to Markdown Table',
     descriptionEn: 'Convert simple CSV rows into a markdown table.',
     path: '/tools/csv-to-markdown-table',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['CSV 마크다운', 'markdown table', 'CSV 표 변환', '블로그 표', 'README table'],
     adStrategy: 'instant',
     seoTitle: 'CSV 마크다운 표 변환기 - CSV를 Markdown Table로 변환 | 크레피카',

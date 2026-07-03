@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-07-02"
+    "updated": "2026-07-03"
   },
   "tools": [
     {
@@ -393,6 +393,10 @@
     {
       "id": "json-formatter",
       "url": "https://crepika.com/tools/json-formatter"
+    },
+    {
+      "id": "csv-to-markdown-table",
+      "url": "https://crepika.com/tools/csv-to-markdown-table"
     }
   ],
   "blog": {

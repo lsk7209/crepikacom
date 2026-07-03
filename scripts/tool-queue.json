@@ -1151,9 +1151,9 @@
     "type": "text-transform",
     "intent": "CSV 데이터를 마크다운 테이블로 변환합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-27T22:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-03T04:08:36.507Z",
     "path": "/tools/csv-to-markdown-table"
   },
   {
