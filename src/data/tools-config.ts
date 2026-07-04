@@ -1525,7 +1525,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Regex Escape Tool',
     descriptionEn: 'Escape special regex characters for literal matching.',
     path: '/tools/regex-escape-tool',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['정규식 이스케이프', 'regex escape', 'literal regex', '특수문자 이스케이프', '패턴 변환'],
     adStrategy: 'instant',
     seoTitle: '정규식 이스케이프 도구 - 특수문자 Regex 안전 변환 | 크레피카',

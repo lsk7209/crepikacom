@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-04"
   },
   "tools": [
     {
@@ -409,6 +409,10 @@
     {
       "id": "case-converter",
       "url": "https://crepika.com/tools/case-converter"
+    },
+    {
+      "id": "regex-escape-tool",
+      "url": "https://crepika.com/tools/regex-escape-tool"
     }
   ],
   "blog": {

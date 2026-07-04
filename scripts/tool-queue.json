@@ -1203,9 +1203,9 @@
     "type": "text-transform",
     "intent": "텍스트를 정규식에서 안전하게 쓸 수 있도록 이스케이프합니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-28T18:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-04T04:10:55.482Z",
     "path": "/tools/regex-escape-tool"
   },
   {
