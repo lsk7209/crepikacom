@@ -1557,7 +1557,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'HTML Meta Tag Builder',
     descriptionEn: 'Draft title, description, canonical, Open Graph, and Twitter meta tags.',
     path: '/tools/html-meta-tag-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['메타 태그', 'HTML meta tag', 'canonical', 'OG 태그', 'SEO title'],
     adStrategy: 'instant',
     seoTitle: 'HTML 메타 태그 생성기 - title description canonical OG 태그 | 크레피카',
