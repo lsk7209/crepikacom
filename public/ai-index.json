@@ -421,6 +421,10 @@
     {
       "id": "jsonld-organization-builder",
       "url": "https://crepika.com/tools/jsonld-organization-builder"
+    },
+    {
+      "id": "checklist-builder",
+      "url": "https://crepika.com/tools/checklist-builder"
     }
   ],
   "blog": {

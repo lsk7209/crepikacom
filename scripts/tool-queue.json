@@ -1242,9 +1242,9 @@
     "type": "text-transform",
     "intent": "메모를 체크박스형 마크다운 목록으로 변환합니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-29T09:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-04T21:27:44.554Z",
     "path": "/tools/checklist-builder"
   },
   {

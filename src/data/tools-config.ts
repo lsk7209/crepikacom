@@ -1589,7 +1589,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Checklist Builder',
     descriptionEn: 'Convert notes into markdown checkbox checklists.',
     path: '/tools/checklist-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['체크리스트 생성기', 'markdown checklist', '할 일 목록', '작업 목록', '문서 정리'],
     adStrategy: 'instant',
     seoTitle: '체크리스트 생성기 - 메모를 Markdown 할 일 목록으로 변환 | 크레피카',
