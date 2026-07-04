@@ -1229,9 +1229,9 @@
     "type": "builder",
     "intent": "사이트 정보로 Organization JSON-LD 초안을 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-29T04:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-04T15:30:56.783Z",
     "path": "/tools/jsonld-organization-builder"
   },
   {

@@ -417,6 +417,10 @@
     {
       "id": "html-meta-tag-builder",
       "url": "https://crepika.com/tools/html-meta-tag-builder"
+    },
+    {
+      "id": "jsonld-organization-builder",
+      "url": "https://crepika.com/tools/jsonld-organization-builder"
     }
   ],
   "blog": {

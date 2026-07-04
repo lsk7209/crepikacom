@@ -1573,7 +1573,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Organization JSON-LD Builder',
     descriptionEn: 'Generate Organization JSON-LD from site and profile information.',
     path: '/tools/jsonld-organization-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['Organization JSON-LD', '구조화 데이터', 'schema.org', '사이트 정보', 'SEO 스키마'],
     adStrategy: 'instant',
     seoTitle: 'Organization JSON-LD 생성기 - 사이트 구조화 데이터 초안 | 크레피카',
