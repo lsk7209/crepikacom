@@ -114,6 +114,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [meeting-notes-action-items](https://crepika.com/tools/meeting-notes-action-items)
 - [prompt-brief-builder](https://crepika.com/tools/prompt-brief-builder)
 - [privacy-policy-input-checklist](https://crepika.com/tools/privacy-policy-input-checklist)
+- [tool-idea-scorer](https://crepika.com/tools/tool-idea-scorer)
 
 ## Blog
 

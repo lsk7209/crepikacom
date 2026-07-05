@@ -1294,9 +1294,9 @@
     "type": "score-checker",
     "intent": "새 유틸리티 아이디어를 유용성, 검색성, 차별성, 구현 난이도로 평가합니다.",
     "priority": "p1",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-30T05:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-05T23:18:36.739Z",
     "path": "/tools/tool-idea-scorer"
   }
 ]

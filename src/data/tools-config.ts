@@ -1653,7 +1653,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Tool Idea Scorer',
     descriptionEn: 'Score utility ideas by usefulness, search demand, differentiation, and build difficulty.',
     path: '/tools/tool-idea-scorer',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['도구 아이디어', 'utility idea', '아이디어 점수', 'SEO 도구', '서비스 기획'],
     adStrategy: 'instant',
     seoTitle: '도구 아이디어 점수 계산기 - 유틸리티 제작 우선순위 평가 | 크레피카',
