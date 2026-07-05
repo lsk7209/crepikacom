@@ -1281,9 +1281,9 @@
     "type": "builder",
     "intent": "도구나 사이트가 다루는 데이터 유형을 점검합니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-30T00:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-05T17:10:31.518Z",
     "path": "/tools/privacy-policy-input-checklist"
   },
   {

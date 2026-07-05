@@ -1637,7 +1637,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Privacy Policy Input Checklist',
     descriptionEn: 'Create a checklist for data types handled by a site or tool.',
     path: '/tools/privacy-policy-input-checklist',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['개인정보 체크리스트', 'privacy policy', '데이터 수집', '쿠키', '사이트 정책'],
     adStrategy: 'instant',
     seoTitle: '개인정보 처리 입력 체크리스트 - 사이트 데이터 수집 점검 | 크레피카',
