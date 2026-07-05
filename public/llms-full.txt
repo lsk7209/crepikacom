@@ -112,6 +112,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 - [jsonld-organization-builder](https://crepika.com/tools/jsonld-organization-builder)
 - [checklist-builder](https://crepika.com/tools/checklist-builder)
 - [meeting-notes-action-items](https://crepika.com/tools/meeting-notes-action-items)
+- [prompt-brief-builder](https://crepika.com/tools/prompt-brief-builder)
 
 ## Blog
 

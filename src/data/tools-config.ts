@@ -1621,7 +1621,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Prompt Brief Builder',
     descriptionEn: 'Build a structured brief for writing, design, and development prompts.',
     path: '/tools/prompt-brief-builder',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['프롬프트 브리프', 'prompt brief', 'AI 요청서', '작업 요청', '콘텐츠 브리프'],
     adStrategy: 'instant',
     seoTitle: '프롬프트 브리프 생성기 - AI 작업 요청 구조화 도구 | 크레피카',

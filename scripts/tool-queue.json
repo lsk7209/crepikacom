@@ -1268,9 +1268,9 @@
     "type": "builder",
     "intent": "글쓰기, 디자인, 개발 요청에 쓸 구조화 브리프를 만듭니다.",
     "priority": "p2",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-29T19:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-05T10:51:39.302Z",
     "path": "/tools/prompt-brief-builder"
   },
   {

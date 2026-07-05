@@ -429,6 +429,10 @@
     {
       "id": "meeting-notes-action-items",
       "url": "https://crepika.com/tools/meeting-notes-action-items"
+    },
+    {
+      "id": "prompt-brief-builder",
+      "url": "https://crepika.com/tools/prompt-brief-builder"
     }
   ],
   "blog": {
