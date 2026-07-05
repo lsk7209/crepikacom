@@ -1255,9 +1255,9 @@
     "type": "text-transform",
     "intent": "회의 메모에서 실행 항목처럼 보이는 문장을 정리합니다.",
     "priority": "p3",
-    "status": "ready",
+    "status": "published",
     "scheduledAt": "2026-06-29T14:16:30.555Z",
-    "publishedAt": null,
+    "publishedAt": "2026-07-05T05:39:16.485Z",
     "path": "/tools/meeting-notes-action-items"
   },
   {

@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-07-04"
+    "updated": "2026-07-05"
   },
   "tools": [
     {
@@ -425,6 +425,10 @@
     {
       "id": "checklist-builder",
       "url": "https://crepika.com/tools/checklist-builder"
+    },
+    {
+      "id": "meeting-notes-action-items",
+      "url": "https://crepika.com/tools/meeting-notes-action-items"
     }
   ],
   "blog": {

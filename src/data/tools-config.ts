@@ -1605,7 +1605,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     titleEn: 'Meeting Notes Action Items',
     descriptionEn: 'Extract likely action items from meeting notes.',
     path: '/tools/meeting-notes-action-items',
-    publicationStatus: 'ready',
+    publicationStatus: 'published',
     keywords: ['회의록 정리', 'action items', '액션아이템', '회의 메모', '업무 정리'],
     adStrategy: 'instant',
     seoTitle: '회의록 액션아이템 정리기 - 회의 메모 할 일 추출 | 크레피카',
