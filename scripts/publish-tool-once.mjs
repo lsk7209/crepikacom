@@ -141,6 +141,7 @@ function commitAndPush(tool) {
       "git add",
       "scripts/tool-queue.json",
       "src/data/tools-config.ts",
+      "src/data/blog-posts",
       "public/sitemap.xml",
       "public/ai-index.json",
       "public/feed.xml",

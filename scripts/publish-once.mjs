@@ -232,7 +232,7 @@ async function main() {
   const msg = `Auto-publish ${published.length} blog posts through scheduled queue`.slice(0, 180);
   execSync('git config user.email "auto-publisher@crepika.com"', { cwd: ROOT });
   execSync('git config user.name "크레피카 자동 발행"', { cwd: ROOT });
-  execSync('git add src/data/blog-content.ts src/data/blog-posts-meta.ts src/data/recent-blog-posts-meta.ts public/sitemap.xml public/rss.xml public/feed.xml public/ai-index.json public/llms.txt public/llms-full.txt public/blog scripts/post-queue.json', { cwd: ROOT });
+  execSync('git add src/data/blog-content.ts src/data/blog-posts src/data/blog-posts-meta.ts src/data/recent-blog-posts-meta.ts public/sitemap.xml public/rss.xml public/feed.xml public/ai-index.json public/llms.txt public/llms-full.txt public/blog scripts/post-queue.json', { cwd: ROOT });
   const messageArgs = [
     '-m',
     JSON.stringify(msg),

@@ -19,6 +19,11 @@
       "permanent": true
     },
     {
+      "source": "/tools/image-resizer",
+      "destination": "/tools/webp-converter",
+      "permanent": true
+    },
+    {
       "source": "/tools/instagram-spacer",
       "destination": "/tools/insta-spacer",
       "permanent": true

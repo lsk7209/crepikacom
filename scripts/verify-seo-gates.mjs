@@ -49,6 +49,7 @@ const TOOL_ID_ALIASES = {
   "email-template": "text-counter",
   "hash-generator": "hashtag-mixer",
   "hashtag-generator": "hashtag-mixer",
+  "image-resizer": "webp-converter",
   "instagram-spacer": "insta-spacer",
   "platform-compare": "utm-url-builder",
   "pricing-calculator": "adsense-rpm-calculator",
