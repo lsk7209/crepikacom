@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "pinterest-1000-brand",
+    title: "Pinterest로 이커머스 월 매출 1000만 원 늘린 핸드메이드 브랜드 케이스",
+    description: "Pinterest 쇼핑 기능과 SEO를 활용해 핸드메이드 브랜드가 6개월 만에 월 매출을 1,000만 원 추가로 늘린 실제 전략을 공개합니다. 카탈로그 연동, 프로덕트 핀, 키워드 최적화 과정을 단계별로 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "14분",
+    author: "이지수",
+    keywords: ["Pinterest이커머스", "핸드메이드Pinterest", "Pinterest쇼핑기능", "Pinterest매출", "핀터레스트브랜드", "Pinterest카탈로그", "소상공인Pinterest"],
+  },
+  {
     slug: "stable-diffusion-sns-content-90-brand",
     title: "Stable Diffusion으로 SNS 콘텐츠 제작비 90% 절감한 브랜드 케이스",
     description: "AI 이미지 생성 도구 Stable Diffusion을 도입해 SNS 콘텐츠 제작 비용을 90% 절감한 국내 브랜드의 실전 케이스를 상세히 분석합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "11분",
     author: "박준영",
     keywords: ["CapCut", "릴스 편집", "인스타그램 릴스", "숏폼 편집", "조회수 올리기"],
-  },
-  {
-    slug: "perplexity-vs-chatgpt-content-tools-comparison-analytics",
-    title: "Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석",
-    description: "콘텐츠 마케터와 블로거를 위한 Perplexity AI와 ChatGPT의 리서치 기능 비교 분석입니다. 정보 정확성, 출처 제공, 최신성, 실용성 측면에서 두 도구의 차이를 구체적으로 검토합니다.",
-    category: "insights",
-    publishDate: "2026-05-18",
-    readTime: "10분",
-    author: "김민혁",
-    keywords: ["Perplexity AI", "ChatGPT 리서치", "AI 콘텐츠 리서치", "Perplexity vs ChatGPT", "AI 검색 도구"],
   },
 ];

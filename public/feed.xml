@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Pinterest로 이커머스 월 매출 1000만 원 늘린 핸드메이드 브랜드 케이스</title>
+    <link>https://crepika.com/blog/pinterest-1000-brand</link>
+    <guid>https://crepika.com/blog/pinterest-1000-brand</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>case-study</category>
+    <description>Pinterest 쇼핑 기능과 SEO를 활용해 핸드메이드 브랜드가 6개월 만에 월 매출을 1,000만 원 추가로 늘린 실제 전략을 공개합니다. 카탈로그 연동, 프로덕트 핀, 키워드 최적화 과정을 단계별로 분석합니다.</description>
+  </item>
+  <item>
     <title>Stable Diffusion으로 SNS 콘텐츠 제작비 90% 절감한 브랜드 케이스</title>
     <link>https://crepika.com/blog/stable-diffusion-sns-content-90-brand</link>
     <guid>https://crepika.com/blog/stable-diffusion-sns-content-90-brand</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>tips</category>
     <description>색상 심리학과 디자인 원칙을 기반으로 브랜드 컬러 팔레트를 무료 도구만으로 설계하는 방법을 안내합니다. 일관된 브랜드 아이덴티티를 직접 구축하는 단계별 가이드입니다.</description>
-  </item>
-  <item>
-    <title>구글 검색어 보고서 활용 팁: 서치콘솔 데이터로 콘텐츠 전략 개선하기</title>
-    <link>https://crepika.com/blog/google-search-usage-tips-content-strategy</link>
-    <guid>https://crepika.com/blog/google-search-usage-tips-content-strategy</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>김민혁</dc:creator>
-    <category>tips</category>
-    <description>Google Search Console의 검색어 보고서를 분석해 콘텐츠 전략을 개선하는 방법을 알려드립니다. 노출 vs 클릭 갭 분석, 포지션별 전략, 계절성 파악까지 실전 활용 팁을 공유합니다.</description>
   </item>
 </channel>
 </rss>
