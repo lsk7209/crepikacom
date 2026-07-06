@@ -818,6 +818,15 @@
     <description>히트맵 데이터를 그냥 보는 것과 제대로 읽는 것은 다릅니다. 클릭·스크롤·무브 데이터를 실제 UX 개선으로 연결하는 5가지 분석 방법을 정리했습니다.</description>
   </item>
   <item>
+    <title>브랜드 감사 후 리브랜딩으로 전환율 35% 올린 스타트업 케이스</title>
+    <link>https://crepika.com/blog/brand-35</link>
+    <guid>https://crepika.com/blog/brand-35</guid>
+    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>김민혁</dc:creator>
+    <category>case-study</category>
+    <description>체계적인 브랜드 감사(Brand Audit)를 실행하고 전략적 리브랜딩을 통해 전환율을 35% 끌어올린 스타트업의 실제 과정과 인사이트를 공개합니다.</description>
+  </item>
+  <item>
     <title>Performance Max 도입 후 ROAS 4배 개선된 온라인몰 케이스</title>
     <link>https://crepika.com/blog/performance-max-roas-4</link>
     <guid>https://crepika.com/blog/performance-max-roas-4</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>tips</category>
     <description>광고비 없이 시작할 수 있는 무료 디지털 마케팅 도구 20가지를 카테고리별로 정리했습니다. 소상공인과 1인 사업자가 실무에 바로 적용 가능한 도구와 활용 팁을 소개합니다.</description>
-  </item>
-  <item>
-    <title>경쟁사 백링크 훔쳐보기 팁: Ahrefs로 경쟁자 링크 전략 분석하는 법</title>
-    <link>https://crepika.com/blog/tips-ahrefs-strategy-analytics</link>
-    <guid>https://crepika.com/blog/tips-ahrefs-strategy-analytics</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>김민혁</dc:creator>
-    <category>tips</category>
-    <description>Ahrefs를 활용해 경쟁사의 백링크 프로파일을 분석하고 링크 빌딩 기회를 발굴하는 방법을 단계별로 설명합니다. 경쟁자의 전략을 역으로 학습해 SEO 성과를 빠르게 높이세요.</description>
   </item>
 </channel>
 </rss>

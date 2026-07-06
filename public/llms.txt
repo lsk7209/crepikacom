@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 396
+Renderable blog posts: 397
 
 Latest posts:
 - [Pinterest로 이커머스 월 매출 1000만 원 늘린 핸드메이드 브랜드 케이스](https://crepika.com/blog/pinterest-1000-brand): Pinterest 쇼핑 기능과 SEO를 활용해 핸드메이드 브랜드가 6개월 만에 월 매출을 1,000만 원 추가로 늘린 실제 전략을 공개합니다. 카탈로그 연동, 프로덕트 핀, 키워드 최적화 과정을 단계별로 분석합니다.

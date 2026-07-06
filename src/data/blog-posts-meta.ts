@@ -913,6 +913,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "brand-35",
+    title: "브랜드 감사 후 리브랜딩으로 전환율 35% 올린 스타트업 케이스",
+    description: "체계적인 브랜드 감사(Brand Audit)를 실행하고 전략적 리브랜딩을 통해 전환율을 35% 끌어올린 스타트업의 실제 과정과 인사이트를 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["브랜드 감사", "리브랜딩", "브랜드 전략", "전환율 향상", "스타트업 마케팅"],
+  },
+  {
     slug: "performance-max-roas-4",
     title: "Performance Max 도입 후 ROAS 4배 개선된 온라인몰 케이스",
     description: "Google Performance Max 캠페인을 전략적으로 도입해 ROAS를 4배 개선한 온라인몰의 실전 운영 케이스와 최적화 노하우를 공개합니다.",
