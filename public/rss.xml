@@ -818,6 +818,15 @@
     <description>히트맵 데이터를 그냥 보는 것과 제대로 읽는 것은 다릅니다. 클릭·스크롤·무브 데이터를 실제 UX 개선으로 연결하는 5가지 분석 방법을 정리했습니다.</description>
   </item>
   <item>
+    <title>Performance Max 도입 후 ROAS 4배 개선된 온라인몰 케이스</title>
+    <link>https://crepika.com/blog/performance-max-roas-4</link>
+    <guid>https://crepika.com/blog/performance-max-roas-4</guid>
+    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>case-study</category>
+    <description>Google Performance Max 캠페인을 전략적으로 도입해 ROAS를 4배 개선한 온라인몰의 실전 운영 케이스와 최적화 노하우를 공개합니다.</description>
+  </item>
+  <item>
     <title>전환율 최적화로 광고비 절반에 매출 2배 달성한 쇼핑몰 케이스</title>
     <link>https://crepika.com/blog/optimization-ads-2-shopping</link>
     <guid>https://crepika.com/blog/optimization-ads-2-shopping</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>tips</category>
     <description>Ahrefs를 활용해 경쟁사의 백링크 프로파일을 분석하고 링크 빌딩 기회를 발굴하는 방법을 단계별로 설명합니다. 경쟁자의 전략을 역으로 학습해 SEO 성과를 빠르게 높이세요.</description>
-  </item>
-  <item>
-    <title>브랜드 컬러 팔레트 만드는 팁: 무료 도구로 전문가급 브랜드 색상 설정하기</title>
-    <link>https://crepika.com/blog/brand-tips-tools-brand</link>
-    <guid>https://crepika.com/blog/brand-tips-tools-brand</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>tips</category>
-    <description>색상 심리학과 디자인 원칙을 기반으로 브랜드 컬러 팔레트를 무료 도구만으로 설계하는 방법을 안내합니다. 일관된 브랜드 아이덴티티를 직접 구축하는 단계별 가이드입니다.</description>
   </item>
 </channel>
 </rss>

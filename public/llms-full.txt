@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 395
+Renderable blog posts: 396
 
 Latest posts:
 - [Pinterest로 이커머스 월 매출 1000만 원 늘린 핸드메이드 브랜드 케이스](https://crepika.com/blog/pinterest-1000-brand): Pinterest 쇼핑 기능과 SEO를 활용해 핸드메이드 브랜드가 6개월 만에 월 매출을 1,000만 원 추가로 늘린 실제 전략을 공개합니다. 카탈로그 연동, 프로덕트 핀, 키워드 최적화 과정을 단계별로 분석합니다.
@@ -455,6 +455,7 @@ Updated: 2026-07-06
 - https://crepika.com/blog/marketing-2026 - 국내 이메일 마케팅 현황 2026: 오픈율·클릭률 업종별 벤치마크 데이터
 - https://crepika.com/blog/social-ads-analytics-ads-strategy - 소셜미디어 광고 효율 하락의 원인 분석: 광고 피로도와 대안 전략
 - https://crepika.com/blog/optimization-ads-2-shopping - 전환율 최적화로 광고비 절반에 매출 2배 달성한 쇼핑몰 케이스
+- https://crepika.com/blog/performance-max-roas-4 - Performance Max 도입 후 ROAS 4배 개선된 온라인몰 케이스
 - https://crepika.com/blog/5-practical-tips-ux - 히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트
 - https://crepika.com/blog/tips-5-automation - 세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일
 - https://crepika.com/blog/ads-roas-7-tips-ads - 리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정

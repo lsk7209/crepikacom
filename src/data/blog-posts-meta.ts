@@ -913,6 +913,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "performance-max-roas-4",
+    title: "Performance Max 도입 후 ROAS 4배 개선된 온라인몰 케이스",
+    description: "Google Performance Max 캠페인을 전략적으로 도입해 ROAS를 4배 개선한 온라인몰의 실전 운영 케이스와 최적화 노하우를 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["Performance Max", "Google 광고", "ROAS 개선", "온라인몰 광고", "PMax 최적화"],
+  },
+  {
     slug: "optimization-ads-2-shopping",
     title: "전환율 최적화로 광고비 절반에 매출 2배 달성한 쇼핑몰 케이스",
     description: "CRO(전환율 최적화) 전략을 체계적으로 적용해 광고비를 절반으로 줄이면서 매출을 2배로 늘린 국내 쇼핑몰의 실전 케이스를 분석합니다. 전환율 최적화, CRO에 대한 실전 가이드.",
