@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "community-500",
+    title: "커뮤니티 빌딩으로 제품 출시 첫날 500개 판매한 케이스",
+    description: "500명 이상의 활성 커뮤니티를 단계별로 구축하는 핵심 전략과 운영 노하우를 담았습니다. 멤버 온보딩 설계, 지속적인 참여율 유지 방법, 운영 자동화까지 실제 성장한 국내외 커뮤니티 사례를 바탕으로 실행 방법을 정리했습니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["커뮤니티 빌딩", "제품 론칭", "사전 판매", "온라인 커뮤니티", "크리에이터 비즈니스"],
+  },
+  {
     slug: "apple-podcast-10-creator-seo-strategy",
     title: "Apple Podcast 상위 10위 달성한 크리에이터의 SEO 전략 케이스",
     description: "Apple Podcast 특정 카테고리 상위 10위에 진입한 국내 크리에이터의 팟캐스트 SEO 전략과 성장 과정을 단계별로 분석합니다. Apple Podcast, 팟캐스트 SEO에 대한 실전 가이드.",
