@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "apple-podcast-10-creator-seo-strategy",
+    title: "Apple Podcast 상위 10위 달성한 크리에이터의 SEO 전략 케이스",
+    description: "Apple Podcast 특정 카테고리 상위 10위에 진입한 국내 크리에이터의 팟캐스트 SEO 전략과 성장 과정을 단계별로 분석합니다. Apple Podcast, 팟캐스트 SEO에 대한 실전 가이드.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "박준영",
+    keywords: ["Apple Podcast", "팟캐스트 SEO", "팟캐스트 성장", "팟캐스트 마케팅", "크리에이터 전략"],
+  },
+  {
     slug: "pinterest-1000-brand",
     title: "Pinterest로 이커머스 월 매출 1000만 원 늘린 핸드메이드 브랜드 케이스",
     description: "Pinterest 쇼핑 기능과 SEO를 활용해 핸드메이드 브랜드가 6개월 만에 월 매출을 1,000만 원 추가로 늘린 실제 전략을 공개합니다. 카탈로그 연동, 프로덕트 핀, 키워드 최적화 과정을 단계별로 분석합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "12분",
     author: "이지수",
     keywords: ["Stable Diffusion", "AI 이미지 생성", "SNS 콘텐츠 제작", "콘텐츠 비용 절감", "AI 마케팅"],
-  },
-  {
-    slug: "capcut-reels-10-editing",
-    title: "CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스",
-    description: "CapCut 편집 기술만으로 인스타그램 릴스 조회수를 10배 이상 끌어올린 실제 크리에이터 케이스를 분석합니다. 적용 가능한 편집 전략을 상세히 소개합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "박준영",
-    keywords: ["CapCut", "릴스 편집", "인스타그램 릴스", "숏폼 편집", "조회수 올리기"],
   },
 ];

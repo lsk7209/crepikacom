@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "apple-podcast-10-creator-seo-strategy",
+    title: "Apple Podcast 상위 10위 달성한 크리에이터의 SEO 전략 케이스",
+    description: "Apple Podcast 특정 카테고리 상위 10위에 진입한 국내 크리에이터의 팟캐스트 SEO 전략과 성장 과정을 단계별로 분석합니다. Apple Podcast, 팟캐스트 SEO에 대한 실전 가이드.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "박준영",
+    keywords: ["Apple Podcast", "팟캐스트 SEO", "팟캐스트 성장", "팟캐스트 마케팅", "크리에이터 전략"],
+  },
+  {
     slug: "pinterest-1000-brand",
     title: "Pinterest로 이커머스 월 매출 1000만 원 늘린 핸드메이드 브랜드 케이스",
     description: "Pinterest 쇼핑 기능과 SEO를 활용해 핸드메이드 브랜드가 6개월 만에 월 매출을 1,000만 원 추가로 늘린 실제 전략을 공개합니다. 카탈로그 연동, 프로덕트 핀, 키워드 최적화 과정을 단계별로 분석합니다.",
