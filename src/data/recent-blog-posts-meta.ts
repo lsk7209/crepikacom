@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "kakao-ads-optimization-cpl-50-brand",
+    title: "카카오모먼트 광고 최적화로 CPL 50% 절감한 교육 브랜드 케이스",
+    description: "카카오모먼트 광고 운영 전략을 체계적으로 최적화해 리드당 비용(CPL)을 50% 절감한 온라인 교육 브랜드의 실전 케이스를 공개합니다. 카카오모먼트, 카카오 광고에 대한 실전 가이드.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["카카오모먼트", "카카오 광고", "CPL 절감", "리드 광고", "교육 마케팅"],
+  },
+  {
     slug: "community-500",
     title: "커뮤니티 빌딩으로 제품 출시 첫날 500개 판매한 케이스",
     description: "500명 이상의 활성 커뮤니티를 단계별로 구축하는 핵심 전략과 운영 노하우를 담았습니다. 멤버 온보딩 설계, 지속적인 참여율 유지 방법, 운영 자동화까지 실제 성장한 국내외 커뮤니티 사례를 바탕으로 실행 방법을 정리했습니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "13분",
     author: "박준영",
     keywords: ["Apple Podcast", "팟캐스트 SEO", "팟캐스트 성장", "팟캐스트 마케팅", "크리에이터 전략"],
-  },
-  {
-    slug: "pinterest-1000-brand",
-    title: "Pinterest로 이커머스 월 매출 1000만 원 늘린 핸드메이드 브랜드 케이스",
-    description: "Pinterest 쇼핑 기능과 SEO를 활용해 핸드메이드 브랜드가 6개월 만에 월 매출을 1,000만 원 추가로 늘린 실제 전략을 공개합니다. 카탈로그 연동, 프로덕트 핀, 키워드 최적화 과정을 단계별로 분석합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "14분",
-    author: "이지수",
-    keywords: ["Pinterest이커머스", "핸드메이드Pinterest", "Pinterest쇼핑기능", "Pinterest매출", "핀터레스트브랜드", "Pinterest카탈로그", "소상공인Pinterest"],
   },
 ];

@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "kakao-ads-optimization-cpl-50-brand",
+    title: "카카오모먼트 광고 최적화로 CPL 50% 절감한 교육 브랜드 케이스",
+    description: "카카오모먼트 광고 운영 전략을 체계적으로 최적화해 리드당 비용(CPL)을 50% 절감한 온라인 교육 브랜드의 실전 케이스를 공개합니다. 카카오모먼트, 카카오 광고에 대한 실전 가이드.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["카카오모먼트", "카카오 광고", "CPL 절감", "리드 광고", "교육 마케팅"],
+  },
+  {
     slug: "community-500",
     title: "커뮤니티 빌딩으로 제품 출시 첫날 500개 판매한 케이스",
     description: "500명 이상의 활성 커뮤니티를 단계별로 구축하는 핵심 전략과 운영 노하우를 담았습니다. 멤버 온보딩 설계, 지속적인 참여율 유지 방법, 운영 자동화까지 실제 성장한 국내외 커뮤니티 사례를 바탕으로 실행 방법을 정리했습니다.",
