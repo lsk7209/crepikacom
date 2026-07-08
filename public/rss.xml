@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>소셜 증명 강화 후 신규 고객 전환율 45% 향상된 SaaS 케이스</title>
+    <link>https://crepika.com/blog/45-saas</link>
+    <guid>https://crepika.com/blog/45-saas</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>case-study</category>
+    <description>소셜 증명(Social Proof) 요소를 체계적으로 강화한 이후 신규 고객 전환율이 45% 향상된 국내 SaaS 스타트업의 전략과 실행 과정을 분석합니다.</description>
+  </item>
+  <item>
     <title>카카오모먼트 광고 최적화로 CPL 50% 절감한 교육 브랜드 케이스</title>
     <link>https://crepika.com/blog/kakao-ads-optimization-cpl-50-brand</link>
     <guid>https://crepika.com/blog/kakao-ads-optimization-cpl-50-brand</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>insights</category>
     <description>2026년 국내 온라인 강의 시장 규모와 카테고리별 수익 현황을 분석합니다. 클래스101, 탈잉, 유데미 등 주요 플랫폼 데이터를 바탕으로 고수익 강의 카테고리와 성공 전략을 제시합니다.</description>
-  </item>
-  <item>
-    <title>AI 영상 도구가 유튜버 작업 방식을 바꾸는 방법: 2026년 제작 트렌드 분석</title>
-    <link>https://crepika.com/blog/ai-tools-method-2026-analytics</link>
-    <guid>https://crepika.com/blog/ai-tools-method-2026-analytics</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>insights</category>
-    <description>2026년 AI 영상 제작 도구가 유튜브 크리에이터의 기획·촬영·편집·배포 워크플로우를 어떻게 변화시키고 있는지 분석합니다. 효율적인 제작 체계를 만들기 위한 AI 도구 활용 전략을 제시합니다.</description>
   </item>
 </channel>
 </rss>

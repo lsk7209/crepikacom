@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "45-saas",
+    title: "소셜 증명 강화 후 신규 고객 전환율 45% 향상된 SaaS 케이스",
+    description: "소셜 증명(Social Proof) 요소를 체계적으로 강화한 이후 신규 고객 전환율이 45% 향상된 국내 SaaS 스타트업의 전략과 실행 과정을 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "박준영",
+    keywords: ["소셜 증명", "전환율 최적화", "SaaS 마케팅", "고객 후기", "리뷰 마케팅"],
+  },
+  {
     slug: "kakao-ads-optimization-cpl-50-brand",
     title: "카카오모먼트 광고 최적화로 CPL 50% 절감한 교육 브랜드 케이스",
     description: "카카오모먼트 광고 운영 전략을 체계적으로 최적화해 리드당 비용(CPL)을 50% 절감한 온라인 교육 브랜드의 실전 케이스를 공개합니다. 카카오모먼트, 카카오 광고에 대한 실전 가이드.",

@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "45-saas",
+    title: "소셜 증명 강화 후 신규 고객 전환율 45% 향상된 SaaS 케이스",
+    description: "소셜 증명(Social Proof) 요소를 체계적으로 강화한 이후 신규 고객 전환율이 45% 향상된 국내 SaaS 스타트업의 전략과 실행 과정을 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "박준영",
+    keywords: ["소셜 증명", "전환율 최적화", "SaaS 마케팅", "고객 후기", "리뷰 마케팅"],
+  },
+  {
     slug: "kakao-ads-optimization-cpl-50-brand",
     title: "카카오모먼트 광고 최적화로 CPL 50% 절감한 교육 브랜드 케이스",
     description: "카카오모먼트 광고 운영 전략을 체계적으로 최적화해 리드당 비용(CPL)을 50% 절감한 온라인 교육 브랜드의 실전 케이스를 공개합니다. 카카오모먼트, 카카오 광고에 대한 실전 가이드.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "11분",
     author: "이지수",
     keywords: ["커뮤니티 빌딩", "제품 론칭", "사전 판매", "온라인 커뮤니티", "크리에이터 비즈니스"],
-  },
-  {
-    slug: "apple-podcast-10-creator-seo-strategy",
-    title: "Apple Podcast 상위 10위 달성한 크리에이터의 SEO 전략 케이스",
-    description: "Apple Podcast 특정 카테고리 상위 10위에 진입한 국내 크리에이터의 팟캐스트 SEO 전략과 성장 과정을 단계별로 분석합니다. Apple Podcast, 팟캐스트 SEO에 대한 실전 가이드.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "13분",
-    author: "박준영",
-    keywords: ["Apple Podcast", "팟캐스트 SEO", "팟캐스트 성장", "팟캐스트 마케팅", "크리에이터 전략"],
   },
 ];

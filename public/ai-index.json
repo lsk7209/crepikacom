@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-07-07"
+    "updated": "2026-07-08"
   },
   "tools": [
     {
@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 400,
+    "count": 401,
     "latest": [
+      {
+        "title": "소셜 증명 강화 후 신규 고객 전환율 45% 향상된 SaaS 케이스",
+        "url": "https://crepika.com/blog/45-saas",
+        "description": "소셜 증명(Social Proof) 요소를 체계적으로 강화한 이후 신규 고객 전환율이 45% 향상된 국내 SaaS 스타트업의 전략과 실행 과정을 분석합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "카카오모먼트 광고 최적화로 CPL 50% 절감한 교육 브랜드 케이스",
         "url": "https://crepika.com/blog/kakao-ads-optimization-cpl-50-brand",
@@ -524,12 +530,6 @@
         "title": "커뮤니티 플랫폼이 크리에이터 수익에 미치는 영향: Discord·Patreon 사례 분석",
         "url": "https://crepika.com/blog/community-creator-revenue-discordpatreon-case-analytics",
         "description": "Discord와 Patreon이 크리에이터 수익 구조에 미치는 실질적인 영향을 사례 중심으로 분석합니다. 플랫폼별 수익화 메커니즘과 국내 크리에이터에게 적합한 커뮤니티 전략을 제시합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "Z세대 마케팅 채널 우선순위 변화: TikTok에서 BeReal로, 다음은 어디인가",
-        "url": "https://crepika.com/blog/z-marketing-tiktok-bereal",
-        "description": "Z세대가 이동하는 소셜미디어 채널의 변화 흐름을 분석하고, 브랜드가 Z세대와 진정성 있게 연결하기 위한 차세대 마케팅 채널 전략을 제시합니다. Z세대 마케팅, BeReal에 대한 실전 가이드.",
         "date": "2026-05-18"
       }
     ]
