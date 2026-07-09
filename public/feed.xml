@@ -872,6 +872,15 @@
     <description>히트맵 데이터를 그냥 보는 것과 제대로 읽는 것은 다릅니다. 클릭·스크롤·무브 데이터를 실제 UX 개선으로 연결하는 5가지 분석 방법을 정리했습니다.</description>
   </item>
   <item>
+    <title>YouTube Community 게시물로 영상 없이 구독자 1000명 유지한 케이스</title>
+    <link>https://crepika.com/blog/youtube-community-1000</link>
+    <guid>https://crepika.com/blog/youtube-community-1000</guid>
+    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>case-study</category>
+    <description>YouTube Community 탭 게시물만으로 영상 업로드 없이도 구독자 1000명을 유지하고 채널 활성도를 높인 크리에이터의 전략을 공개합니다.</description>
+  </item>
+  <item>
     <title>브랜드 감사 후 리브랜딩으로 전환율 35% 올린 스타트업 케이스</title>
     <link>https://crepika.com/blog/brand-35</link>
     <guid>https://crepika.com/blog/brand-35</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>case-study</category>
     <description>CRO(전환율 최적화) 전략을 체계적으로 적용해 광고비를 절반으로 줄이면서 매출을 2배로 늘린 국내 쇼핑몰의 실전 케이스를 분석합니다. 전환율 최적화, CRO에 대한 실전 가이드.</description>
-  </item>
-  <item>
-    <title>소셜미디어 광고 효율 하락의 원인 분석: 광고 피로도와 대안 전략</title>
-    <link>https://crepika.com/blog/social-ads-analytics-ads-strategy</link>
-    <guid>https://crepika.com/blog/social-ads-analytics-ads-strategy</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>insights</category>
-    <description>소셜미디어 광고의 CPC 상승과 CTR 하락 원인을 분석하고, 광고 피로도를 극복하는 크리에이티브 전략과 대안 채널 다각화 방법을 제시합니다. 소셜미디어 광고 효율, 광고 피로도에 대한 실전 가이드.</description>
   </item>
 </channel>
 </rss>

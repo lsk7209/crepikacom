@@ -973,6 +973,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "youtube-community-1000",
+    title: "YouTube Community 게시물로 영상 없이 구독자 1000명 유지한 케이스",
+    description: "YouTube Community 탭 게시물만으로 영상 업로드 없이도 구독자 1000명을 유지하고 채널 활성도를 높인 크리에이터의 전략을 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "박준영",
+    keywords: ["YouTube Community", "유튜브 커뮤니티", "구독자 유지", "채널 활성화", "유튜브 전략"],
+  },
+  {
     slug: "brand-35",
     title: "브랜드 감사 후 리브랜딩으로 전환율 35% 올린 스타트업 케이스",
     description: "체계적인 브랜드 감사(Brand Audit)를 실행하고 전략적 리브랜딩을 통해 전환율을 35% 끌어올린 스타트업의 실제 과정과 인사이트를 공개합니다.",
