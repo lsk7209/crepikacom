@@ -30,6 +30,7 @@ const LEGACY_TOOL_REDIRECTS = {
   "instagram-spacer": "insta-spacer",
   "platform-compare": "utm-url-builder",
   "pricing-calculator": "adsense-rpm-calculator",
+  "analytics-dashboard": "engagement-rate-calculator",
   "revenue-calculator": "adsense-rpm-calculator",
   "sns-analytics": "ctr-calculator",
   "sns-calendar": "utm-url-builder",

@@ -39,6 +39,11 @@
       "permanent": true
     },
     {
+      "source": "/tools/analytics-dashboard",
+      "destination": "/tools/engagement-rate-calculator",
+      "permanent": true
+    },
+    {
       "source": "/tools/platform-compare",
       "destination": "/tools/utm-url-builder",
       "permanent": true
