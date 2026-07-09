@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 402,
+    "count": 403,
     "latest": [
+      {
+        "title": "ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스",
+        "url": "https://crepika.com/blog/elevenlabs-ai-80",
+        "description": "ElevenLabs AI 음성 생성 도구를 팟캐스트 제작에 도입해 비용을 80% 절감하면서도 청취자 반응을 유지한 실제 사례와 워크플로를 공개합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "국내 Threads 브랜드 계정 성공 케이스: 첫 달 팔로워 5000명 달성 전략",
         "url": "https://crepika.com/blog/threads-brand-follower-5000-strategy",
@@ -524,12 +530,6 @@
         "title": "Stable Diffusion vs Midjourney: 2026년 상업적 사용 현황과 선택 기준",
         "url": "https://crepika.com/blog/stable-diffusion-vs-midjourney-2026",
         "description": "2026년 기준 Stable Diffusion과 Midjourney의 이미지 품질, 라이선스, 상업적 활용도를 비교 분석합니다. 마케터와 크리에이터가 목적에 맞는 AI 이미지 도구를 선택하는 기준을 제시합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "네이버 스마트플레이스 vs 구글 비즈니스 프로필: 로컬 비즈니스 어디에 더 집중해야 하나",
-        "url": "https://crepika.com/blog/naver-vs-google",
-        "description": "로컬 비즈니스 오너를 위해 네이버 스마트플레이스와 구글 비즈니스 프로필의 검색 노출, 리뷰 영향력, 예약 전환 차이를 비교합니다. 국내 환경에 맞는 최적 운영 전략을 제시합니다.",
         "date": "2026-05-18"
       }
     ]

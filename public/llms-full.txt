@@ -118,9 +118,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 402
+Renderable blog posts: 403
 
 Latest posts:
+- [ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스](https://crepika.com/blog/elevenlabs-ai-80): ElevenLabs AI 음성 생성 도구를 팟캐스트 제작에 도입해 비용을 80% 절감하면서도 청취자 반응을 유지한 실제 사례와 워크플로를 공개합니다.
 - [국내 Threads 브랜드 계정 성공 케이스: 첫 달 팔로워 5000명 달성 전략](https://crepika.com/blog/threads-brand-follower-5000-strategy): 국내 B2C 브랜드가 Threads 계정을 개설한 첫 달 팔로워 5,000명을 달성한 콘텐츠 전략, 운영 팀 구성, 게시물 유형별 성과를 데이터로 분석한 케이스 스터디.
 - [소셜 증명 강화 후 신규 고객 전환율 45% 향상된 SaaS 케이스](https://crepika.com/blog/45-saas): 소셜 증명(Social Proof) 요소를 체계적으로 강화한 이후 신규 고객 전환율이 45% 향상된 국내 SaaS 스타트업의 전략과 실행 과정을 분석합니다.
 - [카카오모먼트 광고 최적화로 CPL 50% 절감한 교육 브랜드 케이스](https://crepika.com/blog/kakao-ads-optimization-cpl-50-brand): 카카오모먼트 광고 운영 전략을 체계적으로 최적화해 리드당 비용(CPL)을 50% 절감한 온라인 교육 브랜드의 실전 케이스를 공개합니다. 카카오모먼트, 카카오 광고에 대한 실전 가이드.
@@ -132,7 +133,6 @@ Latest posts:
 - [Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석](https://crepika.com/blog/perplexity-vs-chatgpt-content-tools-comparison-analytics): 콘텐츠 마케터와 블로거를 위한 Perplexity AI와 ChatGPT의 리서치 기능 비교 분석입니다. 정보 정확성, 출처 제공, 최신성, 실용성 측면에서 두 도구의 차이를 구체적으로 검토합니다.
 - [카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교](https://crepika.com/blog/kakao-ads-vs-google-ads-comparison): 카카오모먼트 광고와 구글 광고(GDN·검색광고)의 타겟팅 방식, CPC·CPM 비교, 전환율 차이를 분석합니다. 국내 소비자를 대상으로 한 디지털 광고 예산 배분 전략을 제시합니다.
 - [Stable Diffusion vs Midjourney: 2026년 상업적 사용 현황과 선택 기준](https://crepika.com/blog/stable-diffusion-vs-midjourney-2026): 2026년 기준 Stable Diffusion과 Midjourney의 이미지 품질, 라이선스, 상업적 활용도를 비교 분석합니다. 마케터와 크리에이터가 목적에 맞는 AI 이미지 도구를 선택하는 기준을 제시합니다.
-- [네이버 스마트플레이스 vs 구글 비즈니스 프로필: 로컬 비즈니스 어디에 더 집중해야 하나](https://crepika.com/blog/naver-vs-google): 로컬 비즈니스 오너를 위해 네이버 스마트플레이스와 구글 비즈니스 프로필의 검색 노출, 리뷰 영향력, 예약 전환 차이를 비교합니다. 국내 환경에 맞는 최적 운영 전략을 제시합니다.
 
 ## Index Resources
 
@@ -552,3 +552,4 @@ Updated: 2026-07-09
 - https://crepika.com/blog/kakao-ads-optimization-cpl-50-brand - 카카오모먼트 광고 최적화로 CPL 50% 절감한 교육 브랜드 케이스
 - https://crepika.com/blog/45-saas - 소셜 증명 강화 후 신규 고객 전환율 45% 향상된 SaaS 케이스
 - https://crepika.com/blog/threads-brand-follower-5000-strategy - 국내 Threads 브랜드 계정 성공 케이스: 첫 달 팔로워 5000명 달성 전략
+- https://crepika.com/blog/elevenlabs-ai-80 - ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스

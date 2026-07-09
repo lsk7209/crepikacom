@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "elevenlabs-ai-80",
+    title: "ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스",
+    description: "ElevenLabs AI 음성 생성 도구를 팟캐스트 제작에 도입해 비용을 80% 절감하면서도 청취자 반응을 유지한 실제 사례와 워크플로를 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["ElevenLabs", "AI 나레이션", "팟캐스트 제작", "AI 음성 생성", "콘텐츠 제작비 절감"],
+  },
+  {
     slug: "threads-brand-follower-5000-strategy",
     title: "국내 Threads 브랜드 계정 성공 케이스: 첫 달 팔로워 5000명 달성 전략",
     description: "국내 B2C 브랜드가 Threads 계정을 개설한 첫 달 팔로워 5,000명을 달성한 콘텐츠 전략, 운영 팀 구성, 게시물 유형별 성과를 데이터로 분석한 케이스 스터디.",
