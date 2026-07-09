@@ -973,6 +973,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "marketing-b2b-50",
+    title: "웨비나 마케팅으로 B2B 리드 50개 확보한 스타트업 케이스",
+    description: "웨비나를 B2B 마케팅 핵심 채널로 활용해 단 1회 웨비나에서 50개 이상의 고품질 리드를 확보한 스타트업의 기획부터 실행까지 전 과정을 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["웨비나 마케팅", "B2B 리드 확보", "B2B 마케팅", "웨비나 전략", "리드 제너레이션"],
+  },
+  {
     slug: "youtube-community-1000",
     title: "YouTube Community 게시물로 영상 없이 구독자 1000명 유지한 케이스",
     description: "YouTube Community 탭 게시물만으로 영상 업로드 없이도 구독자 1000명을 유지하고 채널 활성도를 높인 크리에이터의 전략을 공개합니다.",

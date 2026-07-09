@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 404
+Renderable blog posts: 405
 
 Latest posts:
 - [ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스](https://crepika.com/blog/elevenlabs-ai-80): ElevenLabs AI 음성 생성 도구를 팟캐스트 제작에 도입해 비용을 80% 절감하면서도 청취자 반응을 유지한 실제 사례와 워크플로를 공개합니다.
@@ -458,6 +458,7 @@ Updated: 2026-07-09
 - https://crepika.com/blog/performance-max-roas-4 - Performance Max 도입 후 ROAS 4배 개선된 온라인몰 케이스
 - https://crepika.com/blog/brand-35 - 브랜드 감사 후 리브랜딩으로 전환율 35% 올린 스타트업 케이스
 - https://crepika.com/blog/youtube-community-1000 - YouTube Community 게시물로 영상 없이 구독자 1000명 유지한 케이스
+- https://crepika.com/blog/marketing-b2b-50 - 웨비나 마케팅으로 B2B 리드 50개 확보한 스타트업 케이스
 - https://crepika.com/blog/5-practical-tips-ux - 히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트
 - https://crepika.com/blog/tips-5-automation - 세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일
 - https://crepika.com/blog/ads-roas-7-tips-ads - 리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정
