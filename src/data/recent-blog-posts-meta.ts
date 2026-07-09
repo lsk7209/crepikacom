@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "threads-brand-follower-5000-strategy",
+    title: "국내 Threads 브랜드 계정 성공 케이스: 첫 달 팔로워 5000명 달성 전략",
+    description: "국내 B2C 브랜드가 Threads 계정을 개설한 첫 달 팔로워 5,000명을 달성한 콘텐츠 전략, 운영 팀 구성, 게시물 유형별 성과를 데이터로 분석한 케이스 스터디.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "14분",
+    author: "김민혁",
+    keywords: ["Threads브랜드계정", "스레드마케팅전략", "Threads5000팔로워", "브랜드SNS운영", "Threads첫달성장"],
+  },
+  {
     slug: "45-saas",
     title: "소셜 증명 강화 후 신규 고객 전환율 45% 향상된 SaaS 케이스",
     description: "소셜 증명(Social Proof) 요소를 체계적으로 강화한 이후 신규 고객 전환율이 45% 향상된 국내 SaaS 스타트업의 전략과 실행 과정을 분석합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "11분",
     author: "김민혁",
     keywords: ["카카오모먼트", "카카오 광고", "CPL 절감", "리드 광고", "교육 마케팅"],
-  },
-  {
-    slug: "community-500",
-    title: "커뮤니티 빌딩으로 제품 출시 첫날 500개 판매한 케이스",
-    description: "500명 이상의 활성 커뮤니티를 단계별로 구축하는 핵심 전략과 운영 노하우를 담았습니다. 멤버 온보딩 설계, 지속적인 참여율 유지 방법, 운영 자동화까지 실제 성장한 국내외 커뮤니티 사례를 바탕으로 실행 방법을 정리했습니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "이지수",
-    keywords: ["커뮤니티 빌딩", "제품 론칭", "사전 판매", "온라인 커뮤니티", "크리에이터 비즈니스"],
   },
 ];

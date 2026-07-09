@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "threads-brand-follower-5000-strategy",
+    title: "국내 Threads 브랜드 계정 성공 케이스: 첫 달 팔로워 5000명 달성 전략",
+    description: "국내 B2C 브랜드가 Threads 계정을 개설한 첫 달 팔로워 5,000명을 달성한 콘텐츠 전략, 운영 팀 구성, 게시물 유형별 성과를 데이터로 분석한 케이스 스터디.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "14분",
+    author: "김민혁",
+    keywords: ["Threads브랜드계정", "스레드마케팅전략", "Threads5000팔로워", "브랜드SNS운영", "Threads첫달성장"],
+  },
+  {
     slug: "45-saas",
     title: "소셜 증명 강화 후 신규 고객 전환율 45% 향상된 SaaS 케이스",
     description: "소셜 증명(Social Proof) 요소를 체계적으로 강화한 이후 신규 고객 전환율이 45% 향상된 국내 SaaS 스타트업의 전략과 실행 과정을 분석합니다.",
