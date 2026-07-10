@@ -973,6 +973,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "google-ads-3",
+    title: "Google Ads 스마트 캠페인으로 소상공인 월 예약 3배 늘린 케이스",
+    description: "Google Ads 스마트 캠페인을 활용해 디지털 마케팅 경험 없는 소상공인이 월 예약 수를 3배로 늘린 실전 케이스와 설정 노하우를 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "10분",
+    author: "김민혁",
+    keywords: ["Google Ads", "스마트 캠페인", "소상공인 광고", "온라인 예약", "로컬 마케팅"],
+  },
+  {
     slug: "marketing-b2b-50",
     title: "웨비나 마케팅으로 B2B 리드 50개 확보한 스타트업 케이스",
     description: "웨비나를 B2B 마케팅 핵심 채널로 활용해 단 1회 웨비나에서 50개 이상의 고품질 리드를 확보한 스타트업의 기획부터 실행까지 전 과정을 공개합니다.",
