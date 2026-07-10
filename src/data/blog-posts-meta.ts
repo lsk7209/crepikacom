@@ -973,6 +973,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "marketing-automation-3",
+    title: "소상공인 마케팅 자동화 도입 성공 케이스: 혼자서 3개 채널 운영하기",
+    description: "마케팅 자동화 도구를 활용해 혼자서 블로그·인스타그램·이메일 3개 채널을 동시 운영하며 성과를 낸 소상공인의 실전 케이스를 공개합니다. 마케팅 자동화, 소상공인 마케팅에 대한 실전 가이드.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["마케팅 자동화", "소상공인 마케팅", "콘텐츠 자동화", "1인 마케팅", "멀티채널 운영"],
+  },
+  {
     slug: "analytics-keyword-2-blog",
     title: "경쟁사 분석으로 키워드 갭 찾아 트래픽 2배 늘린 블로그 케이스",
     description: "블로그 키워드 분석을 데이터로 체계화하는 구체적인 방법을 정리했습니다. Google Search Console과 Ahrefs를 활용해 전환율 높은 키워드를 발굴하고 포스트 구조에 반영하는 실전 과정을 단계별로 안내합니다.",
