@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 406
+Renderable blog posts: 407
 
 Latest posts:
 - [ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스](https://crepika.com/blog/elevenlabs-ai-80): ElevenLabs AI 음성 생성 도구를 팟캐스트 제작에 도입해 비용을 80% 절감하면서도 청취자 반응을 유지한 실제 사례와 워크플로를 공개합니다.

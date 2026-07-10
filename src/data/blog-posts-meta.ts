@@ -973,6 +973,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "analytics-keyword-2-blog",
+    title: "경쟁사 분석으로 키워드 갭 찾아 트래픽 2배 늘린 블로그 케이스",
+    description: "블로그 키워드 분석을 데이터로 체계화하는 구체적인 방법을 정리했습니다. Google Search Console과 Ahrefs를 활용해 전환율 높은 키워드를 발굴하고 포스트 구조에 반영하는 실전 과정을 단계별로 안내합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["키워드 갭 분석", "경쟁사 분석", "블로그 SEO", "트래픽 증대", "SEO 전략"],
+  },
+  {
     slug: "google-ads-3",
     title: "Google Ads 스마트 캠페인으로 소상공인 월 예약 3배 늘린 케이스",
     description: "Google Ads 스마트 캠페인을 활용해 디지털 마케팅 경험 없는 소상공인이 월 예약 수를 3배로 늘린 실전 케이스와 설정 노하우를 공개합니다.",
