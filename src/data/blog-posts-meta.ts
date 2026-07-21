@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "spotify-200",
+    title: "Spotify 팟캐스트로 강의 수강생 200명 모은 케이스: 팟캐스트 → 교육 퍼널",
+    description: "식물 재배 크리에이터가 Spotify 팟캐스트 청취자 1,847명을 기반으로 유료 강의 수강생 203명을 확보한 18개월 전략을 분석합니다. 에피소드 설계, 뉴스레터 전환, 웨비나 론칭까지 재현 가능한 퍼널 구조를 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["Spotify 팟캐스트 수익화", "팟캐스트 교육 퍼널", "온라인 강의 마케팅", "팟캐스트 청취자 전환", "크리에이터 비즈니스 모델"],
+  },
+  {
     slug: "elevenlabs-ai-80",
     title: "ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스",
     description: "ElevenLabs AI 음성 생성 도구를 팟캐스트 제작에 도입해 비용을 80% 절감하면서도 청취자 반응을 유지한 실제 사례와 워크플로를 공개합니다.",

@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-07-10"
+    "updated": "2026-07-21"
   },
   "tools": [
     {
@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 408,
+    "count": 409,
     "latest": [
+      {
+        "title": "Spotify 팟캐스트로 강의 수강생 200명 모은 케이스: 팟캐스트 → 교육 퍼널",
+        "url": "https://crepika.com/blog/spotify-200",
+        "description": "식물 재배 크리에이터가 Spotify 팟캐스트 청취자 1,847명을 기반으로 유료 강의 수강생 203명을 확보한 18개월 전략을 분석합니다. 에피소드 설계, 뉴스레터 전환, 웨비나 론칭까지 재현 가능한 퍼널 구조를 공개합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스",
         "url": "https://crepika.com/blog/elevenlabs-ai-80",
@@ -524,12 +530,6 @@
         "title": "카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교",
         "url": "https://crepika.com/blog/kakao-ads-vs-google-ads-comparison",
         "description": "카카오모먼트 광고와 구글 광고(GDN·검색광고)의 타겟팅 방식, CPC·CPM 비교, 전환율 차이를 분석합니다. 국내 소비자를 대상으로 한 디지털 광고 예산 배분 전략을 제시합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "Stable Diffusion vs Midjourney: 2026년 상업적 사용 현황과 선택 기준",
-        "url": "https://crepika.com/blog/stable-diffusion-vs-midjourney-2026",
-        "description": "2026년 기준 Stable Diffusion과 Midjourney의 이미지 품질, 라이선스, 상업적 활용도를 비교 분석합니다. 마케터와 크리에이터가 목적에 맞는 AI 이미지 도구를 선택하는 기준을 제시합니다.",
         "date": "2026-05-18"
       }
     ]

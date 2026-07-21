@@ -118,9 +118,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 408
+Renderable blog posts: 409
 
 Latest posts:
+- [Spotify 팟캐스트로 강의 수강생 200명 모은 케이스: 팟캐스트 → 교육 퍼널](https://crepika.com/blog/spotify-200): 식물 재배 크리에이터가 Spotify 팟캐스트 청취자 1,847명을 기반으로 유료 강의 수강생 203명을 확보한 18개월 전략을 분석합니다. 에피소드 설계, 뉴스레터 전환, 웨비나 론칭까지 재현 가능한 퍼널 구조를 공개합니다.
 - [ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스](https://crepika.com/blog/elevenlabs-ai-80): ElevenLabs AI 음성 생성 도구를 팟캐스트 제작에 도입해 비용을 80% 절감하면서도 청취자 반응을 유지한 실제 사례와 워크플로를 공개합니다.
 - [국내 Threads 브랜드 계정 성공 케이스: 첫 달 팔로워 5000명 달성 전략](https://crepika.com/blog/threads-brand-follower-5000-strategy): 국내 B2C 브랜드가 Threads 계정을 개설한 첫 달 팔로워 5,000명을 달성한 콘텐츠 전략, 운영 팀 구성, 게시물 유형별 성과를 데이터로 분석한 케이스 스터디.
 - [소셜 증명 강화 후 신규 고객 전환율 45% 향상된 SaaS 케이스](https://crepika.com/blog/45-saas): 소셜 증명(Social Proof) 요소를 체계적으로 강화한 이후 신규 고객 전환율이 45% 향상된 국내 SaaS 스타트업의 전략과 실행 과정을 분석합니다.
@@ -132,7 +133,6 @@ Latest posts:
 - [CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스](https://crepika.com/blog/capcut-reels-10-editing): CapCut 편집 기술만으로 인스타그램 릴스 조회수를 10배 이상 끌어올린 실제 크리에이터 케이스를 분석합니다. 적용 가능한 편집 전략을 상세히 소개합니다.
 - [Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석](https://crepika.com/blog/perplexity-vs-chatgpt-content-tools-comparison-analytics): 콘텐츠 마케터와 블로거를 위한 Perplexity AI와 ChatGPT의 리서치 기능 비교 분석입니다. 정보 정확성, 출처 제공, 최신성, 실용성 측면에서 두 도구의 차이를 구체적으로 검토합니다.
 - [카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교](https://crepika.com/blog/kakao-ads-vs-google-ads-comparison): 카카오모먼트 광고와 구글 광고(GDN·검색광고)의 타겟팅 방식, CPC·CPM 비교, 전환율 차이를 분석합니다. 국내 소비자를 대상으로 한 디지털 광고 예산 배분 전략을 제시합니다.
-- [Stable Diffusion vs Midjourney: 2026년 상업적 사용 현황과 선택 기준](https://crepika.com/blog/stable-diffusion-vs-midjourney-2026): 2026년 기준 Stable Diffusion과 Midjourney의 이미지 품질, 라이선스, 상업적 활용도를 비교 분석합니다. 마케터와 크리에이터가 목적에 맞는 AI 이미지 도구를 선택하는 기준을 제시합니다.
 
 ## Index Resources
 
@@ -146,4 +146,4 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-07-10
+Updated: 2026-07-21
