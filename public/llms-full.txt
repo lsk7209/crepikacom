@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 409
+Renderable blog posts: 410
 
 Latest posts:
 - [Spotify 팟캐스트로 강의 수강생 200명 모은 케이스: 팟캐스트 → 교육 퍼널](https://crepika.com/blog/spotify-200): 식물 재배 크리에이터가 Spotify 팟캐스트 청취자 1,847명을 기반으로 유료 강의 수강생 203명을 확보한 18개월 전략을 분석합니다. 에피소드 설계, 뉴스레터 전환, 웨비나 론칭까지 재현 가능한 퍼널 구조를 공개합니다.
@@ -462,6 +462,7 @@ Updated: 2026-07-21
 - https://crepika.com/blog/google-ads-3 - Google Ads 스마트 캠페인으로 소상공인 월 예약 3배 늘린 케이스
 - https://crepika.com/blog/analytics-keyword-2-blog - 경쟁사 분석으로 키워드 갭 찾아 트래픽 2배 늘린 블로그 케이스
 - https://crepika.com/blog/marketing-automation-3 - 소상공인 마케팅 자동화 도입 성공 케이스: 혼자서 3개 채널 운영하기
+- https://crepika.com/blog/instagram-close-friends-300 - 인스타그램 Close Friends 기능으로 멤버십 월 구독자 300명 모은 케이스
 - https://crepika.com/blog/5-practical-tips-ux - 히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트
 - https://crepika.com/blog/tips-5-automation - 세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일
 - https://crepika.com/blog/ads-roas-7-tips-ads - 리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정

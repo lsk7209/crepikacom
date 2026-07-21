@@ -983,6 +983,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "instagram-close-friends-300",
+    title: "인스타그램 Close Friends 기능으로 멤버십 월 구독자 300명 모은 케이스",
+    description: "인스타그램 Close Friends 기능을 멤버십 채널로 활용해 월 유료 구독자 300명을 모집한 크리에이터의 전략과 수익화 구조를 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["인스타그램 Close Friends", "인스타그램 멤버십", "유료 구독", "크리에이터 수익화", "클로즈프렌즈"],
+  },
+  {
     slug: "marketing-automation-3",
     title: "소상공인 마케팅 자동화 도입 성공 케이스: 혼자서 3개 채널 운영하기",
     description: "마케팅 자동화 도구를 활용해 혼자서 블로그·인스타그램·이메일 3개 채널을 동시 운영하며 성과를 낸 소상공인의 실전 케이스를 공개합니다. 마케팅 자동화, 소상공인 마케팅에 대한 실전 가이드.",
