@@ -983,6 +983,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "brand-1",
+    title: "소셜 리스닝으로 경쟁사 취약점을 발견해 시장 점유율 높인 브랜드 케이스",
+    description: "소셜 리스닝 도구를 활용해 경쟁사의 고객 불만을 분석하고 차별화 전략을 구사해 시장 점유율을 높인 브랜드의 실전 케이스를 분석합니다. 소셜 리스닝, 경쟁사 분석에 대한 실전 가이드.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["소셜 리스닝", "경쟁사 분석", "시장 점유율", "브랜드 전략", "고객 인사이트"],
+  },
+  {
     slug: "instagram-close-friends-300",
     title: "인스타그램 Close Friends 기능으로 멤버십 월 구독자 300명 모은 케이스",
     description: "인스타그램 Close Friends 기능을 멤버십 채널로 활용해 월 유료 구독자 300명을 모집한 크리에이터의 전략과 수익화 구조를 공개합니다.",
