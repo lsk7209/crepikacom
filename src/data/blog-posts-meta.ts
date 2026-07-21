@@ -983,6 +983,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "seo-advanced-optimization-google-50-keyword",
+    title: "티스토리 SEO 심화 최적화 후 구글 상위 50개 키워드 달성 케이스",
+    description: "티스토리 블로그 SEO 심화 최적화를 단계적으로 적용해 구글 검색 상위 노출 키워드 50개를 달성한 블로거의 전략과 실행 과정을 공개합니다. 티스토리 SEO, 구글 상위 노출에 대한 실전 가이드.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["티스토리 SEO", "구글 상위 노출", "블로그 SEO", "키워드 최적화", "블로그 트래픽"],
+  },
+  {
     slug: "brand-1",
     title: "소셜 리스닝으로 경쟁사 취약점을 발견해 시장 점유율 높인 브랜드 케이스",
     description: "소셜 리스닝 도구를 활용해 경쟁사의 고객 불만을 분석하고 차별화 전략을 구사해 시장 점유율을 높인 브랜드의 실전 케이스를 분석합니다. 소셜 리스닝, 경쟁사 분석에 대한 실전 가이드.",
