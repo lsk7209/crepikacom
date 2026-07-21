@@ -3,7 +3,7 @@ name: Auto Publish Blog Post
 on:
   schedule:
     # Check frequently; publish-once.mjs enforces scheduledDate and the five-hour cadence.
-    - cron: "*/15 * * * *"
+    - cron: "0 */5 * * *"
   workflow_dispatch:
 
 permissions:

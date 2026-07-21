@@ -3,7 +3,7 @@ name: Live Cost Watch
 on:
   schedule:
     # Daily at 09:20 KST. GitHub cron uses UTC.
-    - cron: "20 0 * * *"
+    - cron: "20 0 * * 1"
   workflow_dispatch:
 
 permissions:

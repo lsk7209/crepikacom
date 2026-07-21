@@ -9,7 +9,7 @@ on:
       - develop
   schedule:
     # Daily at 09:10 KST. GitHub cron uses UTC.
-    - cron: "10 0 * * *"
+    - cron: "10 0 * * 1"
   workflow_dispatch:
 
 permissions:
