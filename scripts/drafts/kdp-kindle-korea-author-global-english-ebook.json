@@ -47,18 +47,8 @@
     "conclusion": "아마존 KDP를 통한 글로벌 eBook 출판은 한국 작가에게 실현 가능한 패시브 인컴 모델입니다. 초기 장벽인 W-8BEN 세금 처리, Payoneer 정산 설정, 영어 원고 준비를 해결하면 이후 과정은 국적에 상관없이 동일합니다. 카테고리 전략과 키워드 최적화로 아마존 검색 노출을 확보하고, KDP Select의 프로모션 도구로 초기 판매 모멘텀을 만들면 자연 판매가 시작됩니다. 첫 번째 책에서 수익보다 경험을 얻고, 두 번째 책부터 본격적인 수익화를 기대하는 장기적 관점이 KDP 성공의 핵심입니다. KDP를 통한 글로벌 영어 전자책 출판은 한국 저자에게 새로운 수익 창출과 글로벌 영향력 확장의 기회를 제공합니다. 세금 최적화부터 카테고리 전략, 마케팅까지 체계적으로 준비하고, K-저자로서의 독특한 관점을 강점으로 활용하세요. 오늘 KDP 계정을 개설하고 첫 번째 영어 전자책 프로젝트를 시작해보세요."
   },
   "relatedTools": [
-    {
-      "name": "Amazon KDP",
-      "url": "https://kdp.amazon.com"
-    },
-    {
-      "name": "Payoneer",
-      "url": "https://www.payoneer.com"
-    },
-    {
-      "name": "Publisher Rocket",
-      "url": "https://publisherrocket.com"
-    }
+    "article-word-count-planner",
+    "publishing-pace-calculator"
   ],
   "relatedPosts": [
     {

@@ -47,18 +47,8 @@
     "conclusion": "eBook 첫 100권 판매는 단 하나의 채널로 달성되기보다 여러 채널의 복합적인 효과로 이루어집니다. 이메일 리스트, SNS·블로그, 팟캐스트 출연, 유튜브, 커뮤니티, KDP 광고 7가지 채널 중 본인의 강점과 자원에 맞는 3~4개를 우선 실행하는 것이 현실적입니다. 출간 전 2~3개월부터 마케팅 활동을 시작해 이메일 리스트를 쌓고, 출간 당일 집중 홍보, 출간 후 꾸준한 콘텐츠 마케팅 순서로 진행하면 100권 달성 가능성이 크게 높아집니다. 첫 100권이 쌓이면 알고리즘이 움직이기 시작하고, 그 이후는 훨씬 수월해집니다. 첫 100권 판매는 작가로서의 여정에서 중요한 이정표입니다. 7가지 마케팅 채널을 체계적으로 활용하고, 각 채널의 성과를 데이터로 추적하면서 가장 효과적인 채널에 집중하세요. 꾸준한 마케팅 노력과 독자와의 진정성 있는 소통이 장기적인 이북 판매 성공의 기반입니다."
   },
   "relatedTools": [
-    {
-      "name": "Amazon KDP",
-      "url": "https://kdp.amazon.com"
-    },
-    {
-      "name": "Mailchimp",
-      "url": "https://mailchimp.com"
-    },
-    {
-      "name": "ConvertKit",
-      "url": "https://convertkit.com"
-    }
+    "publishing-calendar-planner",
+    "content-repurpose-planner"
   ],
   "relatedPosts": [
     {

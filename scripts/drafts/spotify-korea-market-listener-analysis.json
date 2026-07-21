@@ -47,14 +47,8 @@
     "conclusion": "Spotify 한국 시장은 절대 규모보다 사용자 품질과 성장 가능성이 주목받아야 하는 시장입니다. 150만~200만 명 규모의 MAU이지만, 이들은 20~35세의 고소비 성향, 글로벌 콘텐츠 친화적, 팟캐스트 소비 급성장이라는 특성을 가지고 있습니다. 크리에이터라면 글로벌 배포 가능성과 낮은 경쟁 밀도를 활용해 Spotify 기반 팟캐스트를 성장시킬 기회가 있습니다. 브랜드라면 아직 경쟁자가 적은 Spotify 광고 채널을 활용해 20~35세 타겟 인지도 구축에 앞설 수 있습니다. 한국 Spotify 시장이 성숙해지기 전, 지금이 선점 기회입니다.\n\n크리에이터와 브랜드 모두에게 지금 Spotify 한국 시장에 진입하는 것은 선점 전략입니다. 사용자 기반이 성장하기 전에 콘텐츠와 광고 채널을 확립해두면, 시장이 성숙했을 때 이미 쌓인 청취자 기반과 인지도가 강력한 자산이 됩니다.\n\n한국 Spotify 시장은 2026년을 기점으로 본격적인 성장 국면에 접어들고 있습니다. 청취자 분석 데이터를 바탕으로 한 전략적 콘텐츠 기획이 이 시장에서 성공하는 핵심 열쇠입니다. 지금이 바로 한국 Spotify 생태계에서 자신만의 자리를 확보할 최적의 타이밍입니다."
   },
   "relatedTools": [
-    {
-      "name": "Spotify for Artists",
-      "url": "https://artists.spotify.com"
-    },
-    {
-      "name": "Spotify for Podcasters",
-      "url": "https://podcasters.spotify.com"
-    }
+    "engagement-rate-calculator",
+    "content-roi-calculator"
   ],
   "relatedPosts": [
     {

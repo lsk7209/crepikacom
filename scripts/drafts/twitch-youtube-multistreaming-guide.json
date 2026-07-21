@@ -47,18 +47,8 @@
     "conclusion": "트위치와 유튜브 동시 송출은 단일 플랫폼 한계를 극복하고 더 넓은 시청자층에 도달하는 효과적인 전략입니다. Twitch의 2023년 정책 변경으로 Affiliate·Partner 모두 동시 송출이 허용된 지금이 멀티스트리밍을 시작하기 적절한 시점입니다. OBS Studio 내장 멀티출력 기능으로 무료로 시작하거나, Restream.io 같은 서비스로 대역폭 부담 없이 시작할 수 있습니다. 화질 설정은 두 플랫폼의 공통 적정 범위인 4,500~5,000 Kbps로 통일하고, 채팅 통합 관리 도구로 운영 편의를 높이면 멀티스트리밍의 장점을 최대한 활용할 수 있습니다. 멀티스트리밍은 더 넓은 시청자층에게 콘텐츠를 전달하는 강력한 도구이지만, 기술적 준비와 전략적 사고가 선행되어야 합니다. Twitch와 YouTube의 각 플랫폼 특성을 이해하고, 꾸준한 방송과 데이터 분석을 통해 자신만의 최적화된 멀티스트리밍 전략을 구축해나가세요. 지금 당장 무료 Restream 계정을 만들고 테스트 방송부터 시작해보세요."
   },
   "relatedTools": [
-    {
-      "name": "OBS Studio",
-      "url": "https://obsproject.com"
-    },
-    {
-      "name": "Restream.io",
-      "url": "https://restream.io"
-    },
-    {
-      "name": "StreamElements",
-      "url": "https://streamelements.com"
-    }
+    "publishing-calendar-planner",
+    "content-repurpose-planner"
   ],
   "relatedPosts": [
     {
