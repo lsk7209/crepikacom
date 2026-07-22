@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>구글 Discover로 유입된 독자의 뉴스레터 전환율 분석 케이스</title>
+    <link>https://crepika.com/blog/google-discover-analytics</link>
+    <guid>https://crepika.com/blog/google-discover-analytics</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>case-study</category>
+    <description>구글 Discover 유입 독자와 일반 검색 유입 독자의 뉴스레터 전환율을 비교 분석하고, Discover 트래픽을 구독자로 전환하는 전략을 공개합니다.</description>
+  </item>
+  <item>
     <title>고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스</title>
     <link>https://crepika.com/blog/ads-2</link>
     <guid>https://crepika.com/blog/ads-2</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>tips</category>
     <description>마케팅 자동화 도구로 반복 업무를 획기적으로 줄이는 5가지 실전 팁입니다. Make.com과 Zapier, HubSpot을 활용한 이메일 시퀀스, SNS 예약 발행, 리드 관리 자동화 흐름을 단계별로 상세히 설명합니다.</description>
-  </item>
-  <item>
-    <title>히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트</title>
-    <link>https://crepika.com/blog/5-practical-tips-ux</link>
-    <guid>https://crepika.com/blog/5-practical-tips-ux</guid>
-    <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>김민혁</dc:creator>
-    <category>tips</category>
-    <description>히트맵 데이터를 그냥 보는 것과 제대로 읽는 것은 다릅니다. 클릭·스크롤·무브 데이터를 실제 UX 개선으로 연결하는 5가지 분석 방법을 정리했습니다.</description>
   </item>
 </channel>
 </rss>
