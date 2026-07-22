@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ahrefs-analytics-20-blog-6",
+    title: "Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스",
+    description: "Ahrefs를 활용한 체계적인 백링크 분석과 링크 빌딩 전략으로 블로그 도메인 레이팅(DR)을 6개월 만에 20포인트 올린 실전 케이스를 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["Ahrefs 백링크", "도메인 레이팅", "링크 빌딩", "블로그 SEO", "백링크 전략"],
+  },
+  {
     slug: "discord-community-200-saas",
     title: "Discord 커뮤니티 운영으로 제품 개선 아이디어 200개 수집한 SaaS 케이스",
     description: "Discord 커뮤니티를 제품 피드백 채널로 체계화해 208개 개선 아이디어를 수집하고 유료 전환율을 3.8%에서 6.2%로 끌어올린 SaaS 스타트업의 커뮤니티 주도 성장 전략을 상세히 분석합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "13분",
     author: "김민혁",
     keywords: ["Spotify 팟캐스트 수익화", "팟캐스트 교육 퍼널", "온라인 강의 마케팅", "팟캐스트 청취자 전환", "크리에이터 비즈니스 모델"],
-  },
-  {
-    slug: "elevenlabs-ai-80",
-    title: "ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스",
-    description: "ElevenLabs AI 음성 생성 도구를 팟캐스트 제작에 도입해 비용을 80% 절감하면서도 청취자 반응을 유지한 실제 사례와 워크플로를 공개합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "김민혁",
-    keywords: ["ElevenLabs", "AI 나레이션", "팟캐스트 제작", "AI 음성 생성", "콘텐츠 제작비 절감"],
   },
 ];

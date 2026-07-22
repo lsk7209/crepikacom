@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 413,
+    "count": 414,
     "latest": [
+      {
+        "title": "Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스",
+        "url": "https://crepika.com/blog/ahrefs-analytics-20-blog-6",
+        "description": "Ahrefs를 활용한 체계적인 백링크 분석과 링크 빌딩 전략으로 블로그 도메인 레이팅(DR)을 6개월 만에 20포인트 올린 실전 케이스를 공개합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "Discord 커뮤니티 운영으로 제품 개선 아이디어 200개 수집한 SaaS 케이스",
         "url": "https://crepika.com/blog/discord-community-200-saas",
@@ -524,12 +530,6 @@
         "title": "CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스",
         "url": "https://crepika.com/blog/capcut-reels-10-editing",
         "description": "CapCut 편집 기술만으로 인스타그램 릴스 조회수를 10배 이상 끌어올린 실제 크리에이터 케이스를 분석합니다. 적용 가능한 편집 전략을 상세히 소개합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석",
-        "url": "https://crepika.com/blog/perplexity-vs-chatgpt-content-tools-comparison-analytics",
-        "description": "콘텐츠 마케터와 블로거를 위한 Perplexity AI와 ChatGPT의 리서치 기능 비교 분석입니다. 정보 정확성, 출처 제공, 최신성, 실용성 측면에서 두 도구의 차이를 구체적으로 검토합니다.",
         "date": "2026-05-18"
       }
     ]

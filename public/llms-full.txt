@@ -118,9 +118,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 413
+Renderable blog posts: 414
 
 Latest posts:
+- [Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스](https://crepika.com/blog/ahrefs-analytics-20-blog-6): Ahrefs를 활용한 체계적인 백링크 분석과 링크 빌딩 전략으로 블로그 도메인 레이팅(DR)을 6개월 만에 20포인트 올린 실전 케이스를 공개합니다.
 - [Discord 커뮤니티 운영으로 제품 개선 아이디어 200개 수집한 SaaS 케이스](https://crepika.com/blog/discord-community-200-saas): Discord 커뮤니티를 제품 피드백 채널로 체계화해 208개 개선 아이디어를 수집하고 유료 전환율을 3.8%에서 6.2%로 끌어올린 SaaS 스타트업의 커뮤니티 주도 성장 전략을 상세히 분석합니다.
 - [Spotify 팟캐스트로 강의 수강생 200명 모은 케이스: 팟캐스트 → 교육 퍼널](https://crepika.com/blog/spotify-200): 식물 재배 크리에이터가 Spotify 팟캐스트 청취자 1,847명을 기반으로 유료 강의 수강생 203명을 확보한 18개월 전략을 분석합니다. 에피소드 설계, 뉴스레터 전환, 웨비나 론칭까지 재현 가능한 퍼널 구조를 공개합니다.
 - [ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스](https://crepika.com/blog/elevenlabs-ai-80): ElevenLabs AI 음성 생성 도구를 팟캐스트 제작에 도입해 비용을 80% 절감하면서도 청취자 반응을 유지한 실제 사례와 워크플로를 공개합니다.
@@ -132,7 +133,6 @@ Latest posts:
 - [Pinterest로 이커머스 월 매출 1000만 원 늘린 핸드메이드 브랜드 케이스](https://crepika.com/blog/pinterest-1000-brand): Pinterest 쇼핑 기능과 SEO를 활용해 핸드메이드 브랜드가 6개월 만에 월 매출을 1,000만 원 추가로 늘린 실제 전략을 공개합니다. 카탈로그 연동, 프로덕트 핀, 키워드 최적화 과정을 단계별로 분석합니다.
 - [Stable Diffusion으로 SNS 콘텐츠 제작비 90% 절감한 브랜드 케이스](https://crepika.com/blog/stable-diffusion-sns-content-90-brand): AI 이미지 생성 도구 Stable Diffusion을 도입해 SNS 콘텐츠 제작 비용을 90% 절감한 국내 브랜드의 실전 케이스를 상세히 분석합니다.
 - [CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스](https://crepika.com/blog/capcut-reels-10-editing): CapCut 편집 기술만으로 인스타그램 릴스 조회수를 10배 이상 끌어올린 실제 크리에이터 케이스를 분석합니다. 적용 가능한 편집 전략을 상세히 소개합니다.
-- [Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석](https://crepika.com/blog/perplexity-vs-chatgpt-content-tools-comparison-analytics): 콘텐츠 마케터와 블로거를 위한 Perplexity AI와 ChatGPT의 리서치 기능 비교 분석입니다. 정보 정확성, 출처 제공, 최신성, 실용성 측면에서 두 도구의 차이를 구체적으로 검토합니다.
 
 ## Index Resources
 
@@ -563,3 +563,4 @@ Updated: 2026-07-22
 - https://crepika.com/blog/elevenlabs-ai-80 - ElevenLabs AI 나레이션으로 팟캐스트 제작비 80% 절감한 케이스
 - https://crepika.com/blog/spotify-200 - Spotify 팟캐스트로 강의 수강생 200명 모은 케이스: 팟캐스트 → 교육 퍼널
 - https://crepika.com/blog/discord-community-200-saas - Discord 커뮤니티 운영으로 제품 개선 아이디어 200개 수집한 SaaS 케이스
+- https://crepika.com/blog/ahrefs-analytics-20-blog-6 - Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스
