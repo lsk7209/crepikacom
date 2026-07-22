@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스</title>
+    <link>https://crepika.com/blog/ads-2</link>
+    <guid>https://crepika.com/blog/ads-2</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>김민혁</dc:creator>
+    <category>case-study</category>
+    <description>잘못된 고객 페르소나가 광고 전환율을 낮추는 이유를 실제 스타트업 케이스로 분석합니다. 데이터 기반 페르소나 재구축과 채널 믹스 재조정으로 전환율 2배 향상을 달성한 방법을 공개합니다.</description>
+  </item>
+  <item>
     <title>Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스</title>
     <link>https://crepika.com/blog/ahrefs-analytics-20-blog-6</link>
     <guid>https://crepika.com/blog/ahrefs-analytics-20-blog-6</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>tips</category>
     <description>히트맵 데이터를 그냥 보는 것과 제대로 읽는 것은 다릅니다. 클릭·스크롤·무브 데이터를 실제 UX 개선으로 연결하는 5가지 분석 방법을 정리했습니다.</description>
-  </item>
-  <item>
-    <title>티스토리 SEO 심화 최적화 후 구글 상위 50개 키워드 달성 케이스</title>
-    <link>https://crepika.com/blog/seo-advanced-optimization-google-50-keyword</link>
-    <guid>https://crepika.com/blog/seo-advanced-optimization-google-50-keyword</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>김민혁</dc:creator>
-    <category>case-study</category>
-    <description>티스토리 블로그 SEO 심화 최적화를 단계적으로 적용해 구글 검색 상위 노출 키워드 50개를 달성한 블로거의 전략과 실행 과정을 공개합니다. 티스토리 SEO, 구글 상위 노출에 대한 실전 가이드.</description>
   </item>
 </channel>
 </rss>

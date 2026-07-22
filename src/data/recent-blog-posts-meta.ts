@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ads-2",
+    title: "고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스",
+    description: "잘못된 고객 페르소나가 광고 전환율을 낮추는 이유를 실제 스타트업 케이스로 분석합니다. 데이터 기반 페르소나 재구축과 채널 믹스 재조정으로 전환율 2배 향상을 달성한 방법을 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["고객 페르소나", "광고 타겟팅", "광고 전환율", "마케팅 전략", "디지털 광고 최적화"],
+  },
+  {
     slug: "ahrefs-analytics-20-blog-6",
     title: "Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스",
     description: "Ahrefs를 활용한 체계적인 백링크 분석과 링크 빌딩 전략으로 블로그 도메인 레이팅(DR)을 6개월 만에 20포인트 올린 실전 케이스를 공개합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "13분",
     author: "박준영",
     keywords: ["Discord 커뮤니티 SaaS", "제품 피드백 수집", "커뮤니티 주도 성장 PLG", "Discord 자동화 제품 개선", "SaaS 유료 전환율 향상"],
-  },
-  {
-    slug: "spotify-200",
-    title: "Spotify 팟캐스트로 강의 수강생 200명 모은 케이스: 팟캐스트 → 교육 퍼널",
-    description: "식물 재배 크리에이터가 Spotify 팟캐스트 청취자 1,847명을 기반으로 유료 강의 수강생 203명을 확보한 18개월 전략을 분석합니다. 에피소드 설계, 뉴스레터 전환, 웨비나 론칭까지 재현 가능한 퍼널 구조를 공개합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "13분",
-    author: "김민혁",
-    keywords: ["Spotify 팟캐스트 수익화", "팟캐스트 교육 퍼널", "온라인 강의 마케팅", "팟캐스트 청취자 전환", "크리에이터 비즈니스 모델"],
   },
 ];

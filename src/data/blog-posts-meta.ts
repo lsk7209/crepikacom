@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ads-2",
+    title: "고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스",
+    description: "잘못된 고객 페르소나가 광고 전환율을 낮추는 이유를 실제 스타트업 케이스로 분석합니다. 데이터 기반 페르소나 재구축과 채널 믹스 재조정으로 전환율 2배 향상을 달성한 방법을 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["고객 페르소나", "광고 타겟팅", "광고 전환율", "마케팅 전략", "디지털 광고 최적화"],
+  },
+  {
     slug: "ahrefs-analytics-20-blog-6",
     title: "Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스",
     description: "Ahrefs를 활용한 체계적인 백링크 분석과 링크 빌딩 전략으로 블로그 도메인 레이팅(DR)을 6개월 만에 20포인트 올린 실전 케이스를 공개합니다.",

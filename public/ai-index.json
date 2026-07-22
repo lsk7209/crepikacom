@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 414,
+    "count": 415,
     "latest": [
+      {
+        "title": "고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스",
+        "url": "https://crepika.com/blog/ads-2",
+        "description": "잘못된 고객 페르소나가 광고 전환율을 낮추는 이유를 실제 스타트업 케이스로 분석합니다. 데이터 기반 페르소나 재구축과 채널 믹스 재조정으로 전환율 2배 향상을 달성한 방법을 공개합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스",
         "url": "https://crepika.com/blog/ahrefs-analytics-20-blog-6",
@@ -524,12 +530,6 @@
         "title": "Stable Diffusion으로 SNS 콘텐츠 제작비 90% 절감한 브랜드 케이스",
         "url": "https://crepika.com/blog/stable-diffusion-sns-content-90-brand",
         "description": "AI 이미지 생성 도구 Stable Diffusion을 도입해 SNS 콘텐츠 제작 비용을 90% 절감한 국내 브랜드의 실전 케이스를 상세히 분석합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "CapCut으로 릴스 조회수 10배 올린 편집 기술 케이스",
-        "url": "https://crepika.com/blog/capcut-reels-10-editing",
-        "description": "CapCut 편집 기술만으로 인스타그램 릴스 조회수를 10배 이상 끌어올린 실제 크리에이터 케이스를 분석합니다. 적용 가능한 편집 전략을 상세히 소개합니다.",
         "date": "2026-05-18"
       }
     ]
