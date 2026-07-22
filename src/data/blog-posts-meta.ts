@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "discord-community-200-saas",
+    title: "Discord 커뮤니티 운영으로 제품 개선 아이디어 200개 수집한 SaaS 케이스",
+    description: "Discord 커뮤니티를 제품 피드백 채널로 체계화해 208개 개선 아이디어를 수집하고 유료 전환율을 3.8%에서 6.2%로 끌어올린 SaaS 스타트업의 커뮤니티 주도 성장 전략을 상세히 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "박준영",
+    keywords: ["Discord 커뮤니티 SaaS", "제품 피드백 수집", "커뮤니티 주도 성장 PLG", "Discord 자동화 제품 개선", "SaaS 유료 전환율 향상"],
+  },
+  {
     slug: "spotify-200",
     title: "Spotify 팟캐스트로 강의 수강생 200명 모은 케이스: 팟캐스트 → 교육 퍼널",
     description: "식물 재배 크리에이터가 Spotify 팟캐스트 청취자 1,847명을 기반으로 유료 강의 수강생 203명을 확보한 18개월 전략을 분석합니다. 에피소드 설계, 뉴스레터 전환, 웨비나 론칭까지 재현 가능한 퍼널 구조를 공개합니다.",

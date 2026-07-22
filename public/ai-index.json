@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-07-21"
+    "updated": "2026-07-22"
   },
   "tools": [
     {
@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 412,
+    "count": 413,
     "latest": [
+      {
+        "title": "Discord 커뮤니티 운영으로 제품 개선 아이디어 200개 수집한 SaaS 케이스",
+        "url": "https://crepika.com/blog/discord-community-200-saas",
+        "description": "Discord 커뮤니티를 제품 피드백 채널로 체계화해 208개 개선 아이디어를 수집하고 유료 전환율을 3.8%에서 6.2%로 끌어올린 SaaS 스타트업의 커뮤니티 주도 성장 전략을 상세히 분석합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "Spotify 팟캐스트로 강의 수강생 200명 모은 케이스: 팟캐스트 → 교육 퍼널",
         "url": "https://crepika.com/blog/spotify-200",
@@ -524,12 +530,6 @@
         "title": "Perplexity vs ChatGPT: 콘텐츠 리서치 도구로서의 실용성 비교 분석",
         "url": "https://crepika.com/blog/perplexity-vs-chatgpt-content-tools-comparison-analytics",
         "description": "콘텐츠 마케터와 블로거를 위한 Perplexity AI와 ChatGPT의 리서치 기능 비교 분석입니다. 정보 정확성, 출처 제공, 최신성, 실용성 측면에서 두 도구의 차이를 구체적으로 검토합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "카카오 광고 vs 구글 광고: 국내 소비자 대상 타겟팅 효율 비교",
-        "url": "https://crepika.com/blog/kakao-ads-vs-google-ads-comparison",
-        "description": "카카오모먼트 광고와 구글 광고(GDN·검색광고)의 타겟팅 방식, CPC·CPM 비교, 전환율 차이를 분석합니다. 국내 소비자를 대상으로 한 디지털 광고 예산 배분 전략을 제시합니다.",
         "date": "2026-05-18"
       }
     ]

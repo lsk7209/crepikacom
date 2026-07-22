@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Discord 커뮤니티 운영으로 제품 개선 아이디어 200개 수집한 SaaS 케이스</title>
+    <link>https://crepika.com/blog/discord-community-200-saas</link>
+    <guid>https://crepika.com/blog/discord-community-200-saas</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>case-study</category>
+    <description>Discord 커뮤니티를 제품 피드백 채널로 체계화해 208개 개선 아이디어를 수집하고 유료 전환율을 3.8%에서 6.2%로 끌어올린 SaaS 스타트업의 커뮤니티 주도 성장 전략을 상세히 분석합니다.</description>
+  </item>
+  <item>
     <title>Spotify 팟캐스트로 강의 수강생 200명 모은 케이스: 팟캐스트 → 교육 퍼널</title>
     <link>https://crepika.com/blog/spotify-200</link>
     <guid>https://crepika.com/blog/spotify-200</guid>
@@ -897,15 +906,6 @@
     <dc:creator>이지수</dc:creator>
     <category>case-study</category>
     <description>소셜 리스닝 도구를 활용해 경쟁사의 고객 불만을 분석하고 차별화 전략을 구사해 시장 점유율을 높인 브랜드의 실전 케이스를 분석합니다. 소셜 리스닝, 경쟁사 분석에 대한 실전 가이드.</description>
-  </item>
-  <item>
-    <title>인스타그램 Close Friends 기능으로 멤버십 월 구독자 300명 모은 케이스</title>
-    <link>https://crepika.com/blog/instagram-close-friends-300</link>
-    <guid>https://crepika.com/blog/instagram-close-friends-300</guid>
-    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>case-study</category>
-    <description>인스타그램 Close Friends 기능을 멤버십 채널로 활용해 월 유료 구독자 300명을 모집한 크리에이터의 전략과 수익화 구조를 공개합니다.</description>
   </item>
 </channel>
 </rss>
