@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "linkedin-b2b-20",
+    title: "LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스",
+    description: "중소 B2B 서비스 기업이 LinkedIn 뉴스레터 단일 채널로 월 20건의 안정적인 리드를 12개월 연속 달성한 실제 운영 방법과 수치를 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["링크드인 뉴스레터", "B2B 리드 창출", "링크드인 마케팅", "뉴스레터 케이스", "B2B 마케팅 사례", "링크드인 구독자"],
+  },
+  {
     slug: "google-discover-analytics",
     title: "구글 Discover로 유입된 독자의 뉴스레터 전환율 분석 케이스",
     description: "구글 Discover 유입 독자와 일반 검색 유입 독자의 뉴스레터 전환율을 비교 분석하고, Discover 트래픽을 구독자로 전환하는 전략을 공개합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "11분",
     author: "김민혁",
     keywords: ["고객 페르소나", "광고 타겟팅", "광고 전환율", "마케팅 전략", "디지털 광고 최적화"],
-  },
-  {
-    slug: "ahrefs-analytics-20-blog-6",
-    title: "Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스",
-    description: "Ahrefs를 활용한 체계적인 백링크 분석과 링크 빌딩 전략으로 블로그 도메인 레이팅(DR)을 6개월 만에 20포인트 올린 실전 케이스를 공개합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "이지수",
-    keywords: ["Ahrefs 백링크", "도메인 레이팅", "링크 빌딩", "블로그 SEO", "백링크 전략"],
   },
 ];

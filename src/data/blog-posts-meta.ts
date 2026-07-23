@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "linkedin-b2b-20",
+    title: "LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스",
+    description: "중소 B2B 서비스 기업이 LinkedIn 뉴스레터 단일 채널로 월 20건의 안정적인 리드를 12개월 연속 달성한 실제 운영 방법과 수치를 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["링크드인 뉴스레터", "B2B 리드 창출", "링크드인 마케팅", "뉴스레터 케이스", "B2B 마케팅 사례", "링크드인 구독자"],
+  },
+  {
     slug: "google-discover-analytics",
     title: "구글 Discover로 유입된 독자의 뉴스레터 전환율 분석 케이스",
     description: "구글 Discover 유입 독자와 일반 검색 유입 독자의 뉴스레터 전환율을 비교 분석하고, Discover 트래픽을 구독자로 전환하는 전략을 공개합니다.",

@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-07-22"
+    "updated": "2026-07-23"
   },
   "tools": [
     {
@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 416,
+    "count": 417,
     "latest": [
+      {
+        "title": "LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스",
+        "url": "https://crepika.com/blog/linkedin-b2b-20",
+        "description": "중소 B2B 서비스 기업이 LinkedIn 뉴스레터 단일 채널로 월 20건의 안정적인 리드를 12개월 연속 달성한 실제 운영 방법과 수치를 공개합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "구글 Discover로 유입된 독자의 뉴스레터 전환율 분석 케이스",
         "url": "https://crepika.com/blog/google-discover-analytics",
@@ -524,12 +530,6 @@
         "title": "Apple Podcast 상위 10위 달성한 크리에이터의 SEO 전략 케이스",
         "url": "https://crepika.com/blog/apple-podcast-10-creator-seo-strategy",
         "description": "Apple Podcast 특정 카테고리 상위 10위에 진입한 국내 크리에이터의 팟캐스트 SEO 전략과 성장 과정을 단계별로 분석합니다. Apple Podcast, 팟캐스트 SEO에 대한 실전 가이드.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "Pinterest로 이커머스 월 매출 1000만 원 늘린 핸드메이드 브랜드 케이스",
-        "url": "https://crepika.com/blog/pinterest-1000-brand",
-        "description": "Pinterest 쇼핑 기능과 SEO를 활용해 핸드메이드 브랜드가 6개월 만에 월 매출을 1,000만 원 추가로 늘린 실제 전략을 공개합니다. 카탈로그 연동, 프로덕트 핀, 키워드 최적화 과정을 단계별로 분석합니다.",
         "date": "2026-05-18"
       }
     ]

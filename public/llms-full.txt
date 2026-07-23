@@ -118,9 +118,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 416
+Renderable blog posts: 417
 
 Latest posts:
+- [LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스](https://crepika.com/blog/linkedin-b2b-20): 중소 B2B 서비스 기업이 LinkedIn 뉴스레터 단일 채널로 월 20건의 안정적인 리드를 12개월 연속 달성한 실제 운영 방법과 수치를 공개합니다.
 - [구글 Discover로 유입된 독자의 뉴스레터 전환율 분석 케이스](https://crepika.com/blog/google-discover-analytics): 구글 Discover 유입 독자와 일반 검색 유입 독자의 뉴스레터 전환율을 비교 분석하고, Discover 트래픽을 구독자로 전환하는 전략을 공개합니다.
 - [고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스](https://crepika.com/blog/ads-2): 잘못된 고객 페르소나가 광고 전환율을 낮추는 이유를 실제 스타트업 케이스로 분석합니다. 데이터 기반 페르소나 재구축과 채널 믹스 재조정으로 전환율 2배 향상을 달성한 방법을 공개합니다.
 - [Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스](https://crepika.com/blog/ahrefs-analytics-20-blog-6): Ahrefs를 활용한 체계적인 백링크 분석과 링크 빌딩 전략으로 블로그 도메인 레이팅(DR)을 6개월 만에 20포인트 올린 실전 케이스를 공개합니다.
@@ -132,7 +133,6 @@ Latest posts:
 - [카카오모먼트 광고 최적화로 CPL 50% 절감한 교육 브랜드 케이스](https://crepika.com/blog/kakao-ads-optimization-cpl-50-brand): 카카오모먼트 광고 운영 전략을 체계적으로 최적화해 리드당 비용(CPL)을 50% 절감한 온라인 교육 브랜드의 실전 케이스를 공개합니다. 카카오모먼트, 카카오 광고에 대한 실전 가이드.
 - [커뮤니티 빌딩으로 제품 출시 첫날 500개 판매한 케이스](https://crepika.com/blog/community-500): 500명 이상의 활성 커뮤니티를 단계별로 구축하는 핵심 전략과 운영 노하우를 담았습니다. 멤버 온보딩 설계, 지속적인 참여율 유지 방법, 운영 자동화까지 실제 성장한 국내외 커뮤니티 사례를 바탕으로 실행 방법을 정리했습니다.
 - [Apple Podcast 상위 10위 달성한 크리에이터의 SEO 전략 케이스](https://crepika.com/blog/apple-podcast-10-creator-seo-strategy): Apple Podcast 특정 카테고리 상위 10위에 진입한 국내 크리에이터의 팟캐스트 SEO 전략과 성장 과정을 단계별로 분석합니다. Apple Podcast, 팟캐스트 SEO에 대한 실전 가이드.
-- [Pinterest로 이커머스 월 매출 1000만 원 늘린 핸드메이드 브랜드 케이스](https://crepika.com/blog/pinterest-1000-brand): Pinterest 쇼핑 기능과 SEO를 활용해 핸드메이드 브랜드가 6개월 만에 월 매출을 1,000만 원 추가로 늘린 실제 전략을 공개합니다. 카탈로그 연동, 프로덕트 핀, 키워드 최적화 과정을 단계별로 분석합니다.
 
 ## Index Resources
 
@@ -146,7 +146,7 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-07-22
+Updated: 2026-07-23
 
 ## All Renderable Blog URLs
 
@@ -566,3 +566,4 @@ Updated: 2026-07-22
 - https://crepika.com/blog/ahrefs-analytics-20-blog-6 - Ahrefs 백링크 분석으로 도메인 점수 20 올린 블로그 6개월 케이스
 - https://crepika.com/blog/ads-2 - 고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스
 - https://crepika.com/blog/google-discover-analytics - 구글 Discover로 유입된 독자의 뉴스레터 전환율 분석 케이스
+- https://crepika.com/blog/linkedin-b2b-20 - LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스
