@@ -118,9 +118,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 417
+Renderable blog posts: 418
 
 Latest posts:
+- [Make.com + Google Sheets 자동화로 콘텐츠 관리 시간 90% 줄인 케이스](https://crepika.com/blog/makecom-google-sheets-automation-content-90): Make.com과 Google Sheets를 연동해 콘텐츠 기획·발행·성과 추적 전 과정을 자동화해 관리 시간을 90% 절감한 콘텐츠팀의 실전 케이스를 공개합니다.
 - [LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스](https://crepika.com/blog/linkedin-b2b-20): 중소 B2B 서비스 기업이 LinkedIn 뉴스레터 단일 채널로 월 20건의 안정적인 리드를 12개월 연속 달성한 실제 운영 방법과 수치를 공개합니다.
 - [구글 Discover로 유입된 독자의 뉴스레터 전환율 분석 케이스](https://crepika.com/blog/google-discover-analytics): 구글 Discover 유입 독자와 일반 검색 유입 독자의 뉴스레터 전환율을 비교 분석하고, Discover 트래픽을 구독자로 전환하는 전략을 공개합니다.
 - [고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스](https://crepika.com/blog/ads-2): 잘못된 고객 페르소나가 광고 전환율을 낮추는 이유를 실제 스타트업 케이스로 분석합니다. 데이터 기반 페르소나 재구축과 채널 믹스 재조정으로 전환율 2배 향상을 달성한 방법을 공개합니다.
@@ -132,7 +133,6 @@ Latest posts:
 - [소셜 증명 강화 후 신규 고객 전환율 45% 향상된 SaaS 케이스](https://crepika.com/blog/45-saas): 소셜 증명(Social Proof) 요소를 체계적으로 강화한 이후 신규 고객 전환율이 45% 향상된 국내 SaaS 스타트업의 전략과 실행 과정을 분석합니다.
 - [카카오모먼트 광고 최적화로 CPL 50% 절감한 교육 브랜드 케이스](https://crepika.com/blog/kakao-ads-optimization-cpl-50-brand): 카카오모먼트 광고 운영 전략을 체계적으로 최적화해 리드당 비용(CPL)을 50% 절감한 온라인 교육 브랜드의 실전 케이스를 공개합니다. 카카오모먼트, 카카오 광고에 대한 실전 가이드.
 - [커뮤니티 빌딩으로 제품 출시 첫날 500개 판매한 케이스](https://crepika.com/blog/community-500): 500명 이상의 활성 커뮤니티를 단계별로 구축하는 핵심 전략과 운영 노하우를 담았습니다. 멤버 온보딩 설계, 지속적인 참여율 유지 방법, 운영 자동화까지 실제 성장한 국내외 커뮤니티 사례를 바탕으로 실행 방법을 정리했습니다.
-- [Apple Podcast 상위 10위 달성한 크리에이터의 SEO 전략 케이스](https://crepika.com/blog/apple-podcast-10-creator-seo-strategy): Apple Podcast 특정 카테고리 상위 10위에 진입한 국내 크리에이터의 팟캐스트 SEO 전략과 성장 과정을 단계별로 분석합니다. Apple Podcast, 팟캐스트 SEO에 대한 실전 가이드.
 
 ## Index Resources
 
@@ -567,3 +567,4 @@ Updated: 2026-07-23
 - https://crepika.com/blog/ads-2 - 고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스
 - https://crepika.com/blog/google-discover-analytics - 구글 Discover로 유입된 독자의 뉴스레터 전환율 분석 케이스
 - https://crepika.com/blog/linkedin-b2b-20 - LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스
+- https://crepika.com/blog/makecom-google-sheets-automation-content-90 - Make.com + Google Sheets 자동화로 콘텐츠 관리 시간 90% 줄인 케이스

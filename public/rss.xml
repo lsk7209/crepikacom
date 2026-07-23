@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Make.com + Google Sheets 자동화로 콘텐츠 관리 시간 90% 줄인 케이스</title>
+    <link>https://crepika.com/blog/makecom-google-sheets-automation-content-90</link>
+    <guid>https://crepika.com/blog/makecom-google-sheets-automation-content-90</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>김민혁</dc:creator>
+    <category>case-study</category>
+    <description>Make.com과 Google Sheets를 연동해 콘텐츠 기획·발행·성과 추적 전 과정을 자동화해 관리 시간을 90% 절감한 콘텐츠팀의 실전 케이스를 공개합니다.</description>
+  </item>
+  <item>
     <title>LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스</title>
     <link>https://crepika.com/blog/linkedin-b2b-20</link>
     <guid>https://crepika.com/blog/linkedin-b2b-20</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>tips</category>
     <description>Discord 서버를 만들었지만 멤버가 늘지 않나요? 처음 30일 안에 100명 이상의 활성 멤버를 모으는 단계별 성장 전략과 커뮤니티 운영 팁을 정리했습니다.</description>
-  </item>
-  <item>
-    <title>리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정</title>
-    <link>https://crepika.com/blog/ads-roas-7-tips-ads</link>
-    <guid>https://crepika.com/blog/ads-roas-7-tips-ads</guid>
-    <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>tips</category>
-    <description>리타겟팅 광고는 설정만 잘 해도 ROAS가 3~10배 차이납니다. 오디언스 세분화부터 광고 피로도 관리까지 실전에서 검증된 7가지 최적화 전략을 정리했습니다.</description>
   </item>
 </channel>
 </rss>

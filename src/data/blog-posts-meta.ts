@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "makecom-google-sheets-automation-content-90",
+    title: "Make.com + Google Sheets 자동화로 콘텐츠 관리 시간 90% 줄인 케이스",
+    description: "Make.com과 Google Sheets를 연동해 콘텐츠 기획·발행·성과 추적 전 과정을 자동화해 관리 시간을 90% 절감한 콘텐츠팀의 실전 케이스를 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["Make.com 자동화", "Google Sheets", "콘텐츠 관리 자동화", "노코드 자동화", "콘텐츠 운영"],
+  },
+  {
     slug: "linkedin-b2b-20",
     title: "LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스",
     description: "중소 B2B 서비스 기업이 LinkedIn 뉴스레터 단일 채널로 월 20건의 안정적인 리드를 12개월 연속 달성한 실제 운영 방법과 수치를 공개합니다.",

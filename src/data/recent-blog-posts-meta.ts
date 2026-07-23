@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "makecom-google-sheets-automation-content-90",
+    title: "Make.com + Google Sheets 자동화로 콘텐츠 관리 시간 90% 줄인 케이스",
+    description: "Make.com과 Google Sheets를 연동해 콘텐츠 기획·발행·성과 추적 전 과정을 자동화해 관리 시간을 90% 절감한 콘텐츠팀의 실전 케이스를 공개합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["Make.com 자동화", "Google Sheets", "콘텐츠 관리 자동화", "노코드 자동화", "콘텐츠 운영"],
+  },
+  {
     slug: "linkedin-b2b-20",
     title: "LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스",
     description: "중소 B2B 서비스 기업이 LinkedIn 뉴스레터 단일 채널로 월 20건의 안정적인 리드를 12개월 연속 달성한 실제 운영 방법과 수치를 공개합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "13분",
     author: "박준영",
     keywords: ["구글 Discover", "뉴스레터 전환율", "Discover 트래픽", "블로그 수익화", "이메일 구독"],
-  },
-  {
-    slug: "ads-2",
-    title: "고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스",
-    description: "잘못된 고객 페르소나가 광고 전환율을 낮추는 이유를 실제 스타트업 케이스로 분석합니다. 데이터 기반 페르소나 재구축과 채널 믹스 재조정으로 전환율 2배 향상을 달성한 방법을 공개합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "김민혁",
-    keywords: ["고객 페르소나", "광고 타겟팅", "광고 전환율", "마케팅 전략", "디지털 광고 최적화"],
   },
 ];
