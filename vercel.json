@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/privacy-policy/:path*",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         { "type": "host", "value": "www.crepika.com" }
