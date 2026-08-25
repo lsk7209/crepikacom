@@ -8,6 +8,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { execFileSync, execSync } from 'child_process';
+import { parseAndValidatePublishDraft } from './publish-draft-preflight.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT        = join(__dirname, '..');
@@ -70,7 +71,12 @@ function getNextDraft(queue, now) {
     if (!FORCE && entry.scheduledDate && Date.parse(entry.scheduledDate) > now.getTime()) continue;
     const draftPath = join(DRAFTS_DIR, `${entry.slug}.json`);
     if (existsSync(draftPath)) {
-      return { entry, post: JSON.parse(readFileSync(draftPath, 'utf-8')), draftPath };
+      const post = parseAndValidatePublishDraft({
+        entry,
+        draftPath,
+        source: readFileSync(draftPath, 'utf-8'),
+      });
+      return { entry, post, draftPath };
     }
   }
   return null;
