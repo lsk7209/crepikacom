@@ -1043,6 +1043,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "content-500-revenue",
+    title: "제품 없이 콘텐츠만으로 월 500만 원 수익 만든 인포프리너 케이스",
+    description: "물리적 제품이나 소프트웨어 없이 콘텐츠와 지식만으로 월 500만 원 이상의 안정적인 수익을 만든 인포프리너의 수익 구조와 전략을 공개합니다. 인포프리너, 콘텐츠 수익화에 대한 실전 가이드.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "13분",
+    author: "이지수",
+    keywords: ["인포프리너", "콘텐츠 수익화", "지식 창업", "디지털 콘텐츠", "1인 비즈니스"],
+  },
+  {
     slug: "email-funnel-free-to-paid-30-percent",
     title: "세일즈 퍼널 이메일 시퀀스로 무료 강의 수강생의 30%를 유료로 전환한 케이스",
     description: "전략적으로 설계된 이메일 시퀀스를 통해 무료 강의 수강생의 30%를 유료 강의 구매로 전환하는 데 성공한 교육 크리에이터의 퍼널 전략을 공개합니다.",

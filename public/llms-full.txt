@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 419
+Renderable blog posts: 420
 
 Latest posts:
 - [Make.com + Google Sheets 자동화로 콘텐츠 관리 시간 90% 줄인 케이스](https://crepika.com/blog/makecom-google-sheets-automation-content-90): Make.com과 Google Sheets를 연동해 콘텐츠 기획·발행·성과 추적 전 과정을 자동화해 관리 시간을 90% 절감한 콘텐츠팀의 실전 케이스를 공개합니다.
@@ -466,6 +466,7 @@ Updated: 2026-08-30
 - https://crepika.com/blog/brand-1 - 소셜 리스닝으로 경쟁사 취약점을 발견해 시장 점유율 높인 브랜드 케이스
 - https://crepika.com/blog/seo-advanced-optimization-google-50-keyword - 티스토리 SEO 심화 최적화 후 구글 상위 50개 키워드 달성 케이스
 - https://crepika.com/blog/email-funnel-free-to-paid-30-percent - 세일즈 퍼널 이메일 시퀀스로 무료 강의 수강생의 30%를 유료로 전환한 케이스
+- https://crepika.com/blog/content-500-revenue - 제품 없이 콘텐츠만으로 월 500만 원 수익 만든 인포프리너 케이스
 - https://crepika.com/blog/5-practical-tips-ux - 히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트
 - https://crepika.com/blog/tips-5-automation - 세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일
 - https://crepika.com/blog/ads-roas-7-tips-ads - 리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정

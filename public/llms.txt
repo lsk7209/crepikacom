@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 419
+Renderable blog posts: 420
 
 Latest posts:
 - [Make.com + Google Sheets 자동화로 콘텐츠 관리 시간 90% 줄인 케이스](https://crepika.com/blog/makecom-google-sheets-automation-content-90): Make.com과 Google Sheets를 연동해 콘텐츠 기획·발행·성과 추적 전 과정을 자동화해 관리 시간을 90% 절감한 콘텐츠팀의 실전 케이스를 공개합니다.
