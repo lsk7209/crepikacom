@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "shorts-vs-reels-vs-clips-algorithm-comparison-analytics",
+    title: "국내 Shorts vs 릴스 vs 클립 알고리즘 비교 분석: 플랫폼별 도달률 차이",
+    description: "유튜브 쇼츠, 인스타그램 릴스, 네이버 클립의 알고리즘 특성과 국내 도달률을 비교 분석합니다. 어느 플랫폼에 집중해야 할지 데이터로 알아봅니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "10분",
+    author: "김민혁",
+    keywords: ["유튜브 쇼츠", "인스타그램 릴스", "네이버 클립", "쇼트폼 알고리즘", "플랫폼 비교"],
+  },
+  {
     slug: "makecom-google-sheets-automation-content-90",
     title: "Make.com + Google Sheets 자동화로 콘텐츠 관리 시간 90% 줄인 케이스",
     description: "Make.com과 Google Sheets를 연동해 콘텐츠 기획·발행·성과 추적 전 과정을 자동화해 관리 시간을 90% 절감한 콘텐츠팀의 실전 케이스를 공개합니다.",
