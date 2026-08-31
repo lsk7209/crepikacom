@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ads-comparison-creator",
+    title: "유료 구독 모델과 광고 모델 비교: 크리에이터에게 어느 것이 더 안정적인가",
+    description: "크리에이터를 위한 유료 구독 모델과 광고 수익 모델을 수익 안정성, 성장 가능성, 운영 부담 측면에서 비교 분석합니다. 나에게 맞는 모델 선택 기준을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["크리에이터 수익화", "유료 구독 모델", "광고 수익 모델", "콘텐츠 수익화", "크리에이터 이코노미"],
+  },
+  {
     slug: "chatgpt-seo-strategy-ai-search",
     title: "포스트 ChatGPT 시대 SEO 전략: AI가 답변하는 시대에서 검색 트래픽 지키기",
     description: "ChatGPT와 AI 검색 엔진이 확산된 환경에서 블로그와 웹사이트의 유기 트래픽을 유지하고 성장시키는 SEO 전략을 분석합니다. GEO와 AEO 실전 가이드 포함.",
