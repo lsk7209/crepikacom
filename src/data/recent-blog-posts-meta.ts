@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "chatgpt-seo-strategy-ai-search",
+    title: "포스트 ChatGPT 시대 SEO 전략: AI가 답변하는 시대에서 검색 트래픽 지키기",
+    description: "ChatGPT와 AI 검색 엔진이 확산된 환경에서 블로그와 웹사이트의 유기 트래픽을 유지하고 성장시키는 SEO 전략을 분석합니다. GEO와 AEO 실전 가이드 포함.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["포스트 ChatGPT SEO", "AI 검색 최적화", "GEO", "AEO", "검색 트래픽 감소"],
+  },
+  {
     slug: "2026-content-marketing-aicommunity",
     title: "2026년 콘텐츠 마케팅 트렌드: AI·커뮤니티·개인화가 만드는 새로운 게임 규칙",
     description: "2026년 콘텐츠 마케팅을 지배하는 핵심 트렌드를 분석합니다. AI 콘텐츠 생성, 커뮤니티 기반 마케팅, 초개인화 전략이 어떻게 시장을 재편하는지 알아봅니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "10분",
     author: "김민혁",
     keywords: ["유튜브 쇼츠", "인스타그램 릴스", "네이버 클립", "쇼트폼 알고리즘", "플랫폼 비교"],
-  },
-  {
-    slug: "makecom-google-sheets-automation-content-90",
-    title: "Make.com + Google Sheets 자동화로 콘텐츠 관리 시간 90% 줄인 케이스",
-    description: "Make.com과 Google Sheets를 연동해 콘텐츠 기획·발행·성과 추적 전 과정을 자동화해 관리 시간을 90% 절감한 콘텐츠팀의 실전 케이스를 공개합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "김민혁",
-    keywords: ["Make.com 자동화", "Google Sheets", "콘텐츠 관리 자동화", "노코드 자동화", "콘텐츠 운영"],
   },
 ];

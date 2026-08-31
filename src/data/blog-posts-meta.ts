@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "chatgpt-seo-strategy-ai-search",
+    title: "포스트 ChatGPT 시대 SEO 전략: AI가 답변하는 시대에서 검색 트래픽 지키기",
+    description: "ChatGPT와 AI 검색 엔진이 확산된 환경에서 블로그와 웹사이트의 유기 트래픽을 유지하고 성장시키는 SEO 전략을 분석합니다. GEO와 AEO 실전 가이드 포함.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["포스트 ChatGPT SEO", "AI 검색 최적화", "GEO", "AEO", "검색 트래픽 감소"],
+  },
+  {
     slug: "2026-content-marketing-aicommunity",
     title: "2026년 콘텐츠 마케팅 트렌드: AI·커뮤니티·개인화가 만드는 새로운 게임 규칙",
     description: "2026년 콘텐츠 마케팅을 지배하는 핵심 트렌드를 분석합니다. AI 콘텐츠 생성, 커뮤니티 기반 마케팅, 초개인화 전략이 어떻게 시장을 재편하는지 알아봅니다.",
