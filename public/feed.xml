@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>2026년 콘텐츠 마케팅 트렌드: AI·커뮤니티·개인화가 만드는 새로운 게임 규칙</title>
+    <link>https://crepika.com/blog/2026-content-marketing-aicommunity</link>
+    <guid>https://crepika.com/blog/2026-content-marketing-aicommunity</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>insights</category>
+    <description>2026년 콘텐츠 마케팅을 지배하는 핵심 트렌드를 분석합니다. AI 콘텐츠 생성, 커뮤니티 기반 마케팅, 초개인화 전략이 어떻게 시장을 재편하는지 알아봅니다.</description>
+  </item>
+  <item>
     <title>국내 Shorts vs 릴스 vs 클립 알고리즘 비교 분석: 플랫폼별 도달률 차이</title>
     <link>https://crepika.com/blog/shorts-vs-reels-vs-clips-algorithm-comparison-analytics</link>
     <guid>https://crepika.com/blog/shorts-vs-reels-vs-clips-algorithm-comparison-analytics</guid>
@@ -897,15 +906,6 @@
     <dc:creator>이지수</dc:creator>
     <category>tips</category>
     <description>Ahrefs 유료 플랜 없이도 활용 가능한 무료 기능 5가지를 정리했습니다. 키워드 조사부터 백링크 분석까지, 예산 없이도 SEO 데이터를 수집하는 실전 방법입니다.</description>
-  </item>
-  <item>
-    <title>기술적 SEO 체크리스트 10가지: 사이트 오픈 전 반드시 확인해야 할 설정</title>
-    <link>https://crepika.com/blog/seo-10</link>
-    <guid>https://crepika.com/blog/seo-10</guid>
-    <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>tips</category>
-    <description>사이트를 오픈하기 전에 기술적 SEO 설정을 놓치면 검색 노출이 몇 달씩 지연됩니다. 론칭 전 반드시 점검해야 할 10가지 기술 SEO 체크리스트를 정리했습니다.</description>
   </item>
 </channel>
 </rss>

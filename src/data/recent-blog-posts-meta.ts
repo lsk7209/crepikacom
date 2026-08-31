@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "2026-content-marketing-aicommunity",
+    title: "2026년 콘텐츠 마케팅 트렌드: AI·커뮤니티·개인화가 만드는 새로운 게임 규칙",
+    description: "2026년 콘텐츠 마케팅을 지배하는 핵심 트렌드를 분석합니다. AI 콘텐츠 생성, 커뮤니티 기반 마케팅, 초개인화 전략이 어떻게 시장을 재편하는지 알아봅니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["콘텐츠 마케팅 트렌드", "2026 마케팅", "AI 콘텐츠", "커뮤니티 마케팅", "개인화 마케팅"],
+  },
+  {
     slug: "shorts-vs-reels-vs-clips-algorithm-comparison-analytics",
     title: "국내 Shorts vs 릴스 vs 클립 알고리즘 비교 분석: 플랫폼별 도달률 차이",
     description: "유튜브 쇼츠, 인스타그램 릴스, 네이버 클립의 알고리즘 특성과 국내 도달률을 비교 분석합니다. 어느 플랫폼에 집중해야 할지 데이터로 알아봅니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "12분",
     author: "김민혁",
     keywords: ["Make.com 자동화", "Google Sheets", "콘텐츠 관리 자동화", "노코드 자동화", "콘텐츠 운영"],
-  },
-  {
-    slug: "linkedin-b2b-20",
-    title: "LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스",
-    description: "중소 B2B 서비스 기업이 LinkedIn 뉴스레터 단일 채널로 월 20건의 안정적인 리드를 12개월 연속 달성한 실제 운영 방법과 수치를 공개합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "김민혁",
-    keywords: ["링크드인 뉴스레터", "B2B 리드 창출", "링크드인 마케팅", "뉴스레터 케이스", "B2B 마케팅 사례", "링크드인 구독자"],
   },
 ];
