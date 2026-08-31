@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 421
+Renderable blog posts: 422
 
 Latest posts:
 - [국내 Shorts vs 릴스 vs 클립 알고리즘 비교 분석: 플랫폼별 도달률 차이](https://crepika.com/blog/shorts-vs-reels-vs-clips-algorithm-comparison-analytics): 유튜브 쇼츠, 인스타그램 릴스, 네이버 클립의 알고리즘 특성과 국내 도달률을 비교 분석합니다. 어느 플랫폼에 집중해야 할지 데이터로 알아봅니다.
@@ -146,4 +146,4 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-08-30
+Updated: 2026-08-31
