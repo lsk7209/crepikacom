@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 425
+Renderable blog posts: 426
 
 Latest posts:
 - [유료 구독 모델과 광고 모델 비교: 크리에이터에게 어느 것이 더 안정적인가](https://crepika.com/blog/ads-comparison-creator): 크리에이터를 위한 유료 구독 모델과 광고 수익 모델을 수익 안정성, 성장 가능성, 운영 부담 측면에서 비교 분석합니다. 나에게 맞는 모델 선택 기준을 제시합니다.
@@ -146,7 +146,7 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-08-31
+Updated: 2026-09-01
 
 ## All Renderable Blog URLs
 
@@ -468,6 +468,7 @@ Updated: 2026-08-31
 - https://crepika.com/blog/email-funnel-free-to-paid-30-percent - 세일즈 퍼널 이메일 시퀀스로 무료 강의 수강생의 30%를 유료로 전환한 케이스
 - https://crepika.com/blog/content-500-revenue - 제품 없이 콘텐츠만으로 월 500만 원 수익 만든 인포프리너 케이스
 - https://crepika.com/blog/brand-analytics-marketing - 브랜드 스토리텔링 효과 분석: 감성 마케팅이 실제 전환율에 미치는 영향
+- https://crepika.com/blog/marketing-2026-analytics - 국내 소상공인 디지털 마케팅 현황 2026: 예산·채널·성과 실태 분석
 - https://crepika.com/blog/5-practical-tips-ux - 히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트
 - https://crepika.com/blog/tips-5-automation - 세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일
 - https://crepika.com/blog/ads-roas-7-tips-ads - 리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정

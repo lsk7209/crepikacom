@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 425
+Renderable blog posts: 426
 
 Latest posts:
 - [유료 구독 모델과 광고 모델 비교: 크리에이터에게 어느 것이 더 안정적인가](https://crepika.com/blog/ads-comparison-creator): 크리에이터를 위한 유료 구독 모델과 광고 수익 모델을 수익 안정성, 성장 가능성, 운영 부담 측면에서 비교 분석합니다. 나에게 맞는 모델 선택 기준을 제시합니다.
@@ -146,4 +146,4 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-08-31
+Updated: 2026-09-01

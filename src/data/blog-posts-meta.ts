@@ -1083,6 +1083,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "marketing-2026-analytics",
+    title: "국내 소상공인 디지털 마케팅 현황 2026: 예산·채널·성과 실태 분석",
+    description: "2026년 국내 소상공인의 디지털 마케팅 현황을 예산 규모, 활용 채널, 실제 성과 측면에서 분석합니다. 업종별 트렌드와 효과적인 전략 인사이트를 제공합니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["소상공인 디지털 마케팅", "소상공인 광고", "국내 마케팅 트렌드", "소상공인 SNS", "로컬 마케팅"],
+  },
+  {
     slug: "brand-analytics-marketing",
     title: "브랜드 스토리텔링 효과 분석: 감성 마케팅이 실제 전환율에 미치는 영향",
     description: "브랜드 스토리텔링과 감성 마케팅이 구매 전환율과 브랜드 충성도에 미치는 영향을 분석합니다. 데이터 기반 인사이트와 실전 적용 전략을 제공합니다.",
