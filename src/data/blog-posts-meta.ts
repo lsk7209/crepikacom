@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "1-creator-guide",
+    title: "1인 크리에이터를 위한 법인 설립 가이드: 사업 확장 시점과 법인 전환 이점",
+    description: "1인 크리에이터가 개인사업자에서 법인으로 전환해야 하는 시점과 절차, 세금·계약·투자 측면의 실질적 이점을 단계별로 정리한 실무 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["1인 크리에이터 법인 설립", "크리에이터 법인 전환", "개인사업자 법인 전환", "크리에이터 세금 절세", "콘텐츠 크리에이터 사업자"],
+  },
+  {
     slug: "creator-strategy-7-method",
     title: "크리에이터 번아웃 예방 전략: 지속 가능한 창작 루틴을 만드는 7가지 방법",
     description: "크리에이터 번아웃의 원인을 분석하고 지속 가능한 창작 활동을 위한 7가지 실전 전략을 안내합니다. 에너지 관리부터 시스템 구축까지 구체적 방법론을 제공합니다.",

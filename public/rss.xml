@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>1인 크리에이터를 위한 법인 설립 가이드: 사업 확장 시점과 법인 전환 이점</title>
+    <link>https://crepika.com/blog/1-creator-guide</link>
+    <guid>https://crepika.com/blog/1-creator-guide</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>guide</category>
+    <description>1인 크리에이터가 개인사업자에서 법인으로 전환해야 하는 시점과 절차, 세금·계약·투자 측면의 실질적 이점을 단계별로 정리한 실무 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.</description>
+  </item>
+  <item>
     <title>크리에이터 번아웃 예방 전략: 지속 가능한 창작 루틴을 만드는 7가지 방법</title>
     <link>https://crepika.com/blog/creator-strategy-7-method</link>
     <guid>https://crepika.com/blog/creator-strategy-7-method</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>tips</category>
     <description>ElevenLabs AI 음성 생성 도구로 팟캐스트 인트로, 아웃트로, 광고 멘트를 직접 제작하는 방법과 자연스러운 음성을 만드는 실전 팁을 정리했습니다.</description>
-  </item>
-  <item>
-    <title>Notion 템플릿 잘 팔리게 만드는 7가지 팁: 구매자가 원하는 설계 원칙</title>
-    <link>https://crepika.com/blog/notion-7-tips</link>
-    <guid>https://crepika.com/blog/notion-7-tips</guid>
-    <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>tips</category>
-    <description>Notion 템플릿을 만들었는데 판매가 안 된다면 설계에 문제가 있을 가능성이 높습니다. 구매자의 심리와 사용 패턴을 반영한 7가지 상품 설계 원칙을 정리했습니다.</description>
   </item>
 </channel>
 </rss>
