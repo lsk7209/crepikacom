@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "creator-strategy-7-method",
+    title: "크리에이터 번아웃 예방 전략: 지속 가능한 창작 루틴을 만드는 7가지 방법",
+    description: "크리에이터 번아웃의 원인을 분석하고 지속 가능한 창작 활동을 위한 7가지 실전 전략을 안내합니다. 에너지 관리부터 시스템 구축까지 구체적 방법론을 제공합니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["크리에이터 번아웃", "창작 루틴", "번아웃 예방", "크리에이터 지속 가능성", "콘텐츠 창작 방법"],
+  },
+  {
     slug: "ads-comparison-creator",
     title: "유료 구독 모델과 광고 모델 비교: 크리에이터에게 어느 것이 더 안정적인가",
     description: "크리에이터를 위한 유료 구독 모델과 광고 수익 모델을 수익 안정성, 성장 가능성, 운영 부담 측면에서 비교 분석합니다. 나에게 맞는 모델 선택 기준을 제시합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "12분",
     author: "김민혁",
     keywords: ["포스트 ChatGPT SEO", "AI 검색 최적화", "GEO", "AEO", "검색 트래픽 감소"],
-  },
-  {
-    slug: "2026-content-marketing-aicommunity",
-    title: "2026년 콘텐츠 마케팅 트렌드: AI·커뮤니티·개인화가 만드는 새로운 게임 규칙",
-    description: "2026년 콘텐츠 마케팅을 지배하는 핵심 트렌드를 분석합니다. AI 콘텐츠 생성, 커뮤니티 기반 마케팅, 초개인화 전략이 어떻게 시장을 재편하는지 알아봅니다.",
-    category: "insights",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "이지수",
-    keywords: ["콘텐츠 마케팅 트렌드", "2026 마케팅", "AI 콘텐츠", "커뮤니티 마케팅", "개인화 마케팅"],
   },
 ];

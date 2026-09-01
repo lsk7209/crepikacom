@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "creator-strategy-7-method",
+    title: "크리에이터 번아웃 예방 전략: 지속 가능한 창작 루틴을 만드는 7가지 방법",
+    description: "크리에이터 번아웃의 원인을 분석하고 지속 가능한 창작 활동을 위한 7가지 실전 전략을 안내합니다. 에너지 관리부터 시스템 구축까지 구체적 방법론을 제공합니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["크리에이터 번아웃", "창작 루틴", "번아웃 예방", "크리에이터 지속 가능성", "콘텐츠 창작 방법"],
+  },
+  {
     slug: "ads-comparison-creator",
     title: "유료 구독 모델과 광고 모델 비교: 크리에이터에게 어느 것이 더 안정적인가",
     description: "크리에이터를 위한 유료 구독 모델과 광고 수익 모델을 수익 안정성, 성장 가능성, 운영 부담 측면에서 비교 분석합니다. 나에게 맞는 모델 선택 기준을 제시합니다.",
