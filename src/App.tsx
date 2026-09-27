@@ -16,9 +16,6 @@ const Home = lazy(() => import("./pages/Home"));
 const Toaster = lazy(() =>
   import("@/components/ui/toaster").then((m) => ({ default: m.Toaster })),
 );
-const Sonner = lazy(() =>
-  import("@/components/ui/sonner").then((m) => ({ default: m.Toaster })),
-);
 const KeyboardShortcutsModal = lazy(() =>
   import("@/components/KeyboardShortcutsModal").then((m) => ({
     default: m.KeyboardShortcutsModal,
@@ -53,9 +50,6 @@ function AppContent() {
     <>
       <Suspense fallback={null}>
         <Toaster />
-      </Suspense>
-      <Suspense fallback={null}>
-        <Sonner />
       </Suspense>
       <Suspense fallback={null}>
         <KeyboardShortcutsModal open={showHelp} onOpenChange={setShowHelp} />

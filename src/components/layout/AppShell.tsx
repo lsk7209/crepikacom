@@ -1,6 +1,10 @@
+import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "@/hooks/useTheme";
-import { TOOLS_CONFIG } from "@/data/tools-config";
+
+const FooterToolsList = lazy(() =>
+  import("./FooterToolsList").then((m) => ({ default: m.FooterToolsList })),
+);
 
 function IconSparkles({ className }: { className?: string }) {
   return (
@@ -171,18 +175,9 @@ export function AppShell({ children }: AppShellProps) {
             {/* Tools */}
             <div>
               <h3 className="font-semibold mb-4">도구</h3>
-              <ul className="space-y-2 text-sm">
-                {TOOLS_CONFIG.map((tool) => (
-                  <li key={tool.id}>
-                    <Link
-                      to={tool.path}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {tool.titleKo}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <Suspense fallback={null}>
+                <FooterToolsList />
+              </Suspense>
             </div>
 
             {/* Blog Section */}
