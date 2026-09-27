@@ -55,6 +55,9 @@ jobs:
         run: node scripts/publish-once.mjs
 
       - name: Verify SEO gates
+        # publish-once.mjs already runs this internally as part of publishing a batch;
+        # only run it here when nothing was due to publish, so it isn't executed twice.
+        if: steps.check.outputs.remaining == '0'
         run: node scripts/verify-seo-gates.mjs
 
       - name: All done

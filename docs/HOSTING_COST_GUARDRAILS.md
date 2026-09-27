@@ -35,9 +35,9 @@ The workflow in `.github/workflows/hosting-cost-guard.yml` runs:
 node scripts/audit-hosting-costs.mjs --fail-on=critical
 ```
 
-It runs on pull requests, pushes to `main`/`master`/`develop`, manual dispatch, and a daily schedule at 09:10 KST. The script intentionally reports warnings for frequent crons and deployment/database scripts without failing the build. Critical issues, such as invalid JSON or excessive configured function duration, fail the workflow.
+It runs on pull requests, pushes to `main`/`master`/`develop`, and manual dispatch. There is no daily schedule — the earlier daily cron was removed because auto-publish already pushes to `main` several times a day, which was triggering this workflow redundantly on top of a fixed schedule. The script intentionally reports warnings for frequent crons and deployment/database scripts without failing the build. Critical issues, such as invalid JSON or excessive configured function duration, fail the workflow.
 
-The workflow in `.github/workflows/live-cost-watch.yml` runs daily at 09:20 KST and manually. It checks static hosting risk first, then attempts live usage checks:
+The workflow in `.github/workflows/live-cost-watch.yml` runs on manual dispatch only. There is no recurring schedule — the earlier daily/weekly cron was removed as a duplicate cost-audit run; trigger it by hand (or from another workflow) when a live usage check is actually needed. It checks static hosting risk first, then attempts live usage checks:
 
 - Vercel usage through `vercel usage --format json`.
 - Turso database usage through the Turso `/usage` API.
