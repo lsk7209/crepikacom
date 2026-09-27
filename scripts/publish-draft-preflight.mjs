@@ -1,6 +1,6 @@
 import { basename, extname } from 'node:path';
 
-const READABLE_SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+export const READABLE_SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 function validateReadableSlug(slug, label) {
   if (typeof slug !== 'string' || slug.length === 0) {

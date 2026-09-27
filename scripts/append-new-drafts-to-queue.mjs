@@ -6,6 +6,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { READABLE_SLUG_PATTERN } from './publish-draft-preflight.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -22,6 +23,10 @@ const newDrafts = [];
 for (const f of draftFiles) {
   const slug = f.replace(/\.json$/, '');
   if (existingSlugs.has(slug)) continue;
+  if (!READABLE_SLUG_PATTERN.test(slug) || /^\d+$/.test(slug)) {
+    console.warn(`⚠️  ${f}: 파일명이 유효한 슬러그 형식이 아님(numeric/empty/invalid), 큐에 추가하지 않고 스킵`);
+    continue;
+  }
   try {
     const draft = JSON.parse(readFileSync(join(DRAFTS_DIR, f), 'utf-8'));
     if (!draft.title) {

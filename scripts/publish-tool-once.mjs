@@ -156,29 +156,39 @@ function commitAndPush(tool) {
     return;
   }
 
-  const messageArgs = [
-    "-m",
-    JSON.stringify(`Auto-publish utility tool ${tool.id}`),
-    "-m",
-    JSON.stringify("Expose one verified ready utility tool from the throttled five-hour publication queue."),
-    "-m",
-    JSON.stringify("Constraint: GitHub push is the deployment path; no direct Vercel deployment command is used."),
-    "-m",
-    JSON.stringify("Rejected: Publishing draft tools | Draft tools may be incomplete or low quality."),
-    "-m",
-    JSON.stringify("Confidence: high"),
-    "-m",
-    JSON.stringify("Scope-risk: narrow"),
-    "-m",
-    JSON.stringify("Directive: Only mark tools ready after implementation, sitemap, and crawler-page coverage exist."),
-    "-m",
-    JSON.stringify("Tested: publish-tool-once implementation guards passed; indexable content regenerated; verify:seo, lint, and build passed before commit"),
-    "-m",
-    JSON.stringify("Not-tested: Live Vercel deployment is handled by GitHub integration after push"),
-  ].join(" ");
+  // execFileSync + 인자 배열: tool.id가 커밋 메시지에 들어가므로 쉘을 거치지 않게 해
+  // `$()`/백틱 같은 쉘 특수문자로 인한 명령 주입을 원천 차단한다.
+  const commitMessages = [
+    `Auto-publish utility tool ${tool.id}`,
+    "Expose one verified ready utility tool from the throttled five-hour publication queue.",
+    "Constraint: GitHub push is the deployment path; no direct Vercel deployment command is used.",
+    "Rejected: Publishing draft tools | Draft tools may be incomplete or low quality.",
+    "Confidence: high",
+    "Scope-risk: narrow",
+    "Directive: Only mark tools ready after implementation, sitemap, and crawler-page coverage exist.",
+    "Tested: publish-tool-once implementation guards passed; indexable content regenerated; verify:seo, lint, and build passed before commit",
+    "Not-tested: Live Vercel deployment is handled by GitHub integration after push",
+  ];
+  const commitArgs = ["commit"];
+  for (const m of commitMessages) commitArgs.push("-m", m);
+  execFileSync("git", commitArgs, { cwd: ROOT, stdio: "inherit" });
+  pushWithRetry();
+}
 
-  run(`git commit ${messageArgs}`);
-  run("git push origin main");
+// blog-publish 워크플로우 등 다른 자동 커밋이 그 사이 main에 먼저 반영됐을 수 있으므로
+// rebase 후 재시도한다. 실패 시 다음 15분 크론까지 기다리지 않아도 되게 한다.
+function pushWithRetry(maxAttempts = 3) {
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      run("git push origin main");
+      return;
+    } catch (error) {
+      if (attempt === maxAttempts) throw error;
+      console.warn(`⚠️  git push 실패 (시도 ${attempt}/${maxAttempts}), fetch+rebase 후 재시도`);
+      run("git fetch origin main");
+      run("git rebase origin/main");
+    }
+  }
 }
 
 function notifyIndexing(tool) {

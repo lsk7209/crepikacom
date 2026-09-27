@@ -66,17 +66,23 @@ function logSkip(reason, details) {
   console.log(JSON.stringify({ skipped: true, reason, ...details }, null, 2));
 }
 
+// 검증에 실패한 큐 항목은 건너뛰고 다음 항목을 시도한다 — 잘못된 draft 하나가
+// 전체 발행 파이프라인을 영구 정지시키지 않도록 한다. 스킵된 항목은 로그로 남긴다.
 function getNextDraft(queue, now) {
   for (const entry of queue.filter(e => !e.published)) {
     if (!FORCE && entry.scheduledDate && Date.parse(entry.scheduledDate) > now.getTime()) continue;
     const draftPath = join(DRAFTS_DIR, `${entry.slug}.json`);
-    if (existsSync(draftPath)) {
+    if (!existsSync(draftPath)) continue;
+    try {
       const post = parseAndValidatePublishDraft({
         entry,
         draftPath,
         source: readFileSync(draftPath, 'utf-8'),
       });
       return { entry, post, draftPath };
+    } catch (error) {
+      console.warn(`⚠️  큐 항목 [${entry.id}] ${entry.slug} 검증 실패, 스킵: ${error instanceof Error ? error.message : error}`);
+      continue;
     }
   }
   return null;
@@ -123,15 +129,27 @@ function injectIntoRss(post) {
   writeFileSync(RSS_FILE, content, 'utf-8');
 }
 
-function markPublished(entry) {
-  const queue = JSON.parse(readFileSync(QUEUE_FILE, 'utf-8'));
-  const e = queue.find(q => q.id === entry.id);
-  if (e) {
-    e.published = true;
-    e.publishedDate = getTodayDate();
-    e.publishedAt = new Date().toISOString();
-  }
+function markPublished(queue, entry) {
+  entry.published = true;
+  entry.publishedDate = getTodayDate();
+  entry.publishedAt = new Date().toISOString();
   writeFileSync(QUEUE_FILE, JSON.stringify(queue, null, 2), 'utf-8');
+}
+
+// main 브랜치가 그 사이 다른 커밋(예: 툴 발행 워크플로우)으로 앞서갔을 경우를
+// 대비해 rebase 후 재시도한다. 실패 시 다음 15분 크론까지 기다리지 않아도 되게 한다.
+function pushWithRetry(maxAttempts = 3) {
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      execSync('git push origin main', { cwd: ROOT, stdio: 'inherit' });
+      return;
+    } catch (error) {
+      if (attempt === maxAttempts) throw error;
+      console.warn(`⚠️  git push 실패 (시도 ${attempt}/${maxAttempts}), fetch+rebase 후 재시도`);
+      execSync('git fetch origin main', { cwd: ROOT, stdio: 'inherit' });
+      execSync('git rebase origin/main', { cwd: ROOT, stdio: 'inherit' });
+    }
+  }
 }
 
 // slugs: 배치로 발행된 글 slug 배열. IndexNow는 글별, 사이트맵 핑은 1회.
@@ -189,10 +207,7 @@ async function main() {
     // 클리셰 자동 수정 (글별)
     try { execSync(`node scripts/fix-new-post.mjs "${post.slug}"`, { cwd: ROOT, stdio: 'inherit' }); } catch {}
 
-    markPublished(entry);
-    entry.published = true;
-    entry.publishedDate = getTodayDate();
-    entry.publishedAt = new Date().toISOString();
+    markPublished(queue, entry);
     published.push(post);
   }
 
@@ -239,28 +254,23 @@ async function main() {
   execSync('git config user.email "auto-publisher@crepika.com"', { cwd: ROOT });
   execSync('git config user.name "크레피카 자동 발행"', { cwd: ROOT });
   execSync('git add src/data/blog-content.ts src/data/blog-posts src/data/blog-posts-meta.ts src/data/recent-blog-posts-meta.ts public/sitemap.xml public/rss.xml public/feed.xml public/ai-index.json public/llms.txt public/llms-full.txt public/blog scripts/post-queue.json', { cwd: ROOT });
-  const messageArgs = [
-    '-m',
-    JSON.stringify(msg),
-    '-m',
-    JSON.stringify(`Publish scheduled blog batch: ${titles}`.slice(0, 500)),
-    '-m',
-    JSON.stringify('Constraint: GitHub push is the deployment path; no direct Vercel deployment command is used.'),
-    '-m',
-    JSON.stringify('Rejected: Manual production deployment | The repository integration owns Vercel deployment.'),
-    '-m',
-    JSON.stringify('Confidence: high'),
-    '-m',
-    JSON.stringify('Scope-risk: moderate'),
-    '-m',
-    JSON.stringify('Directive: Regenerate sitemap, RSS, AI index, llms files, and crawler pages after every scheduled content batch.'),
-    '-m',
-    JSON.stringify('Tested: publish-once content injection passed; indexable content regenerated; verify:seo, lint, and build passed before commit'),
-    '-m',
-    JSON.stringify('Not-tested: Live Vercel deployment is handled by GitHub integration after push'),
-  ].join(' ');
-  execSync(`git commit ${messageArgs}`, { cwd: ROOT });
-  execSync('git push origin main', { cwd: ROOT });
+  // execFileSync + 인자 배열: post.title 등 생성된 텍스트가 커밋 메시지에 들어가므로
+  // 쉘을 거치지 않게 해 `$()`/백틱 같은 쉘 특수문자로 인한 명령 주입을 원천 차단한다.
+  const commitMessages = [
+    msg,
+    `Publish scheduled blog batch: ${titles}`.slice(0, 500),
+    'Constraint: GitHub push is the deployment path; no direct Vercel deployment command is used.',
+    'Rejected: Manual production deployment | The repository integration owns Vercel deployment.',
+    'Confidence: high',
+    'Scope-risk: moderate',
+    'Directive: Regenerate sitemap, RSS, AI index, llms files, and crawler pages after every scheduled content batch.',
+    'Tested: publish-once content injection passed; indexable content regenerated; verify:seo, lint, and build passed before commit',
+    'Not-tested: Live Vercel deployment is handled by GitHub integration after push',
+  ];
+  const commitArgs = ['commit'];
+  for (const m of commitMessages) commitArgs.push('-m', m);
+  execFileSync('git', commitArgs, { cwd: ROOT, stdio: 'inherit' });
+  pushWithRetry();
   console.log(`🚀 git push 완료 (${published.length}편 1커밋) → Vercel 배포 1회`);
 
   // 발행분 일괄 검색엔진 핑 (push 후 — 404 방지)

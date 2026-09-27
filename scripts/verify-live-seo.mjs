@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+import { readFileSync } from "node:fs";
+
 const SITE_URL = process.env.SITE_URL || "https://crepika.com";
 const WWW_SITE_URL = "https://www.crepika.com";
 const ADSENSE_CLIENT = "ca-pub-3050601904412736";
@@ -22,19 +24,7 @@ const BRAND_NAME_KO = "\uD06C\uB808\uD53C\uCE74";
 const READABLE_HOME_MARKERS = ["\uD06C\uB808\uD53C\uCE74", "\uB85C\uADF8\uC778", "\uBB34\uB8CC"];
 const REQUIRED_CRAWLER_SHELL_MARKERS = ["\uAE00 \uBAA9\uCC28", "\uB2E4\uC74C \uB2E8\uACC4", "\uC0AC\uC774\uD2B8 \uAC80\uD1A0 \uC815\uBCF4"];
 const FORBIDDEN_CRAWLER_SHELL_MARKERS = ["Table of contents", "Next step", "Site and review context"];
-const LEGACY_TOOL_REDIRECTS = {
-  "email-analytics": "ctr-calculator",
-  "email-template": "text-counter",
-  "hash-generator": "hashtag-mixer",
-  "hashtag-generator": "hashtag-mixer",
-  "instagram-spacer": "insta-spacer",
-  "platform-compare": "utm-url-builder",
-  "pricing-calculator": "adsense-rpm-calculator",
-  "analytics-dashboard": "engagement-rate-calculator",
-  "revenue-calculator": "adsense-rpm-calculator",
-  "sns-analytics": "ctr-calculator",
-  "sns-calendar": "utm-url-builder",
-};
+const LEGACY_TOOL_REDIRECTS = JSON.parse(readFileSync("site-config/tool-aliases.json", "utf-8"));
 const LEGACY_BLOG_REDIRECTS = {
   "threads-marketing-complete-guide-meta-threads-follower-2026-": "threads-marketing-complete-guide-meta-threads-follower-2026",
 };

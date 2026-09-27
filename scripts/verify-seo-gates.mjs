@@ -44,20 +44,7 @@ const STATIC_PUBLIC_TOOL_IDS = new Set([
   "hashtag-mixer",
   "qr-generator",
 ]);
-const TOOL_ID_ALIASES = {
-  "email-analytics": "ctr-calculator",
-  "email-template": "text-counter",
-  "hash-generator": "hashtag-mixer",
-  "hashtag-generator": "hashtag-mixer",
-  "image-resizer": "webp-converter",
-  "instagram-spacer": "insta-spacer",
-  "platform-compare": "utm-url-builder",
-  "pricing-calculator": "adsense-rpm-calculator",
-  "analytics-dashboard": "engagement-rate-calculator",
-  "revenue-calculator": "adsense-rpm-calculator",
-  "sns-analytics": "ctr-calculator",
-  "sns-calendar": "utm-url-builder",
-};
+const TOOL_ID_ALIASES = JSON.parse(readFileSync("site-config/tool-aliases.json", "utf-8"));
 const LEGACY_BLOG_REDIRECTS = {
   "threads-marketing-complete-guide-meta-threads-follower-2026-": "threads-marketing-complete-guide-meta-threads-follower-2026",
 };
@@ -854,7 +841,8 @@ function validatePublicFiles() {
   for (const [legacyToolId, canonicalToolId] of Object.entries(TOOL_ID_ALIASES)) {
     const hasLegacyToolRedirect = parsedVercelConfig?.redirects?.some(
       (redirect) =>
-        redirect?.source === `/tools/${legacyToolId}` &&
+        (redirect?.source === `/tools/${legacyToolId}` ||
+          redirect?.source === `/tools/${legacyToolId}:slash(\\/?)`) &&
         redirect?.destination === `/tools/${canonicalToolId}` &&
         redirect?.permanent === true,
     );

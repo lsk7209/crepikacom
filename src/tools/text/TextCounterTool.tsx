@@ -44,15 +44,8 @@ export function TextCounterTool({ onResult, onError }: TextCounterToolProps) {
     const lineCount = inputText.split('\n').length;
     const wordCount = inputText.trim() ? inputText.trim().split(/\s+/).length : 0;
 
-    // Korean byte calculation (Naver standard: Korean char = 2 bytes)
-    const byteCount = [...inputText].reduce((acc, char) => {
-      const code = char.charCodeAt(0);
-      // Korean characters range
-      if ((code >= 0xAC00 && code <= 0xD7A3) || (code >= 0x1100 && code <= 0x11FF)) {
-        return acc + 2;
-      }
-      return acc + 1;
-    }, 0);
+    // UTF-8 byte calculation (matches server-side byte limit checks, e.g. Naver meta description)
+    const byteCount = new Blob([inputText]).size;
 
     onResult(
       <div className="space-y-4">
@@ -82,7 +75,7 @@ export function TextCounterTool({ onResult, onError }: TextCounterToolProps) {
             <p className="text-3xl font-bold text-accent">{lineCount}</p>
           </div>
           <div className="col-span-2 bg-secondary rounded-lg p-4 text-center">
-            <p className="text-sm text-muted-foreground mb-1">바이트 (네이버 기준)</p>
+            <p className="text-sm text-muted-foreground mb-1">바이트 (UTF-8 기준)</p>
             <p className="text-3xl font-bold text-accent">{byteCount}</p>
           </div>
         </div>

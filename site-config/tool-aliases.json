@@ -1,0 +1,14 @@
+{
+  "email-analytics": "ctr-calculator",
+  "email-template": "text-counter",
+  "hash-generator": "hashtag-mixer",
+  "hashtag-generator": "hashtag-mixer",
+  "image-resizer": "webp-converter",
+  "instagram-spacer": "insta-spacer",
+  "platform-compare": "utm-url-builder",
+  "pricing-calculator": "adsense-rpm-calculator",
+  "analytics-dashboard": "engagement-rate-calculator",
+  "revenue-calculator": "adsense-rpm-calculator",
+  "sns-analytics": "ctr-calculator",
+  "sns-calendar": "utm-url-builder"
+}

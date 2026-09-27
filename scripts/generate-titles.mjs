@@ -79,7 +79,18 @@ function addTitles() {
   function makeSlug(title) {
     let s = title.toLowerCase();
     for (const [k, v] of KO_MAP) s = s.replace(new RegExp(k, 'g'), v);
-    return s.replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+    s = s.replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+    // KO_MAP에 없는 한글은 전부 삭제되므로, 남은 문자가 없거나 숫자만 남으면
+    // (예: "...30%를..." → "30") 발행 파이프라인을 막는 numeric/empty slug가 된다.
+    // 알파벳이 하나도 없으면 제목 기반 해시로 안전한 폴백 슬러그를 만든다.
+    if (!s || !/[a-z]/.test(s)) {
+      const hash = title
+        .split('')
+        .reduce((acc, ch) => (acc * 31 + ch.charCodeAt(0)) >>> 0, 7)
+        .toString(36);
+      s = `post-${hash}`;
+    }
+    return s;
   }
 
   let added = 0, skipped = 0;

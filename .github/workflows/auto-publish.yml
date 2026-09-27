@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: auto-publish-blog
+  cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest

@@ -1,3 +1,5 @@
+import toolAliases from '../../site-config/tool-aliases.json';
+
 export type AdStrategy = 'instant' | 'process_heavy' | 'download_focused';
 export type Category = 'plan' | 'create' | 'publish' | 'analyze';
 
@@ -1733,20 +1735,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   analyze: '분석',
 };
 
-const TOOL_ID_ALIASES: Record<string, string> = {
-  'email-analytics': 'ctr-calculator',
-  'email-template': 'text-counter',
-  'hash-generator': 'hashtag-mixer',
-  'hashtag-generator': 'hashtag-mixer',
-  'image-resizer': 'webp-converter',
-  'instagram-spacer': 'insta-spacer',
-  'platform-compare': 'utm-url-builder',
-  'pricing-calculator': 'adsense-rpm-calculator',
-  'analytics-dashboard': 'engagement-rate-calculator',
-  'revenue-calculator': 'adsense-rpm-calculator',
-  'sns-analytics': 'ctr-calculator',
-  'sns-calendar': 'utm-url-builder',
-};
+const TOOL_ID_ALIASES: Record<string, string> = toolAliases;
 
 function resolveToolId(id: string): string {
   return TOOL_ID_ALIASES[id] ?? id;
