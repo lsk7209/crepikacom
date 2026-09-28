@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, BookOpen, Wrench } from "lucide-react";
@@ -12,10 +13,13 @@ const SITE_URL = "https://crepika.com";
 export default function BlogHub() {
   const { hubSlug } = useParams<{ hubSlug: string }>();
   const hub = getHubBySlug(hubSlug);
+  const posts = useMemo(
+    () => (hub ? getPostsForHub(getAllBlogMeta(), hub) : []),
+    [hub],
+  );
 
   if (!hub) return <Navigate to="/blog" replace />;
 
-  const posts = getPostsForHub(getAllBlogMeta(), hub);
   const tools = hub.primaryToolPaths
     .map((path) => getToolById(path.split("/").pop() ?? ""))
     .filter(Boolean);
@@ -87,7 +91,7 @@ export default function BlogHub() {
           </p>
         </header>
 
-        <section className="mb-12 rounded-lg border bg-card p-6">
+        <section className="mb-12 rounded-lg border bg-card p-6 content-lazy">
           <h2 className="mb-5 flex items-center gap-2 text-2xl font-bold">
             <Wrench className="h-5 w-5 text-primary" />
             함께 쓰면 좋은 도구
@@ -112,7 +116,7 @@ export default function BlogHub() {
           </div>
         </section>
 
-        <section>
+        <section className="content-lazy">
           <h2 className="mb-5 flex items-center gap-2 text-2xl font-bold">
             <BookOpen className="h-5 w-5 text-primary" />
             추천 가이드

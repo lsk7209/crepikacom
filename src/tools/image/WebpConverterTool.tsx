@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "@/hooks/use-toast";
 import { Upload, Download, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { trackToolUse, trackCopyResult, trackDownload } from "@/utils/analytics";
+import { trackToolUse, trackDownload } from "@/utils/analytics";
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 const MAX_DIMENSION = 4000;
@@ -20,7 +20,6 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
   const [file, setFile] = useState<File | null>(null);
   const [webpDataUrl, setWebpDataUrl] = useState<string | null>(null);
   const [originalSize, setOriginalSize] = useState<number>(0);
-  const [convertedSize, setConvertedSize] = useState<number>(0);
   const [quality, setQuality] = useState<string>("80");
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,7 +49,6 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
     setFile(selectedFile);
     setOriginalSize(selectedFile.size);
     setWebpDataUrl(null);
-    setConvertedSize(0);
     onError(null);
     onResult(null);
   };
@@ -116,7 +114,6 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
 
               const dataUrl = URL.createObjectURL(blob);
               setWebpDataUrl(dataUrl);
-              setConvertedSize(blob.size);
               onProcessing(false);
 
               const compressionRate = originalSize && blob.size
@@ -152,6 +149,8 @@ export function WebpConverterTool({ onResult, onError, onProcessing }: WebpConve
                     <img
                       src={dataUrl}
                       alt="변환된 WebP 미리보기"
+                      width={img.width}
+                      height={img.height}
                       className="max-w-full h-auto rounded-lg border"
                       style={{ maxHeight: '300px' }}
                     />

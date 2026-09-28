@@ -20,7 +20,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge, badgeVariants } from "@/components/ui/badge";
-import { getAllBlogMeta, BlogPostMeta } from "@/data/blog-posts-meta";
+import { getAllBlogMeta } from "@/data/blog-posts-meta";
 import { BLOG_HUBS, getPostsForHub } from "@/data/blog-hubs";
 import { Input } from "@/components/ui/input";
 import React, { useMemo } from "react";
@@ -57,7 +57,9 @@ const POSTS_PER_PAGE = 12;
 const VALID_CATEGORIES = ["guide", "tips", "insights", "case-study"] as const;
 
 export default function BlogList() {
-  const allPosts = getAllBlogMeta();
+  // getAllBlogMeta() returns a fresh array copy each call, so memoize it —
+  // otherwise every downstream useMemo keyed on allPosts recomputes on every render.
+  const allPosts = useMemo(() => getAllBlogMeta(), []);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const rawCat = searchParams.get("category") ?? "all";
@@ -116,6 +118,11 @@ export default function BlogList() {
         })),
       },
     }),
+    [allPosts],
+  );
+
+  const hubPostCounts = useMemo(
+    () => new Map(BLOG_HUBS.map((hub) => [hub.slug, getPostsForHub(allPosts, hub).length])),
     [allPosts],
   );
 
@@ -256,7 +263,7 @@ export default function BlogList() {
           </div>
         </div>
 
-        <section className="mb-12 rounded-lg border bg-card p-5 md:p-6">
+        <section className="mb-12 rounded-lg border bg-card p-5 md:p-6 content-lazy">
           <h2 className="mb-4 text-xl font-bold">주제별 빠른 탐색</h2>
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             {BLOG_HUBS.map((hub) => (
@@ -275,7 +282,7 @@ export default function BlogList() {
                   {hub.description}
                 </p>
                 <p className="mt-3 text-xs text-primary">
-                  관련 글 {getPostsForHub(allPosts, hub).length}개
+                  관련 글 {hubPostCounts.get(hub.slug) ?? 0}개
                 </p>
               </Link>
             ))}
@@ -471,7 +478,7 @@ export default function BlogList() {
         )}
 
         {/* CTA Section */}
-        <section className="mt-20 text-center bg-muted/30 rounded-lg p-8">
+        <section className="mt-20 text-center bg-muted/30 rounded-lg p-8 content-lazy">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             블로그 글이 도움이 되셨나요?
           </h2>

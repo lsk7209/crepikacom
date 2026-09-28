@@ -35,7 +35,6 @@ import {
   getRecentTools,
   getFavoriteTools,
   toggleFavoriteTool,
-  isFavoriteTool,
 } from "@/utils/localStorage";
 import { Suspense, lazy } from "react";
 
@@ -177,7 +176,7 @@ export default function Home() {
               aria-label={`${tool.titleKo} 즐겨찾기`}
             >
               <Star
-                className={`h-4 w-4 ${isFavoriteTool(tool.id) ? "fill-yellow-400 text-yellow-400" : "text-muted-foreground"}`}
+                className={`h-4 w-4 ${favorites.includes(tool.id) ? "fill-yellow-400 text-yellow-400" : "text-muted-foreground"}`}
               />
             </Button>
           )}

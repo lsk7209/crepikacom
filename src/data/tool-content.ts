@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 export interface ToolDetailedContent {
     id: string;
     introduction: string;
