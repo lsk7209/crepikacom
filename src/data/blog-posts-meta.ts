@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "blog-adsense-revenue-complete-guide-ads-rpm-optimization-str",
+    title: "블로그 AdSense 수익 극대화 완전 가이드: 광고 단위·위치·RPM 최적화 전략",
+    description: "블로그 애드센스 수익을 높이는 광고 단위 설정부터 최적 배치 위치, RPM 개선 전략까지 데이터 기반의 실전 최적화 방법을 단계별로 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "이지수",
+    keywords: ["애드센스 RPM 최적화", "블로그 애드센스 수익", "광고 단위 설정", "애드센스 광고 위치", "블로그 광고 수익 극대화"],
+  },
+  {
     slug: "1-creator-guide",
     title: "1인 크리에이터를 위한 법인 설립 가이드: 사업 확장 시점과 법인 전환 이점",
     description: "1인 크리에이터가 개인사업자에서 법인으로 전환해야 하는 시점과 절차, 세금·계약·투자 측면의 실질적 이점을 단계별로 정리한 실무 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",

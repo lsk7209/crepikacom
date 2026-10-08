@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>블로그 AdSense 수익 극대화 완전 가이드: 광고 단위·위치·RPM 최적화 전략</title>
+    <link>https://crepika.com/blog/blog-adsense-revenue-complete-guide-ads-rpm-optimization-str</link>
+    <guid>https://crepika.com/blog/blog-adsense-revenue-complete-guide-ads-rpm-optimization-str</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>guide</category>
+    <description>블로그 애드센스 수익을 높이는 광고 단위 설정부터 최적 배치 위치, RPM 개선 전략까지 데이터 기반의 실전 최적화 방법을 단계별로 정리했습니다.</description>
+  </item>
+  <item>
     <title>1인 크리에이터를 위한 법인 설립 가이드: 사업 확장 시점과 법인 전환 이점</title>
     <link>https://crepika.com/blog/1-creator-guide</link>
     <guid>https://crepika.com/blog/1-creator-guide</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>tips</category>
     <description>블로그 글감이 떨어져 막막할 때 Perplexity AI를 활용하면 무한한 아이디어 소스를 얻을 수 있습니다. 검색부터 아이디어 발굴까지 7가지 실전 활용법을 소개합니다.</description>
-  </item>
-  <item>
-    <title>ElevenLabs로 팟캐스트 인트로 만드는 팁: AI 목소리로 전문가 느낌 내는 법</title>
-    <link>https://crepika.com/blog/elevenlabs-tips-ai</link>
-    <guid>https://crepika.com/blog/elevenlabs-tips-ai</guid>
-    <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>김민혁</dc:creator>
-    <category>tips</category>
-    <description>ElevenLabs AI 음성 생성 도구로 팟캐스트 인트로, 아웃트로, 광고 멘트를 직접 제작하는 방법과 자연스러운 음성을 만드는 실전 팁을 정리했습니다.</description>
   </item>
 </channel>
 </rss>

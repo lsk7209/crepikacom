@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "blog-adsense-revenue-complete-guide-ads-rpm-optimization-str",
+    title: "블로그 AdSense 수익 극대화 완전 가이드: 광고 단위·위치·RPM 최적화 전략",
+    description: "블로그 애드센스 수익을 높이는 광고 단위 설정부터 최적 배치 위치, RPM 개선 전략까지 데이터 기반의 실전 최적화 방법을 단계별로 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "이지수",
+    keywords: ["애드센스 RPM 최적화", "블로그 애드센스 수익", "광고 단위 설정", "애드센스 광고 위치", "블로그 광고 수익 극대화"],
+  },
+  {
     slug: "1-creator-guide",
     title: "1인 크리에이터를 위한 법인 설립 가이드: 사업 확장 시점과 법인 전환 이점",
     description: "1인 크리에이터가 개인사업자에서 법인으로 전환해야 하는 시점과 절차, 세금·계약·투자 측면의 실질적 이점을 단계별로 정리한 실무 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "12분",
     author: "김민혁",
     keywords: ["크리에이터 번아웃", "창작 루틴", "번아웃 예방", "크리에이터 지속 가능성", "콘텐츠 창작 방법"],
-  },
-  {
-    slug: "ads-comparison-creator",
-    title: "유료 구독 모델과 광고 모델 비교: 크리에이터에게 어느 것이 더 안정적인가",
-    description: "크리에이터를 위한 유료 구독 모델과 광고 수익 모델을 수익 안정성, 성장 가능성, 운영 부담 측면에서 비교 분석합니다. 나에게 맞는 모델 선택 기준을 제시합니다.",
-    category: "insights",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "박준영",
-    keywords: ["크리에이터 수익화", "유료 구독 모델", "광고 수익 모델", "콘텐츠 수익화", "크리에이터 이코노미"],
   },
 ];
