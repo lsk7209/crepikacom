@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-complete-guide-blog-ads-revenue-strategy",
+    title: "네이버 애드포스트 완전 가이드: 블로그 광고 수익 극대화하는 설정 전략",
+    description: "네이버 애드포스트 신청 조건부터 광고 노출 최적화, 수익 증대를 위한 블로그 운영 전략까지 실전 중심으로 정리한 완전 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["네이버 애드포스트", "네이버 블로그 광고 수익", "애드포스트 신청 조건", "네이버 블로그 수익화", "애드포스트 설정"],
+  },
+  {
     slug: "blog-adsense-revenue-complete-guide-ads-rpm-optimization-str",
     title: "블로그 AdSense 수익 극대화 완전 가이드: 광고 단위·위치·RPM 최적화 전략",
     description: "블로그 애드센스 수익을 높이는 광고 단위 설정부터 최적 배치 위치, RPM 개선 전략까지 데이터 기반의 실전 최적화 방법을 단계별로 정리했습니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "12분",
     author: "박준영",
     keywords: ["1인 크리에이터 법인 설립", "크리에이터 법인 전환", "개인사업자 법인 전환", "크리에이터 세금 절세", "콘텐츠 크리에이터 사업자"],
-  },
-  {
-    slug: "creator-strategy-7-method",
-    title: "크리에이터 번아웃 예방 전략: 지속 가능한 창작 루틴을 만드는 7가지 방법",
-    description: "크리에이터 번아웃의 원인을 분석하고 지속 가능한 창작 활동을 위한 7가지 실전 전략을 안내합니다. 에너지 관리부터 시스템 구축까지 구체적 방법론을 제공합니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "김민혁",
-    keywords: ["크리에이터 번아웃", "창작 루틴", "번아웃 예방", "크리에이터 지속 가능성", "콘텐츠 창작 방법"],
   },
 ];

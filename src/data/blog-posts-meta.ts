@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-complete-guide-blog-ads-revenue-strategy",
+    title: "네이버 애드포스트 완전 가이드: 블로그 광고 수익 극대화하는 설정 전략",
+    description: "네이버 애드포스트 신청 조건부터 광고 노출 최적화, 수익 증대를 위한 블로그 운영 전략까지 실전 중심으로 정리한 완전 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["네이버 애드포스트", "네이버 블로그 광고 수익", "애드포스트 신청 조건", "네이버 블로그 수익화", "애드포스트 설정"],
+  },
+  {
     slug: "blog-adsense-revenue-complete-guide-ads-rpm-optimization-str",
     title: "블로그 AdSense 수익 극대화 완전 가이드: 광고 단위·위치·RPM 최적화 전략",
     description: "블로그 애드센스 수익을 높이는 광고 단위 설정부터 최적 배치 위치, RPM 개선 전략까지 데이터 기반의 실전 최적화 방법을 단계별로 정리했습니다.",

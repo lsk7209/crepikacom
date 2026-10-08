@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>네이버 애드포스트 완전 가이드: 블로그 광고 수익 극대화하는 설정 전략</title>
+    <link>https://crepika.com/blog/naver-complete-guide-blog-ads-revenue-strategy</link>
+    <guid>https://crepika.com/blog/naver-complete-guide-blog-ads-revenue-strategy</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>김민혁</dc:creator>
+    <category>guide</category>
+    <description>네이버 애드포스트 신청 조건부터 광고 노출 최적화, 수익 증대를 위한 블로그 운영 전략까지 실전 중심으로 정리한 완전 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.</description>
+  </item>
+  <item>
     <title>블로그 AdSense 수익 극대화 완전 가이드: 광고 단위·위치·RPM 최적화 전략</title>
     <link>https://crepika.com/blog/blog-adsense-revenue-complete-guide-ads-rpm-optimization-str</link>
     <guid>https://crepika.com/blog/blog-adsense-revenue-complete-guide-ads-rpm-optimization-str</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>tips</category>
     <description>Facebook Pixel을 제대로 설치하지 않으면 Meta 광고비를 낭비합니다. 픽셀 설치부터 이벤트 추적, CAPI 연동까지 정확한 광고 측정을 위한 실전 팁을 정리했습니다.</description>
-  </item>
-  <item>
-    <title>Perplexity로 블로그 글감 찾는 7가지 팁: 아이디어 고갈 없이 꾸준히 쓰는 법</title>
-    <link>https://crepika.com/blog/perplexity-blog-7-tips</link>
-    <guid>https://crepika.com/blog/perplexity-blog-7-tips</guid>
-    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>tips</category>
-    <description>블로그 글감이 떨어져 막막할 때 Perplexity AI를 활용하면 무한한 아이디어 소스를 얻을 수 있습니다. 검색부터 아이디어 발굴까지 7가지 실전 활용법을 소개합니다.</description>
   </item>
 </channel>
 </rss>
