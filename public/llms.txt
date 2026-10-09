@@ -118,9 +118,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 430
+Renderable blog posts: 431
 
 Latest posts:
+- [B2B 마케팅 완전 가이드: 기업 대 기업 콘텐츠 전략으로 리드 창출하기](https://crepika.com/blog/b2b-marketing-complete-guide-content-strategy): B2B 마케팅의 콘텐츠 전략 수립부터 리드 너처링, 세일즈 파이프라인 연계까지 실무 담당자가 바로 적용할 수 있는 단계별 전략을 정리했습니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.
 - [네이버 애드포스트 완전 가이드: 블로그 광고 수익 극대화하는 설정 전략](https://crepika.com/blog/naver-complete-guide-blog-ads-revenue-strategy): 네이버 애드포스트 신청 조건부터 광고 노출 최적화, 수익 증대를 위한 블로그 운영 전략까지 실전 중심으로 정리한 완전 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.
 - [블로그 AdSense 수익 극대화 완전 가이드: 광고 단위·위치·RPM 최적화 전략](https://crepika.com/blog/blog-adsense-revenue-complete-guide-ads-rpm-optimization-str): 블로그 애드센스 수익을 높이는 광고 단위 설정부터 최적 배치 위치, RPM 개선 전략까지 데이터 기반의 실전 최적화 방법을 단계별로 정리했습니다.
 - [1인 크리에이터를 위한 법인 설립 가이드: 사업 확장 시점과 법인 전환 이점](https://crepika.com/blog/1-creator-guide): 1인 크리에이터가 개인사업자에서 법인으로 전환해야 하는 시점과 절차, 세금·계약·투자 측면의 실질적 이점을 단계별로 정리한 실무 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.
@@ -132,7 +133,6 @@ Latest posts:
 - [Make.com + Google Sheets 자동화로 콘텐츠 관리 시간 90% 줄인 케이스](https://crepika.com/blog/makecom-google-sheets-automation-content-90): Make.com과 Google Sheets를 연동해 콘텐츠 기획·발행·성과 추적 전 과정을 자동화해 관리 시간을 90% 절감한 콘텐츠팀의 실전 케이스를 공개합니다.
 - [LinkedIn 뉴스레터로 B2B 리드 월 20개 꾸준히 만드는 케이스](https://crepika.com/blog/linkedin-b2b-20): 중소 B2B 서비스 기업이 LinkedIn 뉴스레터 단일 채널로 월 20건의 안정적인 리드를 12개월 연속 달성한 실제 운영 방법과 수치를 공개합니다.
 - [구글 Discover로 유입된 독자의 뉴스레터 전환율 분석 케이스](https://crepika.com/blog/google-discover-analytics): 구글 Discover 유입 독자와 일반 검색 유입 독자의 뉴스레터 전환율을 비교 분석하고, Discover 트래픽을 구독자로 전환하는 전략을 공개합니다.
-- [고객 페르소나 재설정 후 광고 전환율 2배 올린 스타트업 케이스](https://crepika.com/blog/ads-2): 잘못된 고객 페르소나가 광고 전환율을 낮추는 이유를 실제 스타트업 케이스로 분석합니다. 데이터 기반 페르소나 재구축과 채널 믹스 재조정으로 전환율 2배 향상을 달성한 방법을 공개합니다.
 
 ## Index Resources
 
@@ -146,4 +146,4 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-10-08
+Updated: 2026-10-09

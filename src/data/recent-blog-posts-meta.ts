@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "b2b-marketing-complete-guide-content-strategy",
+    title: "B2B 마케팅 완전 가이드: 기업 대 기업 콘텐츠 전략으로 리드 창출하기",
+    description: "B2B 마케팅의 콘텐츠 전략 수립부터 리드 너처링, 세일즈 파이프라인 연계까지 실무 담당자가 바로 적용할 수 있는 단계별 전략을 정리했습니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "14분",
+    author: "박준영",
+    keywords: ["B2B 마케팅 전략", "B2B 콘텐츠 마케팅", "B2B 리드 창출", "기업 마케팅 가이드", "B2B 리드 너처링"],
+  },
+  {
     slug: "naver-complete-guide-blog-ads-revenue-strategy",
     title: "네이버 애드포스트 완전 가이드: 블로그 광고 수익 극대화하는 설정 전략",
     description: "네이버 애드포스트 신청 조건부터 광고 노출 최적화, 수익 증대를 위한 블로그 운영 전략까지 실전 중심으로 정리한 완전 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "13분",
     author: "이지수",
     keywords: ["애드센스 RPM 최적화", "블로그 애드센스 수익", "광고 단위 설정", "애드센스 광고 위치", "블로그 광고 수익 극대화"],
-  },
-  {
-    slug: "1-creator-guide",
-    title: "1인 크리에이터를 위한 법인 설립 가이드: 사업 확장 시점과 법인 전환 이점",
-    description: "1인 크리에이터가 개인사업자에서 법인으로 전환해야 하는 시점과 절차, 세금·계약·투자 측면의 실질적 이점을 단계별로 정리한 실무 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "박준영",
-    keywords: ["1인 크리에이터 법인 설립", "크리에이터 법인 전환", "개인사업자 법인 전환", "크리에이터 세금 절세", "콘텐츠 크리에이터 사업자"],
   },
 ];

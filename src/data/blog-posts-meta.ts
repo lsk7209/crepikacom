@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "b2b-marketing-complete-guide-content-strategy",
+    title: "B2B 마케팅 완전 가이드: 기업 대 기업 콘텐츠 전략으로 리드 창출하기",
+    description: "B2B 마케팅의 콘텐츠 전략 수립부터 리드 너처링, 세일즈 파이프라인 연계까지 실무 담당자가 바로 적용할 수 있는 단계별 전략을 정리했습니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "14분",
+    author: "박준영",
+    keywords: ["B2B 마케팅 전략", "B2B 콘텐츠 마케팅", "B2B 리드 창출", "기업 마케팅 가이드", "B2B 리드 너처링"],
+  },
+  {
     slug: "naver-complete-guide-blog-ads-revenue-strategy",
     title: "네이버 애드포스트 완전 가이드: 블로그 광고 수익 극대화하는 설정 전략",
     description: "네이버 애드포스트 신청 조건부터 광고 노출 최적화, 수익 증대를 위한 블로그 운영 전략까지 실전 중심으로 정리한 완전 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
