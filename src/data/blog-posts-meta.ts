@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "marketing-complete-guide",
+    title: "리뷰 마케팅 완전 가이드: 긍정 리뷰를 자동으로 모으는 시스템 구축법",
+    description: "고객 리뷰를 자동으로 수집하고 관리하는 시스템 구축 방법부터 부정 리뷰 대응 전략, 리뷰를 마케팅 자산으로 활용하는 방법까지 실전 가이드입니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "이지수",
+    keywords: ["리뷰 마케팅 전략", "고객 리뷰 수집 시스템", "긍정 리뷰 모으기", "리뷰 자동화", "온라인 리뷰 관리"],
+  },
+  {
     slug: "b2b-marketing-complete-guide-content-strategy",
     title: "B2B 마케팅 완전 가이드: 기업 대 기업 콘텐츠 전략으로 리드 창출하기",
     description: "B2B 마케팅의 콘텐츠 전략 수립부터 리드 너처링, 세일즈 파이프라인 연계까지 실무 담당자가 바로 적용할 수 있는 단계별 전략을 정리했습니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",

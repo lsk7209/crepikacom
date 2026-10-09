@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "marketing-complete-guide",
+    title: "리뷰 마케팅 완전 가이드: 긍정 리뷰를 자동으로 모으는 시스템 구축법",
+    description: "고객 리뷰를 자동으로 수집하고 관리하는 시스템 구축 방법부터 부정 리뷰 대응 전략, 리뷰를 마케팅 자산으로 활용하는 방법까지 실전 가이드입니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "이지수",
+    keywords: ["리뷰 마케팅 전략", "고객 리뷰 수집 시스템", "긍정 리뷰 모으기", "리뷰 자동화", "온라인 리뷰 관리"],
+  },
+  {
     slug: "b2b-marketing-complete-guide-content-strategy",
     title: "B2B 마케팅 완전 가이드: 기업 대 기업 콘텐츠 전략으로 리드 창출하기",
     description: "B2B 마케팅의 콘텐츠 전략 수립부터 리드 너처링, 세일즈 파이프라인 연계까지 실무 담당자가 바로 적용할 수 있는 단계별 전략을 정리했습니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "11분",
     author: "김민혁",
     keywords: ["네이버 애드포스트", "네이버 블로그 광고 수익", "애드포스트 신청 조건", "네이버 블로그 수익화", "애드포스트 설정"],
-  },
-  {
-    slug: "blog-adsense-revenue-complete-guide-ads-rpm-optimization-str",
-    title: "블로그 AdSense 수익 극대화 완전 가이드: 광고 단위·위치·RPM 최적화 전략",
-    description: "블로그 애드센스 수익을 높이는 광고 단위 설정부터 최적 배치 위치, RPM 개선 전략까지 데이터 기반의 실전 최적화 방법을 단계별로 정리했습니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "13분",
-    author: "이지수",
-    keywords: ["애드센스 RPM 최적화", "블로그 애드센스 수익", "광고 단위 설정", "애드센스 광고 위치", "블로그 광고 수익 극대화"],
   },
 ];
