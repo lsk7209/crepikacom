@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "instagram-ads-complete-guide",
+    title: "인스타그램 광고 캠페인 구조 완전 가이드: 목적별 최적 캠페인 설계법",
+    description: "인스타그램 광고 캠페인 목표 설정부터 광고 세트 구성, 소재 제작, 성과 측정까지 실전에서 바로 적용 가능한 캠페인 설계 방법을 단계별로 설명합니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["인스타그램 광고 설정", "인스타그램 캠페인 구조", "메타 광고 가이드", "인스타그램 광고 목표", "인스타그램 광고 최적화"],
+  },
+  {
     slug: "marketing-complete-guide",
     title: "리뷰 마케팅 완전 가이드: 긍정 리뷰를 자동으로 모으는 시스템 구축법",
     description: "고객 리뷰를 자동으로 수집하고 관리하는 시스템 구축 방법부터 부정 리뷰 대응 전략, 리뷰를 마케팅 자산으로 활용하는 방법까지 실전 가이드입니다.",

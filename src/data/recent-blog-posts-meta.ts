@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "instagram-ads-complete-guide",
+    title: "인스타그램 광고 캠페인 구조 완전 가이드: 목적별 최적 캠페인 설계법",
+    description: "인스타그램 광고 캠페인 목표 설정부터 광고 세트 구성, 소재 제작, 성과 측정까지 실전에서 바로 적용 가능한 캠페인 설계 방법을 단계별로 설명합니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["인스타그램 광고 설정", "인스타그램 캠페인 구조", "메타 광고 가이드", "인스타그램 광고 목표", "인스타그램 광고 최적화"],
+  },
+  {
     slug: "marketing-complete-guide",
     title: "리뷰 마케팅 완전 가이드: 긍정 리뷰를 자동으로 모으는 시스템 구축법",
     description: "고객 리뷰를 자동으로 수집하고 관리하는 시스템 구축 방법부터 부정 리뷰 대응 전략, 리뷰를 마케팅 자산으로 활용하는 방법까지 실전 가이드입니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "14분",
     author: "박준영",
     keywords: ["B2B 마케팅 전략", "B2B 콘텐츠 마케팅", "B2B 리드 창출", "기업 마케팅 가이드", "B2B 리드 너처링"],
-  },
-  {
-    slug: "naver-complete-guide-blog-ads-revenue-strategy",
-    title: "네이버 애드포스트 완전 가이드: 블로그 광고 수익 극대화하는 설정 전략",
-    description: "네이버 애드포스트 신청 조건부터 광고 노출 최적화, 수익 증대를 위한 블로그 운영 전략까지 실전 중심으로 정리한 완전 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "김민혁",
-    keywords: ["네이버 애드포스트", "네이버 블로그 광고 수익", "애드포스트 신청 조건", "네이버 블로그 수익화", "애드포스트 설정"],
   },
 ];
