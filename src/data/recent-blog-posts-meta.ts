@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ads-complete-guide-naver-shopping-ads-strategy",
+    title: "스마트스토어 광고 완전 가이드: 네이버 쇼핑 광고로 매출 올리는 전략",
+    description: "네이버 쇼핑 광고의 종류와 특성부터 키워드 선정, 입찰 전략, ROAS 최적화까지 스마트스토어 매출을 실질적으로 높이는 광고 운영 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["스마트스토어 광고", "네이버 쇼핑 광고", "쇼핑 검색 광고", "스마트스토어 매출 올리기", "네이버 광고 ROAS"],
+  },
+  {
     slug: "instagram-ads-complete-guide",
     title: "인스타그램 광고 캠페인 구조 완전 가이드: 목적별 최적 캠페인 설계법",
     description: "인스타그램 광고 캠페인 목표 설정부터 광고 세트 구성, 소재 제작, 성과 측정까지 실전에서 바로 적용 가능한 캠페인 설계 방법을 단계별로 설명합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "13분",
     author: "이지수",
     keywords: ["리뷰 마케팅 전략", "고객 리뷰 수집 시스템", "긍정 리뷰 모으기", "리뷰 자동화", "온라인 리뷰 관리"],
-  },
-  {
-    slug: "b2b-marketing-complete-guide-content-strategy",
-    title: "B2B 마케팅 완전 가이드: 기업 대 기업 콘텐츠 전략으로 리드 창출하기",
-    description: "B2B 마케팅의 콘텐츠 전략 수립부터 리드 너처링, 세일즈 파이프라인 연계까지 실무 담당자가 바로 적용할 수 있는 단계별 전략을 정리했습니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "14분",
-    author: "박준영",
-    keywords: ["B2B 마케팅 전략", "B2B 콘텐츠 마케팅", "B2B 리드 창출", "기업 마케팅 가이드", "B2B 리드 너처링"],
   },
 ];

@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ads-complete-guide-naver-shopping-ads-strategy",
+    title: "스마트스토어 광고 완전 가이드: 네이버 쇼핑 광고로 매출 올리는 전략",
+    description: "네이버 쇼핑 광고의 종류와 특성부터 키워드 선정, 입찰 전략, ROAS 최적화까지 스마트스토어 매출을 실질적으로 높이는 광고 운영 방법을 정리했습니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["스마트스토어 광고", "네이버 쇼핑 광고", "쇼핑 검색 광고", "스마트스토어 매출 올리기", "네이버 광고 ROAS"],
+  },
+  {
     slug: "instagram-ads-complete-guide",
     title: "인스타그램 광고 캠페인 구조 완전 가이드: 목적별 최적 캠페인 설계법",
     description: "인스타그램 광고 캠페인 목표 설정부터 광고 세트 구성, 소재 제작, 성과 측정까지 실전에서 바로 적용 가능한 캠페인 설계 방법을 단계별로 설명합니다.",

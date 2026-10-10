@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>스마트스토어 광고 완전 가이드: 네이버 쇼핑 광고로 매출 올리는 전략</title>
+    <link>https://crepika.com/blog/ads-complete-guide-naver-shopping-ads-strategy</link>
+    <guid>https://crepika.com/blog/ads-complete-guide-naver-shopping-ads-strategy</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>guide</category>
+    <description>네이버 쇼핑 광고의 종류와 특성부터 키워드 선정, 입찰 전략, ROAS 최적화까지 스마트스토어 매출을 실질적으로 높이는 광고 운영 방법을 정리했습니다.</description>
+  </item>
+  <item>
     <title>인스타그램 광고 캠페인 구조 완전 가이드: 목적별 최적 캠페인 설계법</title>
     <link>https://crepika.com/blog/instagram-ads-complete-guide</link>
     <guid>https://crepika.com/blog/instagram-ads-complete-guide</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>tips</category>
     <description>Substack 무료 구독자를 유료 결제자로 전환하는 전환율 최적화 전략. 유료화 타이밍 설정, 오퍼 설계, 전환 이메일 시퀀스, 가격 책정 기준을 수치와 함께 정리.</description>
-  </item>
-  <item>
-    <title>구글 SGE 인용 늘리는 5가지 팁: AI가 내 콘텐츠를 답변에 포함시키는 방법</title>
-    <link>https://crepika.com/blog/google-sge-5-tips-ai-content-method</link>
-    <guid>https://crepika.com/blog/google-sge-5-tips-ai-content-method</guid>
-    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>김민혁</dc:creator>
-    <category>tips</category>
-    <description>구글 AI Overviews(SGE)에 내 콘텐츠가 인용되려면 일반 SEO와 다른 전략이 필요합니다. AI 답변 인용률을 높이는 5가지 콘텐츠 최적화 방법을 정리했습니다.</description>
   </item>
 </channel>
 </rss>
