@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Google Tag Manager 입문 가이드: 마케터가 직접 스크립트 관리하는 방법</title>
+    <link>https://crepika.com/blog/google-tag-manager-beginner-guide-method</link>
+    <guid>https://crepika.com/blog/google-tag-manager-beginner-guide-method</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>guide</category>
+    <description>개발자 없이 마케터가 직접 GTM으로 태그를 설치하고 관리하는 방법을 처음부터 단계별로 설명합니다. GA4 연동, 이벤트 설정, 트리거 구성까지 실전 가이드입니다.</description>
+  </item>
+  <item>
     <title>스마트스토어 광고 완전 가이드: 네이버 쇼핑 광고로 매출 올리는 전략</title>
     <link>https://crepika.com/blog/ads-complete-guide-naver-shopping-ads-strategy</link>
     <guid>https://crepika.com/blog/ads-complete-guide-naver-shopping-ads-strategy</guid>
@@ -897,15 +906,6 @@
     <dc:creator>이지수</dc:creator>
     <category>tips</category>
     <description>쿠팡파트너스 수익을 높이려면 링크를 많이 다는 것보다 전략적으로 배치하는 것이 중요합니다. 클릭률을 높이는 링크 위치, 앵커텍스트, 콘텐츠 유형 최적화 팁을 정리했습니다.</description>
-  </item>
-  <item>
-    <title>Substack 무료에서 유료로 전환하는 팁: 구독자를 결제자로 바꾸는 전략</title>
-    <link>https://crepika.com/blog/substack-tips-strategy</link>
-    <guid>https://crepika.com/blog/substack-tips-strategy</guid>
-    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>박준영</dc:creator>
-    <category>tips</category>
-    <description>Substack 무료 구독자를 유료 결제자로 전환하는 전환율 최적화 전략. 유료화 타이밍 설정, 오퍼 설계, 전환 이메일 시퀀스, 가격 책정 기준을 수치와 함께 정리.</description>
   </item>
 </channel>
 </rss>

@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "google-tag-manager-beginner-guide-method",
+    title: "Google Tag Manager 입문 가이드: 마케터가 직접 스크립트 관리하는 방법",
+    description: "개발자 없이 마케터가 직접 GTM으로 태그를 설치하고 관리하는 방법을 처음부터 단계별로 설명합니다. GA4 연동, 이벤트 설정, 트리거 구성까지 실전 가이드입니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "이지수",
+    keywords: ["Google Tag Manager 입문", "GTM 사용법", "GTM 태그 설치", "GTM GA4 연동", "마케터 태그 관리"],
+  },
+  {
     slug: "ads-complete-guide-naver-shopping-ads-strategy",
     title: "스마트스토어 광고 완전 가이드: 네이버 쇼핑 광고로 매출 올리는 전략",
     description: "네이버 쇼핑 광고의 종류와 특성부터 키워드 선정, 입찰 전략, ROAS 최적화까지 스마트스토어 매출을 실질적으로 높이는 광고 운영 방법을 정리했습니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "13분",
     author: "김민혁",
     keywords: ["인스타그램 광고 설정", "인스타그램 캠페인 구조", "메타 광고 가이드", "인스타그램 광고 목표", "인스타그램 광고 최적화"],
-  },
-  {
-    slug: "marketing-complete-guide",
-    title: "리뷰 마케팅 완전 가이드: 긍정 리뷰를 자동으로 모으는 시스템 구축법",
-    description: "고객 리뷰를 자동으로 수집하고 관리하는 시스템 구축 방법부터 부정 리뷰 대응 전략, 리뷰를 마케팅 자산으로 활용하는 방법까지 실전 가이드입니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "13분",
-    author: "이지수",
-    keywords: ["리뷰 마케팅 전략", "고객 리뷰 수집 시스템", "긍정 리뷰 모으기", "리뷰 자동화", "온라인 리뷰 관리"],
   },
 ];
