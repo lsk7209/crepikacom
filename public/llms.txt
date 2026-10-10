@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 436
+Renderable blog posts: 437
 
 Latest posts:
 - [네이버 모두(Modoo!) 홈페이지 제작 완전 가이드: 무료로 비즈니스 사이트 만들기](https://crepika.com/blog/naver-modoo-complete-guide): 네이버 모두(modoo!)로 비즈니스 홈페이지를 무료로 만드는 방법부터 디자인 설정, 예약 기능, 스마트플레이스 연동까지 소상공인을 위한 실전 가이드입니다.

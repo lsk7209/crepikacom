@@ -1183,6 +1183,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "seo-complete-guide-search-optimization-strategy",
+    title: "이커머스 SEO 완전 가이드: 상품 페이지부터 카테고리까지 검색 최적화 전략",
+    description: "이커머스 사이트의 상품 페이지, 카테고리 페이지, 기술적 SEO까지 구글 검색 상위 노출을 위한 단계별 최적화 전략과 실행 방법을 정리한 완전 가이드입니다.",
+    category: "guide",
+    publishDate: "2026-05-08",
+    readTime: "14분",
+    author: "박준영",
+    keywords: ["이커머스 SEO", "쇼핑몰 검색 최적화", "상품 페이지 SEO", "카테고리 페이지 SEO", "이커머스 구글 상위 노출"],
+  },
+  {
     slug: "marketing-2026-analytics",
     title: "국내 소상공인 디지털 마케팅 현황 2026: 예산·채널·성과 실태 분석",
     description: "2026년 국내 소상공인의 디지털 마케팅 현황을 예산 규모, 활용 채널, 실제 성과 측면에서 분석합니다. 업종별 트렌드와 효과적인 전략 인사이트를 제공합니다.",
