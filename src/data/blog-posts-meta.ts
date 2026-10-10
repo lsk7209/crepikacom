@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-modoo-complete-guide",
+    title: "네이버 모두(Modoo!) 홈페이지 제작 완전 가이드: 무료로 비즈니스 사이트 만들기",
+    description: "네이버 모두(modoo!)로 비즈니스 홈페이지를 무료로 만드는 방법부터 디자인 설정, 예약 기능, 스마트플레이스 연동까지 소상공인을 위한 실전 가이드입니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["네이버 모두 홈페이지", "모두 홈페이지 만들기", "네이버 무료 홈페이지", "소상공인 홈페이지", "modoo 사용법"],
+  },
+  {
     slug: "google-tag-manager-beginner-guide-method",
     title: "Google Tag Manager 입문 가이드: 마케터가 직접 스크립트 관리하는 방법",
     description: "개발자 없이 마케터가 직접 GTM으로 태그를 설치하고 관리하는 방법을 처음부터 단계별로 설명합니다. GA4 연동, 이벤트 설정, 트리거 구성까지 실전 가이드입니다.",

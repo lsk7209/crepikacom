@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-modoo-complete-guide",
+    title: "네이버 모두(Modoo!) 홈페이지 제작 완전 가이드: 무료로 비즈니스 사이트 만들기",
+    description: "네이버 모두(modoo!)로 비즈니스 홈페이지를 무료로 만드는 방법부터 디자인 설정, 예약 기능, 스마트플레이스 연동까지 소상공인을 위한 실전 가이드입니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "김민혁",
+    keywords: ["네이버 모두 홈페이지", "모두 홈페이지 만들기", "네이버 무료 홈페이지", "소상공인 홈페이지", "modoo 사용법"],
+  },
+  {
     slug: "google-tag-manager-beginner-guide-method",
     title: "Google Tag Manager 입문 가이드: 마케터가 직접 스크립트 관리하는 방법",
     description: "개발자 없이 마케터가 직접 GTM으로 태그를 설치하고 관리하는 방법을 처음부터 단계별로 설명합니다. GA4 연동, 이벤트 설정, 트리거 구성까지 실전 가이드입니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "12분",
     author: "박준영",
     keywords: ["스마트스토어 광고", "네이버 쇼핑 광고", "쇼핑 검색 광고", "스마트스토어 매출 올리기", "네이버 광고 ROAS"],
-  },
-  {
-    slug: "instagram-ads-complete-guide",
-    title: "인스타그램 광고 캠페인 구조 완전 가이드: 목적별 최적 캠페인 설계법",
-    description: "인스타그램 광고 캠페인 목표 설정부터 광고 세트 구성, 소재 제작, 성과 측정까지 실전에서 바로 적용 가능한 캠페인 설계 방법을 단계별로 설명합니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "13분",
-    author: "김민혁",
-    keywords: ["인스타그램 광고 설정", "인스타그램 캠페인 구조", "메타 광고 가이드", "인스타그램 광고 목표", "인스타그램 광고 최적화"],
   },
 ];

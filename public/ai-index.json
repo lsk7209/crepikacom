@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 435,
+    "count": 436,
     "latest": [
+      {
+        "title": "네이버 모두(Modoo!) 홈페이지 제작 완전 가이드: 무료로 비즈니스 사이트 만들기",
+        "url": "https://crepika.com/blog/naver-modoo-complete-guide",
+        "description": "네이버 모두(modoo!)로 비즈니스 홈페이지를 무료로 만드는 방법부터 디자인 설정, 예약 기능, 스마트플레이스 연동까지 소상공인을 위한 실전 가이드입니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "Google Tag Manager 입문 가이드: 마케터가 직접 스크립트 관리하는 방법",
         "url": "https://crepika.com/blog/google-tag-manager-beginner-guide-method",
@@ -524,12 +530,6 @@
         "title": "포스트 ChatGPT 시대 SEO 전략: AI가 답변하는 시대에서 검색 트래픽 지키기",
         "url": "https://crepika.com/blog/chatgpt-seo-strategy-ai-search",
         "description": "ChatGPT와 AI 검색 엔진이 확산된 환경에서 블로그와 웹사이트의 유기 트래픽을 유지하고 성장시키는 SEO 전략을 분석합니다. GEO와 AEO 실전 가이드 포함.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "2026년 콘텐츠 마케팅 트렌드: AI·커뮤니티·개인화가 만드는 새로운 게임 규칙",
-        "url": "https://crepika.com/blog/2026-content-marketing-aicommunity",
-        "description": "2026년 콘텐츠 마케팅을 지배하는 핵심 트렌드를 분석합니다. AI 콘텐츠 생성, 커뮤니티 기반 마케팅, 초개인화 전략이 어떻게 시장을 재편하는지 알아봅니다.",
         "date": "2026-05-18"
       }
     ]
