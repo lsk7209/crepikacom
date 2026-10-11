@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>스마트스토어 상품 이미지 최적화 7가지 팁: 첫 번째 사진이 구매율을 결정한다</title>
+    <link>https://crepika.com/blog/optimization-7-tips</link>
+    <guid>https://crepika.com/blog/optimization-7-tips</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>tips</category>
+    <description>랜딩 페이지와 웹사이트 전환율을 높이는 CRO 실전 7가지 팁을 담았습니다. CTA 배치 전략, A/B 테스트 설계 방법, 히트맵 분석, 폼 최적화, 소셜 프루프 활용까지 전환율을 실제로 높인 사례와 함께 안내합니다.</description>
+  </item>
+  <item>
     <title>Google Tag Manager 트리거 설정 팁: 버튼 클릭과 폼 제출 정확히 추적하기</title>
     <link>https://crepika.com/blog/google-tag-manager-tips</link>
     <guid>https://crepika.com/blog/google-tag-manager-tips</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>tips</category>
     <description>Pinterest 보드 제목과 설명을 SEO 원칙에 맞게 최적화해 검색 트래픽을 늘리는 실전 팁을 정리합니다. 키워드 배치, 설명 구조, 핀 태그 전략까지 단계별 가이드입니다.</description>
-  </item>
-  <item>
-    <title>Threads에서 바이럴되는 글 쓰는 5가지 패턴: 공유와 리포스트를 유도하는 문구</title>
-    <link>https://crepika.com/blog/threads-5</link>
-    <guid>https://crepika.com/blog/threads-5</guid>
-    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>tips</category>
-    <description>Threads 리포스트와 공유를 만드는 5가지 바이럴 글쓰기 패턴을 문장 구조, 실제 사례, 수치 근거와 함께 정리한 실전 작성 가이드. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.</description>
   </item>
 </channel>
 </rss>

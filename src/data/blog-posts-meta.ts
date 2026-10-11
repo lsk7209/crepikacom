@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "optimization-7-tips",
+    title: "스마트스토어 상품 이미지 최적화 7가지 팁: 첫 번째 사진이 구매율을 결정한다",
+    description: "랜딩 페이지와 웹사이트 전환율을 높이는 CRO 실전 7가지 팁을 담았습니다. CTA 배치 전략, A/B 테스트 설계 방법, 히트맵 분석, 폼 최적화, 소셜 프루프 활용까지 전환율을 실제로 높인 사례와 함께 안내합니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "8분",
+    author: "박준영",
+    keywords: ["스마트스토어 이미지 최적화", "상품 사진 잘 찍는 법", "스마트스토어 대표 이미지", "상품 이미지 클릭률", "이커머스 상품 사진"],
+  },
+  {
     slug: "google-tag-manager-tips",
     title: "Google Tag Manager 트리거 설정 팁: 버튼 클릭과 폼 제출 정확히 추적하기",
     description: "GTM에서 버튼 클릭, 폼 제출, 스크롤 깊이 등 주요 사용자 행동을 정확하게 추적하는 트리거 설정 실전 팁입니다. 잘못된 트리거 설정 실수와 해결 방법도 정리했습니다.",

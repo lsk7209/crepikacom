@@ -7086,8 +7086,10 @@
     ],
     "author": "박준영",
     "estimatedReadTime": "6분",
-    "published": false,
-    "scheduledDate": "2026-06-17T17:00"
+    "published": true,
+    "scheduledDate": "2026-06-17T17:00",
+    "publishedDate": "2026-10-11",
+    "publishedAt": "2026-10-11T22:57:14.756Z"
   },
   {
     "id": 430,
