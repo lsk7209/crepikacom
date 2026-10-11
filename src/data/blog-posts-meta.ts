@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "google-tag-manager-tips",
+    title: "Google Tag Manager 트리거 설정 팁: 버튼 클릭과 폼 제출 정확히 추적하기",
+    description: "GTM에서 버튼 클릭, 폼 제출, 스크롤 깊이 등 주요 사용자 행동을 정확하게 추적하는 트리거 설정 실전 팁입니다. 잘못된 트리거 설정 실수와 해결 방법도 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["GTM 트리거 설정", "GTM 버튼 클릭 추적", "GTM 폼 제출 추적", "Google Tag Manager 이벤트", "GTM 스크롤 추적"],
+  },
+  {
     slug: "naver-modoo-complete-guide",
     title: "네이버 모두(Modoo!) 홈페이지 제작 완전 가이드: 무료로 비즈니스 사이트 만들기",
     description: "네이버 모두(modoo!)로 비즈니스 홈페이지를 무료로 만드는 방법부터 디자인 설정, 예약 기능, 스마트플레이스 연동까지 소상공인을 위한 실전 가이드입니다.",
