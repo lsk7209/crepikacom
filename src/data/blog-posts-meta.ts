@@ -1183,6 +1183,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "instagram-ads-ab-7-tips-2",
+    title: "인스타그램 광고 AB 테스트 7가지 팁: 같은 예산으로 2배 성과 내는 법",
+    description: "인스타그램 광고 AB 테스트를 제대로 설계하고 분석하는 7가지 실전 팁입니다. 소재, 타겟, 카피, 랜딩 페이지를 체계적으로 테스트해 광고 효율을 2배로 높이세요.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["인스타그램 광고 AB테스트", "메타 광고 테스트", "광고 소재 테스트", "인스타그램 광고 최적화", "AB테스트 방법"],
+  },
+  {
     slug: "seo-complete-guide-search-optimization-strategy",
     title: "이커머스 SEO 완전 가이드: 상품 페이지부터 카테고리까지 검색 최적화 전략",
     description: "이커머스 사이트의 상품 페이지, 카테고리 페이지, 기술적 SEO까지 구글 검색 상위 노출을 위한 단계별 최적화 전략과 실행 방법을 정리한 완전 가이드입니다.",
