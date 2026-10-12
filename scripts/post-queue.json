@@ -7122,8 +7122,10 @@
     ],
     "author": "김민혁",
     "estimatedReadTime": "6분",
-    "published": false,
-    "scheduledDate": "2026-06-18T03:00"
+    "published": true,
+    "scheduledDate": "2026-06-18T03:00",
+    "publishedDate": "2026-10-12",
+    "publishedAt": "2026-10-12T19:15:19.071Z"
   },
   {
     "id": 432,

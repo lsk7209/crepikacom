@@ -1213,6 +1213,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "b2b-content-marketing-tips-content",
+    title: "B2B 콘텐츠 마케팅 이메일 팁: 구매 결정자를 움직이는 콘텐츠 형식",
+    description: "B2B 이메일 마케팅에서 구매 결정자의 반응을 이끌어내는 콘텐츠 형식과 실전 작성 전략을 정리했습니다. 제목 줄 최적화부터 본문 구조 설계, 효과적인 CTA 전략까지 B2B 이메일 전환율을 높이는 방법을 단계별로 안내합니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["B2B 이메일 마케팅", "B2B 콘텐츠 이메일", "구매 결정자 이메일", "B2B 이메일 전환율", "비즈니스 이메일 작성법"],
+  },
+  {
     slug: "instagram-ads-ab-7-tips-2",
     title: "인스타그램 광고 AB 테스트 7가지 팁: 같은 예산으로 2배 성과 내는 법",
     description: "인스타그램 광고 AB 테스트를 제대로 설계하고 분석하는 7가지 실전 팁입니다. 소재, 타겟, 카피, 랜딩 페이지를 체계적으로 테스트해 광고 효율을 2배로 높이세요.",
