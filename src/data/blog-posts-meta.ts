@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "revenue-5-tips-rpm",
+    title: "애드센스 수익 낮을 때 확인해야 할 5가지 팁: RPM 하락 원인 진단법",
+    description: "블로그와 유튜브 콘텐츠에서 RPM을 실질적으로 높이는 5가지 수익화 전략을 정리했습니다. 고단가 틈새 주제 선택법, 광고 단가가 높은 카테고리 공략, 시청 지속 시간 최적화 방법을 실제 수익 데이터와 함께 상세히 안내합니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "8분",
+    author: "이지수",
+    keywords: ["애드센스 RPM 하락", "애드센스 수익 낮을 때", "애드센스 수익 진단", "블로그 광고 수익 하락", "애드센스 문제 해결"],
+  },
+  {
     slug: "optimization-7-tips",
     title: "스마트스토어 상품 이미지 최적화 7가지 팁: 첫 번째 사진이 구매율을 결정한다",
     description: "랜딩 페이지와 웹사이트 전환율을 높이는 CRO 실전 7가지 팁을 담았습니다. CTA 배치 전략, A/B 테스트 설계 방법, 히트맵 분석, 폼 최적화, 소셜 프루프 활용까지 전환율을 실제로 높인 사례와 함께 안내합니다.",

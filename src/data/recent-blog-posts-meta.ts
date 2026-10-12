@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "revenue-5-tips-rpm",
+    title: "애드센스 수익 낮을 때 확인해야 할 5가지 팁: RPM 하락 원인 진단법",
+    description: "블로그와 유튜브 콘텐츠에서 RPM을 실질적으로 높이는 5가지 수익화 전략을 정리했습니다. 고단가 틈새 주제 선택법, 광고 단가가 높은 카테고리 공략, 시청 지속 시간 최적화 방법을 실제 수익 데이터와 함께 상세히 안내합니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "8분",
+    author: "이지수",
+    keywords: ["애드센스 RPM 하락", "애드센스 수익 낮을 때", "애드센스 수익 진단", "블로그 광고 수익 하락", "애드센스 문제 해결"],
+  },
+  {
     slug: "optimization-7-tips",
     title: "스마트스토어 상품 이미지 최적화 7가지 팁: 첫 번째 사진이 구매율을 결정한다",
     description: "랜딩 페이지와 웹사이트 전환율을 높이는 CRO 실전 7가지 팁을 담았습니다. CTA 배치 전략, A/B 테스트 설계 방법, 히트맵 분석, 폼 최적화, 소셜 프루프 활용까지 전환율을 실제로 높인 사례와 함께 안내합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "9분",
     author: "김민혁",
     keywords: ["GTM 트리거 설정", "GTM 버튼 클릭 추적", "GTM 폼 제출 추적", "Google Tag Manager 이벤트", "GTM 스크롤 추적"],
-  },
-  {
-    slug: "naver-modoo-complete-guide",
-    title: "네이버 모두(Modoo!) 홈페이지 제작 완전 가이드: 무료로 비즈니스 사이트 만들기",
-    description: "네이버 모두(modoo!)로 비즈니스 홈페이지를 무료로 만드는 방법부터 디자인 설정, 예약 기능, 스마트플레이스 연동까지 소상공인을 위한 실전 가이드입니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "김민혁",
-    keywords: ["네이버 모두 홈페이지", "모두 홈페이지 만들기", "네이버 무료 홈페이지", "소상공인 홈페이지", "modoo 사용법"],
   },
 ];
