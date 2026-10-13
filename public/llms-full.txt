@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 443
+Renderable blog posts: 444
 
 Latest posts:
 - [네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기](https://crepika.com/blog/naver-seo-tips-search): 네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.
@@ -472,6 +472,7 @@ Updated: 2026-10-13
 - https://crepika.com/blog/seo-complete-guide-search-optimization-strategy - 이커머스 SEO 완전 가이드: 상품 페이지부터 카테고리까지 검색 최적화 전략
 - https://crepika.com/blog/instagram-ads-ab-7-tips-2 - 인스타그램 광고 AB 테스트 7가지 팁: 같은 예산으로 2배 성과 내는 법
 - https://crepika.com/blog/b2b-content-marketing-tips-content - B2B 콘텐츠 마케팅 이메일 팁: 구매 결정자를 움직이는 콘텐츠 형식
+- https://crepika.com/blog/seo-tips - 이커머스 카테고리 페이지 SEO 팁: 상품보다 카테고리에 먼저 투자해야 하는 이유
 - https://crepika.com/blog/5-practical-tips-ux - 히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트
 - https://crepika.com/blog/tips-5-automation - 세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일
 - https://crepika.com/blog/ads-roas-7-tips-ads - 리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정

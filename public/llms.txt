@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 443
+Renderable blog posts: 444
 
 Latest posts:
 - [네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기](https://crepika.com/blog/naver-seo-tips-search): 네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.

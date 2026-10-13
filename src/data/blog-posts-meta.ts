@@ -1223,6 +1223,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "seo-tips",
+    title: "이커머스 카테고리 페이지 SEO 팁: 상품보다 카테고리에 먼저 투자해야 하는 이유",
+    description: "SEO 초보자도 즉시 적용 가능한 검색엔진 최적화 핵심 팁을 한 곳에 모았습니다. 키워드 리서치부터 온페이지 최적화, 백링크 구축 전략, 콘텐츠 클러스터 설계까지 구글 상위 노출을 위한 단계별 실전 방법을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-08",
+    readTime: "8분",
+    author: "이지수",
+    keywords: ["이커머스 카테고리 SEO", "카테고리 페이지 최적화", "이커머스 검색 최적화", "카테고리 페이지 텍스트", "쇼핑몰 SEO 팁"],
+  },
+  {
     slug: "b2b-content-marketing-tips-content",
     title: "B2B 콘텐츠 마케팅 이메일 팁: 구매 결정자를 움직이는 콘텐츠 형식",
     description: "B2B 이메일 마케팅에서 구매 결정자의 반응을 이끌어내는 콘텐츠 형식과 실전 작성 전략을 정리했습니다. 제목 줄 최적화부터 본문 구조 설계, 효과적인 CTA 전략까지 B2B 이메일 전환율을 높이는 방법을 단계별로 안내합니다.",
