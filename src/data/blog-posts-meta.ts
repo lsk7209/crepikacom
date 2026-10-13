@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-seo-tips-search",
+    title: "네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기",
+    description: "네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["네이버 모두 SEO", "modoo 검색 노출", "네이버 무료 홈페이지 SEO", "모두 홈페이지 최적화", "소상공인 홈페이지 SEO"],
+  },
+  {
     slug: "revenue-5-tips-rpm",
     title: "애드센스 수익 낮을 때 확인해야 할 5가지 팁: RPM 하락 원인 진단법",
     description: "블로그와 유튜브 콘텐츠에서 RPM을 실질적으로 높이는 5가지 수익화 전략을 정리했습니다. 고단가 틈새 주제 선택법, 광고 단가가 높은 카테고리 공략, 시청 지속 시간 최적화 방법을 실제 수익 데이터와 함께 상세히 안내합니다.",

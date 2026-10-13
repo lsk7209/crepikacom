@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-seo-tips-search",
+    title: "네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기",
+    description: "네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "박준영",
+    keywords: ["네이버 모두 SEO", "modoo 검색 노출", "네이버 무료 홈페이지 SEO", "모두 홈페이지 최적화", "소상공인 홈페이지 SEO"],
+  },
+  {
     slug: "revenue-5-tips-rpm",
     title: "애드센스 수익 낮을 때 확인해야 할 5가지 팁: RPM 하락 원인 진단법",
     description: "블로그와 유튜브 콘텐츠에서 RPM을 실질적으로 높이는 5가지 수익화 전략을 정리했습니다. 고단가 틈새 주제 선택법, 광고 단가가 높은 카테고리 공략, 시청 지속 시간 최적화 방법을 실제 수익 데이터와 함께 상세히 안내합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "8분",
     author: "박준영",
     keywords: ["스마트스토어 이미지 최적화", "상품 사진 잘 찍는 법", "스마트스토어 대표 이미지", "상품 이미지 클릭률", "이커머스 상품 사진"],
-  },
-  {
-    slug: "google-tag-manager-tips",
-    title: "Google Tag Manager 트리거 설정 팁: 버튼 클릭과 폼 제출 정확히 추적하기",
-    description: "GTM에서 버튼 클릭, 폼 제출, 스크롤 깊이 등 주요 사용자 행동을 정확하게 추적하는 트리거 설정 실전 팁입니다. 잘못된 트리거 설정 실수와 해결 방법도 정리했습니다.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "9분",
-    author: "김민혁",
-    keywords: ["GTM 트리거 설정", "GTM 버튼 클릭 추적", "GTM 폼 제출 추적", "Google Tag Manager 이벤트", "GTM 스크롤 추적"],
   },
 ];
