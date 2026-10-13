@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "youtube-tips",
+    title: "유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성",
+    description: "유튜브 멤버십에 시청자가 실제로 가입하도록 만드는 혜택 설계 팁입니다. 가격 책정, 단계별 멤버십 구성, 독점 혜택 선택, 유지율을 높이는 방법까지 크리에이터 실전 가이드입니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["유튜브 멤버십 설정", "유튜브 멤버십 혜택 구성", "유튜브 채널 수익화", "유튜브 멤버십 가입 유도", "크리에이터 멤버십 전략"],
+  },
+  {
     slug: "naver-seo-tips-search",
     title: "네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기",
     description: "네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "8분",
     author: "이지수",
     keywords: ["애드센스 RPM 하락", "애드센스 수익 낮을 때", "애드센스 수익 진단", "블로그 광고 수익 하락", "애드센스 문제 해결"],
-  },
-  {
-    slug: "optimization-7-tips",
-    title: "스마트스토어 상품 이미지 최적화 7가지 팁: 첫 번째 사진이 구매율을 결정한다",
-    description: "랜딩 페이지와 웹사이트 전환율을 높이는 CRO 실전 7가지 팁을 담았습니다. CTA 배치 전략, A/B 테스트 설계 방법, 히트맵 분석, 폼 최적화, 소셜 프루프 활용까지 전환율을 실제로 높인 사례와 함께 안내합니다.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "8분",
-    author: "박준영",
-    keywords: ["스마트스토어 이미지 최적화", "상품 사진 잘 찍는 법", "스마트스토어 대표 이미지", "상품 이미지 클릭률", "이커머스 상품 사진"],
   },
 ];

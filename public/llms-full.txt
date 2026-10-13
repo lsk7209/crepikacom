@@ -118,9 +118,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 444
+Renderable blog posts: 445
 
 Latest posts:
+- [유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성](https://crepika.com/blog/youtube-tips): 유튜브 멤버십에 시청자가 실제로 가입하도록 만드는 혜택 설계 팁입니다. 가격 책정, 단계별 멤버십 구성, 독점 혜택 선택, 유지율을 높이는 방법까지 크리에이터 실전 가이드입니다.
 - [네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기](https://crepika.com/blog/naver-seo-tips-search): 네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.
 - [애드센스 수익 낮을 때 확인해야 할 5가지 팁: RPM 하락 원인 진단법](https://crepika.com/blog/revenue-5-tips-rpm): 블로그와 유튜브 콘텐츠에서 RPM을 실질적으로 높이는 5가지 수익화 전략을 정리했습니다. 고단가 틈새 주제 선택법, 광고 단가가 높은 카테고리 공략, 시청 지속 시간 최적화 방법을 실제 수익 데이터와 함께 상세히 안내합니다.
 - [스마트스토어 상품 이미지 최적화 7가지 팁: 첫 번째 사진이 구매율을 결정한다](https://crepika.com/blog/optimization-7-tips): 랜딩 페이지와 웹사이트 전환율을 높이는 CRO 실전 7가지 팁을 담았습니다. CTA 배치 전략, A/B 테스트 설계 방법, 히트맵 분석, 폼 최적화, 소셜 프루프 활용까지 전환율을 실제로 높인 사례와 함께 안내합니다.
@@ -132,7 +133,6 @@ Latest posts:
 - [리뷰 마케팅 완전 가이드: 긍정 리뷰를 자동으로 모으는 시스템 구축법](https://crepika.com/blog/marketing-complete-guide): 고객 리뷰를 자동으로 수집하고 관리하는 시스템 구축 방법부터 부정 리뷰 대응 전략, 리뷰를 마케팅 자산으로 활용하는 방법까지 실전 가이드입니다.
 - [B2B 마케팅 완전 가이드: 기업 대 기업 콘텐츠 전략으로 리드 창출하기](https://crepika.com/blog/b2b-marketing-complete-guide-content-strategy): B2B 마케팅의 콘텐츠 전략 수립부터 리드 너처링, 세일즈 파이프라인 연계까지 실무 담당자가 바로 적용할 수 있는 단계별 전략을 정리했습니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.
 - [네이버 애드포스트 완전 가이드: 블로그 광고 수익 극대화하는 설정 전략](https://crepika.com/blog/naver-complete-guide-blog-ads-revenue-strategy): 네이버 애드포스트 신청 조건부터 광고 노출 최적화, 수익 증대를 위한 블로그 운영 전략까지 실전 중심으로 정리한 완전 가이드입니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.
-- [블로그 AdSense 수익 극대화 완전 가이드: 광고 단위·위치·RPM 최적화 전략](https://crepika.com/blog/blog-adsense-revenue-complete-guide-ads-rpm-optimization-str): 블로그 애드센스 수익을 높이는 광고 단위 설정부터 최적 배치 위치, RPM 개선 전략까지 데이터 기반의 실전 최적화 방법을 단계별로 정리했습니다.
 
 ## Index Resources
 
@@ -594,3 +594,4 @@ Updated: 2026-10-13
 - https://crepika.com/blog/optimization-7-tips - 스마트스토어 상품 이미지 최적화 7가지 팁: 첫 번째 사진이 구매율을 결정한다
 - https://crepika.com/blog/revenue-5-tips-rpm - 애드센스 수익 낮을 때 확인해야 할 5가지 팁: RPM 하락 원인 진단법
 - https://crepika.com/blog/naver-seo-tips-search - 네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기
+- https://crepika.com/blog/youtube-tips - 유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성

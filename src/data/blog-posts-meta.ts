@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "youtube-tips",
+    title: "유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성",
+    description: "유튜브 멤버십에 시청자가 실제로 가입하도록 만드는 혜택 설계 팁입니다. 가격 책정, 단계별 멤버십 구성, 독점 혜택 선택, 유지율을 높이는 방법까지 크리에이터 실전 가이드입니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "김민혁",
+    keywords: ["유튜브 멤버십 설정", "유튜브 멤버십 혜택 구성", "유튜브 채널 수익화", "유튜브 멤버십 가입 유도", "크리에이터 멤버십 전략"],
+  },
+  {
     slug: "naver-seo-tips-search",
     title: "네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기",
     description: "네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.",
