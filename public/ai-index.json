@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 448,
+    "count": 449,
     "latest": [
+      {
+        "title": "구글 Performance Max 실제 성과 분석: 자동화 광고의 빛과 그림자",
+        "url": "https://crepika.com/blog/google-performance-max-analytics-automation-ads",
+        "description": "구글 Performance Max 캠페인의 실제 ROAS 데이터와 운영 사례를 분석해 자동화 광고의 장단점과 효과적인 활용 전략을 정리합니다. Performance Max, 구글 광고 자동화에 대한 실전 가이드.",
+        "date": "2026-05-18"
+      },
       {
         "title": "국내 광고 플랫폼별 CPM·CPC 벤치마크 분석: 어디에 광고비를 써야 하나",
         "url": "https://crepika.com/blog/ads-cpmcpc-analytics-ads",
@@ -524,12 +530,6 @@
         "title": "인스타그램 광고 캠페인 구조 완전 가이드: 목적별 최적 캠페인 설계법",
         "url": "https://crepika.com/blog/instagram-ads-complete-guide",
         "description": "인스타그램 광고 캠페인 목표 설정부터 광고 세트 구성, 소재 제작, 성과 측정까지 실전에서 바로 적용 가능한 캠페인 설계 방법을 단계별로 설명합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "리뷰 마케팅 완전 가이드: 긍정 리뷰를 자동으로 모으는 시스템 구축법",
-        "url": "https://crepika.com/blog/marketing-complete-guide",
-        "description": "고객 리뷰를 자동으로 수집하고 관리하는 시스템 구축 방법부터 부정 리뷰 대응 전략, 리뷰를 마케팅 자산으로 활용하는 방법까지 실전 가이드입니다.",
         "date": "2026-05-18"
       }
     ]

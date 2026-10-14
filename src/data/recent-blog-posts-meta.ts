@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "google-performance-max-analytics-automation-ads",
+    title: "구글 Performance Max 실제 성과 분석: 자동화 광고의 빛과 그림자",
+    description: "구글 Performance Max 캠페인의 실제 ROAS 데이터와 운영 사례를 분석해 자동화 광고의 장단점과 효과적인 활용 전략을 정리합니다. Performance Max, 구글 광고 자동화에 대한 실전 가이드.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "박준영",
+    keywords: ["Performance Max", "구글 광고 자동화", "PMax", "구글 광고 ROAS", "스마트 캠페인"],
+  },
+  {
     slug: "ads-cpmcpc-analytics-ads",
     title: "국내 광고 플랫폼별 CPM·CPC 벤치마크 분석: 어디에 광고비를 써야 하나",
     description: "네이버·카카오·구글·메타 광고 플랫폼의 CPM과 CPC 벤치마크 데이터를 업종별로 분석해 최적의 광고비 배분 전략을 제시합니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "9분",
     author: "이지수",
     keywords: ["GA4 세그먼트 활용", "GA4 방문자 분류", "구글 애널리틱스 4 세그먼트", "GA4 탐색 보고서", "GA4 마케팅 전략"],
-  },
-  {
-    slug: "youtube-tips",
-    title: "유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성",
-    description: "유튜브 멤버십에 시청자가 실제로 가입하도록 만드는 혜택 설계 팁입니다. 가격 책정, 단계별 멤버십 구성, 독점 혜택 선택, 유지율을 높이는 방법까지 크리에이터 실전 가이드입니다.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "9분",
-    author: "김민혁",
-    keywords: ["유튜브 멤버십 설정", "유튜브 멤버십 혜택 구성", "유튜브 채널 수익화", "유튜브 멤버십 가입 유도", "크리에이터 멤버십 전략"],
   },
 ];
