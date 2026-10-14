@@ -118,9 +118,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 447
+Renderable blog posts: 448
 
 Latest posts:
+- [국내 광고 플랫폼별 CPM·CPC 벤치마크 분석: 어디에 광고비를 써야 하나](https://crepika.com/blog/ads-cpmcpc-analytics-ads): 네이버·카카오·구글·메타 광고 플랫폼의 CPM과 CPC 벤치마크 데이터를 업종별로 분석해 최적의 광고비 배분 전략을 제시합니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.
 - [GA4 세그먼트 활용 팁: 방문자를 분류해서 맞춤 전략 수립하는 법](https://crepika.com/blog/ga4-usage-tips-strategy): GA4 세그먼트를 활용해 방문자를 유형별로 분류하고 각 그룹에 맞는 마케팅 전략을 수립하는 방법입니다. 탐색 보고서부터 잠재고객 내보내기까지 실전 활용 팁을 정리했습니다.
 - [유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성](https://crepika.com/blog/youtube-tips): 유튜브 멤버십에 시청자가 실제로 가입하도록 만드는 혜택 설계 팁입니다. 가격 책정, 단계별 멤버십 구성, 독점 혜택 선택, 유지율을 높이는 방법까지 크리에이터 실전 가이드입니다.
 - [네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기](https://crepika.com/blog/naver-seo-tips-search): 네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.
@@ -132,7 +133,6 @@ Latest posts:
 - [스마트스토어 광고 완전 가이드: 네이버 쇼핑 광고로 매출 올리는 전략](https://crepika.com/blog/ads-complete-guide-naver-shopping-ads-strategy): 네이버 쇼핑 광고의 종류와 특성부터 키워드 선정, 입찰 전략, ROAS 최적화까지 스마트스토어 매출을 실질적으로 높이는 광고 운영 방법을 정리했습니다.
 - [인스타그램 광고 캠페인 구조 완전 가이드: 목적별 최적 캠페인 설계법](https://crepika.com/blog/instagram-ads-complete-guide): 인스타그램 광고 캠페인 목표 설정부터 광고 세트 구성, 소재 제작, 성과 측정까지 실전에서 바로 적용 가능한 캠페인 설계 방법을 단계별로 설명합니다.
 - [리뷰 마케팅 완전 가이드: 긍정 리뷰를 자동으로 모으는 시스템 구축법](https://crepika.com/blog/marketing-complete-guide): 고객 리뷰를 자동으로 수집하고 관리하는 시스템 구축 방법부터 부정 리뷰 대응 전략, 리뷰를 마케팅 자산으로 활용하는 방법까지 실전 가이드입니다.
-- [B2B 마케팅 완전 가이드: 기업 대 기업 콘텐츠 전략으로 리드 창출하기](https://crepika.com/blog/b2b-marketing-complete-guide-content-strategy): B2B 마케팅의 콘텐츠 전략 수립부터 리드 너처링, 세일즈 파이프라인 연계까지 실무 담당자가 바로 적용할 수 있는 단계별 전략을 정리했습니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.
 
 ## Index Resources
 

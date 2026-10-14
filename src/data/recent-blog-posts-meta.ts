@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ads-cpmcpc-analytics-ads",
+    title: "국내 광고 플랫폼별 CPM·CPC 벤치마크 분석: 어디에 광고비를 써야 하나",
+    description: "네이버·카카오·구글·메타 광고 플랫폼의 CPM과 CPC 벤치마크 데이터를 업종별로 분석해 최적의 광고비 배분 전략을 제시합니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["CPM", "CPC", "광고 벤치마크", "네이버 광고", "카카오 광고", "구글 광고", "메타 광고"],
+  },
+  {
     slug: "ga4-usage-tips-strategy",
     title: "GA4 세그먼트 활용 팁: 방문자를 분류해서 맞춤 전략 수립하는 법",
     description: "GA4 세그먼트를 활용해 방문자를 유형별로 분류하고 각 그룹에 맞는 마케팅 전략을 수립하는 방법입니다. 탐색 보고서부터 잠재고객 내보내기까지 실전 활용 팁을 정리했습니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "9분",
     author: "김민혁",
     keywords: ["유튜브 멤버십 설정", "유튜브 멤버십 혜택 구성", "유튜브 채널 수익화", "유튜브 멤버십 가입 유도", "크리에이터 멤버십 전략"],
-  },
-  {
-    slug: "naver-seo-tips-search",
-    title: "네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기",
-    description: "네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "9분",
-    author: "박준영",
-    keywords: ["네이버 모두 SEO", "modoo 검색 노출", "네이버 무료 홈페이지 SEO", "모두 홈페이지 최적화", "소상공인 홈페이지 SEO"],
   },
 ];

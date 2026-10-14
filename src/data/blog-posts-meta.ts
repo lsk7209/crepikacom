@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ads-cpmcpc-analytics-ads",
+    title: "국내 광고 플랫폼별 CPM·CPC 벤치마크 분석: 어디에 광고비를 써야 하나",
+    description: "네이버·카카오·구글·메타 광고 플랫폼의 CPM과 CPC 벤치마크 데이터를 업종별로 분석해 최적의 광고비 배분 전략을 제시합니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["CPM", "CPC", "광고 벤치마크", "네이버 광고", "카카오 광고", "구글 광고", "메타 광고"],
+  },
+  {
     slug: "ga4-usage-tips-strategy",
     title: "GA4 세그먼트 활용 팁: 방문자를 분류해서 맞춤 전략 수립하는 법",
     description: "GA4 세그먼트를 활용해 방문자를 유형별로 분류하고 각 그룹에 맞는 마케팅 전략을 수립하는 방법입니다. 탐색 보고서부터 잠재고객 내보내기까지 실전 활용 팁을 정리했습니다.",
