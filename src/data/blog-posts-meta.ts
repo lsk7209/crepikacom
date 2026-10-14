@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ga4-usage-tips-strategy",
+    title: "GA4 세그먼트 활용 팁: 방문자를 분류해서 맞춤 전략 수립하는 법",
+    description: "GA4 세그먼트를 활용해 방문자를 유형별로 분류하고 각 그룹에 맞는 마케팅 전략을 수립하는 방법입니다. 탐색 보고서부터 잠재고객 내보내기까지 실전 활용 팁을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["GA4 세그먼트 활용", "GA4 방문자 분류", "구글 애널리틱스 4 세그먼트", "GA4 탐색 보고서", "GA4 마케팅 전략"],
+  },
+  {
     slug: "youtube-tips",
     title: "유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성",
     description: "유튜브 멤버십에 시청자가 실제로 가입하도록 만드는 혜택 설계 팁입니다. 가격 책정, 단계별 멤버십 구성, 독점 혜택 선택, 유지율을 높이는 방법까지 크리에이터 실전 가이드입니다.",

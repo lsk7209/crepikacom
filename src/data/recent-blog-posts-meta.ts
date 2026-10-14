@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ga4-usage-tips-strategy",
+    title: "GA4 세그먼트 활용 팁: 방문자를 분류해서 맞춤 전략 수립하는 법",
+    description: "GA4 세그먼트를 활용해 방문자를 유형별로 분류하고 각 그룹에 맞는 마케팅 전략을 수립하는 방법입니다. 탐색 보고서부터 잠재고객 내보내기까지 실전 활용 팁을 정리했습니다.",
+    category: "tips",
+    publishDate: "2026-05-18",
+    readTime: "9분",
+    author: "이지수",
+    keywords: ["GA4 세그먼트 활용", "GA4 방문자 분류", "구글 애널리틱스 4 세그먼트", "GA4 탐색 보고서", "GA4 마케팅 전략"],
+  },
+  {
     slug: "youtube-tips",
     title: "유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성",
     description: "유튜브 멤버십에 시청자가 실제로 가입하도록 만드는 혜택 설계 팁입니다. 가격 책정, 단계별 멤버십 구성, 독점 혜택 선택, 유지율을 높이는 방법까지 크리에이터 실전 가이드입니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "9분",
     author: "박준영",
     keywords: ["네이버 모두 SEO", "modoo 검색 노출", "네이버 무료 홈페이지 SEO", "모두 홈페이지 최적화", "소상공인 홈페이지 SEO"],
-  },
-  {
-    slug: "revenue-5-tips-rpm",
-    title: "애드센스 수익 낮을 때 확인해야 할 5가지 팁: RPM 하락 원인 진단법",
-    description: "블로그와 유튜브 콘텐츠에서 RPM을 실질적으로 높이는 5가지 수익화 전략을 정리했습니다. 고단가 틈새 주제 선택법, 광고 단가가 높은 카테고리 공략, 시청 지속 시간 최적화 방법을 실제 수익 데이터와 함께 상세히 안내합니다.",
-    category: "tips",
-    publishDate: "2026-05-18",
-    readTime: "8분",
-    author: "이지수",
-    keywords: ["애드센스 RPM 하락", "애드센스 수익 낮을 때", "애드센스 수익 진단", "블로그 광고 수익 하락", "애드센스 문제 해결"],
   },
 ];
