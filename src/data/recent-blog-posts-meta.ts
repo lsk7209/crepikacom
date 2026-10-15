@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-vs-google-revenue-comparison-analytics",
+    title: "네이버 애드포스트 vs 구글 애드센스: 국내 블로거를 위한 수익 비교 분석",
+    description: "국내 블로거가 실제로 경험한 네이버 애드포스트와 구글 애드센스의 RPM, 승인 조건, 수익 안정성을 데이터 중심으로 비교 분석합니다. 네이버 애드포스트, 구글 애드센스에 대한 실전 가이드.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["네이버 애드포스트", "구글 애드센스", "블로그 수익", "RPM 비교", "블로그 광고 수익"],
+  },
+  {
     slug: "b2b-marketing-roi-method",
     title: "B2B 마케팅 ROI 측정 방법: 리드 품질을 수치화하는 프레임워크",
     description: "B2B 마케팅 ROI를 정확히 측정하기 위한 리드 스코어링, 파이프라인 기여 분석, CAC 계산 프레임워크를 실무 중심으로 정리합니다. B2B 마케팅 ROI, 리드 스코어링에 대한 실전 가이드.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "13분",
     author: "박준영",
     keywords: ["Performance Max", "구글 광고 자동화", "PMax", "구글 광고 ROAS", "스마트 캠페인"],
-  },
-  {
-    slug: "ads-cpmcpc-analytics-ads",
-    title: "국내 광고 플랫폼별 CPM·CPC 벤치마크 분석: 어디에 광고비를 써야 하나",
-    description: "네이버·카카오·구글·메타 광고 플랫폼의 CPM과 CPC 벤치마크 데이터를 업종별로 분석해 최적의 광고비 배분 전략을 제시합니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
-    category: "insights",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "김민혁",
-    keywords: ["CPM", "CPC", "광고 벤치마크", "네이버 광고", "카카오 광고", "구글 광고", "메타 광고"],
   },
 ];

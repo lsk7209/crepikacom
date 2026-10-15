@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 451,
+    "count": 452,
     "latest": [
+      {
+        "title": "네이버 애드포스트 vs 구글 애드센스: 국내 블로거를 위한 수익 비교 분석",
+        "url": "https://crepika.com/blog/naver-vs-google-revenue-comparison-analytics",
+        "description": "국내 블로거가 실제로 경험한 네이버 애드포스트와 구글 애드센스의 RPM, 승인 조건, 수익 안정성을 데이터 중심으로 비교 분석합니다. 네이버 애드포스트, 구글 애드센스에 대한 실전 가이드.",
+        "date": "2026-05-18"
+      },
       {
         "title": "B2B 마케팅 ROI 측정 방법: 리드 품질을 수치화하는 프레임워크",
         "url": "https://crepika.com/blog/b2b-marketing-roi-method",
@@ -524,12 +530,6 @@
         "title": "Google Tag Manager 입문 가이드: 마케터가 직접 스크립트 관리하는 방법",
         "url": "https://crepika.com/blog/google-tag-manager-beginner-guide-method",
         "description": "개발자 없이 마케터가 직접 GTM으로 태그를 설치하고 관리하는 방법을 처음부터 단계별로 설명합니다. GA4 연동, 이벤트 설정, 트리거 구성까지 실전 가이드입니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "스마트스토어 광고 완전 가이드: 네이버 쇼핑 광고로 매출 올리는 전략",
-        "url": "https://crepika.com/blog/ads-complete-guide-naver-shopping-ads-strategy",
-        "description": "네이버 쇼핑 광고의 종류와 특성부터 키워드 선정, 입찰 전략, ROAS 최적화까지 스마트스토어 매출을 실질적으로 높이는 광고 운영 방법을 정리했습니다.",
         "date": "2026-05-18"
       }
     ]

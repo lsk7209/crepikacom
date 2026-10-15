@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-vs-google-revenue-comparison-analytics",
+    title: "네이버 애드포스트 vs 구글 애드센스: 국내 블로거를 위한 수익 비교 분석",
+    description: "국내 블로거가 실제로 경험한 네이버 애드포스트와 구글 애드센스의 RPM, 승인 조건, 수익 안정성을 데이터 중심으로 비교 분석합니다. 네이버 애드포스트, 구글 애드센스에 대한 실전 가이드.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["네이버 애드포스트", "구글 애드센스", "블로그 수익", "RPM 비교", "블로그 광고 수익"],
+  },
+  {
     slug: "b2b-marketing-roi-method",
     title: "B2B 마케팅 ROI 측정 방법: 리드 품질을 수치화하는 프레임워크",
     description: "B2B 마케팅 ROI를 정확히 측정하기 위한 리드 스코어링, 파이프라인 기여 분석, CAC 계산 프레임워크를 실무 중심으로 정리합니다. B2B 마케팅 ROI, 리드 스코어링에 대한 실전 가이드.",

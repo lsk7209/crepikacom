@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>네이버 애드포스트 vs 구글 애드센스: 국내 블로거를 위한 수익 비교 분석</title>
+    <link>https://crepika.com/blog/naver-vs-google-revenue-comparison-analytics</link>
+    <guid>https://crepika.com/blog/naver-vs-google-revenue-comparison-analytics</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>박준영</dc:creator>
+    <category>insights</category>
+    <description>국내 블로거가 실제로 경험한 네이버 애드포스트와 구글 애드센스의 RPM, 승인 조건, 수익 안정성을 데이터 중심으로 비교 분석합니다. 네이버 애드포스트, 구글 애드센스에 대한 실전 가이드.</description>
+  </item>
+  <item>
     <title>B2B 마케팅 ROI 측정 방법: 리드 품질을 수치화하는 프레임워크</title>
     <link>https://crepika.com/blog/b2b-marketing-roi-method</link>
     <guid>https://crepika.com/blog/b2b-marketing-roi-method</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>insights</category>
     <description>성공한 디스코드 크리에이터 커뮤니티의 공통 운영 패턴을 국내외 사례와 함께 분석합니다. 활성 커뮤니티를 만들고 유지하는 핵심 원칙을 데이터로 정리했습니다.</description>
-  </item>
-  <item>
-    <title>국내 뉴스레터 플랫폼 비교: Stibee vs Mailchimp vs Beehiiv 어느 것이 최선?</title>
-    <link>https://crepika.com/blog/comparison-stibee-vs-mailchimp-vs-beehiiv</link>
-    <guid>https://crepika.com/blog/comparison-stibee-vs-mailchimp-vs-beehiiv</guid>
-    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>insights</category>
-    <description>Stibee, Mailchimp, Beehiiv를 가격, 기능, 국내 환경 적합성, 수익화 측면에서 비교합니다. 국내 뉴스레터 운영자에게 맞는 플랫폼 선택 가이드를 제공합니다.</description>
   </item>
 </channel>
 </rss>
