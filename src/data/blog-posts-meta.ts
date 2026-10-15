@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "b2b-marketing-roi-method",
+    title: "B2B 마케팅 ROI 측정 방법: 리드 품질을 수치화하는 프레임워크",
+    description: "B2B 마케팅 ROI를 정확히 측정하기 위한 리드 스코어링, 파이프라인 기여 분석, CAC 계산 프레임워크를 실무 중심으로 정리합니다. B2B 마케팅 ROI, 리드 스코어링에 대한 실전 가이드.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["B2B 마케팅 ROI", "리드 스코어링", "마케팅 기여 분석", "CAC", "파이프라인 분석"],
+  },
+  {
     slug: "google-performance-max-analytics-automation-ads",
     title: "구글 Performance Max 실제 성과 분석: 자동화 광고의 빛과 그림자",
     description: "구글 Performance Max 캠페인의 실제 ROAS 데이터와 운영 사례를 분석해 자동화 광고의 장단점과 효과적인 활용 전략을 정리합니다. Performance Max, 구글 광고 자동화에 대한 실전 가이드.",
