@@ -1263,6 +1263,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "seo-google-shopping",
+    title: "이커머스 SEO와 구글 쇼핑 노출의 관계: 상품 데이터 품질이 트래픽을 결정한다",
+    description: "이커머스 SEO와 구글 쇼핑 노출 순위를 결정하는 상품 데이터 품질 요소를 분석하고, 오가닉 트래픽을 높이는 실전 최적화 전략을 소개합니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["이커머스 SEO", "구글 쇼핑", "상품 피드 최적화", "Google Merchant Center", "쇼핑 노출"],
+  },
+  {
     slug: "marketing-tips-7-method",
     title: "리뷰 마케팅 팁: 고객이 자발적으로 후기를 남기게 만드는 7가지 방법",
     description: "고객이 요청 없이도 자발적으로 긍정 후기를 남기게 만드는 7가지 리뷰 마케팅 방법입니다. 구매 경험 설계부터 자동 요청 타이밍, 커뮤니티 활용까지 실전 팁을 정리했습니다.",

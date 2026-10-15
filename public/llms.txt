@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 449
+Renderable blog posts: 450
 
 Latest posts:
 - [구글 Performance Max 실제 성과 분석: 자동화 광고의 빛과 그림자](https://crepika.com/blog/google-performance-max-analytics-automation-ads): 구글 Performance Max 캠페인의 실제 ROAS 데이터와 운영 사례를 분석해 자동화 광고의 장단점과 효과적인 활용 전략을 정리합니다. Performance Max, 구글 광고 자동화에 대한 실전 가이드.
@@ -146,4 +146,4 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-10-14
+Updated: 2026-10-15
