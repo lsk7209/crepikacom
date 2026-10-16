@@ -1303,6 +1303,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "marketing",
+    title: "국내 리뷰 마케팅 현황: 소비자 구매 결정에서 후기의 영향력 데이터",
+    description: "국내 소비자의 구매 결정에서 리뷰가 미치는 영향력을 데이터로 분석하고, 리뷰 마케팅의 현황과 효과적인 리뷰 수집 전략을 정리합니다. 리뷰 마케팅, 소비자 후기에 대한 실전 가이드.",
+    category: "insights",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["리뷰 마케팅", "소비자 후기", "구매 결정 영향", "네이버 리뷰", "리뷰 관리"],
+  },
+  {
     slug: "seo-google-shopping",
     title: "이커머스 SEO와 구글 쇼핑 노출의 관계: 상품 데이터 품질이 트래픽을 결정한다",
     description: "이커머스 SEO와 구글 쇼핑 노출 순위를 결정하는 상품 데이터 품질 요소를 분석하고, 오가닉 트래픽을 높이는 실전 최적화 전략을 소개합니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",

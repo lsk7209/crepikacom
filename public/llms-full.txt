@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 454
+Renderable blog posts: 455
 
 Latest posts:
 - [1인 크리에이터가 법인으로 전환했을 때의 실제 변화: 세금·비용·신뢰도 분석](https://crepika.com/blog/1-creator-analytics): 1인 크리에이터의 법인 전환이 세금 부담, 사업 비용 처리, 브랜드 신뢰도에 미치는 실질적인 영향을 세무·비즈니스 관점에서 분석합니다. 크리에이터 법인 전환, 1인 법인에 대한 실전 가이드.
@@ -475,6 +475,7 @@ Updated: 2026-10-16
 - https://crepika.com/blog/seo-tips - 이커머스 카테고리 페이지 SEO 팁: 상품보다 카테고리에 먼저 투자해야 하는 이유
 - https://crepika.com/blog/marketing-tips-7-method - 리뷰 마케팅 팁: 고객이 자발적으로 후기를 남기게 만드는 7가지 방법
 - https://crepika.com/blog/seo-google-shopping - 이커머스 SEO와 구글 쇼핑 노출의 관계: 상품 데이터 품질이 트래픽을 결정한다
+- https://crepika.com/blog/marketing - 국내 리뷰 마케팅 현황: 소비자 구매 결정에서 후기의 영향력 데이터
 - https://crepika.com/blog/5-practical-tips-ux - 히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트
 - https://crepika.com/blog/tips-5-automation - 세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일
 - https://crepika.com/blog/ads-roas-7-tips-ads - 리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정

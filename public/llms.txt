@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 454
+Renderable blog posts: 455
 
 Latest posts:
 - [1인 크리에이터가 법인으로 전환했을 때의 실제 변화: 세금·비용·신뢰도 분석](https://crepika.com/blog/1-creator-analytics): 1인 크리에이터의 법인 전환이 세금 부담, 사업 비용 처리, 브랜드 신뢰도에 미치는 실질적인 영향을 세무·비즈니스 관점에서 분석합니다. 크리에이터 법인 전환, 1인 법인에 대한 실전 가이드.
