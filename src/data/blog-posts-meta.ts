@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "1-creator-analytics",
+    title: "1인 크리에이터가 법인으로 전환했을 때의 실제 변화: 세금·비용·신뢰도 분석",
+    description: "1인 크리에이터의 법인 전환이 세금 부담, 사업 비용 처리, 브랜드 신뢰도에 미치는 실질적인 영향을 세무·비즈니스 관점에서 분석합니다. 크리에이터 법인 전환, 1인 법인에 대한 실전 가이드.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["크리에이터 법인 전환", "1인 법인", "크리에이터 세금", "개인사업자 vs 법인", "유튜버 법인"],
+  },
+  {
     slug: "gtm-marketing",
     title: "GTM으로 마케팅 데이터 품질 높이는 인사이트: 잘못된 태그가 의사결정을 망친다",
     description: "구글 태그 매니저(GTM) 오설정이 마케팅 데이터를 왜곡하는 사례를 분석하고, 데이터 품질을 높이기 위한 태그 감사와 최적화 방법을 제시합니다.",
