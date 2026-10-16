@@ -118,9 +118,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 455
+Renderable blog posts: 456
 
 Latest posts:
+- [스마트스토어 광고 효율 분석: 상품 광고 vs 브랜드 광고 어느 것이 더 효과적인가](https://crepika.com/blog/ads-analytics-ads-vs-brand-ads): 스마트스토어 쇼핑 검색 광고(상품 광고)와 브랜드 검색 광고의 ROAS, CTR, 전환율을 실제 데이터로 비교하고 최적 운영 전략을 제시합니다.
 - [1인 크리에이터가 법인으로 전환했을 때의 실제 변화: 세금·비용·신뢰도 분석](https://crepika.com/blog/1-creator-analytics): 1인 크리에이터의 법인 전환이 세금 부담, 사업 비용 처리, 브랜드 신뢰도에 미치는 실질적인 영향을 세무·비즈니스 관점에서 분석합니다. 크리에이터 법인 전환, 1인 법인에 대한 실전 가이드.
 - [GTM으로 마케팅 데이터 품질 높이는 인사이트: 잘못된 태그가 의사결정을 망친다](https://crepika.com/blog/gtm-marketing): 구글 태그 매니저(GTM) 오설정이 마케팅 데이터를 왜곡하는 사례를 분석하고, 데이터 품질을 높이기 위한 태그 감사와 최적화 방법을 제시합니다.
 - [네이버 애드포스트 vs 구글 애드센스: 국내 블로거를 위한 수익 비교 분석](https://crepika.com/blog/naver-vs-google-revenue-comparison-analytics): 국내 블로거가 실제로 경험한 네이버 애드포스트와 구글 애드센스의 RPM, 승인 조건, 수익 안정성을 데이터 중심으로 비교 분석합니다. 네이버 애드포스트, 구글 애드센스에 대한 실전 가이드.
@@ -132,7 +133,6 @@ Latest posts:
 - [네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기](https://crepika.com/blog/naver-seo-tips-search): 네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.
 - [애드센스 수익 낮을 때 확인해야 할 5가지 팁: RPM 하락 원인 진단법](https://crepika.com/blog/revenue-5-tips-rpm): 블로그와 유튜브 콘텐츠에서 RPM을 실질적으로 높이는 5가지 수익화 전략을 정리했습니다. 고단가 틈새 주제 선택법, 광고 단가가 높은 카테고리 공략, 시청 지속 시간 최적화 방법을 실제 수익 데이터와 함께 상세히 안내합니다.
 - [스마트스토어 상품 이미지 최적화 7가지 팁: 첫 번째 사진이 구매율을 결정한다](https://crepika.com/blog/optimization-7-tips): 랜딩 페이지와 웹사이트 전환율을 높이는 CRO 실전 7가지 팁을 담았습니다. CTA 배치 전략, A/B 테스트 설계 방법, 히트맵 분석, 폼 최적화, 소셜 프루프 활용까지 전환율을 실제로 높인 사례와 함께 안내합니다.
-- [Google Tag Manager 트리거 설정 팁: 버튼 클릭과 폼 제출 정확히 추적하기](https://crepika.com/blog/google-tag-manager-tips): GTM에서 버튼 클릭, 폼 제출, 스크롤 깊이 등 주요 사용자 행동을 정확하게 추적하는 트리거 설정 실전 팁입니다. 잘못된 트리거 설정 실수와 해결 방법도 정리했습니다.
 
 ## Index Resources
 

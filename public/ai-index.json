@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 455,
+    "count": 456,
     "latest": [
+      {
+        "title": "스마트스토어 광고 효율 분석: 상품 광고 vs 브랜드 광고 어느 것이 더 효과적인가",
+        "url": "https://crepika.com/blog/ads-analytics-ads-vs-brand-ads",
+        "description": "스마트스토어 쇼핑 검색 광고(상품 광고)와 브랜드 검색 광고의 ROAS, CTR, 전환율을 실제 데이터로 비교하고 최적 운영 전략을 제시합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "1인 크리에이터가 법인으로 전환했을 때의 실제 변화: 세금·비용·신뢰도 분석",
         "url": "https://crepika.com/blog/1-creator-analytics",
@@ -524,12 +530,6 @@
         "title": "스마트스토어 상품 이미지 최적화 7가지 팁: 첫 번째 사진이 구매율을 결정한다",
         "url": "https://crepika.com/blog/optimization-7-tips",
         "description": "랜딩 페이지와 웹사이트 전환율을 높이는 CRO 실전 7가지 팁을 담았습니다. CTA 배치 전략, A/B 테스트 설계 방법, 히트맵 분석, 폼 최적화, 소셜 프루프 활용까지 전환율을 실제로 높인 사례와 함께 안내합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "Google Tag Manager 트리거 설정 팁: 버튼 클릭과 폼 제출 정확히 추적하기",
-        "url": "https://crepika.com/blog/google-tag-manager-tips",
-        "description": "GTM에서 버튼 클릭, 폼 제출, 스크롤 깊이 등 주요 사용자 행동을 정확하게 추적하는 트리거 설정 실전 팁입니다. 잘못된 트리거 설정 실수와 해결 방법도 정리했습니다.",
         "date": "2026-05-18"
       }
     ]

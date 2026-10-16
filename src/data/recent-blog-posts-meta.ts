@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ads-analytics-ads-vs-brand-ads",
+    title: "스마트스토어 광고 효율 분석: 상품 광고 vs 브랜드 광고 어느 것이 더 효과적인가",
+    description: "스마트스토어 쇼핑 검색 광고(상품 광고)와 브랜드 검색 광고의 ROAS, CTR, 전환율을 실제 데이터로 비교하고 최적 운영 전략을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["스마트스토어 광고", "네이버 쇼핑 광고", "브랜드 검색 광고", "상품 광고 ROAS", "네이버 광고 전략"],
+  },
+  {
     slug: "1-creator-analytics",
     title: "1인 크리에이터가 법인으로 전환했을 때의 실제 변화: 세금·비용·신뢰도 분석",
     description: "1인 크리에이터의 법인 전환이 세금 부담, 사업 비용 처리, 브랜드 신뢰도에 미치는 실질적인 영향을 세무·비즈니스 관점에서 분석합니다. 크리에이터 법인 전환, 1인 법인에 대한 실전 가이드.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "12분",
     author: "이지수",
     keywords: ["GTM", "구글 태그 매니저", "마케팅 데이터 품질", "태그 감사", "GA4 태그 설정"],
-  },
-  {
-    slug: "naver-vs-google-revenue-comparison-analytics",
-    title: "네이버 애드포스트 vs 구글 애드센스: 국내 블로거를 위한 수익 비교 분석",
-    description: "국내 블로거가 실제로 경험한 네이버 애드포스트와 구글 애드센스의 RPM, 승인 조건, 수익 안정성을 데이터 중심으로 비교 분석합니다. 네이버 애드포스트, 구글 애드센스에 대한 실전 가이드.",
-    category: "insights",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "박준영",
-    keywords: ["네이버 애드포스트", "구글 애드센스", "블로그 수익", "RPM 비교", "블로그 광고 수익"],
   },
 ];

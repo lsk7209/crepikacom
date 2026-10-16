@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>스마트스토어 광고 효율 분석: 상품 광고 vs 브랜드 광고 어느 것이 더 효과적인가</title>
+    <link>https://crepika.com/blog/ads-analytics-ads-vs-brand-ads</link>
+    <guid>https://crepika.com/blog/ads-analytics-ads-vs-brand-ads</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>insights</category>
+    <description>스마트스토어 쇼핑 검색 광고(상품 광고)와 브랜드 검색 광고의 ROAS, CTR, 전환율을 실제 데이터로 비교하고 최적 운영 전략을 제시합니다.</description>
+  </item>
+  <item>
     <title>1인 크리에이터가 법인으로 전환했을 때의 실제 변화: 세금·비용·신뢰도 분석</title>
     <link>https://crepika.com/blog/1-creator-analytics</link>
     <guid>https://crepika.com/blog/1-creator-analytics</guid>
@@ -897,15 +906,6 @@
     <dc:creator>김민혁</dc:creator>
     <category>insights</category>
     <description>구글 HCU(Helpful Content Update) 이후 트래픽을 복구한 사이트들의 공통 패턴을 6개월 데이터로 분석합니다. 회복 사이트와 회복 실패 사이트의 결정적 차이를 밝힙니다.</description>
-  </item>
-  <item>
-    <title>온라인 강의 플랫폼 현황 2026: Udemy·클래스101·탈잉 수익 구조 분석</title>
-    <link>https://crepika.com/blog/2026-udemy101-revenue-analytics</link>
-    <guid>https://crepika.com/blog/2026-udemy101-revenue-analytics</guid>
-    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>이지수</dc:creator>
-    <category>insights</category>
-    <description>2026년 Udemy, 클래스101, 탈잉의 수익 구조와 강사 실제 수익을 비교 분석합니다. 각 플랫폼의 특성과 강사로서 선택 기준을 데이터로 제시합니다.</description>
   </item>
 </channel>
 </rss>
