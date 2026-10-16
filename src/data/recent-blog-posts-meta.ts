@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "gtm-marketing",
+    title: "GTM으로 마케팅 데이터 품질 높이는 인사이트: 잘못된 태그가 의사결정을 망친다",
+    description: "구글 태그 매니저(GTM) 오설정이 마케팅 데이터를 왜곡하는 사례를 분석하고, 데이터 품질을 높이기 위한 태그 감사와 최적화 방법을 제시합니다.",
+    category: "insights",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["GTM", "구글 태그 매니저", "마케팅 데이터 품질", "태그 감사", "GA4 태그 설정"],
+  },
+  {
     slug: "naver-vs-google-revenue-comparison-analytics",
     title: "네이버 애드포스트 vs 구글 애드센스: 국내 블로거를 위한 수익 비교 분석",
     description: "국내 블로거가 실제로 경험한 네이버 애드포스트와 구글 애드센스의 RPM, 승인 조건, 수익 안정성을 데이터 중심으로 비교 분석합니다. 네이버 애드포스트, 구글 애드센스에 대한 실전 가이드.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "13분",
     author: "김민혁",
     keywords: ["B2B 마케팅 ROI", "리드 스코어링", "마케팅 기여 분석", "CAC", "파이프라인 분석"],
-  },
-  {
-    slug: "google-performance-max-analytics-automation-ads",
-    title: "구글 Performance Max 실제 성과 분석: 자동화 광고의 빛과 그림자",
-    description: "구글 Performance Max 캠페인의 실제 ROAS 데이터와 운영 사례를 분석해 자동화 광고의 장단점과 효과적인 활용 전략을 정리합니다. Performance Max, 구글 광고 자동화에 대한 실전 가이드.",
-    category: "insights",
-    publishDate: "2026-05-18",
-    readTime: "13분",
-    author: "박준영",
-    keywords: ["Performance Max", "구글 광고 자동화", "PMax", "구글 광고 ROAS", "스마트 캠페인"],
   },
 ];

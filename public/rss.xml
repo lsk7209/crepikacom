@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>GTM으로 마케팅 데이터 품질 높이는 인사이트: 잘못된 태그가 의사결정을 망친다</title>
+    <link>https://crepika.com/blog/gtm-marketing</link>
+    <guid>https://crepika.com/blog/gtm-marketing</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>insights</category>
+    <description>구글 태그 매니저(GTM) 오설정이 마케팅 데이터를 왜곡하는 사례를 분석하고, 데이터 품질을 높이기 위한 태그 감사와 최적화 방법을 제시합니다.</description>
+  </item>
+  <item>
     <title>네이버 애드포스트 vs 구글 애드센스: 국내 블로거를 위한 수익 비교 분석</title>
     <link>https://crepika.com/blog/naver-vs-google-revenue-comparison-analytics</link>
     <guid>https://crepika.com/blog/naver-vs-google-revenue-comparison-analytics</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>insights</category>
     <description>2026년 국내 블로거와 유튜버의 제휴 마케팅 실제 수익 현황을 분석합니다. 업종별 수수료율, 수익 규모, 최적 제휴 마케팅 채널을 데이터로 정리했습니다.</description>
-  </item>
-  <item>
-    <title>디스코드 크리에이터 커뮤니티 성공 패턴 분석: 국내외 사례로 본 운영 원칙</title>
-    <link>https://crepika.com/blog/creator-community-analytics-case</link>
-    <guid>https://crepika.com/blog/creator-community-analytics-case</guid>
-    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>김민혁</dc:creator>
-    <category>insights</category>
-    <description>성공한 디스코드 크리에이터 커뮤니티의 공통 운영 패턴을 국내외 사례와 함께 분석합니다. 활성 커뮤니티를 만들고 유지하는 핵심 원칙을 데이터로 정리했습니다.</description>
   </item>
 </channel>
 </rss>
