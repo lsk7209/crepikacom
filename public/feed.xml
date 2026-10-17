@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>GTM으로 GA4 이벤트 자동 추적 설정한 이커머스 케이스</title>
+    <link>https://crepika.com/blog/gtm-ga4</link>
+    <guid>https://crepika.com/blog/gtm-ga4</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>김민혁</dc:creator>
+    <category>case-study</category>
+    <description>GTM을 활용해 GA4 이커머스 이벤트 자동 추적을 구축한 실제 사례를 단계별로 소개하고, 전환 추적 정확도 향상과 마케팅 ROI 개선 결과를 분석합니다.</description>
+  </item>
+  <item>
     <title>스마트스토어 광고 효율 분석: 상품 광고 vs 브랜드 광고 어느 것이 더 효과적인가</title>
     <link>https://crepika.com/blog/ads-analytics-ads-vs-brand-ads</link>
     <guid>https://crepika.com/blog/ads-analytics-ads-vs-brand-ads</guid>
@@ -897,15 +906,6 @@
     <dc:creator>이지수</dc:creator>
     <category>insights</category>
     <description>국내 리타겟팅 광고의 업종별 평균 ROAS와 광고 노출 빈도 최적화 데이터를 분석합니다. Meta, 구글, 카카오 리타겟팅의 실제 성과 차이를 비교합니다.</description>
-  </item>
-  <item>
-    <title>HCU 이후 트래픽 복구한 사이트들의 공통점: 6개월 데이터로 본 생존 패턴</title>
-    <link>https://crepika.com/blog/hcu-6</link>
-    <guid>https://crepika.com/blog/hcu-6</guid>
-    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>김민혁</dc:creator>
-    <category>insights</category>
-    <description>구글 HCU(Helpful Content Update) 이후 트래픽을 복구한 사이트들의 공통 패턴을 6개월 데이터로 분석합니다. 회복 사이트와 회복 실패 사이트의 결정적 차이를 밝힙니다.</description>
   </item>
 </channel>
 </rss>

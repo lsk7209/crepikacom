@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "gtm-ga4",
+    title: "GTM으로 GA4 이벤트 자동 추적 설정한 이커머스 케이스",
+    description: "GTM을 활용해 GA4 이커머스 이벤트 자동 추적을 구축한 실제 사례를 단계별로 소개하고, 전환 추적 정확도 향상과 마케팅 ROI 개선 결과를 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["GTM GA4 이커머스", "GA4 전환 추적", "GTM 이벤트 설정", "이커머스 분석", "데이터 레이어"],
+  },
+  {
     slug: "ads-analytics-ads-vs-brand-ads",
     title: "스마트스토어 광고 효율 분석: 상품 광고 vs 브랜드 광고 어느 것이 더 효과적인가",
     description: "스마트스토어 쇼핑 검색 광고(상품 광고)와 브랜드 검색 광고의 ROAS, CTR, 전환율을 실제 데이터로 비교하고 최적 운영 전략을 제시합니다.",
