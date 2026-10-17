@@ -118,9 +118,10 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 457
+Renderable blog posts: 458
 
 Latest posts:
+- [네이버 애드포스트 최적화로 월 수익 30만 원에서 100만 원으로 높인 케이스](https://crepika.com/blog/naver-optimization-revenue-30-100): 네이버 블로그 콘텐츠 전략과 애드포스트 최적화를 통해 월 광고 수익을 30만 원에서 100만 원으로 3배 이상 성장시킨 실제 사례를 분석합니다.
 - [GTM으로 GA4 이벤트 자동 추적 설정한 이커머스 케이스](https://crepika.com/blog/gtm-ga4): GTM을 활용해 GA4 이커머스 이벤트 자동 추적을 구축한 실제 사례를 단계별로 소개하고, 전환 추적 정확도 향상과 마케팅 ROI 개선 결과를 분석합니다.
 - [스마트스토어 광고 효율 분석: 상품 광고 vs 브랜드 광고 어느 것이 더 효과적인가](https://crepika.com/blog/ads-analytics-ads-vs-brand-ads): 스마트스토어 쇼핑 검색 광고(상품 광고)와 브랜드 검색 광고의 ROAS, CTR, 전환율을 실제 데이터로 비교하고 최적 운영 전략을 제시합니다.
 - [1인 크리에이터가 법인으로 전환했을 때의 실제 변화: 세금·비용·신뢰도 분석](https://crepika.com/blog/1-creator-analytics): 1인 크리에이터의 법인 전환이 세금 부담, 사업 비용 처리, 브랜드 신뢰도에 미치는 실질적인 영향을 세무·비즈니스 관점에서 분석합니다. 크리에이터 법인 전환, 1인 법인에 대한 실전 가이드.
@@ -132,7 +133,6 @@ Latest posts:
 - [GA4 세그먼트 활용 팁: 방문자를 분류해서 맞춤 전략 수립하는 법](https://crepika.com/blog/ga4-usage-tips-strategy): GA4 세그먼트를 활용해 방문자를 유형별로 분류하고 각 그룹에 맞는 마케팅 전략을 수립하는 방법입니다. 탐색 보고서부터 잠재고객 내보내기까지 실전 활용 팁을 정리했습니다.
 - [유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성](https://crepika.com/blog/youtube-tips): 유튜브 멤버십에 시청자가 실제로 가입하도록 만드는 혜택 설계 팁입니다. 가격 책정, 단계별 멤버십 구성, 독점 혜택 선택, 유지율을 높이는 방법까지 크리에이터 실전 가이드입니다.
 - [네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기](https://crepika.com/blog/naver-seo-tips-search): 네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.
-- [애드센스 수익 낮을 때 확인해야 할 5가지 팁: RPM 하락 원인 진단법](https://crepika.com/blog/revenue-5-tips-rpm): 블로그와 유튜브 콘텐츠에서 RPM을 실질적으로 높이는 5가지 수익화 전략을 정리했습니다. 고단가 틈새 주제 선택법, 광고 단가가 높은 카테고리 공략, 시청 지속 시간 최적화 방법을 실제 수익 데이터와 함께 상세히 안내합니다.
 
 ## Index Resources
 
@@ -607,3 +607,4 @@ Updated: 2026-10-17
 - https://crepika.com/blog/1-creator-analytics - 1인 크리에이터가 법인으로 전환했을 때의 실제 변화: 세금·비용·신뢰도 분석
 - https://crepika.com/blog/ads-analytics-ads-vs-brand-ads - 스마트스토어 광고 효율 분석: 상품 광고 vs 브랜드 광고 어느 것이 더 효과적인가
 - https://crepika.com/blog/gtm-ga4 - GTM으로 GA4 이벤트 자동 추적 설정한 이커머스 케이스
+- https://crepika.com/blog/naver-optimization-revenue-30-100 - 네이버 애드포스트 최적화로 월 수익 30만 원에서 100만 원으로 높인 케이스

@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-optimization-revenue-30-100",
+    title: "네이버 애드포스트 최적화로 월 수익 30만 원에서 100만 원으로 높인 케이스",
+    description: "네이버 블로그 콘텐츠 전략과 애드포스트 최적화를 통해 월 광고 수익을 30만 원에서 100만 원으로 3배 이상 성장시킨 실제 사례를 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["네이버 애드포스트 수익", "블로그 수익 최적화", "네이버 블로그 방문자 증가", "블로그 수익화", "애드포스트 RPM"],
+  },
+  {
     slug: "gtm-ga4",
     title: "GTM으로 GA4 이벤트 자동 추적 설정한 이커머스 케이스",
     description: "GTM을 활용해 GA4 이커머스 이벤트 자동 추적을 구축한 실제 사례를 단계별로 소개하고, 전환 추적 정확도 향상과 마케팅 ROI 개선 결과를 분석합니다.",

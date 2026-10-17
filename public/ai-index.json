@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 457,
+    "count": 458,
     "latest": [
+      {
+        "title": "네이버 애드포스트 최적화로 월 수익 30만 원에서 100만 원으로 높인 케이스",
+        "url": "https://crepika.com/blog/naver-optimization-revenue-30-100",
+        "description": "네이버 블로그 콘텐츠 전략과 애드포스트 최적화를 통해 월 광고 수익을 30만 원에서 100만 원으로 3배 이상 성장시킨 실제 사례를 분석합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "GTM으로 GA4 이벤트 자동 추적 설정한 이커머스 케이스",
         "url": "https://crepika.com/blog/gtm-ga4",
@@ -524,12 +530,6 @@
         "title": "네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기",
         "url": "https://crepika.com/blog/naver-seo-tips-search",
         "description": "네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "애드센스 수익 낮을 때 확인해야 할 5가지 팁: RPM 하락 원인 진단법",
-        "url": "https://crepika.com/blog/revenue-5-tips-rpm",
-        "description": "블로그와 유튜브 콘텐츠에서 RPM을 실질적으로 높이는 5가지 수익화 전략을 정리했습니다. 고단가 틈새 주제 선택법, 광고 단가가 높은 카테고리 공략, 시청 지속 시간 최적화 방법을 실제 수익 데이터와 함께 상세히 안내합니다.",
         "date": "2026-05-18"
       }
     ]

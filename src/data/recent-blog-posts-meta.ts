@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "naver-optimization-revenue-30-100",
+    title: "네이버 애드포스트 최적화로 월 수익 30만 원에서 100만 원으로 높인 케이스",
+    description: "네이버 블로그 콘텐츠 전략과 애드포스트 최적화를 통해 월 광고 수익을 30만 원에서 100만 원으로 3배 이상 성장시킨 실제 사례를 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "박준영",
+    keywords: ["네이버 애드포스트 수익", "블로그 수익 최적화", "네이버 블로그 방문자 증가", "블로그 수익화", "애드포스트 RPM"],
+  },
+  {
     slug: "gtm-ga4",
     title: "GTM으로 GA4 이벤트 자동 추적 설정한 이커머스 케이스",
     description: "GTM을 활용해 GA4 이커머스 이벤트 자동 추적을 구축한 실제 사례를 단계별로 소개하고, 전환 추적 정확도 향상과 마케팅 ROI 개선 결과를 분석합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "12분",
     author: "이지수",
     keywords: ["스마트스토어 광고", "네이버 쇼핑 광고", "브랜드 검색 광고", "상품 광고 ROAS", "네이버 광고 전략"],
-  },
-  {
-    slug: "1-creator-analytics",
-    title: "1인 크리에이터가 법인으로 전환했을 때의 실제 변화: 세금·비용·신뢰도 분석",
-    description: "1인 크리에이터의 법인 전환이 세금 부담, 사업 비용 처리, 브랜드 신뢰도에 미치는 실질적인 영향을 세무·비즈니스 관점에서 분석합니다. 크리에이터 법인 전환, 1인 법인에 대한 실전 가이드.",
-    category: "insights",
-    publishDate: "2026-05-18",
-    readTime: "13분",
-    author: "김민혁",
-    keywords: ["크리에이터 법인 전환", "1인 법인", "크리에이터 세금", "개인사업자 vs 법인", "유튜버 법인"],
   },
 ];
