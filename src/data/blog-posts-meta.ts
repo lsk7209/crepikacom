@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "b2b-content-marketing-6-30",
+    title: "B2B 콘텐츠 마케팅으로 6개월 만에 영업 사이클 30% 단축한 스타트업 케이스",
+    description: "HR SaaS 스타트업이 콘텐츠 마케팅 전략으로 영업 사이클을 6개월 만에 30% 단축하고 MQL 품질을 개선한 실제 과정과 결과를 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "이지수",
+    keywords: ["B2B 콘텐츠 마케팅", "영업 사이클 단축", "MQL 품질 개선", "SaaS 마케팅", "리드 너처링"],
+  },
+  {
     slug: "naver-optimization-revenue-30-100",
     title: "네이버 애드포스트 최적화로 월 수익 30만 원에서 100만 원으로 높인 케이스",
     description: "네이버 블로그 콘텐츠 전략과 애드포스트 최적화를 통해 월 광고 수익을 30만 원에서 100만 원으로 3배 이상 성장시킨 실제 사례를 분석합니다.",

@@ -8,6 +8,15 @@
   <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://crepika.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>B2B 콘텐츠 마케팅으로 6개월 만에 영업 사이클 30% 단축한 스타트업 케이스</title>
+    <link>https://crepika.com/blog/b2b-content-marketing-6-30</link>
+    <guid>https://crepika.com/blog/b2b-content-marketing-6-30</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>이지수</dc:creator>
+    <category>case-study</category>
+    <description>HR SaaS 스타트업이 콘텐츠 마케팅 전략으로 영업 사이클을 6개월 만에 30% 단축하고 MQL 품질을 개선한 실제 과정과 결과를 분석합니다.</description>
+  </item>
+  <item>
     <title>네이버 애드포스트 최적화로 월 수익 30만 원에서 100만 원으로 높인 케이스</title>
     <link>https://crepika.com/blog/naver-optimization-revenue-30-100</link>
     <guid>https://crepika.com/blog/naver-optimization-revenue-30-100</guid>
@@ -897,15 +906,6 @@
     <dc:creator>박준영</dc:creator>
     <category>insights</category>
     <description>카카오모먼트 광고의 업종별 클릭률(CTR)과 전환율 실데이터를 분석합니다. 카카오 광고의 강점과 약점, 최적 활용 전략을 국내 사례와 함께 정리했습니다.</description>
-  </item>
-  <item>
-    <title>POD(주문형 인쇄) 비즈니스 실제 수익 분석: 크리에이터 굿즈 판매의 현실</title>
-    <link>https://crepika.com/blog/pod-revenue-analytics-creator</link>
-    <guid>https://crepika.com/blog/pod-revenue-analytics-creator</guid>
-    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
-    <dc:creator>김민혁</dc:creator>
-    <category>insights</category>
-    <description>크리에이터의 POD(주문형 인쇄) 굿즈 비즈니스 실제 수익 구조를 분석합니다. Redbubble, Printful, 국내 플랫폼별 수익성과 성공 전략을 데이터로 정리했습니다.</description>
   </item>
 </channel>
 </rss>

@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 458,
+    "count": 459,
     "latest": [
+      {
+        "title": "B2B 콘텐츠 마케팅으로 6개월 만에 영업 사이클 30% 단축한 스타트업 케이스",
+        "url": "https://crepika.com/blog/b2b-content-marketing-6-30",
+        "description": "HR SaaS 스타트업이 콘텐츠 마케팅 전략으로 영업 사이클을 6개월 만에 30% 단축하고 MQL 품질을 개선한 실제 과정과 결과를 분석합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "네이버 애드포스트 최적화로 월 수익 30만 원에서 100만 원으로 높인 케이스",
         "url": "https://crepika.com/blog/naver-optimization-revenue-30-100",
@@ -524,12 +530,6 @@
         "title": "유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성",
         "url": "https://crepika.com/blog/youtube-tips",
         "description": "유튜브 멤버십에 시청자가 실제로 가입하도록 만드는 혜택 설계 팁입니다. 가격 책정, 단계별 멤버십 구성, 독점 혜택 선택, 유지율을 높이는 방법까지 크리에이터 실전 가이드입니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "네이버 모두 홈페이지 SEO 팁: 무료 사이트도 검색에 노출되게 만들기",
-        "url": "https://crepika.com/blog/naver-seo-tips-search",
-        "description": "네이버 모두 홈페이지 검색 노출을 위한 SEO 핵심 실전 팁을 정리했습니다. 스마트플레이스 연동부터 키워드 배치, 사진 최적화, 블로그 연동까지 소상공인이 바로 적용할 수 있는 방법을 안내합니다.",
         "date": "2026-05-18"
       }
     ]
