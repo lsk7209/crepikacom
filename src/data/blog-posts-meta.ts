@@ -1343,6 +1343,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "seo-300-growth-shopping",
+    title: "이커머스 SEO로 오가닉 트래픽 300% 성장시킨 쇼핑몰 케이스",
+    description: "국내 패션 쇼핑몰이 12개월간 이커머스 SEO 전략을 실행해 오가닉 검색 트래픽을 300% 성장시키고 광고 의존도를 낮춘 실제 사례를 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["이커머스 SEO", "쇼핑몰 오가닉 트래픽", "상품 페이지 SEO", "패션 쇼핑몰 SEO", "구글 검색 최적화"],
+  },
+  {
     slug: "marketing",
     title: "국내 리뷰 마케팅 현황: 소비자 구매 결정에서 후기의 영향력 데이터",
     description: "국내 소비자의 구매 결정에서 리뷰가 미치는 영향력을 데이터로 분석하고, 리뷰 마케팅의 현황과 효과적인 리뷰 수집 전략을 정리합니다. 리뷰 마케팅, 소비자 후기에 대한 실전 가이드.",
