@@ -1343,6 +1343,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "automation-google-38-46",
+    title: "리뷰 자동화 시스템 구축 후 구글 평점 3.8에서 4.6으로 올린 케이스",
+    description: "로컬 식당이 리뷰 수집 자동화 시스템을 구축하고 부정 리뷰 관리 전략을 실행해 구글 평점을 3.8에서 4.6으로 올린 6개월간의 과정을 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["구글 리뷰 관리", "구글 평점 올리기", "리뷰 자동화", "로컬 SEO", "리뷰 마케팅"],
+  },
+  {
     slug: "creator",
     title: "크리에이터 법인 전환 후 세금 절약과 투자 유치 성공한 케이스",
     description: "유튜버 크리에이터가 법인 전환 후 연간 세금을 1,200만 원 절감하고, 법인 구조를 활용해 콘텐츠 스튜디오 투자 유치에 성공한 실제 과정을 분석합니다.",
