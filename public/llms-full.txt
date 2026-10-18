@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 460
+Renderable blog posts: 461
 
 Latest posts:
 - [B2B 콘텐츠 마케팅으로 6개월 만에 영업 사이클 30% 단축한 스타트업 케이스](https://crepika.com/blog/b2b-content-marketing-6-30): HR SaaS 스타트업이 콘텐츠 마케팅 전략으로 영업 사이클을 6개월 만에 30% 단축하고 MQL 품질을 개선한 실제 과정과 결과를 분석합니다.
@@ -477,6 +477,7 @@ Updated: 2026-10-18
 - https://crepika.com/blog/seo-google-shopping - 이커머스 SEO와 구글 쇼핑 노출의 관계: 상품 데이터 품질이 트래픽을 결정한다
 - https://crepika.com/blog/marketing - 국내 리뷰 마케팅 현황: 소비자 구매 결정에서 후기의 영향력 데이터
 - https://crepika.com/blog/seo-300-growth-shopping - 이커머스 SEO로 오가닉 트래픽 300% 성장시킨 쇼핑몰 케이스
+- https://crepika.com/blog/creator - 크리에이터 법인 전환 후 세금 절약과 투자 유치 성공한 케이스
 - https://crepika.com/blog/5-practical-tips-ux - 히트맵으로 홈페이지 개선하는 5가지 실전 팁: 클릭 데이터가 말하는 UX 인사이트
 - https://crepika.com/blog/tips-5-automation - 세일즈 퍼널 이메일 시퀀스 작성 팁: 5통으로 구매 결정을 이끄는 자동화 이메일
 - https://crepika.com/blog/ads-roas-7-tips-ads - 리타겟팅 광고 ROAS 높이는 7가지 팁: 재방문 고객을 구매자로 바꾸는 광고 설정

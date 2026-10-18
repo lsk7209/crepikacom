@@ -1343,6 +1343,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "creator",
+    title: "크리에이터 법인 전환 후 세금 절약과 투자 유치 성공한 케이스",
+    description: "유튜버 크리에이터가 법인 전환 후 연간 세금을 1,200만 원 절감하고, 법인 구조를 활용해 콘텐츠 스튜디오 투자 유치에 성공한 실제 과정을 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["크리에이터 법인 전환", "유튜버 법인 설립", "크리에이터 투자 유치", "1인 법인 세금", "콘텐츠 스튜디오 창업"],
+  },
+  {
     slug: "seo-300-growth-shopping",
     title: "이커머스 SEO로 오가닉 트래픽 300% 성장시킨 쇼핑몰 케이스",
     description: "국내 패션 쇼핑몰이 12개월간 이커머스 SEO 전략을 실행해 오가닉 검색 트래픽을 300% 성장시키고 광고 의존도를 낮춘 실제 사례를 분석합니다.",
