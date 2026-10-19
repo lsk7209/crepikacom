@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "google-search-console-complete-guide-search-content-strategy",
+    title: "구글 Search Console 완전 가이드: 검색 트래픽 데이터를 콘텐츠 전략으로 바꾸는 법",
+    description: "구글 서치콘솔 활용법을 완전히 정복하세요. 성과 보고서 분석부터 CTR 최적화, SEO 전략 수립까지 실전 워크플로우로 유기적 검색 트래픽을 2.3배 늘리는 방법을 단계별로 공개합니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["구글 서치콘솔 활용", "서치콘솔 데이터 분석", "검색 트래픽 최적화", "SEO 전략 수립", "구글 서치콘솔 사용법", "CTR 개선 방법"],
+  },
+  {
     slug: "perplexity-seo-content-80",
     title: "Perplexity로 SEO 콘텐츠 조사 시간을 80% 줄인 에디터 케이스",
     description: "콘텐츠 에디터가 Perplexity AI를 SEO 콘텐츠 리서치 워크플로에 통합해 조사 시간을 80% 절감하고 월 발행량을 3배 늘린 실제 경험을 공유합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "12분",
     author: "박준영",
     keywords: ["스마트스토어 ROAS", "네이버 쇼핑 광고 최적화", "상품 광고 ROAS 개선", "스마트스토어 광고 전략", "네이버 광고 ROI"],
-  },
-  {
-    slug: "b2b-content-marketing-6-30",
-    title: "B2B 콘텐츠 마케팅으로 6개월 만에 영업 사이클 30% 단축한 스타트업 케이스",
-    description: "HR SaaS 스타트업이 콘텐츠 마케팅 전략으로 영업 사이클을 6개월 만에 30% 단축하고 MQL 품질을 개선한 실제 과정과 결과를 분석합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "이지수",
-    keywords: ["B2B 콘텐츠 마케팅", "영업 사이클 단축", "MQL 품질 개선", "SaaS 마케팅", "리드 너처링"],
   },
 ];
