@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 463,
+    "count": 464,
     "latest": [
+      {
+        "title": "스마트스토어 광고 ROAS 8배 달성한 생활용품 브랜드의 광고 전략 케이스",
+        "url": "https://crepika.com/blog/ads-roas-8-usage-brand-ads-strategy",
+        "description": "스마트스토어 입점 생활용품 브랜드가 키워드 전략 재설계와 광고 소재 최적화로 ROAS를 2배에서 8배로 올린 6개월간의 광고 전략 케이스를 분석합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "B2B 콘텐츠 마케팅으로 6개월 만에 영업 사이클 30% 단축한 스타트업 케이스",
         "url": "https://crepika.com/blog/b2b-content-marketing-6-30",
@@ -524,12 +530,6 @@
         "title": "GA4 세그먼트 활용 팁: 방문자를 분류해서 맞춤 전략 수립하는 법",
         "url": "https://crepika.com/blog/ga4-usage-tips-strategy",
         "description": "GA4 세그먼트를 활용해 방문자를 유형별로 분류하고 각 그룹에 맞는 마케팅 전략을 수립하는 방법입니다. 탐색 보고서부터 잠재고객 내보내기까지 실전 활용 팁을 정리했습니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "유튜브 멤버십 특혜 설계 팁: 멤버가 실제로 가입하게 만드는 혜택 구성",
-        "url": "https://crepika.com/blog/youtube-tips",
-        "description": "유튜브 멤버십에 시청자가 실제로 가입하도록 만드는 혜택 설계 팁입니다. 가격 책정, 단계별 멤버십 구성, 독점 혜택 선택, 유지율을 높이는 방법까지 크리에이터 실전 가이드입니다.",
         "date": "2026-05-18"
       }
     ]

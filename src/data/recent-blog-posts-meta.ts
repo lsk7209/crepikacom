@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ads-roas-8-usage-brand-ads-strategy",
+    title: "스마트스토어 광고 ROAS 8배 달성한 생활용품 브랜드의 광고 전략 케이스",
+    description: "스마트스토어 입점 생활용품 브랜드가 키워드 전략 재설계와 광고 소재 최적화로 ROAS를 2배에서 8배로 올린 6개월간의 광고 전략 케이스를 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["스마트스토어 ROAS", "네이버 쇼핑 광고 최적화", "상품 광고 ROAS 개선", "스마트스토어 광고 전략", "네이버 광고 ROI"],
+  },
+  {
     slug: "b2b-content-marketing-6-30",
     title: "B2B 콘텐츠 마케팅으로 6개월 만에 영업 사이클 30% 단축한 스타트업 케이스",
     description: "HR SaaS 스타트업이 콘텐츠 마케팅 전략으로 영업 사이클을 6개월 만에 30% 단축하고 MQL 품질을 개선한 실제 과정과 결과를 분석합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "11분",
     author: "박준영",
     keywords: ["네이버 애드포스트 수익", "블로그 수익 최적화", "네이버 블로그 방문자 증가", "블로그 수익화", "애드포스트 RPM"],
-  },
-  {
-    slug: "gtm-ga4",
-    title: "GTM으로 GA4 이벤트 자동 추적 설정한 이커머스 케이스",
-    description: "GTM을 활용해 GA4 이커머스 이벤트 자동 추적을 구축한 실제 사례를 단계별로 소개하고, 전환 추적 정확도 향상과 마케팅 ROI 개선 결과를 분석합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "13분",
-    author: "김민혁",
-    keywords: ["GTM GA4 이커머스", "GA4 전환 추적", "GTM 이벤트 설정", "이커머스 분석", "데이터 레이어"],
   },
 ];

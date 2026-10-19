@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ads-roas-8-usage-brand-ads-strategy",
+    title: "스마트스토어 광고 ROAS 8배 달성한 생활용품 브랜드의 광고 전략 케이스",
+    description: "스마트스토어 입점 생활용품 브랜드가 키워드 전략 재설계와 광고 소재 최적화로 ROAS를 2배에서 8배로 올린 6개월간의 광고 전략 케이스를 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "박준영",
+    keywords: ["스마트스토어 ROAS", "네이버 쇼핑 광고 최적화", "상품 광고 ROAS 개선", "스마트스토어 광고 전략", "네이버 광고 ROI"],
+  },
+  {
     slug: "b2b-content-marketing-6-30",
     title: "B2B 콘텐츠 마케팅으로 6개월 만에 영업 사이클 30% 단축한 스타트업 케이스",
     description: "HR SaaS 스타트업이 콘텐츠 마케팅 전략으로 영업 사이클을 6개월 만에 30% 단축하고 MQL 품질을 개선한 실제 과정과 결과를 분석합니다.",
