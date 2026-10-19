@@ -1343,6 +1343,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     keywords: ["히트맵", "UX 최적화", "CRO", "홈페이지 개선", "Hotjar"],
   },
   {
+    slug: "instagram-ads-ab-ads-45-brand",
+    title: "인스타그램 광고 A/B 테스트로 광고 비용 45% 절감한 패션 브랜드 케이스",
+    description: "국내 패션 브랜드가 인스타그램 광고 소재 A/B 테스트 시스템을 구축해 광고 비용을 45% 절감하면서 동일 매출을 유지한 실제 과정을 분석합니다.",
+    category: "case-study",
+    publishDate: "2026-05-08",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["인스타그램 광고 A/B 테스트", "메타 광고 최적화", "광고 크리에이티브 테스트", "패션 브랜드 광고", "광고 비용 절감"],
+  },
+  {
     slug: "automation-google-38-46",
     title: "리뷰 자동화 시스템 구축 후 구글 평점 3.8에서 4.6으로 올린 케이스",
     description: "로컬 식당이 리뷰 수집 자동화 시스템을 구축하고 부정 리뷰 관리 전략을 실행해 구글 평점을 3.8에서 4.6으로 올린 6개월간의 과정을 분석합니다.",

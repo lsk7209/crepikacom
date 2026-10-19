@@ -118,7 +118,7 @@ Crepika provides text counting, Korean byte counting, WebP conversion, QR code g
 
 ## Blog
 
-Renderable blog posts: 462
+Renderable blog posts: 463
 
 Latest posts:
 - [B2B 콘텐츠 마케팅으로 6개월 만에 영업 사이클 30% 단축한 스타트업 케이스](https://crepika.com/blog/b2b-content-marketing-6-30): HR SaaS 스타트업이 콘텐츠 마케팅 전략으로 영업 사이클을 6개월 만에 30% 단축하고 MQL 품질을 개선한 실제 과정과 결과를 분석합니다.
@@ -146,4 +146,4 @@ Latest posts:
 - Sitemap: https://crepika.com/sitemap.xml
 - Contact: https://crepika.com/contact
 
-Updated: 2026-10-18
+Updated: 2026-10-19
