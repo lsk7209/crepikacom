@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "perplexity-seo-content-80",
+    title: "Perplexity로 SEO 콘텐츠 조사 시간을 80% 줄인 에디터 케이스",
+    description: "콘텐츠 에디터가 Perplexity AI를 SEO 콘텐츠 리서치 워크플로에 통합해 조사 시간을 80% 절감하고 월 발행량을 3배 늘린 실제 경험을 공유합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["Perplexity AI 콘텐츠", "SEO 콘텐츠 리서치", "AI 콘텐츠 조사", "블로그 생산성", "AI 글쓰기 도구"],
+  },
+  {
     slug: "ads-roas-8-usage-brand-ads-strategy",
     title: "스마트스토어 광고 ROAS 8배 달성한 생활용품 브랜드의 광고 전략 케이스",
     description: "스마트스토어 입점 생활용품 브랜드가 키워드 전략 재설계와 광고 소재 최적화로 ROAS를 2배에서 8배로 올린 6개월간의 광고 전략 케이스를 분석합니다.",

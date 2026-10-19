@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 464,
+    "count": 465,
     "latest": [
+      {
+        "title": "Perplexity로 SEO 콘텐츠 조사 시간을 80% 줄인 에디터 케이스",
+        "url": "https://crepika.com/blog/perplexity-seo-content-80",
+        "description": "콘텐츠 에디터가 Perplexity AI를 SEO 콘텐츠 리서치 워크플로에 통합해 조사 시간을 80% 절감하고 월 발행량을 3배 늘린 실제 경험을 공유합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "스마트스토어 광고 ROAS 8배 달성한 생활용품 브랜드의 광고 전략 케이스",
         "url": "https://crepika.com/blog/ads-roas-8-usage-brand-ads-strategy",
@@ -524,12 +530,6 @@
         "title": "국내 광고 플랫폼별 CPM·CPC 벤치마크 분석: 어디에 광고비를 써야 하나",
         "url": "https://crepika.com/blog/ads-cpmcpc-analytics-ads",
         "description": "네이버·카카오·구글·메타 광고 플랫폼의 CPM과 CPC 벤치마크 데이터를 업종별로 분석해 최적의 광고비 배분 전략을 제시합니다. 실전 경험을 바탕으로 단계별 방법을 정리했습니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "GA4 세그먼트 활용 팁: 방문자를 분류해서 맞춤 전략 수립하는 법",
-        "url": "https://crepika.com/blog/ga4-usage-tips-strategy",
-        "description": "GA4 세그먼트를 활용해 방문자를 유형별로 분류하고 각 그룹에 맞는 마케팅 전략을 수립하는 방법입니다. 탐색 보고서부터 잠재고객 내보내기까지 실전 활용 팁을 정리했습니다.",
         "date": "2026-05-18"
       }
     ]

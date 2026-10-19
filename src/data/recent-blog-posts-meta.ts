@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "perplexity-seo-content-80",
+    title: "Perplexity로 SEO 콘텐츠 조사 시간을 80% 줄인 에디터 케이스",
+    description: "콘텐츠 에디터가 Perplexity AI를 SEO 콘텐츠 리서치 워크플로에 통합해 조사 시간을 80% 절감하고 월 발행량을 3배 늘린 실제 경험을 공유합니다.",
+    category: "case-study",
+    publishDate: "2026-05-18",
+    readTime: "11분",
+    author: "이지수",
+    keywords: ["Perplexity AI 콘텐츠", "SEO 콘텐츠 리서치", "AI 콘텐츠 조사", "블로그 생산성", "AI 글쓰기 도구"],
+  },
+  {
     slug: "ads-roas-8-usage-brand-ads-strategy",
     title: "스마트스토어 광고 ROAS 8배 달성한 생활용품 브랜드의 광고 전략 케이스",
     description: "스마트스토어 입점 생활용품 브랜드가 키워드 전략 재설계와 광고 소재 최적화로 ROAS를 2배에서 8배로 올린 6개월간의 광고 전략 케이스를 분석합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "12분",
     author: "이지수",
     keywords: ["B2B 콘텐츠 마케팅", "영업 사이클 단축", "MQL 품질 개선", "SaaS 마케팅", "리드 너처링"],
-  },
-  {
-    slug: "naver-optimization-revenue-30-100",
-    title: "네이버 애드포스트 최적화로 월 수익 30만 원에서 100만 원으로 높인 케이스",
-    description: "네이버 블로그 콘텐츠 전략과 애드포스트 최적화를 통해 월 광고 수익을 30만 원에서 100만 원으로 3배 이상 성장시킨 실제 사례를 분석합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "11분",
-    author: "박준영",
-    keywords: ["네이버 애드포스트 수익", "블로그 수익 최적화", "네이버 블로그 방문자 증가", "블로그 수익화", "애드포스트 RPM"],
   },
 ];
