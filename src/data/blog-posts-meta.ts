@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "ga4-complete-guide-analytics",
+    title: "GA4 전환 추적 완전 가이드: 구매·가입·문의 이벤트 설정부터 보고서 분석까지",
+    description: "GA4 전환 추적 완전 가이드. 구매·가입·문의 이벤트 설정부터 GTM 활용법, 전환 보고서 분석, 오류 진단까지 단계별로 정리했습니다. 전환율 평균 수치와 실전 개선 전략을 함께 제공합니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "13분",
+    author: "김민혁",
+    keywords: ["GA4 전환 추적", "GA4 이벤트 설정", "전환율 분석", "구글 애널리틱스4", "GTM 태그 설정", "GA4 보고서 분석"],
+  },
+  {
     slug: "blog-seo-complete-guide-2026-google-algorithm-strategy",
     title: "티스토리 블로그 SEO 완전 가이드: 2026년 구글 알고리즘에 맞는 상위 노출 전략",
     description: "2026년 구글 알고리즘 업데이트에 맞춘 티스토리 SEO 완벽 가이드. 구글 상위 노출을 위한 콘텐츠 최적화 전략, 기술적 SEO 설정, 백링크 구축, 서치 콘솔 데이터 분석까지 티스토리 블로거를 위한 단계별 실전 로드맵을 제공합니다.",
