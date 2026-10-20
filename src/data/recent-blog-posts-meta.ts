@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "blog-seo-complete-guide-2026-google-algorithm-strategy",
+    title: "티스토리 블로그 SEO 완전 가이드: 2026년 구글 알고리즘에 맞는 상위 노출 전략",
+    description: "2026년 구글 알고리즘 업데이트에 맞춘 티스토리 SEO 완벽 가이드. 구글 상위 노출을 위한 콘텐츠 최적화 전략, 기술적 SEO 설정, 백링크 구축, 서치 콘솔 데이터 분석까지 티스토리 블로거를 위한 단계별 실전 로드맵을 제공합니다.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "14분",
+    author: "김민혁",
+    keywords: ["티스토리 SEO", "티스토리 구글 노출", "블로그 SEO 최적화", "구글 상위 노출", "티스토리 블로그 최적화", "검색엔진 최적화 2026"],
+  },
+  {
     slug: "google-search-console-complete-guide-search-content-strategy",
     title: "구글 Search Console 완전 가이드: 검색 트래픽 데이터를 콘텐츠 전략으로 바꾸는 법",
     description: "구글 서치콘솔 활용법을 완전히 정복하세요. 성과 보고서 분석부터 CTR 최적화, SEO 전략 수립까지 실전 워크플로우로 유기적 검색 트래픽을 2.3배 늘리는 방법을 단계별로 공개합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "11분",
     author: "이지수",
     keywords: ["Perplexity AI 콘텐츠", "SEO 콘텐츠 리서치", "AI 콘텐츠 조사", "블로그 생산성", "AI 글쓰기 도구"],
-  },
-  {
-    slug: "ads-roas-8-usage-brand-ads-strategy",
-    title: "스마트스토어 광고 ROAS 8배 달성한 생활용품 브랜드의 광고 전략 케이스",
-    description: "스마트스토어 입점 생활용품 브랜드가 키워드 전략 재설계와 광고 소재 최적화로 ROAS를 2배에서 8배로 올린 6개월간의 광고 전략 케이스를 분석합니다.",
-    category: "case-study",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "박준영",
-    keywords: ["스마트스토어 ROAS", "네이버 쇼핑 광고 최적화", "상품 광고 ROAS 개선", "스마트스토어 광고 전략", "네이버 광고 ROI"],
   },
 ];

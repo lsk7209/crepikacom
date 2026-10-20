@@ -11,7 +11,7 @@
       "SNS marketing",
       "content creation"
     ],
-    "updated": "2026-10-19"
+    "updated": "2026-10-20"
   },
   "tools": [
     {
@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 466,
+    "count": 467,
     "latest": [
+      {
+        "title": "티스토리 블로그 SEO 완전 가이드: 2026년 구글 알고리즘에 맞는 상위 노출 전략",
+        "url": "https://crepika.com/blog/blog-seo-complete-guide-2026-google-algorithm-strategy",
+        "description": "2026년 구글 알고리즘 업데이트에 맞춘 티스토리 SEO 완벽 가이드. 구글 상위 노출을 위한 콘텐츠 최적화 전략, 기술적 SEO 설정, 백링크 구축, 서치 콘솔 데이터 분석까지 티스토리 블로거를 위한 단계별 실전 로드맵을 제공합니다.",
+        "date": "2026-05-18"
+      },
       {
         "title": "구글 Search Console 완전 가이드: 검색 트래픽 데이터를 콘텐츠 전략으로 바꾸는 법",
         "url": "https://crepika.com/blog/google-search-console-complete-guide-search-content-strategy",
@@ -524,12 +530,6 @@
         "title": "B2B 마케팅 ROI 측정 방법: 리드 품질을 수치화하는 프레임워크",
         "url": "https://crepika.com/blog/b2b-marketing-roi-method",
         "description": "B2B 마케팅 ROI를 정확히 측정하기 위한 리드 스코어링, 파이프라인 기여 분석, CAC 계산 프레임워크를 실무 중심으로 정리합니다. B2B 마케팅 ROI, 리드 스코어링에 대한 실전 가이드.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "구글 Performance Max 실제 성과 분석: 자동화 광고의 빛과 그림자",
-        "url": "https://crepika.com/blog/google-performance-max-analytics-automation-ads",
-        "description": "구글 Performance Max 캠페인의 실제 ROAS 데이터와 운영 사례를 분석해 자동화 광고의 장단점과 효과적인 활용 전략을 정리합니다. Performance Max, 구글 광고 자동화에 대한 실전 가이드.",
         "date": "2026-05-18"
       }
     ]
