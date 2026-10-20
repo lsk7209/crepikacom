@@ -13,6 +13,16 @@ export interface BlogPostMeta {
 
 export const blogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "youtube-seo-complete-guide-algorithm-strategy",
+    title: "유튜브 SEO 완전 가이드: 알고리즘이 좋아하는 제목·태그·썸네일 전략",
+    description: "유튜브에 영상을 올려도 조회수가 나오지 않는다면 유튜브 SEO 전략이 빠진 것입니다. 2026년 알고리즘이 평가하는 CTR·Watch Time·참여율 원리부터 제목 최적화, 태그 구성, 썸네일 A/B 테스트까지 데이터 기반으로 단계별 정리.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["유튜브 SEO", "유튜브 알고리즘", "유튜브 제목 최적화", "유튜브 노출 전략", "유튜브 태그", "썸네일 CTR"],
+  },
+  {
     slug: "ga4-complete-guide-analytics",
     title: "GA4 전환 추적 완전 가이드: 구매·가입·문의 이벤트 설정부터 보고서 분석까지",
     description: "GA4 전환 추적 완전 가이드. 구매·가입·문의 이벤트 설정부터 GTM 활용법, 전환 보고서 분석, 오류 진단까지 단계별로 정리했습니다. 전환율 평균 수치와 실전 개선 전략을 함께 제공합니다.",

@@ -458,8 +458,14 @@
       "insights",
       "case-study"
     ],
-    "count": 468,
+    "count": 469,
     "latest": [
+      {
+        "title": "유튜브 SEO 완전 가이드: 알고리즘이 좋아하는 제목·태그·썸네일 전략",
+        "url": "https://crepika.com/blog/youtube-seo-complete-guide-algorithm-strategy",
+        "description": "유튜브에 영상을 올려도 조회수가 나오지 않는다면 유튜브 SEO 전략이 빠진 것입니다. 2026년 알고리즘이 평가하는 CTR·Watch Time·참여율 원리부터 제목 최적화, 태그 구성, 썸네일 A/B 테스트까지 데이터 기반으로 단계별 정리.",
+        "date": "2026-05-18"
+      },
       {
         "title": "GA4 전환 추적 완전 가이드: 구매·가입·문의 이벤트 설정부터 보고서 분석까지",
         "url": "https://crepika.com/blog/ga4-complete-guide-analytics",
@@ -524,12 +530,6 @@
         "title": "GTM으로 마케팅 데이터 품질 높이는 인사이트: 잘못된 태그가 의사결정을 망친다",
         "url": "https://crepika.com/blog/gtm-marketing",
         "description": "구글 태그 매니저(GTM) 오설정이 마케팅 데이터를 왜곡하는 사례를 분석하고, 데이터 품질을 높이기 위한 태그 감사와 최적화 방법을 제시합니다.",
-        "date": "2026-05-18"
-      },
-      {
-        "title": "네이버 애드포스트 vs 구글 애드센스: 국내 블로거를 위한 수익 비교 분석",
-        "url": "https://crepika.com/blog/naver-vs-google-revenue-comparison-analytics",
-        "description": "국내 블로거가 실제로 경험한 네이버 애드포스트와 구글 애드센스의 RPM, 승인 조건, 수익 안정성을 데이터 중심으로 비교 분석합니다. 네이버 애드포스트, 구글 애드센스에 대한 실전 가이드.",
         "date": "2026-05-18"
       }
     ]

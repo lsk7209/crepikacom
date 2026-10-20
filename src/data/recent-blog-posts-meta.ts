@@ -3,6 +3,16 @@ import type { BlogPostMeta } from "./blog-posts-meta";
 
 export const recentBlogPostsMeta: BlogPostMeta[] = [
   {
+    slug: "youtube-seo-complete-guide-algorithm-strategy",
+    title: "유튜브 SEO 완전 가이드: 알고리즘이 좋아하는 제목·태그·썸네일 전략",
+    description: "유튜브에 영상을 올려도 조회수가 나오지 않는다면 유튜브 SEO 전략이 빠진 것입니다. 2026년 알고리즘이 평가하는 CTR·Watch Time·참여율 원리부터 제목 최적화, 태그 구성, 썸네일 A/B 테스트까지 데이터 기반으로 단계별 정리.",
+    category: "guide",
+    publishDate: "2026-05-18",
+    readTime: "12분",
+    author: "김민혁",
+    keywords: ["유튜브 SEO", "유튜브 알고리즘", "유튜브 제목 최적화", "유튜브 노출 전략", "유튜브 태그", "썸네일 CTR"],
+  },
+  {
     slug: "ga4-complete-guide-analytics",
     title: "GA4 전환 추적 완전 가이드: 구매·가입·문의 이벤트 설정부터 보고서 분석까지",
     description: "GA4 전환 추적 완전 가이드. 구매·가입·문의 이벤트 설정부터 GTM 활용법, 전환 보고서 분석, 오류 진단까지 단계별로 정리했습니다. 전환율 평균 수치와 실전 개선 전략을 함께 제공합니다.",
@@ -21,15 +31,5 @@ export const recentBlogPostsMeta: BlogPostMeta[] = [
     readTime: "14분",
     author: "김민혁",
     keywords: ["티스토리 SEO", "티스토리 구글 노출", "블로그 SEO 최적화", "구글 상위 노출", "티스토리 블로그 최적화", "검색엔진 최적화 2026"],
-  },
-  {
-    slug: "google-search-console-complete-guide-search-content-strategy",
-    title: "구글 Search Console 완전 가이드: 검색 트래픽 데이터를 콘텐츠 전략으로 바꾸는 법",
-    description: "구글 서치콘솔 활용법을 완전히 정복하세요. 성과 보고서 분석부터 CTR 최적화, SEO 전략 수립까지 실전 워크플로우로 유기적 검색 트래픽을 2.3배 늘리는 방법을 단계별로 공개합니다.",
-    category: "guide",
-    publishDate: "2026-05-18",
-    readTime: "12분",
-    author: "김민혁",
-    keywords: ["구글 서치콘솔 활용", "서치콘솔 데이터 분석", "검색 트래픽 최적화", "SEO 전략 수립", "구글 서치콘솔 사용법", "CTR 개선 방법"],
   },
 ];
